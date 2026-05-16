@@ -1,0 +1,13 @@
+services:
+  sandbox-runtime:
+    image: python:3.12-slim
+    command: sleep infinity
+    volumes:
+      - sandbox-work:/workspace
+    user: "1000:1000"
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /tmp:noexec,nosuid,size=100m
+volumes:
+  sandbox-work:

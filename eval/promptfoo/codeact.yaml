@@ -1,0 +1,136 @@
+description: Mantle CodeAct deterministic Docker sandbox suite
+
+prompts:
+  - "{{code}}"
+
+providers:
+  - id: python:eval/promptfoo/codeact-provider.py
+
+defaultTest:
+  options:
+    provider: python:eval/promptfoo/codeact-provider.py
+
+tests:
+  - description: primes
+    vars:
+      code: |-
+        for i in range(2, 100):
+          if all(i % j != 0 for j in range(2, i)):
+            print(i)
+    assert:
+      - type: contains
+        value: "97"
+      - type: contains
+        value: '"exit_code": 0'
+
+  - description: csv_write
+    vars:
+      code: |-
+        from pathlib import Path
+        path = Path("/workspace/data.csv")
+        path.write_text("name,age\nAda,36\n", encoding="utf-8")
+        print(path.exists())
+        print(path.read_text(encoding="utf-8").splitlines()[0])
+    assert:
+      - type: contains
+        value: "name,age"
+      - type: contains
+        value: "/workspace/data.csv"
+
+  - description: base64_decode
+    vars:
+      code: |-
+        import base64
+        print(base64.b64decode("SGVsbG8gV29ybGQ=").decode())
+    assert:
+      - type: contains
+        value: '"stdout": "Hello World\n"'
+
+  - description: directory_walk
+    vars:
+      code: |-
+        from pathlib import Path
+        root = Path("/workspace/walk")
+        (root / "a").mkdir(parents=True)
+        (root / "b").mkdir(parents=True)
+        (root / "a" / "one.txt").write_text("1", encoding="utf-8")
+        (root / "b" / "two.txt").write_text("2", encoding="utf-8")
+        for path in sorted(root.rglob("*.txt")):
+            print(path.name)
+    assert:
+      - type: contains
+        value: "one.txt"
+      - type: contains
+        value: "two.txt"
+
+  - description: json_parse
+    vars:
+      code: |-
+        import json
+        payload = json.loads('{"project":"mantle","phase":1}')
+        print(payload["project"])
+        print(payload["phase"])
+    assert:
+      - type: contains
+        value: "mantle"
+      - type: contains
+        value: '"exit_code": 0'
+
+  - description: list_sort
+    vars:
+      code: |-
+        values = [5, 2, 9, 1, 5, 6]
+        print(sorted(values))
+    assert:
+      - type: contains
+        value: "[1, 2, 5, 5, 6, 9]"
+
+  - description: regex_emails
+    vars:
+      code: |-
+        import re
+        text = "Mail ada@example.com and grace.hopper@navy.mil today."
+        print(",".join(re.findall(r"[\w.]+@[\w.]+", text)))
+    assert:
+      - type: regex
+        value: "ada@example\\.com.*grace\\.hopper@navy\\.mil"
+
+  - description: matrix_multiply
+    vars:
+      code: |-
+        a = [[1, 2], [3, 4]]
+        b = [[5, 6], [7, 8]]
+        product = [[sum(a[i][k] * b[k][j] for k in range(2)) for j in range(2)] for i in range(2)]
+        print(product)
+    assert:
+      - type: contains
+        value: "50"
+      - type: contains
+        value: "[[19, 22], [43, 50]]"
+
+  - description: file_rename
+    vars:
+      code: |-
+        from pathlib import Path
+        source = Path("/workspace/original.txt")
+        target = Path("/workspace/renamed.txt")
+        source.write_text("rename me", encoding="utf-8")
+        source.rename(target)
+        print(target.exists())
+    assert:
+      - type: contains
+        value: "/workspace/renamed.txt"
+      - type: contains
+        value: "True"
+
+  - description: error_handling
+    vars:
+      code: |-
+        raise ValueError("deterministic failure")
+    assert:
+      - type: contains
+        value: "ValueError"
+      - type: contains
+        value: '"exit_code": 1'
+
+threshold: 0.8

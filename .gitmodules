@@ -1,0 +1,6 @@
+[submodule "kernel"]
+	path = kernel
+	url = https://github.com/jcartu/rasputin-omnitool
+[submodule "memory"]
+	path = memory
+	url = https://github.com/jcartu/rasputin-memory

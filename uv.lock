@@ -1,0 +1,29 @@
+version = 1
+revision = 3
+requires-python = ">=3.11"
+resolution-markers = [
+    "python_full_version >= '3.15'",
+    "python_full_version < '3.15'",
+]
+
+[manifest]
+members = [
+    "codeact",
+    "gateway",
+    "sandbox",
+]
+
+[[package]]
+name = "codeact"
+version = "0.1.0"
+source = { virtual = "packages/codeact" }
+
+[[package]]
+name = "gateway"
+version = "0.1.0"
+source = { virtual = "apps/gateway" }
+
+[[package]]
+name = "sandbox"
+version = "0.1.0"
+source = { virtual = "packages/sandbox" }

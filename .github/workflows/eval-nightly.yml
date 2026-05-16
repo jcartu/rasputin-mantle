@@ -33,6 +33,11 @@ jobs:
       - name: Setup uv
         uses: astral-sh/setup-uv@v3
 
+      - name: Install kernel
+        run: |
+          cd kernel
+          pip install -e ".[dev]"
+
       - name: Install dependencies
         run: |
           pnpm install

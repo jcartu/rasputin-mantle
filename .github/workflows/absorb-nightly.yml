@@ -28,7 +28,6 @@ jobs:
         run: |
           cd kernel
           python -m rasputin_omnitool bakeoff --output-dir outputs/rasputin-omnitool --no-external
-        continue-on-error: true
 
       - name: Write capability delta placeholder
         run: |

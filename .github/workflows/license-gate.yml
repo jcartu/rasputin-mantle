@@ -30,7 +30,6 @@ jobs:
         run: |
           cd kernel
           python -m rasputin_omnitool license-review --output-dir outputs/rasputin-omnitool
-        continue-on-error: true
 
       - name: Verify CLI exists
         run: |

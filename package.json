@@ -1,0 +1,23 @@
+{
+  "name": "rasputin-mantle",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "test": "promptfoo eval --config eval/promptfoo/codeact.yaml",
+    "lint": "pnpm -r --if-present run lint",
+    "typecheck": "pnpm -r --if-present run typecheck"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "promptfoo": "^0.113.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "better-sqlite3"
+    ]
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

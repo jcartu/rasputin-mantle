@@ -32,7 +32,9 @@ Thumbs.db
 coverage/
 .pytest_cache/
 
-# Promptfoo
+# Promptfoo cache/output (not eval configs)
+promptfoo/cache/
+promptfoo/tables/
 promptfoo/
 
 # Docker

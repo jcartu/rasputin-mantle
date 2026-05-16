@@ -46,7 +46,19 @@ def _snapshot_workspace(backend: SandboxBackend, session_id: str) -> dict[str, s
 
 
 def _diff_snapshots(before: dict[str, str], after: dict[str, str]) -> list[str]:
-    return sorted(path for path in set(before) | set(after) if before.get(path) != after.get(path))
+    """Return sorted list of all changed files (added, modified, or deleted)."""
+    all_paths = set(before.keys()) | set(after.keys())
+    changed: list[str] = []
+    for path in all_paths:
+        in_before = path in before
+        in_after = path in after
+        if in_before and not in_after:
+            changed.append(path)  # deleted
+        elif not in_before and in_after:
+            changed.append(path)  # added
+        elif before[path] != after[path]:
+            changed.append(path)  # modified
+    return sorted(changed)
 
 
 def _parse_results(stdout: str) -> list[Any]:

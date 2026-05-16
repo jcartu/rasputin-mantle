@@ -39,3 +39,4 @@ promptfoo/
 
 # Docker
 .docker/
+promptfoo-errors.log

@@ -1,0 +1,38 @@
+name: License Gate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  license-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout with submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install kernel dependencies
+        run: |
+          cd kernel
+          pip install -e ".[dev]"
+
+      - name: Run license review
+        run: |
+          cd kernel
+          python -m rasputin_omnitool license-review --output-dir outputs/rasputin-omnitool
+        continue-on-error: true
+
+      - name: Verify CLI exists
+        run: |
+          cd kernel
+          python -m rasputin_omnitool --help

@@ -1,5 +1,25 @@
 [project]
-name = "gateway"
+name = "mantle-gateway"
 version = "0.1.0"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+  "fastapi>=0.115.0,<1",
+  "uvicorn[standard]>=0.34.0,<1",
+  "python-multipart>=0.0.18",
+  "pydantic>=2.0,<3",
+  "mantle-sandbox",
+  "mantle-codeact",
+  "mantle-skills",
+  "mantle-browser",
+  "mantle-shared",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

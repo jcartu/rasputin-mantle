@@ -146,3 +146,75 @@ def test_memory_returns_503_when_unavailable() -> None:
     assert resp.status_code == 503
     detail = resp.json().get('detail', {})
     assert detail.get('error') == 'memory_unavailable'
+
+
+def test_voice_status_returns_services() -> None:
+    client = TestClient(app)
+    resp = client.get('/api/voice/status')
+    assert resp.status_code == 200
+    body = resp.json()
+    assert 'stt' in body
+    assert 'tts' in body
+    assert body['stt']['service'] == 'faster-whisper'
+    assert body['tts']['service'] == 'kokoro-82M'
+
+
+def test_voice_transcribe_returns_503_when_unavailable() -> None:
+    client = TestClient(app)
+    resp = client.post('/api/voice/transcribe', files={'file': ('test.wav', b'fake audio', 'audio/wav')})
+    assert resp.status_code == 503
+    detail = resp.json().get('detail', {})
+    assert detail.get('error') == 'stt_unavailable'
+
+
+def test_voice_synthesize_returns_503_when_unavailable() -> None:
+    client = TestClient(app)
+    resp = client.post('/api/voice/synthesize', json={'text': 'hello world'})
+    assert resp.status_code == 503
+    detail = resp.json().get('detail', {})
+    assert detail.get('error') == 'tts_unavailable'
+
+
+def test_mcp_register_and_list() -> None:
+    client = TestClient(app)
+    created = client.post('/api/mcp/', json={'name': 'test-server', 'url': 'http://localhost:9999'})
+    assert created.status_code == 200
+    body = created.json()
+    assert body['name'] == 'test-server'
+    assert body['enabled'] is True
+    listed = client.get('/api/mcp/')
+    assert listed.status_code == 200
+    assert any(s['id'] == body['id'] for s in listed.json())
+
+
+def test_mcp_get_and_delete() -> None:
+    client = TestClient(app)
+    created = client.post('/api/mcp/', json={'name': 'temp-mcp', 'url': 'http://localhost:9998'})
+    sid = created.json()['id']
+    fetched = client.get(f'/api/mcp/{sid}')
+    assert fetched.status_code == 200
+    assert fetched.json()['name'] == 'temp-mcp'
+    deleted = client.delete(f'/api/mcp/{sid}')
+    assert deleted.status_code == 200
+    gone = client.get(f'/api/mcp/{sid}')
+    assert gone.status_code == 404
+
+
+def test_mcp_update_enabled() -> None:
+    client = TestClient(app)
+    created = client.post('/api/mcp/', json={'name': 'toggle-mcp', 'url': 'http://localhost:9997'})
+    sid = created.json()['id']
+    patched = client.patch(f'/api/mcp/{sid}', json={'enabled': False})
+    assert patched.status_code == 200
+    assert patched.json()['enabled'] is False
+
+
+def test_mcp_health_check() -> None:
+    client = TestClient(app)
+    created = client.post('/api/mcp/', json={'name': 'health-test', 'url': 'http://localhost:59999'})
+    sid = created.json()['id']
+    health = client.post(f'/api/mcp/{sid}/health')
+    assert health.status_code == 200
+    body = health.json()
+    assert body['health'] in ('healthy', 'unhealthy', 'unreachable')
+    assert body['last_check'] > 0

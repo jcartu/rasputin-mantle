@@ -1,7 +1,15 @@
 # Workspace root — not a buildable package
 
 [tool.uv.workspace]
-members = ["apps/gateway", "packages/sandbox", "packages/codeact", "packages/browser", "packages/skills"]
+members = ["apps/gateway", "packages/sandbox", "packages/codeact", "packages/browser", "packages/skills", "packages/shared"]
+
+[tool.uv.sources]
+mantle-browser = { workspace = true }
+mantle-codeact = { workspace = true }
+mantle-gateway = { workspace = true }
+mantle-sandbox = { workspace = true }
+mantle-shared = { workspace = true }
+mantle-skills = { workspace = true }
 
 [tool.ruff]
 target-version = "py311"

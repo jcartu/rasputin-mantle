@@ -1,4 +1,22 @@
 services:
+  gateway:
+    image: ghcr.io/astral-sh/uv:python3.12-bookworm-slim
+    command: sh -c "cd /app && uv run python -m gateway"
+    working_dir: /app
+    environment:
+      MANTLE_PORT: "8000"
+      MANTLE_PUBLIC: "true"
+      MANTLE_SKILLS_DIR: /app/skills
+      MANTLE_FILES_ROOT: /workspace
+      MANTLE_SANDBOX_BACKEND: docker
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - ..:/app
+      - sandbox-work:/workspace
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+      - sandbox-runtime
   sandbox-runtime:
     image: python:3.12-slim
     command: sleep infinity

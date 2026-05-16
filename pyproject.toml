@@ -1,7 +1,7 @@
 # Workspace root — not a buildable package
 
 [tool.uv.workspace]
-members = ["apps/gateway", "packages/sandbox", "packages/codeact"]
+members = ["apps/gateway", "packages/sandbox", "packages/codeact", "packages/browser"]
 
 [tool.ruff]
 target-version = "py311"

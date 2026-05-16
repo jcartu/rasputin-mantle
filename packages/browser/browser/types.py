@@ -17,30 +17,23 @@ class BrowserElement:
 class BrowserState:
     url: str
     elements: list[BrowserElement]
-    screenshot_path: str | None = None
 
 
 class BrowserBackend(ABC):
     @abstractmethod
-    def open(self, url: str) -> None:
-        raise NotImplementedError
+    def open(self, url: str) -> None: ...
 
     @abstractmethod
-    def get_state(self) -> BrowserState:
-        raise NotImplementedError
+    def get_state(self) -> BrowserState: ...
 
     @abstractmethod
-    def click(self, element_id: str) -> None:
-        raise NotImplementedError
+    def click(self, element_id: str) -> None: ...
 
     @abstractmethod
-    def type(self, element_id: str, text: str) -> None:
-        raise NotImplementedError
+    def type(self, element_id: str, text: str) -> None: ...
 
     @abstractmethod
-    def evaluate(self, script: str) -> Any:
-        raise NotImplementedError
+    def evaluate(self, script: str) -> Any: ...
 
     @abstractmethod
-    def close(self) -> None:
-        raise NotImplementedError
+    def close(self) -> None: ...

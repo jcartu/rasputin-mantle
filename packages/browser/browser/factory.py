@@ -4,9 +4,10 @@ import os
 
 from browser.agent_browser_backend import AgentBrowserBackend
 from browser.browser_use_backend import BrowserUseBackend
-from browser.types import BrowserBackend
+from browser.errors import BrowserActionError
+from typing import Literal
 
-BrowserBackendName = str
+BrowserBackendName = Literal["agent-browser", "browser-use"]
 
 
 def create_browser_backend(backend: BrowserBackendName | None = None) -> BrowserBackend:
@@ -15,4 +16,4 @@ def create_browser_backend(backend: BrowserBackendName | None = None) -> Browser
         return AgentBrowserBackend()
     if selected == "browser-use":
         return BrowserUseBackend()
-    raise ValueError(f"Unsupported browser backend: {selected}")
+    raise BrowserActionError(f"Unsupported browser backend: {selected}")

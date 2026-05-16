@@ -8,7 +8,6 @@ export interface BrowserElement {
 export interface BrowserState {
   url: string;
   elements: BrowserElement[];
-  screenshotPath?: string;
 }
 
 export interface BrowserBackend {

@@ -40,10 +40,12 @@ def _attributes(value: dict[str, Any]) -> dict[str, str]:
     return {str(key): attr_value for key, attr_value in raw.items() if isinstance(attr_value, str)}
 
 
-def _collect_elements(value: Any, elements: list[BrowserElement], seen: set[str]) -> None:
+def _collect_elements(value: Any, elements: list[BrowserElement], seen: set[str], depth: int = 0) -> None:
+    if depth > 100:
+        return
     if isinstance(value, list):
         for item in value:
-            _collect_elements(item, elements, seen)
+            _collect_elements(item, elements, seen, depth + 1)
         return
     if not isinstance(value, dict):
         return
@@ -61,7 +63,7 @@ def _collect_elements(value: Any, elements: list[BrowserElement], seen: set[str]
         )
 
     for child in value.values():
-        _collect_elements(child, elements, seen)
+        _collect_elements(child, elements, seen, depth + 1)
 
 
 def _read_url(value: Any) -> str:
@@ -103,23 +105,23 @@ def _parse_eval(stdout: str) -> Any:
 
 class AgentBrowserBackend(BrowserBackend):
     def open(self, url: str) -> None:
-        _run_agent_browser(["open", url])
+        _run_agent_browser(["open", "--", url])
 
     def get_state(self) -> BrowserState:
         result = _run_agent_browser(["snapshot", "-i", "--json"])
         try:
             return _parse_snapshot(result.stdout)
-        except json.JSONDecodeError as exc:
+        except (json.JSONDecodeError, ValueError, TypeError, AttributeError) as exc:
             raise BrowserActionError(f"Failed to parse agent-browser snapshot: {exc}") from exc
 
     def click(self, element_id: str) -> None:
-        _run_agent_browser(["click", element_id])
+        _run_agent_browser(["click", "--", element_id])
 
     def type(self, element_id: str, text: str) -> None:
-        _run_agent_browser(["fill", element_id, text])
+        _run_agent_browser(["fill", "--", element_id, text])
 
     def evaluate(self, script: str) -> Any:
-        result = _run_agent_browser(["eval", script])
+        result = _run_agent_browser(["eval", "--", script])
         return _parse_eval(result.stdout)
 
     def close(self) -> None:

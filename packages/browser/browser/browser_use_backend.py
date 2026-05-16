@@ -56,20 +56,23 @@ def _parse_eval(stdout: str) -> Any:
 
 class BrowserUseBackend(BrowserBackend):
     def open(self, url: str) -> None:
-        _run_browser_use(["open", url])
+        _run_browser_use(["open", "--", url])
 
-    def get_state(self) -> BrowserState:
+def get_state(self) -> BrowserState:
         result = _run_browser_use(["state"])
+        try:
         return _parse_state(result.stdout)
+        except (ValueError, TypeError, AttributeError) as exc:
+            raise BrowserActionError(f"Failed to parse browser-use state: {exc}") from exc
 
     def click(self, element_id: str) -> None:
-        _run_browser_use(["click", element_id])
+        _run_browser_use(["click", "--", element_id])
 
     def type(self, element_id: str, text: str) -> None:
-        _run_browser_use(["input", element_id, text])
+        _run_browser_use(["input", "--", element_id, text])
 
     def evaluate(self, script: str) -> Any:
-        result = _run_browser_use(["eval", script])
+        result = _run_browser_use(["eval", "--", script])
         return _parse_eval(result.stdout)
 
     def close(self) -> None:

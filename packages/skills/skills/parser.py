@@ -18,7 +18,7 @@ def parse_skill_md(content: str) -> SkillMeta:
     if len(content) > MAX_SKILL_MD_CHARS:
         raise SkillParseError("SKILL.md exceeds 100000 characters")
     if not content.startswith("---"):
-        raise SkillParseError("SKILL.md must start with YAML frontmatter delimiter at byte 0")
+        raise SkillParseError("SKILL.md must start with YAML frontmatter delimiter")
 
     lines = content.splitlines()
     if not lines or lines[0] != "---":
@@ -90,7 +90,7 @@ def _string_list(value: Any, key: str) -> list[str]:
         return []
     if not isinstance(value, list) or not all(isinstance(item, str) for item in value):
         raise SkillParseError(f"Skill frontmatter field must be a list of strings: {key}")
-    return value
+    return list(value)  # defensive copy
 
 
 def _dict_value(value: Any, key: str) -> dict[str, Any]:

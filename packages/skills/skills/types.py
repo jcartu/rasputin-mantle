@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Any
 
 
@@ -12,9 +12,9 @@ class SkillMeta:
     author: str = ""
     license: str = "MIT"
     capability: str = ""  # Mantle extension: maps to catalog key
-    platforms: list[str] = ()
-    tags: list[str] = ()
-    prerequisites: dict[str, Any] = ()
+    platforms: tuple[str, ...] = ()
+    tags: tuple[str, ...] = ()
+    prerequisites: dict[str, Any] = field(default_factory=dict)
 
 
 @dataclass(frozen=True)

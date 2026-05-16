@@ -28,16 +28,19 @@ class SkillRegistry:
         for skill_path in sorted(self.skills_dir.rglob("SKILL.md")):
             try:
                 meta = parse_skill_md(skill_path.read_text(encoding="utf-8"))
-            except OSError as exc:
-                raise SkillParseError(f"Failed to read {skill_path}: {exc}") from exc
+            except (OSError, SkillParseError):
+                # Skip broken skills — one bad SKILL.md must not nuke the registry
+                continue
 
+            # Detect duplicate names — raise on collision
+            if meta.name in self._by_name:
+                raise SkillParseError(f"Duplicate skill name: {meta.name}")
             self._by_name[meta.name] = meta
             self._paths[meta.name] = skill_path
             if meta.capability:
                 self._by_capability.setdefault(meta.capability, []).append(meta)
             for tag in meta.tags:
                 self._by_tag.setdefault(tag, []).append(meta)
-
     def get(self, name: str) -> SkillMeta:
         try:
             return self._by_name[name]

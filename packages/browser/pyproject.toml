@@ -1,5 +1,15 @@
 [project]
-name = "browser"
+name = "mantle-browser"
 version = "0.1.0"
 requires-python = ">=3.11"
 dependencies = []
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

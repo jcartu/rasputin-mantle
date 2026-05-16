@@ -1,0 +1,54 @@
+# eval/webvoyager-100/tasks.yaml
+# 10 seed tasks. R2 ticket 006 is expected to expand this to 100, drawing from
+# the original WebVoyager benchmark task set.
+
+tasks:
+  - id: wv-001
+    description: "Find the current price of one Apple stock (AAPL) and report it."
+    starting_url: "https://www.google.com"
+    success_criterion: "Response includes a USD price for AAPL."
+
+  - id: wv-002
+    description: "Find the population of Tokyo, Japan."
+    starting_url: "https://www.google.com"
+    success_criterion: "Response mentions a population figure for Tokyo (millions)."
+
+  - id: wv-003
+    description: "On Wikipedia, find the year Marie Curie won her first Nobel Prize."
+    starting_url: "https://en.wikipedia.org"
+    success_criterion: "Response mentions 1903."
+
+  - id: wv-004
+    description: "On GitHub, find the number of stars on the linux/linux repo."
+    starting_url: "https://github.com"
+    success_criterion: "Response gives a star count (number, likely > 100k)."
+
+  - id: wv-005
+    description: "Find a cheap flight from JFK to LAX next month."
+    starting_url: "https://www.google.com/flights"
+    success_criterion: "Response includes a price in USD and airline name."
+
+  - id: wv-006
+    description: "On arxiv.org, find the latest paper about CodeAct."
+    starting_url: "https://arxiv.org"
+    success_criterion: "Response includes an arxiv ID matching CodeAct."
+
+  - id: wv-007
+    description: "Find the current weather in Frankfurt, Germany."
+    starting_url: "https://www.google.com"
+    success_criterion: "Response includes a temperature in Celsius or Fahrenheit."
+
+  - id: wv-008
+    description: "On Hacker News, find the top story right now."
+    starting_url: "https://news.ycombinator.com"
+    success_criterion: "Response gives a title and a points/comments count."
+
+  - id: wv-009
+    description: "Find the runtime of the movie 'Oppenheimer' (2023)."
+    starting_url: "https://www.google.com"
+    success_criterion: "Response gives a duration (e.g. '180 minutes' or '3 hours')."
+
+  - id: wv-010
+    description: "On Reddit, find a recent post in r/python with > 100 upvotes."
+    starting_url: "https://www.reddit.com/r/python"
+    success_criterion: "Response gives a post title and an upvote count > 100."

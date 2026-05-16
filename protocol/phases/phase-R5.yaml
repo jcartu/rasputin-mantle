@@ -1,0 +1,54 @@
+name: "R5 — Memory, Wide Research, Scheduler"
+phase: R5
+description: |
+  Wire rasputin-memory (the LoCoMo-77.7% memory) into the gateway. Implement Wide
+  Research: parallel subagent dispatch that actually spawns N concurrent sandboxes
+  and merges their results. Add a scheduler (APScheduler with Redis jobstore) for
+  user-defined recurring tasks.
+
+  This is where the audit's biggest deception was: the v1 Wide Research route was
+  asyncio.sleep + hardcoded JSON. R5 ships the real thing.
+
+packages_required:
+  - apps/gateway
+  - packages/wide-research
+  - packages/scheduler
+  - submodules/memory          # the rasputin-memory submodule
+
+artifacts:
+  - PHASE_R5_DONE.md
+  - apps/gateway/src/gateway/routes/research.py    # the REAL one
+  - apps/gateway/src/gateway/memory_client.py
+  - packages/scheduler/scheduler/jobs.py
+  - outputs/locomo-eval.json
+  - outputs/wide-research-eval.json
+
+integration_tests:
+  - tests/integration/test_wide_research_dispatch.py
+  - tests/integration/test_memory_round_trip.py
+  - tests/integration/test_scheduler_job_persistence.py
+
+eval_suites:
+  - name: locomo
+    command: "uv run python -m rasputin_memory.eval --benchmark locomo --output outputs/locomo-eval.json"
+    output_file: outputs/locomo-eval.json
+    minimum_pass_rate: 0.75
+  - name: wide-research
+    command: "uv run python eval/wide-research/runner.py --output outputs/wide-research-eval.json"
+    output_file: outputs/wide-research-eval.json
+    minimum_pass_rate: 0.70
+
+forbidden_patterns:
+  - "asyncio\\.sleep\\([0-9.]+\\).*simulate"    # the audit smell
+  - "\"simulate\":\\s*True"
+  - "hardcoded.*research"
+  - "status_code\\s*==\\s*503"
+
+ship_criteria_human_readable: |
+  - /api/research dispatches N real subagents in parallel, each in its own
+    sandbox, each calling a real search backend (Exa or Brave).
+  - Wide Research eval ≥ 0.70 (eval harness in eval/wide-research/).
+  - rasputin-memory submodule pinned, /api/memory routes proxy correctly,
+    LoCoMo ≥ 0.75.
+  - APScheduler with Redis jobstore survives container restart (integration test).
+  - The audit's exact smells (asyncio.sleep + simulate) are gone from the diff.

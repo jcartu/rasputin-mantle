@@ -1,0 +1,48 @@
+name: "R4 — Frontend & Live Computer View"
+phase: R4
+description: |
+  Ship apps/web (Next.js 15) with a real Live Computer View that embeds Neko
+  WebRTC. No placeholder divs. The session view binds to the active sandbox's
+  Neko stream and lets the user watch the agent work in real time.
+
+  SSE event stream is real: the gateway emits events, the frontend subscribes,
+  the chat panel updates as the agent acts. No setInterval heartbeats pretending
+  to be event streams.
+
+  Sonnet 4.6 is the executor for this phase's tickets (frontend taste matters).
+
+packages_required:
+  - apps/web
+
+artifacts:
+  - PHASE_R4_DONE.md
+  - apps/web/components/computer-view.tsx
+  - apps/web/components/session-stream.tsx
+  - apps/web/app/session/[id]/page.tsx
+  - apps/web/tests/e2e/computer-view.spec.ts
+  - apps/web/tests/e2e/session-stream.spec.ts
+
+integration_tests:
+  - tests/integration/test_neko_session_binding.py
+
+eval_suites:
+  - name: e2e-frontend
+    command: "cd apps/web && pnpm test:e2e --reporter=json --output=../../outputs/e2e-frontend.json || true"
+    output_file: outputs/e2e-frontend.json
+    minimum_pass_rate: 0.90
+
+forbidden_patterns:
+  - "Placeholder"                               # literal placeholder UI text
+  - "Coming Soon"
+  - "setInterval\\(.*30000"                     # 30s heartbeat masquerading as SSE
+  - "Neko WebRTC Stream Placeholder"            # from the audit
+
+ship_criteria_human_readable: |
+  - computer-view.tsx renders a real iframe or <video> bound to Neko at
+    process.env.NEXT_PUBLIC_NEKO_URL.
+  - session-stream.tsx subscribes to /api/sessions/:id/events (real SSE) and
+    appends events to the chat panel as they arrive.
+  - E2E Playwright tests pass ≥ 90%, exercising the real Neko binding
+    (compose stack must be up during test run).
+  - No "Placeholder" or "Coming Soon" text in the production build.
+  - Dark-mode default, IBM Plex Mono for code, Inter for chat.

@@ -1,38 +1,49 @@
-name: License Gate
+name: license-gate
 
 on:
-  push:
-    branches: [main]
   pull_request:
-    branches: [main]
-  workflow_dispatch:
+    paths:
+      - "**/pyproject.toml"
+      - "**/uv.lock"
+      - "**/package.json"
+      - "**/pnpm-lock.yaml"
+      - "**/Cargo.toml"
+      - "**/Cargo.lock"
 
 jobs:
-  license-gate:
+  license-review:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout with submodules
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
+          fetch-depth: 0
           submodules: recursive
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: Install kernel dependencies
-        run: |
-          cd kernel
-          pip install -e ".[dev]"
+      - uses: astral-sh/setup-uv@v3
 
-      - name: Run license review
+      - name: Detect dependency diff
+        id: deps
         run: |
-          cd kernel
-          python -m rasputin_omnitool license-review --output-dir outputs/rasputin-omnitool
-        continue-on-error: true
+          git fetch origin ${{ github.base_ref }}
+          if git diff origin/${{ github.base_ref }}...HEAD --name-only | \
+               grep -qE '(pyproject\.toml|uv\.lock|package\.json|pnpm-lock\.yaml|Cargo\.toml|Cargo\.lock)$'; then
+            echo "changed=yes" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=no" >> "$GITHUB_OUTPUT"
+          fi
 
-      - name: Verify CLI exists
+      - name: rasputin_omnitool license-review
+        if: steps.deps.outputs.changed == 'yes'
         run: |
-          cd kernel
-          python -m rasputin_omnitool --help
+          if [ -d submodules/omnitool ]; then
+            cd submodules/omnitool && pip install -e . && cd ../..
+          else
+            pip install rasputin-omnitool || true
+          fi
+          rasputin_omnitool license-review --base origin/${{ github.base_ref }} --head HEAD \
+            --policy .github/license-policy.yaml \
+            --fail-on copyleft,unknown

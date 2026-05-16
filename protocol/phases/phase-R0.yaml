@@ -1,0 +1,60 @@
+name: "R0 — Bootstrap & Protocol Install"
+phase: R0
+description: |
+  Install the going-forward protocol on top of the remediation baseline.
+  Replace any drift-check stubs with real Anthropic ping. Make sure the
+  orchestrator can boot, talk to vLLM and Anthropic, and run make verify cleanly.
+  This phase ships when the orchestrator can complete one no-op cycle.
+
+packages_required:
+  - protocol
+
+artifacts:
+  - protocol/orchestrator.py
+  - protocol/state.py
+  - protocol/agents/auditor.py
+  - protocol/agents/planner.py
+  - protocol/agents/executor.py
+  - protocol/prompts/auditor-strict.md
+  - protocol/prompts/planner.md
+  - protocol/prompts/executor.md
+  - protocol/phases/phase-R0.yaml
+  - protocol/phases/phase-R1.yaml
+  - protocol/phases/phase-R2.yaml
+  - protocol/phases/phase-R3.yaml
+  - protocol/phases/phase-R4.yaml
+  - protocol/phases/phase-R5.yaml
+  - protocol/phases/phase-R6.yaml
+  - protocol/scripts/verify-phase.sh
+  - protocol/scripts/banned-phrases.txt
+  - protocol/scripts/banned-phrases.sh
+  - protocol/scripts/health-check.sh
+  - protocol/scripts/hooks/pre-commit
+  - Makefile
+  - docs/RASPUTIN_MANTLE_BUILD_PLAN.md
+  - docs/AUDIT_2026_05_16.md
+  - docs/AUDIT_LOOP.md
+  - docs/ORCHESTRATOR.md
+  - .github/workflows/phase-verify.yml
+  - .github/workflows/license-gate.yml
+  - .github/workflows/eval-nightly.yml
+  - .github/workflows/absorb-nightly.yml
+
+integration_tests: []
+
+eval_suites: []
+
+forbidden_patterns:
+  # No stub drift-checker — Opus is the real auditor now.
+  - "drift-check\\.py.*sleep"
+  - "TODO: real drift check"
+  # No leftover LiteLLM references in protocol/ (we dropped it).
+  - "litellm.*master.*key"
+
+ship_criteria_human_readable: |
+  - Orchestrator boots, reads .env, validates config, exits cleanly with --dry-run.
+  - `make verify` repo-wide is green.
+  - Pre-commit hook installed and active (rejects test diff with status_code == 503).
+  - Health-check passes for vLLM + Anthropic.
+  - All seven phase YAMLs present; verify-phase.sh can parse each.
+  - The two-agent loop is documented in docs/AUDIT_LOOP.md (no Sisyphus references).

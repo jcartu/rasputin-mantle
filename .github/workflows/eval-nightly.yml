@@ -1,47 +1,60 @@
-name: Eval Nightly
+name: eval-nightly
 
 on:
   schedule:
-    - cron: "0 3 * * *"
+    - cron: "17 4 * * *"  # 04:17 UTC daily
   workflow_dispatch:
 
 jobs:
-  eval-nightly:
+  evals:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout with submodules
-        uses: actions/checkout@v4
-        with:
-          submodules: recursive
+      - uses: actions/checkout@v4
+        with: { submodules: recursive }
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: pnpm
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          run_install: false
+      - uses: astral-sh/setup-uv@v3
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
+      - uses: pnpm/action-setup@v4
+        with: { version: 9 }
 
-      - name: Setup uv
-        uses: astral-sh/setup-uv@v3
+      - uses: actions/setup-node@v4
+        with: { node-version: "20", cache: pnpm }
 
-      - name: Install dependencies
+      - run: sudo apt-get update -qq && sudo apt-get install -y jq
+
+      - name: Install deps
         run: |
-          pnpm install
           uv sync
+          pnpm install --frozen-lockfile || pnpm install
 
-      - name: Run CodeAct eval suite
+      - name: Bring up support services
+        run: docker compose -f infra/compose.dev.yml up -d --wait
+
+      - name: Run evals
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          MANTLE_GATEWAY_URL: http://127.0.0.1:8000
         run: |
-          if [ -f eval/promptfoo/codeact.yaml ]; then
-            pnpm test
-          else
-            echo "Skipping — codeact.yaml not yet available (Phase 1)"
-          fi
+          mkdir -p outputs
+          make eval-codeact      || true
+          make eval-webvoyager   || true
+          make eval-gaia         || true
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: eval-${{ github.run_number }}
+          path: outputs/
+
+      - name: Post summary
+        if: always()
+        run: |
+          for f in outputs/codeact-eval.json outputs/webvoyager-100.json outputs/gaia-mini.json; do
+            if [ -f "$f" ]; then
+              echo "## $(basename $f .json)" >> $GITHUB_STEP_SUMMARY
+              jq -r '"pass_rate: \(.pass_rate)  (\(.passed)/\(.total))"' "$f" >> $GITHUB_STEP_SUMMARY
+            fi
+          done

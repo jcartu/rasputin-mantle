@@ -1,0 +1,68 @@
+name: "R6 — Voice, MCP, Desktop, Release"
+phase: R6
+description: |
+  Final phase. Wire Faster-Whisper STT and Kokoro TTS into the voice pipeline.
+  Add MCP host (so external MCP servers can extend Mantle's tool catalog).
+  Ship apps/desktop (Tauri 2) — same UI as apps/web but native, with mic and
+  desktop notifications.
+
+  GAIA-mini is the final agent gate: 20 GAIA level-1 tasks, pass rate ≥ 0.40.
+  Voice round-trip p50 < 1.5s (whisper + TTS in parallel where possible).
+
+  Sonnet 4.6 for apps/desktop tickets. 27B for everything else.
+
+  Writes MANTLE_V1_RELEASED.md (replacing the orchestrator's stub) with eval
+  numbers, cost summary by phase, dependency list, reproduction recipe, and
+  honest gaps vs Manus.
+
+packages_required:
+  - packages/voice
+  - packages/mcp-host
+  - apps/desktop
+
+artifacts:
+  - PHASE_R6_DONE.md
+  - MANTLE_V1_RELEASED.md
+  - packages/voice/voice/stt.py
+  - packages/voice/voice/tts.py
+  - packages/mcp-host/mcp_host/host.py
+  - apps/desktop/src-tauri/tauri.conf.json
+  - outputs/gaia-mini.json
+  - outputs/voice-latency.json
+
+integration_tests:
+  - tests/integration/test_voice_round_trip.py
+  - tests/integration/test_mcp_host_handshake.py
+  - tests/integration/test_desktop_launch.py
+
+eval_suites:
+  - name: gaia-mini
+    command: "make eval-gaia"
+    output_file: outputs/gaia-mini.json
+    minimum_pass_rate: 0.40
+  - name: voice-latency
+    command: "uv run python packages/voice/voice/eval_latency.py --output outputs/voice-latency.json"
+    output_file: outputs/voice-latency.json
+    minimum_pass_rate: 0.95     # 95% of round trips under 1.5s
+  - name: webvoyager-100
+    command: "make eval-webvoyager"
+    output_file: outputs/webvoyager-100-final.json
+    minimum_pass_rate: 0.60
+
+forbidden_patterns:
+  - "TODO.*voice"
+  - "stub.*tts"
+  - "stub.*stt"
+  - "asyncio\\.sleep\\([0-9.]+\\)\\s*$"
+  - "status_code\\s*==\\s*503"
+
+ship_criteria_human_readable: |
+  - STT round trip < 800ms p50 (Faster-Whisper large-v3 on the cloud GPU).
+  - TTS first-audio-chunk < 300ms p50 (Kokoro-82M).
+  - Total voice round trip p50 < 1.5s for 95% of evals.
+  - MCP host loads at least one external MCP server in the integration test.
+  - Tauri desktop builds for the host platform; integration test launches and
+    closes it cleanly.
+  - GAIA-mini ≥ 8/20 (≥ 0.40).
+  - MANTLE_V1_RELEASED.md exists, replaces the stub, contains real eval numbers,
+    cost summary, and reproduction recipe.

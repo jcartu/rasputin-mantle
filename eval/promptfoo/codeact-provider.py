@@ -1,25 +1,41 @@
+"""eval/promptfoo/codeact-provider.py — Promptfoo custom provider.
+
+Invokes the local CodeAct catalog through the gateway. The gateway must be running
+(make dev) and reachable at MANTLE_GATEWAY_URL (default http://127.0.0.1:8000).
+
+Promptfoo calls call_api(prompt, options) and expects {"output": ...}.
+"""
 from __future__ import annotations
 
 import json
-import sys
-from dataclasses import asdict
-from pathlib import Path
-from typing import Any
+import os
+import re
 
-ROOT = Path(__file__).resolve().parents[2]
-for package_path in (ROOT / "packages" / "codeact", ROOT / "packages" / "sandbox"):
-    package_path_text = str(package_path)
-    if package_path_text not in sys.path:
-        sys.path.insert(0, package_path_text)
-
-from codeact.executor import execute_code  # noqa: E402
+import httpx
 
 
-async def call_api(prompt: str, options: dict[str, Any], context: dict[str, Any] | None) -> dict[str, str]:
-    vars_payload = (context or {}).get("vars", {})
-    code = vars_payload.get("code", prompt)
-    if not isinstance(code, str):
-        return {"error": "Promptfoo test case must provide Python code as a string"}
+GATEWAY = os.environ.get("MANTLE_GATEWAY_URL", "http://127.0.0.1:8000")
 
-    result = await execute_code(code)
-    return {"output": json.dumps(asdict(result), sort_keys=True)}
+
+def call_api(prompt: str, options: dict, context: dict) -> dict:
+    """Promptfoo entrypoint."""
+    # Parse "Use the X tool to Y" → ("X", "Y")
+    m = re.match(r"Use the (\S+) tool to (.+?)\.", prompt.strip())
+    if not m:
+        return {"output": json.dumps({"error": "could not parse prompt", "prompt": prompt})}
+    tool, action = m.group(1), m.group(2)
+
+    try:
+        r = httpx.post(
+            f"{GATEWAY}/api/catalog/invoke",
+            json={"tool": tool, "input": action, "format": "json"},
+            timeout=30,
+        )
+        if r.status_code != 200:
+            return {"output": json.dumps({
+                "error": f"gateway returned {r.status_code}",
+                "body": r.text[:500],
+            })}
+        return {"output": r.text}
+    except httpx.RequestError as e:
+        return {"output": json.dumps({"error": f"connection failed: {e}"})}

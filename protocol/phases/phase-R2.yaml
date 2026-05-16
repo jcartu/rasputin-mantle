@@ -1,0 +1,50 @@
+name: "R2 — Browser & Skills"
+phase: R2
+description: |
+  Ship the browser backend (Playwright + Chromium with sandbox ON) and the
+  SKILL.md loader. Browser must be steerable from CodeAct: navigate, click, type,
+  wait, observe (DOM), screenshot. Skills loader reads SKILL.md frontmatter,
+  validates against a Pydantic schema, surfaces tools via the catalog.
+
+  WebVoyager-100 is the gate: 100 real web tasks, headless Chromium with sandbox,
+  pass rate ≥ 0.60. R2 ticket 006 expands the seed 10 tasks to the full 100.
+
+packages_required:
+  - packages/browser
+  - packages/skills
+  - packages/sandbox
+
+artifacts:
+  - PHASE_R2_DONE.md
+  - outputs/webvoyager-100.json
+  - packages/browser/SKILL.md
+  - packages/skills/SKILL.md
+  - packages/sandbox/SKILL.md
+
+integration_tests:
+  - tests/integration/test_browser_navigate.py
+  - tests/integration/test_skills_loader.py
+  - tests/integration/test_sandbox_runtime.py
+
+eval_suites:
+  - name: webvoyager-100
+    command: "make eval-webvoyager"
+    output_file: outputs/webvoyager-100.json
+    minimum_pass_rate: 0.60
+  - name: codeact-contract
+    command: "make eval-codeact"
+    output_file: outputs/codeact-eval.json
+    minimum_pass_rate: 0.80
+
+forbidden_patterns:
+  - "--no-sandbox"                              # never. ever.
+  - "browser_use_backend.*pass\\s*$"            # stub backend
+  - "skill_loader.*return\\s*\\[\\]\\s*$"       # empty loader
+  - "asyncio\\.sleep\\([0-9.]+\\)\\s*$"
+
+ship_criteria_human_readable: |
+  - Chromium runs with --enable-sandbox (default), tests don't pass via --no-sandbox.
+  - SKILL.md loader validates frontmatter; rejects malformed skills loudly.
+  - WebVoyager-100 ≥ 60/100 (real browser, real sites, real tasks).
+  - CodeAct contract still ≥ 0.80 (no regression).
+  - sandbox/ exposes a `run_sandbox(image, cmd)` that actually spawns a container.

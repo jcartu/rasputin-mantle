@@ -1,0 +1,105 @@
+────────────────────────────────────────────────────────────────────────────────
+ RASPUTIN MANTLE — BUILD KICKOFF
+ Paste this entire message into your OpenCode chat (Sisyphus as default agent).
+ Sisyphus reads files; no need to inline anything else.
+────────────────────────────────────────────────────────────────────────────────
+
+ultrawork: Build Rasputin Mantle v1 end to end.
+
+You are Sisyphus and you are the orchestrator. The build has seven phases (R0 → R6). You drive each phase as a two-agent loop:
+
+  1. Plan tickets — delegate to @mantle-planner (local 27B)
+  2. Execute tickets in parallel — delegate to @mantle-executor (27B) or @mantle-frontend (Sonnet 4.6) per ticket
+  3. Run `make verify-phase-RN` (mechanical floor)
+  4. Audit the diff — delegate to @mantle-auditor (Opus 4.7, strict mode)
+  5. PERFECT → git tag, advance. PUNCH_LIST → planner reads punch list, emits fix tickets, loop. Cap 5 iterations.
+
+The full loop semantics and per-step behaviour live in `.opencode/skills/mantle-build/SKILL.md`. Read that skill before doing anything else; it's the contract for this whole build.
+
+Then read, in order:
+
+  docs/RASPUTIN_MANTLE_BUILD_PLAN.md       ← strategy + capability matrix
+  docs/AUDIT_2026_05_16.md                 ← why we're rebuilding (the bugs the auditor exists to catch)
+  docs/AUDIT_LOOP.md                       ← conceptual model of the loop
+  docs/SISYPHUS_LOOP.md                    ← your runbook
+  protocol/phases/phase-R0.yaml            ← first phase rubric
+
+After reading: tell me what phase we're starting at (git tag -l 'phase-*-shipped' + 1), how many tickets you expect for that phase, and your ETA. Then start.
+
+For every ticket, before delegating:
+  - Add a TodoWrite todo with the ticket slug
+  - Set it to in_progress when you delegate
+  - Set it to completed only AFTER the verify command passes AND you've committed
+
+For every commit (after each green ticket) use this exact message format:
+
+  phase-RN.iterM: <package>/<file> — <one-line goal>
+
+  Goal: <full ticket goal from the planner>
+  Ticket: planning/phase-RN/iter-M/NNN-slug.md
+  Verify: <verify command>  ✓
+  Audit: pending
+
+  🤖 mantle-executor (or mantle-frontend) via Sisyphus
+
+Push to origin every 3 commits, plus once after each phase-shipped tag.
+
+After every ticket — green, red, or cancelled — print a one-line status to the chat:
+
+  [N/M] <slug> — <green|red|cancelled> · avg <Xm>/ticket · phase ETA <YYhZm> · spend $<Z.ZZ> / $<phase_budget>
+
+Compute ETA from a rolling average of completed ticket wall-clock times. Compute spend by tracking your own Anthropic API usage (auditor + frontend tickets — 27B is free locally) against the per-phase budget (default $10, set via `PHASE_BUDGET_USD` env).
+
+When you reach a phase's audit step, after Opus returns the verdict, print to chat:
+
+  ─────────────────────────────────────────────
+   phase-RN audit · iter M · verdict: PERFECT
+   summary: <auditor's summary>
+  ─────────────────────────────────────────────
+
+or
+
+  ─────────────────────────────────────────────
+   phase-RN audit · iter M · verdict: PUNCH_LIST
+   blockers: N  ·  nits: M
+   summary: <auditor's summary>
+   replanning fix tickets…
+  ─────────────────────────────────────────────
+
+When a phase ships (audit PERFECT, tag created, push complete):
+
+  ✅ phase-RN shipped in M iteration(s). Spend $X.XX. Advancing to phase-R(N+1)…
+
+When R6 ships and `MANTLE_V1_RELEASED.md` is finalized:
+
+  🎉 MANTLE V1 RELEASED. Total spend $X.XX. Total time YdZh. See MANTLE_V1_RELEASED.md for eval numbers and reproduction recipe.
+
+═══════════════════════════════════════════════════════════════════════════════
+HARD RULES (the auditor will catch these but please don't put me in that spot)
+═══════════════════════════════════════════════════════════════════════════════
+
+1. Never edit Makefile, protocol/phases/*.yaml, protocol/scripts/verify-phase.sh, or banned-phrases.txt to make a red test green. Pre-commit hook blocks it. Auditor flags it. The only way to PERFECT is to fix the underlying code.
+
+2. Never add `--no-sandbox` to any browser invocation. Ever.
+
+3. Never `import anthropic` or `from openai import` outside `apps/gateway/src/gateway/model_client.py`.
+
+4. Never write tests that assert `status_code == 503` for a service the phase is supposed to make live.
+
+5. Never use `asyncio.sleep(...)` followed by a hardcoded JSON return in a route handler. If something can't be implemented in this phase, return real 501 Not Implemented.
+
+6. Never raise MAX_AUDIT_ITERATIONS to skip past BLOCKED. Read the audit log. If iter 5 still has blockers, the issue is structural — write BLOCKED.md and stop.
+
+═══════════════════════════════════════════════════════════════════════════════
+RESUME PROTOCOL
+═══════════════════════════════════════════════════════════════════════════════
+
+If this is a fresh session and a previous run was in progress: check git tags + audit-log/ + planning/. Resume at the right state per SKILL.md step 10. Do not replan tickets that already landed (check `git log --oneline phase-R(N-1)-shipped..HEAD`).
+
+If you see BLOCKED.md in the repo root: read it. Don't start a new phase. Tell me what's blocked and wait.
+
+═══════════════════════════════════════════════════════════════════════════════
+START NOW
+═══════════════════════════════════════════════════════════════════════════════
+
+Read the docs in the order above, then begin. Talk to me throughout — I want to see every TodoWrite, every delegate_task, every commit, every audit verdict. Push commits to GitHub frequently. Make me proud.

@@ -1,0 +1,49 @@
+name: "R3 — Gateway & Cost Wall"
+phase: R3
+description: |
+  Wire the gateway (FastAPI) to call Anthropic and vLLM directly (no LiteLLM
+  service — that was dropped in v2). Implement a real cost wall: per-workspace
+  daily budget, enforced server-side, with the gateway returning HTTP 429 when
+  the budget is exceeded.
+
+  This phase also wires sessions to CodeAct sandboxes (carried forward from R1
+  if not already shipped) and adds the structured logging that R5's memory
+  layer will consume.
+
+packages_required:
+  - apps/gateway
+  - packages/shared
+
+artifacts:
+  - PHASE_R3_DONE.md
+  - apps/gateway/src/gateway/model_client.py
+  - apps/gateway/src/gateway/cost_wall.py
+  - apps/gateway/tests/test_model_client.py
+  - apps/gateway/tests/test_cost_wall.py
+
+integration_tests:
+  - tests/integration/test_gateway_anthropic_call.py
+  - tests/integration/test_gateway_vllm_call.py
+  - tests/integration/test_cost_wall_enforcement.py
+
+eval_suites:
+  - name: codeact-contract
+    command: "make eval-codeact"
+    output_file: outputs/codeact-eval.json
+    minimum_pass_rate: 0.80
+
+forbidden_patterns:
+  - "litellm"                                   # we dropped it
+  - "x-est-cost-usd"                            # client-trusted cost
+  - "TODO: implement cost"                      # cost wall must be real
+  - "status_code\\s*==\\s*503"
+
+ship_criteria_human_readable: |
+  - model_client.py calls Anthropic and vLLM via official SDKs (anthropic, httpx).
+  - cost_wall.py tracks spend per workspace, persists to Postgres, returns 429
+    when budget exceeded. Tests verify it actually 429s.
+  - Cost is computed from response.usage on Anthropic, from response.usage on
+    vLLM. Client headers are ignored.
+  - Every gateway request is logged as structured JSON: {ts, workspace, model,
+    tokens_in, tokens_out, cost_usd, latency_ms, status}. (R5 consumes this.)
+  - No LiteLLM imports anywhere.

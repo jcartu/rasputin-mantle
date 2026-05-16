@@ -1,13 +1,125 @@
+# infra/compose.dev.yml
+#
+# Support services Mantle needs running on the QNAP (or wherever the orchestrator runs).
+# No LiteLLM service — the orchestrator + gateway call Anthropic and vLLM directly.
+
+name: mantle
+
 services:
-  sandbox-runtime:
-    image: python:3.12-slim
-    command: sleep infinity
+  postgres:
+    image: postgres:16-alpine
+    container_name: mantle-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: mantle
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-mantle-dev}
+      POSTGRES_DB: mantle
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
     volumes:
-      - sandbox-work:/workspace
-    user: "1000:1000"
-    security_opt:
-      - no-new-privileges:true
-    tmpfs:
-      - /tmp:noexec,nosuid,size=100m
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mantle"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: mantle-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  neko:
+    # Live Computer View — WebRTC virtual browser the user watches the agent control.
+    # Sandboxed; no host network access beyond what's mapped.
+    image: m1k1o/neko:firefox
+    container_name: mantle-neko
+    restart: unless-stopped
+    shm_size: "2gb"
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - "${NEKO_PORT:-8080}:8080"
+      - "52000-52100:52000-52100/udp"
+    environment:
+      NEKO_SCREEN: "1280x720@30"
+      NEKO_PASSWORD: ${NEKO_PASSWORD:-mantle-dev}
+      NEKO_PASSWORD_ADMIN: ${NEKO_PASSWORD_ADMIN:-mantle-admin}
+      NEKO_EPR: "52000-52100"
+      NEKO_ICELITE: "1"
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:8080/"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+
+  faster-whisper:
+    build:
+      context: .
+      dockerfile: dockerfiles/faster-whisper.Dockerfile
+    container_name: mantle-stt
+    restart: unless-stopped
+    ports:
+      - "${FASTER_WHISPER_PORT:-8803}:8803"
+    environment:
+      WHISPER_MODEL: ${WHISPER_MODEL:-large-v3}
+      WHISPER_DEVICE: ${WHISPER_DEVICE:-cpu}
+      WHISPER_COMPUTE: ${WHISPER_COMPUTE:-int8}
+    volumes:
+      - whisper-models:/models
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8803/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+
+  kokoro:
+    build:
+      context: .
+      dockerfile: dockerfiles/kokoro.Dockerfile
+    container_name: mantle-tts
+    restart: unless-stopped
+    ports:
+      - "${KOKORO_PORT:-8804}:8804"
+    volumes:
+      - kokoro-models:/models
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8804/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+
+  rasputin-memory:
+    # The user's existing rasputin-memory submodule, exposed as an HTTP service.
+    build:
+      context: ../memory
+      dockerfile: Dockerfile
+    container_name: mantle-memory
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "${RASPUTIN_MEMORY_PORT:-7777}:7777"
+    environment:
+      DATABASE_URL: "postgresql://mantle:${POSTGRES_PASSWORD:-mantle-dev}@postgres:5432/mantle"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7777/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+
 volumes:
-  sandbox-work:
+  postgres-data:
+  redis-data:
+  whisper-models:
+  kokoro-models:

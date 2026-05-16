@@ -1,0 +1,106 @@
+# eval/gaia-mini/tasks.yaml
+# 20 GAIA level-1 tasks. The full GAIA benchmark requires huggingface auth; this
+# mini set is hand-curated representative tasks of similar difficulty.
+
+tasks:
+  - id: gaia-001
+    description: "How many studio albums did Mercedes Sosa release between 2000 and 2009 (inclusive)?"
+    expected_answer: "3"
+    tags: [research, web]
+
+  - id: gaia-002
+    description: "What is the surname of the author who wrote the 2019 paper 'Stochastic Gradient Descent with Differentially Private Updates'?"
+    expected_answer: "Song"
+    tags: [research, arxiv]
+
+  - id: gaia-003
+    description: "On the Wikipedia page for the Eiffel Tower, what is the height in meters of the tower, as listed in the infobox?"
+    expected_answer: "330"
+    tags: [research, wikipedia]
+
+  - id: gaia-004
+    description: "What is the result of 17! mod 19? (Compute by writing and running Python.)"
+    expected_answer: "18"
+    tags: [code]
+
+  - id: gaia-005
+    description: "Using Python, find the smallest positive integer n such that n! has more than 30 digits."
+    expected_answer: "29"
+    tags: [code]
+
+  - id: gaia-006
+    description: "What is the airport code for the airport in Reykjavik, Iceland that handles international flights?"
+    expected_answer: "KEF"
+    tags: [research]
+
+  - id: gaia-007
+    description: "List the world's three tallest buildings as of 2024 in descending height order, just by name."
+    expected_answer: "Burj Khalifa, Merdeka 118, Shanghai Tower"
+    tags: [research]
+
+  - id: gaia-008
+    description: "What is the molecular formula of caffeine?"
+    expected_answer: "C8H10N4O2"
+    tags: [research]
+
+  - id: gaia-009
+    description: "On GitHub, find the linux/linux repo. What is the first author's name in the most recent merged pull request to mainline (as of today)?"
+    expected_answer: "(any reasonable name)"
+    tags: [research, github, time-sensitive]
+    grading: open
+
+  - id: gaia-010
+    description: "Using a CSV with these contents (saved to /tmp/data.csv), compute the median of the 'value' column: 'value\\n10\\n20\\n30\\n40\\n50\\n60\\n70\\n80\\n90\\n100'"
+    expected_answer: "55.0"
+    tags: [code, data]
+
+  - id: gaia-011
+    description: "What is the ISO 4217 currency code for the official currency of Switzerland?"
+    expected_answer: "CHF"
+    tags: [research]
+
+  - id: gaia-012
+    description: "What is the speed of light in vacuum in meters per second (give the conventional integer value)?"
+    expected_answer: "299792458"
+    tags: [research, physics]
+
+  - id: gaia-013
+    description: "How many days are in February in the year 2100?"
+    expected_answer: "28"
+    tags: [code]
+
+  - id: gaia-014
+    description: "What is the SHA-256 hash of the string 'hello world' (lowercase, 64 hex chars)?"
+    expected_answer: "b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9"
+    tags: [code]
+
+  - id: gaia-015
+    description: "On arxiv, what is the abstract first sentence of the original Transformer paper (Vaswani et al., 2017)?"
+    expected_answer: "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks that include an encoder and a decoder."
+    tags: [research, arxiv]
+    grading: contains
+
+  - id: gaia-016
+    description: "What is the chemical formula of common table salt?"
+    expected_answer: "NaCl"
+    tags: [research]
+
+  - id: gaia-017
+    description: "Using Python, list the first 5 Fibonacci numbers greater than 100, comma-separated."
+    expected_answer: "144, 233, 377, 610, 987"
+    tags: [code]
+
+  - id: gaia-018
+    description: "On Wikipedia, find the year the company OpenAI was founded."
+    expected_answer: "2015"
+    tags: [research, wikipedia]
+
+  - id: gaia-019
+    description: "What is the maximum value of a signed 32-bit integer?"
+    expected_answer: "2147483647"
+    tags: [code]
+
+  - id: gaia-020
+    description: "Compute the area of a circle with radius 7 (use π = 3.14159265). Round to 2 decimal places."
+    expected_answer: "153.94"
+    tags: [code]

@@ -1,136 +1,60 @@
-description: Mantle CodeAct deterministic Docker sandbox suite
+# eval/promptfoo/codeact.yaml
+# Contract suite for CodeAct: every tool in the catalog must return its declared schema.
+# Run via `make eval-codeact`. Writes outputs/codeact-eval.json with `pass_rate`.
 
-prompts:
-  - "{{code}}"
+description: "CodeAct catalog contract tests"
 
 providers:
-  - id: python:eval/promptfoo/codeact-provider.py
+  - id: file:eval/promptfoo/codeact-provider.py
+    label: codeact-local
+    config:
+      vllm_url: "${VLLM_BASE_URL}"
+      vllm_key: "${VLLM_API_KEY}"
 
-defaultTest:
-  options:
-    provider: python:eval/promptfoo/codeact-provider.py
+prompts:
+  - "Use the {{tool}} tool to {{action}}. Return only the tool's output."
 
 tests:
-  - description: primes
+  - description: "fs.read returns content"
     vars:
-      code: |-
-        for i in range(2, 100):
-          if all(i % j != 0 for j in range(2, i)):
-            print(i)
+      tool: fs.read
+      action: "read /etc/hostname"
     assert:
       - type: contains
-        value: "97"
-      - type: contains
-        value: '"exit_code": 0'
+        value: "content"
+      - type: javascript
+        value: "JSON.parse(output).hasOwnProperty('content')"
 
-  - description: csv_write
+  - description: "shell.exec returns stdout"
     vars:
-      code: |-
-        from pathlib import Path
-        path = Path("/workspace/data.csv")
-        path.write_text("name,age\nAda,36\n", encoding="utf-8")
-        print(path.exists())
-        print(path.read_text(encoding="utf-8").splitlines()[0])
+      tool: shell.exec
+      action: "run `echo hello`"
     assert:
       - type: contains
-        value: "name,age"
-      - type: contains
-        value: "/workspace/data.csv"
+        value: "stdout"
+      - type: javascript
+        value: "JSON.parse(output).stdout.includes('hello')"
 
-  - description: base64_decode
+  - description: "browser.navigate returns url"
     vars:
-      code: |-
-        import base64
-        print(base64.b64decode("SGVsbG8gV29ybGQ=").decode())
+      tool: browser.navigate
+      action: "navigate to https://example.com"
     assert:
       - type: contains
-        value: '"stdout": "Hello World\n"'
+        value: "url"
 
-  - description: directory_walk
+  - description: "search.web returns results array"
     vars:
-      code: |-
-        from pathlib import Path
-        root = Path("/workspace/walk")
-        (root / "a").mkdir(parents=True)
-        (root / "b").mkdir(parents=True)
-        (root / "a" / "one.txt").write_text("1", encoding="utf-8")
-        (root / "b" / "two.txt").write_text("2", encoding="utf-8")
-        for path in sorted(root.rglob("*.txt")):
-            print(path.name)
+      tool: search.web
+      action: "search for 'rasputin omnitool'"
+    assert:
+      - type: javascript
+        value: "Array.isArray(JSON.parse(output).results)"
+
+  - description: "memory.recall returns matches"
+    vars:
+      tool: memory.recall
+      action: "recall context about 'project plan'"
     assert:
       - type: contains
-        value: "one.txt"
-      - type: contains
-        value: "two.txt"
-
-  - description: json_parse
-    vars:
-      code: |-
-        import json
-        payload = json.loads('{"project":"mantle","phase":1}')
-        print(payload["project"])
-        print(payload["phase"])
-    assert:
-      - type: contains
-        value: "mantle"
-      - type: contains
-        value: '"exit_code": 0'
-
-  - description: list_sort
-    vars:
-      code: |-
-        values = [5, 2, 9, 1, 5, 6]
-        print(sorted(values))
-    assert:
-      - type: contains
-        value: "[1, 2, 5, 5, 6, 9]"
-
-  - description: regex_emails
-    vars:
-      code: |-
-        import re
-        text = "Mail ada@example.com and grace.hopper@navy.mil today."
-        print(",".join(re.findall(r"[\w.]+@[\w.]+", text)))
-    assert:
-      - type: regex
-        value: "ada@example\\.com.*grace\\.hopper@navy\\.mil"
-
-  - description: matrix_multiply
-    vars:
-      code: |-
-        a = [[1, 2], [3, 4]]
-        b = [[5, 6], [7, 8]]
-        product = [[sum(a[i][k] * b[k][j] for k in range(2)) for j in range(2)] for i in range(2)]
-        print(product)
-    assert:
-      - type: contains
-        value: "50"
-      - type: contains
-        value: "[[19, 22], [43, 50]]"
-
-  - description: file_rename
-    vars:
-      code: |-
-        from pathlib import Path
-        source = Path("/workspace/original.txt")
-        target = Path("/workspace/renamed.txt")
-        source.write_text("rename me", encoding="utf-8")
-        source.rename(target)
-        print(target.exists())
-    assert:
-      - type: contains
-        value: "/workspace/renamed.txt"
-      - type: contains
-        value: "True"
-
-  - description: error_handling
-    vars:
-      code: |-
-        raise ValueError("deterministic failure")
-    assert:
-      - type: contains
-        value: "ValueError"
-      - type: contains
-        value: '"exit_code": 1'
-
-threshold: 0.8
+        value: "matches"

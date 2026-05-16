@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+# .git/hooks/pre-commit — installed by UNATTENDED.sh and `make bootstrap`.
+#
+# Hard blocks the worst Potemkin patterns at commit time. The auditor (Opus) is the
+# real cop; this is the cheap perimeter so the orchestrator's executor can't easily
+# slip these past while it's iterating.
+#
+# Bypass for a deliberate verifier change:  ALLOW_VERIFIER_EDIT=1 git commit ...
+set -euo pipefail
+
+if [ -n "${MANTLE_SKIP_PRECOMMIT:-}" ]; then exit 0; fi
+
+STAGED=$(git diff --cached --name-only --diff-filter=ACMRT)
+if [ -z "$STAGED" ]; then exit 0; fi
+
+fails=0
+warn()  { printf "\033[33m! %s\033[0m\n" "$*" >&2; }
+fail()  { printf "\033[31m✗ %s\033[0m\n" "$*" >&2; fails=$((fails+1)); }
+
+# 1. Reject verifier edits unless explicitly allowed
+VERIFIER_FILES_REGEX='^(Makefile|protocol/Makefile|protocol/phases/phase-.*\.yaml|protocol/scripts/verify-phase\.sh|protocol/scripts/banned-phrases\.txt|\.github/workflows/phase-verify\.yml)$'
+if echo "$STAGED" | grep -qE "$VERIFIER_FILES_REGEX"; then
+  if [ -z "${ALLOW_VERIFIER_EDIT:-}" ]; then
+    fail "verifier files staged without ALLOW_VERIFIER_EDIT=1"
+    echo "$STAGED" | grep -E "$VERIFIER_FILES_REGEX" | sed 's/^/    /' >&2
+  else
+    warn "ALLOW_VERIFIER_EDIT=1 — allowing verifier edit (auditor will review)"
+  fi
+fi
+
+# 2. Reject new asserts that services are dead
+NEW_503=$(git diff --cached -U0 -- '*.py' '*.ts' '*.tsx' 2>/dev/null | \
+  grep -E '^\+' | grep -E '(status_code|status)\s*==\s*503|to\.equal\(503\)' || true)
+if [ -n "$NEW_503" ]; then
+  fail "new code asserts service is dead (status == 503). Real services don't do that."
+  echo "$NEW_503" | head -5 | sed 's/^/    /' >&2
+fi
+
+# 3. Reject asyncio.sleep + fake return pattern in same diff
+SLEEP_AND_FAKE=$(git diff --cached -U5 -- '*.py' 2>/dev/null | \
+  awk '
+    /^\+.*asyncio\.sleep/ {found_sleep=1}
+    /^\+.*return \{.*"simulate.*True/ && found_sleep {print; found_sleep=0}
+    /^@@/ {found_sleep=0}
+  ' || true)
+if [ -n "$SLEEP_AND_FAKE" ]; then
+  fail "asyncio.sleep + simulated payload detected — implement the real call"
+  echo "$SLEEP_AND_FAKE" | head -5 | sed 's/^/    /' >&2
+fi
+
+# 4. Reject --no-sandbox flags added
+NEW_NOSAND=$(git diff --cached -U0 2>/dev/null | grep -E '^\+.*--no-sandbox' || true)
+if [ -n "$NEW_NOSAND" ]; then
+  fail "--no-sandbox added. Fix the underlying issue, do not disable the sandbox."
+  echo "$NEW_NOSAND" | head -3 | sed 's/^/    /' >&2
+fi
+
+if [ $fails -gt 0 ]; then
+  echo "" >&2
+  printf "\033[31mpre-commit BLOCKED %d issue(s). Either fix them, or use MANTLE_SKIP_PRECOMMIT=1 with a damn good reason.\033[0m\n" "$fails" >&2
+  exit 1
+fi
+exit 0

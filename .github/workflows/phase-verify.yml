@@ -1,0 +1,52 @@
+name: phase-verify
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  verify-current-phase:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: recursive
+
+      - name: Determine current phase
+        id: phase
+        run: |
+          PHASE=$(git tag -l 'phase-R*-shipped' | sed 's/phase-//;s/-shipped//' | sort -V | tail -1)
+          if [ -z "$PHASE" ]; then PHASE=R0; fi
+          echo "phase=$PHASE" >> "$GITHUB_OUTPUT"
+          echo "Most recently shipped phase: $PHASE"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: astral-sh/setup-uv@v3
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: pnpm
+
+      - name: Install jq
+        run: sudo apt-get update -qq && sudo apt-get install -y jq
+
+      - name: Install deps
+        run: |
+          uv sync
+          pnpm install --frozen-lockfile || pnpm install
+
+      - name: make verify-phase-${{ steps.phase.outputs.phase }}
+        run: |
+          chmod +x protocol/scripts/*.sh
+          make verify-phase-${{ steps.phase.outputs.phase }}

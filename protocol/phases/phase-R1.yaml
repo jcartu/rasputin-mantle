@@ -1,0 +1,55 @@
+name: "R1 — Remediate Audit Findings"
+phase: R1
+description: |
+  Fix the concrete bugs the 2026-05-16 audit found. This phase ships when:
+    1. The 5 critical bugs are fixed.
+    2. The full pytest suite is green (currently fails on test_skills.py).
+    3. CodeAct contract eval ≥ 0.80.
+    4. The submodules kernel/ and memory/ have real refs pinned (or are removed
+       if not in use yet — but they're declared in the build plan so they stay).
+
+  Concrete tickets (read docs/AUDIT_2026_05_16.md for line numbers):
+    - packages/browser/browser/browser_use_backend.py:63 — SyntaxError in regex
+      pattern. Replace the broken capture group with a valid one.
+    - packages/skills/tests/test_skills.py — test imports the schema but the
+      production code emits a different one. Reconcile (production wins; tests
+      adapt) and document the schema in packages/skills/SKILL.md.
+    - apps/gateway/src/gateway/middleware.py — cost ceiling currently trusts
+      x-est-cost-usd from clients. Compute it server-side from tokens_in/out
+      using a per-model COST_TABLE. Reject the client header entirely.
+    - apps/gateway/src/gateway/routes/sessions.py:42-54 — sessions don't bind to
+      a CodeAct sandbox. Bind on session create; tear down on session destroy.
+    - packages/codeact/tests/ — add a contract test that asserts every tool in
+      the catalog returns its declared schema, not a synthetic one.
+
+packages_required:
+  - packages/browser
+  - packages/skills
+  - packages/codeact
+  - apps/gateway
+
+artifacts:
+  - PHASE_R1_DONE.md
+  - outputs/codeact-eval.json
+
+integration_tests:
+  - tests/integration/test_gateway_cost_ceiling.py
+  - tests/integration/test_session_sandbox_binding.py
+
+eval_suites:
+  - name: codeact-contract
+    command: "make eval-codeact"
+    output_file: outputs/codeact-eval.json
+    minimum_pass_rate: 0.80
+
+forbidden_patterns:
+  - "x-est-cost-usd"                           # client-supplied cost is the bug
+  - "status_code\\s*==\\s*503"                 # tests that assert services are dead
+  - "asyncio\\.sleep\\([0-9.]+\\)\\s*$"        # bare sleeps in route handlers
+
+ship_criteria_human_readable: |
+  - All five audit bugs fixed (each ticket includes the audit reference).
+  - pytest green repo-wide.
+  - CodeAct contract ≥ 0.80 in outputs/codeact-eval.json.
+  - Gateway middleware computes cost server-side (verified by integration test).
+  - Sessions are bound to sandbox containers (verified by integration test).

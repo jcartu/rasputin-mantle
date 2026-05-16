@@ -1,0 +1,36 @@
+# Banned spiral phrases for 27B executor output.
+# Each non-empty, non-comment line is an extended regex (egrep).
+# A match triggers an interrupt in the executor pipeline.
+
+let me reconsider
+let me reconsider this
+actually,? let me think about this differently
+actually,? let me think differently
+let me take a step back
+on second thought
+wait,? I should
+wait,? actually
+before I do that,? let me first
+before doing that,? let me first
+let me first explore
+let me explore the codebase
+let me first read
+let me check the codebase
+let me re-?read
+hmm,? let me
+hmm,? wait
+I need to think about this more
+actually,? on reflection
+let me reconsider the approach
+let me reconsider my approach
+I'm going to start over
+let me start fresh
+let me restart this
+forget what I said
+ignore my previous
+I changed my mind
+I'll come back to
+deferring this for now
+TODO: come back
+TODO: revisit
+let me defer

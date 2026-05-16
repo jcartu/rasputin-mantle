@@ -16,6 +16,8 @@ class Settings:
     max_cost_dollars: float = float(os.environ.get("MANTLE_MAX_COST", "40.0"))
     max_cost_tokens: int = int(os.environ.get("MANTLE_MAX_TOKENS", "1000000"))
     debug: bool = os.environ.get("MANTLE_DEBUG", "false").lower() == "true"
+    rasputin_url: str = os.environ.get("RASPUTIN_URL", "http://127.0.0.1:7777")
+    rasputin_token: str = os.environ.get("RASPUTIN_TOKEN", "")
 
 
 settings = Settings()

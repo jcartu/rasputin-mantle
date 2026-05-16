@@ -218,3 +218,19 @@ def test_mcp_health_check() -> None:
     body = health.json()
     assert body['health'] in ('healthy', 'unhealthy', 'unreachable')
     assert body['last_check'] > 0
+
+
+def test_absorb_feed_returns_empty_when_no_data() -> None:
+    client = TestClient(app)
+    resp = client.get('/api/absorb/feed')
+    assert resp.status_code == 200
+    body = resp.json()
+    assert 'records' in body
+    assert 'timestamp' in body
+
+
+def test_absorb_delta_returns_text_when_no_data() -> None:
+    client = TestClient(app)
+    resp = client.get('/api/absorb/delta')
+    assert resp.status_code == 200
+    assert 'Capability Delta' in resp.text

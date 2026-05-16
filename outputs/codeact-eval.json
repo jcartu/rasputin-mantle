@@ -1,0 +1,17 @@
+{
+  "suite": "codeact-contract",
+  "total": 6,
+  "passed": 6,
+  "failed": 0,
+  "pass_rate": 1.0,
+  "tasks": [
+    {"name": "codeact_executor_returns_declared_schema", "pass": true},
+    {"name": "codeact_result_types_match_schema", "pass": true},
+    {"name": "execute_code_signature", "pass": true},
+    {"name": "sandbox_backend_has_required_methods", "pass": true},
+    {"name": "sandbox_backend_is_abstract", "pass": true},
+    {"name": "create_backend_returns_concrete_backend", "pass": true}
+  ],
+  "timestamp": "2026-05-17T02:55:00Z",
+  "notes": "Contract tests verify CodeAct executor matches shared ExecResult schema. All 6 contract checks pass."
+}

@@ -1,0 +1,105 @@
+name: 🐛 Bug report
+description: Something doesn't work the way the README says it should
+title: "bug: <short summary>"
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug. The more concrete you can be, the faster we can fix it.
+
+        > **Before filing:** please confirm `make verify` passes against `main`, and check existing issues.
+
+  - type: input
+    id: version
+    attributes:
+      label: Git SHA
+      description: Output of `git rev-parse HEAD`
+      placeholder: "abc1234"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Where does the bug live?
+      options:
+        - gateway (apps/gateway)
+        - web UI (apps/web)
+        - desktop (apps/desktop)
+        - browser package
+        - codeact package
+        - sandbox package
+        - skills package
+        - voice package
+        - mcp-host package
+        - wide-research package
+        - scheduler package
+        - memory client
+        - infra / Docker compose
+        - eval harness
+        - documentation
+        - other
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Be specific. Include the exact command, the exact error, and the expected behaviour.
+      placeholder: |
+        I ran `make verify` and got:
+
+        ```
+        FAILED tests/integration/test_browser_navigate.py::test_navigate_to_about_blank
+        E   AssertionError: Expected state.url == 'about:blank', got 'https://www.google.com'
+        ```
+
+        Expected: about:blank.
+        Actual: the browser navigated somewhere else.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How to reproduce
+      description: Minimum steps. Assume the reader is starting from a fresh clone.
+      placeholder: |
+        1. git clone --recursive https://github.com/jcartu/rasputin-mantle
+        2. cd rasputin-mantle && uv sync && pnpm install
+        3. docker compose -f infra/compose.dev.yml up -d
+        4. PYTHONPATH=... uv run pytest tests/integration/test_browser_navigate.py -v
+      render: bash
+    validations:
+      required: true
+
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment
+      description: Output of `docker compose -f infra/compose.dev.yml ps` and `uname -a`
+      render: text
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / traceback
+      description: Full traceback or relevant log lines. Don't truncate.
+      render: text
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: I confirm `make verify` passes on `main` (or this issue is precisely *about* a verify failure)
+          required: true
+        - label: I searched existing issues and didn't find a duplicate
+          required: true

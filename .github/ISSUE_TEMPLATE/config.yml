@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🔐 Security vulnerability
+    url: https://github.com/jcartu/rasputin-mantle/security/advisories/new
+    about: Privately report a security issue. See SECURITY.md for the threat model.
+  - name: 💬 Discussion
+    url: https://github.com/jcartu/rasputin-mantle/discussions
+    about: Questions about usage, architecture, or design choices.
+  - name: 📚 Documentation
+    url: https://github.com/jcartu/rasputin-mantle/tree/main/docs
+    about: Architecture, security model, skill authoring guide, build plan.

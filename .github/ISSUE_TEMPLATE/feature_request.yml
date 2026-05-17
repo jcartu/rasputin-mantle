@@ -1,0 +1,79 @@
+name: ✨ Feature request
+description: Propose a capability Mantle doesn't have yet
+title: "feat: <short summary>"
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Feature requests are most effective when they describe the **user-facing change** rather than the implementation. We will design the implementation.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Be specific. Who feels the pain today? What do they have to do as a workaround?
+      placeholder: |
+        I want to run Mantle's wide-research dispatcher against the GitHub API,
+        but I have to write my own MCP server. Mantle should ship an MCP plugin
+        for popular APIs out of the box.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed user-facing change
+      description: What would the README say after this lands?
+      placeholder: |
+        Add a `packages/mcp-plugins/github` package that registers itself with
+        `mcp-host` and exposes `gh_search_repos`, `gh_get_issue`, etc.
+        Users would write `agent.use("github")` in a SKILL.md.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What would the user do today without this feature? Why isn't that good enough?
+    validations:
+      required: false
+
+  - type: dropdown
+    id: phase
+    attributes:
+      label: Which phase / package would this touch?
+      multiple: true
+      options:
+        - apps/gateway
+        - apps/web
+        - apps/desktop
+        - packages/browser
+        - packages/codeact
+        - packages/sandbox
+        - packages/skills
+        - packages/voice
+        - packages/mcp-host
+        - packages/wide-research
+        - packages/scheduler
+        - packages/memory client
+        - kernel/ submodule
+        - memory/ submodule
+        - infra / Docker compose
+        - eval harness
+        - documentation only
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: This is a new feature, not a bug
+          required: true
+        - label: I searched existing issues and didn't find a duplicate
+          required: true
+        - label: I am willing to discuss the design with maintainers before implementation
+          required: false

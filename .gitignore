@@ -41,3 +41,10 @@ promptfoo/
 .docker/
 promptfoo-errors.log
 src-tauri/target/
+
+# Rust / Tauri build artifacts (match at any depth)
+**/src-tauri/target/
+**/target/
+
+# Brand image test artifacts
+assets/brand/_*.{jpg,png}

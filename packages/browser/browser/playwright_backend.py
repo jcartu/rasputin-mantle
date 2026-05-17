@@ -9,6 +9,7 @@ from typing import Any
 from playwright.async_api import Browser, Page, Playwright, async_playwright
 from playwright.async_api import TimeoutError as PlaywrightTimeoutError
 
+from browser.auth import AuthWallSignal, LoginWallDetector
 from browser.errors import BrowserActionError, BrowserNotAvailable, ElementNotFoundError
 from browser.types import BrowserBackend, BrowserElement, BrowserState
 from browser.vision import VisionAssist, VisionBudgetExceeded
@@ -221,11 +222,14 @@ class PlaywrightBackend(BrowserBackend):
                     pass  # budget exhausted, return empty state
                 except Exception:
                     pass  # vision fallback failed, return empty state
+            # Detect auth walls
+            auth_wall = self._detect_auth_wall(page.url, await page.title(), elements)
             return BrowserState(
                 url=page.url,
                 elements=elements,
                 title=await page.title(),
                 screenshot_b64=screenshot_b64,
+                auth_wall=auth_wall,
             )
         except Exception as exc:
             raise BrowserActionError(f"Failed to capture Playwright state: {exc}") from exc
@@ -404,9 +408,18 @@ class PlaywrightBackend(BrowserBackend):
         """Reset vision budget for a new task."""
         if self._vision is not None:
             self._vision.reset_task()
-
     def get_vision_cost_report(self) -> dict:
         """Return vision cost telemetry."""
         if self._vision is None:
             return {"enabled": False}
         return {"enabled": True, **self._vision.get_cost_report()}
+
+    def _detect_auth_wall(
+        self,
+        url: str,
+        title: str,
+        elements: list[BrowserElement],
+    ) -> AuthWallSignal | None:
+        """Check if the current page is behind an auth wall."""
+        detector = LoginWallDetector()
+        return detector.detect(url, title, elements)

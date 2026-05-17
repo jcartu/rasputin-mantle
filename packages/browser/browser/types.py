@@ -2,9 +2,10 @@ from __future__ import annotations
 
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
-
+if TYPE_CHECKING:
+    from browser.auth import AuthWallSignal
 @dataclass
 class BrowserElement:
     id: str
@@ -20,6 +21,7 @@ class BrowserState:
     elements: list[BrowserElement]
     title: str = ""
     screenshot_b64: str | None = None
+    auth_wall: "AuthWallSignal | None" = None  # populated by LoginWallDetector
 
 
 class BrowserBackend(ABC):

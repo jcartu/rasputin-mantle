@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from browser.agent_browser_backend import AgentBrowserBackend
+from browser.auth import AuthWallSignal, AuthWallType, LoginWallDetector
 from browser.browser_use_backend import BrowserUseBackend
 from browser.errors import BrowserActionError, BrowserNotAvailable
 from browser.factory import create_browser_backend
@@ -12,12 +13,15 @@ __version__ = "0.1.0"
 
 __all__ = [
     "AgentBrowserBackend",
+    "AuthWallSignal",
+    "AuthWallType",
     "BrowserActionError",
     "BrowserBackend",
     "BrowserElement",
     "BrowserNotAvailable",
     "BrowserState",
     "BrowserUseBackend",
+    "LoginWallDetector",
     "PlaywrightBackend",
     "VisionAssist",
     "VisionBudgetExceeded",

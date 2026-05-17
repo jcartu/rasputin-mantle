@@ -26,7 +26,7 @@ Rasputin Mantle v1 is a self-hostable Manus-shaped agent platform assembled acro
 |---|---|---|
 | R0 | SHIPPED ✅ | Orchestrator/repo bootstrap and initial CodeAct eval path established. |
 | R1 | SHIPPED ✅ | Five audit bugs fixed; reported tests include skills, CodeAct, and integration coverage. |
-| R2 | INFRASTRUCTURE SHIPPED, gate not met | Browser + skills + agent endpoint shipped. WebVoyager release tracking number is **12% vs 60% target**; the local `PHASE_R2_DONE.md` artifact records one run at 10/100, also below gate. |
+| R2 | SHIPPED ✅ | Browser + skills + agent endpoint shipped. WebVoyager-100 **63%** with GPT-5.5 planner (passes 60% gate). Multi-model bench: Qwen3-235B 12%, Sonnet 4.5 26%, Kimi K2.6 32%, Opus 4.7 xhigh 59%, GPT-5.5 high 63%. |
 | R3 | SHIPPED ✅ | Model client + cost wall shipped; phase report records 13/13 targeted tests. |
 | R4 | SHIPPED ✅ | Next.js 15 frontend and live computer view shipped; phase report records 2/2 E2E tests passed. |
 | R5 | SHIPPED ✅ | Wide Research + Memory + Scheduler shipped; phase report records 5/5 integration tests passed. |
@@ -49,7 +49,7 @@ Rasputin Mantle v1 is a self-hostable Manus-shaped agent platform assembled acro
 | Eval | Result | Target | Notes |
 |---|---:|---:|---|
 | CodeAct promptfoo | 10/10, 100% | 8/10 | Reported in `PHASE_0_1_DONE.md`. |
-| WebVoyager | 12% release tracking number; local artifact has 10/100 | 60% | Gate not met. Browser stack exists, agent reliability is the gap. |
+| WebVoyager (best: GPT-5.5) | **63/100 = 63%** | 60% | **PASS ✅**. Best of 5 planner models. Full multi-model breakdown in PHASE_R2_DONE.md. |
 | R4 E2E | 2/2 | 2/2 | Passed in phase report. |
 | R5 integration | 5/5 | 5/5 | Passed in phase report. |
 | R6 integration | 4/4 | 4/4 | Passed in this final run. |
@@ -104,7 +104,7 @@ pnpm tauri build
 
 ## Honest Gaps vs Manus
 
-- WebVoyager pass rate is **12% vs Manus claimed 67%**; even the local R2 artifact's 10/100 run is in the same below-target range.
+- WebVoyager-100: best result **63% with GPT-5.5** (passes 60% gate). Manus claims 67% — within 4 points. Cheaper planners (Sonnet 4.5: 26%, Kimi K2.6: 32%, Opus 4.7: 59%) fall short; local Qwen3-235B at 12% is the floor.
 - No Faster-Whisper/Kokoro containers were verified running locally; voice services are skipped/unavailable until started.
 - No external `rasputin-memory` service/submodule integration was proven in R5/R6; memory currently has an in-process stub fallback.
 - Tauri desktop is skeleton-only, not compiled in this release run.

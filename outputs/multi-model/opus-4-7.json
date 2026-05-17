@@ -1,0 +1,908 @@
+{
+  "total": 100,
+  "passed": 59,
+  "pass_rate": 0.59,
+  "model": "claude-opus-4-7",
+  "results": [
+    {
+      "id": "wv-003",
+      "description": "On Wikipedia, find the year Marie Curie won her first Nobel Prize.",
+      "answer": "1903",
+      "error": "",
+      "steps": 1,
+      "success": true,
+      "duration_s": 4.3
+    },
+    {
+      "id": "wv-007",
+      "description": "Find the current weather in Frankfurt, Germany.",
+      "answer": "Frankfurt: \u2600\ufe0f +5\u00b0C (clear/sunny)",
+      "error": "",
+      "steps": 3,
+      "success": true,
+      "duration_s": 7.7
+    },
+    {
+      "id": "wv-004",
+      "description": "On GitHub, find the number of stars on the linux/linux repo.",
+      "answer": "The linux/linux repo (torvalds/linux) has approximately 233,443 stars on GitHub.",
+      "error": "",
+      "steps": 3,
+      "success": true,
+      "duration_s": 13.1
+    },
+    {
+      "id": "wv-001",
+      "description": "Find the current price of one Apple stock (AAPL) and report it.",
+      "answer": "The current price of Apple (AAPL) stock is $300.23.",
+      "error": "",
+      "steps": 4,
+      "success": true,
+      "duration_s": 16.0
+    },
+    {
+      "id": "wv-009",
+      "description": "Find the runtime of the movie 'Oppenheimer' (2023).",
+      "answer": "The runtime of Oppenheimer (2023) is 3 hours (180 minutes).",
+      "error": "",
+      "steps": 1,
+      "success": true,
+      "duration_s": 3.1
+    },
+    {
+      "id": "wv-008",
+      "description": "On Hacker News, find the top story right now.",
+      "answer": "The top story on Hacker News right now is: \"Zerostack \u2013 A Unix-inspired coding agent written in pure Rust\" (crates.io), posted by gidellav 7 hours ago with 101 comments.",
+      "error": "",
+      "steps": 1,
+      "success": true,
+      "duration_s": 4.2
+    },
+    {
+      "id": "wv-010",
+      "description": "On Reddit, find a recent post in r/python with > 100 upvotes.",
+      "answer": "",
+      "error": "state: Failed to capture Playwright state: Page.evaluate: Execution context was destroyed, most likely beca",
+      "steps": 0,
+      "success": false,
+      "duration_s": 1.7
+    },
+    {
+      "id": "wv-005",
+      "description": "Find a cheap flight from JFK to LAX next month.",
+      "answer": "The cheapest flight from JFK to LAX next month is approximately \u00a3277 round trip (found on Google Flights). Other options range from \u00a3277 to \u00a3343 round trip, with nonstop flights available on airlines like American and JetBlue.",
+      "error": "",
+      "steps": 6,
+      "success": true,
+      "duration_s": 26.3
+    },
+    {
+      "id": "wv-012",
+      "description": "On Allrecipes, find a vegetarian lasagna recipe and list two main ingredients.",
+      "answer": "On Allrecipes, the 'World's Best Vegetarian Lasagna' (and similar vegetarian lasagna recipes) features main ingredients including ricotta cheese and spinach (along with lasagna noodles, mozzarella, and marinara sauce). Two main ingredients: ricotta cheese and spinach.",
+      "error": "",
+      "steps": 4,
+      "success": true,
+      "duration_s": 15.6
+    },
+    {
+      "id": "wv-006",
+      "description": "On arxiv.org, find the latest paper about CodeAct.",
+      "answer": "The latest paper about CodeAct on arxiv.org is 'Reinforcement Learning for Tool-Calling Agents in Fast Healthcare Interoperability Resources (FHIR)' (arXiv:2605.14126) by Marius S. Knorr, Robert M\u00fcller, Jan P. Bremer, and Nils Schweingruber.",
+      "error": "",
+      "steps": 9,
+      "success": true,
+      "duration_s": 34.4
+    },
+    {
+      "id": "wv-011",
+      "description": "On Allrecipes, find a highly rated chocolate chip cookie recipe and report its r",
+      "answer": "",
+      "error": "",
+      "steps": 10,
+      "success": false,
+      "duration_s": 31.6
+    },
+    {
+      "id": "wv-013",
+      "description": "On Allrecipes, find a slow cooker chicken recipe with at least 4 stars and repor",
+      "answer": "",
+      "error": "",
+      "steps": 10,
+      "success": false,
+      "duration_s": 30.6
+    },
+    {
+      "id": "wv-017",
+      "description": "On Apple's website, find the starting price of the latest MacBook Air.",
+      "answer": "The latest MacBook Air (M5 chip) starts at $1,099.",
+      "error": "",
+      "steps": 2,
+      "success": true,
+      "duration_s": 8.0
+    },
+    {
+      "id": "wv-002",
+      "description": "Find the population of Tokyo, Japan.",
+      "answer": "",
+      "error": "state: Failed to capture Playwright state: Page.screenshot: Timeout 30000ms exceeded.\nCall log:\n  - taking ",
+      "steps": 1,
+      "success": false,
+      "duration_s": 58.4
+    },
+    {
+      "id": "wv-018",
+      "description": "On Apple's website, find the battery life Apple claims for the latest iPhone Pro",
+      "answer": "Apple claims the following battery life for the latest iPhone Pro models: iPhone 17 Pro \u2014 up to 33 hours of video playback (30 hours streamed); iPhone 17 Pro Max \u2014 up to 39 hours of video playback (35 hours streamed).",
+      "error": "",
+      "steps": 4,
+      "success": true,
+      "duration_s": 18.2
+    },
+    {
+      "id": "wv-021",
+      "description": "On arXiv, find the abstract for the paper 'Attention Is All You Need' and report",
+      "answer": "Ashish Vaswani",
+      "error": "",
+      "steps": 2,
+      "success": true,
+      "duration_s": 5.1
+    },
+    {
+      "id": "wv-016",
+      "description": "On Amazon, find a 1 TB portable SSD under $100 and report its price and review c",
+      "answer": "ORICO 1TB Magnetic External SSD \u2014 Price: EUR 86.04, Reviews: 185",
+      "error": "",
+      "steps": 7,
+      "success": true,
+      "duration_s": 38.4
+    },
+    {
+      "id": "wv-020",
+      "description": "On arXiv, find a recent paper about retrieval augmented generation and report it",
+      "answer": "arXiv:2605.15184 - \"Is Grep All You Need? How Agent Harnesses Reshape Agentic Search\"",
+      "error": "",
+      "steps": 4,
+      "success": true,
+      "duration_s": 17.7
+    },
+    {
+      "id": "wv-019",
+      "description": "On Apple's support site, find how to take a screenshot on a Mac.",
+      "answer": "To take a screenshot on a Mac:\n\n\u2022 Capture the entire screen: Press Shift + Command + 3.\n\u2022 Capture a portion of the screen: Press Shift + Command + 4, then drag the crosshair to select the area.\n\u2022 Capture a window or menu: Press Shift + Command + 4, then press Space bar, and click the window/menu.\n\u2022 ",
+      "error": "",
+      "steps": 6,
+      "success": true,
+      "duration_s": 25.4
+    },
+    {
+      "id": "wv-023",
+      "description": "On BBC News, find the current top headline in the World section.",
+      "answer": "WHO declares Ebola outbreak in DR Congo a global health emergency",
+      "error": "",
+      "steps": 2,
+      "success": true,
+      "duration_s": 9.9
+    },
+    {
+      "id": "wv-014",
+      "description": "On Amazon, find the price of the current Kindle Paperwhite model.",
+      "answer": "",
+      "error": "",
+      "steps": 9,
+      "success": false,
+      "duration_s": 58.3
+    },
+    {
+      "id": "wv-015",
+      "description": "On Amazon, compare two USB-C wall chargers and report which has the higher custo",
+      "answer": "",
+      "error": "",
+      "steps": 9,
+      "success": false,
+      "duration_s": 53.7
+    },
+    {
+      "id": "wv-025",
+      "description": "On BBC Sport, find the latest Premier League table leader.",
+      "answer": "Arsenal is the current Premier League table leader on BBC Sport, with 79 points from 36 games (24W-7D-5L, GD +42).",
+      "error": "",
+      "steps": 3,
+      "success": true,
+      "duration_s": 12.4
+    },
+    {
+      "id": "wv-024",
+      "description": "On BBC Weather, find tomorrow's forecast high temperature for London.",
+      "answer": "Tomorrow's (Mon 18th) forecast high temperature for London on BBC Weather is 15\u00b0C.",
+      "error": "",
+      "steps": 7,
+      "success": true,
+      "duration_s": 25.8
+    },
+    {
+      "id": "wv-029",
+      "description": "On Cambridge Dictionary, look up 'serendipity' and report its definition.",
+      "answer": "According to Cambridge Dictionary, serendipity (noun, formal) means: \"the fact of finding interesting or valuable things by chance.\"",
+      "error": "",
+      "steps": 3,
+      "success": true,
+      "duration_s": 9.8
+    },
+    {
+      "id": "wv-022",
+      "description": "On arXiv, search for papers by Geoffrey Hinton and report one title and submissi",
+      "answer": "Title: \"International AI Safety Report 2026\" \u2014 Submitted: 24 February, 2026 (arXiv:2602.21012, co-authored by Geoffrey Hinton among others).",
+      "error": "",
+      "steps": 10,
+      "success": true,
+      "duration_s": 40.3
+    },
+    {
+      "id": "wv-031",
+      "description": "On Cambridge Dictionary, find an example sentence for the word 'resilient'.",
+      "answer": "She's a resilient girl - she won't be unhappy for long.",
+      "error": "",
+      "steps": 3,
+      "success": true,
+      "duration_s": 10.2
+    },
+    {
+      "id": "wv-026",
+      "description": "On Booking.com, find a hotel in Paris for a two-night stay next month and report",
+      "answer": "",
+      "error": "",
+      "steps": 3,
+      "success": false,
+      "duration_s": 38.8
+    },
+    {
+      "id": "wv-028",
+      "description": "On Booking.com, find a beachfront hotel in Barcelona and report one listed ameni",
+      "answer": "",
+      "error": "",
+      "steps": 10,
+      "success": false,
+      "duration_s": 40.8
+    },
+    {
+      "id": "wv-032",
+      "description": "On Coursera, find a beginner machine learning course and report its provider and",
+      "answer": "Course: 'Machine Learning' by DeepLearning.AI (Provider), Rating: 4.9/5 stars",
+      "error": "",
+      "steps": 3,
+      "success": true,
+      "duration_s": 17.9
+    },
+    {
+      "id": "wv-034",
+      "description": "On Coursera, find a data analysis course from Google and report its skill level.",
+      "answer": "Beginner level - The Google Data Analytics Professional Certificate on Coursera is a Beginner level course, with no degree or prior experience required.",
+      "error": "",
+      "steps": 2,
+      "success": true,
+      "duration_s": 8.5
+    },
+    {
+      "id": "wv-033",
+      "description": "On Coursera, find a Python course that offers a certificate and report the estim",
+      "answer": "IBM's 'Python for Data Science, AI & Development' on Coursera offers a shareable certificate upon completion. Estimated duration: 1\u20133 Months (Beginner level course).",
+      "error": "",
+      "steps": 5,
+      "success": true,
+      "duration_s": 22.3
+    },
+    {
+      "id": "wv-038",
+      "description": "On GitHub, find the latest release version of the microsoft/vscode repository.",
+      "answer": "The latest release version of microsoft/vscode is 1.120.0",
+      "error": "",
+      "steps": 2,
+      "success": true,
+      "duration_s": 8.7
+    },
+    {
+      "id": "wv-037",
+      "description": "On ESPN, find the next scheduled match for the United States men's national socc",
+      "answer": "The next scheduled match for the United States men's national soccer team is on Sunday, May 31, 2026 \u2014 United States vs. Senegal (International Friendly) at 10:30 PM, televised on TNT/truTV/Tele/Universo/HBO Max/Peacock.",
+      "error": "",
+      "steps": 5,
+      "success": true,
+      "duration_s": 17.4
+    },
+    {
+      "id": "wv-039",
+      "description": "On GitHub, find the license of the facebook/react repository.",
+      "answer": "MIT License",
+      "error": "",
+      "steps": 1,
+      "success": true,
+      "duration_s": 5.2
+    },
+    {
+      "id": "wv-027",
+      "description": "On Booking.com, search for hotels in New York City and identify one property rat",
+      "answer": "",
+      "error": "",
+      "steps": 10,
+      "success": false,
+      "duration_s": 69.1
+    },
+    {
+      "id": "wv-030",
+      "description": "On Cambridge Dictionary, find the British pronunciation audio label for the word",
+      "answer": "",
+      "error": "",
+      "steps": 10,
+      "success": false,
+      "duration_s": 52.7
+    },
+    {
+      "id": "wv-035",
+      "description": "On ESPN, find the latest NBA scoreboard result for the Los Angeles Lakers.",
+      "answer": "The latest NBA scoreboard result for the Los Angeles Lakers on ESPN: Lakers lost to the Oklahoma City Thunder 115-110 on Tuesday, May 12 (Austin Reaves led the Lakers with 27 points).",
+      "error": "",
+      "steps": 8,
+      "success": true,
+      "duration_s": 31.4
+    },
+    {
+      "id": "wv-040",
+      "description": "On GitHub, find one open issue in python/cpython labeled documentation and repor",
+      "answer": "\"Distributing Python Modules\" link on docs front page is effectively empty",
+      "error": "",
+      "steps": 3,
+      "success": true,
+      "duration_s": 12.5
+    },
+    {
+      "id": "wv-041",
+      "description": "On Google Maps, find the walking time from the Eiffel Tower to the Louvre Museum",
+      "answer": "46 minutes (walking, 3.3 km via Rue de l'Universit\u00e9)",
+      "error": "",
+      "steps": 3,
+      "success": true,
+      "duration_s": 11.5
+    },
+    {
+      "id": "wv-036",
+      "description": "On ESPN, find the current NFL standings leader in the AFC East.",
+      "answer": "",
+      "error": "",
+      "steps": 10,
+      "success": false,
+      "duration_s": 33.8
+    },
+    {
+      "id": "wv-042",
+      "description": "On Google Maps, find a coffee shop near Union Square in San Francisco with at le",
+      "answer": "Caffe Central (4.5 stars) - Coffee shop at 133 O'Farrell St, near Union Square in San Francisco. Other highly-rated options nearby include Cable Car CoffeeSF (4.8 stars, 902 Market St) and Taylor Street Coffee Shop (4.6 stars, 375 Taylor St).",
+      "error": "",
+      "steps": 2,
+      "success": true,
+      "duration_s": 12.2
+    },
+    {
+      "id": "wv-047",
+      "description": "Using Google Search, find the official website for the National Park Service pag",
+      "answer": "https://www.nps.gov/yose/index.htm",
+      "error": "",
+      "steps": 1,
+      "success": true,
+      "duration_s": 3.2
+    },
+    {
+      "id": "wv-048",
+      "description": "Using Google Search, find the release date of the first iPhone.",
+      "answer": "The first iPhone was released on June 29, 2007.",
+      "error": "",
+      "steps": 1,
+      "success": true,
+      "duration_s": 3.1
+    },
+    {
+      "id": "wv-050",
+      "description": "On Hacker News, find the newest story mentioning Rust and report its title.",
+      "answer": "My Thoughts on Bun's Rust Rewrite",
+      "error": "",
+      "steps": 3,
+      "success": true,
+      "duration_s": 10.6
+    },
+    {
+      "id": "wv-049",
+      "description": "Using Google Search, find the exchange rate from 100 EUR to USD today.",
+      "answer": "100 EUR \u2248 116 USD (1 EUR \u2248 1.16 USD, source: XE via DuckDuckGo)",
+      "error": "",
+      "steps": 5,
+      "success": true,
+      "duration_s": 17.9
+    },
+    {
+      "id": "wv-052",
+      "description": "On Hacker News, find a Show HN post from today and report its points.",
+      "answer": "Show HN: Codiff, a local diff review tool (posted 40 minutes ago) has 3 points.",
+      "error": "",
+      "steps": 2,
+      "success": true,
+      "duration_s": 7.2
+    },
+    {
+      "id": "wv-046",
+      "description": "On Google Flights, find whether there are direct flights from Boston to Reykjavi",
+      "answer": "",
+      "error": "",
+      "steps": 10,
+      "success": false,
+      "duration_s": 37.9
+    },
+    {
+      "id": "wv-043",
+      "description": "On Google Maps, find the current opening hours for the British Museum.",
+      "answer": "",
+      "error": "",
+      "steps": 10,
+      "success": false,
+      "duration_s": 46.1
+    },
+    {
+      "id": "wv-044",
+      "description": "On Google Flights, find the cheapest round-trip flight from SFO to SEA for next ",
+      "answer": "",
+      "error": "",
+      "steps": 10,
+      "success": false,
+      "duration_s": 43.9
+    },
+    {
+      "id": "wv-045",
+      "description": "On Google Flights, compare nonstop flight options from Chicago to Miami for a we",
+      "answer": "",
+      "error": "",
+      "steps": 9,
+      "success": false,
+      "duration_s": 42.3
+    },
+    {
+      "id": "wv-053",
+      "description": "On Hugging Face, find the most downloaded text-generation model this week and re",
+      "answer": "The most downloaded text-generation model on Hugging Face is Qwen/Qwen3-0.6B with approximately 19.3M downloads (last 30 days, as shown on the sort=downloads page).",
+      "error": "",
+      "steps": 4,
+      "success": true,
+      "duration_s": 18.2
+    },
+    {
+      "id": "wv-054",
+      "description": "On Hugging Face, find the license for the bert-base-uncased model.",
+      "answer": "apache-2.0",
+      "error": "",
+      "steps": 3,
+      "success": true,
+      "duration_s": 13.0
+    },
+    {
+      "id": "wv-059",
+      "description": "On Khan Academy, find the first unit in the Algebra 1 course.",
+      "answer": "",
+      "error": "state: Failed to capture Playwright state: Page.title: Execution context was destroyed, most likely because",
+      "steps": 0,
+      "success": false,
+      "duration_s": 1.2
+    },
+    {
+      "id": "wv-060",
+      "description": "On Khan Academy, find a lesson about photosynthesis and report its course catego",
+      "answer": "",
+      "error": "state: Failed to capture Playwright state: Page.title: Execution context was destroyed, most likely because",
+      "steps": 0,
+      "success": false,
+      "duration_s": 1.2
+    },
+    {
+      "id": "wv-061",
+      "description": "On Khan Academy, find the SAT math practice section and report one listed topic.",
+      "answer": "One topic listed in the SAT Math practice section on Khan Academy is 'Foundations: Algebra' (Unit 2).",
+      "error": "",
+      "steps": 3,
+      "success": true,
+      "duration_s": 9.9
+    },
+    {
+      "id": "wv-062",
+      "description": "On LinkedIn, find OpenAI's company page and report its listed industry.",
+      "answer": "",
+      "error": "state: Failed to capture Playwright state: Page.evaluate: Execution context was destroyed, most likely beca",
+      "steps": 1,
+      "success": false,
+      "duration_s": 4.7
+    },
+    {
+      "id": "wv-051",
+      "description": "On Hacker News, find the current Ask HN thread with the most comments on the fro",
+      "answer": "",
+      "error": "",
+      "steps": 10,
+      "success": false,
+      "duration_s": 52.0
+    },
+    {
+      "id": "wv-063",
+      "description": "On LinkedIn, find Microsoft's company page and report its listed headquarters lo",
+      "answer": "",
+      "error": "state: Failed to capture Playwright state: Page.evaluate: Execution context was destroyed, most likely beca",
+      "steps": 1,
+      "success": false,
+      "duration_s": 4.5
+    },
+    {
+      "id": "wv-064",
+      "description": "On LinkedIn, search for Coursera's company page and report the employee count ra",
+      "answer": "",
+      "error": "state: Failed to capture Playwright state: Page.evaluate: Execution context was destroyed, most likely beca",
+      "steps": 1,
+      "success": false,
+      "duration_s": 4.0
+    },
+    {
+      "id": "wv-055",
+      "description": "On Hugging Face Spaces, find a running image-to-text demo and report its creator",
+      "answer": "",
+      "error": "",
+      "steps": 10,
+      "success": false,
+      "duration_s": 37.6
+    },
+    {
+      "id": "wv-067",
+      "description": "On Medium, find a publication article from Towards Data Science and report its t",
+      "answer": "",
+      "error": "state: Failed to capture Playwright state: Page.screenshot: Protocol error (Page.captureScreenshot): Unable",
+      "steps": 0,
+      "success": false,
+      "duration_s": 0.8
+    },
+    {
+      "id": "wv-056",
+      "description": "On IMDb, find the user rating for the movie 'The Godfather'.",
+      "answer": "",
+      "error": "state: Failed to capture Playwright state: Page.screenshot: Timeout 30000ms exceeded.\nCall log:\n  - taking ",
+      "steps": 2,
+      "success": false,
+      "duration_s": 40.6
+    },
+    {
+      "id": "wv-058",
+      "description": "On IMDb, find the current number one title on the IMDb Top 250 Movies chart.",
+      "answer": "The Shawshank Redemption (1994) \u2014 it has long held the #1 position on the IMDb Top 250 Movies chart.",
+      "error": "",
+      "steps": 9,
+      "success": true,
+      "duration_s": 37.8
+    },
+    {
+      "id": "wv-057",
+      "description": "On IMDb, find the top-billed cast members for 'The Matrix' (1999).",
+      "answer": "",
+      "error": "state: Failed to capture Playwright state: Page.screenshot: Timeout 30000ms exceeded.\nCall log:\n  - taking ",
+      "steps": 2,
+      "success": false,
+      "duration_s": 46.6
+    },
+    {
+      "id": "wv-065",
+      "description": "On Medium, find a recent article about remote work and report its title and auth",
+      "answer": "",
+      "error": "",
+      "steps": 10,
+      "success": false,
+      "duration_s": 29.7
+    },
+    {
+      "id": "wv-070",
+      "description": "On Microsoft Learn, find the C# documentation page for async and await and repor",
+      "answer": "Microsoft Learn's C# 'Asynchronous programming with async and await' page (learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/) states a key guideline: \"The composition of an asynchronous operation followed by synchronous work is an asynchronous operation. Stated another way, if any po",
+      "error": "",
+      "steps": 5,
+      "success": true,
+      "duration_s": 21.1
+    },
+    {
+      "id": "wv-066",
+      "description": "On Medium, find an article tagged machine-learning with at least a visible readi",
+      "answer": "",
+      "error": "",
+      "steps": 10,
+      "success": false,
+      "duration_s": 34.6
+    },
+    {
+      "id": "wv-073",
+      "description": "On Mozilla's website, find the latest stable Firefox release version.",
+      "answer": "The latest stable Firefox release version is 150.0.3.",
+      "error": "",
+      "steps": 3,
+      "success": true,
+      "duration_s": 11.2
+    },
+    {
+      "id": "wv-074",
+      "description": "On Netflix, find the description for the show 'Stranger Things'.",
+      "answer": "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.",
+      "error": "",
+      "steps": 3,
+      "success": true,
+      "duration_s": 14.2
+    },
+    {
+      "id": "wv-069",
+      "description": "On Microsoft Learn, find documentation for the Azure CLI login command and repor",
+      "answer": "",
+      "error": "",
+      "steps": 10,
+      "success": false,
+      "duration_s": 43.8
+    },
+    {
+      "id": "wv-068",
+      "description": "On Microsoft Learn, find the Python quickstart for Azure Functions and report th",
+      "answer": "",
+      "error": "",
+      "steps": 10,
+      "success": false,
+      "duration_s": 47.4
+    },
+    {
+      "id": "wv-071",
+      "description": "On MDN Web Docs, find the syntax for Array.prototype.map in JavaScript.",
+      "answer": "",
+      "error": "",
+      "steps": 10,
+      "success": false,
+      "duration_s": 40.7
+    },
+    {
+      "id": "wv-078",
+      "description": "On NVIDIA Developer, find the latest CUDA Toolkit version.",
+      "answer": "CUDA Toolkit 13.2",
+      "error": "",
+      "steps": 2,
+      "success": true,
+      "duration_s": 10.2
+    },
+    {
+      "id": "wv-075",
+      "description": "On Netflix, find whether 'The Crown' is listed as a Netflix series and report it",
+      "answer": "Yes, 'The Crown' is listed as a Netflix Original series (6 Seasons, 2023). Maturity rating: 15 (UK).",
+      "error": "",
+      "steps": 3,
+      "success": true,
+      "duration_s": 17.9
+    },
+    {
+      "id": "wv-077",
+      "description": "On NVIDIA's website, find the starting price of the GeForce RTX 5090 or newest l",
+      "answer": "The GeForce RTX 5090 has a starting price of $1,999 USD on NVIDIA's website.",
+      "error": "",
+      "steps": 3,
+      "success": true,
+      "duration_s": 14.3
+    },
+    {
+      "id": "wv-080",
+      "description": "On OpenAI Docs, find the endpoint used for chat completions or responses and rep",
+      "answer": "/v1/chat/completions (and /v1/responses for the Responses API)",
+      "error": "",
+      "steps": 2,
+      "success": true,
+      "duration_s": 6.5
+    },
+    {
+      "id": "wv-072",
+      "description": "On MDN Web Docs, find browser compatibility information for CSS grid-template-co",
+      "answer": "",
+      "error": "",
+      "steps": 10,
+      "success": false,
+      "duration_s": 44.2
+    },
+    {
+      "id": "wv-079",
+      "description": "On NVIDIA's website, find one key feature of DLSS 4 and report it.",
+      "answer": "One key feature of DLSS 4 is Multi Frame Generation (MFG), which uses AI to generate multiple frames per rendered frame, significantly boosting FPS while maintaining image quality.",
+      "error": "",
+      "steps": 4,
+      "success": true,
+      "duration_s": 22.9
+    },
+    {
+      "id": "wv-082",
+      "description": "On OpenAI Docs, find documentation for text embeddings and report one embedding ",
+      "answer": "text-embedding-3-small (other OpenAI embedding models include text-embedding-3-large and text-embedding-ada-002)",
+      "error": "",
+      "steps": 3,
+      "success": true,
+      "duration_s": 12.7
+    },
+    {
+      "id": "wv-086",
+      "description": "On Reddit, find the current top post of the week in r/MachineLearning.",
+      "answer": "",
+      "error": "state: Failed to capture Playwright state: Page.evaluate: Execution context was destroyed, most likely beca",
+      "steps": 0,
+      "success": false,
+      "duration_s": 0.8
+    },
+    {
+      "id": "wv-087",
+      "description": "On Reddit, find a recent discussion in r/travel about Japan itineraries and repo",
+      "answer": "",
+      "error": "state: Failed to capture Playwright state: Page.evaluate: Execution context was destroyed, most likely beca",
+      "steps": 0,
+      "success": false,
+      "duration_s": 0.8
+    },
+    {
+      "id": "wv-088",
+      "description": "On Reddit, find the rules for r/AskHistorians and report one rule.",
+      "answer": "",
+      "error": "state: Failed to capture Playwright state: Page.evaluate: Execution context was destroyed, most likely beca",
+      "steps": 0,
+      "success": false,
+      "duration_s": 0.8
+    },
+    {
+      "id": "wv-084",
+      "description": "On Pinterest, find a board about minimalist home office design and report its ti",
+      "answer": "Modern Minimalist Office",
+      "error": "",
+      "steps": 3,
+      "success": true,
+      "duration_s": 11.4
+    },
+    {
+      "id": "wv-090",
+      "description": "On Stack Overflow, find the tag wiki excerpt for the javascript tag.",
+      "answer": "",
+      "error": "state: Failed to capture Playwright state: Page.screenshot: Protocol error (Page.captureScreenshot): Unable",
+      "steps": 0,
+      "success": false,
+      "duration_s": 0.9
+    },
+    {
+      "id": "wv-083",
+      "description": "On Pinterest, search for small kitchen organization ideas and report one board o",
+      "answer": "Small kitchen organization ideas that maximize every inch",
+      "error": "",
+      "steps": 6,
+      "success": true,
+      "duration_s": 22.4
+    },
+    {
+      "id": "wv-081",
+      "description": "On OpenAI Docs, find the current guide for function calling and report one requi",
+      "answer": "",
+      "error": "",
+      "steps": 10,
+      "success": false,
+      "duration_s": 31.6
+    },
+    {
+      "id": "wv-093",
+      "description": "On X, find the current profile bio for NASA and report it.",
+      "answer": "Making the seemingly impossible, possible.",
+      "error": "",
+      "steps": 3,
+      "success": true,
+      "duration_s": 10.0
+    },
+    {
+      "id": "wv-092",
+      "description": "On X, find OpenAI's latest public post and report its text summary and date.",
+      "answer": "",
+      "error": "state: Failed to capture Playwright state: Page.evaluate: Execution context was destroyed, most likely beca",
+      "steps": 4,
+      "success": false,
+      "duration_s": 15.1
+    },
+    {
+      "id": "wv-085",
+      "description": "On Pinterest, find a dinner recipe pin for salmon and report the recipe title.",
+      "answer": "Salmon with teriyaki sauce served on rice and vegetables",
+      "error": "",
+      "steps": 6,
+      "success": true,
+      "duration_s": 28.6
+    },
+    {
+      "id": "wv-076",
+      "description": "On Netflix Tudum, find a recent article about an upcoming Netflix movie and repo",
+      "answer": "",
+      "error": "",
+      "steps": 2,
+      "success": false,
+      "duration_s": 59.2
+    },
+    {
+      "id": "wv-097",
+      "description": "On Wikipedia, find the chemical symbol and atomic number for tungsten.",
+      "answer": "Tungsten's chemical symbol is W and its atomic number is 74.",
+      "error": "",
+      "steps": 1,
+      "success": true,
+      "duration_s": 3.7
+    },
+    {
+      "id": "wv-091",
+      "description": "On Stack Overflow, find a recent unanswered question tagged rust and report its ",
+      "answer": "How can I reuse Rust's type inference for numeric types given a string representing a number",
+      "error": "",
+      "steps": 8,
+      "success": true,
+      "duration_s": 28.0
+    },
+    {
+      "id": "wv-089",
+      "description": "On Stack Overflow, find a highly voted question about Python list comprehensions",
+      "answer": "",
+      "error": "",
+      "steps": 10,
+      "success": false,
+      "duration_s": 34.0
+    },
+    {
+      "id": "wv-096",
+      "description": "On Wikipedia, find the winner of the 2022 FIFA World Cup and the final score.",
+      "answer": "Argentina won the 2022 FIFA World Cup, defeating France 3\u20133 (4\u20132 on penalties) in the final.",
+      "error": "",
+      "steps": 2,
+      "success": true,
+      "duration_s": 9.1
+    },
+    {
+      "id": "wv-099",
+      "description": "On YouTube, find the official trailer for 'Dune: Part Two' and report the channe",
+      "answer": "Channel: Warner Bros. Pictures; View count: ~30 million views (Dune: Part Two | Official Trailer)",
+      "error": "",
+      "steps": 5,
+      "success": true,
+      "duration_s": 20.6
+    },
+    {
+      "id": "wv-094",
+      "description": "On X, search for posts about WebAssembly from the last week and report one post ",
+      "answer": "",
+      "error": "",
+      "steps": 10,
+      "success": false,
+      "duration_s": 33.7
+    },
+    {
+      "id": "wv-100",
+      "description": "On Zapier, find an automation template connecting Gmail to Slack and report what",
+      "answer": "One popular Zapier automation template connecting Gmail to Slack is: 'Send new Gmail emails as Slack channel messages.' This Zap automatically posts a message to a designated Slack channel whenever a new email arrives in Gmail, so your team can stay informed about incoming emails without needing to ",
+      "error": "",
+      "steps": 6,
+      "success": true,
+      "duration_s": 25.9
+    },
+    {
+      "id": "wv-098",
+      "description": "On Wolfram Alpha, compute the derivative of sin(x) squared and report the simpli",
+      "answer": "d/dx[sin\u00b2(x)] = 2 sin(x) cos(x), which simplifies to sin(2x).",
+      "error": "",
+      "steps": 9,
+      "success": true,
+      "duration_s": 38.5
+    },
+    {
+      "id": "wv-095",
+      "description": "On Wikipedia, find the capital city of Kazakhstan and report the source page tit",
+      "answer": "",
+      "error": "state: Failed to capture Playwright state: Page.screenshot: Timeout 30000ms exceeded.\nCall log:\n  - taking ",
+      "steps": 1,
+      "success": false,
+      "duration_s": 126.1
+    }
+  ]
+}

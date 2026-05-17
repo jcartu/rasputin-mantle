@@ -76,7 +76,7 @@ class BufferingCostCeilingMiddleware(BaseHTTPMiddleware):
                         "max_cost_dollars": settings.max_cost_dollars,
                     }
                 ).encode(),
-                status_code=402,
+                status_code=429,
                 media_type="application/json",
             )
 
@@ -255,7 +255,7 @@ async def test_cost_ceiling_middleware_rejects_at_dollar_ceiling() -> None:
             "/v1/messages",
             headers={"x-session-id": "test-session-2"},
         )
-        assert response.status_code == 402
+        assert response.status_code == 429
         data = response.json()
         assert data["error"] == "cost_ceiling_exceeded"
         assert data["cost_dollars"] > settings.max_cost_dollars
@@ -287,7 +287,7 @@ async def test_cost_ceiling_middleware_rejects_at_token_ceiling() -> None:
             "/v1/messages",
             headers={"x-session-id": "test-session-3"},
         )
-        assert response.status_code == 402
+        assert response.status_code == 429
         data = response.json()
         assert data["error"] == "cost_ceiling_exceeded"
         assert data["cost_tokens"] > settings.max_cost_tokens
@@ -401,7 +401,7 @@ async def test_cost_ceiling_response_format() -> None:
             "/v1/messages",
             headers={"x-session-id": "test-session-7"},
         )
-        assert response.status_code == 402
+        assert response.status_code == 429
         data = response.json()
         assert "error" in data
         assert "message" in data

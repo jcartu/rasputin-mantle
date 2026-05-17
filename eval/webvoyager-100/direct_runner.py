@@ -23,10 +23,24 @@ ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 JUDGE_MODEL = os.environ.get("JUDGE_MODEL", "claude-sonnet-4-6")
 
 SYSTEM_PROMPT = (
-    "You are a WebVoyager browser agent. Return exactly one JSON object with shape "
-    '{"action":"open|click|type|evaluate|finish","args":{...}}. '
-    "Use element ids from state.elements for click/type. "
-    "For finish, put the answer in args.final_answer."
+    "You are a WebVoyager browser agent. You can navigate websites, click elements, type text, and extract information.\n"
+    "\n"
+    "## ACTIONS (return exactly one JSON object):\n"
+    "- {\"action\": \"open\", \"args\": {\"url\": \"https://...\"}} - Navigate to a URL\n"
+    "- {\"action\": \"click\", \"args\": {\"element_id\": \"pw-5\"}} - Click element by id from state.elements\n"
+    "- {\"action\": \"type\", \"args\": {\"element_id\": \"pw-3\", \"text\": \"search query\"}} - Type into input field\n"
+    "- {\"action\": \"evaluate\", \"args\": {\"script\": \"document.querySelector(...)\"}} - Run JS\n"
+    "- {\"action\": \"finish\", \"args\": {\"final_answer\": \"...\"}} - Submit final answer\n"
+    "\n"
+    "## RULES:\n"
+    "1. NEVER finish on the first step. Always explore the page first.\n"
+    "2. Read the current page state carefully. Use elements from state.elements.\n"
+    "3. If you need to search, find a search box, type your query, and click search.\n"
+    "4. Navigate to relevant pages before extracting answers.\n"
+    "5. Only finish when you have found the specific information requested.\n"
+    "6. The final_answer must directly answer the task question with specific details.\n"
+    "\n"
+    "Return ONLY a JSON object, no markdown, no explanation."
 )
 
 
@@ -60,16 +74,35 @@ async def plan_next_action(
     )
     resp.raise_for_status()
     content = resp.json()["choices"][0]["message"]["content"]
-    # Parse JSON from response
+    # Parse JSON from response - handle GPT-5.5 multi-line/thinking output
     candidate = content.strip()
+    # Strip thinking tags if present
+    import re
+    candidate = re.sub(r'<thinking>.*?</thinking>', '', candidate, flags=re.DOTALL)
+    candidate = re.sub(r'<think>.*?</think>', '', candidate, flags=re.DOTALL)
+    candidate = candidate.strip()
+    # Extract code block
     if candidate.startswith("```"):
         lines = candidate.splitlines()
-        candidate = "\n".join(lines[1:-1]).strip()
+        # Find first line that's not ```
+        start_idx = 1
+        end_idx = len(lines) - 1 if lines[-1].strip() == "```" else len(lines)
+        candidate = "\n".join(lines[start_idx:end_idx]).strip()
+    # Extract JSON object
     if not candidate.startswith("{"):
         start = candidate.find("{")
-        end = candidate.rfind("}")
-        if start >= 0 and end > start:
-            candidate = candidate[start : end + 1]
+        if start >= 0:
+            candidate = candidate[start:]
+    # Find matching closing brace
+    if candidate.startswith("{"):
+        depth = 0
+        for i, c in enumerate(candidate):
+            if c == "{": depth += 1
+            elif c == "}":
+                depth -= 1
+                if depth == 0:
+                    candidate = candidate[:i+1]
+                    break
     return json.loads(candidate)
 
 

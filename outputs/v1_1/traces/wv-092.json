@@ -2,9 +2,9 @@
   "task_id": "wv-092",
   "task_description": "On X, find OpenAI's latest public post and report its text summary and date.",
   "starting_url": "https://x.com/OpenAI",
-  "passed": false,
-  "final_answer": "Error planning: Extra data: line 2 column 1 (char 436)",
-  "duration_s": 113.29,
+  "passed": true,
+  "final_answer": "OpenAI\u2019s latest public X post (shown dated 11:06 PM \u00b7 May 14, 2026) says: \u201cYou\u2019ve been asking for this one...\u201d and announces that Codex is now in preview in the ChatGPT mobile app. Summary: users can start new work, review outputs, steer execution, and approve next steps from the ChatGPT mobile app while Codex keeps running on their laptop, Mac mini, or devbox.",
+  "duration_s": 43.45,
   "steps": [
     {
       "step": 1,
@@ -254,7 +254,7 @@
             "text": "4.8K",
             "attributes": {
               "type": "button",
-              "aria-label": "4828 reposts. Repost",
+              "aria-label": "4830 reposts. Repost",
               "data-testid": "retweet"
             }
           },
@@ -264,7 +264,7 @@
             "text": "21K",
             "attributes": {
               "type": "button",
-              "aria-label": "21675 Likes. Like",
+              "aria-label": "21676 Likes. Like",
               "data-testid": "like"
             }
           },
@@ -274,7 +274,7 @@
             "text": "4.4M",
             "attributes": {
               "href": "/OpenAI/status/2055016850849993072/analytics",
-              "aria-label": "4405842 views. View post analytics"
+              "aria-label": "4409369 views. View post analytics"
             }
           },
           {
@@ -364,7 +364,7 @@
             "text": "4.8K",
             "attributes": {
               "type": "button",
-              "aria-label": "4828 reposts. Repost",
+              "aria-label": "4830 reposts. Repost",
               "data-testid": "retweet"
             }
           },
@@ -374,7 +374,7 @@
             "text": "21K",
             "attributes": {
               "type": "button",
-              "aria-label": "21675 Likes. Like",
+              "aria-label": "21676 Likes. Like",
               "data-testid": "like"
             }
           },
@@ -384,7 +384,7 @@
             "text": "4.4M",
             "attributes": {
               "href": "/OpenAI/status/2055016850849993072/analytics",
-              "aria-label": "4405842 views. View post analytics"
+              "aria-label": "4409369 views. View post analytics"
             }
           },
           {
@@ -461,18 +461,18 @@
         ]
       },
       "action": {
-        "action": "evaluate",
+        "action": "click",
         "args": {
-          "script": "Array.from(document.querySelectorAll('article')).slice(0,5).map((a,i)=>({i, text:a.innerText, html:a.outerHTML.slice(0,1000)}))"
+          "element_id": "pw-48"
         }
       },
-      "observation": "Eval: [{\"i\": 0, \"text\": \"Pinned\\nOpenAI\\n@OpenAI\\n\\u00b7\\nMay 14\\nYou've been asking for this one...\\n\\nNow in preview: Codex in the ChatGPT mobile app.\\n\\nStart new work, review outputs, steer execution, and approve next steps, all from the ChatGPT mobile app. Codex will keep running on your laptop, Mac mini, or devbox.\\n1.5K\\n4.8K\\n21K\\n4.4M\", \"html\": \"<article aria-labelledby=\\\"id__foxa7xa79a id__6mb823e30yi id__d8lci4c00du id__3zcf9xdjehz id__1mvsndjywr4 id__wih0wdfjze id__lm51ifz5v7q id__c4g5x887"
+      "observation": "Clicked pw-48"
     },
     {
       "step": 2,
       "state": {
-        "url": "https://x.com/OpenAI",
-        "title": "OpenAI (@OpenAI) / X",
+        "url": "https://x.com/OpenAI/status/2055016850849993072",
+        "title": "X",
         "elements": [
           {
             "id": "pw-0",
@@ -517,25 +517,7 @@
             }
           },
           {
-            "id": "pw-5",
-            "role": "button",
-            "text": "Skip to home timeline",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Skip to home timeline"
-            }
-          },
-          {
-            "id": "pw-6",
-            "role": "button",
-            "text": "Skip to trending",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Skip to trending"
-            }
-          },
-          {
-            "id": "pw-9",
+            "id": "pw-7",
             "role": "link",
             "text": "X",
             "attributes": {
@@ -544,380 +526,37 @@
             }
           },
           {
-            "id": "pw-13",
-            "role": "button",
-            "text": "Back",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Back",
-              "data-testid": "app-bar-back"
-            }
-          },
-          {
-            "id": "pw-16",
-            "role": "button",
-            "text": "Search",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Search"
-            }
-          },
-          {
-            "id": "pw-18",
-            "role": "button",
-            "text": "See new posts",
-            "attributes": {
-              "type": "button",
-              "aria-label": "New posts are available. Push the period key to go to the them."
-            }
-          },
-          {
-            "id": "pw-19",
-            "role": "link",
+            "id": "pw-5",
+            "role": "banner",
             "text": null,
-            "attributes": {
-              "href": "/OpenAI/header_photo"
-            }
+            "attributes": {}
           },
           {
-            "id": "pw-20",
-            "role": "link",
+            "id": "pw-6",
+            "role": "heading",
             "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-8",
+            "role": "navigation",
+            "text": "Primary",
             "attributes": {
-              "href": "/OpenAI/photo"
+              "aria-label": "Primary"
             }
           },
           {
-            "id": "pw-21",
-            "role": "button",
-            "text": "Follow",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Follow @OpenAI",
-              "data-testid": "4398626122-follow"
-            }
-          },
-          {
-            "id": "pw-22",
-            "role": "button",
-            "text": "Provides details about verified accounts.",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Provides details about verified accounts."
-            }
-          },
-          {
-            "id": "pw-24",
-            "role": "link",
-            "text": "http://\nopenai.com/jobs",
-            "attributes": {
-              "href": "https://t.co/dJGr6LgzPA"
-            }
-          },
-          {
-            "id": "pw-27",
-            "role": "link",
-            "text": "4 Following",
-            "attributes": {
-              "href": "/OpenAI/following"
-            }
-          },
-          {
-            "id": "pw-28",
-            "role": "link",
-            "text": "4.8M Followers",
-            "attributes": {
-              "href": "/OpenAI/verified_followers"
-            }
-          },
-          {
-            "id": "pw-30",
-            "role": "button",
-            "text": "Previous",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Previous"
-            }
-          },
-          {
-            "id": "pw-40",
-            "role": "button",
-            "text": "Next",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Next"
-            }
-          },
-          {
-            "id": "pw-44",
-            "role": "link",
+            "id": "pw-9",
+            "role": "main",
             "text": null,
-            "attributes": {
-              "href": "/OpenAI"
-            }
+            "attributes": {}
           },
           {
-            "id": "pw-45",
-            "role": "link",
-            "text": "OpenAI",
+            "id": "pw-10",
+            "role": "progressbar",
+            "text": "Loading",
             "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-47",
-            "role": "link",
-            "text": "@OpenAI",
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-48",
-            "role": "link",
-            "text": "May 14",
-            "attributes": {
-              "href": "/OpenAI/status/2055016850849993072",
-              "aria-label": "May 14"
-            }
-          },
-          {
-            "id": "pw-49",
-            "role": "button",
-            "text": "More",
-            "attributes": {
-              "type": "button",
-              "aria-label": "More",
-              "data-testid": "caret"
-            }
-          },
-          {
-            "id": "pw-51",
-            "role": "button",
-            "text": "Play Video",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Play Video"
-            }
-          },
-          {
-            "id": "pw-53",
-            "role": "button",
-            "text": "1.5K",
-            "attributes": {
-              "type": "button",
-              "aria-label": "1588 Replies. Reply",
-              "data-testid": "reply"
-            }
-          },
-          {
-            "id": "pw-54",
-            "role": "button",
-            "text": "4.8K",
-            "attributes": {
-              "type": "button",
-              "aria-label": "4828 reposts. Repost",
-              "data-testid": "retweet"
-            }
-          },
-          {
-            "id": "pw-55",
-            "role": "button",
-            "text": "21K",
-            "attributes": {
-              "type": "button",
-              "aria-label": "21675 Likes. Like",
-              "data-testid": "like"
-            }
-          },
-          {
-            "id": "pw-56",
-            "role": "link",
-            "text": "4.4M",
-            "attributes": {
-              "href": "/OpenAI/status/2055016850849993072/analytics",
-              "aria-label": "4405842 views. View post analytics"
-            }
-          },
-          {
-            "id": "pw-57",
-            "role": "button",
-            "text": "Bookmark",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Bookmark",
-              "data-testid": "bookmark"
-            }
-          },
-          {
-            "id": "pw-58",
-            "role": "button",
-            "text": "Share post",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Share post"
-            }
-          },
-          {
-            "id": "pw-60",
-            "role": "link",
-            "text": null,
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-61",
-            "role": "link",
-            "text": "OpenAI",
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-63",
-            "role": "link",
-            "text": "@OpenAI",
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-64",
-            "role": "link",
-            "text": "May 14",
-            "attributes": {
-              "href": "/OpenAI/status/2055016850849993072",
-              "aria-label": "May 14"
-            }
-          },
-          {
-            "id": "pw-65",
-            "role": "button",
-            "text": "More",
-            "attributes": {
-              "type": "button",
-              "aria-label": "More",
-              "data-testid": "caret"
-            }
-          },
-          {
-            "id": "pw-67",
-            "role": "button",
-            "text": "Play Video",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Play Video"
-            }
-          },
-          {
-            "id": "pw-69",
-            "role": "button",
-            "text": "1.5K",
-            "attributes": {
-              "type": "button",
-              "aria-label": "1588 Replies. Reply",
-              "data-testid": "reply"
-            }
-          },
-          {
-            "id": "pw-70",
-            "role": "button",
-            "text": "4.8K",
-            "attributes": {
-              "type": "button",
-              "aria-label": "4828 reposts. Repost",
-              "data-testid": "retweet"
-            }
-          },
-          {
-            "id": "pw-71",
-            "role": "button",
-            "text": "21K",
-            "attributes": {
-              "type": "button",
-              "aria-label": "21675 Likes. Like",
-              "data-testid": "like"
-            }
-          },
-          {
-            "id": "pw-72",
-            "role": "link",
-            "text": "4.4M",
-            "attributes": {
-              "href": "/OpenAI/status/2055016850849993072/analytics",
-              "aria-label": "4405842 views. View post analytics"
-            }
-          },
-          {
-            "id": "pw-73",
-            "role": "button",
-            "text": "Bookmark",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Bookmark",
-              "data-testid": "bookmark"
-            }
-          },
-          {
-            "id": "pw-74",
-            "role": "button",
-            "text": "Share post",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Share post"
-            }
-          },
-          {
-            "id": "pw-76",
-            "role": "link",
-            "text": null,
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-77",
-            "role": "link",
-            "text": "OpenAI",
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-79",
-            "role": "link",
-            "text": "@OpenAI",
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-80",
-            "role": "link",
-            "text": "May 14",
-            "attributes": {
-              "href": "/OpenAI/status/2055016852133417389",
-              "aria-label": "May 14"
-            }
-          },
-          {
-            "id": "pw-81",
-            "role": "button",
-            "text": "More",
-            "attributes": {
-              "type": "button",
-              "aria-label": "More",
-              "data-testid": "caret"
-            }
-          },
-          {
-            "id": "pw-82",
-            "role": "link",
-            "text": "Work with Codex from anywhere",
-            "attributes": {
-              "href": "https://t.co/jGNH2CUXih",
-              "aria-label": "openai.com Work with Codex from anywhere"
+              "aria-label": "Loading"
             }
           }
         ]
@@ -925,16 +564,16 @@
       "action": {
         "action": "evaluate",
         "args": {
-          "script": "(() => {\n  const selectors = ['article','[data-testid=\"tweet\"]','div[data-testid=\"cellInnerDiv\"]'];\n  const results = {};\n  for (const sel of selectors) {\n    results[sel] = Array.from(document.querySelectorAll(sel)).slice(0,10).map((el,i)=>({i, text: el.innerText, aria: el.getAttribute('aria-label'), html: el.outerHTML.slice(0,500)}));\n  }\n  return results;\n})()"
+          "script": "document.body.innerText"
         }
       },
-      "observation": "Eval: {\"article\": [{\"i\": 0, \"text\": \"Pinned\\nOpenAI\\n@OpenAI\\n\\u00b7\\nMay 14\\nYou've been asking for this one...\\n\\nNow in preview: Codex in the ChatGPT mobile app.\\n\\nStart new work, review outputs, steer execution, and approve next steps, all from the ChatGPT mobile app. Codex will keep running on your laptop, Mac mini, or devbox.\\n1.5K\\n4.8K\\n21K\\n4.4M\", \"aria\": null, \"html\": \"<article aria-labelledby=\\\"id__foxa7xa79a id__6mb823e30yi id__d8lci4c00du id__3zcf9xdjehz id__1mvsndjywr4 id__wih0wdfjze id"
+      "observation": "Eval: \"Don\\u2019t miss what\\u2019s happening\\nPeople on X are the first to know.\\nLog in\\nSign up\\nDid someone say \\u2026 cookies?\\nX and third parties integrated by X use cookies to provide you with a better, safer and faster service and to support our business. Some cookies are necessary to use our services, improve our services, and make sure they work properly. Show more about your choices.\\nAccept all cookies\\nRefuse non-essential cookies\\nPost\\nSee new posts\\nConversation\\nOpenAI\\n@OpenAI\\nYou'v"
     },
     {
       "step": 3,
       "state": {
-        "url": "https://x.com/OpenAI",
-        "title": "OpenAI (@OpenAI) / X",
+        "url": "https://x.com/OpenAI/status/2055016850849993072",
+        "title": "OpenAI on X: \"You've been asking for this one... Now in preview: Codex in the ChatGPT mobile app. Start new work, review outputs, steer execution, and approve next steps, all from the ChatGPT mobile app. Codex will keep running on your laptop, Mac mini, or devbox. https://t.co/9i2Jckjt9z\" / X",
         "elements": [
           {
             "id": "pw-0",
@@ -1018,15 +657,6 @@
           {
             "id": "pw-16",
             "role": "button",
-            "text": "Search",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Search"
-            }
-          },
-          {
-            "id": "pw-18",
-            "role": "button",
             "text": "See new posts",
             "attributes": {
               "type": "button",
@@ -1034,23 +664,181 @@
             }
           },
           {
-            "id": "pw-19",
-            "role": "link",
-            "text": null,
-            "attributes": {
-              "href": "/OpenAI/header_photo"
-            }
-          },
-          {
             "id": "pw-20",
             "role": "link",
             "text": null,
             "attributes": {
-              "href": "/OpenAI/photo"
+              "href": "/OpenAI"
             }
           },
           {
             "id": "pw-21",
+            "role": "link",
+            "text": "OpenAI",
+            "attributes": {
+              "href": "/OpenAI"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "@OpenAI",
+            "attributes": {
+              "href": "/OpenAI"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "button",
+            "text": "More",
+            "attributes": {
+              "type": "button",
+              "aria-label": "More",
+              "data-testid": "caret"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "11:06 PM \u00b7 May 14, 2026",
+            "attributes": {
+              "href": "/OpenAI/status/2055016850849993072",
+              "aria-label": "11:06 PM \u00b7 May 14, 2026"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "4.4M\n Views",
+            "attributes": {
+              "href": "/OpenAI/status/2055016850849993072/analytics"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "button",
+            "text": "1.5K",
+            "attributes": {
+              "type": "button",
+              "aria-label": "1588 Replies. Reply",
+              "data-testid": "reply"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "button",
+            "text": "4.8K",
+            "attributes": {
+              "type": "button",
+              "aria-label": "4830 reposts. Repost",
+              "data-testid": "retweet"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "button",
+            "text": "21K",
+            "attributes": {
+              "type": "button",
+              "aria-label": "21676 Likes. Like",
+              "data-testid": "like"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "button",
+            "text": "4.6K",
+            "attributes": {
+              "type": "button",
+              "aria-label": "4643 Bookmarks. Bookmark",
+              "data-testid": "bookmark"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "Share post",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Share post"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "button",
+            "text": "Read 1.5K replies",
+            "attributes": {
+              "type": "button",
+              "data-testid": "logged_out_read_replies_pivot"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "button",
+            "text": "Sign up with Apple",
+            "attributes": {
+              "type": "button",
+              "data-testid": "apple_sign_in_button"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Create account",
+            "attributes": {
+              "href": "/i/flow/signup"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Terms of Service",
+            "attributes": {
+              "href": "https://x.com/tos"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Privacy Policy",
+            "attributes": {
+              "href": "https://x.com/privacy"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Cookie Use.",
+            "attributes": {
+              "href": "https://help.x.com/rules-and-policies/twitter-cookies"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/OpenAI"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "OpenAI",
+            "attributes": {
+              "href": "/OpenAI"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "@OpenAI",
+            "attributes": {
+              "href": "/OpenAI"
+            }
+          },
+          {
+            "id": "pw-52",
             "role": "button",
             "text": "Follow",
             "attributes": {
@@ -1060,16 +848,7 @@
             }
           },
           {
-            "id": "pw-22",
-            "role": "button",
-            "text": "Provides details about verified accounts.",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Provides details about verified accounts."
-            }
-          },
-          {
-            "id": "pw-24",
+            "id": "pw-53",
             "role": "link",
             "text": "http://\nopenai.com/jobs",
             "attributes": {
@@ -1077,1703 +856,150 @@
             }
           },
           {
-            "id": "pw-27",
-            "role": "link",
-            "text": "4 Following",
-            "attributes": {
-              "href": "/OpenAI/following"
-            }
-          },
-          {
-            "id": "pw-28",
-            "role": "link",
-            "text": "4.8M Followers",
-            "attributes": {
-              "href": "/OpenAI/verified_followers"
-            }
-          },
-          {
-            "id": "pw-30",
-            "role": "button",
-            "text": "Previous",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Previous"
-            }
-          },
-          {
-            "id": "pw-40",
-            "role": "button",
-            "text": "Next",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Next"
-            }
-          },
-          {
-            "id": "pw-44",
-            "role": "link",
-            "text": null,
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-45",
-            "role": "link",
-            "text": "OpenAI",
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-47",
-            "role": "link",
-            "text": "@OpenAI",
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-48",
-            "role": "link",
-            "text": "May 14",
-            "attributes": {
-              "href": "/OpenAI/status/2055016850849993072",
-              "aria-label": "May 14"
-            }
-          },
-          {
-            "id": "pw-49",
-            "role": "button",
-            "text": "More",
-            "attributes": {
-              "type": "button",
-              "aria-label": "More",
-              "data-testid": "caret"
-            }
-          },
-          {
-            "id": "pw-51",
-            "role": "button",
-            "text": "Play Video",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Play Video"
-            }
-          },
-          {
-            "id": "pw-53",
-            "role": "button",
-            "text": "1.5K",
-            "attributes": {
-              "type": "button",
-              "aria-label": "1588 Replies. Reply",
-              "data-testid": "reply"
-            }
-          },
-          {
-            "id": "pw-54",
-            "role": "button",
-            "text": "4.8K",
-            "attributes": {
-              "type": "button",
-              "aria-label": "4828 reposts. Repost",
-              "data-testid": "retweet"
-            }
-          },
-          {
-            "id": "pw-55",
-            "role": "button",
-            "text": "21K",
-            "attributes": {
-              "type": "button",
-              "aria-label": "21675 Likes. Like",
-              "data-testid": "like"
-            }
-          },
-          {
-            "id": "pw-56",
-            "role": "link",
-            "text": "4.4M",
-            "attributes": {
-              "href": "/OpenAI/status/2055016850849993072/analytics",
-              "aria-label": "4405842 views. View post analytics"
-            }
-          },
-          {
             "id": "pw-57",
-            "role": "button",
-            "text": "Bookmark",
+            "role": "link",
+            "text": "Trending in Germany\nBildungspflicht",
             "attributes": {
-              "type": "button",
-              "aria-label": "Bookmark",
-              "data-testid": "bookmark"
+              "data-testid": "trend"
             }
           },
           {
             "id": "pw-58",
-            "role": "button",
-            "text": "Share post",
+            "role": "link",
+            "text": "Sports \u00b7 Trending\nNagelsmann",
             "attributes": {
-              "type": "button",
-              "aria-label": "Share post"
+              "data-testid": "trend"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "link",
+            "text": "Trending in Germany\nGl\u00fcckwunsch zum Klassenerhalt",
+            "attributes": {
+              "data-testid": "trend"
             }
           },
           {
             "id": "pw-60",
             "role": "link",
-            "text": null,
+            "text": "Trending in Germany\nBahlsen\nTrending with Kekse",
             "attributes": {
-              "href": "/OpenAI"
+              "data-testid": "trend"
             }
           },
           {
             "id": "pw-61",
             "role": "link",
-            "text": "OpenAI",
+            "text": "Kekse",
             "attributes": {
-              "href": "/OpenAI"
+              "href": "/search?q=Kekse&src=trend_click&vertical=trends"
             }
           },
           {
-            "id": "pw-63",
+            "id": "pw-62",
             "role": "link",
-            "text": "@OpenAI",
+            "text": "Show more",
             "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-64",
-            "role": "link",
-            "text": "May 14",
-            "attributes": {
-              "href": "/OpenAI/status/2055016850849993072",
-              "aria-label": "May 14"
-            }
-          },
-          {
-            "id": "pw-65",
-            "role": "button",
-            "text": "More",
-            "attributes": {
-              "type": "button",
-              "aria-label": "More",
-              "data-testid": "caret"
-            }
-          },
-          {
-            "id": "pw-67",
-            "role": "button",
-            "text": "Play Video",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Play Video"
-            }
-          },
-          {
-            "id": "pw-69",
-            "role": "button",
-            "text": "1.5K",
-            "attributes": {
-              "type": "button",
-              "aria-label": "1588 Replies. Reply",
-              "data-testid": "reply"
-            }
-          },
-          {
-            "id": "pw-70",
-            "role": "button",
-            "text": "4.8K",
-            "attributes": {
-              "type": "button",
-              "aria-label": "4828 reposts. Repost",
-              "data-testid": "retweet"
-            }
-          },
-          {
-            "id": "pw-71",
-            "role": "button",
-            "text": "21K",
-            "attributes": {
-              "type": "button",
-              "aria-label": "21675 Likes. Like",
-              "data-testid": "like"
-            }
-          },
-          {
-            "id": "pw-72",
-            "role": "link",
-            "text": "4.4M",
-            "attributes": {
-              "href": "/OpenAI/status/2055016850849993072/analytics",
-              "aria-label": "4405842 views. View post analytics"
-            }
-          },
-          {
-            "id": "pw-73",
-            "role": "button",
-            "text": "Bookmark",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Bookmark",
-              "data-testid": "bookmark"
-            }
-          },
-          {
-            "id": "pw-74",
-            "role": "button",
-            "text": "Share post",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Share post"
-            }
-          },
-          {
-            "id": "pw-76",
-            "role": "link",
-            "text": null,
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-77",
-            "role": "link",
-            "text": "OpenAI",
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-79",
-            "role": "link",
-            "text": "@OpenAI",
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-80",
-            "role": "link",
-            "text": "May 14",
-            "attributes": {
-              "href": "/OpenAI/status/2055016852133417389",
-              "aria-label": "May 14"
-            }
-          },
-          {
-            "id": "pw-81",
-            "role": "button",
-            "text": "More",
-            "attributes": {
-              "type": "button",
-              "aria-label": "More",
-              "data-testid": "caret"
-            }
-          },
-          {
-            "id": "pw-82",
-            "role": "link",
-            "text": "Work with Codex from anywhere",
-            "attributes": {
-              "href": "https://t.co/jGNH2CUXih",
-              "aria-label": "openai.com Work with Codex from anywhere"
-            }
-          }
-        ]
-      },
-      "action": {
-        "action": "evaluate",
-        "args": {
-          "script": "Array.from(document.querySelectorAll('article')).map((a,i)=>({i,text:a.innerText,links:Array.from(a.querySelectorAll('a')).map(l=>({text:l.innerText,href:l.href,aria:l.getAttribute('aria-label')})),time:Array.from(a.querySelectorAll('time')).map(t=>({datetime:t.getAttribute('datetime'),text:t.innerText}))})).slice(0,8)"
-        }
-      },
-      "observation": "Eval: [{\"i\": 0, \"text\": \"Pinned\\nOpenAI\\n@OpenAI\\n\\u00b7\\nMay 14\\nYou've been asking for this one...\\n\\nNow in preview: Codex in the ChatGPT mobile app.\\n\\nStart new work, review outputs, steer execution, and approve next steps, all from the ChatGPT mobile app. Codex will keep running on your laptop, Mac mini, or devbox.\\n1.5K\\n4.8K\\n21K\\n4.4M\", \"links\": [{\"text\": \"\", \"href\": \"https://x.com/OpenAI\", \"aria\": null}, {\"text\": \"OpenAI\", \"href\": \"https://x.com/OpenAI\", \"aria\": null}, {\"text\": \"@OpenAI\", \"h"
-    },
-    {
-      "step": 4,
-      "state": {
-        "url": "https://x.com/OpenAI",
-        "title": "OpenAI (@OpenAI) / X",
-        "elements": [
-          {
-            "id": "pw-0",
-            "role": "link",
-            "text": "Log in",
-            "attributes": {
-              "href": "/login",
-              "data-testid": "login"
-            }
-          },
-          {
-            "id": "pw-1",
-            "role": "link",
-            "text": "Sign up",
-            "attributes": {
-              "href": "/i/flow/signup",
-              "data-testid": "signup"
-            }
-          },
-          {
-            "id": "pw-2",
-            "role": "button",
-            "text": "Show more about your choices.",
-            "attributes": {
-              "type": "button"
-            }
-          },
-          {
-            "id": "pw-3",
-            "role": "button",
-            "text": "Accept all cookies",
-            "attributes": {
-              "type": "button"
-            }
-          },
-          {
-            "id": "pw-4",
-            "role": "button",
-            "text": "Refuse non-essential cookies",
-            "attributes": {
-              "type": "button"
-            }
-          },
-          {
-            "id": "pw-5",
-            "role": "button",
-            "text": "Skip to home timeline",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Skip to home timeline"
-            }
-          },
-          {
-            "id": "pw-6",
-            "role": "button",
-            "text": "Skip to trending",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Skip to trending"
-            }
-          },
-          {
-            "id": "pw-9",
-            "role": "link",
-            "text": "X",
-            "attributes": {
-              "href": "/",
-              "aria-label": "X"
-            }
-          },
-          {
-            "id": "pw-13",
-            "role": "button",
-            "text": "Back",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Back",
-              "data-testid": "app-bar-back"
-            }
-          },
-          {
-            "id": "pw-16",
-            "role": "button",
-            "text": "Search",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Search"
-            }
-          },
-          {
-            "id": "pw-18",
-            "role": "button",
-            "text": "See new posts",
-            "attributes": {
-              "type": "button",
-              "aria-label": "New posts are available. Push the period key to go to the them."
-            }
-          },
-          {
-            "id": "pw-19",
-            "role": "link",
-            "text": null,
-            "attributes": {
-              "href": "/OpenAI/header_photo"
-            }
-          },
-          {
-            "id": "pw-20",
-            "role": "link",
-            "text": null,
-            "attributes": {
-              "href": "/OpenAI/photo"
-            }
-          },
-          {
-            "id": "pw-21",
-            "role": "button",
-            "text": "Follow",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Follow @OpenAI",
-              "data-testid": "4398626122-follow"
-            }
-          },
-          {
-            "id": "pw-22",
-            "role": "button",
-            "text": "Provides details about verified accounts.",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Provides details about verified accounts."
-            }
-          },
-          {
-            "id": "pw-24",
-            "role": "link",
-            "text": "http://\nopenai.com/jobs",
-            "attributes": {
-              "href": "https://t.co/dJGr6LgzPA"
-            }
-          },
-          {
-            "id": "pw-27",
-            "role": "link",
-            "text": "4 Following",
-            "attributes": {
-              "href": "/OpenAI/following"
-            }
-          },
-          {
-            "id": "pw-28",
-            "role": "link",
-            "text": "4.8M Followers",
-            "attributes": {
-              "href": "/OpenAI/verified_followers"
-            }
-          },
-          {
-            "id": "pw-30",
-            "role": "button",
-            "text": "Previous",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Previous"
-            }
-          },
-          {
-            "id": "pw-40",
-            "role": "button",
-            "text": "Next",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Next"
-            }
-          },
-          {
-            "id": "pw-44",
-            "role": "link",
-            "text": null,
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-45",
-            "role": "link",
-            "text": "OpenAI",
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-47",
-            "role": "link",
-            "text": "@OpenAI",
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-48",
-            "role": "link",
-            "text": "May 14",
-            "attributes": {
-              "href": "/OpenAI/status/2055016850849993072",
-              "aria-label": "May 14"
-            }
-          },
-          {
-            "id": "pw-49",
-            "role": "button",
-            "text": "More",
-            "attributes": {
-              "type": "button",
-              "aria-label": "More",
-              "data-testid": "caret"
-            }
-          },
-          {
-            "id": "pw-51",
-            "role": "button",
-            "text": "Play Video",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Play Video"
-            }
-          },
-          {
-            "id": "pw-53",
-            "role": "button",
-            "text": "1.5K",
-            "attributes": {
-              "type": "button",
-              "aria-label": "1588 Replies. Reply",
-              "data-testid": "reply"
-            }
-          },
-          {
-            "id": "pw-54",
-            "role": "button",
-            "text": "4.8K",
-            "attributes": {
-              "type": "button",
-              "aria-label": "4828 reposts. Repost",
-              "data-testid": "retweet"
-            }
-          },
-          {
-            "id": "pw-55",
-            "role": "button",
-            "text": "21K",
-            "attributes": {
-              "type": "button",
-              "aria-label": "21675 Likes. Like",
-              "data-testid": "like"
-            }
-          },
-          {
-            "id": "pw-56",
-            "role": "link",
-            "text": "4.4M",
-            "attributes": {
-              "href": "/OpenAI/status/2055016850849993072/analytics",
-              "aria-label": "4405842 views. View post analytics"
-            }
-          },
-          {
-            "id": "pw-57",
-            "role": "button",
-            "text": "Bookmark",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Bookmark",
-              "data-testid": "bookmark"
-            }
-          },
-          {
-            "id": "pw-58",
-            "role": "button",
-            "text": "Share post",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Share post"
-            }
-          },
-          {
-            "id": "pw-60",
-            "role": "link",
-            "text": null,
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-61",
-            "role": "link",
-            "text": "OpenAI",
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-63",
-            "role": "link",
-            "text": "@OpenAI",
-            "attributes": {
-              "href": "/OpenAI"
+              "href": "/explore/tabs/for-you"
             }
           },
           {
             "id": "pw-64",
             "role": "link",
-            "text": "May 14",
+            "text": "Terms of Service",
             "attributes": {
-              "href": "/OpenAI/status/2055016850849993072",
-              "aria-label": "May 14"
+              "href": "https://x.com/tos"
             }
           },
           {
             "id": "pw-65",
-            "role": "button",
-            "text": "More",
+            "role": "link",
+            "text": "Privacy Policy",
             "attributes": {
-              "type": "button",
-              "aria-label": "More",
-              "data-testid": "caret"
+              "href": "https://x.com/privacy"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "Cookie Policy",
+            "attributes": {
+              "href": "https://support.x.com/articles/20170514"
             }
           },
           {
             "id": "pw-67",
-            "role": "button",
-            "text": "Play Video",
+            "role": "link",
+            "text": "MStV Transparenzangaben",
             "attributes": {
-              "type": "button",
-              "aria-label": "Play Video"
+              "href": "https://help.x.com/de/using-twitter/twitter-timeline"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "link",
+            "text": "Imprint",
+            "attributes": {
+              "href": "https://legal.x.com/imprint.html"
             }
           },
           {
             "id": "pw-69",
-            "role": "button",
-            "text": "1.5K",
+            "role": "link",
+            "text": "Accessibility",
             "attributes": {
-              "type": "button",
-              "aria-label": "1588 Replies. Reply",
-              "data-testid": "reply"
+              "href": "https://help.x.com/resources/accessibility"
             }
           },
           {
             "id": "pw-70",
-            "role": "button",
-            "text": "4.8K",
+            "role": "link",
+            "text": "Ads info",
             "attributes": {
-              "type": "button",
-              "aria-label": "4828 reposts. Repost",
-              "data-testid": "retweet"
+              "href": "https://business.x.com/en/help/troubleshooting/how-twitter-ads-work.html?ref=web-twc-ao-gbl-adsinfo&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=adsinfo"
             }
           },
           {
             "id": "pw-71",
             "role": "button",
-            "text": "21K",
-            "attributes": {
-              "type": "button",
-              "aria-label": "21675 Likes. Like",
-              "data-testid": "like"
-            }
-          },
-          {
-            "id": "pw-72",
-            "role": "link",
-            "text": "4.4M",
-            "attributes": {
-              "href": "/OpenAI/status/2055016850849993072/analytics",
-              "aria-label": "4405842 views. View post analytics"
-            }
-          },
-          {
-            "id": "pw-73",
-            "role": "button",
-            "text": "Bookmark",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Bookmark",
-              "data-testid": "bookmark"
-            }
-          },
-          {
-            "id": "pw-74",
-            "role": "button",
-            "text": "Share post",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Share post"
-            }
-          },
-          {
-            "id": "pw-76",
-            "role": "link",
-            "text": null,
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-77",
-            "role": "link",
-            "text": "OpenAI",
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-79",
-            "role": "link",
-            "text": "@OpenAI",
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-80",
-            "role": "link",
-            "text": "May 14",
-            "attributes": {
-              "href": "/OpenAI/status/2055016852133417389",
-              "aria-label": "May 14"
-            }
-          },
-          {
-            "id": "pw-81",
-            "role": "button",
             "text": "More",
             "attributes": {
               "type": "button",
-              "aria-label": "More",
-              "data-testid": "caret"
+              "aria-label": "More"
             }
           },
           {
-            "id": "pw-82",
-            "role": "link",
-            "text": "Work with Codex from anywhere",
-            "attributes": {
-              "href": "https://t.co/jGNH2CUXih",
-              "aria-label": "openai.com Work with Codex from anywhere"
-            }
-          }
-        ]
-      },
-      "action": {
-        "action": "evaluate",
-        "args": {
-          "script": "Array.from(document.querySelectorAll('article')).slice(0,10).map((a,i)=>{const text=a.innerText; const links=Array.from(a.querySelectorAll('a')).map(l=>({txt:l.innerText, href:l.href, aria:l.getAttribute('aria-label')})); const times=Array.from(a.querySelectorAll('time')).map(t=>({text:t.innerText, datetime:t.dateTime})); return {i,text,links:links.filter(x=>/status|OpenAI/.test(x.href)||x.aria),times};})"
-        }
-      },
-      "observation": "Eval: [{\"i\": 0, \"text\": \"Pinned\\nOpenAI\\n@OpenAI\\n\\u00b7\\nMay 14\\nYou've been asking for this one...\\n\\nNow in preview: Codex in the ChatGPT mobile app.\\n\\nStart new work, review outputs, steer execution, and approve next steps, all from the ChatGPT mobile app. Codex will keep running on your laptop, Mac mini, or devbox.\\n1.5K\\n4.8K\\n21K\\n4.4M\", \"links\": [{\"txt\": \"\", \"href\": \"https://x.com/OpenAI\", \"aria\": null}, {\"txt\": \"OpenAI\", \"href\": \"https://x.com/OpenAI\", \"aria\": null}, {\"txt\": \"@OpenAI\", \"href"
-    },
-    {
-      "step": 5,
-      "state": {
-        "url": "https://x.com/OpenAI",
-        "title": "OpenAI (@OpenAI) / X",
-        "elements": [
-          {
-            "id": "pw-0",
-            "role": "link",
-            "text": "Log in",
-            "attributes": {
-              "href": "/login",
-              "data-testid": "login"
-            }
-          },
-          {
-            "id": "pw-1",
-            "role": "link",
-            "text": "Sign up",
-            "attributes": {
-              "href": "/i/flow/signup",
-              "data-testid": "signup"
-            }
-          },
-          {
-            "id": "pw-2",
-            "role": "button",
-            "text": "Show more about your choices.",
-            "attributes": {
-              "type": "button"
-            }
-          },
-          {
-            "id": "pw-3",
-            "role": "button",
-            "text": "Accept all cookies",
-            "attributes": {
-              "type": "button"
-            }
-          },
-          {
-            "id": "pw-4",
-            "role": "button",
-            "text": "Refuse non-essential cookies",
-            "attributes": {
-              "type": "button"
-            }
-          },
-          {
-            "id": "pw-5",
-            "role": "button",
-            "text": "Skip to home timeline",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Skip to home timeline"
-            }
-          },
-          {
-            "id": "pw-6",
-            "role": "button",
-            "text": "Skip to trending",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Skip to trending"
-            }
-          },
-          {
-            "id": "pw-9",
-            "role": "link",
-            "text": "X",
-            "attributes": {
-              "href": "/",
-              "aria-label": "X"
-            }
-          },
-          {
-            "id": "pw-13",
-            "role": "button",
-            "text": "Back",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Back",
-              "data-testid": "app-bar-back"
-            }
-          },
-          {
-            "id": "pw-16",
-            "role": "button",
-            "text": "Search",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Search"
-            }
-          },
-          {
-            "id": "pw-18",
-            "role": "button",
-            "text": "See new posts",
-            "attributes": {
-              "type": "button",
-              "aria-label": "New posts are available. Push the period key to go to the them."
-            }
-          },
-          {
-            "id": "pw-19",
-            "role": "link",
+            "id": "pw-7",
+            "role": "banner",
             "text": null,
-            "attributes": {
-              "href": "/OpenAI/header_photo"
-            }
+            "attributes": {}
           },
           {
-            "id": "pw-20",
-            "role": "link",
+            "id": "pw-8",
+            "role": "heading",
             "text": null,
-            "attributes": {
-              "href": "/OpenAI/photo"
-            }
-          },
-          {
-            "id": "pw-21",
-            "role": "button",
-            "text": "Follow",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Follow @OpenAI",
-              "data-testid": "4398626122-follow"
-            }
-          },
-          {
-            "id": "pw-22",
-            "role": "button",
-            "text": "Provides details about verified accounts.",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Provides details about verified accounts."
-            }
-          },
-          {
-            "id": "pw-24",
-            "role": "link",
-            "text": "http://\nopenai.com/jobs",
-            "attributes": {
-              "href": "https://t.co/dJGr6LgzPA"
-            }
-          },
-          {
-            "id": "pw-27",
-            "role": "link",
-            "text": "4 Following",
-            "attributes": {
-              "href": "/OpenAI/following"
-            }
-          },
-          {
-            "id": "pw-28",
-            "role": "link",
-            "text": "4.8M Followers",
-            "attributes": {
-              "href": "/OpenAI/verified_followers"
-            }
-          },
-          {
-            "id": "pw-30",
-            "role": "button",
-            "text": "Previous",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Previous"
-            }
-          },
-          {
-            "id": "pw-40",
-            "role": "button",
-            "text": "Next",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Next"
-            }
-          },
-          {
-            "id": "pw-44",
-            "role": "link",
-            "text": null,
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-45",
-            "role": "link",
-            "text": "OpenAI",
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-47",
-            "role": "link",
-            "text": "@OpenAI",
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-48",
-            "role": "link",
-            "text": "May 14",
-            "attributes": {
-              "href": "/OpenAI/status/2055016850849993072",
-              "aria-label": "May 14"
-            }
-          },
-          {
-            "id": "pw-49",
-            "role": "button",
-            "text": "More",
-            "attributes": {
-              "type": "button",
-              "aria-label": "More",
-              "data-testid": "caret"
-            }
-          },
-          {
-            "id": "pw-51",
-            "role": "button",
-            "text": "Play Video",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Play Video"
-            }
-          },
-          {
-            "id": "pw-53",
-            "role": "button",
-            "text": "1.5K",
-            "attributes": {
-              "type": "button",
-              "aria-label": "1588 Replies. Reply",
-              "data-testid": "reply"
-            }
-          },
-          {
-            "id": "pw-54",
-            "role": "button",
-            "text": "4.8K",
-            "attributes": {
-              "type": "button",
-              "aria-label": "4828 reposts. Repost",
-              "data-testid": "retweet"
-            }
-          },
-          {
-            "id": "pw-55",
-            "role": "button",
-            "text": "21K",
-            "attributes": {
-              "type": "button",
-              "aria-label": "21675 Likes. Like",
-              "data-testid": "like"
-            }
-          },
-          {
-            "id": "pw-56",
-            "role": "link",
-            "text": "4.4M",
-            "attributes": {
-              "href": "/OpenAI/status/2055016850849993072/analytics",
-              "aria-label": "4405842 views. View post analytics"
-            }
-          },
-          {
-            "id": "pw-57",
-            "role": "button",
-            "text": "Bookmark",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Bookmark",
-              "data-testid": "bookmark"
-            }
-          },
-          {
-            "id": "pw-58",
-            "role": "button",
-            "text": "Share post",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Share post"
-            }
-          },
-          {
-            "id": "pw-60",
-            "role": "link",
-            "text": null,
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-61",
-            "role": "link",
-            "text": "OpenAI",
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-63",
-            "role": "link",
-            "text": "@OpenAI",
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-64",
-            "role": "link",
-            "text": "May 14",
-            "attributes": {
-              "href": "/OpenAI/status/2055016850849993072",
-              "aria-label": "May 14"
-            }
-          },
-          {
-            "id": "pw-65",
-            "role": "button",
-            "text": "More",
-            "attributes": {
-              "type": "button",
-              "aria-label": "More",
-              "data-testid": "caret"
-            }
-          },
-          {
-            "id": "pw-67",
-            "role": "button",
-            "text": "Play Video",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Play Video"
-            }
-          },
-          {
-            "id": "pw-69",
-            "role": "button",
-            "text": "1.5K",
-            "attributes": {
-              "type": "button",
-              "aria-label": "1588 Replies. Reply",
-              "data-testid": "reply"
-            }
-          },
-          {
-            "id": "pw-70",
-            "role": "button",
-            "text": "4.8K",
-            "attributes": {
-              "type": "button",
-              "aria-label": "4828 reposts. Repost",
-              "data-testid": "retweet"
-            }
-          },
-          {
-            "id": "pw-71",
-            "role": "button",
-            "text": "21K",
-            "attributes": {
-              "type": "button",
-              "aria-label": "21675 Likes. Like",
-              "data-testid": "like"
-            }
-          },
-          {
-            "id": "pw-72",
-            "role": "link",
-            "text": "4.4M",
-            "attributes": {
-              "href": "/OpenAI/status/2055016850849993072/analytics",
-              "aria-label": "4405842 views. View post analytics"
-            }
-          },
-          {
-            "id": "pw-73",
-            "role": "button",
-            "text": "Bookmark",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Bookmark",
-              "data-testid": "bookmark"
-            }
-          },
-          {
-            "id": "pw-74",
-            "role": "button",
-            "text": "Share post",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Share post"
-            }
-          },
-          {
-            "id": "pw-76",
-            "role": "link",
-            "text": null,
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-77",
-            "role": "link",
-            "text": "OpenAI",
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-79",
-            "role": "link",
-            "text": "@OpenAI",
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-80",
-            "role": "link",
-            "text": "May 14",
-            "attributes": {
-              "href": "/OpenAI/status/2055016852133417389",
-              "aria-label": "May 14"
-            }
-          },
-          {
-            "id": "pw-81",
-            "role": "button",
-            "text": "More",
-            "attributes": {
-              "type": "button",
-              "aria-label": "More",
-              "data-testid": "caret"
-            }
-          },
-          {
-            "id": "pw-82",
-            "role": "link",
-            "text": "Work with Codex from anywhere",
-            "attributes": {
-              "href": "https://t.co/jGNH2CUXih",
-              "aria-label": "openai.com Work with Codex from anywhere"
-            }
-          }
-        ]
-      },
-      "action": {
-        "action": "evaluate",
-        "args": {
-          "script": "Array.from(document.querySelectorAll('article')).slice(0,8).map((a,i)=>{const txt=a.innerText.split('\\n').filter(Boolean); const statusLinks=[...a.querySelectorAll('a[href*=\"/status/\"]')].map(l=>({text:l.innerText,aria:l.getAttribute('aria-label'),href:l.href})); const times=[...a.querySelectorAll('time')].map(t=>({text:t.innerText,datetime:t.getAttribute('datetime')})); const isPinned=a.innerText.includes('Pinned'); return {i,isPinned,lines:txt.slice(0,20),statusLinks,times};})"
-        }
-      },
-      "observation": "Eval: [{\"i\": 0, \"isPinned\": true, \"lines\": [\"Pinned\", \"OpenAI\", \"@OpenAI\", \"\\u00b7\", \"May 14\", \"You've been asking for this one...\", \"Now in preview: Codex in the ChatGPT mobile app.\", \"Start new work, review outputs, steer execution, and approve next steps, all from the ChatGPT mobile app. Codex will keep running on your laptop, Mac mini, or devbox.\", \"1.5K\", \"4.8K\", \"21K\", \"4.4M\"], \"statusLinks\": [{\"text\": \"May 14\", \"aria\": \"May 14\", \"href\": \"https://x.com/OpenAI/status/2055016850849993072\"}, {\"text"
-    },
-    {
-      "step": 6,
-      "state": {
-        "url": "https://x.com/OpenAI",
-        "title": "OpenAI (@OpenAI) / X",
-        "elements": [
-          {
-            "id": "pw-0",
-            "role": "link",
-            "text": "Log in",
-            "attributes": {
-              "href": "/login",
-              "data-testid": "login"
-            }
-          },
-          {
-            "id": "pw-1",
-            "role": "link",
-            "text": "Sign up",
-            "attributes": {
-              "href": "/i/flow/signup",
-              "data-testid": "signup"
-            }
-          },
-          {
-            "id": "pw-2",
-            "role": "button",
-            "text": "Show more about your choices.",
-            "attributes": {
-              "type": "button"
-            }
-          },
-          {
-            "id": "pw-3",
-            "role": "button",
-            "text": "Accept all cookies",
-            "attributes": {
-              "type": "button"
-            }
-          },
-          {
-            "id": "pw-4",
-            "role": "button",
-            "text": "Refuse non-essential cookies",
-            "attributes": {
-              "type": "button"
-            }
-          },
-          {
-            "id": "pw-5",
-            "role": "button",
-            "text": "Skip to home timeline",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Skip to home timeline"
-            }
-          },
-          {
-            "id": "pw-6",
-            "role": "button",
-            "text": "Skip to trending",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Skip to trending"
-            }
-          },
-          {
-            "id": "pw-9",
-            "role": "link",
-            "text": "X",
-            "attributes": {
-              "href": "/",
-              "aria-label": "X"
-            }
-          },
-          {
-            "id": "pw-13",
-            "role": "button",
-            "text": "Back",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Back",
-              "data-testid": "app-bar-back"
-            }
-          },
-          {
-            "id": "pw-16",
-            "role": "button",
-            "text": "Search",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Search"
-            }
-          },
-          {
-            "id": "pw-18",
-            "role": "button",
-            "text": "See new posts",
-            "attributes": {
-              "type": "button",
-              "aria-label": "New posts are available. Push the period key to go to the them."
-            }
-          },
-          {
-            "id": "pw-19",
-            "role": "link",
-            "text": null,
-            "attributes": {
-              "href": "/OpenAI/header_photo"
-            }
-          },
-          {
-            "id": "pw-20",
-            "role": "link",
-            "text": null,
-            "attributes": {
-              "href": "/OpenAI/photo"
-            }
-          },
-          {
-            "id": "pw-21",
-            "role": "button",
-            "text": "Follow",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Follow @OpenAI",
-              "data-testid": "4398626122-follow"
-            }
-          },
-          {
-            "id": "pw-22",
-            "role": "button",
-            "text": "Provides details about verified accounts.",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Provides details about verified accounts."
-            }
-          },
-          {
-            "id": "pw-24",
-            "role": "link",
-            "text": "http://\nopenai.com/jobs",
-            "attributes": {
-              "href": "https://t.co/dJGr6LgzPA"
-            }
-          },
-          {
-            "id": "pw-27",
-            "role": "link",
-            "text": "4 Following",
-            "attributes": {
-              "href": "/OpenAI/following"
-            }
-          },
-          {
-            "id": "pw-28",
-            "role": "link",
-            "text": "4.8M Followers",
-            "attributes": {
-              "href": "/OpenAI/verified_followers"
-            }
-          },
-          {
-            "id": "pw-30",
-            "role": "button",
-            "text": "Previous",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Previous"
-            }
-          },
-          {
-            "id": "pw-40",
-            "role": "button",
-            "text": "Next",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Next"
-            }
-          },
-          {
-            "id": "pw-44",
-            "role": "link",
-            "text": null,
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-45",
-            "role": "link",
-            "text": "OpenAI",
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-47",
-            "role": "link",
-            "text": "@OpenAI",
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-48",
-            "role": "link",
-            "text": "May 14",
-            "attributes": {
-              "href": "/OpenAI/status/2055016850849993072",
-              "aria-label": "May 14"
-            }
-          },
-          {
-            "id": "pw-49",
-            "role": "button",
-            "text": "More",
-            "attributes": {
-              "type": "button",
-              "aria-label": "More",
-              "data-testid": "caret"
-            }
-          },
-          {
-            "id": "pw-51",
-            "role": "button",
-            "text": "Play Video",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Play Video"
-            }
-          },
-          {
-            "id": "pw-53",
-            "role": "button",
-            "text": "1.5K",
-            "attributes": {
-              "type": "button",
-              "aria-label": "1588 Replies. Reply",
-              "data-testid": "reply"
-            }
+            "attributes": {}
           },
           {
-            "id": "pw-54",
-            "role": "button",
-            "text": "4.8K",
+            "id": "pw-10",
+            "role": "navigation",
+            "text": "Primary",
             "attributes": {
-              "type": "button",
-              "aria-label": "4828 reposts. Repost",
-              "data-testid": "retweet"
+              "aria-label": "Primary"
             }
           },
           {
-            "id": "pw-55",
-            "role": "button",
-            "text": "21K",
-            "attributes": {
-              "type": "button",
-              "aria-label": "21675 Likes. Like",
-              "data-testid": "like"
-            }
-          },
-          {
-            "id": "pw-56",
-            "role": "link",
-            "text": "4.4M",
-            "attributes": {
-              "href": "/OpenAI/status/2055016850849993072/analytics",
-              "aria-label": "4405842 views. View post analytics"
-            }
-          },
-          {
-            "id": "pw-57",
-            "role": "button",
-            "text": "Bookmark",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Bookmark",
-              "data-testid": "bookmark"
-            }
-          },
-          {
-            "id": "pw-58",
-            "role": "button",
-            "text": "Share post",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Share post"
-            }
-          },
-          {
-            "id": "pw-60",
-            "role": "link",
-            "text": null,
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-61",
-            "role": "link",
-            "text": "OpenAI",
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-63",
-            "role": "link",
-            "text": "@OpenAI",
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-64",
-            "role": "link",
-            "text": "May 14",
-            "attributes": {
-              "href": "/OpenAI/status/2055016850849993072",
-              "aria-label": "May 14"
-            }
-          },
-          {
-            "id": "pw-65",
-            "role": "button",
-            "text": "More",
-            "attributes": {
-              "type": "button",
-              "aria-label": "More",
-              "data-testid": "caret"
-            }
-          },
-          {
-            "id": "pw-67",
-            "role": "button",
-            "text": "Play Video",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Play Video"
-            }
-          },
-          {
-            "id": "pw-69",
-            "role": "button",
-            "text": "1.5K",
-            "attributes": {
-              "type": "button",
-              "aria-label": "1588 Replies. Reply",
-              "data-testid": "reply"
-            }
-          },
-          {
-            "id": "pw-70",
-            "role": "button",
-            "text": "4.8K",
-            "attributes": {
-              "type": "button",
-              "aria-label": "4828 reposts. Repost",
-              "data-testid": "retweet"
-            }
-          },
-          {
-            "id": "pw-71",
-            "role": "button",
-            "text": "21K",
-            "attributes": {
-              "type": "button",
-              "aria-label": "21675 Likes. Like",
-              "data-testid": "like"
-            }
-          },
-          {
-            "id": "pw-72",
-            "role": "link",
-            "text": "4.4M",
-            "attributes": {
-              "href": "/OpenAI/status/2055016850849993072/analytics",
-              "aria-label": "4405842 views. View post analytics"
-            }
-          },
-          {
-            "id": "pw-73",
-            "role": "button",
-            "text": "Bookmark",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Bookmark",
-              "data-testid": "bookmark"
-            }
-          },
-          {
-            "id": "pw-74",
-            "role": "button",
-            "text": "Share post",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Share post"
-            }
-          },
-          {
-            "id": "pw-76",
-            "role": "link",
-            "text": null,
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-77",
-            "role": "link",
-            "text": "OpenAI",
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-79",
-            "role": "link",
-            "text": "@OpenAI",
-            "attributes": {
-              "href": "/OpenAI"
-            }
-          },
-          {
-            "id": "pw-80",
-            "role": "link",
-            "text": "May 14",
-            "attributes": {
-              "href": "/OpenAI/status/2055016852133417389",
-              "aria-label": "May 14"
-            }
-          },
-          {
-            "id": "pw-81",
-            "role": "button",
-            "text": "More",
-            "attributes": {
-              "type": "button",
-              "aria-label": "More",
-              "data-testid": "caret"
-            }
-          },
-          {
-            "id": "pw-82",
-            "role": "link",
-            "text": "Work with Codex from anywhere",
-            "attributes": {
-              "href": "https://t.co/jGNH2CUXih",
-              "aria-label": "openai.com Work with Codex from anywhere"
-            }
+            "id": "pw-11",
+            "role": "main",
+            "text": "Post\nSee new posts\nConversation\nOpenAI\n@OpenAI\nYou've been asking for this one...\n\nNow in preview: Codex in the ChatGPT mobile app.\n\nStart new work, review outputs, steer execution, and approve next steps, all from the ChatGPT mobile app. Codex will keep running on your laptop, Mac mini, or devbox.\n0:52\n11:06 PM \u00b7 May 14, 2026\n\u00b7\n4.4M\n Views\n1.5K\n4.8K\n21K\n4.6K\nRead 1.5K replies\nNew to X?\nSign up now to get your own personalized timeline!\nSign up with Apple\nCreate account\nBy signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use.\nRelevant people\nOpenAI\n@OpenAI\nFollow\nOpenAI\u2019s mission is to ensure that artificial general intelligence benefits all of humanity. We\u2019re hiring: \nhttp://\nopenai.com/jobs\nTrending now\nWhat\u2019s happening\nTrending in Germany\nBildungspflicht\nSports \u00b7 Trending\nNagelsmann\nTrending in Germany\nGl\u00fcckwunsch zum Klassenerhalt\nTrending in Germany\nBahlsen\nTrending with Kekse\nShow more\nTerms of Service\n |\nPrivacy Policy\n |\nCookie Policy\n |\nMStV Transparenzangaben\n |\nImprint\n |\nAccessibility\n |\nAds info\n |\nMore\n\u00a9 2026 X Corp.",
+            "attributes": {}
           }
         ]
       },
       "action": {
         "action": "finish",
         "args": {
-          "final_answer": "Error planning: Extra data: line 2 column 1 (char 436)"
+          "final_answer": "OpenAI\u2019s latest public X post (shown dated 11:06 PM \u00b7 May 14, 2026) says: \u201cYou\u2019ve been asking for this one...\u201d and announces that Codex is now in preview in the ChatGPT mobile app. Summary: users can start new work, review outputs, steer execution, and approve next steps from the ChatGPT mobile app while Codex keeps running on their laptop, Mac mini, or devbox."
         }
       },
       "observation": "Finished"

@@ -138,6 +138,16 @@ class CostCeilingMiddleware(BaseHTTPMiddleware):
             )
 
         self._costs[session_id] = CostIncrement(tokens=updated_tokens, dollars=record.daily_total_usd)
+        # Wire session cost tracking
+        try:
+            from gateway.app import session_store
+            session_store.update_cost(
+                session_id,
+                cost_tokens=total_tokens,
+                cost_dollars=record.daily_total_usd,
+            )
+        except Exception:
+            pass  # session store may not be initialized in all contexts
         return _clone_response(response, body)
 
 

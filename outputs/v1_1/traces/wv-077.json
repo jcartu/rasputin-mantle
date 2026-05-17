@@ -2,9 +2,9 @@
   "task_id": "wv-077",
   "task_description": "On NVIDIA's website, find the starting price of the GeForce RTX 5090 or newest listed RTX 50-series GPU.",
   "starting_url": "https://www.nvidia.com",
-  "passed": false,
-  "final_answer": "Error planning: Extra data: line 2 column 1 (char 1166)",
-  "duration_s": 69.79,
+  "passed": true,
+  "final_answer": "On NVIDIA\u2019s GeForce RTX 5090 page, the starting price is $1,999 USD.",
+  "duration_s": 134.01,
   "steps": [
     {
       "step": 1,
@@ -390,18 +390,18 @@
         ]
       },
       "action": {
-        "action": "open",
+        "action": "click",
         "args": {
-          "url": "https://www.nvidia.com/de-de/geforce/graphics-cards/50-series/rtx-5090/"
+          "element_id": "pw-47"
         }
       },
-      "observation": "Opened https://www.nvidia.com/de-de/geforce/graphics-cards/50-series/rtx-5090/"
+      "observation": "Action failed: Locator.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator(\"header > div > nav > div:nth-of-type(2) > div > div:nth-of-type(3) > ul:nth-of-type(1) > li:nth-of-type(1) > div > div > div > div > div:nth-of-type(3) > div:nth-of-type(5) > div > a:nth-of-type(2)\").first\n    - locator resolved to <a target=\"_self\" class=\"menu3-item-card\" href=\"https://www.nvidia.com/de-de/geforce/graphics-cards/\">\u2026</a>\n  - attempting click action\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 100ms\n    9 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 500ms\n"
     },
     {
       "step": 2,
       "state": {
-        "url": "https://www.nvidia.com/de-de/geforce/graphics-cards/50-series/rtx-5090/",
-        "title": "GeForce RTX\u00a05090-Grafikkarten | NVIDIA",
+        "url": "https://www.nvidia.com/de-de/",
+        "title": "Weltweit f\u00fchrender Anbieter von KI-Computing | NVIDIA",
         "elements": [
           {
             "id": "pw-0",
@@ -776,6 +776,397 @@
             "text": "NVIDIA App und Game Ready-Treiber\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tOptimieren von Gaming, Streaming und KI-gest\u00fctzter Kreativit\u00e4t",
             "attributes": {
               "href": "https://www.nvidia.com/de-de/software/nvidia-app/"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/"
+        }
+      },
+      "observation": "Opened https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/",
+        "title": "GeForce RTX 5090 Graphics Cards | NVIDIA",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "combobox",
+            "text": "Argentina\nAustralia\nBelgi\u00eb (Belgium)\nBelgique (Belgium)\nBrasil (Brazil)\nCanada\n\u010cesk\u00e1 Republika (Czech Republic)\nChile\nColombia\nDanmark (Denmark)\nDeutschland (Germany)\nEspa\u00f1a (Spain)\nFrance\nIndia\nItalia (Italy)\nM\u00e9xico (Mexico)\nMiddle East\nNederland (Netherlands)\nNorge (Norway)\n\u00d6sterreich (Austria)\nPeru\nPolska (Poland)\nRest of Europe\nRom\u00e2nia (Romania)\nSingapore\nSuomi (Finland)\nSverige (Sweden)\nT\u00fcrkiye (Turkey)\nUnited Kingdom\nUnited States\n\ub300\ud55c\ubbfc\uad6d (South Korea)\n\u4e2d\u56fd\u5927\u9646 (Mainland China)\n\u53f0\u7063 (Taiwan)\n\u65e5\u672c (Japan)",
+            "attributes": {
+              "id": "country-selector",
+              "aria-label": "Select your country"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Fortfahren",
+            "attributes": {
+              "href": "https://www.nvidia.com/de-de/geforce/graphics-cards/50-series/rtx-5090/"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#page-content"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "button",
+            "text": "Main Menu",
+            "attributes": {}
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "aria-label": "menu collapse"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "aria-label": "menu close"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-17",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-19",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-20",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-21",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-22",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-23",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-24",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "BioNeMo\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAI-driven platform for life sciences research and discovery",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/industries/healthcare-life-sciences/biopharma/"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "DGX Cloud\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tNVIDIA\u2019s AI factory in the cloud",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/data-center/dgx-cloud/"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "NVIDIA APIs\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tExplore, test, and deploy AI models and agents",
+            "attributes": {
+              "href": "https://build.nvidia.com/"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Private Registry\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tGuide for using NVIDIA NGC private registry with GPU cloud",
+            "attributes": {
+              "href": "https://docs.nvidia.com/ngc/latest/ngc-private-registry-user-guide.html"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "NVIDIA NGC\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAccelerated, containerized AI models and SDKs",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/gpu-cloud/"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "NVIDIA Studio\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tHigh performance GeForce RTX PCs, purpose-built for creators",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/studio/"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "NVIDIA Broadcast App\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAI-enhanced voice and video for next-level streams, videos, and calls",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/geforce/broadcasting/"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "NVIDIA App and Studio Drivers \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tOptimize gaming, streaming, and AI-powered creativity",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/software/nvidia-app/"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "RTX AI PCs\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAI PCs for gaming, creating, productivity and development",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/ai-on-rtx/"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "RTX Remix\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tCreate RTX remasters of classic games with open-source AI",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/geforce/rtx-remix/"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Project G-Assist\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAI assistant to optimize and control your GeForce RTX PC",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/software/nvidia-app/g-assist/"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Overview\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tModernizing data centers with AI and accelerated computing",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/data-center/products/"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "DGX Platform\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tEnterprise AI factory for model development and deployment",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/data-center/dgx-platform/"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Grace CPU\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tArchitecture for data centers that transform data into intelligence",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/data-center/grace-cpu/"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "HGX Platform\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tA supercomputer purpose-built for AI and HPC",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/data-center/hgx/"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "IGX Platform\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAdvanced functional safety and security for edge AI",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/edge-computing/products/igx/"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "MGX Platform\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAccelerated computing with modular servers",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/data-center/products/mgx/"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "OVX Systems\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tScalable data center infrastructure for high-performance AI",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/data-center/products/ovx/"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Jetson\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLeading platform for autonomous machines and embedded applications",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "DRIVE AGX\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPowerful in-vehicle computing for AI-driven autonomous vehicle systems",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/solutions/autonomous-vehicles/in-vehicle-computing/"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "IGX Platform\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAdvanced functional safety and security for edge AI",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/edge-computing/products/igx/"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "GeForce\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tExplore graphics cards, gaming solutions, AI technology, and more",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/geforce/"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "GeForce Graphics Cards\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tRTX graphics cards bring game-changing AI capabilities",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/geforce/graphics-cards/"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Gaming Laptops\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tThinnest and longest lasting RTX laptops, optimized by Max-Q",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/geforce/laptops/"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "G-SYNC Monitors\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSmooth, tear-free gaming with NVIDIA G-SYNC monitors",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/geforce/products/g-sync-monitors/"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "DLSS\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tNeural rendering tech boosts FPS and enhances image quality",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/geforce/technologies/dlss/"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Reflex\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUltimate responsiveness for faster reactions and better aim",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/geforce/technologies/reflex/"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "RTX Remix\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tCreate RTX remasters of classic games with open-source AI",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/geforce/rtx-remix/"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "Project G-Assist\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAI assistant to optimize and control your GeForce RTX PC",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/software/nvidia-app/g-assist/"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "GeForce NOW Cloud Gaming\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tRTX-powered cloud gaming. Choose from 3 memberships",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/geforce-now/"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "NVIDIA App and Game Ready Drivers\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tOptimize gaming, streaming, and AI-powered creativity",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/software/nvidia-app/"
             }
           }
         ]
@@ -783,21 +1174,21 @@
       "action": {
         "action": "evaluate",
         "args": {
-          "script": "(() => { const text = document.body.innerText; const lines = text.split('\\n').map(s=>s.trim()).filter(Boolean); const matches = lines.filter(l => /RTX\\s*5090|5090|ab\\s*\\d|\u20ac|UVP|Preis|Starting at|From/i.test(l)); return {url: location.href, title: document.title, matches: matches.slice(0,200), textStart: text.slice(0,5000)}; })()"
+          "script": "(() => { const txt = document.body.innerText; const idxs = []; const re = /\\$\\s?[0-9][0-9,]*(?:\\.\\d{2})?|starting at|Starting At|price|5090/gi; let m; let out=[]; while((m=re.exec(txt)) && out.length<80){ out.push({match:m[0], pos:m.index, context:txt.slice(Math.max(0,m.index-120), m.index+160)});} return JSON.stringify(out, null, 2); })()"
         }
       },
-      "observation": "Eval: {\"url\": \"https://www.nvidia.com/de-de/geforce/graphics-cards/50-series/rtx-5090/\", \"title\": \"GeForce RTX\\u00a05090-Grafikkarten | NVIDIA\", \"matches\": [\"GeForce RTX 5090\", \"Der NVIDIA\\u00ae GeForce RTX\\u2122\\u00a05090 ist der leistungsst\\u00e4rkste GeForce-Grafikprozessor aller Zeiten und bietet Gamern und Creators bahnbrechende Funktionen. Bew\\u00e4ltige die fortschrittlichsten Modelle und die anspruchsvollsten kreativen Workloads mit beispielloser AI-Leistung. Gaming mit vollem Raytracing und n"
+      "observation": "Eval: \"[\\n  {\\n    \\\"match\\\": \\\"5090\\\",\\n    \\\"pos\\\": 793,\\n    \\\"context\\\": \\\"\\\\n \\\\nShop\\\\n \\\\nDrivers\\\\n \\\\nSupport\\\\nUS\\\\nSign In\\\\nGeForce\\\\nProducts \\\\nGames & Tech \\\\nNVIDIA App\\\\nDrivers\\\\nNews\\\\nSupport\\\\nShop\\\\nGeForce RTX 5090\\\\n\\\\nGame Changer\\\\n\\\\nThe NVIDIA\\u00ae GeForce RTX\\u2122 5090 is the most powerful GeForce GPU ever made, bringing game-changing capabilities to gamers and creators. Tackle\\\"\\n  },\\n  {\\n    \\\"match\\\": \\\"5090\\\",\\n    \\\"pos\\\": 838,\\n    \\\"context\\\": \\\"e\\\\nProducts \\\\n"
     },
     {
-      "step": 3,
+      "step": 4,
       "state": {
-        "url": "https://www.nvidia.com/de-de/geforce/graphics-cards/50-series/rtx-5090/",
-        "title": "GeForce RTX\u00a05090-Grafikkarten | NVIDIA",
+        "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/",
+        "title": "GeForce RTX 5090 Graphics Cards | NVIDIA",
         "elements": [
           {
             "id": "pw-0",
             "role": "combobox",
-            "text": "Argentina\n                Australia\n                Belgi\u00eb (Belgium)\n                Belgique (Belgium)\n                Brasil (Brazil)\n                Canada\n                \u010cesk\u00e1 Republika (Czech Republic)\n                Chile\n                Colombia\n                Danmark (Denmark)\n                Deutschland (Germany)\n                Espa\u00f1a (Spain)\n                France\n                India\n                Italia (Italy)\n                M\u00e9xico (Mexico)\n                Middle East\n                Nederland (Netherlands)\n                Norge (Norway)\n                \u00d6sterreich (Austria)\n                Peru\n                Polska (Poland)\n                Rest of Europe\n                Rom\u00e2nia (Romania)\n                Singapore\n                Suomi (Finland)\n                Sverige (Sweden)\n                T\u00fcrkiye (Turkey)\n                United Kingdom\n                United States\n                \ub300\ud55c\ubbfc\uad6d (South Korea)\n                \u4e2d\u56fd\u5927\u9646 (Mainland China)\n                \u53f0\u7063 (Taiwan)\n                \u65e5\u672c (Japan)",
+            "text": "Argentina\nAustralia\nBelgi\u00eb (Belgium)\nBelgique (Belgium)\nBrasil (Brazil)\nCanada\n\u010cesk\u00e1 Republika (Czech Republic)\nChile\nColombia\nDanmark (Denmark)\nDeutschland (Germany)\nEspa\u00f1a (Spain)\nFrance\nIndia\nItalia (Italy)\nM\u00e9xico (Mexico)\nMiddle East\nNederland (Netherlands)\nNorge (Norway)\n\u00d6sterreich (Austria)\nPeru\nPolska (Poland)\nRest of Europe\nRom\u00e2nia (Romania)\nSingapore\nSuomi (Finland)\nSverige (Sweden)\nT\u00fcrkiye (Turkey)\nUnited Kingdom\nUnited States\n\ub300\ud55c\ubbfc\uad6d (South Korea)\n\u4e2d\u56fd\u5927\u9646 (Mainland China)\n\u53f0\u7063 (Taiwan)\n\u65e5\u672c (Japan)",
             "attributes": {
               "id": "country-selector",
               "aria-label": "Select your country"
@@ -806,9 +1197,9 @@
           {
             "id": "pw-1",
             "role": "link",
-            "text": "Continue",
+            "text": "Fortfahren",
             "attributes": {
-              "href": "https://www.nvidia.com"
+              "href": "https://www.nvidia.com/de-de/geforce/graphics-cards/50-series/rtx-5090/"
             }
           },
           {
@@ -830,13 +1221,13 @@
             "role": "link",
             "text": null,
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/"
+              "href": "https://www.nvidia.com/en-us/"
             }
           },
           {
             "id": "pw-8",
             "role": "button",
-            "text": "Main Menu",
+            "text": null,
             "attributes": {}
           },
           {
@@ -924,23 +1315,23 @@
           {
             "id": "pw-25",
             "role": "link",
-            "text": "BioNeMo\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tKI-gest\u00fctzte Plattform f\u00fcr Forschung und Entdeckungen in den Biowissenschaften",
+            "text": "BioNeMo\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAI-driven platform for life sciences research and discovery",
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/industries/healthcare-life-sciences/biopharma/"
+              "href": "https://www.nvidia.com/en-us/industries/healthcare-life-sciences/biopharma/"
             }
           },
           {
             "id": "pw-26",
             "role": "link",
-            "text": "DGX Cloud\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDie KI-Fabrik von NVIDIA in der Cloud",
+            "text": "DGX Cloud\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tNVIDIA\u2019s AI factory in the cloud",
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/data-center/dgx-cloud/"
+              "href": "https://www.nvidia.com/en-us/data-center/dgx-cloud/"
             }
           },
           {
             "id": "pw-27",
             "role": "link",
-            "text": "NVIDIA-APIs\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tErkunden, Testen und Bereitstellen von KI-Modellen und Agenten",
+            "text": "NVIDIA APIs\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tExplore, test, and deploy AI models and agents",
             "attributes": {
               "href": "https://build.nvidia.com/"
             }
@@ -948,7 +1339,7 @@
           {
             "id": "pw-28",
             "role": "link",
-            "text": "Private Registry\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLeitfaden f\u00fcr die Verwendung der privaten NVIDIA NGC-Registrierung mit der GPU-Cloud",
+            "text": "Private Registry\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tGuide for using NVIDIA NGC private registry with GPU cloud",
             "attributes": {
               "href": "https://docs.nvidia.com/ngc/latest/ngc-private-registry-user-guide.html"
             }
@@ -956,217 +1347,608 @@
           {
             "id": "pw-29",
             "role": "link",
-            "text": "NVIDIA NGC-Container\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tBeschleunigte, containerisierte KI-Modelle und SDKs",
+            "text": "NVIDIA NGC\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAccelerated, containerized AI models and SDKs",
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/gpu-cloud/"
+              "href": "https://www.nvidia.com/en-us/gpu-cloud/"
             }
           },
           {
             "id": "pw-30",
             "role": "link",
-            "text": "NVIDIA Studio\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLeistungsstarke GeForce RTX-PCs, speziell f\u00fcr Inhaltskreatoren entwickelt",
+            "text": "NVIDIA Studio\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tHigh performance GeForce RTX PCs, purpose-built for creators",
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/studio/"
+              "href": "https://www.nvidia.com/en-us/studio/"
             }
           },
           {
             "id": "pw-31",
             "role": "link",
-            "text": "NVIDIA Broadcast-App\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tKI-gest\u00fctzte Sprach- und Videofunktionen f\u00fcr Streams, Videos und Anrufe der n\u00e4chsten Generation",
+            "text": "NVIDIA Broadcast App\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAI-enhanced voice and video for next-level streams, videos, and calls",
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/geforce/broadcasting/"
+              "href": "https://www.nvidia.com/en-us/geforce/broadcasting/"
             }
           },
           {
             "id": "pw-32",
             "role": "link",
-            "text": "NVIDIA App und Studio-Treiber\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tOptimieren von Gaming, Streaming und KI-gest\u00fctzter Kreativit\u00e4t",
+            "text": "NVIDIA App and Studio Drivers \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tOptimize gaming, streaming, and AI-powered creativity",
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/software/nvidia-app/"
+              "href": "https://www.nvidia.com/en-us/software/nvidia-app/"
             }
           },
           {
             "id": "pw-33",
             "role": "link",
-            "text": "RTX KI-PCs\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tKI-PCs f\u00fcr Gaming, Content-Erstellung, Produktivit\u00e4t und Entwicklung",
+            "text": "RTX AI PCs\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAI PCs for gaming, creating, productivity and development",
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/ai-on-rtx/"
+              "href": "https://www.nvidia.com/en-us/ai-on-rtx/"
             }
           },
           {
             "id": "pw-34",
             "role": "link",
-            "text": "RTX Remix\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tRTX-Remasters klassischer Spiele mit Open-Source-KI erstellen",
+            "text": "RTX Remix\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tCreate RTX remasters of classic games with open-source AI",
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/geforce/rtx-remix/"
+              "href": "https://www.nvidia.com/en-us/geforce/rtx-remix/"
             }
           },
           {
             "id": "pw-35",
             "role": "link",
-            "text": "Project G-Assist\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tKI-Assistent zur Optimierung und Steuerung Ihres GeForce RTX-PCs",
+            "text": "Project G-Assist\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAI assistant to optimize and control your GeForce RTX PC",
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/software/nvidia-app/g-assist/"
+              "href": "https://www.nvidia.com/en-us/software/nvidia-app/g-assist/"
             }
           },
           {
             "id": "pw-36",
             "role": "link",
-            "text": "\u00dcberblick\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tModernisierung von Rechenzentren mit KI und beschleunigtem Computing",
+            "text": "Overview\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tModernizing data centers with AI and accelerated computing",
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/data-center/"
+              "href": "https://www.nvidia.com/en-us/data-center/products/"
             }
           },
           {
             "id": "pw-37",
             "role": "link",
-            "text": "DGX Plattform\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tKI-Fabrik f\u00fcr die Entwicklung und Bereitstellung von Modellen",
+            "text": "DGX Platform\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tEnterprise AI factory for model development and deployment",
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/data-center/dgx-platform/"
+              "href": "https://www.nvidia.com/en-us/data-center/dgx-platform/"
             }
           },
           {
             "id": "pw-38",
             "role": "link",
-            "text": "Grace-CPU\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tArchitektur f\u00fcr Rechenzentren, die Daten in Intelligenz verwandeln",
+            "text": "Grace CPU\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tArchitecture for data centers that transform data into intelligence",
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/data-center/grace-cpu/"
+              "href": "https://www.nvidia.com/en-us/data-center/grace-cpu/"
             }
           },
           {
             "id": "pw-39",
             "role": "link",
-            "text": "HGX Plattform\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tEin speziell f\u00fcr KI und HPC entwickelter Supercomputer",
+            "text": "HGX Platform\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tA supercomputer purpose-built for AI and HPC",
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/data-center/hgx/"
+              "href": "https://www.nvidia.com/en-us/data-center/hgx/"
             }
           },
           {
             "id": "pw-40",
             "role": "link",
-            "text": "IGX Plattform\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tFortschrittliche funktionale Sicherheit und Schutz f\u00fcr KI in der Peripherie",
+            "text": "IGX Platform\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAdvanced functional safety and security for edge AI",
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/edge-computing/products/igx/"
+              "href": "https://www.nvidia.com/en-us/edge-computing/products/igx/"
             }
           },
           {
             "id": "pw-41",
             "role": "link",
-            "text": "MGX Plattform\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tBeschleunigtes Computing mit modularen Servern",
+            "text": "MGX Platform\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAccelerated computing with modular servers",
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/data-center/products/mgx/"
+              "href": "https://www.nvidia.com/en-us/data-center/products/mgx/"
             }
           },
           {
             "id": "pw-42",
             "role": "link",
-            "text": "OVX-Systeme\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSkalierbare Rechenzentrumsinfrastruktur f\u00fcr Hochleistungs-KI",
+            "text": "OVX Systems\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tScalable data center infrastructure for high-performance AI",
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/data-center/products/ovx/"
+              "href": "https://www.nvidia.com/en-us/data-center/products/ovx/"
             }
           },
           {
             "id": "pw-43",
             "role": "link",
-            "text": "Jetson\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tF\u00fchrende Plattform f\u00fcr autonome Maschinen und eingebettete Anwendungen",
+            "text": "Jetson\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLeading platform for autonomous machines and embedded applications",
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/autonomous-machines/embedded-systems/"
+              "href": "https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/"
             }
           },
           {
             "id": "pw-44",
             "role": "link",
-            "text": "Drive AGX\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLeistungsstarkes Computing im Fahrzeug f\u00fcr KI-gest\u00fctzte autonome Fahrzeugsysteme",
+            "text": "DRIVE AGX\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPowerful in-vehicle computing for AI-driven autonomous vehicle systems",
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/solutions/autonomous-vehicles/in-vehicle-computing/"
+              "href": "https://www.nvidia.com/en-us/solutions/autonomous-vehicles/in-vehicle-computing/"
             }
           },
           {
             "id": "pw-45",
             "role": "link",
-            "text": "IGX-Plattform\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tFortschrittliche funktionale Sicherheit f\u00fcr KI am Edge",
+            "text": "IGX Platform\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAdvanced functional safety and security for edge AI",
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/edge-computing/products/igx/"
+              "href": "https://www.nvidia.com/en-us/edge-computing/products/igx/"
             }
           },
           {
             "id": "pw-46",
             "role": "link",
-            "text": "GeForce\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tEntdecken Sie Grafikkarten, Gaming-L\u00f6sungen, KI-Technologie und mehr",
+            "text": "GeForce\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tExplore graphics cards, gaming solutions, AI technology, and more",
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/geforce/"
+              "href": "https://www.nvidia.com/en-us/geforce/"
             }
           },
           {
             "id": "pw-47",
             "role": "link",
-            "text": "GeForce-Grafikkarten\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tRTX-Grafikkarten bieten bahnbrechende KI-Funktionen",
+            "text": "GeForce Graphics Cards\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tRTX graphics cards bring game-changing AI capabilities",
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/geforce/graphics-cards/"
+              "href": "https://www.nvidia.com/en-us/geforce/graphics-cards/"
             }
           },
           {
             "id": "pw-48",
             "role": "link",
-            "text": "Gaming-Laptops\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDie schlanksten und langlebigsten RTX-Laptops, optimiert von Max-Q",
+            "text": "Gaming Laptops\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tThinnest and longest lasting RTX laptops, optimized by Max-Q",
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/geforce/laptops/"
+              "href": "https://www.nvidia.com/en-us/geforce/laptops/"
             }
           },
           {
             "id": "pw-49",
             "role": "link",
-            "text": "G-SYNC-Monitore\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tFl\u00fcssiges und ruckelfreies Gaming mit NVIDIA G-SYNC-Monitoren",
+            "text": "G-SYNC Monitors\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSmooth, tear-free gaming with NVIDIA G-SYNC monitors",
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/geforce/products/g-sync-monitors/"
+              "href": "https://www.nvidia.com/en-us/geforce/products/g-sync-monitors/"
             }
           },
           {
             "id": "pw-50",
             "role": "link",
-            "text": "DLSS\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tNeuronale Rendering-Technologie steigert die FPS-Anzahl und verbessert die Bildqualit\u00e4t",
+            "text": "DLSS\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tNeural rendering tech boosts FPS and enhances image quality",
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/geforce/technologies/dlss/"
+              "href": "https://www.nvidia.com/en-us/geforce/technologies/dlss/"
             }
           },
           {
             "id": "pw-51",
             "role": "link",
-            "text": "Reflex\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUltimative Reaktionsf\u00e4higkeit f\u00fcr schnellere Reaktionen und besseres Zielen",
+            "text": "Reflex\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUltimate responsiveness for faster reactions and better aim",
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/geforce/technologies/reflex/"
+              "href": "https://www.nvidia.com/en-us/geforce/technologies/reflex/"
             }
           },
           {
             "id": "pw-52",
             "role": "link",
-            "text": "RTX Remix\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tRTX-Remasters klassischer Spiele mit Open-Source-KI erstellen",
+            "text": "RTX Remix\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tCreate RTX remasters of classic games with open-source AI",
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/geforce/rtx-remix/"
+              "href": "https://www.nvidia.com/en-us/geforce/rtx-remix/"
             }
           },
           {
             "id": "pw-53",
             "role": "link",
-            "text": "Project G-Assist\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tKI-Assistent zur Optimierung und Steuerung Ihres GeForce RTX-PCs",
+            "text": "Project G-Assist\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAI assistant to optimize and control your GeForce RTX PC",
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/software/nvidia-app/g-assist/"
+              "href": "https://www.nvidia.com/en-us/software/nvidia-app/g-assist/"
             }
           },
           {
             "id": "pw-54",
             "role": "link",
-            "text": "GeForce NOW-Cloud-Gaming\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tRTX-gest\u00fctztes Cloud-Gaming. W\u00e4hlen Sie aus 3 Mitgliedschaften",
+            "text": "GeForce NOW Cloud Gaming\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tRTX-powered cloud gaming. Choose from 3 memberships",
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/geforce-now/"
+              "href": "https://www.nvidia.com/en-us/geforce-now/"
             }
           },
           {
             "id": "pw-55",
             "role": "link",
-            "text": "NVIDIA App und Game Ready-Treiber\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tOptimieren von Gaming, Streaming und KI-gest\u00fctzter Kreativit\u00e4t",
+            "text": "NVIDIA App and Game Ready Drivers\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tOptimize gaming, streaming, and AI-powered creativity",
             "attributes": {
-              "href": "https://www.nvidia.com/de-de/software/nvidia-app/"
+              "href": "https://www.nvidia.com/en-us/software/nvidia-app/"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => { const html = document.documentElement.innerHTML; const patterns = ['Starting at','starting at','$','1,999','1999','price','msrp']; const results = {}; for (const p of patterns) { const idxs=[]; let i=-1; const needle=p.toLowerCase(); const hay=html.toLowerCase(); while((i=hay.indexOf(needle, i+1))!==-1 && idxs.length<20){ idxs.push({pos:i, context:html.slice(Math.max(0,i-250), i+350)}); } results[p]=idxs; } return JSON.stringify(results, null, 2).slice(0,20000); })()"
+        }
+      },
+      "observation": "Eval: \"{\\n  \\\"1999\\\": [\\n    {\\n      \\\"pos\\\": 1164,\\n      \\\"context\\\": \\\"Force RTX 5090 is powered by the NVIDIA Blackwell architecture and equipped with 32 GB of super-fast GDDR7 memory, so you can do it all.\\\\\\\",\\\\n  \\\\\\\"brand\\\\\\\": {\\\\n    \\\\\\\"@type\\\\\\\": \\\\\\\"Brand\\\\\\\",\\\\n    \\\\\\\"name\\\\\\\": \\\\\\\"NVIDIA\\\\\\\"\\\\n  },\\\\n  \\\\\\\"offers\\\\\\\": {\\\\n    \\\\\\\"@type\\\\\\\": \\\\\\\"Offer\\\\\\\",\\\\n    \\\\\\\"price\\\\\\\": \\\\\\\"1999\\\\\\\",\\\\n    \\\\\\\"priceCurrency\\\\\\\": \\\\\\\"USD\\\\\\\",\\\\n    \\\\\\\"availability\\\\\\\": \\\\\\\"InStock\\\\\\\",\\\\n    \\\\\\\""
+    },
+    {
+      "step": 5,
+      "state": {
+        "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/",
+        "title": "GeForce RTX 5090 Graphics Cards | NVIDIA",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "combobox",
+            "text": "Argentina\nAustralia\nBelgi\u00eb (Belgium)\nBelgique (Belgium)\nBrasil (Brazil)\nCanada\n\u010cesk\u00e1 Republika (Czech Republic)\nChile\nColombia\nDanmark (Denmark)\nDeutschland (Germany)\nEspa\u00f1a (Spain)\nFrance\nIndia\nItalia (Italy)\nM\u00e9xico (Mexico)\nMiddle East\nNederland (Netherlands)\nNorge (Norway)\n\u00d6sterreich (Austria)\nPeru\nPolska (Poland)\nRest of Europe\nRom\u00e2nia (Romania)\nSingapore\nSuomi (Finland)\nSverige (Sweden)\nT\u00fcrkiye (Turkey)\nUnited Kingdom\nUnited States\n\ub300\ud55c\ubbfc\uad6d (South Korea)\n\u4e2d\u56fd\u5927\u9646 (Mainland China)\n\u53f0\u7063 (Taiwan)\n\u65e5\u672c (Japan)",
+            "attributes": {
+              "id": "country-selector",
+              "aria-label": "Select your country"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Fortfahren",
+            "attributes": {
+              "href": "https://www.nvidia.com/de-de/geforce/graphics-cards/50-series/rtx-5090/"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#page-content"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "aria-label": "menu collapse"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "aria-label": "menu close"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-17",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-19",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-20",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-21",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-22",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-23",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-24",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "BioNeMo\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAI-driven platform for life sciences research and discovery",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/industries/healthcare-life-sciences/biopharma/"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "DGX Cloud\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tNVIDIA\u2019s AI factory in the cloud",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/data-center/dgx-cloud/"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "NVIDIA APIs\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tExplore, test, and deploy AI models and agents",
+            "attributes": {
+              "href": "https://build.nvidia.com/"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Private Registry\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tGuide for using NVIDIA NGC private registry with GPU cloud",
+            "attributes": {
+              "href": "https://docs.nvidia.com/ngc/latest/ngc-private-registry-user-guide.html"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "NVIDIA NGC\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAccelerated, containerized AI models and SDKs",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/gpu-cloud/"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "NVIDIA Studio\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tHigh performance GeForce RTX PCs, purpose-built for creators",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/studio/"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "NVIDIA Broadcast App\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAI-enhanced voice and video for next-level streams, videos, and calls",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/geforce/broadcasting/"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "NVIDIA App and Studio Drivers \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tOptimize gaming, streaming, and AI-powered creativity",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/software/nvidia-app/"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "RTX AI PCs\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAI PCs for gaming, creating, productivity and development",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/ai-on-rtx/"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "RTX Remix\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tCreate RTX remasters of classic games with open-source AI",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/geforce/rtx-remix/"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Project G-Assist\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAI assistant to optimize and control your GeForce RTX PC",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/software/nvidia-app/g-assist/"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Overview\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tModernizing data centers with AI and accelerated computing",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/data-center/products/"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "DGX Platform\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tEnterprise AI factory for model development and deployment",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/data-center/dgx-platform/"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Grace CPU\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tArchitecture for data centers that transform data into intelligence",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/data-center/grace-cpu/"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "HGX Platform\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tA supercomputer purpose-built for AI and HPC",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/data-center/hgx/"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "IGX Platform\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAdvanced functional safety and security for edge AI",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/edge-computing/products/igx/"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "MGX Platform\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAccelerated computing with modular servers",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/data-center/products/mgx/"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "OVX Systems\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tScalable data center infrastructure for high-performance AI",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/data-center/products/ovx/"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Jetson\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLeading platform for autonomous machines and embedded applications",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "DRIVE AGX\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPowerful in-vehicle computing for AI-driven autonomous vehicle systems",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/solutions/autonomous-vehicles/in-vehicle-computing/"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "IGX Platform\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAdvanced functional safety and security for edge AI",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/edge-computing/products/igx/"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "GeForce\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tExplore graphics cards, gaming solutions, AI technology, and more",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/geforce/"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "GeForce Graphics Cards\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tRTX graphics cards bring game-changing AI capabilities",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/geforce/graphics-cards/"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Gaming Laptops\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tThinnest and longest lasting RTX laptops, optimized by Max-Q",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/geforce/laptops/"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "G-SYNC Monitors\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSmooth, tear-free gaming with NVIDIA G-SYNC monitors",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/geforce/products/g-sync-monitors/"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "DLSS\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tNeural rendering tech boosts FPS and enhances image quality",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/geforce/technologies/dlss/"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Reflex\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUltimate responsiveness for faster reactions and better aim",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/geforce/technologies/reflex/"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "RTX Remix\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tCreate RTX remasters of classic games with open-source AI",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/geforce/rtx-remix/"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "Project G-Assist\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAI assistant to optimize and control your GeForce RTX PC",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/software/nvidia-app/g-assist/"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "GeForce NOW Cloud Gaming\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tRTX-powered cloud gaming. Choose from 3 memberships",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/geforce-now/"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "NVIDIA App and Game Ready Drivers\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tOptimize gaming, streaming, and AI-powered creativity",
+            "attributes": {
+              "href": "https://www.nvidia.com/en-us/software/nvidia-app/"
             }
           }
         ]
@@ -1174,7 +1956,7 @@
       "action": {
         "action": "finish",
         "args": {
-          "final_answer": "Error planning: Extra data: line 2 column 1 (char 1166)"
+          "final_answer": "On NVIDIA\u2019s GeForce RTX 5090 page, the starting price is $1,999 USD."
         }
       },
       "observation": "Finished"

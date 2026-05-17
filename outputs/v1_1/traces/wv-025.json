@@ -3,8 +3,8 @@
   "task_description": "On BBC Sport, find the latest Premier League table leader.",
   "starting_url": "https://www.bbc.com/sport/football/premier-league/table",
   "passed": false,
-  "final_answer": "Arsenal",
-  "duration_s": 43.88,
+  "final_answer": "The latest BBC Sport Premier League table leader is Arsenal, top with 79 points from 36 matches.",
+  "duration_s": 57.23,
   "steps": [
     {
       "step": 1,
@@ -76,7 +76,7 @@
             "role": "link",
             "text": "Sign in",
             "attributes": {
-              "href": "https://session.bbc.co.uk/session?lang=en-GB&ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fsport%2Ffootball%2Fpremier-league%2Ftable&sequenceId=78495a4d-260b-4f00-bca5-34cc3a2a0250"
+              "href": "https://session.bbc.co.uk/session?lang=en-GB&ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fsport%2Ffootball%2Fpremier-league%2Ftable&sequenceId=62254c0b-1fe4-489f-a198-7c03eaf79eba"
             }
           },
           {
@@ -420,7 +420,7 @@
       "action": {
         "action": "click",
         "args": {
-          "id": "pw-2"
+          "element_id": "pw-2"
         }
       },
       "observation": "Action failed: Locator.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator(\"button[data-testid=\\\"reject-button\\\"]\").first\n    - locator resolved to <button type=\"button\" width=\"content-length\" data-testid=\"reject-button\" class=\"ssrcss-15k2a7h-Button eoocusk1\">Reject additional cookies</button>\n  - attempting click action\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-testid=\"test-overlay\" class=\"ssrcss-19wvbet-Overlay eugnsri7\">\u2026</div> from <div>\u2026</div> subtree intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-testid=\"test-overlay\" class=\"ssrcss-19wvbet-Overlay eugnsri7\">\u2026</div> from <div>\u2026</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    9 \u00d7 waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-testid=\"test-overlay\" class=\"ssrcss-19wvbet-Overlay eugnsri7\">\u2026</div> from <div>\u2026</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n"
@@ -495,7 +495,7 @@
             "role": "link",
             "text": "Sign in",
             "attributes": {
-              "href": "https://session.bbc.co.uk/session?lang=en-GB&ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fsport%2Ffootball%2Fpremier-league%2Ftable&sequenceId=78495a4d-260b-4f00-bca5-34cc3a2a0250"
+              "href": "https://session.bbc.co.uk/session?lang=en-GB&ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fsport%2Ffootball%2Fpremier-league%2Ftable&sequenceId=62254c0b-1fe4-489f-a198-7c03eaf79eba"
             }
           },
           {
@@ -839,7 +839,7 @@
       "action": {
         "action": "evaluate",
         "args": {
-          "script": "(() => {\n  const text = document.body.innerText;\n  return text.slice(0, 12000);\n})()"
+          "script": "(() => { const btn = document.querySelector('button[data-testid=\"reject-button\"]'); if (btn) btn.click(); return document.body.innerText.slice(0, 5000); })()"
         }
       },
       "observation": "Eval: \"Cookies on the BBC website\\n\\nWe use cookies to give you the best online experience. Strictly necessary cookies are on by default. Additional cookies are off by default.\\n\\nAccept additional cookies\\nReject additional cookies\\nLet me choose\\nBBC Homepage\\nSkip to content\\nAccessibility Help\\nSign in\\nNotifications\\nHome\\nNews\\nSport\\nWeather\\niPlayer\\nSounds\\nBitesize\\nMore menu\\nSearch BBC\\nBBC Sport\\nHome\\nFootball\\nCricket\\nFormula 1\\nRugby U\\nRugby L\\nTennis\\nGolf\\nBoxing\\nAthletics\\nMy Spo"
@@ -853,48 +853,13 @@
           {
             "id": "pw-0",
             "role": "link",
-            "text": "We use cookies",
-            "attributes": {
-              "href": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
-            }
-          },
-          {
-            "id": "pw-1",
-            "role": "button",
-            "text": "Accept additional cookies",
-            "attributes": {
-              "type": "button",
-              "data-testid": "accept-button"
-            }
-          },
-          {
-            "id": "pw-2",
-            "role": "button",
-            "text": "Reject additional cookies",
-            "attributes": {
-              "type": "button",
-              "data-testid": "reject-button"
-            }
-          },
-          {
-            "id": "pw-3",
-            "role": "link",
-            "text": "Let me choose",
-            "attributes": {
-              "href": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
-              "data-testid": "settings-link"
-            }
-          },
-          {
-            "id": "pw-4",
-            "role": "link",
             "text": "BBC Homepage",
             "attributes": {
               "href": "https://www.bbc.co.uk"
             }
           },
           {
-            "id": "pw-6",
+            "id": "pw-2",
             "role": "link",
             "text": "Skip to content",
             "attributes": {
@@ -902,7 +867,7 @@
             }
           },
           {
-            "id": "pw-7",
+            "id": "pw-3",
             "role": "link",
             "text": "Accessibility Help",
             "attributes": {
@@ -910,15 +875,15 @@
             }
           },
           {
-            "id": "pw-9",
+            "id": "pw-5",
             "role": "link",
             "text": "Sign in",
             "attributes": {
-              "href": "https://session.bbc.co.uk/session?lang=en-GB&ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fsport%2Ffootball%2Fpremier-league%2Ftable&sequenceId=78495a4d-260b-4f00-bca5-34cc3a2a0250"
+              "href": "https://session.bbc.co.uk/session?lang=en-GB&ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fsport%2Ffootball%2Fpremier-league%2Ftable&sequenceId=62254c0b-1fe4-489f-a198-7c03eaf79eba"
             }
           },
           {
-            "id": "pw-10",
+            "id": "pw-6",
             "role": "link",
             "text": "Notifications",
             "attributes": {
@@ -926,7 +891,7 @@
             }
           },
           {
-            "id": "pw-12",
+            "id": "pw-8",
             "role": "link",
             "text": "Home",
             "attributes": {
@@ -934,7 +899,7 @@
             }
           },
           {
-            "id": "pw-13",
+            "id": "pw-9",
             "role": "link",
             "text": "News",
             "attributes": {
@@ -942,7 +907,7 @@
             }
           },
           {
-            "id": "pw-14",
+            "id": "pw-10",
             "role": "link",
             "text": "Sport",
             "attributes": {
@@ -950,7 +915,7 @@
             }
           },
           {
-            "id": "pw-15",
+            "id": "pw-11",
             "role": "link",
             "text": "Weather",
             "attributes": {
@@ -958,7 +923,7 @@
             }
           },
           {
-            "id": "pw-16",
+            "id": "pw-12",
             "role": "link",
             "text": "iPlayer",
             "attributes": {
@@ -966,7 +931,7 @@
             }
           },
           {
-            "id": "pw-17",
+            "id": "pw-13",
             "role": "link",
             "text": "Sounds",
             "attributes": {
@@ -974,7 +939,7 @@
             }
           },
           {
-            "id": "pw-18",
+            "id": "pw-14",
             "role": "link",
             "text": "Bitesize",
             "attributes": {
@@ -982,7 +947,7 @@
             }
           },
           {
-            "id": "pw-19",
+            "id": "pw-15",
             "role": "link",
             "text": "CBBC",
             "attributes": {
@@ -990,7 +955,7 @@
             }
           },
           {
-            "id": "pw-20",
+            "id": "pw-16",
             "role": "link",
             "text": "CBeebies",
             "attributes": {
@@ -998,7 +963,7 @@
             }
           },
           {
-            "id": "pw-21",
+            "id": "pw-17",
             "role": "link",
             "text": "Food",
             "attributes": {
@@ -1006,7 +971,7 @@
             }
           },
           {
-            "id": "pw-22",
+            "id": "pw-18",
             "role": "button",
             "text": "More menu",
             "attributes": {
@@ -1014,7 +979,7 @@
             }
           },
           {
-            "id": "pw-23",
+            "id": "pw-19",
             "role": "button",
             "text": "More menu",
             "attributes": {
@@ -1022,7 +987,7 @@
             }
           },
           {
-            "id": "pw-25",
+            "id": "pw-21",
             "role": "link",
             "text": "Search BBC",
             "attributes": {
@@ -1030,7 +995,7 @@
             }
           },
           {
-            "id": "pw-27",
+            "id": "pw-23",
             "role": "link",
             "text": "Home",
             "attributes": {
@@ -1038,7 +1003,7 @@
             }
           },
           {
-            "id": "pw-28",
+            "id": "pw-24",
             "role": "link",
             "text": "News",
             "attributes": {
@@ -1046,7 +1011,7 @@
             }
           },
           {
-            "id": "pw-29",
+            "id": "pw-25",
             "role": "link",
             "text": "Sport",
             "attributes": {
@@ -1054,7 +1019,7 @@
             }
           },
           {
-            "id": "pw-30",
+            "id": "pw-26",
             "role": "link",
             "text": "Weather",
             "attributes": {
@@ -1062,7 +1027,7 @@
             }
           },
           {
-            "id": "pw-31",
+            "id": "pw-27",
             "role": "link",
             "text": "iPlayer",
             "attributes": {
@@ -1070,7 +1035,7 @@
             }
           },
           {
-            "id": "pw-32",
+            "id": "pw-28",
             "role": "link",
             "text": "Sounds",
             "attributes": {
@@ -1078,7 +1043,7 @@
             }
           },
           {
-            "id": "pw-33",
+            "id": "pw-29",
             "role": "link",
             "text": "Bitesize",
             "attributes": {
@@ -1086,7 +1051,7 @@
             }
           },
           {
-            "id": "pw-34",
+            "id": "pw-30",
             "role": "link",
             "text": null,
             "attributes": {
@@ -1094,7 +1059,7 @@
             }
           },
           {
-            "id": "pw-35",
+            "id": "pw-31",
             "role": "link",
             "text": null,
             "attributes": {
@@ -1102,7 +1067,7 @@
             }
           },
           {
-            "id": "pw-36",
+            "id": "pw-32",
             "role": "link",
             "text": null,
             "attributes": {
@@ -1110,7 +1075,7 @@
             }
           },
           {
-            "id": "pw-37",
+            "id": "pw-33",
             "role": "button",
             "text": null,
             "attributes": {
@@ -1118,7 +1083,7 @@
             }
           },
           {
-            "id": "pw-38",
+            "id": "pw-34",
             "role": "link",
             "text": "BBC Sport",
             "attributes": {
@@ -1126,7 +1091,7 @@
             }
           },
           {
-            "id": "pw-40",
+            "id": "pw-36",
             "role": "button",
             "text": "Menu",
             "attributes": {
@@ -1134,7 +1099,7 @@
             }
           },
           {
-            "id": "pw-42",
+            "id": "pw-38",
             "role": "link",
             "text": "Home",
             "attributes": {
@@ -1142,7 +1107,7 @@
             }
           },
           {
-            "id": "pw-43",
+            "id": "pw-39",
             "role": "link",
             "text": "Football",
             "attributes": {
@@ -1150,7 +1115,7 @@
             }
           },
           {
-            "id": "pw-44",
+            "id": "pw-40",
             "role": "link",
             "text": "Cricket",
             "attributes": {
@@ -1158,7 +1123,7 @@
             }
           },
           {
-            "id": "pw-45",
+            "id": "pw-41",
             "role": "link",
             "text": "Formula 1",
             "attributes": {
@@ -1166,7 +1131,7 @@
             }
           },
           {
-            "id": "pw-46",
+            "id": "pw-42",
             "role": "link",
             "text": "Rugby U",
             "attributes": {
@@ -1174,7 +1139,7 @@
             }
           },
           {
-            "id": "pw-47",
+            "id": "pw-43",
             "role": "link",
             "text": "Rugby L",
             "attributes": {
@@ -1182,7 +1147,7 @@
             }
           },
           {
-            "id": "pw-48",
+            "id": "pw-44",
             "role": "link",
             "text": "Tennis",
             "attributes": {
@@ -1190,7 +1155,7 @@
             }
           },
           {
-            "id": "pw-49",
+            "id": "pw-45",
             "role": "link",
             "text": "Golf",
             "attributes": {
@@ -1198,7 +1163,7 @@
             }
           },
           {
-            "id": "pw-50",
+            "id": "pw-46",
             "role": "link",
             "text": "Boxing",
             "attributes": {
@@ -1206,7 +1171,7 @@
             }
           },
           {
-            "id": "pw-51",
+            "id": "pw-47",
             "role": "link",
             "text": "Athletics",
             "attributes": {
@@ -1214,7 +1179,7 @@
             }
           },
           {
-            "id": "pw-52",
+            "id": "pw-48",
             "role": "link",
             "text": "My Sport",
             "attributes": {
@@ -1222,7 +1187,7 @@
             }
           },
           {
-            "id": "pw-53",
+            "id": "pw-49",
             "role": "button",
             "text": "More",
             "attributes": {
@@ -1230,7 +1195,7 @@
             }
           },
           {
-            "id": "pw-55",
+            "id": "pw-51",
             "role": "link",
             "text": "American Football",
             "attributes": {
@@ -1238,7 +1203,7 @@
             }
           },
           {
-            "id": "pw-56",
+            "id": "pw-52",
             "role": "link",
             "text": "Athletics",
             "attributes": {
@@ -1246,11 +1211,43 @@
             }
           },
           {
-            "id": "pw-57",
+            "id": "pw-53",
             "role": "link",
             "text": "Basketball",
             "attributes": {
               "href": "/sport/basketball"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Boxing",
+            "attributes": {
+              "href": "/sport/boxing"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Cricket",
+            "attributes": {
+              "href": "/sport/cricket"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Cycling",
+            "attributes": {
+              "href": "/sport/cycling"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "Darts",
+            "attributes": {
+              "href": "/sport/darts"
             }
           }
         ]
@@ -1258,10 +1255,10 @@
       "action": {
         "action": "evaluate",
         "args": {
-          "script": "(() => {\n  // Dismiss the cookie banner if present without relying on pointer clicks\n  const reject = document.querySelector('[data-testid=\"reject-button\"]');\n  if (reject) reject.click();\n\n  const text = document.body.innerText || '';\n  const tables = [...document.querySelectorAll('table')].map((table, ti) => ({\n    index: ti,\n    caption: table.caption?.innerText || '',\n    headers: [...table.querySelectorAll('th')].map(th => th.innerText.trim()),\n    rows: [...table.querySelectorAll('tbody tr, tr')].slice(0, 10).map(tr => [...tr.querySelectorAll('th,td')].map(td => td.innerText.trim()).filter(Boolean))\n  }));\n\n  const snippets = [];\n  for (const term of ['Premier League Table', 'Premier League', 'Position', 'Team']) {\n    const i = text.indexOf(term);\n    if (i >= 0) snippets.push(text.slice(Math.max(0, i - 500), i + 2500));\n  }\n\n  return { tables, snippets, bodyStart: text.slice(0, 3000) };\n})()"
+          "script": "document.body.innerText"
         }
       },
-      "observation": "Eval: {\"tables\": [{\"index\": 0, \"caption\": \"\", \"headers\": [\"Team\", \"Played\", \"Won\", \"Drawn\", \"Lost\", \"Goals For\", \"Goals Against\", \"Goal Difference\", \"Points\", \"Form, Last 6 games, Oldest first\"], \"rows\": [[\"Team\", \"Played\", \"Won\", \"Drawn\", \"Lost\", \"Goals For\", \"Goals Against\", \"Goal Difference\", \"Points\", \"Form, Last 6 games, Oldest first\"], [\"1\\nArsenal\", \"36\", \"24\", \"7\", \"5\", \"68\", \"26\", \"42\", \"79\", \"W\\nResult Win\\nL\\nResult Loss\\nL\\nResult Loss\\nW\\nResult Win\\nW\\nResult Win\\nW\\nResult Win\"], [\"2\\nM"
+      "observation": "Eval: \"BBC Homepage\\nSkip to content\\nAccessibility Help\\nSign in\\nNotifications\\nHome\\nNews\\nSport\\nWeather\\niPlayer\\nSounds\\nBitesize\\nMore menu\\nSearch BBC\\nBBC Sport\\nHome\\nFootball\\nCricket\\nFormula 1\\nRugby U\\nRugby L\\nTennis\\nGolf\\nBoxing\\nAthletics\\nMy Sport\\nMore\\nPremier League\\nScores & Fixtures\\nTable\\nTop Scorers\\nVideo\\nOne account connects all of the BBC\\n\\nSigning in is quick and easy\\n\\nSign in\\nor\\nRegister\\nMaybe later\\nPremier League Table\\nSkip to table key\\nTeam\\n\\t\\nPlayed\\n\\t\\n"
     },
     {
       "step": 4,
@@ -1298,7 +1295,423 @@
             "role": "link",
             "text": "Sign in",
             "attributes": {
-              "href": "https://session.bbc.co.uk/session?lang=en-GB&ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fsport%2Ffootball%2Fpremier-league%2Ftable&sequenceId=78495a4d-260b-4f00-bca5-34cc3a2a0250"
+              "href": "https://session.bbc.co.uk/session?lang=en-GB&ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fsport%2Ffootball%2Fpremier-league%2Ftable&sequenceId=62254c0b-1fe4-489f-a198-7c03eaf79eba"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Notifications",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/notifications"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/news"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sport"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Weather",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/weather"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "iPlayer",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/iplayer"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Sounds",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sounds"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Bitesize",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/bitesize"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "CBBC",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbbc"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "CBeebies",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbeebies"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Food",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/food"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "More menu",
+            "attributes": {
+              "href": "#global-navigation-more-menu"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "button",
+            "text": "More menu",
+            "attributes": {
+              "href": "#global-navigation-more-menu"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Search BBC",
+            "attributes": {
+              "href": "/search?d=SPORT_PS"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/news"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sport"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Weather",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/weather"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "iPlayer",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/iplayer"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Sounds",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sounds"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Bitesize",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/bitesize"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbbc"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbeebies"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.bbc.co.uk/food"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "BBC Sport",
+            "attributes": {
+              "href": "/sport"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "button",
+            "text": "Menu",
+            "attributes": {
+              "href": "/sport/all-sports"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "/sport"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Football",
+            "attributes": {
+              "href": "/sport/football"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Cricket",
+            "attributes": {
+              "href": "/sport/cricket"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Formula 1",
+            "attributes": {
+              "href": "/sport/formula1"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Rugby U",
+            "attributes": {
+              "href": "/sport/rugby-union"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Rugby L",
+            "attributes": {
+              "href": "/sport/rugby-league"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Tennis",
+            "attributes": {
+              "href": "/sport/tennis"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Golf",
+            "attributes": {
+              "href": "/sport/golf"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Boxing",
+            "attributes": {
+              "href": "/sport/boxing"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Athletics",
+            "attributes": {
+              "href": "/sport/athletics"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "My Sport",
+            "attributes": {
+              "href": "/sport/my"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "button",
+            "text": "More",
+            "attributes": {
+              "href": "/sport/all-sports"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "American Football",
+            "attributes": {
+              "href": "/sport/american-football"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Athletics",
+            "attributes": {
+              "href": "/sport/athletics"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "Basketball",
+            "attributes": {
+              "href": "/sport/basketball"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Boxing",
+            "attributes": {
+              "href": "/sport/boxing"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Cricket",
+            "attributes": {
+              "href": "/sport/cricket"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Cycling",
+            "attributes": {
+              "href": "/sport/cycling"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "Darts",
+            "attributes": {
+              "href": "/sport/darts"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => { const tables=[...document.querySelectorAll('table')]; return tables.map((t,i)=>({i, text:t.innerText.slice(0,2000)})); })()"
+        }
+      },
+      "observation": "Eval: [{\"i\": 0, \"text\": \"Team\\n\\t\\nPlayed\\n\\t\\nWon\\n\\t\\nDrawn\\n\\t\\nLost\\n\\t\\nGoals For\\n\\t\\nGoals Against\\n\\t\\nGoal Difference\\n\\t\\nPoints\\n\\t\\nForm, Last 6 games, Oldest first\\n\\n\\n1\\nArsenal\\n\\t36\\t24\\t7\\t5\\t68\\t26\\t42\\t79\\t\\nW\\nResult Win\\nL\\nResult Loss\\nL\\nResult Loss\\nW\\nResult Win\\nW\\nResult Win\\nW\\nResult Win\\n\\n\\n2\\nManchester City\\n\\t36\\t23\\t8\\t5\\t75\\t32\\t43\\t77\\t\\nW\\nResult Win\\nW\\nResult Win\\nW\\nResult Win\\nD\\nResult Draw\\nW\\nResult Win\\nW\\nResult Win\\n\\n\\n3\\nManchester United\\n\\t37\\t19\\t1"
+    },
+    {
+      "step": 5,
+      "state": {
+        "url": "https://www.bbc.co.uk/sport/football/premier-league/table",
+        "title": "Premier League Table and Standings - Football - BBC Sport",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "BBC Homepage",
+            "attributes": {
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Skip to content",
+            "attributes": {
+              "href": "#main-heading"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Accessibility Help",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/accessibility/"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://session.bbc.co.uk/session?lang=en-GB&ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fsport%2Ffootball%2Fpremier-league%2Ftable&sequenceId=62254c0b-1fe4-489f-a198-7c03eaf79eba"
             }
           },
           {
@@ -1674,7 +2087,7 @@
       "action": {
         "action": "finish",
         "args": {
-          "final_answer": "Arsenal"
+          "final_answer": "The latest BBC Sport Premier League table leader is Arsenal, top with 79 points from 36 matches."
         }
       },
       "observation": "Finished"

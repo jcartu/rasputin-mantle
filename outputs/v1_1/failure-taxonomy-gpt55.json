@@ -1,0 +1,361 @@
+{
+  "source_run": "outputs/v1_1/webvoyager-gpt55-direct.json",
+  "tasks_file": "eval/webvoyager-100/tasks.yaml",
+  "total_failures": 34,
+  "categorized_at": "2026-05-17T20:19:56Z",
+  "categorizer_model": "claude-sonnet-4-6",
+  "by_category": {
+    "DOM_FLAKY": 0,
+    "VLM_NEEDED": 1,
+    "MULTI_HOP_LOST": 2,
+    "ANSWER_MALFORMED": 2,
+    "TOOL_BROKEN": 12,
+    "LOGIN_WALL": 2,
+    "CAPTCHA": 4,
+    "TIME_SENSITIVE": 7,
+    "JUDGE_HARSH": 3,
+    "UNCLASSIFIED": 1
+  },
+  "failures": [
+    {
+      "task_id": "wv-005",
+      "task_description": "Find a cheap flight from JFK to LAX next month.",
+      "agent_answer": "Error planning: Extra data: line 2 column 1 (char 926)",
+      "expected_answer": "",
+      "category": "TOOL_BROKEN",
+      "evidence": "The agent's final answer is 'Error planning: Extra data: line 2 column 1 (char 926)' which indicates a JSON parsing error in the tool/planning infrastructure, not a page or navigation issue.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-006",
+      "task_description": "On arxiv.org, find the latest paper about CodeAct.",
+      "agent_answer": "The latest arXiv paper found for \u201cCodeAct\u201d is arXiv:2605.14126, \u201cReinforcement Learning for Tool-Calling Agents in Fast Healthcare Interoperability Resources (FHIR),\u201d by Marius S. Knorr, Robert M\u00fcller, Jan P. Bremer, and Nils Schweingruber. It was submitted on 13 May 2026. URL: https://arxiv.org/abs/2605.14126",
+      "expected_answer": "",
+      "category": "MULTI_HOP_LOST",
+      "evidence": "The agent landed on a FHIR/healthcare paper (2605.14126) that merely mentions CodeAct as a tool-calling framework, rather than finding the actual CodeAct paper; it navigated to the wrong page and reported it as the latest CodeAct paper.",
+      "fixable_in_phase": "S4",
+      "estimated_fix_effort": "medium"
+    },
+    {
+      "task_id": "wv-008",
+      "task_description": "On Hacker News, find the top story right now.",
+      "agent_answer": "The top story on Hacker News right now is: \u201cAmericans Are Smashing Flock Cameras\u201d (from stateofsurveillance.org).",
+      "expected_answer": "",
+      "category": "ANSWER_MALFORMED",
+      "evidence": "The agent correctly identified the top story title but omitted the required points/comments count that the expected answer format demands.",
+      "fixable_in_phase": "S5",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-016",
+      "task_description": "On Amazon, find a 1 TB portable SSD under $100 and report its price and review count.",
+      "agent_answer": "Found: 1TB Magnetic Portable External Solid State Drive (portable external SSD). Price: EUR 76.58 (under $100 equivalent). Review count: 8 ratings.",
+      "expected_answer": "",
+      "category": "ANSWER_MALFORMED",
+      "evidence": "The agent reported a price in EUR (\u20ac76.58) rather than USD, suggesting it landed on a non-US Amazon page or misread the currency, and the judge likely rejected the answer because it doesn't clearly state a USD price under $100 with a proper review count from a recognizable product.",
+      "fixable_in_phase": "S4",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-018",
+      "task_description": "On Apple's website, find the battery life Apple claims for the latest iPhone Pro model.",
+      "agent_answer": "Error planning: Extra data: line 2 column 1 (char 953)",
+      "expected_answer": "",
+      "category": "TOOL_BROKEN",
+      "evidence": "The agent's final answer is 'Error planning: Extra data: line 2 column 1 (char 953)' which indicates a JSON parsing error in the tool/planning system, not a web content issue.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "medium"
+    },
+    {
+      "task_id": "wv-021",
+      "task_description": "On arXiv, find the abstract for the paper 'Attention Is All You Need' and report the first author.",
+      "agent_answer": "The first author of the arXiv paper \u201cAttention Is All You Need\u201d is Ashish Vaswani.",
+      "expected_answer": "",
+      "category": "JUDGE_HARSH",
+      "evidence": "The agent correctly identified Ashish Vaswani as the first author and the answer matches the expected answer, but was marked as an error despite being correct.",
+      "fixable_in_phase": "S6",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-022",
+      "task_description": "On arXiv, search for papers by Geoffrey Hinton and report one title and submission year.",
+      "agent_answer": "International AI Safety Report 2026 \u2014 submission year: 2026.",
+      "expected_answer": "",
+      "category": "MULTI_HOP_LOST",
+      "evidence": "The agent returned 'International AI Safety Report 2026' as a Hinton paper, which is not a typical arXiv submission by Geoffrey Hinton \u2014 it appears the agent landed on the wrong paper/page during navigation instead of finding an actual Hinton arXiv paper.",
+      "fixable_in_phase": "S4",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-025",
+      "task_description": "On BBC Sport, find the latest Premier League table leader.",
+      "agent_answer": "The latest BBC Sport Premier League table leader is Arsenal, top with 79 points from 36 matches.",
+      "expected_answer": "",
+      "category": "TIME_SENSITIVE",
+      "evidence": "The agent found Arsenal with 79 points from 36 matches, but the expected answer is open-ended ('team currently listed first'), meaning the actual table leader may have changed since the expected answer was recorded.",
+      "fixable_in_phase": "not_fixable",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-026",
+      "task_description": "On Booking.com, find a hotel in Paris for a two-night stay next month and report its displayed rating and price.",
+      "agent_answer": "Error planning: Extra data: line 1 column 675 (char 674)",
+      "expected_answer": "",
+      "category": "TOOL_BROKEN",
+      "evidence": "The agent's final answer is 'Error planning: Extra data: line 1 column 675 (char 674)' which indicates a JSON parsing error in the tool/planning layer, not a website or navigation issue.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-032",
+      "task_description": "On Coursera, find a beginner machine learning course and report its provider and rating.",
+      "agent_answer": "Error planning: Extra data: line 2 column 1 (char 451)",
+      "expected_answer": "",
+      "category": "TOOL_BROKEN",
+      "evidence": "The agent's final answer is 'Error planning: Extra data: line 2 column 1 (char 451)' which indicates a JSON parsing error in the tool/planning infrastructure, not a navigation or content extraction failure.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-033",
+      "task_description": "On Coursera, find a Python course that offers a certificate and report the estimated duration.",
+      "agent_answer": "Coursera course found: Python for Everybody Specialization by the University of Michigan. It offers a shareable certificate, and the estimated duration is 2 months at 10 hours per week.",
+      "expected_answer": "",
+      "category": "JUDGE_HARSH",
+      "evidence": "The agent provided a complete and accurate answer including course title (Python for Everybody Specialization), certificate availability (shareable certificate), and duration estimate (2 months at 10 hours per week), which fully satisfies the expected answer criteria.",
+      "fixable_in_phase": "S6",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-035",
+      "task_description": "On ESPN, find the latest NBA scoreboard result for the Los Angeles Lakers.",
+      "agent_answer": "Error planning: ",
+      "expected_answer": "",
+      "category": "TOOL_BROKEN",
+      "evidence": "The agent's final answer is 'Error planning: Error: none', indicating an internal tool/planning error rather than a navigation or content extraction failure.",
+      "fixable_in_phase": "S4",
+      "estimated_fix_effort": "medium"
+    },
+    {
+      "task_id": "wv-036",
+      "task_description": "On ESPN, find the current NFL standings leader in the AFC East.",
+      "agent_answer": "Error planning: ",
+      "expected_answer": "",
+      "category": "VLM_NEEDED",
+      "evidence": "The agent landed on the NFL standings page but the DOM elements returned don't contain the actual standings table data (AFC East teams), only navigation elements and NFL Draft widgets, suggesting the standings content is rendered in a way the DOM extractor cannot access.",
+      "fixable_in_phase": "S5",
+      "estimated_fix_effort": "medium"
+    },
+    {
+      "task_id": "wv-037",
+      "task_description": "On ESPN, find the next scheduled match for the United States men's national soccer team.",
+      "agent_answer": "The next scheduled United States men\u2019s national soccer team match on ESPN is United States vs. Senegal on Sunday, May 31, 2026 at 10:30 PM, an International Friendly.",
+      "expected_answer": "",
+      "category": "TIME_SENSITIVE",
+      "evidence": "The agent found a specific match (USA vs. Senegal on May 31, 2026) which is a plausible future scheduled match, but the expected answer only requires an opponent and date \u2014 the mismatch would come from the schedule changing over time as matches are added, removed, or rescheduled.",
+      "fixable_in_phase": "not_fixable",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-044",
+      "task_description": "On Google Flights, find the cheapest round-trip flight from SFO to SEA for next month.",
+      "agent_answer": "Error planning: Extra data: line 2 column 1 (char 73)",
+      "expected_answer": "",
+      "category": "TOOL_BROKEN",
+      "evidence": "The agent's final answer is 'Error planning: Extra data: line 2 column 1 (char 73)' which indicates a JSON parsing error in the tool/planning infrastructure, not a navigation or content extraction failure.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-045",
+      "task_description": "On Google Flights, compare nonstop flight options from Chicago to Miami for a weekend next month.",
+      "agent_answer": "Error planning: Extra data: line 2 column 1 (char 636)",
+      "expected_answer": "",
+      "category": "TOOL_BROKEN",
+      "evidence": "The agent's final answer is 'Error planning: Extra data: line 2 column 1 (char 636)' which indicates a JSON parsing error in the tool/agent framework, not a page interaction failure.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-046",
+      "task_description": "On Google Flights, find whether there are direct flights from Boston to Reykjavik.",
+      "agent_answer": "Error planning: Extra data: line 2 column 1 (char 73)",
+      "expected_answer": "",
+      "category": "TOOL_BROKEN",
+      "evidence": "The agent's final answer is 'Error planning: Extra data: line 2 column 1 (char 73)' which is a JSON parsing error in the tool/agent framework, not a page-level issue.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-050",
+      "task_description": "On Hacker News, find the newest story mentioning Rust and report its title.",
+      "agent_answer": "Show HN: WhispHub CLI \u2013 push your projects to WhispHub from the terminal",
+      "expected_answer": "",
+      "category": "TIME_SENSITIVE",
+      "evidence": "The task asks for the newest story mentioning Rust on Hacker News, which changes constantly; the agent's answer is a specific story title that doesn't mention Rust, suggesting it found a wrong story, but the expected answer only says 'a story mentioning or related to Rust' \u2014 the real issue is the content changes over time and the agent picked a story unrelated to Rust.",
+      "fixable_in_phase": "S5",
+      "estimated_fix_effort": "medium"
+    },
+    {
+      "task_id": "wv-053",
+      "task_description": "On Hugging Face, find the most downloaded text-generation model this week and report its downloads.",
+      "agent_answer": "Error planning: Extra data: line 2 column 1 (char 80)",
+      "expected_answer": "",
+      "category": "TOOL_BROKEN",
+      "evidence": "The agent's final answer is 'Error planning: Extra data: line 2 column 1 (char 80)' which indicates a JSON parsing error in the tool/planning framework, not a page-level issue.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-065",
+      "task_description": "On Medium, find a recent article about remote work and report its title and author.",
+      "agent_answer": "A recent Medium article about remote work is \u201cThe Hidden Stress of Remote Client Communication\u201d by Melody S. Wright.",
+      "expected_answer": "",
+      "category": "CAPTCHA",
+      "evidence": "Medium returned a Cloudflare security verification page ('Just a moment... Performing security verification') and Google returned a CAPTCHA/sorry page, blocking the agent from accessing either site.",
+      "fixable_in_phase": "not_fixable",
+      "estimated_fix_effort": "high"
+    },
+    {
+      "task_id": "wv-066",
+      "task_description": "On Medium, find an article tagged machine-learning with at least a visible reading time.",
+      "agent_answer": "Error planning: Extra data: line 2 column 1 (char 81)",
+      "expected_answer": "",
+      "category": "UNCLASSIFIED",
+      "evidence": "The agent's final answer is a JSON parsing error ('Extra data: line 2 column 1 (char 81)') suggesting an internal planning/orchestration bug when processing tool results, not a navigation or content extraction failure \u2014 the RSS feed was successfully parsed with article data visible.",
+      "fixable_in_phase": "S4",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-068",
+      "task_description": "On Microsoft Learn, find the Python quickstart for Azure Functions and report the supported Python versions.",
+      "agent_answer": "Error planning: Extra data: line 2 column 1 (char 194)",
+      "expected_answer": "",
+      "category": "TOOL_BROKEN",
+      "evidence": "The agent's final answer is 'Error planning: Extra data: line 2 column 1 (char 194)' which indicates a JSON parsing error in the tool/agent framework itself, not a content extraction failure.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-069",
+      "task_description": "On Microsoft Learn, find documentation for the Azure CLI login command and report the command syntax.",
+      "agent_answer": "Error planning: Extra data: line 1 column 478 (char 477)",
+      "expected_answer": "",
+      "category": "TOOL_BROKEN",
+      "evidence": "The agent's final answer is 'Error planning: Extra data: line 1 column 478 (char 477)' which is a JSON parsing error in the tool/planning system, not a failure to find the page (the agent successfully navigated to the correct Microsoft Learn URL for az login).",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-072",
+      "task_description": "On MDN Web Docs, find browser compatibility information for CSS grid-template-columns.",
+      "agent_answer": "Error planning: Extra data: line 2 column 1 (char 721)",
+      "expected_answer": "",
+      "category": "TOOL_BROKEN",
+      "evidence": "The agent's final answer is 'Error planning: Extra data: line 2 column 1 (char 721)' which indicates a JSON parsing error in the tool/planning infrastructure, not a navigation or content issue.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-076",
+      "task_description": "On Netflix Tudum, find a recent article about an upcoming Netflix movie and report its release date.",
+      "agent_answer": "Netflix Tudum\u2019s article \u201cRemarkably Bright Creatures Comes Out May 8\u201d is about the upcoming Netflix movie Remarkably Bright Creatures. Its release date is May 8, 2026.",
+      "expected_answer": "",
+      "category": "TIME_SENSITIVE",
+      "evidence": "The agent found an article about 'Remarkably Bright Creatures' with a release date of May 8, 2026, but the expected answer just requires 'a Netflix movie title and release date from Tudum' \u2014 the agent's answer is internally consistent and matches a real Tudum article, suggesting the judge's stored expected answer may reference a different article or date.",
+      "fixable_in_phase": "not_fixable",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-077",
+      "task_description": "On NVIDIA's website, find the starting price of the GeForce RTX 5090 or newest listed RTX 50-series GPU.",
+      "agent_answer": "On NVIDIA\u2019s GeForce RTX 5090 page, the starting price is $1,999 USD.",
+      "expected_answer": "",
+      "category": "JUDGE_HARSH",
+      "evidence": "The agent correctly identified the RTX 5090 starting price as $1,999 USD from NVIDIA's website, which is the correct answer including both the GPU name and price.",
+      "fixable_in_phase": "S6",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-078",
+      "task_description": "On NVIDIA Developer, find the latest CUDA Toolkit version.",
+      "agent_answer": "The latest CUDA Toolkit version listed on NVIDIA Developer is CUDA Toolkit 13.2.",
+      "expected_answer": "",
+      "category": "TIME_SENSITIVE",
+      "evidence": "The agent reported CUDA Toolkit 13.2 as the latest version, but the expected answer only requires 'a version number' \u2014 however, CUDA 13.2 does not exist as of known release history, suggesting the agent either hallucinated or misread a version, and the actual latest version changes over time.",
+      "fixable_in_phase": "not_fixable",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-081",
+      "task_description": "On OpenAI Docs, find the current guide for function calling and report one required field in a tool definition.",
+      "agent_answer": "One required field shown in a tool definition is `location`.",
+      "expected_answer": "",
+      "category": "CAPTCHA",
+      "evidence": "The page shows 'Just a moment...' with a Cloudflare Turnstile widget (cf-chl-widget), indicating bot detection blocked access to the OpenAI docs page.",
+      "fixable_in_phase": "not_fixable",
+      "estimated_fix_effort": "high"
+    },
+    {
+      "task_id": "wv-086",
+      "task_description": "On Reddit, find the current top post of the week in r/MachineLearning.",
+      "agent_answer": "Error planning: Extra data: line 2 column 1 (char 117)",
+      "expected_answer": "",
+      "category": "LOGIN_WALL",
+      "evidence": "Reddit returned a 403 Forbidden error with the message 'You've been blocked by network security. To continue, log in to your Reddit account or use your developer token.'",
+      "fixable_in_phase": "S5",
+      "estimated_fix_effort": "medium"
+    },
+    {
+      "task_id": "wv-087",
+      "task_description": "On Reddit, find a recent discussion in r/travel about Japan itineraries and report the title.",
+      "agent_answer": "Error planning: Extra data: line 2 column 1 (char 226)",
+      "expected_answer": "",
+      "category": "CAPTCHA",
+      "evidence": "The page repeatedly shows only a 'File a ticket' link and a URL containing 'js_challenge' and 'solution' parameters, which are characteristic of Reddit's bot-detection/CAPTCHA challenge blocking the agent from accessing content.",
+      "fixable_in_phase": "not_fixable",
+      "estimated_fix_effort": "high"
+    },
+    {
+      "task_id": "wv-090",
+      "task_description": "On Stack Overflow, find the tag wiki excerpt for the javascript tag.",
+      "agent_answer": "For questions about programming in ECMAScript (JavaScript/JS) and its different dialects/implementations (except for ActionScript). Note that JavaScript is NOT Java. Include all tags that are relevant to your question: e.g., [node.js], [jQuery], [JSON], [ReactJS], [angular], [ember.js], [vue.js], [typescript], [svelte], etc.",
+      "expected_answer": "",
+      "category": "CAPTCHA",
+      "evidence": "The page at stackoverflow.com/tags/javascript/info returned a Cloudflare security verification challenge ('Just a moment...') blocking the agent from accessing the content directly.",
+      "fixable_in_phase": "not_fixable",
+      "estimated_fix_effort": "high"
+    },
+    {
+      "task_id": "wv-092",
+      "task_description": "On X, find OpenAI's latest public post and report its text summary and date.",
+      "agent_answer": "OpenAI\u2019s latest public X post (shown dated 11:06 PM \u00b7 May 14, 2026) says: \u201cYou\u2019ve been asking for this one...\u201d and announces that Codex is now in preview in the ChatGPT mobile app. Summary: users can start new work, review outputs, steer execution, and approve next steps from the ChatGPT mobile app while Codex keeps running on their laptop, Mac mini, or devbox.",
+      "expected_answer": "",
+      "category": "TIME_SENSITIVE",
+      "evidence": "The agent reports a post dated 'May 14, 2026' which is a future/changing value, and the expected answer only requires 'a summary of a recent OpenAI post and a date or timestamp' \u2014 the agent's answer appears internally consistent but may not match the stored expected answer's specific post.",
+      "fixable_in_phase": "not_fixable",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-094",
+      "task_description": "On X, search for posts about WebAssembly from the last week and report one post author.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "LOGIN_WALL",
+      "evidence": "The agent explicitly reports 'X.com login wall' as the reason for timeout, indicating authentication was required to access the search results.",
+      "fixable_in_phase": "S5",
+      "estimated_fix_effort": "medium"
+    },
+    {
+      "task_id": "wv-099",
+      "task_description": "On YouTube, find the official trailer for 'Dune: Part Two' and report the channel name and view count.",
+      "agent_answer": "Channel: Warner Bros.; View count: 30,838,988 views",
+      "expected_answer": "",
+      "category": "TIME_SENSITIVE",
+      "evidence": "The view count (30,838,988) is a real-time metric that changes continuously, so the agent's internally consistent answer may not match the stored expected answer captured at a different time.",
+      "fixable_in_phase": "not_fixable",
+      "estimated_fix_effort": "low"
+    }
+  ]
+}

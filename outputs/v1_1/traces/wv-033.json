@@ -2,9 +2,9 @@
   "task_id": "wv-033",
   "task_description": "On Coursera, find a Python course that offers a certificate and report the estimated duration.",
   "starting_url": "https://www.coursera.org",
-  "passed": false,
-  "final_answer": "Error planning: Extra data: line 2 column 1 (char 101)",
-  "duration_s": 79.93,
+  "passed": true,
+  "final_answer": "Coursera course found: Python for Everybody Specialization by the University of Michigan. It offers a shareable certificate, and the estimated duration is 2 months at 10 hours per week.",
+  "duration_s": 95.71,
   "steps": [
     {
       "step": 1,
@@ -226,7 +226,7 @@
             "role": "link",
             "text": "Google Data Analytics",
             "attributes": {
-              "id": "cds-react-aria4746114058-:rq:-product-card-title",
+              "id": "cds-react-aria2621278884-:rq:-product-card-title",
               "href": "/professional-certificates/google-data-analytics",
               "aria-label": "Google Data Analytics, offered by Google, PROFESSIONAL CERTIFICATE, 4.8 out of 5 stars"
             }
@@ -236,7 +236,7 @@
             "role": "link",
             "text": "Foundations: Data, Data, Everywhere",
             "attributes": {
-              "id": "cds-react-aria4746114058-:rt:-product-card-title",
+              "id": "cds-react-aria2621278884-:rt:-product-card-title",
               "href": "/learn/foundations-data",
               "aria-label": "Foundations: Data, Data, Everywhere, offered by Google, COURSE, 4.8 out of 5 stars"
             }
@@ -246,7 +246,7 @@
             "role": "link",
             "text": "Python for Everybody",
             "attributes": {
-              "id": "cds-react-aria4746114058-:r10:-product-card-title",
+              "id": "cds-react-aria2621278884-:r10:-product-card-title",
               "href": "/specializations/python",
               "aria-label": "Python for Everybody, offered by University of Michigan, SPECIALIZATION, 4.8 out of 5 stars"
             }
@@ -264,7 +264,7 @@
             "role": "link",
             "text": "Gemini for Developers",
             "attributes": {
-              "id": "cds-react-aria4746114058-:r15:-product-card-title",
+              "id": "cds-react-aria2621278884-:r15:-product-card-title",
               "href": "/specializations/gemini-for-developers",
               "aria-label": "Gemini for Developers, offered by Google DeepMind, SPECIALIZATION"
             }
@@ -274,7 +274,7 @@
             "role": "link",
             "text": "Project Management and Planning",
             "attributes": {
-              "id": "cds-react-aria4746114058-:r16:-product-card-title",
+              "id": "cds-react-aria2621278884-:r16:-product-card-title",
               "href": "/specializations/project-management-and-planning",
               "aria-label": "Project Management and Planning, offered by Johns Hopkins University, SPECIALIZATION, 4.7 out of 5 stars"
             }
@@ -284,7 +284,7 @@
             "role": "link",
             "text": "IBM Management Consultant",
             "attributes": {
-              "id": "cds-react-aria4746114058-:r19:-product-card-title",
+              "id": "cds-react-aria2621278884-:r19:-product-card-title",
               "href": "/professional-certificates/ibm-management-consultant",
               "aria-label": "IBM Management Consultant, offered by IBM, SkillUp, PROFESSIONAL CERTIFICATE, 4.7 out of 5 stars"
             }
@@ -302,7 +302,7 @@
             "role": "link",
             "text": "Google AI",
             "attributes": {
-              "id": "cds-react-aria4746114058-:r1e:-product-card-title",
+              "id": "cds-react-aria2621278884-:r1e:-product-card-title",
               "href": "/professional-certificates/google-ai",
               "aria-label": "Google AI, offered by Google, PROFESSIONAL CERTIFICATE, 4.8 out of 5 stars"
             }
@@ -312,7 +312,7 @@
             "role": "link",
             "text": "Authentic Communication With Confidence And Impact",
             "attributes": {
-              "id": "cds-react-aria4746114058-:r1h:-product-card-title",
+              "id": "cds-react-aria2621278884-:r1h:-product-card-title",
               "href": "/specializations/authentic-communication-with-confidence-and-impact",
               "aria-label": "Authentic Communication With Confidence And Impact, offered by University of London, Royal Central School of Speech and Drama, SPECIALIZATION, 4.7 out of 5 stars"
             }
@@ -322,7 +322,7 @@
             "role": "link",
             "text": "Digital Marketing with Canva",
             "attributes": {
-              "id": "cds-react-aria4746114058-:r1k:-product-card-title",
+              "id": "cds-react-aria2621278884-:r1k:-product-card-title",
               "href": "/specializations/digital-marketing-with-canva",
               "aria-label": "Digital Marketing with Canva, offered by Coursera, SPECIALIZATION, 4.5 out of 5 stars"
             }
@@ -452,472 +452,18 @@
         ]
       },
       "action": {
-        "action": "type",
+        "action": "click",
         "args": {
-          "id": "pw-10",
-          "text": "Python"
+          "element_id": "pw-39"
         }
       },
-      "observation": "Typed into pw-10"
+      "observation": "Clicked pw-39"
     },
     {
       "step": 2,
       "state": {
-        "url": "https://www.coursera.org/",
-        "title": "Coursera | Courses, Professional Certificates, and Degrees Online",
-        "elements": [
-          {
-            "id": "pw-3",
-            "role": "link",
-            "text": "For Individuals",
-            "attributes": {
-              "href": "https://www.coursera.org/"
-            }
-          },
-          {
-            "id": "pw-4",
-            "role": "link",
-            "text": "For Businesses",
-            "attributes": {
-              "href": "https://www.coursera.org/business?utm_content=corp-to-home-for-enterprise&utm_campaign=website&utm_medium=coursera&utm_source=header&utm_term=b-out"
-            }
-          },
-          {
-            "id": "pw-5",
-            "role": "link",
-            "text": "For Universities",
-            "attributes": {
-              "href": "https://www.coursera.org/campus?utm_content=corp-to-landing-for-campus&utm_campaign=website&utm_medium=coursera&utm_source=header&utm_term=b-out"
-            }
-          },
-          {
-            "id": "pw-6",
-            "role": "link",
-            "text": "For Governments",
-            "attributes": {
-              "href": "https://www.coursera.org/government?utm_content=corp-to-landing-for-government&utm_campaign=website&utm_medium=coursera&utm_source=header&utm_term=b-out"
-            }
-          },
-          {
-            "id": "pw-7",
-            "role": "link",
-            "text": "Coursera",
-            "attributes": {
-              "href": "/",
-              "aria-label": "Coursera",
-              "data-testid": "home-logo"
-            }
-          },
-          {
-            "id": "pw-9",
-            "role": "button",
-            "text": "Explore",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Explore our catalog",
-              "data-testid": "megamenu-explore-button"
-            }
-          },
-          {
-            "id": "pw-10",
-            "role": "button",
-            "text": "Degrees",
-            "attributes": {
-              "href": "/degrees",
-              "data-testid": "nav-link-grid-item-degrees"
-            }
-          },
-          {
-            "id": "pw-12",
-            "role": "combobox",
-            "text": "Search catalog",
-            "attributes": {
-              "id": "search-autocomplete-input",
-              "name": "query",
-              "type": "text",
-              "aria-label": "Search catalog",
-              "placeholder": "What do you want to learn?",
-              "value": "Python",
-              "data-testid": "search-autocomplete-input"
-            }
-          },
-          {
-            "id": "pw-13",
-            "role": "button",
-            "text": "Clear search",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Clear search"
-            }
-          },
-          {
-            "id": "pw-14",
-            "role": "button",
-            "text": "Search",
-            "attributes": {
-              "type": "submit",
-              "aria-label": "Search"
-            }
-          },
-          {
-            "id": "pw-20",
-            "role": "option",
-            "text": "Google Data Analytics\nGoogle \u2022 Professional Certificate \u2022 Beginner",
-            "attributes": {
-              "id": "react-aria-:RalalalahcqH1:-option-GoogleDataAnalytics"
-            }
-          },
-          {
-            "id": "pw-25",
-            "role": "option",
-            "text": "artificial intelligence",
-            "attributes": {
-              "id": "react-aria-:RalalalahcqH1:-option-artificialintelligence"
-            }
-          },
-          {
-            "id": "pw-27",
-            "role": "option",
-            "text": "python",
-            "attributes": {
-              "id": "react-aria-:RalalalahcqH1:-option-python"
-            }
-          },
-          {
-            "id": "pw-29",
-            "role": "option",
-            "text": "microsoft excel",
-            "attributes": {
-              "id": "react-aria-:RalalalahcqH1:-option-microsoftexcel"
-            }
-          },
-          {
-            "id": "pw-31",
-            "role": "option",
-            "text": "ai",
-            "attributes": {
-              "id": "react-aria-:RalalalahcqH1:-option-ai"
-            }
-          },
-          {
-            "id": "pw-33",
-            "role": "option",
-            "text": "excel",
-            "attributes": {
-              "id": "react-aria-:RalalalahcqH1:-option-excel"
-            }
-          },
-          {
-            "id": "pw-35",
-            "role": "option",
-            "text": "machine learning",
-            "attributes": {
-              "id": "react-aria-:RalalalahcqH1:-option-machinelearning"
-            }
-          },
-          {
-            "id": "pw-37",
-            "role": "option",
-            "text": "project management",
-            "attributes": {
-              "id": "react-aria-:RalalalahcqH1:-option-projectmanagement"
-            }
-          },
-          {
-            "id": "pw-42",
-            "role": "option",
-            "text": "Not sure where to start?\nTake a short quiz",
-            "attributes": {
-              "id": "react-aria-:RalalalahcqH1:-option-onboarding~~/onboarding/learning-goal?referrer=%2F"
-            }
-          },
-          {
-            "id": "pw-44",
-            "role": "button",
-            "text": "Log In",
-            "attributes": {
-              "href": "/?authMode=login"
-            }
-          },
-          {
-            "id": "pw-45",
-            "role": "button",
-            "text": "Join for Free",
-            "attributes": {
-              "href": "/?authMode=signup"
-            }
-          },
-          {
-            "id": "pw-46",
-            "role": "button",
-            "text": "Open Navigation Menu",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Open Navigation Menu"
-            }
-          },
-          {
-            "id": "pw-47",
-            "role": "link",
-            "text": "Coursera",
-            "attributes": {
-              "href": "/",
-              "aria-label": "Coursera",
-              "data-testid": "home-logo"
-            }
-          },
-          {
-            "id": "pw-49",
-            "role": "button",
-            "text": "Search",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Search"
-            }
-          },
-          {
-            "id": "pw-50",
-            "role": "button",
-            "text": "Join for Free",
-            "attributes": {
-              "type": "button"
-            }
-          },
-          {
-            "id": "pw-53",
-            "role": "button",
-            "text": "Join for Free",
-            "attributes": {
-              "type": "button",
-              "data-testid": "enroll-button"
-            }
-          },
-          {
-            "id": "pw-55",
-            "role": "link",
-            "text": "Enroll now",
-            "attributes": {
-              "href": "https://www.coursera.org/specialization/gemini-for-developers"
-            }
-          },
-          {
-            "id": "pw-57",
-            "role": "link",
-            "text": "Start learning skills",
-            "attributes": {
-              "href": "https://www.coursera.org/explore/ai-for-professionals"
-            }
-          },
-          {
-            "id": "pw-58",
-            "role": "button",
-            "text": "Previous",
-            "attributes": {
-              "type": "button"
-            }
-          },
-          {
-            "id": "pw-59",
-            "role": "button",
-            "text": "Next",
-            "attributes": {
-              "type": "button"
-            }
-          },
-          {
-            "id": "pw-61",
-            "role": "button",
-            "text": "Go to item 1",
-            "attributes": {
-              "type": "button"
-            }
-          },
-          {
-            "id": "pw-62",
-            "role": "button",
-            "text": "Go to item 2",
-            "attributes": {
-              "type": "button"
-            }
-          },
-          {
-            "id": "pw-63",
-            "role": "button",
-            "text": "Go to item 3",
-            "attributes": {
-              "type": "button"
-            }
-          },
-          {
-            "id": "pw-66",
-            "role": "link",
-            "text": "Most popular",
-            "attributes": {
-              "href": "/explore/most-popular-courses"
-            }
-          },
-          {
-            "id": "pw-67",
-            "role": "link",
-            "text": "Google Data Analytics",
-            "attributes": {
-              "id": "cds-react-aria4746114058-:rq:-product-card-title",
-              "href": "/professional-certificates/google-data-analytics",
-              "aria-label": "Google Data Analytics, offered by Google, PROFESSIONAL CERTIFICATE, 4.8 out of 5 stars"
-            }
-          },
-          {
-            "id": "pw-69",
-            "role": "link",
-            "text": "Foundations: Data, Data, Everywhere",
-            "attributes": {
-              "id": "cds-react-aria4746114058-:rt:-product-card-title",
-              "href": "/learn/foundations-data",
-              "aria-label": "Foundations: Data, Data, Everywhere, offered by Google, COURSE, 4.8 out of 5 stars"
-            }
-          },
-          {
-            "id": "pw-71",
-            "role": "link",
-            "text": "Python for Everybody",
-            "attributes": {
-              "id": "cds-react-aria4746114058-:r10:-product-card-title",
-              "href": "/specializations/python",
-              "aria-label": "Python for Everybody, offered by University of Michigan, SPECIALIZATION, 4.8 out of 5 stars"
-            }
-          },
-          {
-            "id": "pw-74",
-            "role": "link",
-            "text": "Hot new releases",
-            "attributes": {
-              "href": "/explore/new-on-coursera"
-            }
-          },
-          {
-            "id": "pw-75",
-            "role": "link",
-            "text": "Gemini for Developers",
-            "attributes": {
-              "id": "cds-react-aria4746114058-:r15:-product-card-title",
-              "href": "/specializations/gemini-for-developers",
-              "aria-label": "Gemini for Developers, offered by Google DeepMind, SPECIALIZATION"
-            }
-          },
-          {
-            "id": "pw-76",
-            "role": "link",
-            "text": "Project Management and Planning",
-            "attributes": {
-              "id": "cds-react-aria4746114058-:r16:-product-card-title",
-              "href": "/specializations/project-management-and-planning",
-              "aria-label": "Project Management and Planning, offered by Johns Hopkins University, SPECIALIZATION, 4.7 out of 5 stars"
-            }
-          },
-          {
-            "id": "pw-78",
-            "role": "link",
-            "text": "IBM Management Consultant",
-            "attributes": {
-              "id": "cds-react-aria4746114058-:r19:-product-card-title",
-              "href": "/professional-certificates/ibm-management-consultant",
-              "aria-label": "IBM Management Consultant, offered by IBM, SkillUp, PROFESSIONAL CERTIFICATE, 4.7 out of 5 stars"
-            }
-          },
-          {
-            "id": "pw-81",
-            "role": "link",
-            "text": "Trending now",
-            "attributes": {
-              "href": "/browse"
-            }
-          },
-          {
-            "id": "pw-82",
-            "role": "link",
-            "text": "Google AI",
-            "attributes": {
-              "id": "cds-react-aria4746114058-:r1e:-product-card-title",
-              "href": "/professional-certificates/google-ai",
-              "aria-label": "Google AI, offered by Google, PROFESSIONAL CERTIFICATE, 4.8 out of 5 stars"
-            }
-          },
-          {
-            "id": "pw-84",
-            "role": "link",
-            "text": "Authentic Communication With Confidence And Impact",
-            "attributes": {
-              "id": "cds-react-aria4746114058-:r1h:-product-card-title",
-              "href": "/specializations/authentic-communication-with-confidence-and-impact",
-              "aria-label": "Authentic Communication With Confidence And Impact, offered by University of London, Royal Central School of Speech and Drama, SPECIALIZATION, 4.7 out of 5 stars"
-            }
-          },
-          {
-            "id": "pw-86",
-            "role": "link",
-            "text": "Digital Marketing with Canva",
-            "attributes": {
-              "id": "cds-react-aria4746114058-:r1k:-product-card-title",
-              "href": "/specializations/digital-marketing-with-canva",
-              "aria-label": "Digital Marketing with Canva, offered by Coursera, SPECIALIZATION, 4.5 out of 5 stars"
-            }
-          },
-          {
-            "id": "pw-88",
-            "role": "button",
-            "text": "Previous",
-            "attributes": {
-              "type": "button"
-            }
-          },
-          {
-            "id": "pw-89",
-            "role": "button",
-            "text": "Next",
-            "attributes": {
-              "type": "button"
-            }
-          },
-          {
-            "id": "pw-90",
-            "role": "link",
-            "text": "Build online communities that connect, grow, and last",
-            "attributes": {
-              "href": "https://www.coursera.org/professional-certificates/meta-community-management"
-            }
-          },
-          {
-            "id": "pw-91",
-            "role": "button",
-            "text": "Enroll now",
-            "attributes": {
-              "id": "cta-670wRjFBJatxkew6Zb61eO",
-              "type": "button"
-            }
-          },
-          {
-            "id": "pw-92",
-            "role": "link",
-            "text": "Drive your business forward and empower your teams",
-            "attributes": {
-              "href": "https://www.coursera.org/business"
-            }
-          }
-        ]
-      },
-      "action": {
-        "action": "click",
-        "args": {
-          "id": "pw-14"
-        }
-      },
-      "observation": "Clicked pw-14"
-    },
-    {
-      "step": 3,
-      "state": {
-        "url": "https://www.coursera.org/search?query=Python",
-        "title": "Coursera | Online Courses From Top Universities. Join for Free",
+        "url": "https://www.coursera.org/specializations/python",
+        "title": "Python for Everybody | Coursera",
         "elements": []
       },
       "action": {
@@ -926,24 +472,16 @@
           "script": "document.body.innerText.slice(0,5000)"
         }
       },
-      "observation": "Eval: \"Skip to main content\\nFor Individuals\\nFor Businesses\\nFor Universities\\nFor Governments\\nExplore\\nDegrees\\n\\u200b\\nLog In\\nJoin for Free\\nAI summary is now available. Navigate to the AI Overview section to read it.\\nAI Overview\\n\\nGetting started with Python\\n\\nTo learn Python effectively, focus on core programming skills such as syntax, debugging, and program development. Decide if you want to apply Python to data science, AI, or general programming. Beginners should start with foundational c"
+      "observation": "Eval: \"For Individuals\\nFor Businesses\\nFor Universities\\nFor Governments\\nExplore\\nDegrees\\n\\u200b\\nLog In\\nJoin for Free\\nBrowse\\nComputer Science\\nSoftware Development\\nPython for Everybody Specialization\\n\\nLearn to Program and Analyze Data with Python.\\n\\nDevelop programs to gather, clean, analyze, and visualize data.\\n\\nInstructor: Charles Russell Severance\\n\\nEnroll for free\\nStarts May 17\\n\\n1,958,747 already enrolled\\n\\nIncluded with \\n\\n\\u2022\\n\\nLearn more\\n\\n5 course series\\nGet in-depth k"
     },
     {
-      "step": 4,
+      "step": 3,
       "state": {
-        "url": "https://www.coursera.org/search?query=Python",
-        "title": "Coursera | Online Courses From Top Universities. Join for Free",
+        "url": "https://www.coursera.org/specializations/python",
+        "title": "Python for Everybody | Coursera",
         "elements": [
           {
-            "id": "pw-0",
-            "role": "link",
-            "text": "Skip to main content",
-            "attributes": {
-              "href": "#main"
-            }
-          },
-          {
-            "id": "pw-2",
+            "id": "pw-1",
             "role": "link",
             "text": "For Individuals",
             "attributes": {
@@ -951,7 +489,7 @@
             }
           },
           {
-            "id": "pw-3",
+            "id": "pw-2",
             "role": "link",
             "text": "For Businesses",
             "attributes": {
@@ -959,7 +497,7 @@
             }
           },
           {
-            "id": "pw-4",
+            "id": "pw-3",
             "role": "link",
             "text": "For Universities",
             "attributes": {
@@ -967,7 +505,7 @@
             }
           },
           {
-            "id": "pw-5",
+            "id": "pw-4",
             "role": "link",
             "text": "For Governments",
             "attributes": {
@@ -975,7 +513,7 @@
             }
           },
           {
-            "id": "pw-6",
+            "id": "pw-5",
             "role": "link",
             "text": "Coursera",
             "attributes": {
@@ -985,7 +523,7 @@
             }
           },
           {
-            "id": "pw-8",
+            "id": "pw-7",
             "role": "button",
             "text": "Explore",
             "attributes": {
@@ -995,7 +533,7 @@
             }
           },
           {
-            "id": "pw-9",
+            "id": "pw-8",
             "role": "button",
             "text": "Degrees",
             "attributes": {
@@ -1004,7 +542,7 @@
             }
           },
           {
-            "id": "pw-11",
+            "id": "pw-10",
             "role": "combobox",
             "text": "Search catalog",
             "attributes": {
@@ -1013,21 +551,12 @@
               "type": "text",
               "aria-label": "Search catalog",
               "placeholder": "What do you want to learn?",
-              "value": "Python",
+              "value": "",
               "data-testid": "search-autocomplete-input"
             }
           },
           {
-            "id": "pw-12",
-            "role": "button",
-            "text": "Clear search",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Clear search"
-            }
-          },
-          {
-            "id": "pw-13",
+            "id": "pw-11",
             "role": "button",
             "text": "Search",
             "attributes": {
@@ -1036,23 +565,23 @@
             }
           },
           {
-            "id": "pw-14",
+            "id": "pw-12",
             "role": "button",
             "text": "Log In",
             "attributes": {
-              "href": "/search?query=Python&authMode=login"
+              "href": "/specializations/python?authMode=login"
             }
           },
           {
-            "id": "pw-15",
+            "id": "pw-13",
             "role": "button",
             "text": "Join for Free",
             "attributes": {
-              "href": "/search?query=Python&authMode=signup"
+              "href": "/specializations/python?authMode=signup"
             }
           },
           {
-            "id": "pw-16",
+            "id": "pw-14",
             "role": "button",
             "text": "Open Navigation Menu",
             "attributes": {
@@ -1061,7 +590,7 @@
             }
           },
           {
-            "id": "pw-17",
+            "id": "pw-15",
             "role": "link",
             "text": "Coursera",
             "attributes": {
@@ -1071,7 +600,16 @@
             }
           },
           {
-            "id": "pw-19",
+            "id": "pw-17",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-18",
             "role": "button",
             "text": "Join for Free",
             "attributes": {
@@ -1079,322 +617,288 @@
             }
           },
           {
-            "id": "pw-21",
-            "role": "button",
-            "text": "Getting started with Python\n\nTo learn Python effectively, focus on core programming skills such as syntax, debugging, and program development. Decide if you want to apply Python to data science, AI, or general programming. Beginners should start with foundational courses that cover Python basics and gradually move to specialized topics like data analysis or scripting. Consider your available time commitment and preferred learning style when choosing a course.",
+            "id": "pw-19",
+            "role": "link",
+            "text": "About",
             "attributes": {
-              "aria-label": "Expand summary"
+              "href": "#about"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Outcomes",
+            "attributes": {
+              "href": "#outcomes"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Courses",
+            "attributes": {
+              "href": "#courses"
             }
           },
           {
             "id": "pw-22",
-            "role": "button",
-            "text": "Show more",
+            "role": "link",
+            "text": "Testimonials",
             "attributes": {
-              "type": "button",
-              "aria-label": "Show more"
+              "href": "#testimonials"
             }
           },
           {
             "id": "pw-23",
             "role": "link",
-            "text": "IBM\n\nPython for Data Science, AI & Development\n\nBest for: beginners with 1-3 months availability, learners interested in Python programming, and those seeking IBM-backed courses eager to build data science skills",
+            "text": "Home",
             "attributes": {
-              "href": "https://www.coursera.org/learn/python-for-applied-data-science-ai",
-              "data-testid": "ai-summary-product-card"
+              "href": "/",
+              "aria-label": "Home",
+              "data-testid": "home-link"
             }
           },
           {
             "id": "pw-24",
             "role": "link",
-            "text": "University of Michigan\n\nPython for Everybody\n\nBest for: learners with 3-6 months to commit, beginners wanting a comprehensive specialization, and University of Michigan fans looking to master Python fundamentals",
+            "text": "Browse",
             "attributes": {
-              "href": "https://www.coursera.org/specializations/python",
-              "data-testid": "ai-summary-product-card"
+              "href": "/browse"
             }
           },
           {
             "id": "pw-25",
             "role": "link",
-            "text": "Google\n\nCrash Course on Python\n\nBest for: beginners with 1-3 months availability, learners focused on programming principles, and those preferring Google courses ready to learn scripting languages",
+            "text": "Computer Science",
             "attributes": {
-              "href": "https://www.coursera.org/learn/python-crash-course",
-              "data-testid": "ai-summary-product-card"
+              "href": "/browse/computer-science"
             }
           },
           {
             "id": "pw-26",
             "role": "link",
-            "text": "University of Michigan\n\nProgramming for Everybody (Getting Started with Python)\n\nBest for: beginners with 1-3 months availability, learners interested in debugging and program development, and University of Michigan followers seeking an introductory Python course",
+            "text": "Software Development",
             "attributes": {
-              "href": "https://www.coursera.org/learn/python",
-              "data-testid": "ai-summary-product-card"
+              "href": "/browse/computer-science/software-development"
             }
           },
           {
             "id": "pw-27",
-            "role": "button",
-            "text": "python introduction",
+            "role": "link",
+            "text": "Charles Russell Severance",
             "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
-            }
-          },
-          {
-            "id": "pw-28",
-            "role": "button",
-            "text": "python programming",
-            "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
+              "href": "/instructor/drchuck"
             }
           },
           {
             "id": "pw-29",
             "role": "button",
-            "text": "python for everybody",
+            "text": "Enroll for free\nStarts May 17",
             "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
-            }
-          },
-          {
-            "id": "pw-30",
-            "role": "button",
-            "text": "python for finance",
-            "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
+              "type": "submit"
             }
           },
           {
             "id": "pw-31",
-            "role": "button",
-            "text": "python for data analysis",
+            "role": "link",
+            "text": "Learn more",
             "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
-            }
-          },
-          {
-            "id": "pw-32",
-            "role": "button",
-            "text": "python for computer science",
-            "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
+              "href": "/courseraplus",
+              "aria-label": "Learn more about Coursera Plus"
             }
           },
           {
             "id": "pw-33",
-            "role": "button",
-            "text": "python for engineers",
+            "role": "link",
+            "text": "5 course series",
             "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
-            }
-          },
-          {
-            "id": "pw-34",
-            "role": "button",
-            "text": "python from scratch",
-            "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
-            }
-          },
-          {
-            "id": "pw-35",
-            "role": "button",
-            "text": "python full",
-            "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
+              "href": "#courses"
             }
           },
           {
             "id": "pw-36",
-            "role": "button",
-            "text": "python for ai",
+            "role": "link",
+            "text": "Learn more",
             "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
+              "href": "#credits",
+              "aria-label": "Learn more about degree credit"
             }
           },
           {
             "id": "pw-38",
-            "role": "button",
-            "text": "Filter & Sort",
+            "role": "link",
+            "text": "5 course series",
             "attributes": {
-              "type": "button",
-              "data-testid": "filter-and-sort-button"
-            }
-          },
-          {
-            "id": "pw-39",
-            "role": "button",
-            "text": "Topic",
-            "attributes": {
-              "type": "button",
-              "data-testid": "filter-dropdown-topic"
-            }
-          },
-          {
-            "id": "pw-40",
-            "role": "button",
-            "text": "Duration",
-            "attributes": {
-              "type": "button",
-              "data-testid": "filter-dropdown-productDuration"
+              "href": "#courses"
             }
           },
           {
             "id": "pw-41",
-            "role": "button",
-            "text": "Learning Product",
+            "role": "link",
+            "text": "Learn more",
             "attributes": {
-              "type": "button",
-              "data-testid": "filter-dropdown-productTypeDescription"
+              "href": "#credits",
+              "aria-label": "Learn more about degree credit"
             }
           },
           {
             "id": "pw-42",
-            "role": "button",
-            "text": "Language",
+            "role": "link",
+            "text": "About",
             "attributes": {
-              "type": "button",
-              "data-testid": "filter-dropdown-language"
+              "href": "#about"
             }
           },
           {
             "id": "pw-43",
-            "role": "button",
-            "text": "Level",
+            "role": "link",
+            "text": "Outcomes",
             "attributes": {
-              "type": "button",
-              "data-testid": "filter-dropdown-productDifficultyLevel"
+              "href": "#outcomes"
             }
           },
           {
             "id": "pw-44",
-            "role": "button",
-            "text": "Core Python Programming Skills",
+            "role": "link",
+            "text": "Courses",
             "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
+              "href": "#courses"
             }
           },
           {
             "id": "pw-45",
-            "role": "button",
-            "text": "Data Analysis and Manipulation with Python",
+            "role": "link",
+            "text": "Testimonials",
             "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
+              "href": "#testimonials"
             }
           },
           {
-            "id": "pw-47",
-            "role": "link",
-            "text": "Python for Data Science, AI & Development",
+            "id": "pw-48",
+            "role": "button",
+            "text": "Read more",
             "attributes": {
-              "id": "cds-react-aria-:R58qb5p9ld6jbal6kq:-product-card-title",
-              "href": "/learn/python-for-applied-data-science-ai",
-              "aria-label": "Python for Data Science, AI & Development, offered by IBM, COURSE"
+              "type": "button"
             }
           },
           {
             "id": "pw-49",
             "role": "link",
-            "text": "Python for Everybody",
+            "text": "Data Presentation",
             "attributes": {
-              "id": "cds-react-aria-:R59ab5p9ld6jbal6kq:-product-card-title",
-              "href": "/specializations/python",
-              "aria-label": "Python for Everybody, offered by University of Michigan, SPECIALIZATION"
+              "href": "https://www.coursera.org/courses?query=data%20presentation"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Data Processing",
+            "attributes": {
+              "href": "https://www.coursera.org/courses?query=data%20processing"
             }
           },
           {
             "id": "pw-51",
             "role": "link",
-            "text": "Crash Course on Python",
+            "text": "Data Store",
             "attributes": {
-              "id": "cds-react-aria-:R59qb5p9ld6jbal6kq:-product-card-title",
-              "href": "/learn/python-crash-course",
-              "aria-label": "Crash Course on Python, offered by Google, COURSE"
+              "href": "https://www.coursera.org/courses?query=data%20store"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Data Structures",
+            "attributes": {
+              "href": "https://www.coursera.org/courses?query=data%20structures"
             }
           },
           {
             "id": "pw-53",
             "role": "link",
-            "text": "Programming for Everybody (Getting Started with Python)",
+            "text": "Data Visualization Software",
             "attributes": {
-              "id": "cds-react-aria-:R5aab5p9ld6jbal6kq:-product-card-title",
-              "href": "/learn/python",
-              "aria-label": "Programming for Everybody (Getting Started with Python), offered by University of Michigan, COURSE"
+              "href": "https://www.coursera.org/courses?query=data%20visualization%20software"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Databases",
+            "attributes": {
+              "href": "https://www.coursera.org/courses?query=databases"
             }
           },
           {
             "id": "pw-55",
             "role": "link",
-            "text": "Data Analysis with Python",
+            "text": "Database Design",
             "attributes": {
-              "id": "cds-react-aria-:R5aqb5p9ld6jbal6kq:-product-card-title",
-              "href": "/learn/data-analysis-with-python",
-              "aria-label": "Data Analysis with Python, offered by IBM, COURSE"
+              "href": "https://www.coursera.org/courses?query=database%20design"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Debugging",
+            "attributes": {
+              "href": "https://www.coursera.org/courses?query=debugging"
             }
           },
           {
             "id": "pw-57",
             "role": "link",
-            "text": "Introduction to Data Analysis Using Python",
+            "text": "File I/O",
             "attributes": {
-              "id": "cds-react-aria-:R5bab5p9ld6jbal6kq:-product-card-title",
-              "href": "/learn/introduction-to-data-analysis-using-python",
-              "aria-label": "Introduction to Data Analysis Using Python, offered by Google, COURSE"
+              "href": "https://www.coursera.org/courses?query=file%20i%2Fo"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "link",
+            "text": "Program Development",
+            "attributes": {
+              "href": "https://www.coursera.org/courses?query=program%20development"
             }
           },
           {
             "id": "pw-59",
-            "role": "button",
-            "text": "Start my career",
+            "role": "link",
+            "text": "Programming Principles",
             "attributes": {
-              "id": "hiddenRadio-LEARNING_GOAL_LAND_NEW_JOB",
-              "type": "button",
-              "aria-label": "Start my career",
-              "value": "LEARNING_GOAL_LAND_NEW_JOB"
+              "href": "https://www.coursera.org/courses?query=programming%20principles"
             }
           },
           {
             "id": "pw-60",
-            "role": "button",
-            "text": "Change my career",
+            "role": "link",
+            "text": "SQL",
             "attributes": {
-              "id": "hiddenRadio-LEARNING_GOAL_CHANGE_CAREER",
-              "type": "button",
-              "aria-label": "Change my career",
-              "value": "LEARNING_GOAL_CHANGE_CAREER"
+              "href": "https://www.coursera.org/courses?query=sql"
             }
           },
           {
             "id": "pw-61",
-            "role": "button",
-            "text": "Grow in my current role",
+            "role": "link",
+            "text": "Data Visualization",
             "attributes": {
-              "id": "hiddenRadio-LEARNING_GOAL_IMPROVE_SKILLS",
-              "type": "button",
-              "aria-label": "Grow in my current role",
-              "value": "LEARNING_GOAL_IMPROVE_SKILLS"
+              "href": "https://www.coursera.org/courses?query=data%20visualization"
             }
           },
           {
             "id": "pw-62",
-            "role": "button",
-            "text": "Explore topics outside of work",
+            "role": "link",
+            "text": "Web Scraping",
             "attributes": {
-              "id": "hiddenRadio-LEARNING_GOAL_PERSONAL_INTEREST",
-              "type": "button",
-              "aria-label": "Explore topics outside of work",
-              "value": "LEARNING_GOAL_PERSONAL_INTEREST"
+              "href": "https://www.coursera.org/courses?query=web%20scraping"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "link",
+            "text": "Web Services",
+            "attributes": {
+              "href": "https://www.coursera.org/courses?query=web%20services"
             }
           }
         ]
@@ -1402,27 +906,19 @@
       "action": {
         "action": "evaluate",
         "args": {
-          "script": "document.body.innerText"
+          "script": "(() => { const text=document.body.innerText; const terms=['Certificate','certificate','Estimated','duration','months','hours','weeks','Approx','at your own pace']; return terms.map(t=>[t, text.toLowerCase().indexOf(t.toLowerCase())]).map(([t,i])=> t+': '+i+'\\n'+(i>=0?text.slice(Math.max(0,i-300), i+500):'')).join('\\n---\\n'); })()"
         }
       },
-      "observation": "Eval: \"Skip to main content\\nFor Individuals\\nFor Businesses\\nFor Universities\\nFor Governments\\nExplore\\nDegrees\\n\\u200b\\nLog In\\nJoin for Free\\nAI summary is now available. Navigate to the AI Overview section to read it.\\nAI Overview\\n\\nGetting started with Python\\n\\nTo learn Python effectively, focus on core programming skills such as syntax, debugging, and program development. Decide if you want to apply Python to data science, AI, or general programming. Beginners should start with foundational c"
+      "observation": "Eval: \"Certificate: 1512\\nntation\\nData Processing\\nData Store\\nData Structures\\nData Visualization Software\\nDatabases\\nDatabase Design\\nDebugging\\nFile I/O\\nProgram Development\\nProgramming Principles\\nSQL\\nShow all\\nTools you'll learn\\nDatabase Software\\nJSON\\nPython Programming\\nRelational Databases\\nRestful API\\nDetails to know\\nShareable certificate\\n\\nAdd to your LinkedIn profile\\n\\nTaught in English\\n27 languages available\\nSee how employees at top companies are mastering in-demand skills\\nLea"
     },
     {
-      "step": 5,
+      "step": 4,
       "state": {
-        "url": "https://www.coursera.org/search?query=Python",
-        "title": "Coursera | Online Courses From Top Universities. Join for Free",
+        "url": "https://www.coursera.org/specializations/python",
+        "title": "Python for Everybody | Coursera",
         "elements": [
           {
-            "id": "pw-0",
-            "role": "link",
-            "text": "Skip to main content",
-            "attributes": {
-              "href": "#main"
-            }
-          },
-          {
-            "id": "pw-2",
+            "id": "pw-1",
             "role": "link",
             "text": "For Individuals",
             "attributes": {
@@ -1430,7 +926,7 @@
             }
           },
           {
-            "id": "pw-3",
+            "id": "pw-2",
             "role": "link",
             "text": "For Businesses",
             "attributes": {
@@ -1438,7 +934,7 @@
             }
           },
           {
-            "id": "pw-4",
+            "id": "pw-3",
             "role": "link",
             "text": "For Universities",
             "attributes": {
@@ -1446,7 +942,7 @@
             }
           },
           {
-            "id": "pw-5",
+            "id": "pw-4",
             "role": "link",
             "text": "For Governments",
             "attributes": {
@@ -1454,7 +950,7 @@
             }
           },
           {
-            "id": "pw-6",
+            "id": "pw-5",
             "role": "link",
             "text": "Coursera",
             "attributes": {
@@ -1464,7 +960,7 @@
             }
           },
           {
-            "id": "pw-8",
+            "id": "pw-7",
             "role": "button",
             "text": "Explore",
             "attributes": {
@@ -1474,7 +970,7 @@
             }
           },
           {
-            "id": "pw-9",
+            "id": "pw-8",
             "role": "button",
             "text": "Degrees",
             "attributes": {
@@ -1483,7 +979,7 @@
             }
           },
           {
-            "id": "pw-11",
+            "id": "pw-10",
             "role": "combobox",
             "text": "Search catalog",
             "attributes": {
@@ -1492,21 +988,12 @@
               "type": "text",
               "aria-label": "Search catalog",
               "placeholder": "What do you want to learn?",
-              "value": "Python",
+              "value": "",
               "data-testid": "search-autocomplete-input"
             }
           },
           {
-            "id": "pw-12",
-            "role": "button",
-            "text": "Clear search",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Clear search"
-            }
-          },
-          {
-            "id": "pw-13",
+            "id": "pw-11",
             "role": "button",
             "text": "Search",
             "attributes": {
@@ -1515,23 +1002,23 @@
             }
           },
           {
-            "id": "pw-14",
+            "id": "pw-12",
             "role": "button",
             "text": "Log In",
             "attributes": {
-              "href": "/search?query=Python&authMode=login"
+              "href": "/specializations/python?authMode=login"
             }
           },
           {
-            "id": "pw-15",
+            "id": "pw-13",
             "role": "button",
             "text": "Join for Free",
             "attributes": {
-              "href": "/search?query=Python&authMode=signup"
+              "href": "/specializations/python?authMode=signup"
             }
           },
           {
-            "id": "pw-16",
+            "id": "pw-14",
             "role": "button",
             "text": "Open Navigation Menu",
             "attributes": {
@@ -1540,7 +1027,7 @@
             }
           },
           {
-            "id": "pw-17",
+            "id": "pw-15",
             "role": "link",
             "text": "Coursera",
             "attributes": {
@@ -1550,7 +1037,16 @@
             }
           },
           {
-            "id": "pw-19",
+            "id": "pw-17",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-18",
             "role": "button",
             "text": "Join for Free",
             "attributes": {
@@ -1558,350 +1054,308 @@
             }
           },
           {
-            "id": "pw-21",
-            "role": "button",
-            "text": "Getting started with Python\n\nTo learn Python effectively, focus on core programming skills such as syntax, debugging, and program development. Decide if you want to apply Python to data science, AI, or general programming. Beginners should start with foundational courses that cover Python basics and gradually move to specialized topics like data analysis or scripting. Consider your available time commitment and preferred learning style when choosing a course.",
+            "id": "pw-19",
+            "role": "link",
+            "text": "About",
             "attributes": {
-              "aria-label": "Expand summary"
+              "href": "#about"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Outcomes",
+            "attributes": {
+              "href": "#outcomes"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Courses",
+            "attributes": {
+              "href": "#courses"
             }
           },
           {
             "id": "pw-22",
-            "role": "button",
-            "text": "Show more",
+            "role": "link",
+            "text": "Testimonials",
             "attributes": {
-              "type": "button",
-              "aria-label": "Show more"
+              "href": "#testimonials"
             }
           },
           {
             "id": "pw-23",
             "role": "link",
-            "text": "IBM\n\nPython for Data Science, AI & Development\n\nBest for: beginners with 1-3 months availability, learners interested in Python programming, and those seeking IBM-backed courses eager to build data science skills",
+            "text": "Home",
             "attributes": {
-              "href": "https://www.coursera.org/learn/python-for-applied-data-science-ai",
-              "data-testid": "ai-summary-product-card"
+              "href": "/",
+              "aria-label": "Home",
+              "data-testid": "home-link"
             }
           },
           {
             "id": "pw-24",
             "role": "link",
-            "text": "University of Michigan\n\nPython for Everybody\n\nBest for: learners with 3-6 months to commit, beginners wanting a comprehensive specialization, and University of Michigan fans looking to master Python fundamentals",
+            "text": "Browse",
             "attributes": {
-              "href": "https://www.coursera.org/specializations/python",
-              "data-testid": "ai-summary-product-card"
+              "href": "/browse"
             }
           },
           {
             "id": "pw-25",
             "role": "link",
-            "text": "Google\n\nCrash Course on Python\n\nBest for: beginners with 1-3 months availability, learners focused on programming principles, and those preferring Google courses ready to learn scripting languages",
+            "text": "Computer Science",
             "attributes": {
-              "href": "https://www.coursera.org/learn/python-crash-course",
-              "data-testid": "ai-summary-product-card"
+              "href": "/browse/computer-science"
             }
           },
           {
             "id": "pw-26",
             "role": "link",
-            "text": "University of Michigan\n\nProgramming for Everybody (Getting Started with Python)\n\nBest for: beginners with 1-3 months availability, learners interested in debugging and program development, and University of Michigan followers seeking an introductory Python course",
+            "text": "Software Development",
             "attributes": {
-              "href": "https://www.coursera.org/learn/python",
-              "data-testid": "ai-summary-product-card"
+              "href": "/browse/computer-science/software-development"
             }
           },
           {
             "id": "pw-27",
-            "role": "button",
-            "text": "python introduction",
+            "role": "link",
+            "text": "Charles Russell Severance",
             "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
-            }
-          },
-          {
-            "id": "pw-28",
-            "role": "button",
-            "text": "python programming",
-            "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
+              "href": "/instructor/drchuck"
             }
           },
           {
             "id": "pw-29",
             "role": "button",
-            "text": "python for everybody",
+            "text": "Enroll for free\nStarts May 17",
             "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
-            }
-          },
-          {
-            "id": "pw-30",
-            "role": "button",
-            "text": "python for finance",
-            "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
+              "type": "submit"
             }
           },
           {
             "id": "pw-31",
-            "role": "button",
-            "text": "python for data analysis",
+            "role": "link",
+            "text": "Learn more",
             "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
-            }
-          },
-          {
-            "id": "pw-32",
-            "role": "button",
-            "text": "python for computer science",
-            "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
+              "href": "/courseraplus",
+              "aria-label": "Learn more about Coursera Plus"
             }
           },
           {
             "id": "pw-33",
-            "role": "button",
-            "text": "python for engineers",
+            "role": "link",
+            "text": "5 course series",
             "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
-            }
-          },
-          {
-            "id": "pw-34",
-            "role": "button",
-            "text": "python from scratch",
-            "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
-            }
-          },
-          {
-            "id": "pw-35",
-            "role": "button",
-            "text": "python full",
-            "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
+              "href": "#courses"
             }
           },
           {
             "id": "pw-36",
-            "role": "button",
-            "text": "python for ai",
+            "role": "link",
+            "text": "Learn more",
             "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
+              "href": "#credits",
+              "aria-label": "Learn more about degree credit"
             }
           },
           {
             "id": "pw-38",
-            "role": "button",
-            "text": "Filter & Sort",
+            "role": "link",
+            "text": "5 course series",
             "attributes": {
-              "type": "button",
-              "data-testid": "filter-and-sort-button"
-            }
-          },
-          {
-            "id": "pw-39",
-            "role": "button",
-            "text": "Topic",
-            "attributes": {
-              "type": "button",
-              "data-testid": "filter-dropdown-topic"
-            }
-          },
-          {
-            "id": "pw-40",
-            "role": "button",
-            "text": "Duration",
-            "attributes": {
-              "type": "button",
-              "data-testid": "filter-dropdown-productDuration"
+              "href": "#courses"
             }
           },
           {
             "id": "pw-41",
-            "role": "button",
-            "text": "Learning Product",
+            "role": "link",
+            "text": "Learn more",
             "attributes": {
-              "type": "button",
-              "data-testid": "filter-dropdown-productTypeDescription"
+              "href": "#credits",
+              "aria-label": "Learn more about degree credit"
             }
           },
           {
             "id": "pw-42",
-            "role": "button",
-            "text": "Language",
+            "role": "link",
+            "text": "About",
             "attributes": {
-              "type": "button",
-              "data-testid": "filter-dropdown-language"
+              "href": "#about"
             }
           },
           {
             "id": "pw-43",
-            "role": "button",
-            "text": "Level",
+            "role": "link",
+            "text": "Outcomes",
             "attributes": {
-              "type": "button",
-              "data-testid": "filter-dropdown-productDifficultyLevel"
+              "href": "#outcomes"
             }
           },
           {
             "id": "pw-44",
-            "role": "button",
-            "text": "Core Python Programming Skills",
+            "role": "link",
+            "text": "Courses",
             "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
+              "href": "#courses"
             }
           },
           {
             "id": "pw-45",
-            "role": "button",
-            "text": "Data Analysis and Manipulation with Python",
+            "role": "link",
+            "text": "Testimonials",
             "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
+              "href": "#testimonials"
             }
           },
           {
-            "id": "pw-47",
-            "role": "link",
-            "text": "Python for Data Science, AI & Development",
+            "id": "pw-48",
+            "role": "button",
+            "text": "Read more",
             "attributes": {
-              "id": "cds-react-aria-:R58qb5p9ld6jbal6kq:-product-card-title",
-              "href": "/learn/python-for-applied-data-science-ai",
-              "aria-label": "Python for Data Science, AI & Development, offered by IBM, COURSE"
+              "type": "button"
             }
           },
           {
             "id": "pw-49",
             "role": "link",
-            "text": "Python for Everybody",
+            "text": "Data Presentation",
             "attributes": {
-              "id": "cds-react-aria-:R59ab5p9ld6jbal6kq:-product-card-title",
-              "href": "/specializations/python",
-              "aria-label": "Python for Everybody, offered by University of Michigan, SPECIALIZATION"
+              "href": "https://www.coursera.org/courses?query=data%20presentation"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Data Processing",
+            "attributes": {
+              "href": "https://www.coursera.org/courses?query=data%20processing"
             }
           },
           {
             "id": "pw-51",
             "role": "link",
-            "text": "Crash Course on Python",
+            "text": "Data Store",
             "attributes": {
-              "id": "cds-react-aria-:R59qb5p9ld6jbal6kq:-product-card-title",
-              "href": "/learn/python-crash-course",
-              "aria-label": "Crash Course on Python, offered by Google, COURSE"
+              "href": "https://www.coursera.org/courses?query=data%20store"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Data Structures",
+            "attributes": {
+              "href": "https://www.coursera.org/courses?query=data%20structures"
             }
           },
           {
             "id": "pw-53",
             "role": "link",
-            "text": "Programming for Everybody (Getting Started with Python)",
+            "text": "Data Visualization Software",
             "attributes": {
-              "id": "cds-react-aria-:R5aab5p9ld6jbal6kq:-product-card-title",
-              "href": "/learn/python",
-              "aria-label": "Programming for Everybody (Getting Started with Python), offered by University of Michigan, COURSE"
+              "href": "https://www.coursera.org/courses?query=data%20visualization%20software"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Databases",
+            "attributes": {
+              "href": "https://www.coursera.org/courses?query=databases"
             }
           },
           {
             "id": "pw-55",
             "role": "link",
-            "text": "Data Analysis with Python",
+            "text": "Database Design",
             "attributes": {
-              "id": "cds-react-aria-:R5aqb5p9ld6jbal6kq:-product-card-title",
-              "href": "/learn/data-analysis-with-python",
-              "aria-label": "Data Analysis with Python, offered by IBM, COURSE"
+              "href": "https://www.coursera.org/courses?query=database%20design"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Debugging",
+            "attributes": {
+              "href": "https://www.coursera.org/courses?query=debugging"
             }
           },
           {
             "id": "pw-57",
             "role": "link",
-            "text": "Introduction to Data Analysis Using Python",
+            "text": "File I/O",
             "attributes": {
-              "id": "cds-react-aria-:R5bab5p9ld6jbal6kq:-product-card-title",
-              "href": "/learn/introduction-to-data-analysis-using-python",
-              "aria-label": "Introduction to Data Analysis Using Python, offered by Google, COURSE"
+              "href": "https://www.coursera.org/courses?query=file%20i%2Fo"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "link",
+            "text": "Program Development",
+            "attributes": {
+              "href": "https://www.coursera.org/courses?query=program%20development"
             }
           },
           {
             "id": "pw-59",
-            "role": "button",
-            "text": "Start my career",
+            "role": "link",
+            "text": "Programming Principles",
             "attributes": {
-              "id": "hiddenRadio-LEARNING_GOAL_LAND_NEW_JOB",
-              "type": "button",
-              "aria-label": "Start my career",
-              "value": "LEARNING_GOAL_LAND_NEW_JOB"
+              "href": "https://www.coursera.org/courses?query=programming%20principles"
             }
           },
           {
             "id": "pw-60",
-            "role": "button",
-            "text": "Change my career",
+            "role": "link",
+            "text": "SQL",
             "attributes": {
-              "id": "hiddenRadio-LEARNING_GOAL_CHANGE_CAREER",
-              "type": "button",
-              "aria-label": "Change my career",
-              "value": "LEARNING_GOAL_CHANGE_CAREER"
+              "href": "https://www.coursera.org/courses?query=sql"
             }
           },
           {
             "id": "pw-61",
-            "role": "button",
-            "text": "Grow in my current role",
+            "role": "link",
+            "text": "Data Visualization",
             "attributes": {
-              "id": "hiddenRadio-LEARNING_GOAL_IMPROVE_SKILLS",
-              "type": "button",
-              "aria-label": "Grow in my current role",
-              "value": "LEARNING_GOAL_IMPROVE_SKILLS"
+              "href": "https://www.coursera.org/courses?query=data%20visualization"
             }
           },
           {
             "id": "pw-62",
-            "role": "button",
-            "text": "Explore topics outside of work",
+            "role": "link",
+            "text": "Web Scraping",
             "attributes": {
-              "id": "hiddenRadio-LEARNING_GOAL_PERSONAL_INTEREST",
-              "type": "button",
-              "aria-label": "Explore topics outside of work",
-              "value": "LEARNING_GOAL_PERSONAL_INTEREST"
+              "href": "https://www.coursera.org/courses?query=web%20scraping"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "link",
+            "text": "Web Services",
+            "attributes": {
+              "href": "https://www.coursera.org/courses?query=web%20services"
             }
           }
         ]
       },
       "action": {
-        "action": "click",
+        "action": "evaluate",
         "args": {
-          "id": "pw-47"
+          "script": "(() => { const text=document.body.innerText; const matches=[...text.matchAll(/(.{0,120}(?:Shareable certificate|certificate|Estimated|Duration|hours|months|weeks|at .*hours a week|approximately).{0,200})/gi)].map(m=>m[0]); return matches.join('\\n---\\n').slice(0,8000); })()"
         }
       },
-      "observation": "Clicked pw-47"
+      "observation": "Eval: \"2 months at 10 hours a week\\n---\\nShareable certificate\\n---\\nEarn a career certificate from University of Michigan\\n---\\nCourse 1, 17 hours\\n---\\nCourse 1\\u202217 hours\\n---\\nCourse 2, 20 hours\\n---\\nCourse 2\\u202220 hours\\n---\\nCourse 3, 19 hours\\n---\\nCourse 3\\u202219 hours\\n---\\nCourse 4, 14 hours\\n---\\nCourse 4\\u202214 hours\\n---\\nCourse 5, 9 hours\\n---\\nCourse 5\\u20229 hours\\n---\\nEarn a career certificate\\n---\\nProfessional Certificates\""
     },
     {
-      "step": 6,
+      "step": 5,
       "state": {
-        "url": "https://www.coursera.org/search?query=Python",
-        "title": "Coursera | Online Courses From Top Universities. Join for Free",
+        "url": "https://www.coursera.org/specializations/python",
+        "title": "Python for Everybody | Coursera",
         "elements": [
           {
-            "id": "pw-0",
-            "role": "link",
-            "text": "Skip to main content",
-            "attributes": {
-              "href": "#main"
-            }
-          },
-          {
-            "id": "pw-2",
+            "id": "pw-1",
             "role": "link",
             "text": "For Individuals",
             "attributes": {
@@ -1909,7 +1363,7 @@
             }
           },
           {
-            "id": "pw-3",
+            "id": "pw-2",
             "role": "link",
             "text": "For Businesses",
             "attributes": {
@@ -1917,7 +1371,7 @@
             }
           },
           {
-            "id": "pw-4",
+            "id": "pw-3",
             "role": "link",
             "text": "For Universities",
             "attributes": {
@@ -1925,7 +1379,7 @@
             }
           },
           {
-            "id": "pw-5",
+            "id": "pw-4",
             "role": "link",
             "text": "For Governments",
             "attributes": {
@@ -1933,7 +1387,7 @@
             }
           },
           {
-            "id": "pw-6",
+            "id": "pw-5",
             "role": "link",
             "text": "Coursera",
             "attributes": {
@@ -1943,7 +1397,7 @@
             }
           },
           {
-            "id": "pw-8",
+            "id": "pw-7",
             "role": "button",
             "text": "Explore",
             "attributes": {
@@ -1953,7 +1407,7 @@
             }
           },
           {
-            "id": "pw-9",
+            "id": "pw-8",
             "role": "button",
             "text": "Degrees",
             "attributes": {
@@ -1962,7 +1416,7 @@
             }
           },
           {
-            "id": "pw-11",
+            "id": "pw-10",
             "role": "combobox",
             "text": "Search catalog",
             "attributes": {
@@ -1971,21 +1425,12 @@
               "type": "text",
               "aria-label": "Search catalog",
               "placeholder": "What do you want to learn?",
-              "value": "Python",
+              "value": "",
               "data-testid": "search-autocomplete-input"
             }
           },
           {
-            "id": "pw-12",
-            "role": "button",
-            "text": "Clear search",
-            "attributes": {
-              "type": "button",
-              "aria-label": "Clear search"
-            }
-          },
-          {
-            "id": "pw-13",
+            "id": "pw-11",
             "role": "button",
             "text": "Search",
             "attributes": {
@@ -1994,23 +1439,23 @@
             }
           },
           {
-            "id": "pw-14",
+            "id": "pw-12",
             "role": "button",
             "text": "Log In",
             "attributes": {
-              "href": "/search?query=Python&authMode=login"
+              "href": "/specializations/python?authMode=login"
             }
           },
           {
-            "id": "pw-15",
+            "id": "pw-13",
             "role": "button",
             "text": "Join for Free",
             "attributes": {
-              "href": "/search?query=Python&authMode=signup"
+              "href": "/specializations/python?authMode=signup"
             }
           },
           {
-            "id": "pw-16",
+            "id": "pw-14",
             "role": "button",
             "text": "Open Navigation Menu",
             "attributes": {
@@ -2019,7 +1464,7 @@
             }
           },
           {
-            "id": "pw-17",
+            "id": "pw-15",
             "role": "link",
             "text": "Coursera",
             "attributes": {
@@ -2029,7 +1474,16 @@
             }
           },
           {
-            "id": "pw-19",
+            "id": "pw-17",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-18",
             "role": "button",
             "text": "Join for Free",
             "attributes": {
@@ -2037,322 +1491,288 @@
             }
           },
           {
-            "id": "pw-21",
-            "role": "button",
-            "text": "Getting started with Python\n\nTo learn Python effectively, focus on core programming skills such as syntax, debugging, and program development. Decide if you want to apply Python to data science, AI, or general programming. Beginners should start with foundational courses that cover Python basics and gradually move to specialized topics like data analysis or scripting. Consider your available time commitment and preferred learning style when choosing a course.",
+            "id": "pw-19",
+            "role": "link",
+            "text": "About",
             "attributes": {
-              "aria-label": "Expand summary"
+              "href": "#about"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Outcomes",
+            "attributes": {
+              "href": "#outcomes"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Courses",
+            "attributes": {
+              "href": "#courses"
             }
           },
           {
             "id": "pw-22",
-            "role": "button",
-            "text": "Show more",
+            "role": "link",
+            "text": "Testimonials",
             "attributes": {
-              "type": "button",
-              "aria-label": "Show more"
+              "href": "#testimonials"
             }
           },
           {
             "id": "pw-23",
             "role": "link",
-            "text": "IBM\n\nPython for Data Science, AI & Development\n\nBest for: beginners with 1-3 months availability, learners interested in Python programming, and those seeking IBM-backed courses eager to build data science skills",
+            "text": "Home",
             "attributes": {
-              "href": "https://www.coursera.org/learn/python-for-applied-data-science-ai",
-              "data-testid": "ai-summary-product-card"
+              "href": "/",
+              "aria-label": "Home",
+              "data-testid": "home-link"
             }
           },
           {
             "id": "pw-24",
             "role": "link",
-            "text": "University of Michigan\n\nPython for Everybody\n\nBest for: learners with 3-6 months to commit, beginners wanting a comprehensive specialization, and University of Michigan fans looking to master Python fundamentals",
+            "text": "Browse",
             "attributes": {
-              "href": "https://www.coursera.org/specializations/python",
-              "data-testid": "ai-summary-product-card"
+              "href": "/browse"
             }
           },
           {
             "id": "pw-25",
             "role": "link",
-            "text": "Google\n\nCrash Course on Python\n\nBest for: beginners with 1-3 months availability, learners focused on programming principles, and those preferring Google courses ready to learn scripting languages",
+            "text": "Computer Science",
             "attributes": {
-              "href": "https://www.coursera.org/learn/python-crash-course",
-              "data-testid": "ai-summary-product-card"
+              "href": "/browse/computer-science"
             }
           },
           {
             "id": "pw-26",
             "role": "link",
-            "text": "University of Michigan\n\nProgramming for Everybody (Getting Started with Python)\n\nBest for: beginners with 1-3 months availability, learners interested in debugging and program development, and University of Michigan followers seeking an introductory Python course",
+            "text": "Software Development",
             "attributes": {
-              "href": "https://www.coursera.org/learn/python",
-              "data-testid": "ai-summary-product-card"
+              "href": "/browse/computer-science/software-development"
             }
           },
           {
             "id": "pw-27",
-            "role": "button",
-            "text": "python introduction",
+            "role": "link",
+            "text": "Charles Russell Severance",
             "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
-            }
-          },
-          {
-            "id": "pw-28",
-            "role": "button",
-            "text": "python programming",
-            "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
+              "href": "/instructor/drchuck"
             }
           },
           {
             "id": "pw-29",
             "role": "button",
-            "text": "python for everybody",
+            "text": "Enroll for free\nStarts May 17",
             "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
-            }
-          },
-          {
-            "id": "pw-30",
-            "role": "button",
-            "text": "python for finance",
-            "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
+              "type": "submit"
             }
           },
           {
             "id": "pw-31",
-            "role": "button",
-            "text": "python for data analysis",
+            "role": "link",
+            "text": "Learn more",
             "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
-            }
-          },
-          {
-            "id": "pw-32",
-            "role": "button",
-            "text": "python for computer science",
-            "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
+              "href": "/courseraplus",
+              "aria-label": "Learn more about Coursera Plus"
             }
           },
           {
             "id": "pw-33",
-            "role": "button",
-            "text": "python for engineers",
+            "role": "link",
+            "text": "5 course series",
             "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
-            }
-          },
-          {
-            "id": "pw-34",
-            "role": "button",
-            "text": "python from scratch",
-            "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
-            }
-          },
-          {
-            "id": "pw-35",
-            "role": "button",
-            "text": "python full",
-            "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
+              "href": "#courses"
             }
           },
           {
             "id": "pw-36",
-            "role": "button",
-            "text": "python for ai",
+            "role": "link",
+            "text": "Learn more",
             "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
+              "href": "#credits",
+              "aria-label": "Learn more about degree credit"
             }
           },
           {
             "id": "pw-38",
-            "role": "button",
-            "text": "Filter & Sort",
+            "role": "link",
+            "text": "5 course series",
             "attributes": {
-              "type": "button",
-              "data-testid": "filter-and-sort-button"
-            }
-          },
-          {
-            "id": "pw-39",
-            "role": "button",
-            "text": "Topic",
-            "attributes": {
-              "type": "button",
-              "data-testid": "filter-dropdown-topic"
-            }
-          },
-          {
-            "id": "pw-40",
-            "role": "button",
-            "text": "Duration",
-            "attributes": {
-              "type": "button",
-              "data-testid": "filter-dropdown-productDuration"
+              "href": "#courses"
             }
           },
           {
             "id": "pw-41",
-            "role": "button",
-            "text": "Learning Product",
+            "role": "link",
+            "text": "Learn more",
             "attributes": {
-              "type": "button",
-              "data-testid": "filter-dropdown-productTypeDescription"
+              "href": "#credits",
+              "aria-label": "Learn more about degree credit"
             }
           },
           {
             "id": "pw-42",
-            "role": "button",
-            "text": "Language",
+            "role": "link",
+            "text": "About",
             "attributes": {
-              "type": "button",
-              "data-testid": "filter-dropdown-language"
+              "href": "#about"
             }
           },
           {
             "id": "pw-43",
-            "role": "button",
-            "text": "Level",
+            "role": "link",
+            "text": "Outcomes",
             "attributes": {
-              "type": "button",
-              "data-testid": "filter-dropdown-productDifficultyLevel"
+              "href": "#outcomes"
             }
           },
           {
             "id": "pw-44",
-            "role": "button",
-            "text": "Core Python Programming Skills",
+            "role": "link",
+            "text": "Courses",
             "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
+              "href": "#courses"
             }
           },
           {
             "id": "pw-45",
-            "role": "button",
-            "text": "Data Analysis and Manipulation with Python",
+            "role": "link",
+            "text": "Testimonials",
             "attributes": {
-              "type": "button",
-              "data-testid": "chip-button-inactive"
+              "href": "#testimonials"
             }
           },
           {
-            "id": "pw-47",
-            "role": "link",
-            "text": "Python for Data Science, AI & Development",
+            "id": "pw-48",
+            "role": "button",
+            "text": "Read more",
             "attributes": {
-              "id": "cds-react-aria-:R58qb5p9ld6jbal6kq:-product-card-title",
-              "href": "/learn/python-for-applied-data-science-ai",
-              "aria-label": "Python for Data Science, AI & Development, offered by IBM, COURSE"
+              "type": "button"
             }
           },
           {
             "id": "pw-49",
             "role": "link",
-            "text": "Python for Everybody",
+            "text": "Data Presentation",
             "attributes": {
-              "id": "cds-react-aria-:R59ab5p9ld6jbal6kq:-product-card-title",
-              "href": "/specializations/python",
-              "aria-label": "Python for Everybody, offered by University of Michigan, SPECIALIZATION"
+              "href": "https://www.coursera.org/courses?query=data%20presentation"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Data Processing",
+            "attributes": {
+              "href": "https://www.coursera.org/courses?query=data%20processing"
             }
           },
           {
             "id": "pw-51",
             "role": "link",
-            "text": "Crash Course on Python",
+            "text": "Data Store",
             "attributes": {
-              "id": "cds-react-aria-:R59qb5p9ld6jbal6kq:-product-card-title",
-              "href": "/learn/python-crash-course",
-              "aria-label": "Crash Course on Python, offered by Google, COURSE"
+              "href": "https://www.coursera.org/courses?query=data%20store"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Data Structures",
+            "attributes": {
+              "href": "https://www.coursera.org/courses?query=data%20structures"
             }
           },
           {
             "id": "pw-53",
             "role": "link",
-            "text": "Programming for Everybody (Getting Started with Python)",
+            "text": "Data Visualization Software",
             "attributes": {
-              "id": "cds-react-aria-:R5aab5p9ld6jbal6kq:-product-card-title",
-              "href": "/learn/python",
-              "aria-label": "Programming for Everybody (Getting Started with Python), offered by University of Michigan, COURSE"
+              "href": "https://www.coursera.org/courses?query=data%20visualization%20software"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Databases",
+            "attributes": {
+              "href": "https://www.coursera.org/courses?query=databases"
             }
           },
           {
             "id": "pw-55",
             "role": "link",
-            "text": "Data Analysis with Python",
+            "text": "Database Design",
             "attributes": {
-              "id": "cds-react-aria-:R5aqb5p9ld6jbal6kq:-product-card-title",
-              "href": "/learn/data-analysis-with-python",
-              "aria-label": "Data Analysis with Python, offered by IBM, COURSE"
+              "href": "https://www.coursera.org/courses?query=database%20design"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Debugging",
+            "attributes": {
+              "href": "https://www.coursera.org/courses?query=debugging"
             }
           },
           {
             "id": "pw-57",
             "role": "link",
-            "text": "Introduction to Data Analysis Using Python",
+            "text": "File I/O",
             "attributes": {
-              "id": "cds-react-aria-:R5bab5p9ld6jbal6kq:-product-card-title",
-              "href": "/learn/introduction-to-data-analysis-using-python",
-              "aria-label": "Introduction to Data Analysis Using Python, offered by Google, COURSE"
+              "href": "https://www.coursera.org/courses?query=file%20i%2Fo"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "link",
+            "text": "Program Development",
+            "attributes": {
+              "href": "https://www.coursera.org/courses?query=program%20development"
             }
           },
           {
             "id": "pw-59",
-            "role": "button",
-            "text": "Start my career",
+            "role": "link",
+            "text": "Programming Principles",
             "attributes": {
-              "id": "hiddenRadio-LEARNING_GOAL_LAND_NEW_JOB",
-              "type": "button",
-              "aria-label": "Start my career",
-              "value": "LEARNING_GOAL_LAND_NEW_JOB"
+              "href": "https://www.coursera.org/courses?query=programming%20principles"
             }
           },
           {
             "id": "pw-60",
-            "role": "button",
-            "text": "Change my career",
+            "role": "link",
+            "text": "SQL",
             "attributes": {
-              "id": "hiddenRadio-LEARNING_GOAL_CHANGE_CAREER",
-              "type": "button",
-              "aria-label": "Change my career",
-              "value": "LEARNING_GOAL_CHANGE_CAREER"
+              "href": "https://www.coursera.org/courses?query=sql"
             }
           },
           {
             "id": "pw-61",
-            "role": "button",
-            "text": "Grow in my current role",
+            "role": "link",
+            "text": "Data Visualization",
             "attributes": {
-              "id": "hiddenRadio-LEARNING_GOAL_IMPROVE_SKILLS",
-              "type": "button",
-              "aria-label": "Grow in my current role",
-              "value": "LEARNING_GOAL_IMPROVE_SKILLS"
+              "href": "https://www.coursera.org/courses?query=data%20visualization"
             }
           },
           {
             "id": "pw-62",
-            "role": "button",
-            "text": "Explore topics outside of work",
+            "role": "link",
+            "text": "Web Scraping",
             "attributes": {
-              "id": "hiddenRadio-LEARNING_GOAL_PERSONAL_INTEREST",
-              "type": "button",
-              "aria-label": "Explore topics outside of work",
-              "value": "LEARNING_GOAL_PERSONAL_INTEREST"
+              "href": "https://www.coursera.org/courses?query=web%20scraping"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "link",
+            "text": "Web Services",
+            "attributes": {
+              "href": "https://www.coursera.org/courses?query=web%20services"
             }
           }
         ]
@@ -2360,7 +1780,7 @@
       "action": {
         "action": "finish",
         "args": {
-          "final_answer": "Error planning: Extra data: line 2 column 1 (char 101)"
+          "final_answer": "Coursera course found: Python for Everybody Specialization by the University of Michigan. It offers a shareable certificate, and the estimated duration is 2 months at 10 hours per week."
         }
       },
       "observation": "Finished"

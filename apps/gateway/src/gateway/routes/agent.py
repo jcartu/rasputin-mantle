@@ -15,7 +15,10 @@ from pydantic import BaseModel, ConfigDict, Field
 from sandbox.backend import create_backend
 
 from gateway.config import settings
-
+from gateway.cost_wall import CostCeilingExceeded, default_cost_wall
+from gateway import model_client
+from gateway.model_client import ModelCallError
+from gateway.sessions import broker
 router = APIRouter()
 
 AgentActionName = Literal["open", "click", "type", "evaluate", "finish"]
@@ -83,12 +86,10 @@ async def run_agent(request: AgentRunRequest) -> AgentRunResponse:
             sandbox_id = await asyncio.to_thread(sandbox.create)
             await browser._open(starting_url)  # noqa: SLF001
 
-            async with httpx.AsyncClient(timeout=VLLM_TIMEOUT) as client:
-                for step_index in range(1, request.max_steps + 1):
+            for step_index in range(1, request.max_steps + 1):
                     state = _state_for_model(await browser._get_state())  # noqa: SLF001
                     await _validated_http_url(str(state.get("url") or ""))
                     action = await _plan_next_action(
-                        client,
                         task=request.task,
                         state=state,
                         previous_steps=steps,
@@ -122,7 +123,6 @@ async def run_agent(request: AgentRunRequest) -> AgentRunResponse:
 
 
 async def _plan_next_action(
-    client: httpx.AsyncClient,
     *,
     task: str,
     state: dict[str, Any],
@@ -137,57 +137,44 @@ async def _plan_next_action(
             for step in previous_steps[-5:]
         ],
     }
-    # Route to OpenAI when planner is specified (e.g. "gpt-5.5")
+    messages = [
+        {
+            "role": "system",
+            "content": (
+                "You are a WebVoyager browser agent. Return exactly one JSON object with shape "
+                '{"action":"open|click|type|evaluate|finish","args":{...}}. '
+                "Use element ids from state.elements for click/type. "
+                "For finish, put the answer in args.final_answer."
+            ),
+        },
+        {"role": "user", "content": json.dumps(prompt, separators=(",", ":"))},
+    ]
     if planner:
-        return await _plan_openai(
-            client, task=task, state=state, previous_steps=previous_steps, planner=planner
-        )
-    # Default: vLLM
+        return await _plan_openai(messages=messages, planner=planner)
+    return await _plan_vllm(messages=messages)
+
+
+async def _plan_vllm(*, messages: list[dict[str, Any]]) -> AgentAction:
     try:
-        response = await client.post(
-            _chat_completions_url(settings.vllm_base_url),
-            headers=_vllm_headers(),
-            json={
-                "model": settings.vllm_model,
-                "temperature": 0,
-                "messages": [
-                    {
-                        "role": "system",
-                        "content": (
-                            "You are a WebVoyager browser agent. Return exactly one JSON object with shape "
-                            '{"action":"open|click|type|evaluate|finish","args":{...}}. '
-                            "Use element ids from state.elements for click/type. "
-                            "For finish, put the answer in args.final_answer."
-                        ),
-                    },
-                    {"role": "user", "content": json.dumps(prompt, separators=(",", ":"))},
-                ],
-            },
+        result = await model_client.vllm_chat(
+            model=settings.vllm_model,
+            messages=messages,
+            max_tokens=4096,
+            workspace_id="default",
+            temperature=0,
         )
-        response.raise_for_status()
-    except httpx.HTTPError as exc:
+    except ModelCallError as exc:
         raise HTTPException(
             status_code=502,
-            detail={"error": "vllm_call_failed", "message": "vLLM request failed"},
+            detail={"error": "vllm_call_failed", "message": str(exc)},
         ) from exc
-
-    try:
-        content = response.json()["choices"][0]["message"]["content"]
-    except (KeyError, IndexError, TypeError) as exc:
-        raise HTTPException(
-            status_code=502,
-            detail={"error": "invalid_vllm_response", "message": "vLLM response did not include message content"},
-        ) from exc
-
-    return _parse_action(str(content))
+    await _enforce_cost(result)
+    return _parse_action(result["content"])
 
 
 async def _plan_openai(
-    client: httpx.AsyncClient,
     *,
-    task: str,
-    state: dict[str, Any],
-    previous_steps: list[AgentStep],
+    messages: list[dict[str, Any]],
     planner: str,
 ) -> AgentAction:
     if not settings.openai_api_key:
@@ -195,57 +182,45 @@ async def _plan_openai(
             status_code=500,
             detail={"error": "openai_not_configured", "message": "OPENAI_API_KEY is not set"},
         )
-    prompt = {
-        "task": task,
-        "state": state,
-        "previous_steps": [
-            {"step": step.step, "action": step.action, "observation": step.observation}
-            for step in previous_steps[-5:]
-        ],
-    }
     try:
-        response = await client.post(
-            "https://api.openai.com/v1/chat/completions",
-            headers={
-                "Content-Type": "application/json",
-                "Authorization": f"Bearer {settings.openai_api_key}",
-            },
-            json={
-                "model": planner,
-                "temperature": 0,
-                "max_tokens": 4096,
-                "thinking": {"type": "enabled", "budget_tokens": 16384},
-                "messages": [
-                    {
-                        "role": "system",
-                        "content": (
-                            "You are a WebVoyager browser agent. Return exactly one JSON object with shape "
-                            '{"action":"open|click|type|evaluate|finish","args":{...}}. '
-                            "Use element ids from state.elements for click/type. "
-                            "For finish, put the answer in args.final_answer."
-                        ),
-                    },
-                    {"role": "user", "content": json.dumps(prompt, separators=(",", ":"))},
-                ],
-            },
+        result = await model_client.openai_chat(
+            model=planner,
+            messages=messages,
+            max_tokens=8192,
+            workspace_id="default",
+            temperature=0,
+            thinking_enabled=True,
+            thinking_budget_tokens=16384,
         )
-        response.raise_for_status()
-    except httpx.HTTPError as exc:
+    except ModelCallError as exc:
         raise HTTPException(
             status_code=502,
-            detail={"error": "openai_call_failed", "message": "OpenAI request failed"},
+            detail={"error": "openai_call_failed", "message": str(exc)},
         ) from exc
+    await _enforce_cost(result)
+    return _parse_action(result["content"])
 
+
+async def _enforce_cost(result: dict[str, Any]) -> None:
+    """Check cost wall and update session cost tracking after each LLM call."""
     try:
-        content = response.json()["choices"][0]["message"]["content"]
-    except (KeyError, IndexError, TypeError) as exc:
+        await default_cost_wall.check_and_record(
+            workspace_id="default",
+            model=result["model"],
+            input_tokens=result["input_tokens"],
+            output_tokens=result["output_tokens"],
+            cost_usd=result["cost_usd"],
+        )
+    except CostCeilingExceeded as exc:
         raise HTTPException(
-            status_code=502,
-            detail={"error": "invalid_openai_response", "message": "OpenAI response did not include message content"},
+            status_code=429,
+            detail={
+                "error": "cost_ceiling_exceeded",
+                "message": "Session cost ceiling exceeded",
+                "cost_dollars": round(exc.attempted_total_usd, 4),
+                "max_cost_dollars": exc.max_cost_dollars,
+            },
         ) from exc
-
-    return _parse_action(str(content))
-
 
 async def _execute_action(browser: PlaywrightBackend, action: AgentAction) -> tuple[str, str | None]:
     name = action.action

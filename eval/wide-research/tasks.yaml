@@ -1,0 +1,49 @@
+tasks:
+  - id: wr-001
+    query: "current state of open-source browser automation agents"
+  - id: wr-002
+    query: "APScheduler Redis job store persistence best practices"
+  - id: wr-003
+    query: "Brave Search API web search endpoint usage"
+  - id: wr-004
+    query: "Exa search API neural web search examples"
+  - id: wr-005
+    query: "memory augmented agents long term retrieval benchmarks"
+  - id: wr-006
+    query: "LoCoMo benchmark conversational memory systems"
+  - id: wr-007
+    query: "Docker sandbox security no new privileges Python containers"
+  - id: wr-008
+    query: "FastAPI async HTTP client production patterns"
+  - id: wr-009
+    query: "parallel web research agent result deduplication ranking"
+  - id: wr-010
+    query: "Redis persistence options RDB AOF scheduler reliability"
+  - id: wr-011
+    query: "LLM as a judge evaluation reliability guidelines"
+  - id: wr-012
+    query: "self hosted AI agent architecture gateway sandbox memory"
+  - id: wr-013
+    query: "Qdrant hybrid search BM25 dense retrieval memory agents"
+  - id: wr-014
+    query: "Claude Messages API Python httpx minimal request"
+  - id: wr-015
+    query: "asyncio gather exception handling concurrent workers Python"
+  - id: wr-016
+    query: "FastAPI 501 Not Implemented use cases API backend unavailable"
+  - id: wr-017
+    query: "agent sandboxes compute SDK docker isolation patterns"
+  - id: wr-018
+    query: "semantic search result snippets citation formatting markdown"
+  - id: wr-019
+    query: "test async Python HTTP clients with respx pytest"
+  - id: wr-020
+    query: "fakeredis APScheduler RedisJobStore testing limitations"
+  - id: wr-021
+    query: "local fallback cache when external microservice unavailable"
+  - id: wr-022
+    query: "wide research multi agent search synthesis architecture"
+  - id: wr-023
+    query: "cost ceiling middleware AI gateway token budget enforcement"
+  - id: wr-024
+    query: "Python package monorepo uv workspace local packages"

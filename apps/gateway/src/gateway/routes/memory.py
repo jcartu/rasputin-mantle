@@ -1,55 +1,45 @@
 from __future__ import annotations
 
-import httpx
+from typing import Any
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter
+from pydantic import BaseModel
+
+from gateway.memory_client import MemoryClient
 
 router = APIRouter()
+memory_client = MemoryClient()
 
 
-@router.post('/store')
-async def memory_store(content: str, source: str = 'gateway', importance: float = 0.5) -> dict:
-    async with httpx.AsyncClient(base_url='http://127.0.0.1:7777', timeout=60.0) as client:
-        try:
-            resp = await client.post('/commit', json={'text': content, 'source': source, 'importance': importance})
-            if resp.status_code != 200:
-                raise HTTPException(status_code=502, detail={'error': 'memory_store_failed'})
-            return resp.json()
-        except httpx.ConnectError as exc:
-            raise HTTPException(status_code=503, detail={'error': 'memory_unavailable'}) from exc
+class MemoryStoreRequest(BaseModel):
+    key: str | None = None
+    value: Any | None = None
+    content: str | None = None
+    source: str = "gateway"
+    importance: float = 0.5
 
 
-@router.get('/search')
+@router.post("/store")
+async def memory_store(request: MemoryStoreRequest | None = None, content: str | None = None, source: str = "gateway") -> dict:
+    if request is not None:
+        key = request.key or request.source
+        value = request.value if request.value is not None else request.content
+    else:
+        key = source
+        value = content
+    return await memory_client.store(str(key), value)
+
+
+@router.get("/search")
 async def memory_search(query: str, limit: int = 10) -> dict:
-    async with httpx.AsyncClient(base_url='http://127.0.0.1:7777', timeout=60.0) as client:
-        try:
-            resp = await client.get('/search', params={'q': query, 'limit': limit})
-            if resp.status_code != 200:
-                raise HTTPException(status_code=502, detail={'error': 'memory_search_failed'})
-            return resp.json()
-        except httpx.ConnectError as exc:
-            raise HTTPException(status_code=503, detail={'error': 'memory_unavailable'}) from exc
+    return await memory_client.query(query, k=limit)
 
 
-@router.post('/reflect')
+@router.post("/reflect")
 async def memory_reflect(query: str, limit: int = 10) -> dict:
-    async with httpx.AsyncClient(base_url='http://127.0.0.1:7777', timeout=60.0) as client:
-        try:
-            resp = await client.post('/reflect', json={'q': query, 'limit': limit})
-            if resp.status_code != 200:
-                raise HTTPException(status_code=502, detail={'error': 'memory_reflect_failed'})
-            return resp.json()
-        except httpx.ConnectError as exc:
-            raise HTTPException(status_code=503, detail={'error': 'memory_unavailable'}) from exc
+    return await memory_client.reflect(query, k=limit)
 
 
-@router.get('/stats')
+@router.get("/stats")
 async def memory_stats() -> dict:
-    async with httpx.AsyncClient(base_url='http://127.0.0.1:7777', timeout=60.0) as client:
-        try:
-            resp = await client.get('/stats')
-            if resp.status_code != 200:
-                raise HTTPException(status_code=502, detail={'error': 'memory_stats_failed'})
-            return resp.json()
-        except httpx.ConnectError as exc:
-            raise HTTPException(status_code=503, detail={'error': 'memory_unavailable'}) from exc
+    return await memory_client.stats()

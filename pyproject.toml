@@ -1,7 +1,7 @@
 # Workspace root — not a buildable package
 
 [tool.uv.workspace]
-members = ["apps/gateway", "packages/sandbox", "packages/codeact", "packages/wide-research", "packages/scheduler"]
+members = ["apps/gateway", "packages/sandbox", "packages/codeact", "packages/wide-research", "packages/scheduler", "packages/browser", "packages/skills", "packages/shared"]
 
 [tool.ruff]
 target-version = "py311"
@@ -17,3 +17,11 @@ disallow_untyped_defs = false
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+[tool.uv.sources]
+wide-research = { workspace = true }
+scheduler = { workspace = true }
+sandbox = { workspace = true }
+mantle-codeact = { workspace = true }
+mantle-skills = { workspace = true }
+mantle-browser = { workspace = true }
+mantle-shared = { workspace = true }

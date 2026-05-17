@@ -1,1 +1,1 @@
-self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/home/josh/dev/rasputin-mantle/apps/web/app/layout\":[\"static/media/d3ebbfd689654d3a-s.p.woff2\",\"static/media/98e207f02528a563-s.p.woff2\",\"static/media/db96af6b531dc71f-s.p.woff2\",\"static/media/e4af272ccee01ff0-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{},\"appUsingSizeAdjust\":false,\"pagesUsingSizeAdjust\":false}"

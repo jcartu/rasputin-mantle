@@ -5,10 +5,11 @@ from typing import Any
 from fastapi import APIRouter
 from pydantic import BaseModel
 
+from gateway.config import settings
 from gateway.memory_client import MemoryClient
 
 router = APIRouter()
-memory_client = MemoryClient()
+memory_client = MemoryClient(memory_url=settings.rasputin_url, token=settings.rasputin_token)
 
 
 class MemoryStoreRequest(BaseModel):
@@ -20,7 +21,11 @@ class MemoryStoreRequest(BaseModel):
 
 
 @router.post("/store")
-async def memory_store(request: MemoryStoreRequest | None = None, content: str | None = None, source: str = "gateway") -> dict:
+async def memory_store(
+    request: MemoryStoreRequest | None = None,
+    content: str | None = None,
+    source: str = "gateway",
+) -> dict:
     if request is not None:
         key = request.key or request.source
         value = request.value if request.value is not None else request.content

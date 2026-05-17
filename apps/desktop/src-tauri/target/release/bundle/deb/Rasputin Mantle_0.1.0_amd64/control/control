@@ -1,0 +1,9 @@
+Package: rasputin-mantle
+Version: 0.1.0
+Architecture: amd64
+Installed-Size: 12558
+Maintainer: Rasputin Mantle
+Priority: optional
+Depends: libwebkit2gtk-4.1-0, libgtk-3-0
+Description: Rasputin Mantle desktop shell
+ (none)

@@ -90,8 +90,15 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Run 20 GAIA-mini web-search tasks against the Mantle gateway.")
     parser.add_argument("--tasks", type=Path, default=Path(__file__).with_name("tasks.yaml"))
     parser.add_argument("--gateway-url", default=os.environ.get("GATEWAY_URL", DEFAULT_GATEWAY_URL))
+    parser.add_argument("--output", default=None, help="Write results to JSON file")
     args = parser.parse_args()
-    print(json.dumps(asyncio.run(run_eval(args.tasks, args.gateway_url)), indent=2, sort_keys=True))
+    results = asyncio.run(run_eval(args.tasks, args.gateway_url))
+    output_json = json.dumps(results, indent=2, sort_keys=True)
+    print(output_json)
+    if args.output:
+        os.makedirs(os.path.dirname(args.output) or ".", exist_ok=True)
+        with open(args.output, "w") as f:
+            f.write(output_json)
 
 
 if __name__ == "__main__":

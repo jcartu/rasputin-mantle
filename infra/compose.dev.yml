@@ -98,6 +98,35 @@ services:
       timeout: 5s
       retries: 5
 
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: mantle-qdrant
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:6333:6333"
+      - "127.0.0.1:6334:6334"
+    volumes:
+      - qdrant_data:/qdrant/storage
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:6333/healthz"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  falkordb:
+    image: falkordb/falkordb:latest
+    container_name: mantle-falkordb
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:6379:6379"
+    volumes:
+      - falkordb_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "-p", "6379", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
   rasputin-memory:
     # The user's existing rasputin-memory submodule, exposed as an HTTP service.
     build:
@@ -106,12 +135,17 @@ services:
     container_name: mantle-memory
     restart: unless-stopped
     depends_on:
-      postgres:
+      qdrant:
+        condition: service_healthy
+      falkordb:
         condition: service_healthy
     ports:
       - "${RASPUTIN_MEMORY_PORT:-7777}:7777"
     environment:
-      DATABASE_URL: "postgresql://mantle:${POSTGRES_PASSWORD:-mantle-dev}@postgres:5432/mantle"
+      QDRANT_URL: "http://qdrant:6333"
+      FALKORDB_HOST: "falkordb"
+      EMBED_PROVIDER: ${EMBED_PROVIDER:-}
+      LLM_PROVIDER: ${LLM_PROVIDER:-}
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:7777/health"]
       interval: 30s
@@ -123,3 +157,5 @@ volumes:
   redis-data:
   whisper-models:
   kokoro-models:
+  qdrant_data:
+  falkordb_data:

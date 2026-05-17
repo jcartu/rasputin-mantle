@@ -11,7 +11,7 @@ dependencies = [
   "wide-research",
   "scheduler",
   "asyncpg>=0.29.0,<1",
-  "mantle-sandbox",
+  "sandbox",
 "mantle-codeact",
 "mantle-skills",
 "mantle-browser",

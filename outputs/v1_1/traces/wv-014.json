@@ -1,0 +1,3231 @@
+{
+  "task_id": "wv-014",
+  "task_description": "On Amazon, find the price of the current Kindle Paperwhite model.",
+  "starting_url": "https://www.amazon.com",
+  "passed": true,
+  "final_answer": "The current Kindle Paperwhite 16GB (newest model) is listed at $179.99 on Amazon.",
+  "duration_s": 111.48,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://www.amazon.com/",
+        "title": "Amazon.com. Spend less. Smile more.",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Main content",
+            "attributes": {
+              "id": "nav-assist-skip-to-main-content",
+              "href": "#skippedLink",
+              "aria-label": "main content"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Search\nopt\n+\n/",
+            "attributes": {
+              "id": "nav-assist-search",
+              "href": "javascript:void(0)",
+              "aria-label": "Search, option, forward slash"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Cart\nshift\n+\nopt\n+\nC",
+            "attributes": {
+              "id": "nav-assist-cart",
+              "href": "javascript:void(0)",
+              "aria-label": "Cart, shift, option, c"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "Home\nshift\n+\nopt\n+\nH",
+            "attributes": {
+              "id": "nav-assist-home",
+              "href": "javascript:void(0)",
+              "aria-label": "Home, shift, option, h"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Orders\nshift\n+\nopt\n+\nO",
+            "attributes": {
+              "id": "nav-assist-your-orders",
+              "href": "javascript:void(0)",
+              "aria-label": "Your orders, shift, option, o"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "button",
+            "text": "Show/Hide shortcuts\nshift\n+\nopt\n+\nZ",
+            "attributes": {
+              "id": "nav-assist-show-shortcuts",
+              "aria-label": "Show/hide shortcuts, shift, option, z"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Amazon",
+            "attributes": {
+              "id": "nav-logo-sprites",
+              "href": "/ref=nav_logo",
+              "aria-label": "Amazon"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "combobox",
+            "text": "All Departments\nAlexa Skills\nAll the Best Pet Care\nAmazon Devices\nAmazon Fresh\nAmazon Global Store\nAmazon Haul\nAmazon One Medical\nAmazon Pharmacy\nAmazon Resale\nAppliances\nApps & Games\nArts, Crafts & Sewing\nAudible Books & Originals\nAutomotive Parts & Accessories\nBaby\nBartell's\nBeauty & Personal Care\nBooks\nBristol Farms\nCardenas\nCards Supermarket\nCDs & Vinyl\nCell Phones & Accessories\nClothing, Shoes & Jewelry\nWomen's Clothing, Shoes & Jewelry\nMen's Clothing, Shoes & Jewelry\nGirl's Clothing, Shoes & Jewelry\nBoy's Clothing, Shoes & Jewelry\nBaby Clothing, Shoes & Jewelry\nCollectibles & Fine Art\nComputers\nCredit and Payment Cards\nCub\nDigital Music\nElectronics\nFoodMaxx\nFresh Thyme\nGarden & Outdoor\nGift Cards\nGrocery & Gourmet Food\nHandmade\nHealth, Household & Baby Care\nHome & Business Services\nHome & Kitchen\nIndustrial & Scientific\nJust for Prime\nKegNBottle\nKindle Store\nLazy Acres Natural Market\nLucky\nLuggage & Travel Gear\nLuxury Stores\nMagazine Subscriptions\nMetropolitan Market\nMission Wine & Spirits\nMovies & TV\nMusical Instruments\nNew Seasons Market\nOffice Products\nPet Food Express\nPet Supplies\nPetco\nPremium Beauty\nPrime Video\nRite Aid\nSame-Day Store\nSave Mart\nSedano's\nSmart Home\nSoftware\nSousa's Wine & Liquors\nSports & Outdoors\nSubscribe & Save\nSubscription Boxes\nSurdyk's Liquor & Cheese Shop\nTools & Home Improvement\nToys & Games\nUnder $10\nVideo Games\nWeis\nWhole Foods Market\nWinn Dixie",
+            "attributes": {
+              "id": "searchDropdownBox",
+              "name": "url"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "searchbox",
+            "text": "Search Amazon",
+            "attributes": {
+              "id": "twotabsearchtextbox",
+              "name": "field-keywords",
+              "type": "text",
+              "aria-label": "Search Amazon",
+              "placeholder": "Search Amazon",
+              "value": ""
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "EN",
+            "attributes": {
+              "href": "/customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang",
+              "aria-label": "Choose a language for shopping in Amazon United States. The current selection is English (EN).\n"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": "Expand to Change Language or Country",
+            "attributes": {
+              "aria-label": "Expand to Change Language or Country"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "Hello\nAccount & Lists",
+            "attributes": {
+              "href": "http://www.amazon.com/gp/css/homepage.html?ref_=nav_youraccount_btn_b"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "button",
+            "text": "Expand Account and Lists",
+            "attributes": {
+              "aria-label": "Expand Account and Lists"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Returns\n& Orders",
+            "attributes": {
+              "id": "nav-orders",
+              "href": "/gp/css/order-history?ref_=nav_orders_first"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Cart",
+            "attributes": {
+              "id": "nav-cart",
+              "href": "/gp/cart/view.html?ref_=nav_cart",
+              "aria-label": " items in cart"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Create a List",
+            "attributes": {
+              "href": "/hz/wishlist/ls?triggerElementID=createList&ref_=nav_ListFlyout_navFlyout_createList_lv_redirect"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Find a List or Registry",
+            "attributes": {
+              "href": "/registries?ref_=nav_ListFlyout_find"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Account",
+            "attributes": {
+              "href": "/gp/css/homepage.html?ref_=nav_AccountFlyout_ya"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Orders",
+            "attributes": {
+              "id": "nav_prefetch_yourorders",
+              "href": "/gp/css/order-history?ref_=nav_AccountFlyout_orders"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Keep Shopping For",
+            "attributes": {
+              "href": "/hz/mobile/mission?ref_=nav_AccountFlyout_ci_mcx_mi_d_nf"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Recommendations",
+            "attributes": {
+              "href": "/gp/yourstore?ref_=nav_AccountFlyout_recs"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Browsing History",
+            "attributes": {
+              "href": "/gp/history?ref_=nav_AccountFlyout_browsinghistory"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Your Shopping preferences",
+            "attributes": {
+              "href": "https://www.amazon.com/slc/hub?ref_=nav_AccountFlyout_sl_ph_navflyout"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Amazon Credit Cards",
+            "attributes": {
+              "href": "https://www.amazon.com/credit/landing?ref_=nav_AccountFlyout_ya_amazon_cc_landing_ms"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Watchlist",
+            "attributes": {
+              "href": "/gp/video/watchlist?ref_=nav_AccountFlyout_ywl"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Video Purchases & Rentals",
+            "attributes": {
+              "href": "/gp/video/library?ref_=nav_AccountFlyout_yvl"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Kindle Unlimited",
+            "attributes": {
+              "href": "/gp/kindle/ku/ku_central?ref_=nav_AccountFlyout_ku"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Content & Devices",
+            "attributes": {
+              "href": "/hz/mycd/myx?pageType=content&ref_=nav_AccountFlyout_myk"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Subscribe & Save Items",
+            "attributes": {
+              "href": "/gp/subscribe-and-save/manager/viewsubscriptions?ref_=nav_AccountFlyout_sns"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Memberships & Subscriptions",
+            "attributes": {
+              "href": "/hz5/yourmembershipsandsubscriptions?ref_=nav_AccountFlyout_digital_subscriptions"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Prime Membership",
+            "attributes": {
+              "href": "/gp/subs/primeclub/account/homepage.html?ref_=nav_AccountFlyout_prime"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Music Library",
+            "attributes": {
+              "href": "https://music.amazon.com?ref=nav_youraccount_cldplyr"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Start a Selling Account",
+            "attributes": {
+              "href": "/b/?node=12766669011&ld=AZUSSOA-yaflyout&ref_=nav_AccountFlyout_cs_sell"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Create Your Free Business Account",
+            "attributes": {
+              "href": "/gp/browse.html?node=11261610011&ref_=nav_AccountFlyout_b2b_reg_bottom"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Customer Service",
+            "attributes": {
+              "href": "https://www.amazon.com/hz/contact-us?ref_=nav_AccountFlyout_CS"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "button",
+            "text": "All",
+            "attributes": {
+              "id": "nav-hamburger-menu",
+              "href": "javascript: void(0)",
+              "aria-label": "Open All Categories Menu"
+            }
+          },
+          {
+            "id": "pw-70",
+            "role": "link",
+            "text": "Medical Care",
+            "attributes": {
+              "href": "https://health.amazon.com/prime?ref_=nav_cs_all_health_ingress_onem_h"
+            }
+          },
+          {
+            "id": "pw-71",
+            "role": "button",
+            "text": "Medical Care Details",
+            "attributes": {
+              "aria-label": "Medical Care Details"
+            }
+          },
+          {
+            "id": "pw-72",
+            "role": "link",
+            "text": "Amazon Basics",
+            "attributes": {
+              "href": "/Amazon_Basics?channel=discovbar&field-lbr_brands_browse-bin=AmazonBasics&ref_=nav_cs_amazonbasics"
+            }
+          },
+          {
+            "id": "pw-73",
+            "role": "link",
+            "text": "Best Sellers",
+            "attributes": {
+              "href": "/gp/bestsellers/?ref_=nav_cs_bestsellers"
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "link",
+            "text": "Books",
+            "attributes": {
+              "href": "/books-used-books-textbooks/b/?ie=UTF8&node=283155&ref_=nav_cs_books"
+            }
+          },
+          {
+            "id": "pw-75",
+            "role": "link",
+            "text": "Registry",
+            "attributes": {
+              "href": "/gp/browse.html?node=16115931011&ref_=nav_cs_registry"
+            }
+          },
+          {
+            "id": "pw-76",
+            "role": "link",
+            "text": "Gift Cards",
+            "attributes": {
+              "href": "/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc"
+            }
+          },
+          {
+            "id": "pw-77",
+            "role": "button",
+            "text": "Gift Cards Details",
+            "attributes": {
+              "aria-label": "Gift Cards Details"
+            }
+          },
+          {
+            "id": "pw-78",
+            "role": "link",
+            "text": "Smart Home",
+            "attributes": {
+              "href": "/Smart-Home/b/?ie=UTF8&node=6563140011&ref_=nav_cs_smart_home"
+            }
+          },
+          {
+            "id": "pw-79",
+            "role": "link",
+            "text": "New Releases",
+            "attributes": {
+              "href": "/gp/new-releases/?ref_=nav_cs_newreleases"
+            }
+          },
+          {
+            "id": "pw-80",
+            "role": "link",
+            "text": "Today's Deals",
+            "attributes": {
+              "href": "/deals?ref_=nav_cs_gb"
+            }
+          },
+          {
+            "id": "pw-81",
+            "role": "link",
+            "text": "Groceries",
+            "attributes": {
+              "href": "/fmc/learn-more?ref_=nav_cs_groceries"
+            }
+          },
+          {
+            "id": "pw-82",
+            "role": "button",
+            "text": "Groceries Details",
+            "attributes": {
+              "aria-label": "Groceries Details"
+            }
+          },
+          {
+            "id": "pw-83",
+            "role": "link",
+            "text": "Pharmacy",
+            "attributes": {
+              "href": "https://pharmacy.amazon.com/?nodl=0&ref_=nav_cs_pharmacy"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "type",
+        "args": {
+          "id": "pw-11",
+          "text": "Kindle Paperwhite\n"
+        }
+      },
+      "observation": "Typed into pw-11"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://www.amazon.com/",
+        "title": "Amazon.com. Spend less. Smile more.",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Main content",
+            "attributes": {
+              "id": "nav-assist-skip-to-main-content",
+              "href": "#skippedLink",
+              "aria-label": "main content"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Search\nopt\n+\n/",
+            "attributes": {
+              "id": "nav-assist-search",
+              "href": "javascript:void(0)",
+              "aria-label": "Search, option, forward slash"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Cart\nshift\n+\nopt\n+\nC",
+            "attributes": {
+              "id": "nav-assist-cart",
+              "href": "javascript:void(0)",
+              "aria-label": "Cart, shift, option, c"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "Home\nshift\n+\nopt\n+\nH",
+            "attributes": {
+              "id": "nav-assist-home",
+              "href": "javascript:void(0)",
+              "aria-label": "Home, shift, option, h"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Orders\nshift\n+\nopt\n+\nO",
+            "attributes": {
+              "id": "nav-assist-your-orders",
+              "href": "javascript:void(0)",
+              "aria-label": "Your orders, shift, option, o"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "button",
+            "text": "Show/Hide shortcuts\nshift\n+\nopt\n+\nZ",
+            "attributes": {
+              "id": "nav-assist-show-shortcuts",
+              "aria-label": "Show/hide shortcuts, shift, option, z"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Amazon",
+            "attributes": {
+              "id": "nav-logo-sprites",
+              "href": "/ref=nav_logo",
+              "aria-label": "Amazon"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "combobox",
+            "text": "All Departments\nAlexa Skills\nAll the Best Pet Care\nAmazon Devices\nAmazon Fresh\nAmazon Global Store\nAmazon Haul\nAmazon One Medical\nAmazon Pharmacy\nAmazon Resale\nAppliances\nApps & Games\nArts, Crafts & Sewing\nAudible Books & Originals\nAutomotive Parts & Accessories\nBaby\nBartell's\nBeauty & Personal Care\nBooks\nBristol Farms\nCardenas\nCards Supermarket\nCDs & Vinyl\nCell Phones & Accessories\nClothing, Shoes & Jewelry\nWomen's Clothing, Shoes & Jewelry\nMen's Clothing, Shoes & Jewelry\nGirl's Clothing, Shoes & Jewelry\nBoy's Clothing, Shoes & Jewelry\nBaby Clothing, Shoes & Jewelry\nCollectibles & Fine Art\nComputers\nCredit and Payment Cards\nCub\nDigital Music\nElectronics\nFoodMaxx\nFresh Thyme\nGarden & Outdoor\nGift Cards\nGrocery & Gourmet Food\nHandmade\nHealth, Household & Baby Care\nHome & Business Services\nHome & Kitchen\nIndustrial & Scientific\nJust for Prime\nKegNBottle\nKindle Store\nLazy Acres Natural Market\nLucky\nLuggage & Travel Gear\nLuxury Stores\nMagazine Subscriptions\nMetropolitan Market\nMission Wine & Spirits\nMovies & TV\nMusical Instruments\nNew Seasons Market\nOffice Products\nPet Food Express\nPet Supplies\nPetco\nPremium Beauty\nPrime Video\nRite Aid\nSame-Day Store\nSave Mart\nSedano's\nSmart Home\nSoftware\nSousa's Wine & Liquors\nSports & Outdoors\nSubscribe & Save\nSubscription Boxes\nSurdyk's Liquor & Cheese Shop\nTools & Home Improvement\nToys & Games\nUnder $10\nVideo Games\nWeis\nWhole Foods Market\nWinn Dixie",
+            "attributes": {
+              "id": "searchDropdownBox",
+              "name": "url"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "searchbox",
+            "text": "Search Amazon",
+            "attributes": {
+              "id": "twotabsearchtextbox",
+              "name": "field-keywords",
+              "type": "text",
+              "aria-label": "Search Amazon",
+              "placeholder": "Search Amazon",
+              "value": ""
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "EN",
+            "attributes": {
+              "href": "/customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang",
+              "aria-label": "Choose a language for shopping in Amazon United States. The current selection is English (EN).\n"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": "Expand to Change Language or Country",
+            "attributes": {
+              "aria-label": "Expand to Change Language or Country"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "Hello\nAccount & Lists",
+            "attributes": {
+              "href": "http://www.amazon.com/gp/css/homepage.html?ref_=nav_youraccount_btn_b"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "button",
+            "text": "Expand Account and Lists",
+            "attributes": {
+              "aria-label": "Expand Account and Lists"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Returns\n& Orders",
+            "attributes": {
+              "id": "nav-orders",
+              "href": "/gp/css/order-history?ref_=nav_orders_first"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Cart",
+            "attributes": {
+              "id": "nav-cart",
+              "href": "/gp/cart/view.html?ref_=nav_cart",
+              "aria-label": " items in cart"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Create a List",
+            "attributes": {
+              "href": "/hz/wishlist/ls?triggerElementID=createList&ref_=nav_ListFlyout_navFlyout_createList_lv_redirect"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Find a List or Registry",
+            "attributes": {
+              "href": "/registries?ref_=nav_ListFlyout_find"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Account",
+            "attributes": {
+              "href": "/gp/css/homepage.html?ref_=nav_AccountFlyout_ya"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Orders",
+            "attributes": {
+              "id": "nav_prefetch_yourorders",
+              "href": "/gp/css/order-history?ref_=nav_AccountFlyout_orders"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Keep Shopping For",
+            "attributes": {
+              "href": "/hz/mobile/mission?ref_=nav_AccountFlyout_ci_mcx_mi_d_nf"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Recommendations",
+            "attributes": {
+              "href": "/gp/yourstore?ref_=nav_AccountFlyout_recs"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Browsing History",
+            "attributes": {
+              "href": "/gp/history?ref_=nav_AccountFlyout_browsinghistory"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Your Shopping preferences",
+            "attributes": {
+              "href": "https://www.amazon.com/slc/hub?ref_=nav_AccountFlyout_sl_ph_navflyout"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Amazon Credit Cards",
+            "attributes": {
+              "href": "https://www.amazon.com/credit/landing?ref_=nav_AccountFlyout_ya_amazon_cc_landing_ms"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Watchlist",
+            "attributes": {
+              "href": "/gp/video/watchlist?ref_=nav_AccountFlyout_ywl"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Video Purchases & Rentals",
+            "attributes": {
+              "href": "/gp/video/library?ref_=nav_AccountFlyout_yvl"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Kindle Unlimited",
+            "attributes": {
+              "href": "/gp/kindle/ku/ku_central?ref_=nav_AccountFlyout_ku"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Content & Devices",
+            "attributes": {
+              "href": "/hz/mycd/myx?pageType=content&ref_=nav_AccountFlyout_myk"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Subscribe & Save Items",
+            "attributes": {
+              "href": "/gp/subscribe-and-save/manager/viewsubscriptions?ref_=nav_AccountFlyout_sns"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Memberships & Subscriptions",
+            "attributes": {
+              "href": "/hz5/yourmembershipsandsubscriptions?ref_=nav_AccountFlyout_digital_subscriptions"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Prime Membership",
+            "attributes": {
+              "href": "/gp/subs/primeclub/account/homepage.html?ref_=nav_AccountFlyout_prime"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Music Library",
+            "attributes": {
+              "href": "https://music.amazon.com?ref=nav_youraccount_cldplyr"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Start a Selling Account",
+            "attributes": {
+              "href": "/b/?node=12766669011&ld=AZUSSOA-yaflyout&ref_=nav_AccountFlyout_cs_sell"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Create Your Free Business Account",
+            "attributes": {
+              "href": "/gp/browse.html?node=11261610011&ref_=nav_AccountFlyout_b2b_reg_bottom"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Customer Service",
+            "attributes": {
+              "href": "https://www.amazon.com/hz/contact-us?ref_=nav_AccountFlyout_CS"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "button",
+            "text": "All",
+            "attributes": {
+              "id": "nav-hamburger-menu",
+              "href": "javascript: void(0)",
+              "aria-label": "Open All Categories Menu"
+            }
+          },
+          {
+            "id": "pw-70",
+            "role": "link",
+            "text": "Medical Care",
+            "attributes": {
+              "href": "https://health.amazon.com/prime?ref_=nav_cs_all_health_ingress_onem_h"
+            }
+          },
+          {
+            "id": "pw-71",
+            "role": "button",
+            "text": "Medical Care Details",
+            "attributes": {
+              "aria-label": "Medical Care Details"
+            }
+          },
+          {
+            "id": "pw-72",
+            "role": "link",
+            "text": "Amazon Basics",
+            "attributes": {
+              "href": "/Amazon_Basics?channel=discovbar&field-lbr_brands_browse-bin=AmazonBasics&ref_=nav_cs_amazonbasics"
+            }
+          },
+          {
+            "id": "pw-73",
+            "role": "link",
+            "text": "Best Sellers",
+            "attributes": {
+              "href": "/gp/bestsellers/?ref_=nav_cs_bestsellers"
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "link",
+            "text": "Books",
+            "attributes": {
+              "href": "/books-used-books-textbooks/b/?ie=UTF8&node=283155&ref_=nav_cs_books"
+            }
+          },
+          {
+            "id": "pw-75",
+            "role": "link",
+            "text": "Registry",
+            "attributes": {
+              "href": "/gp/browse.html?node=16115931011&ref_=nav_cs_registry"
+            }
+          },
+          {
+            "id": "pw-76",
+            "role": "link",
+            "text": "Gift Cards",
+            "attributes": {
+              "href": "/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc"
+            }
+          },
+          {
+            "id": "pw-77",
+            "role": "button",
+            "text": "Gift Cards Details",
+            "attributes": {
+              "aria-label": "Gift Cards Details"
+            }
+          },
+          {
+            "id": "pw-78",
+            "role": "link",
+            "text": "Smart Home",
+            "attributes": {
+              "href": "/Smart-Home/b/?ie=UTF8&node=6563140011&ref_=nav_cs_smart_home"
+            }
+          },
+          {
+            "id": "pw-79",
+            "role": "link",
+            "text": "New Releases",
+            "attributes": {
+              "href": "/gp/new-releases/?ref_=nav_cs_newreleases"
+            }
+          },
+          {
+            "id": "pw-80",
+            "role": "link",
+            "text": "Today's Deals",
+            "attributes": {
+              "href": "/deals?ref_=nav_cs_gb"
+            }
+          },
+          {
+            "id": "pw-81",
+            "role": "link",
+            "text": "Groceries",
+            "attributes": {
+              "href": "/fmc/learn-more?ref_=nav_cs_groceries"
+            }
+          },
+          {
+            "id": "pw-82",
+            "role": "button",
+            "text": "Groceries Details",
+            "attributes": {
+              "aria-label": "Groceries Details"
+            }
+          },
+          {
+            "id": "pw-83",
+            "role": "link",
+            "text": "Pharmacy",
+            "attributes": {
+              "href": "https://pharmacy.amazon.com/?nodl=0&ref_=nav_cs_pharmacy"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://www.amazon.com/s?k=Kindle+Paperwhite"
+        }
+      },
+      "observation": "Opened https://www.amazon.com/s?k=Kindle+Paperwhite"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://www.amazon.com/s?k=Kindle+Paperwhite",
+        "title": "Amazon.com : Kindle Paperwhite",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Main content",
+            "attributes": {
+              "id": "nav-assist-skip-to-main-content",
+              "href": "#skippedLink",
+              "aria-label": "main content"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Results",
+            "attributes": {
+              "id": "nav-assist-skip-to-results",
+              "href": ".s-asin a:has(h2)",
+              "aria-label": "Results"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Filters",
+            "attributes": {
+              "id": "nav-assist-skip-to-filters",
+              "href": "#s-refinements > div.a-section > div:first-child",
+              "aria-label": "Filters"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Filters",
+            "attributes": {
+              "id": "nav-assist-skip-to-filter-sidebar",
+              "aria-label": "Filters"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Search\n          \n              alt\n              +\n              /",
+            "attributes": {
+              "id": "nav-assist-search",
+              "href": "javascript:void(0)",
+              "aria-label": "Search, alt, forward slash"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Cart\n          \n              shift\n              +\n              alt\n              +\n              C",
+            "attributes": {
+              "id": "nav-assist-cart",
+              "href": "javascript:void(0)",
+              "aria-label": "Cart, shift, alt, c"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Home\n          \n              shift\n              +\n              alt\n              +\n              H",
+            "attributes": {
+              "id": "nav-assist-home",
+              "href": "javascript:void(0)",
+              "aria-label": "Home, shift, alt, h"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Orders\n          \n              shift\n              +\n              alt\n              +\n              O",
+            "attributes": {
+              "id": "nav-assist-your-orders",
+              "href": "javascript:void(0)",
+              "aria-label": "Your orders, shift, alt, o"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Show/Hide shortcuts\n          \n              shift\n              +\n              alt\n              +\n              Z",
+            "attributes": {
+              "id": "nav-assist-show-shortcuts",
+              "aria-label": "Show/hide shortcuts, shift, alt, z"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Amazon",
+            "attributes": {
+              "id": "nav-logo-sprites",
+              "href": "/ref=nav_logo",
+              "aria-label": "Amazon"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": "Deliver to\nGermany",
+            "attributes": {
+              "id": "nav-global-location-popover-link",
+              "href": ""
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "combobox",
+            "text": "All Departments\nArts & Crafts\nAutomotive\nBaby\nBeauty & Personal Care\nBooks\nBoys' Fashion\nComputers\nDeals\nDigital Music\nElectronics\nGirls' Fashion\nHealth & Household\nHome & Kitchen\nIndustrial & Scientific\nKindle Store\nLuggage\nMen's Fashion\nMovies & TV\nMusic, CDs & Vinyl\nPet Supplies\nPrime Video\nSoftware\nSports & Outdoors\nTools & Home Improvement\nToys & Games\nVideo Games\nWomen's Fashion",
+            "attributes": {
+              "id": "searchDropdownBox",
+              "name": "url"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "searchbox",
+            "text": "Search Amazon",
+            "attributes": {
+              "id": "twotabsearchtextbox",
+              "name": "field-keywords",
+              "type": "text",
+              "aria-label": "Search Amazon",
+              "placeholder": "Search Amazon",
+              "value": "Kindle Paperwhite"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "EN",
+            "attributes": {
+              "href": "/customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang_ais",
+              "aria-label": "Choose a language for shopping in Amazon United States. The current selection is English (EN).\n"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "button",
+            "text": "Expand to Change Language or Country",
+            "attributes": {
+              "aria-label": "Expand to Change Language or Country"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Hello, sign in\nAccount & Lists",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%2F%3F_encoding%3DUTF8%26k%3DKindle%2520Paperwhite%26ref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "button",
+            "text": "Expand Account and Lists",
+            "attributes": {
+              "aria-label": "Expand Account and Lists"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Returns\n& Orders",
+            "attributes": {
+              "id": "nav-orders",
+              "href": "/gp/css/order-history?ref_=nav_orders_first"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "0\nCart",
+            "attributes": {
+              "id": "nav-cart",
+              "href": "/gp/cart/view.html?ref_=nav_cart",
+              "aria-label": "0 items in cart"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "button",
+            "text": "All",
+            "attributes": {
+              "id": "nav-hamburger-menu",
+              "href": "javascript: void(0)",
+              "aria-label": "Open All Categories Menu"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Today's Deals",
+            "attributes": {
+              "href": "/gp/goldbox?ref_=nav_cs_gb"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Gift Cards",
+            "attributes": {
+              "href": "/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Sell",
+            "attributes": {
+              "href": "/b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Registry",
+            "attributes": {
+              "href": "/gp/browse.html?node=16115931011&ref_=nav_cs_registry"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Prime Video",
+            "attributes": {
+              "href": "/Amazon-Video/b/?ie=UTF8&node=2858778011&ref_=nav_cs_prime_video"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Customer Service",
+            "attributes": {
+              "href": "/gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Disability Customer Support",
+            "attributes": {
+              "href": "/gp/help/customer/accessibility",
+              "aria-label": "Click to call our Disability Customer Support line, or reach us directly at 1-888-283-1678"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "combobox",
+            "text": "Featured\nPrice: Low to High\nPrice: High to Low\nAvg. Customer Review\nNewest Arrivals\nBest Sellers",
+            "attributes": {
+              "id": "s-result-sort-select",
+              "name": "s",
+              "aria-label": "Sort by:"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0DDZJS3SB/ref=sr_1_1?dib=eyJ2IjoiMSJ9.--1AUUVPRiRDCqtr5rpWmdHgaTcto_EZeZ3iMPQwezhPWzhzMY1kEzS9Vj1tTXUGMgUrICgvFX1zhrdCBV1YpyqZh_sK36keIB3Losm9jM--SEs3y-UYPSZh06n2jxha4QxSAhGKBBaoefFQxSS4lkPozMNG9I0rg4_fCrsGdQyuttPMrZ-sPD9TfGwoQkTXzlkomePDbBjuXZM6cY9C8mhX_sJbFKBBcHAulYcUmS8.AMNYRZhMlp3jrTaegfB2JN1FWULYwIRUcrFdHiXr5GQ&dib_tag=se&keywords=Kindle+Paperwhite&qid=1779042759&sr=8-1"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Kindle Paperwhite 16GB (newest model) \u2013 20% faster, with new 7\" glare-free display and weeks of battery life \u2013 Without lockscreen ads \u2013 Black",
+            "attributes": {
+              "href": "/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0DDZJS3SB/ref=sr_1_1?dib=eyJ2IjoiMSJ9.--1AUUVPRiRDCqtr5rpWmdHgaTcto_EZeZ3iMPQwezhPWzhzMY1kEzS9Vj1tTXUGMgUrICgvFX1zhrdCBV1YpyqZh_sK36keIB3Losm9jM--SEs3y-UYPSZh06n2jxha4QxSAhGKBBaoefFQxSS4lkPozMNG9I0rg4_fCrsGdQyuttPMrZ-sPD9TfGwoQkTXzlkomePDbBjuXZM6cY9C8mhX_sJbFKBBcHAulYcUmS8.AMNYRZhMlp3jrTaegfB2JN1FWULYwIRUcrFdHiXr5GQ&dib_tag=se&keywords=Kindle+Paperwhite&qid=1779042759&sr=8-1"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "4.8 out of 5 stars",
+            "attributes": {
+              "href": "javascript:void(0)",
+              "aria-label": "4.8 out of 5 stars, rating details"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "(1.4K)",
+            "attributes": {
+              "href": "/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0DDZJS3SB/ref=sr_1_1?dib=eyJ2IjoiMSJ9.--1AUUVPRiRDCqtr5rpWmdHgaTcto_EZeZ3iMPQwezhPWzhzMY1kEzS9Vj1tTXUGMgUrICgvFX1zhrdCBV1YpyqZh_sK36keIB3Losm9jM--SEs3y-UYPSZh06n2jxha4QxSAhGKBBaoefFQxSS4lkPozMNG9I0rg4_fCrsGdQyuttPMrZ-sPD9TfGwoQkTXzlkomePDbBjuXZM6cY9C8mhX_sJbFKBBcHAulYcUmS8.AMNYRZhMlp3jrTaegfB2JN1FWULYwIRUcrFdHiXr5GQ&dib_tag=se&keywords=Kindle+Paperwhite&qid=1779042759&sr=8-1#customerReviews",
+              "aria-label": "1,429 ratings"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "Recycled materials",
+            "attributes": {
+              "href": "javascript:void(0)"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "button",
+            "text": "Recycled materials",
+            "attributes": {
+              "id": "pc-side-sheet-B0DDZJS3SB-eh-0",
+              "href": "javascript:void(0)"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "button",
+            "text": "Recycled Content Certification for Electrical and Electronic EquipmentLearn more about Recycled Content Certification for Electrical and Electronic Equipment",
+            "attributes": {
+              "id": "pc-side-sheet-B0DDZJS3SB-trigger-0-0",
+              "href": "#",
+              "aria-label": "Learn more about Recycled Content Certification for Electrical and Electronic Equipment"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "button",
+            "text": "Back to certifications for this product",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Back to certifications for this product"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Discover more products with sustainability features. Learn more",
+            "attributes": {
+              "href": "/climatepledgefriendly"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "See options",
+            "attributes": {
+              "id": "a-autoid-1-announce",
+              "href": "/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0DDZJS3SB/ref=sr_1_1_so_AMAZON_BOOK_READER?dib=eyJ2IjoiMSJ9.--1AUUVPRiRDCqtr5rpWmdHgaTcto_EZeZ3iMPQwezhPWzhzMY1kEzS9Vj1tTXUGMgUrICgvFX1zhrdCBV1YpyqZh_sK36keIB3Losm9jM--SEs3y-UYPSZh06n2jxha4QxSAhGKBBaoefFQxSS4lkPozMNG9I0rg4_fCrsGdQyuttPMrZ-sPD9TfGwoQkTXzlkomePDbBjuXZM6cY9C8mhX_sJbFKBBcHAulYcUmS8.AMNYRZhMlp3jrTaegfB2JN1FWULYwIRUcrFdHiXr5GQ&dib_tag=se&keywords=Kindle+Paperwhite&qid=1779042759&sr=8-1"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "(1 new offer)",
+            "attributes": {
+              "href": "/gp/offer-listing/B0DDZJS3SB/ref=sr_1_1_olp?keywords=Kindle+Paperwhite&dib_tag=se&dib=eyJ2IjoiMSJ9.--1AUUVPRiRDCqtr5rpWmdHgaTcto_EZeZ3iMPQwezhPWzhzMY1kEzS9Vj1tTXUGMgUrICgvFX1zhrdCBV1YpyqZh_sK36keIB3Losm9jM--SEs3y-UYPSZh06n2jxha4QxSAhGKBBaoefFQxSS4lkPozMNG9I0rg4_fCrsGdQyuttPMrZ-sPD9TfGwoQkTXzlkomePDbBjuXZM6cY9C8mhX_sJbFKBBcHAulYcUmS8.AMNYRZhMlp3jrTaegfB2JN1FWULYwIRUcrFdHiXr5GQ&qid=1779042759&sr=8-1"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "link",
+            "text": "Black",
+            "attributes": {
+              "href": "/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0DDZJS3SB/ref=cs_sr_dp_loc_1?dib=eyJ2IjoiMSJ9.--1AUUVPRiRDCqtr5rpWmdHgaTcto_EZeZ3iMPQwezhPWzhzMY1kEzS9Vj1tTXUGMgUrICgvFX1zhrdCBV1YpyqZh_sK36keIB3Losm9jM--SEs3y-UYPSZh06n2jxha4QxSAhGKBBaoefFQxSS4lkPozMNG9I0rg4_fCrsGdQyuttPMrZ-sPD9TfGwoQkTXzlkomePDbBjuXZM6cY9C8mhX_sJbFKBBcHAulYcUmS8.AMNYRZhMlp3jrTaegfB2JN1FWULYwIRUcrFdHiXr5GQ&dib_tag=se&keywords=Kindle+Paperwhite&qid=1779042759&sr=8-1",
+              "aria-label": "Black"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "link",
+            "text": "Jade",
+            "attributes": {
+              "href": "/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0CTMRXCQ6/ref=cs_sr_dp_loc_2?dib=eyJ2IjoiMSJ9.--1AUUVPRiRDCqtr5rpWmdHgaTcto_EZeZ3iMPQwezhPWzhzMY1kEzS9Vj1tTXUGMgUrICgvFX1zhrdCBV1YpyqZh_sK36keIB3Losm9jM--SEs3y-UYPSZh06n2jxha4QxSAhGKBBaoefFQxSS4lkPozMNG9I0rg4_fCrsGdQyuttPMrZ-sPD9TfGwoQkTXzlkomePDbBjuXZM6cY9C8mhX_sJbFKBBcHAulYcUmS8.AMNYRZhMlp3jrTaegfB2JN1FWULYwIRUcrFdHiXr5GQ&dib_tag=se&keywords=Kindle+Paperwhite&qid=1779042759&sr=8-1",
+              "aria-label": "Jade"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "link",
+            "text": "Raspberry",
+            "attributes": {
+              "href": "/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0CTMR865D/ref=cs_sr_dp_loc_3?dib=eyJ2IjoiMSJ9.--1AUUVPRiRDCqtr5rpWmdHgaTcto_EZeZ3iMPQwezhPWzhzMY1kEzS9Vj1tTXUGMgUrICgvFX1zhrdCBV1YpyqZh_sK36keIB3Losm9jM--SEs3y-UYPSZh06n2jxha4QxSAhGKBBaoefFQxSS4lkPozMNG9I0rg4_fCrsGdQyuttPMrZ-sPD9TfGwoQkTXzlkomePDbBjuXZM6cY9C8mhX_sJbFKBBcHAulYcUmS8.AMNYRZhMlp3jrTaegfB2JN1FWULYwIRUcrFdHiXr5GQ&dib_tag=se&keywords=Kindle+Paperwhite&qid=1779042759&sr=8-1",
+              "aria-label": "Raspberry"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/Musnap-Neo-Supports-3rd-Party-eReader/dp/B0FBWZXC41/ref=sr_1_2?dib=eyJ2IjoiMSJ9.--1AUUVPRiRDCqtr5rpWmdHgaTcto_EZeZ3iMPQwezhPWzhzMY1kEzS9Vj1tTXUGMgUrICgvFX1zhrdCBV1YpyqZh_sK36keIB3Losm9jM--SEs3y-UYPSZh06n2jxha4QxSAhGKBBaoefFQxSS4lkPozMNG9I0rg4_fCrsGdQyuttPMrZ-sPD9TfGwoQkTXzlkomePDbBjuXZM6cY9C8mhX_sJbFKBBcHAulYcUmS8.AMNYRZhMlp3jrTaegfB2JN1FWULYwIRUcrFdHiXr5GQ&dib_tag=se&keywords=Kindle+Paperwhite&qid=1779042759&sr=8-2"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "Neo C 64GB+4GB Colour eBook Reader Supports 3rd-Party apps, 6\u201d E Ink ePaper eReader Digital Paper, with Color Display, Long Battery Life for Reading",
+            "attributes": {
+              "href": "/Musnap-Neo-Supports-3rd-Party-eReader/dp/B0FBWZXC41/ref=sr_1_2?dib=eyJ2IjoiMSJ9.--1AUUVPRiRDCqtr5rpWmdHgaTcto_EZeZ3iMPQwezhPWzhzMY1kEzS9Vj1tTXUGMgUrICgvFX1zhrdCBV1YpyqZh_sK36keIB3Losm9jM--SEs3y-UYPSZh06n2jxha4QxSAhGKBBaoefFQxSS4lkPozMNG9I0rg4_fCrsGdQyuttPMrZ-sPD9TfGwoQkTXzlkomePDbBjuXZM6cY9C8mhX_sJbFKBBcHAulYcUmS8.AMNYRZhMlp3jrTaegfB2JN1FWULYwIRUcrFdHiXr5GQ&dib_tag=se&keywords=Kindle+Paperwhite&qid=1779042759&sr=8-2"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "button",
+            "text": "3.3 out of 5 stars",
+            "attributes": {
+              "href": "javascript:void(0)",
+              "aria-label": "3.3 out of 5 stars, rating details"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "link",
+            "text": "(94)",
+            "attributes": {
+              "href": "/Musnap-Neo-Supports-3rd-Party-eReader/dp/B0FBWZXC41/ref=sr_1_2?dib=eyJ2IjoiMSJ9.--1AUUVPRiRDCqtr5rpWmdHgaTcto_EZeZ3iMPQwezhPWzhzMY1kEzS9Vj1tTXUGMgUrICgvFX1zhrdCBV1YpyqZh_sK36keIB3Losm9jM--SEs3y-UYPSZh06n2jxha4QxSAhGKBBaoefFQxSS4lkPozMNG9I0rg4_fCrsGdQyuttPMrZ-sPD9TfGwoQkTXzlkomePDbBjuXZM6cY9C8mhX_sJbFKBBcHAulYcUmS8.AMNYRZhMlp3jrTaegfB2JN1FWULYwIRUcrFdHiXr5GQ&dib_tag=se&keywords=Kindle+Paperwhite&qid=1779042759&sr=8-2#customerReviews",
+              "aria-label": "94 ratings"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "link",
+            "text": "EUR\u00a0188.45\nEUR188\n.\n45",
+            "attributes": {
+              "href": "/Musnap-Neo-Supports-3rd-Party-eReader/dp/B0FBWZXC41/ref=sr_1_2?dib=eyJ2IjoiMSJ9.--1AUUVPRiRDCqtr5rpWmdHgaTcto_EZeZ3iMPQwezhPWzhzMY1kEzS9Vj1tTXUGMgUrICgvFX1zhrdCBV1YpyqZh_sK36keIB3Losm9jM--SEs3y-UYPSZh06n2jxha4QxSAhGKBBaoefFQxSS4lkPozMNG9I0rg4_fCrsGdQyuttPMrZ-sPD9TfGwoQkTXzlkomePDbBjuXZM6cY9C8mhX_sJbFKBBcHAulYcUmS8.AMNYRZhMlp3jrTaegfB2JN1FWULYwIRUcrFdHiXr5GQ&dib_tag=se&keywords=Kindle+Paperwhite&qid=1779042759&sr=8-2"
+            }
+          },
+          {
+            "id": "pw-78",
+            "role": "button",
+            "text": "Add to cart",
+            "attributes": {
+              "id": "a-autoid-2-announce",
+              "name": "submit.addToCart",
+              "type": "button",
+              "aria-label": "Add to cart"
+            }
+          },
+          {
+            "id": "pw-81",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/HNVHNV-Expansion-Quad-core-Processor-Drop-Proof/dp/B0F4DBXKZK/ref=sr_1_3?dib=eyJ2IjoiMSJ9.--1AUUVPRiRDCqtr5rpWmdHgaTcto_EZeZ3iMPQwezhPWzhzMY1kEzS9Vj1tTXUGMgUrICgvFX1zhrdCBV1YpyqZh_sK36keIB3Losm9jM--SEs3y-UYPSZh06n2jxha4QxSAhGKBBaoefFQxSS4lkPozMNG9I0rg4_fCrsGdQyuttPMrZ-sPD9TfGwoQkTXzlkomePDbBjuXZM6cY9C8mhX_sJbFKBBcHAulYcUmS8.AMNYRZhMlp3jrTaegfB2JN1FWULYwIRUcrFdHiXr5GQ&dib_tag=se&keywords=Kindle+Paperwhite&qid=1779042759&sr=8-3"
+            }
+          },
+          {
+            "id": "pw-82",
+            "role": "link",
+            "text": "Android Tablet 7 Inch Tablet, E-Reader, 6GB RAM 32GB ROM 1TB Expansion, Quad-core Processor, Dual Camera, WiFi, Bluetooth, Parental Control, Drop-Proof Case",
+            "attributes": {
+              "href": "/HNVHNV-Expansion-Quad-core-Processor-Drop-Proof/dp/B0F4DBXKZK/ref=sr_1_3?dib=eyJ2IjoiMSJ9.--1AUUVPRiRDCqtr5rpWmdHgaTcto_EZeZ3iMPQwezhPWzhzMY1kEzS9Vj1tTXUGMgUrICgvFX1zhrdCBV1YpyqZh_sK36keIB3Losm9jM--SEs3y-UYPSZh06n2jxha4QxSAhGKBBaoefFQxSS4lkPozMNG9I0rg4_fCrsGdQyuttPMrZ-sPD9TfGwoQkTXzlkomePDbBjuXZM6cY9C8mhX_sJbFKBBcHAulYcUmS8.AMNYRZhMlp3jrTaegfB2JN1FWULYwIRUcrFdHiXr5GQ&dib_tag=se&keywords=Kindle+Paperwhite&qid=1779042759&sr=8-3"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "click",
+        "args": {
+          "id": "pw-42"
+        }
+      },
+      "observation": "Action failed: Locator.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator(\"div:nth-of-type(1) > header > div > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(2) > div > div:nth-of-type(2) > ul > li:nth-of-type(2) > a\").first\n    - locator resolved to <a class=\"nav-link nav-item\" href=\"/registries?ref_=nav_ListFlyout_find\">\u2026</a>\n  - attempting click action\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 100ms\n    10 \u00d7 waiting for element to be visible, enabled and stable\n       - element is not visible\n     - retrying click action\n       - waiting 500ms\n"
+    },
+    {
+      "step": 4,
+      "state": {
+        "url": "https://www.amazon.com/s?k=Kindle+Paperwhite",
+        "title": "Amazon.com : Kindle Paperwhite",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Main content",
+            "attributes": {
+              "id": "nav-assist-skip-to-main-content",
+              "href": "#skippedLink",
+              "aria-label": "main content"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Results",
+            "attributes": {
+              "id": "nav-assist-skip-to-results",
+              "href": ".s-asin a:has(h2)",
+              "aria-label": "Results"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Filters",
+            "attributes": {
+              "id": "nav-assist-skip-to-filters",
+              "href": "#s-refinements > div.a-section > div:first-child",
+              "aria-label": "Filters"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Filters",
+            "attributes": {
+              "id": "nav-assist-skip-to-filter-sidebar",
+              "aria-label": "Filters"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Search\nalt\n+\n/",
+            "attributes": {
+              "id": "nav-assist-search",
+              "href": "javascript:void(0)",
+              "aria-label": "Search, alt, forward slash"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Cart\nshift\n+\nalt\n+\nC",
+            "attributes": {
+              "id": "nav-assist-cart",
+              "href": "javascript:void(0)",
+              "aria-label": "Cart, shift, alt, c"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Home\nshift\n+\nalt\n+\nH",
+            "attributes": {
+              "id": "nav-assist-home",
+              "href": "javascript:void(0)",
+              "aria-label": "Home, shift, alt, h"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Orders\nshift\n+\nalt\n+\nO",
+            "attributes": {
+              "id": "nav-assist-your-orders",
+              "href": "javascript:void(0)",
+              "aria-label": "Your orders, shift, alt, o"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Show/Hide shortcuts\nshift\n+\nalt\n+\nZ",
+            "attributes": {
+              "id": "nav-assist-show-shortcuts",
+              "aria-label": "Show/hide shortcuts, shift, alt, z"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Amazon",
+            "attributes": {
+              "id": "nav-logo-sprites",
+              "href": "/ref=nav_logo",
+              "aria-label": "Amazon"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": "Deliver to\nGermany",
+            "attributes": {
+              "id": "nav-global-location-popover-link",
+              "href": ""
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "combobox",
+            "text": "All Departments\nArts & Crafts\nAutomotive\nBaby\nBeauty & Personal Care\nBooks\nBoys' Fashion\nComputers\nDeals\nDigital Music\nElectronics\nGirls' Fashion\nHealth & Household\nHome & Kitchen\nIndustrial & Scientific\nKindle Store\nLuggage\nMen's Fashion\nMovies & TV\nMusic, CDs & Vinyl\nPet Supplies\nPrime Video\nSoftware\nSports & Outdoors\nTools & Home Improvement\nToys & Games\nVideo Games\nWomen's Fashion",
+            "attributes": {
+              "id": "searchDropdownBox",
+              "name": "url"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "searchbox",
+            "text": "Search Amazon",
+            "attributes": {
+              "id": "twotabsearchtextbox",
+              "name": "field-keywords",
+              "type": "text",
+              "aria-label": "Search Amazon",
+              "placeholder": "Search Amazon",
+              "value": "Kindle Paperwhite"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "EN",
+            "attributes": {
+              "href": "/customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang_ais",
+              "aria-label": "Choose a language for shopping in Amazon United States. The current selection is English (EN).\n"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "button",
+            "text": "Expand to Change Language or Country",
+            "attributes": {
+              "aria-label": "Expand to Change Language or Country"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Hello, sign in\nAccount & Lists",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%3Fk%3DKindle%2BPaperwhite%26ref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "button",
+            "text": "Expand Account and Lists",
+            "attributes": {
+              "aria-label": "Expand Account and Lists"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Returns\n& Orders",
+            "attributes": {
+              "id": "nav-orders",
+              "href": "/gp/css/order-history?ref_=nav_orders_first"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "0\nCart",
+            "attributes": {
+              "id": "nav-cart",
+              "href": "/gp/cart/view.html?ref_=nav_cart",
+              "aria-label": "0 items in cart"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%3Fk%3DKindle%2BPaperwhite%26ref_%3Dnav_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Start here.",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/register?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%2F%3F_encoding%3DUTF8%26k%3DKindle%2520Paperwhite%26ref_%3Dnav_newcust&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0",
+              "aria-label": "New to Amazon? Start here to create an account"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Create a List",
+            "attributes": {
+              "href": "/hz/wishlist/ls?triggerElementID=createList&ref_=nav_ListFlyout_navFlyout_createList_lv_redirect"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Find a List or Registry",
+            "attributes": {
+              "href": "/registries?ref_=nav_ListFlyout_find"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Account",
+            "attributes": {
+              "href": "/gp/css/homepage.html?ref_=nav_AccountFlyout_ya"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Orders",
+            "attributes": {
+              "id": "nav_prefetch_yourorders",
+              "href": "/gp/css/order-history?ref_=nav_AccountFlyout_orders"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Recommendations",
+            "attributes": {
+              "href": "/gp/yourstore?ref_=nav_AccountFlyout_recs"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Browsing History",
+            "attributes": {
+              "href": "/gp/history?ref_=nav_AccountFlyout_browsinghistory"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Your Shopping preferences",
+            "attributes": {
+              "href": "https://www.amazon.com/slc/hub?ref_=nav_AccountFlyout_sl_ph_navflyout"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Watchlist",
+            "attributes": {
+              "href": "/gp/video/watchlist?ref_=nav_AccountFlyout_ywl"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Video Purchases & Rentals",
+            "attributes": {
+              "href": "/gp/video/library?ref_=nav_AccountFlyout_yvl"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Kindle Unlimited",
+            "attributes": {
+              "href": "/gp/kindle/ku/ku_central?ref_=nav_AccountFlyout_ku"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Content & Devices",
+            "attributes": {
+              "href": "/hz/mycd/myx?pageType=content&ref_=nav_AccountFlyout_myk"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "Subscribe & Save Items",
+            "attributes": {
+              "href": "/gp/subscribe-and-save/manager/viewsubscriptions?ref_=nav_AccountFlyout_sns"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Memberships & Subscriptions",
+            "attributes": {
+              "href": "/hz5/yourmembershipsandsubscriptions?ref_=nav_AccountFlyout_digital_subscriptions"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Music Library",
+            "attributes": {
+              "href": "https://music.amazon.com?ref=nav_youraccount_cldplyr"
+            }
+          },
+          {
+            "id": "pw-76",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%3Fk%3DKindle%2BPaperwhite%26ref_%3Dnav_custrec_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            }
+          },
+          {
+            "id": "pw-77",
+            "role": "link",
+            "text": "Start here.",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/register?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%2F%3F_encoding%3DUTF8%26k%3DKindle%2520Paperwhite%26ref_%3Dnav_custrec_newcust&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0",
+              "aria-label": "New to Amazon? Start here to create an account"
+            }
+          },
+          {
+            "id": "pw-80",
+            "role": "button",
+            "text": "All",
+            "attributes": {
+              "id": "nav-hamburger-menu",
+              "href": "javascript: void(0)",
+              "aria-label": "Open All Categories Menu"
+            }
+          },
+          {
+            "id": "pw-81",
+            "role": "link",
+            "text": "Today's Deals",
+            "attributes": {
+              "href": "/gp/goldbox?ref_=nav_cs_gb"
+            }
+          },
+          {
+            "id": "pw-82",
+            "role": "link",
+            "text": "Gift Cards",
+            "attributes": {
+              "href": "/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc"
+            }
+          },
+          {
+            "id": "pw-83",
+            "role": "link",
+            "text": "Sell",
+            "attributes": {
+              "href": "/b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell"
+            }
+          },
+          {
+            "id": "pw-84",
+            "role": "link",
+            "text": "Registry",
+            "attributes": {
+              "href": "/gp/browse.html?node=16115931011&ref_=nav_cs_registry"
+            }
+          },
+          {
+            "id": "pw-85",
+            "role": "link",
+            "text": "Prime Video",
+            "attributes": {
+              "href": "/Amazon-Video/b/?ie=UTF8&node=2858778011&ref_=nav_cs_prime_video"
+            }
+          },
+          {
+            "id": "pw-86",
+            "role": "link",
+            "text": "Customer Service",
+            "attributes": {
+              "href": "/gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice"
+            }
+          },
+          {
+            "id": "pw-87",
+            "role": "link",
+            "text": "Disability Customer Support",
+            "attributes": {
+              "href": "/gp/help/customer/accessibility",
+              "aria-label": "Click to call our Disability Customer Support line, or reach us directly at 1-888-283-1678"
+            }
+          },
+          {
+            "id": "pw-91",
+            "role": "combobox",
+            "text": "Featured\nPrice: Low to High\nPrice: High to Low\nAvg. Customer Review\nNewest Arrivals\nBest Sellers",
+            "attributes": {
+              "id": "s-result-sort-select",
+              "name": "s",
+              "aria-label": "Sort by:"
+            }
+          },
+          {
+            "id": "pw-94",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0DDZJS3SB/ref=sr_1_1?dib=eyJ2IjoiMSJ9.--1AUUVPRiRDCqtr5rpWmdHgaTcto_EZeZ3iMPQwezhPWzhzMY1kEzS9Vj1tTXUGMgUrICgvFX1zhrdCBV1YpyqZh_sK36keIB3Losm9jM--SEs3y-UYPSZh06n2jxha4QxSAhGKBBaoefFQxSS4lkPozMNG9I0rg4_fCrsGdQyuttPMrZ-sPD9TfGwoQkTXzlkomePDbBjuXZM6cY9C8mhX_sJbFKBBcHAulYcUmS8.AMNYRZhMlp3jrTaegfB2JN1FWULYwIRUcrFdHiXr5GQ&dib_tag=se&keywords=Kindle+Paperwhite&qid=1779042759&sr=8-1"
+            }
+          },
+          {
+            "id": "pw-95",
+            "role": "link",
+            "text": "Kindle Paperwhite 16GB (newest model) \u2013 20% faster, with new 7\" glare-free display and weeks of battery life \u2013 Without lockscreen ads \u2013 Black",
+            "attributes": {
+              "href": "/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0DDZJS3SB/ref=sr_1_1?dib=eyJ2IjoiMSJ9.--1AUUVPRiRDCqtr5rpWmdHgaTcto_EZeZ3iMPQwezhPWzhzMY1kEzS9Vj1tTXUGMgUrICgvFX1zhrdCBV1YpyqZh_sK36keIB3Losm9jM--SEs3y-UYPSZh06n2jxha4QxSAhGKBBaoefFQxSS4lkPozMNG9I0rg4_fCrsGdQyuttPMrZ-sPD9TfGwoQkTXzlkomePDbBjuXZM6cY9C8mhX_sJbFKBBcHAulYcUmS8.AMNYRZhMlp3jrTaegfB2JN1FWULYwIRUcrFdHiXr5GQ&dib_tag=se&keywords=Kindle+Paperwhite&qid=1779042759&sr=8-1"
+            }
+          },
+          {
+            "id": "pw-96",
+            "role": "button",
+            "text": "4.8 out of 5 stars",
+            "attributes": {
+              "href": "javascript:void(0)",
+              "aria-label": "4.8 out of 5 stars, rating details"
+            }
+          },
+          {
+            "id": "pw-97",
+            "role": "link",
+            "text": "(1.4K)",
+            "attributes": {
+              "href": "/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0DDZJS3SB/ref=sr_1_1?dib=eyJ2IjoiMSJ9.--1AUUVPRiRDCqtr5rpWmdHgaTcto_EZeZ3iMPQwezhPWzhzMY1kEzS9Vj1tTXUGMgUrICgvFX1zhrdCBV1YpyqZh_sK36keIB3Losm9jM--SEs3y-UYPSZh06n2jxha4QxSAhGKBBaoefFQxSS4lkPozMNG9I0rg4_fCrsGdQyuttPMrZ-sPD9TfGwoQkTXzlkomePDbBjuXZM6cY9C8mhX_sJbFKBBcHAulYcUmS8.AMNYRZhMlp3jrTaegfB2JN1FWULYwIRUcrFdHiXr5GQ&dib_tag=se&keywords=Kindle+Paperwhite&qid=1779042759&sr=8-1#customerReviews",
+              "aria-label": "1,429 ratings"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://www.amazon.com/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0DDZJS3SB"
+        }
+      },
+      "observation": "Opened https://www.amazon.com/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0DDZJS3SB"
+    },
+    {
+      "step": 5,
+      "state": {
+        "url": "https://www.amazon.com/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0DDZJS3SB",
+        "title": "Amazon.com: Amazon Kindle Paperwhite 16GB (newest model) \u2013 20% faster, with new 7\" glare-free display and weeks of battery life \u2013 Without lockscreen ads \u2013 Black",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Main content",
+            "attributes": {
+              "id": "nav-assist-skip-to-main-content",
+              "href": "#skippedLink",
+              "aria-label": "main content"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "About this item",
+            "attributes": {
+              "id": "nav-assist-skip-to-about-this-item",
+              "href": "#featurebullets_feature_div",
+              "aria-label": "About this item"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "About this item",
+            "attributes": {
+              "id": "nav-assist-skip-to-about-this-item-expander",
+              "href": "#nic-po-expander-heading",
+              "aria-label": "About this item"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "About this item",
+            "attributes": {
+              "id": "nav-assist-skip-to-about-this-item-facts-expander",
+              "href": "#productFactsDesktopExpander",
+              "aria-label": "About this item"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Buying options",
+            "attributes": {
+              "id": "nav-assist-skip-to-buying-options",
+              "href": "#buybox",
+              "aria-label": "Buying options"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Compare with similar items",
+            "attributes": {
+              "id": "nav-assist-skip-to-compare",
+              "href": "#product-comparison_feature_div",
+              "aria-label": "Compare with similar items"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Videos",
+            "attributes": {
+              "id": "nav-assist-skip-to-videos",
+              "href": "#va-related-videos-widget_feature_div",
+              "aria-label": "Videos"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Reviews",
+            "attributes": {
+              "id": "nav-assist-skip-to-reviews",
+              "href": "#customerReviews",
+              "aria-label": "Reviews"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Search\nalt\n+\n/",
+            "attributes": {
+              "id": "nav-assist-search",
+              "href": "javascript:void(0)",
+              "aria-label": "Search, alt, forward slash"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Cart\nshift\n+\nalt\n+\nC",
+            "attributes": {
+              "id": "nav-assist-cart",
+              "href": "javascript:void(0)",
+              "aria-label": "Cart, shift, alt, c"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Home\nshift\n+\nalt\n+\nH",
+            "attributes": {
+              "id": "nav-assist-home",
+              "href": "javascript:void(0)",
+              "aria-label": "Home, shift, alt, h"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Orders\nshift\n+\nalt\n+\nO",
+            "attributes": {
+              "id": "nav-assist-your-orders",
+              "href": "javascript:void(0)",
+              "aria-label": "Your orders, shift, alt, o"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "button",
+            "text": "Add to cart\n          \n              shift\n              +\n              alt\n              +\n              K",
+            "attributes": {
+              "id": "nav-assist-add-to-cart",
+              "aria-label": "Add to cart, shift, alt, K"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "button",
+            "text": "Product summary\n          \n              shift\n              +\n              alt\n              +\n              D",
+            "attributes": {
+              "id": "nav-assist-product-summary",
+              "aria-label": "Product summary, shift, alt, d"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": "Show/Hide shortcuts\nshift\n+\nalt\n+\nZ",
+            "attributes": {
+              "id": "nav-assist-show-shortcuts",
+              "aria-label": "Show/hide shortcuts, shift, alt, z"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Amazon",
+            "attributes": {
+              "id": "nav-logo-sprites",
+              "href": "/ref=nav_logo",
+              "aria-label": "Amazon"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "Deliver to\nGermany",
+            "attributes": {
+              "id": "nav-global-location-popover-link",
+              "href": ""
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "combobox",
+            "text": "Amazon Devices\nAll Departments\nArts & Crafts\nAutomotive\nBaby\nBeauty & Personal Care\nBooks\nBoys' Fashion\nComputers\nDeals\nDigital Music\nElectronics\nGirls' Fashion\nHealth & Household\nHome & Kitchen\nIndustrial & Scientific\nKindle Store\nLuggage\nMen's Fashion\nMovies & TV\nMusic, CDs & Vinyl\nPet Supplies\nPrime Video\nSoftware\nSports & Outdoors\nTools & Home Improvement\nToys & Games\nVideo Games\nWomen's Fashion",
+            "attributes": {
+              "id": "searchDropdownBox",
+              "name": "url"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "searchbox",
+            "text": "Search Amazon",
+            "attributes": {
+              "id": "twotabsearchtextbox",
+              "name": "field-keywords",
+              "type": "text",
+              "aria-label": "Search Amazon",
+              "placeholder": "Search Amazon",
+              "value": ""
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "EN",
+            "attributes": {
+              "href": "/customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang_ais",
+              "aria-label": "Choose a language for shopping in Amazon United States. The current selection is English (EN).\n"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "button",
+            "text": "Expand to Change Language or Country",
+            "attributes": {
+              "aria-label": "Expand to Change Language or Country"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Hello, sign in\nAccount & Lists",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2FAll-new-Amazon-Kindle-Paperwhite-glare-free%2Fdp%2FB0DDZJS3SB%3Fref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "button",
+            "text": "Expand Account and Lists",
+            "attributes": {
+              "aria-label": "Expand Account and Lists"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Returns\n& Orders",
+            "attributes": {
+              "id": "nav-orders",
+              "href": "/gp/css/order-history?ref_=nav_orders_first"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "0\nCart",
+            "attributes": {
+              "id": "nav-cart",
+              "href": "/gp/cart/view.html?ref_=nav_cart",
+              "aria-label": "0 items in cart"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "button",
+            "text": "All",
+            "attributes": {
+              "id": "nav-hamburger-menu",
+              "href": "javascript: void(0)",
+              "aria-label": "Open All Categories Menu"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Today's Deals",
+            "attributes": {
+              "href": "/gp/goldbox?ref_=nav_cs_gb"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Gift Cards",
+            "attributes": {
+              "href": "/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Sell",
+            "attributes": {
+              "href": "/b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Registry",
+            "attributes": {
+              "href": "/gp/browse.html?node=16115931011&ref_=nav_cs_registry"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Prime Video",
+            "attributes": {
+              "href": "/Amazon-Video/b/?ie=UTF8&node=2858778011&ref_=nav_cs_prime_video"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Customer Service",
+            "attributes": {
+              "href": "/gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Disability Customer Support",
+            "attributes": {
+              "href": "/gp/help/customer/accessibility",
+              "aria-label": "Click to call our Disability Customer Support line, or reach us directly at 1-888-283-1678"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Amazon Devices",
+            "attributes": {
+              "href": "/Amazon-Devices/b/?ie=UTF8&node=2102313011&ref_=topnav_storetab_devicesubnav",
+              "aria-label": "Amazon Devices"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Echo & Alexa",
+            "attributes": {
+              "href": "/smart-home-devices/b/?ie=UTF8&node=9818047011&ref_=sv_devicesubnav_1",
+              "aria-label": "Echo & Alexa"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Fire Tablets",
+            "attributes": {
+              "href": "/Amazon-Fire-Tablet-Family/b/?ie=UTF8&node=6669703011&ref_=sv_devicesubnav_2",
+              "aria-label": "Fire Tablets"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Amazon Fire TV",
+            "attributes": {
+              "href": "/Amazon-Fire-TV-Family/b/?ie=UTF8&node=8521791011&ref_=sv_devicesubnav_3",
+              "aria-label": "Amazon Fire TV"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Kindle",
+            "attributes": {
+              "href": "/Amazon-Kindle-Ereader-Family/b/?ie=UTF8&node=6669702011&ref_=sv_devicesubnav_4",
+              "aria-label": "Kindle"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Home Security",
+            "attributes": {
+              "href": "/b/?ie=UTF8&node=17386948011&ref_=sv_devicesubnav_5",
+              "aria-label": "Home Security"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Accessories",
+            "attributes": {
+              "href": "/Amazon-Devices-Accessories/b/?ie=UTF8&node=370783011&ref_=sv_devicesubnav_6",
+              "aria-label": "Accessories"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "Certified Refurbished",
+            "attributes": {
+              "href": "/Refurbished-Kindle-Outlet/b/?ie=UTF8&node=8497978011&ref_=sv_devicesubnav_7",
+              "aria-label": "Certified Refurbished"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Help Forum",
+            "attributes": {
+              "href": "https://www.amazonforum.com/?_encoding=UTF8&ref_=sv_devicesubnav_8",
+              "aria-label": "Help Forum"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Kindle Support",
+            "attributes": {
+              "href": "/gp/help/customer/display.html/?ie=UTF8&nodeId=200127470&ref_=sv_devicesubnav_9",
+              "aria-label": "Kindle Support"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Manage Your Content and Devices",
+            "attributes": {
+              "href": "/gp/digital/fiona/manage/?ie=UTF8&ref_=sv_devicesubnav_10",
+              "aria-label": "Manage Your Content and Devices"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2FAll-new-Amazon-Kindle-Paperwhite-glare-free%2Fdp%2FB0DDZJS3SB%3Fref_%3Dnav_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "link",
+            "text": "Start here.",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/register?openid.return_to=https%3A%2F%2Fwww.amazon.com%2FAll-new-Amazon-Kindle-Paperwhite-glare-free%2Fdp%2FB0DDZJS3SB%2F%3F_encoding%3DUTF8%26ref_%3Dnav_newcust&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0",
+              "aria-label": "New to Amazon? Start here to create an account"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "link",
+            "text": "Create a List",
+            "attributes": {
+              "href": "/hz/wishlist/ls?triggerElementID=createList&ref_=nav_ListFlyout_navFlyout_createList_lv_redirect"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "link",
+            "text": "Find a List or Registry",
+            "attributes": {
+              "href": "/registries?ref_=nav_ListFlyout_find"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "link",
+            "text": "Account",
+            "attributes": {
+              "href": "/gp/css/homepage.html?ref_=nav_AccountFlyout_ya"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "Orders",
+            "attributes": {
+              "id": "nav_prefetch_yourorders",
+              "href": "/gp/css/order-history?ref_=nav_AccountFlyout_orders"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => {\n  const selectors = [\n    '#corePriceDisplay_desktop_feature_div',\n    '#corePrice_feature_div',\n    '#priceblock_ourprice',\n    '#priceblock_dealprice',\n    '#price_inside_buybox',\n    '.a-price .a-offscreen',\n    '#buybox',\n    '#twister',\n    '#desktop_buybox'\n  ];\n  const data = {};\n  for (const sel of selectors) {\n    const els = [...document.querySelectorAll(sel)];\n    data[sel] = els.slice(0,5).map(e => e.innerText || e.textContent).filter(Boolean);\n  }\n  data.title = document.querySelector('#productTitle')?.innerText?.trim() || document.title;\n  data.bodyPrices = [...new Set((document.body.innerText.match(/(?:\\$|USD\\s*)\\s?\\d{1,3}(?:,\\d{3})*(?:\\.\\d{2})?|EUR\\s?\\d{1,3}(?:,\\d{3})*(?:\\.\\d{2})?/g) || []))].slice(0,30);\n  return data;\n})()"
+        }
+      },
+      "observation": "Eval: {\"#corePriceDisplay_desktop_feature_div\": [], \"#corePrice_feature_div\": [], \"#priceblock_ourprice\": [], \"#priceblock_dealprice\": [], \"#price_inside_buybox\": [], \".a-price .a-offscreen\": [], \"#buybox\": [\"Deliver to\\u00a0Germany\\nSee All Buying Options\\nAdd to List\"], \"#twister\": [], \"#desktop_buybox\": [\"Deliver to\\u00a0Germany\\nSee All Buying Options\\nAdd to List\"], \"title\": \"Amazon Kindle Paperwhite 16GB (newest model) \\u2013 20% faster, with new 7\\\" glare-free display and weeks of battery life "
+    },
+    {
+      "step": 6,
+      "state": {
+        "url": "https://www.amazon.com/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0DDZJS3SB?th=1",
+        "title": "Amazon.com: Amazon Kindle Paperwhite 16GB (newest model) \u2013 20% faster, with new 7\" glare-free display and weeks of battery life \u2013 Without lockscreen ads \u2013 Black",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Main content",
+            "attributes": {
+              "id": "nav-assist-skip-to-main-content",
+              "href": "#skippedLink",
+              "aria-label": "main content"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "About this item",
+            "attributes": {
+              "id": "nav-assist-skip-to-about-this-item",
+              "href": "#featurebullets_feature_div",
+              "aria-label": "About this item"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "About this item",
+            "attributes": {
+              "id": "nav-assist-skip-to-about-this-item-expander",
+              "href": "#nic-po-expander-heading",
+              "aria-label": "About this item"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "About this item",
+            "attributes": {
+              "id": "nav-assist-skip-to-about-this-item-facts-expander",
+              "href": "#productFactsDesktopExpander",
+              "aria-label": "About this item"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Buying options",
+            "attributes": {
+              "id": "nav-assist-skip-to-buying-options",
+              "href": "#buybox",
+              "aria-label": "Buying options"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Compare with similar items",
+            "attributes": {
+              "id": "nav-assist-skip-to-compare",
+              "href": "#product-comparison_feature_div",
+              "aria-label": "Compare with similar items"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Videos",
+            "attributes": {
+              "id": "nav-assist-skip-to-videos",
+              "href": "#va-related-videos-widget_feature_div",
+              "aria-label": "Videos"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Reviews",
+            "attributes": {
+              "id": "nav-assist-skip-to-reviews",
+              "href": "#customerReviews",
+              "aria-label": "Reviews"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Search\nalt\n+\n/",
+            "attributes": {
+              "id": "nav-assist-search",
+              "href": "javascript:void(0)",
+              "aria-label": "Search, alt, forward slash"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Cart\nshift\n+\nalt\n+\nC",
+            "attributes": {
+              "id": "nav-assist-cart",
+              "href": "javascript:void(0)",
+              "aria-label": "Cart, shift, alt, c"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Home\nshift\n+\nalt\n+\nH",
+            "attributes": {
+              "id": "nav-assist-home",
+              "href": "javascript:void(0)",
+              "aria-label": "Home, shift, alt, h"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Orders\nshift\n+\nalt\n+\nO",
+            "attributes": {
+              "id": "nav-assist-your-orders",
+              "href": "javascript:void(0)",
+              "aria-label": "Your orders, shift, alt, o"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "button",
+            "text": "Add to cart\n          \n              shift\n              +\n              alt\n              +\n              K",
+            "attributes": {
+              "id": "nav-assist-add-to-cart",
+              "aria-label": "Add to cart, shift, alt, K"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "button",
+            "text": "Product summary\n          \n              shift\n              +\n              alt\n              +\n              D",
+            "attributes": {
+              "id": "nav-assist-product-summary",
+              "aria-label": "Product summary, shift, alt, d"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": "Show/Hide shortcuts\nshift\n+\nalt\n+\nZ",
+            "attributes": {
+              "id": "nav-assist-show-shortcuts",
+              "aria-label": "Show/hide shortcuts, shift, alt, z"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Amazon",
+            "attributes": {
+              "id": "nav-logo-sprites",
+              "href": "/ref=nav_logo",
+              "aria-label": "Amazon"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "Deliver to\nGermany",
+            "attributes": {
+              "id": "nav-global-location-popover-link",
+              "href": ""
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "combobox",
+            "text": "Amazon Devices\nAll Departments\nArts & Crafts\nAutomotive\nBaby\nBeauty & Personal Care\nBooks\nBoys' Fashion\nComputers\nDeals\nDigital Music\nElectronics\nGirls' Fashion\nHealth & Household\nHome & Kitchen\nIndustrial & Scientific\nKindle Store\nLuggage\nMen's Fashion\nMovies & TV\nMusic, CDs & Vinyl\nPet Supplies\nPrime Video\nSoftware\nSports & Outdoors\nTools & Home Improvement\nToys & Games\nVideo Games\nWomen's Fashion",
+            "attributes": {
+              "id": "searchDropdownBox",
+              "name": "url"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "searchbox",
+            "text": "Search Amazon",
+            "attributes": {
+              "id": "twotabsearchtextbox",
+              "name": "field-keywords",
+              "type": "text",
+              "aria-label": "Search Amazon",
+              "placeholder": "Search Amazon",
+              "value": ""
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "EN",
+            "attributes": {
+              "href": "/customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang_ais",
+              "aria-label": "Choose a language for shopping in Amazon United States. The current selection is English (EN).\n"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "button",
+            "text": "Expand to Change Language or Country",
+            "attributes": {
+              "aria-label": "Expand to Change Language or Country"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Hello, sign in\nAccount & Lists",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2FAll-new-Amazon-Kindle-Paperwhite-glare-free%2Fdp%2FB0DDZJS3SB%3Fref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "button",
+            "text": "Expand Account and Lists",
+            "attributes": {
+              "aria-label": "Expand Account and Lists"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Returns\n& Orders",
+            "attributes": {
+              "id": "nav-orders",
+              "href": "/gp/css/order-history?ref_=nav_orders_first"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "0\nCart",
+            "attributes": {
+              "id": "nav-cart",
+              "href": "/gp/cart/view.html?ref_=nav_cart",
+              "aria-label": "0 items in cart"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": "All",
+            "attributes": {
+              "id": "nav-hamburger-menu",
+              "href": "javascript: void(0)",
+              "aria-label": "Open All Categories Menu"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Today's Deals",
+            "attributes": {
+              "href": "/gp/goldbox?ref_=nav_cs_gb"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Gift Cards",
+            "attributes": {
+              "href": "/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Sell",
+            "attributes": {
+              "href": "/b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Registry",
+            "attributes": {
+              "href": "/gp/browse.html?node=16115931011&ref_=nav_cs_registry"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Prime Video",
+            "attributes": {
+              "href": "/Amazon-Video/b/?ie=UTF8&node=2858778011&ref_=nav_cs_prime_video"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Customer Service",
+            "attributes": {
+              "href": "/gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Disability Customer Support",
+            "attributes": {
+              "href": "/gp/help/customer/accessibility",
+              "aria-label": "Click to call our Disability Customer Support line, or reach us directly at 1-888-283-1678"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Amazon Devices",
+            "attributes": {
+              "href": "/Amazon-Devices/b/?ie=UTF8&node=2102313011&ref_=topnav_storetab_devicesubnav",
+              "aria-label": "Amazon Devices"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Echo & Alexa",
+            "attributes": {
+              "href": "/smart-home-devices/b/?ie=UTF8&node=9818047011&ref_=sv_devicesubnav_1",
+              "aria-label": "Echo & Alexa"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Fire Tablets",
+            "attributes": {
+              "href": "/Amazon-Fire-Tablet-Family/b/?ie=UTF8&node=6669703011&ref_=sv_devicesubnav_2",
+              "aria-label": "Fire Tablets"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "Amazon Fire TV",
+            "attributes": {
+              "href": "/Amazon-Fire-TV-Family/b/?ie=UTF8&node=8521791011&ref_=sv_devicesubnav_3",
+              "aria-label": "Amazon Fire TV"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Kindle",
+            "attributes": {
+              "href": "/Amazon-Kindle-Ereader-Family/b/?ie=UTF8&node=6669702011&ref_=sv_devicesubnav_4",
+              "aria-label": "Kindle"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Home Security",
+            "attributes": {
+              "href": "/b/?ie=UTF8&node=17386948011&ref_=sv_devicesubnav_5",
+              "aria-label": "Home Security"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Accessories",
+            "attributes": {
+              "href": "/Amazon-Devices-Accessories/b/?ie=UTF8&node=370783011&ref_=sv_devicesubnav_6",
+              "aria-label": "Accessories"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "Certified Refurbished",
+            "attributes": {
+              "href": "/Refurbished-Kindle-Outlet/b/?ie=UTF8&node=8497978011&ref_=sv_devicesubnav_7",
+              "aria-label": "Certified Refurbished"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "link",
+            "text": "Help Forum",
+            "attributes": {
+              "href": "https://www.amazonforum.com/?_encoding=UTF8&ref_=sv_devicesubnav_8",
+              "aria-label": "Help Forum"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "link",
+            "text": "Kindle Support",
+            "attributes": {
+              "href": "/gp/help/customer/display.html/?ie=UTF8&nodeId=200127470&ref_=sv_devicesubnav_9",
+              "aria-label": "Kindle Support"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "link",
+            "text": "Manage Your Content and Devices",
+            "attributes": {
+              "href": "/gp/digital/fiona/manage/?ie=UTF8&ref_=sv_devicesubnav_10",
+              "aria-label": "Manage Your Content and Devices"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2FAll-new-Amazon-Kindle-Paperwhite-glare-free%2Fdp%2FB0DDZJS3SB%3Fref_%3Dnav_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "link",
+            "text": "Start here.",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/register?openid.return_to=https%3A%2F%2Fwww.amazon.com%2FAll-new-Amazon-Kindle-Paperwhite-glare-free%2Fdp%2FB0DDZJS3SB%2F%3F_encoding%3DUTF8%26ref_%3Dnav_newcust&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0",
+              "aria-label": "New to Amazon? Start here to create an account"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "Create a List",
+            "attributes": {
+              "href": "/hz/wishlist/ls?triggerElementID=createList&ref_=nav_ListFlyout_navFlyout_createList_lv_redirect"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "link",
+            "text": "Find a List or Registry",
+            "attributes": {
+              "href": "/registries?ref_=nav_ListFlyout_find"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "link",
+            "text": "Account",
+            "attributes": {
+              "href": "/gp/css/homepage.html?ref_=nav_AccountFlyout_ya"
+            }
+          },
+          {
+            "id": "pw-70",
+            "role": "link",
+            "text": "Orders",
+            "attributes": {
+              "id": "nav_prefetch_yourorders",
+              "href": "/gp/css/order-history?ref_=nav_AccountFlyout_orders"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => {\n  const html = document.documentElement.outerHTML;\n  const matches = [];\n  const patterns = [\n    /\\$\\s?\\d{1,3}(?:,\\d{3})*(?:\\.\\d{2})?/g,\n    /\\\"price\\\"\\s*:\\s*\\\"?\\$?\\d+(?:\\.\\d{2})?\\\"?/gi,\n    /displayPrice[^,}]*[,}]/gi,\n    /priceAmount[^,}]*[,}]/gi,\n    /B0DDZJS3SB.{0,500}/gi\n  ];\n  for (const re of patterns) {\n    let m; let count=0;\n    while ((m = re.exec(html)) && count < 50) { matches.push(m[0]); count++; }\n  }\n  return {title: document.querySelector('#productTitle')?.innerText?.trim(), matches: [...new Set(matches)].slice(0,100)};\n})()"
+        }
+      },
+      "observation": "Eval: {\"title\": \"Amazon Kindle Paperwhite 16GB (newest model) \\u2013 20% faster, with new 7\\\" glare-free display and weeks of battery life \\u2013 Without lockscreen ads \\u2013 Black\", \"matches\": [\"$1\", \"$179.99\", \"B0DDZJS3SB\\\"><meta name=\\\"title\\\" content=\\\"Amazon.com: Amazon Kindle Paperwhite 16GB (newest model) \\u2013 20% faster, with new 7&quot; glare-free display and weeks of battery life \\u2013 Without lockscreen ads \\u2013 Black\\\"><title>Amazon.com: Amazon Kindle Paperwhite 16GB (newest model) \\"
+    },
+    {
+      "step": 7,
+      "state": {
+        "url": "https://www.amazon.com/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0DDZJS3SB?th=1",
+        "title": "Amazon.com: Amazon Kindle Paperwhite 16GB (newest model) \u2013 20% faster, with new 7\" glare-free display and weeks of battery life \u2013 Without lockscreen ads \u2013 Black",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Main content",
+            "attributes": {
+              "id": "nav-assist-skip-to-main-content",
+              "href": "#skippedLink",
+              "aria-label": "main content"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "About this item",
+            "attributes": {
+              "id": "nav-assist-skip-to-about-this-item",
+              "href": "#featurebullets_feature_div",
+              "aria-label": "About this item"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "About this item",
+            "attributes": {
+              "id": "nav-assist-skip-to-about-this-item-expander",
+              "href": "#nic-po-expander-heading",
+              "aria-label": "About this item"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "About this item",
+            "attributes": {
+              "id": "nav-assist-skip-to-about-this-item-facts-expander",
+              "href": "#productFactsDesktopExpander",
+              "aria-label": "About this item"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Buying options",
+            "attributes": {
+              "id": "nav-assist-skip-to-buying-options",
+              "href": "#buybox",
+              "aria-label": "Buying options"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Compare with similar items",
+            "attributes": {
+              "id": "nav-assist-skip-to-compare",
+              "href": "#product-comparison_feature_div",
+              "aria-label": "Compare with similar items"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Videos",
+            "attributes": {
+              "id": "nav-assist-skip-to-videos",
+              "href": "#va-related-videos-widget_feature_div",
+              "aria-label": "Videos"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Reviews",
+            "attributes": {
+              "id": "nav-assist-skip-to-reviews",
+              "href": "#customerReviews",
+              "aria-label": "Reviews"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Search\nalt\n+\n/",
+            "attributes": {
+              "id": "nav-assist-search",
+              "href": "javascript:void(0)",
+              "aria-label": "Search, alt, forward slash"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Cart\nshift\n+\nalt\n+\nC",
+            "attributes": {
+              "id": "nav-assist-cart",
+              "href": "javascript:void(0)",
+              "aria-label": "Cart, shift, alt, c"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Home\nshift\n+\nalt\n+\nH",
+            "attributes": {
+              "id": "nav-assist-home",
+              "href": "javascript:void(0)",
+              "aria-label": "Home, shift, alt, h"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Orders\nshift\n+\nalt\n+\nO",
+            "attributes": {
+              "id": "nav-assist-your-orders",
+              "href": "javascript:void(0)",
+              "aria-label": "Your orders, shift, alt, o"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "button",
+            "text": "Add to cart\n          \n              shift\n              +\n              alt\n              +\n              K",
+            "attributes": {
+              "id": "nav-assist-add-to-cart",
+              "aria-label": "Add to cart, shift, alt, K"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "button",
+            "text": "Product summary\n          \n              shift\n              +\n              alt\n              +\n              D",
+            "attributes": {
+              "id": "nav-assist-product-summary",
+              "aria-label": "Product summary, shift, alt, d"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": "Show/Hide shortcuts\nshift\n+\nalt\n+\nZ",
+            "attributes": {
+              "id": "nav-assist-show-shortcuts",
+              "aria-label": "Show/hide shortcuts, shift, alt, z"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Amazon",
+            "attributes": {
+              "id": "nav-logo-sprites",
+              "href": "/ref=nav_logo",
+              "aria-label": "Amazon"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "Deliver to\nGermany",
+            "attributes": {
+              "id": "nav-global-location-popover-link",
+              "href": ""
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "combobox",
+            "text": "Amazon Devices\nAll Departments\nArts & Crafts\nAutomotive\nBaby\nBeauty & Personal Care\nBooks\nBoys' Fashion\nComputers\nDeals\nDigital Music\nElectronics\nGirls' Fashion\nHealth & Household\nHome & Kitchen\nIndustrial & Scientific\nKindle Store\nLuggage\nMen's Fashion\nMovies & TV\nMusic, CDs & Vinyl\nPet Supplies\nPrime Video\nSoftware\nSports & Outdoors\nTools & Home Improvement\nToys & Games\nVideo Games\nWomen's Fashion",
+            "attributes": {
+              "id": "searchDropdownBox",
+              "name": "url"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "searchbox",
+            "text": "Search Amazon",
+            "attributes": {
+              "id": "twotabsearchtextbox",
+              "name": "field-keywords",
+              "type": "text",
+              "aria-label": "Search Amazon",
+              "placeholder": "Search Amazon",
+              "value": ""
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "EN",
+            "attributes": {
+              "href": "/customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang_ais",
+              "aria-label": "Choose a language for shopping in Amazon United States. The current selection is English (EN).\n"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "button",
+            "text": "Expand to Change Language or Country",
+            "attributes": {
+              "aria-label": "Expand to Change Language or Country"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Hello, sign in\nAccount & Lists",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2FAll-new-Amazon-Kindle-Paperwhite-glare-free%2Fdp%2FB0DDZJS3SB%3Fref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "button",
+            "text": "Expand Account and Lists",
+            "attributes": {
+              "aria-label": "Expand Account and Lists"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Returns\n& Orders",
+            "attributes": {
+              "id": "nav-orders",
+              "href": "/gp/css/order-history?ref_=nav_orders_first"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "0\nCart",
+            "attributes": {
+              "id": "nav-cart",
+              "href": "/gp/cart/view.html?ref_=nav_cart",
+              "aria-label": "0 items in cart"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": "All",
+            "attributes": {
+              "id": "nav-hamburger-menu",
+              "href": "javascript: void(0)",
+              "aria-label": "Open All Categories Menu"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Today's Deals",
+            "attributes": {
+              "href": "/gp/goldbox?ref_=nav_cs_gb"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Gift Cards",
+            "attributes": {
+              "href": "/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Sell",
+            "attributes": {
+              "href": "/b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Registry",
+            "attributes": {
+              "href": "/gp/browse.html?node=16115931011&ref_=nav_cs_registry"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Prime Video",
+            "attributes": {
+              "href": "/Amazon-Video/b/?ie=UTF8&node=2858778011&ref_=nav_cs_prime_video"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Customer Service",
+            "attributes": {
+              "href": "/gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Disability Customer Support",
+            "attributes": {
+              "href": "/gp/help/customer/accessibility",
+              "aria-label": "Click to call our Disability Customer Support line, or reach us directly at 1-888-283-1678"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Amazon Devices",
+            "attributes": {
+              "href": "/Amazon-Devices/b/?ie=UTF8&node=2102313011&ref_=topnav_storetab_devicesubnav",
+              "aria-label": "Amazon Devices"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Echo & Alexa",
+            "attributes": {
+              "href": "/smart-home-devices/b/?ie=UTF8&node=9818047011&ref_=sv_devicesubnav_1",
+              "aria-label": "Echo & Alexa"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Fire Tablets",
+            "attributes": {
+              "href": "/Amazon-Fire-Tablet-Family/b/?ie=UTF8&node=6669703011&ref_=sv_devicesubnav_2",
+              "aria-label": "Fire Tablets"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "Amazon Fire TV",
+            "attributes": {
+              "href": "/Amazon-Fire-TV-Family/b/?ie=UTF8&node=8521791011&ref_=sv_devicesubnav_3",
+              "aria-label": "Amazon Fire TV"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Kindle",
+            "attributes": {
+              "href": "/Amazon-Kindle-Ereader-Family/b/?ie=UTF8&node=6669702011&ref_=sv_devicesubnav_4",
+              "aria-label": "Kindle"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Home Security",
+            "attributes": {
+              "href": "/b/?ie=UTF8&node=17386948011&ref_=sv_devicesubnav_5",
+              "aria-label": "Home Security"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Accessories",
+            "attributes": {
+              "href": "/Amazon-Devices-Accessories/b/?ie=UTF8&node=370783011&ref_=sv_devicesubnav_6",
+              "aria-label": "Accessories"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "Certified Refurbished",
+            "attributes": {
+              "href": "/Refurbished-Kindle-Outlet/b/?ie=UTF8&node=8497978011&ref_=sv_devicesubnav_7",
+              "aria-label": "Certified Refurbished"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "link",
+            "text": "Help Forum",
+            "attributes": {
+              "href": "https://www.amazonforum.com/?_encoding=UTF8&ref_=sv_devicesubnav_8",
+              "aria-label": "Help Forum"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "link",
+            "text": "Kindle Support",
+            "attributes": {
+              "href": "/gp/help/customer/display.html/?ie=UTF8&nodeId=200127470&ref_=sv_devicesubnav_9",
+              "aria-label": "Kindle Support"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "link",
+            "text": "Manage Your Content and Devices",
+            "attributes": {
+              "href": "/gp/digital/fiona/manage/?ie=UTF8&ref_=sv_devicesubnav_10",
+              "aria-label": "Manage Your Content and Devices"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2FAll-new-Amazon-Kindle-Paperwhite-glare-free%2Fdp%2FB0DDZJS3SB%3Fref_%3Dnav_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "link",
+            "text": "Start here.",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/register?openid.return_to=https%3A%2F%2Fwww.amazon.com%2FAll-new-Amazon-Kindle-Paperwhite-glare-free%2Fdp%2FB0DDZJS3SB%2F%3F_encoding%3DUTF8%26ref_%3Dnav_newcust&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0",
+              "aria-label": "New to Amazon? Start here to create an account"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "Create a List",
+            "attributes": {
+              "href": "/hz/wishlist/ls?triggerElementID=createList&ref_=nav_ListFlyout_navFlyout_createList_lv_redirect"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "link",
+            "text": "Find a List or Registry",
+            "attributes": {
+              "href": "/registries?ref_=nav_ListFlyout_find"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "link",
+            "text": "Account",
+            "attributes": {
+              "href": "/gp/css/homepage.html?ref_=nav_AccountFlyout_ya"
+            }
+          },
+          {
+            "id": "pw-70",
+            "role": "link",
+            "text": "Orders",
+            "attributes": {
+              "id": "nav_prefetch_yourorders",
+              "href": "/gp/css/order-history?ref_=nav_AccountFlyout_orders"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "The current Kindle Paperwhite 16GB (newest model) is listed at $179.99 on Amazon."
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

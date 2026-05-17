@@ -1,0 +1,1312 @@
+{
+  "task_id": "wv-036",
+  "task_description": "On ESPN, find the current NFL standings leader in the AFC East.",
+  "starting_url": "https://www.espn.com/nfl/standings",
+  "passed": false,
+  "final_answer": "Error planning: ",
+  "duration_s": 309.13,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://www.espn.com/nfl/standings",
+        "title": "NFL Standings - 2025 season - ESPN",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "Skip to main content",
+            "attributes": {}
+          },
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "Skip to navigation",
+            "attributes": {}
+          },
+          {
+            "id": "pw-2",
+            "role": "combobox",
+            "text": "Top Events\nNBA\nNHL\nPGA Tour\nMLB\nWNBA\nLPGA Tour\nNCAA Baseball\nNCAA Softball\nTop Soccer\nMen's NCAA Lacrosse\nNFL Draft\nTennis (M)\nTennis (W)\nNASCAR\nF1\nPLL (Lacrosse)\nUFC\nNCAAF\nNCAAM\nNCAAW\nNLL (Lacrosse)\nWomen's NCAA Lacrosse\nWorld Cup\nPremier League\nLALIGA\nNWSL\nMLS\nSerie A\nUFL",
+            "attributes": {
+              "name": "sportsDropdown",
+              "aria-label": "Sports"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "combobox",
+            "text": "NFL Draft",
+            "attributes": {
+              "name": "fake-sportsDropdown"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "combobox",
+            "text": "Round 1\nRound 2\nRound 3\nRound 4\nRound 5\nRound 6\nRound 7",
+            "attributes": {
+              "name": "datesDropdown",
+              "aria-label": "Sports Dates"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "combobox",
+            "text": "Round 1",
+            "attributes": {
+              "name": "fake-datesDropdown"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Pick #1\nF. Mendoza\nQB\nIndiana",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/lv/las-vegas-raiders"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/lv/las-vegas-raiders"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4837248/fernando-mendoza"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Pick #2\nD. Bailey\nEDGE\nTexas Tech",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/nyj/new-york-jets"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/nyj/new-york-jets"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4685248/david-bailey"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Pick #3\nJ. Love\nRB\nNotre Dame",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/ari/arizona-cardinals"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/ari/arizona-cardinals"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4870808/jeremiyah-love"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Pick #4\nC. Tate\nWR\nOhio State",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/ten/tennessee-titans"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/ten/tennessee-titans"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4871023/carnell-tate"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Pick #5\nA. Reese\nLB\nOhio State",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/nyg/new-york-giants"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/nyg/new-york-giants"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4950400/arvell-reese"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Pick #6\nM. Delane\nCB\nLSU",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/kc/kansas-city-chiefs"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/kc/kansas-city-chiefs"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4880124/mansoor-delane"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Pick #7\nS. Styles\nLB\nOhio State",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/wsh/washington-commanders"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/wsh/washington-commanders"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/5081807/sonny-styles"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Pick #8\nJ. Tyson\nWR\nArizona St",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/no/new-orleans-saints"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/no/new-orleans-saints"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4880281/jordyn-tyson"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Pick #9\nS. Fano\nOT\nUtah",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/cle/cleveland-browns"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/cle/cleveland-browns"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4870723/spencer-fano"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Pick #10\nF. Mauigoa\nOT\nMiami",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/nyg/new-york-giants"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/nyg/new-york-giants"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4870914/francis-mauigoa"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Pick #11\nC. Downs\nS\nOhio State",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/dal/dallas-cowboys"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/dal/dallas-cowboys"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4870706/caleb-downs"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Pick #12\nK. Proctor\nOT\nAlabama",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/mia/miami-dolphins"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/mia/miami-dolphins"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4870976/kadyn-proctor"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Pick #13\nT. Simpson\nQB\nAlabama",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/lar/los-angeles-rams"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/lar/los-angeles-rams"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4685522/ty-simpson"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Pick #14\nO. Ioane\nOG\nPenn State",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/bal/baltimore-ravens"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/bal/baltimore-ravens"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4832793/olaivavega-ioane"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Pick #15\nR. Bain Jr.\nEDGE\nMiami",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/tb/tampa-bay-buccaneers"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/tb/tampa-bay-buccaneers"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "expression": "document.body.innerText"
+        }
+      },
+      "observation": "Eval: null"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://www.espn.com/nfl/standings",
+        "title": "NFL Standings - 2025 season - ESPN",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "Skip to main content",
+            "attributes": {}
+          },
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "Skip to navigation",
+            "attributes": {}
+          },
+          {
+            "id": "pw-2",
+            "role": "combobox",
+            "text": "Top Events\nNBA\nNHL\nPGA Tour\nMLB\nWNBA\nLPGA Tour\nNCAA Baseball\nNCAA Softball\nTop Soccer\nMen's NCAA Lacrosse\nNFL Draft\nTennis (M)\nTennis (W)\nNASCAR\nF1\nPLL (Lacrosse)\nUFC\nNCAAF\nNCAAM\nNCAAW\nNLL (Lacrosse)\nWomen's NCAA Lacrosse\nWorld Cup\nPremier League\nLALIGA\nNWSL\nMLS\nSerie A\nUFL",
+            "attributes": {
+              "name": "sportsDropdown",
+              "aria-label": "Sports"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "combobox",
+            "text": "NFL Draft",
+            "attributes": {
+              "name": "fake-sportsDropdown"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "combobox",
+            "text": "Round 1\nRound 2\nRound 3\nRound 4\nRound 5\nRound 6\nRound 7",
+            "attributes": {
+              "name": "datesDropdown",
+              "aria-label": "Sports Dates"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "combobox",
+            "text": "Round 1",
+            "attributes": {
+              "name": "fake-datesDropdown"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Pick #1\nF. Mendoza\nQB\nIndiana",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/lv/las-vegas-raiders"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/lv/las-vegas-raiders"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4837248/fernando-mendoza"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Pick #2\nD. Bailey\nEDGE\nTexas Tech",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/nyj/new-york-jets"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/nyj/new-york-jets"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4685248/david-bailey"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Pick #3\nJ. Love\nRB\nNotre Dame",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/ari/arizona-cardinals"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/ari/arizona-cardinals"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4870808/jeremiyah-love"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Pick #4\nC. Tate\nWR\nOhio State",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/ten/tennessee-titans"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/ten/tennessee-titans"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4871023/carnell-tate"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Pick #5\nA. Reese\nLB\nOhio State",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/nyg/new-york-giants"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/nyg/new-york-giants"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4950400/arvell-reese"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Pick #6\nM. Delane\nCB\nLSU",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/kc/kansas-city-chiefs"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/kc/kansas-city-chiefs"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4880124/mansoor-delane"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Pick #7\nS. Styles\nLB\nOhio State",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/wsh/washington-commanders"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/wsh/washington-commanders"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/5081807/sonny-styles"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Pick #8\nJ. Tyson\nWR\nArizona St",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/no/new-orleans-saints"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/no/new-orleans-saints"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4880281/jordyn-tyson"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Pick #9\nS. Fano\nOT\nUtah",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/cle/cleveland-browns"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/cle/cleveland-browns"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4870723/spencer-fano"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Pick #10\nF. Mauigoa\nOT\nMiami",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/nyg/new-york-giants"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/nyg/new-york-giants"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4870914/francis-mauigoa"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Pick #11\nC. Downs\nS\nOhio State",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/dal/dallas-cowboys"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/dal/dallas-cowboys"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4870706/caleb-downs"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Pick #12\nK. Proctor\nOT\nAlabama",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/mia/miami-dolphins"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/mia/miami-dolphins"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4870976/kadyn-proctor"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Pick #13\nT. Simpson\nQB\nAlabama",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/lar/los-angeles-rams"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/lar/los-angeles-rams"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4685522/ty-simpson"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Pick #14\nO. Ioane\nOG\nPenn State",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/bal/baltimore-ravens"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/bal/baltimore-ravens"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4832793/olaivavega-ioane"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Pick #15\nR. Bain Jr.\nEDGE\nMiami",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/tb/tampa-bay-buccaneers"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/tb/tampa-bay-buccaneers"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "expression": "(() => document.body ? document.body.innerText.slice(0, 8000) : 'NO_BODY')()"
+        }
+      },
+      "observation": "Eval: null"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://www.espn.com/nfl/standings",
+        "title": "NFL Standings - 2025 season - ESPN",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "Skip to main content",
+            "attributes": {}
+          },
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "Skip to navigation",
+            "attributes": {}
+          },
+          {
+            "id": "pw-2",
+            "role": "combobox",
+            "text": "Top Events\nNBA\nNHL\nPGA Tour\nMLB\nWNBA\nLPGA Tour\nNCAA Baseball\nNCAA Softball\nTop Soccer\nMen's NCAA Lacrosse\nNFL Draft\nTennis (M)\nTennis (W)\nNASCAR\nF1\nPLL (Lacrosse)\nUFC\nNCAAF\nNCAAM\nNCAAW\nNLL (Lacrosse)\nWomen's NCAA Lacrosse\nWorld Cup\nPremier League\nLALIGA\nNWSL\nMLS\nSerie A\nUFL",
+            "attributes": {
+              "name": "sportsDropdown",
+              "aria-label": "Sports"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "combobox",
+            "text": "NFL Draft",
+            "attributes": {
+              "name": "fake-sportsDropdown"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "combobox",
+            "text": "Round 1\nRound 2\nRound 3\nRound 4\nRound 5\nRound 6\nRound 7",
+            "attributes": {
+              "name": "datesDropdown",
+              "aria-label": "Sports Dates"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "combobox",
+            "text": "Round 1",
+            "attributes": {
+              "name": "fake-datesDropdown"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Pick #1\nF. Mendoza\nQB\nIndiana",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/lv/las-vegas-raiders"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/lv/las-vegas-raiders"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4837248/fernando-mendoza"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Pick #2\nD. Bailey\nEDGE\nTexas Tech",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/nyj/new-york-jets"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/nyj/new-york-jets"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4685248/david-bailey"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Pick #3\nJ. Love\nRB\nNotre Dame",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/ari/arizona-cardinals"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/ari/arizona-cardinals"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4870808/jeremiyah-love"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Pick #4\nC. Tate\nWR\nOhio State",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/ten/tennessee-titans"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/ten/tennessee-titans"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4871023/carnell-tate"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Pick #5\nA. Reese\nLB\nOhio State",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/nyg/new-york-giants"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/nyg/new-york-giants"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4950400/arvell-reese"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Pick #6\nM. Delane\nCB\nLSU",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/kc/kansas-city-chiefs"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/kc/kansas-city-chiefs"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4880124/mansoor-delane"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Pick #7\nS. Styles\nLB\nOhio State",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/wsh/washington-commanders"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/wsh/washington-commanders"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/5081807/sonny-styles"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Pick #8\nJ. Tyson\nWR\nArizona St",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/no/new-orleans-saints"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/no/new-orleans-saints"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4880281/jordyn-tyson"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Pick #9\nS. Fano\nOT\nUtah",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/cle/cleveland-browns"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/cle/cleveland-browns"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4870723/spencer-fano"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Pick #10\nF. Mauigoa\nOT\nMiami",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/nyg/new-york-giants"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/nyg/new-york-giants"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4870914/francis-mauigoa"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Pick #11\nC. Downs\nS\nOhio State",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/dal/dallas-cowboys"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/dal/dallas-cowboys"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4870706/caleb-downs"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Pick #12\nK. Proctor\nOT\nAlabama",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/mia/miami-dolphins"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/mia/miami-dolphins"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4870976/kadyn-proctor"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Pick #13\nT. Simpson\nQB\nAlabama",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/lar/los-angeles-rams"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/lar/los-angeles-rams"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4685522/ty-simpson"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Pick #14\nO. Ioane\nOG\nPenn State",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/bal/baltimore-ravens"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/bal/baltimore-ravens"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Player Card",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/player/_/id/4832793/olaivavega-ioane"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Pick #15\nR. Bain Jr.\nEDGE\nMiami",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/tb/tampa-bay-buccaneers"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Draft Picks",
+            "attributes": {
+              "href": "https://www.espn.com/nfl/draft/teams/_/name/tb/tampa-bay-buccaneers"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2025/types/2/groups/1/standings?lang=en&region=us"
+        }
+      },
+      "observation": "Opened https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2025/types/2/groups/1/standings?lang=en&region=us"
+    },
+    {
+      "step": 4,
+      "state": {
+        "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2025/types/2/groups/1/standings?lang=en&region=us",
+        "title": "",
+        "elements": []
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "expression": "fetch(location.href).then(r => r.text()).then(t => t.slice(0, 12000))"
+        }
+      },
+      "observation": "Eval: null"
+    },
+    {
+      "step": 5,
+      "state": {
+        "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2025/types/2/groups/1/standings?lang=en&region=us",
+        "title": "",
+        "elements": []
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "expression": "(() => { const xhr = new XMLHttpRequest(); xhr.open('GET', location.href, false); xhr.send(null); return xhr.responseText.slice(0, 20000); })()"
+        }
+      },
+      "observation": "Eval: null"
+    },
+    {
+      "step": 6,
+      "state": {
+        "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2025/types/2/groups/1/standings?lang=en&region=us",
+        "title": "",
+        "elements": []
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "expression": "(() => { const xhr = new XMLHttpRequest(); xhr.open('GET', location.href, false); xhr.send(null); const txt = xhr.responseText || document.body.innerText || ''; document.body.innerHTML = ''; const ta = document.createElement('textarea'); ta.setAttribute('aria-label','api-data'); ta.style.width='100%'; ta.style.height='1000px'; ta.value = txt; document.body.appendChild(ta); })()"
+        }
+      },
+      "observation": "Eval: null"
+    },
+    {
+      "step": 7,
+      "state": {
+        "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2025/types/2/groups/1/standings?lang=en&region=us",
+        "title": "",
+        "elements": []
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "Error planning: "
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

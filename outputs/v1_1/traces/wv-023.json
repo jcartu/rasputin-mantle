@@ -1,0 +1,1264 @@
+{
+  "task_id": "wv-023",
+  "task_description": "On BBC News, find the current top headline in the World section.",
+  "starting_url": "https://www.bbc.com/news",
+  "passed": true,
+  "final_answer": "WHO declares Ebola outbreak in DR Congo an international emergency",
+  "duration_s": 24.78,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://www.bbc.co.uk/news",
+        "title": "Home - BBC News",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "We use cookies",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "Accept additional cookies",
+            "attributes": {
+              "type": "button",
+              "data-testid": "accept-button"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "Reject additional cookies",
+            "attributes": {
+              "type": "button",
+              "data-testid": "reject-button"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Let me choose",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+              "data-testid": "settings-link"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "BBC Homepage",
+            "attributes": {
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Skip to content",
+            "attributes": {
+              "href": "#main-heading"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Accessibility Help",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/accessibility/"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://session.bbc.co.uk/session?lang=en-GB&ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fnews&sequenceId=4c060253-8ad1-4603-a3c3-64045245efc4"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Notifications",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/notifications"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/news"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sport"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Weather",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/weather"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "iPlayer",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/iplayer"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Sounds",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sounds"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Bitesize",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/bitesize"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "CBBC",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbbc"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "CBeebies",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbeebies"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Food",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/food"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "button",
+            "text": "More menu",
+            "attributes": {
+              "href": "#global-navigation-more-menu"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "button",
+            "text": "More menu",
+            "attributes": {
+              "href": "#global-navigation-more-menu"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Search BBC",
+            "attributes": {
+              "href": "/search?d=NEWS_PS"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/news"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sport"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Weather",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/weather"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "iPlayer",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/iplayer"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Sounds",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sounds"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Bitesize",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/bitesize"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbbc"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbeebies"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.bbc.co.uk/food"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "BBC News",
+            "attributes": {
+              "href": "/news"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "button",
+            "text": "Menu",
+            "attributes": {
+              "href": "#product-navigation-menu"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "/news"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "UK",
+            "attributes": {
+              "href": "/news/uk"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "World",
+            "attributes": {
+              "href": "/news/world"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Business",
+            "attributes": {
+              "href": "/news/business"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Culture",
+            "attributes": {
+              "href": "/news/entertainment_and_arts"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Politics",
+            "attributes": {
+              "href": "/news/politics"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Health",
+            "attributes": {
+              "href": "/news/health"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Tech",
+            "attributes": {
+              "href": "/news/technology"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "InDepth",
+            "attributes": {
+              "href": "/news/bbcindepth"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "BBC Verify",
+            "attributes": {
+              "href": "/news/bbcverify"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Climate",
+            "attributes": {
+              "href": "/news/topics/cmj34zmwm1zt"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "button",
+            "text": "More",
+            "attributes": {
+              "href": "#product-navigation-more-menu"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Science",
+            "attributes": {
+              "href": "/news/science_and_environment"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Family & Education",
+            "attributes": {
+              "href": "/news/education"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "In Pictures",
+            "attributes": {
+              "href": "/news/in_pictures"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "click",
+        "args": {
+          "id": "pw-44"
+        }
+      },
+      "observation": "Clicked pw-44"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://www.bbc.co.uk/news/world",
+        "title": "World | Latest News & Updates | BBC News",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "BBC Homepage",
+            "attributes": {
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Skip to content",
+            "attributes": {
+              "href": "#main-heading"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Accessibility Help",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/accessibility/"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Your account",
+            "attributes": {
+              "href": "https://account.bbc.com/account?lang=en-GB&ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fnews%2Fworld"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Notifications",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/notifications"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/news"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sport"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Weather",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/weather"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "iPlayer",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/iplayer"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Sounds",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sounds"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Bitesize",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/bitesize"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "CBBC",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbbc"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "CBeebies",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbeebies"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Food",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/food"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "More menu",
+            "attributes": {
+              "href": "#global-navigation-more-menu"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "More menu",
+            "attributes": {
+              "href": "#global-navigation-more-menu"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Search BBC",
+            "attributes": {
+              "href": "/search?d=NEWS_PS"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/news"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sport"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Weather",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/weather"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "iPlayer",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/iplayer"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Sounds",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sounds"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Bitesize",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/bitesize"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbbc"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbeebies"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.bbc.co.uk/food"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "#more-menu-button"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "BBC News",
+            "attributes": {
+              "href": "/news"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Menu",
+            "attributes": {
+              "href": "#product-navigation-menu"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "/news"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "UK",
+            "attributes": {
+              "href": "/news/uk"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "World",
+            "attributes": {
+              "href": "/news/world"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Business",
+            "attributes": {
+              "href": "/news/business"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Culture",
+            "attributes": {
+              "href": "/news/entertainment_and_arts"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Politics",
+            "attributes": {
+              "href": "/news/politics"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Health",
+            "attributes": {
+              "href": "/news/health"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Tech",
+            "attributes": {
+              "href": "/news/technology"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "InDepth",
+            "attributes": {
+              "href": "/news/bbcindepth"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "BBC Verify",
+            "attributes": {
+              "href": "/news/bbcverify"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Climate",
+            "attributes": {
+              "href": "/news/topics/cmj34zmwm1zt"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "More",
+            "attributes": {
+              "href": "#product-navigation-more-menu"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Science",
+            "attributes": {
+              "href": "/news/science_and_environment"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Family & Education",
+            "attributes": {
+              "href": "/news/education"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "In Pictures",
+            "attributes": {
+              "href": "/news/in_pictures"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Disability",
+            "attributes": {
+              "href": "/news/disability"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Newsbeat",
+            "attributes": {
+              "href": "/news/newsbeat"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "World",
+            "attributes": {
+              "href": "/news/world"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "link",
+            "text": "Africa",
+            "attributes": {
+              "href": "/news/world/africa"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => { const main = document.querySelector('main') || document.body; const items = [...main.querySelectorAll('h1,h2,h3,a')].map(el => ({tag: el.tagName, text: (el.innerText || el.textContent || '').trim().replace(/\\s+/g,' '), href: el.href || ''})).filter(x => x.text); return items.slice(0,80); })()"
+        }
+      },
+      "observation": "Eval: [{\"tag\": \"H1\", \"text\": \"World\", \"href\": \"\"}, {\"tag\": \"A\", \"text\": \"My News\", \"href\": \"https://www.bbc.co.uk/news/my\"}, {\"tag\": \"A\", \"text\": \"News homepage\", \"href\": \"https://www.bbc.co.uk/news\"}, {\"tag\": \"A\", \"text\": \"WHO declares Ebola outbreak in DR Congo an international emergency\", \"href\": \"https://www.bbc.co.uk/news/articles/c2l2p0wwzzdo\"}, {\"tag\": \"A\", \"text\": \"Africa\", \"href\": \"https://www.bbc.co.uk/news/world/africa\"}, {\"tag\": \"A\", \"text\": \"How worrying is the Ebola outbreak in DR Congo?"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://www.bbc.co.uk/news/world",
+        "title": "World | Latest News & Updates | BBC News",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "We use cookies",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "Accept additional cookies",
+            "attributes": {
+              "type": "button",
+              "data-testid": "accept-button"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "Reject additional cookies",
+            "attributes": {
+              "type": "button",
+              "data-testid": "reject-button"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Let me choose",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+              "data-testid": "settings-link"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "BBC Homepage",
+            "attributes": {
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Skip to content",
+            "attributes": {
+              "href": "#main-heading"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Accessibility Help",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/accessibility/"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://session.bbc.co.uk/session?lang=en-GB&ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fnews%2Fworld&sequenceId=4c060253-8ad1-4603-a3c3-64045245efc4"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Notifications",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/notifications"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/news"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sport"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Weather",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/weather"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "iPlayer",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/iplayer"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Sounds",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sounds"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Bitesize",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/bitesize"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "CBBC",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbbc"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "CBeebies",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbeebies"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Food",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/food"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "button",
+            "text": "More menu",
+            "attributes": {
+              "href": "#global-navigation-more-menu"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "button",
+            "text": "More menu",
+            "attributes": {
+              "href": "#global-navigation-more-menu"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Search BBC",
+            "attributes": {
+              "href": "/search?d=NEWS_PS"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/news"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sport"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Weather",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/weather"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "iPlayer",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/iplayer"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Sounds",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sounds"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Bitesize",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/bitesize"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbbc"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbeebies"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.bbc.co.uk/food"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "BBC News",
+            "attributes": {
+              "href": "/news"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "button",
+            "text": "Menu",
+            "attributes": {
+              "href": "#product-navigation-menu"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "/news"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "UK",
+            "attributes": {
+              "href": "/news/uk"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "World",
+            "attributes": {
+              "href": "/news/world"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Business",
+            "attributes": {
+              "href": "/news/business"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Culture",
+            "attributes": {
+              "href": "/news/entertainment_and_arts"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Politics",
+            "attributes": {
+              "href": "/news/politics"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Health",
+            "attributes": {
+              "href": "/news/health"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Tech",
+            "attributes": {
+              "href": "/news/technology"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "InDepth",
+            "attributes": {
+              "href": "/news/bbcindepth"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "BBC Verify",
+            "attributes": {
+              "href": "/news/bbcverify"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Climate",
+            "attributes": {
+              "href": "/news/topics/cmj34zmwm1zt"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "button",
+            "text": "More",
+            "attributes": {
+              "href": "#product-navigation-more-menu"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Science",
+            "attributes": {
+              "href": "/news/science_and_environment"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Family & Education",
+            "attributes": {
+              "href": "/news/education"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "In Pictures",
+            "attributes": {
+              "href": "/news/in_pictures"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "WHO declares Ebola outbreak in DR Congo an international emergency"
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

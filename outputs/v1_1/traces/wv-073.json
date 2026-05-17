@@ -1,0 +1,1278 @@
+{
+  "task_id": "wv-073",
+  "task_description": "On Mozilla's website, find the latest stable Firefox release version.",
+  "starting_url": "https://www.mozilla.org/firefox",
+  "passed": true,
+  "final_answer": "150.0.3",
+  "duration_s": 31.31,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://www.firefox.com/",
+        "title": "Get Firefox for desktop and mobile \u2014 Firefox.com",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "Accept All Additional Cookies",
+            "attributes": {
+              "id": "moz-consent-banner-button-accept",
+              "type": "button",
+              "data-testid": "consent-banner-accept-button"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "Reject All Additional Cookies",
+            "attributes": {
+              "id": "moz-consent-banner-button-reject",
+              "type": "button",
+              "data-testid": "consent-banner-reject-button"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Cookie settings",
+            "attributes": {
+              "href": "/en-US/privacy/websites/cookie-settings/"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Menu",
+            "attributes": {
+              "type": "button",
+              "data-testid": "navigation-menu-button"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/en-US/"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Features",
+            "attributes": {
+              "href": "/en-US/features/",
+              "data-testid": "m24-navigation-link-features"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "button",
+            "text": "Close Features menu",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Fingerprint Blocking",
+            "attributes": {
+              "href": "/en-US/features/block-fingerprinting/"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Ad Tracker Blocking",
+            "attributes": {
+              "href": "/en-US/features/adblocker/"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Private Browsing Mode",
+            "attributes": {
+              "href": "/en-US/features/private-browsing/"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Free Password Manager",
+            "attributes": {
+              "href": "/en-US/features/password-manager/"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "View all Firefox Features",
+            "attributes": {
+              "href": "/en-US/features/"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Resources",
+            "attributes": {
+              "href": "#m24-c-menu-panel-resources",
+              "data-testid": "navigation-link-resources"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "button",
+            "text": "Close Resources menu",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Desktop",
+            "attributes": {
+              "href": "/en-US/browsers/desktop/",
+              "data-testid": "m24-navigation-menu-link-firefox-desktop"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "Mobile",
+            "attributes": {
+              "href": "/en-US/mobile/"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Release Notes",
+            "attributes": {
+              "href": "/en-US/firefox/notes/"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Support",
+            "attributes": {
+              "href": "https://support.mozilla.org/?utm_source=www.firefox.com&utm_medium=referral&utm_campaign=nav&utm_content=resources"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Add-ons",
+            "attributes": {
+              "href": "https://addons.mozilla.org/firefox/?utm_source=www.firefox.com&utm_medium=referral&utm_campaign=nav&utm_content=resources"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Blog",
+            "attributes": {
+              "href": "https://blog.mozilla.org/en/category/firefox/?utm_source=www.firefox.com&utm_medium=referral&utm_campaign=nav&utm_content=resources"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Compare",
+            "attributes": {
+              "href": "/en-US/compare/"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Podcast",
+            "attributes": {
+              "href": "https://www.youtube.com/@firefox/podcasts?utm_source=www.firefox.com&utm_medium=referral&utm_campaign=nav&utm_content=resources"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Data Protection",
+            "attributes": {
+              "href": "/en-US/user-privacy/",
+              "data-testid": "navigation-menu-link-data-protection"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Download",
+            "attributes": {
+              "href": "/thanks/",
+              "data-testid": "nav-download-firefox"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "no longer supported",
+            "attributes": {
+              "href": "https://support.mozilla.org/kb/firefox-users-windows-7-8-and-81-moving-extended-support"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Download Firefox ESR 64-bit",
+            "attributes": {
+              "href": "https://download.mozilla.org/?product=firefox-esr115-latest-ssl&os=win64&lang=en-US"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Download Firefox ESR 32-bit",
+            "attributes": {
+              "href": "https://download.mozilla.org/?product=firefox-esr115-latest-ssl&os=win&lang=en-US"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Download a different build",
+            "attributes": {
+              "href": "/en-US/download/all/desktop-esr/"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "no longer supported",
+            "attributes": {
+              "href": "https://support.mozilla.org/kb/firefox-users-macos-1012-1013-1014-moving-to-extended-support"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Download Firefox ESR",
+            "attributes": {
+              "href": "https://download.mozilla.org/?product=firefox-esr115-latest-ssl&os=osx&lang=en-US"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Firefox Privacy Notice",
+            "attributes": {
+              "href": "https://www.mozilla.org/en-US/privacy/firefox/?utm_source=www.firefox.com&utm_medium=referral&utm_campaign=download-button-thanks"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Download",
+            "attributes": {
+              "href": "/thanks/",
+              "data-testid": "nav-download-firefox"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "no longer supported",
+            "attributes": {
+              "href": "https://support.mozilla.org/kb/firefox-users-windows-7-8-and-81-moving-extended-support"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Download Firefox ESR 64-bit",
+            "attributes": {
+              "href": "https://download.mozilla.org/?product=firefox-esr115-latest-ssl&os=win64&lang=en-US"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Download Firefox ESR 32-bit",
+            "attributes": {
+              "href": "https://download.mozilla.org/?product=firefox-esr115-latest-ssl&os=win&lang=en-US"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Download a different build",
+            "attributes": {
+              "href": "/en-US/download/all/desktop-esr/"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "no longer supported",
+            "attributes": {
+              "href": "https://support.mozilla.org/kb/firefox-users-macos-1012-1013-1014-moving-to-extended-support"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Download Firefox ESR",
+            "attributes": {
+              "href": "https://download.mozilla.org/?product=firefox-esr115-latest-ssl&os=osx&lang=en-US"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Firefox Privacy Notice",
+            "attributes": {
+              "href": "https://www.mozilla.org/en-US/privacy/firefox/?utm_source=www.firefox.com&utm_medium=referral&utm_campaign=download-button-thanks"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Acholi",
+            "attributes": {
+              "href": "/ach/"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "\u0639\u0631\u0628\u064a",
+            "attributes": {
+              "href": "/ar/"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Asturianu",
+            "attributes": {
+              "href": "/ast/"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "\u0411\u0435\u043b\u0430\u0440\u0443\u0441\u043a\u0430\u044f",
+            "attributes": {
+              "href": "/be/"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "\u0411\u044a\u043b\u0433\u0430\u0440\u0441\u043a\u0438",
+            "attributes": {
+              "href": "/bg/"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Brezhoneg",
+            "attributes": {
+              "href": "/br/"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Bosanski",
+            "attributes": {
+              "href": "/bs/"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Catal\u00e0",
+            "attributes": {
+              "href": "/ca/"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Maya Kaqchikel",
+            "attributes": {
+              "href": "/cak/"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "\u010ce\u0161tina",
+            "attributes": {
+              "href": "/cs/"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Cymraeg",
+            "attributes": {
+              "href": "/cy/"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "click",
+        "args": {
+          "id": "pw-17"
+        }
+      },
+      "observation": "Action failed: Locator.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator(\"nav > div > div > div:nth-of-type(1) > div:nth-of-type(1) > div > ul > li:nth-of-type(2) > div > div > div > div:nth-of-type(1) > ul > li:nth-of-type(3) > a\").first\n    - locator resolved to <a class=\"m24-c-menu-item-link\" href=\"/en-US/firefox/notes/\" data-link-text=\"Release Notes\" data-link-position=\"topnav - release notes\">\u21b5                Release Notes\u21b5              </a>\n  - attempting click action\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 100ms\n    10 \u00d7 waiting for element to be visible, enabled and stable\n       - element is not visible\n     - retrying click action\n       - waiting 500ms\n"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://www.firefox.com/",
+        "title": "Get Firefox for desktop and mobile \u2014 Firefox.com",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "Accept All Additional Cookies",
+            "attributes": {
+              "id": "moz-consent-banner-button-accept",
+              "type": "button",
+              "data-testid": "consent-banner-accept-button"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "Reject All Additional Cookies",
+            "attributes": {
+              "id": "moz-consent-banner-button-reject",
+              "type": "button",
+              "data-testid": "consent-banner-reject-button"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Cookie settings",
+            "attributes": {
+              "href": "/en-US/privacy/websites/cookie-settings/"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Menu",
+            "attributes": {
+              "type": "button",
+              "data-testid": "navigation-menu-button"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/en-US/"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Features",
+            "attributes": {
+              "href": "/en-US/features/",
+              "data-testid": "m24-navigation-link-features"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "button",
+            "text": "Close Features menu",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Fingerprint Blocking",
+            "attributes": {
+              "href": "/en-US/features/block-fingerprinting/"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Ad Tracker Blocking",
+            "attributes": {
+              "href": "/en-US/features/adblocker/"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Private Browsing Mode",
+            "attributes": {
+              "href": "/en-US/features/private-browsing/"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Free Password Manager",
+            "attributes": {
+              "href": "/en-US/features/password-manager/"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "View all Firefox Features",
+            "attributes": {
+              "href": "/en-US/features/"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Resources",
+            "attributes": {
+              "href": "#m24-c-menu-panel-resources",
+              "data-testid": "navigation-link-resources"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "button",
+            "text": "Close Resources menu",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Desktop",
+            "attributes": {
+              "href": "/en-US/browsers/desktop/",
+              "data-testid": "m24-navigation-menu-link-firefox-desktop"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "Mobile",
+            "attributes": {
+              "href": "/en-US/mobile/"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Release Notes",
+            "attributes": {
+              "href": "/en-US/firefox/notes/"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Support",
+            "attributes": {
+              "href": "https://support.mozilla.org/?utm_source=www.firefox.com&utm_medium=referral&utm_campaign=nav&utm_content=resources"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Add-ons",
+            "attributes": {
+              "href": "https://addons.mozilla.org/firefox/?utm_source=www.firefox.com&utm_medium=referral&utm_campaign=nav&utm_content=resources"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Blog",
+            "attributes": {
+              "href": "https://blog.mozilla.org/en/category/firefox/?utm_source=www.firefox.com&utm_medium=referral&utm_campaign=nav&utm_content=resources"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Compare",
+            "attributes": {
+              "href": "/en-US/compare/"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Podcast",
+            "attributes": {
+              "href": "https://www.youtube.com/@firefox/podcasts?utm_source=www.firefox.com&utm_medium=referral&utm_campaign=nav&utm_content=resources"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Data Protection",
+            "attributes": {
+              "href": "/en-US/user-privacy/",
+              "data-testid": "navigation-menu-link-data-protection"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Download",
+            "attributes": {
+              "href": "/thanks/",
+              "data-testid": "nav-download-firefox"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "no longer supported",
+            "attributes": {
+              "href": "https://support.mozilla.org/kb/firefox-users-windows-7-8-and-81-moving-extended-support"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Download Firefox ESR 64-bit",
+            "attributes": {
+              "href": "https://download.mozilla.org/?product=firefox-esr115-latest-ssl&os=win64&lang=en-US"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Download Firefox ESR 32-bit",
+            "attributes": {
+              "href": "https://download.mozilla.org/?product=firefox-esr115-latest-ssl&os=win&lang=en-US"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Download a different build",
+            "attributes": {
+              "href": "/en-US/download/all/desktop-esr/"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "no longer supported",
+            "attributes": {
+              "href": "https://support.mozilla.org/kb/firefox-users-macos-1012-1013-1014-moving-to-extended-support"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Download Firefox ESR",
+            "attributes": {
+              "href": "https://download.mozilla.org/?product=firefox-esr115-latest-ssl&os=osx&lang=en-US"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Firefox Privacy Notice",
+            "attributes": {
+              "href": "https://www.mozilla.org/en-US/privacy/firefox/?utm_source=www.firefox.com&utm_medium=referral&utm_campaign=download-button-thanks"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Download",
+            "attributes": {
+              "href": "/thanks/",
+              "data-testid": "nav-download-firefox"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "no longer supported",
+            "attributes": {
+              "href": "https://support.mozilla.org/kb/firefox-users-windows-7-8-and-81-moving-extended-support"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Download Firefox ESR 64-bit",
+            "attributes": {
+              "href": "https://download.mozilla.org/?product=firefox-esr115-latest-ssl&os=win64&lang=en-US"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Download Firefox ESR 32-bit",
+            "attributes": {
+              "href": "https://download.mozilla.org/?product=firefox-esr115-latest-ssl&os=win&lang=en-US"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Download a different build",
+            "attributes": {
+              "href": "/en-US/download/all/desktop-esr/"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "no longer supported",
+            "attributes": {
+              "href": "https://support.mozilla.org/kb/firefox-users-macos-1012-1013-1014-moving-to-extended-support"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Download Firefox ESR",
+            "attributes": {
+              "href": "https://download.mozilla.org/?product=firefox-esr115-latest-ssl&os=osx&lang=en-US"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Firefox Privacy Notice",
+            "attributes": {
+              "href": "https://www.mozilla.org/en-US/privacy/firefox/?utm_source=www.firefox.com&utm_medium=referral&utm_campaign=download-button-thanks"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Acholi",
+            "attributes": {
+              "href": "/ach/"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "\u0639\u0631\u0628\u064a",
+            "attributes": {
+              "href": "/ar/"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Asturianu",
+            "attributes": {
+              "href": "/ast/"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "\u0411\u0435\u043b\u0430\u0440\u0443\u0441\u043a\u0430\u044f",
+            "attributes": {
+              "href": "/be/"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "\u0411\u044a\u043b\u0433\u0430\u0440\u0441\u043a\u0438",
+            "attributes": {
+              "href": "/bg/"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Brezhoneg",
+            "attributes": {
+              "href": "/br/"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Bosanski",
+            "attributes": {
+              "href": "/bs/"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Catal\u00e0",
+            "attributes": {
+              "href": "/ca/"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Maya Kaqchikel",
+            "attributes": {
+              "href": "/cak/"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "\u010ce\u0161tina",
+            "attributes": {
+              "href": "/cs/"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Cymraeg",
+            "attributes": {
+              "href": "/cy/"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://www.mozilla.org/en-US/firefox/notes/"
+        }
+      },
+      "observation": "Opened https://www.mozilla.org/en-US/firefox/notes/"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://www.firefox.com/en-US/firefox/150.0.3/releasenotes/",
+        "title": "Firefox 150.0.3, See All New Features, Updates and Fixes",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Firefox",
+            "attributes": {
+              "href": "/en-US/",
+              "aria-label": "Firefox"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "Close menu",
+            "attributes": {}
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Mobile",
+            "attributes": {
+              "href": "/en-US/mobile/",
+              "data-testid": "navigation-menu-link-mobile"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Enterprise",
+            "attributes": {
+              "href": "/en-US/browsers/enterprise/"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "Extensions & Themes",
+            "attributes": {
+              "href": "https://addons.mozilla.org/firefox/?utm_source=www.firefox.com&utm_medium=referral&utm_campaign=nav&utm_content=browser"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Support",
+            "attributes": {
+              "href": "https://support.mozilla.org/?utm_source=www.firefox.com&utm_medium=referral&utm_campaign=nav&utm_content=browser"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Download Firefox",
+            "attributes": {
+              "href": "/en-US/download/"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Features",
+            "attributes": {
+              "href": "/en-US/features/"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "button",
+            "text": "Close menu",
+            "attributes": {}
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Protection",
+            "attributes": {
+              "href": "/en-US/features/protection/"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Control",
+            "attributes": {
+              "href": "/en-US/features/control/"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Focus",
+            "attributes": {
+              "href": "/en-US/features/focus/"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "About Firefox features",
+            "attributes": {
+              "href": "/en-US/features/"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "View all Firefox Features",
+            "attributes": {
+              "href": "/en-US/features/all/"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Resources",
+            "attributes": {
+              "href": "#",
+              "data-testid": "navigation-link-resources"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": "Close menu",
+            "attributes": {}
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "Data Protection",
+            "attributes": {
+              "href": "/en-US/user-privacy/",
+              "data-testid": "navigation-menu-link-data-protection"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Blog",
+            "attributes": {
+              "href": "https://blog.mozilla.org/en/category/firefox/?utm_source=www.firefox.com&utm_medium=referral&utm_campaign=nav&utm_content=resources"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Podcast",
+            "attributes": {
+              "href": "https://www.youtube.com/@firefox/podcasts?utm_source=www.firefox.com&utm_medium=referral&utm_campaign=nav&utm_content=resources"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Newsletter",
+            "attributes": {
+              "href": "/en-US/newsletter/"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Release Notes",
+            "attributes": {
+              "href": "/en-US/firefox/notes/"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Get Firefox",
+            "attributes": {
+              "href": "/thanks/",
+              "data-testid": "download-firefox-button__download-link"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Get Firefox",
+            "attributes": {
+              "href": "/thanks/",
+              "data-testid": "download-firefox-button__download-link"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "button",
+            "text": "Menu",
+            "attributes": {
+              "type": "button",
+              "data-testid": "navigation-menu-button"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Menu",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "button",
+            "text": "Close menu",
+            "attributes": {}
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Mobile",
+            "attributes": {
+              "href": "/en-US/mobile/",
+              "data-testid": "navigation-menu-link-mobile"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Enterprise",
+            "attributes": {
+              "href": "/en-US/browsers/enterprise/"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Extensions & Themes",
+            "attributes": {
+              "href": "https://addons.mozilla.org/firefox/?utm_source=www.firefox.com&utm_medium=referral&utm_campaign=nav&utm_content=browser"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Support",
+            "attributes": {
+              "href": "https://support.mozilla.org/?utm_source=www.firefox.com&utm_medium=referral&utm_campaign=nav&utm_content=browser"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Download Firefox",
+            "attributes": {
+              "href": "/en-US/download/"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Features",
+            "attributes": {
+              "href": "/en-US/features/"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "button",
+            "text": "Close menu",
+            "attributes": {}
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Protection",
+            "attributes": {
+              "href": "/en-US/features/protection/"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Control",
+            "attributes": {
+              "href": "/en-US/features/control/"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Focus",
+            "attributes": {
+              "href": "/en-US/features/focus/"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "About Firefox features",
+            "attributes": {
+              "href": "/en-US/features/"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "View all Firefox Features",
+            "attributes": {
+              "href": "/en-US/features/all/"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Resources",
+            "attributes": {
+              "href": "#",
+              "data-testid": "navigation-link-resources"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "button",
+            "text": "Close menu",
+            "attributes": {}
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Data Protection",
+            "attributes": {
+              "href": "/en-US/user-privacy/",
+              "data-testid": "navigation-menu-link-data-protection"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Blog",
+            "attributes": {
+              "href": "https://blog.mozilla.org/en/category/firefox/?utm_source=www.firefox.com&utm_medium=referral&utm_campaign=nav&utm_content=resources"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Podcast",
+            "attributes": {
+              "href": "https://www.youtube.com/@firefox/podcasts?utm_source=www.firefox.com&utm_medium=referral&utm_campaign=nav&utm_content=resources"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Newsletter",
+            "attributes": {
+              "href": "/en-US/newsletter/"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Release Notes",
+            "attributes": {
+              "href": "/en-US/firefox/notes/"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "Menu",
+            "attributes": {
+              "data-testid": "fl-subnav-toggle"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Desktop",
+            "attributes": {
+              "href": "/en-US/firefox/notes/"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Desktop Beta & Developer Edition",
+            "attributes": {
+              "href": "/en-US/firefox/beta/notes/"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Desktop Nightly",
+            "attributes": {
+              "href": "/en-US/firefox/nightly/notes/"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Android",
+            "attributes": {
+              "href": "/en-US/firefox/android/150.0.3/releasenotes/"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "150.0.3"
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

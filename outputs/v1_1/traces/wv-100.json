@@ -1,0 +1,1822 @@
+{
+  "task_id": "wv-100",
+  "task_description": "On Zapier, find an automation template connecting Gmail to Slack and report what the Zap does.",
+  "starting_url": "https://zapier.com/apps",
+  "passed": true,
+  "final_answer": "Template found: \u201cSend new Gmail emails as Slack channel messages.\u201d The Zap automatically posts a message in a Slack channel whenever a new email arrives in Gmail.",
+  "duration_s": 41.66,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://zapier.com/apps",
+        "title": "Integrations, App and Software Automation | Automate With Zapier",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to content",
+            "attributes": {
+              "href": "#main"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Zapier",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Zapier"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "Products",
+            "attributes": {}
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "ZapsDo-it-yourself automation for workflows",
+            "attributes": {
+              "href": "/workflows",
+              "aria-label": "Zaps"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "TablesStore data your Zaps can read and update",
+            "attributes": {
+              "href": "/tables",
+              "aria-label": "Tables"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "FormsCapture inputs that trigger workflows",
+            "attributes": {
+              "href": "/forms",
+              "aria-label": "Forms"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "CanvasPlan and map your workflows with AI",
+            "attributes": {
+              "href": "/canvas",
+              "aria-label": "Canvas"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "AgentsCreate your own AI assistants for any task",
+            "attributes": {
+              "href": "/agents",
+              "aria-label": "Agents"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "ChatbotsAnswer customer questions with AI chatbots",
+            "attributes": {
+              "href": "/ai/chatbot",
+              "aria-label": "Chatbots"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "App integrationsExplore 9,000+ app connections",
+            "attributes": {
+              "href": "/apps",
+              "aria-label": "App integrations"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "AI automation \ud83e\ude84Cutting-edge AI to upgrade your workflows",
+            "attributes": {
+              "href": "/ai",
+              "aria-label": "AI automation \ud83e\ude84"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "SecurityEnterprise-grade security",
+            "attributes": {
+              "href": "/security-compliance",
+              "aria-label": "Security"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Explore templates",
+            "attributes": {
+              "href": "/templates"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Explore use cases",
+            "attributes": {
+              "href": "/use-cases"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Join Zapier Early Access",
+            "attributes": {
+              "href": "/early-access"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Zapier MCPAdd Zapier to your AI chat",
+            "attributes": {
+              "href": "/mcp",
+              "aria-label": "Zapier MCP"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "Zapier SDKBetaInstall Zapier to your AI coding agent",
+            "attributes": {
+              "href": "/sdk",
+              "aria-label": "Zapier SDK"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "FunctionsBetaCode your workflows in a web IDE",
+            "attributes": {
+              "href": "/functions",
+              "aria-label": "Functions"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Lead RouterBetaTurn complex lead routing into one simple step",
+            "attributes": {
+              "href": "/l/leadrouter",
+              "aria-label": "Lead Router"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "button",
+            "text": "Solutions",
+            "attributes": {}
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "RevOpsDrive revenue through automation",
+            "attributes": {
+              "href": "/solutions/revops",
+              "aria-label": "RevOps"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "MarketingMultiply campaign effectiveness and ROI",
+            "attributes": {
+              "href": "/solutions/marketing",
+              "aria-label": "Marketing"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "ITBetter manage systems with automation",
+            "attributes": {
+              "href": "/solutions/it",
+              "aria-label": "IT"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "HREmpower your HR team with AI automation",
+            "attributes": {
+              "href": "/solutions/hr",
+              "aria-label": "HR"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "SalesClose more deals",
+            "attributes": {
+              "href": "/solutions/sales",
+              "aria-label": "Sales"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Customer SupportElevate customer satisfaction",
+            "attributes": {
+              "href": "/solutions/customer-support",
+              "aria-label": "Customer Support"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "LeadersStreamline decision-making processes",
+            "attributes": {
+              "href": "/solutions/leaders",
+              "aria-label": "Leaders"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Executive AssistantsEliminate repetitive admin tasks",
+            "attributes": {
+              "href": "/solutions/executive-assistants",
+              "aria-label": "Executive Assistants"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "NetSuite",
+            "attributes": {
+              "href": "/apps/netsuite/integrations",
+              "aria-label": "NetSuite"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Salesforce",
+            "attributes": {
+              "href": "/apps/salesforce/integrations",
+              "aria-label": "Salesforce"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "HubSpot",
+            "attributes": {
+              "href": "/apps/hubspot/integrations",
+              "aria-label": "HubSpot"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Slack",
+            "attributes": {
+              "href": "/apps/slack/integrations",
+              "aria-label": "Slack"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "ChatGPT (OpenAI)",
+            "attributes": {
+              "href": "/apps/chatgpt/integrations",
+              "aria-label": "ChatGPT (OpenAI)"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Microsoft Dynamics CRM",
+            "attributes": {
+              "href": "/apps/microsoft-dynamics-crm/integrations",
+              "aria-label": "Microsoft Dynamics CRM"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Microsoft Teams",
+            "attributes": {
+              "href": "/apps/microsoft-teams/integrations",
+              "aria-label": "Microsoft Teams"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Zendesk",
+            "attributes": {
+              "href": "/apps/zendesk/integrations",
+              "aria-label": "Zendesk"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Jira Software Cloud",
+            "attributes": {
+              "href": "/apps/jira-software-cloud/integrations",
+              "aria-label": "Jira Software Cloud"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "View all apps",
+            "attributes": {
+              "href": "/apps",
+              "aria-label": "View all apps"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Lead managementAutomate your way to more conversions",
+            "attributes": {
+              "href": "/lead-management",
+              "aria-label": "Lead management"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Sales pipelineAutomate handoffs and streamline sales",
+            "attributes": {
+              "href": "/sales-pipeline-management",
+              "aria-label": "Sales pipeline"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Marketing campaignsBoost your marketing campaign's impact",
+            "attributes": {
+              "href": "/marketing-campaigns",
+              "aria-label": "Marketing campaigns"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Customer supportQuickly route tickets and responses",
+            "attributes": {
+              "href": "/customer-support-management",
+              "aria-label": "Customer support"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Data managementConnect app data for more insights",
+            "attributes": {
+              "href": "/data-management",
+              "aria-label": "Data management"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Project managementDeliver projects seamlessly",
+            "attributes": {
+              "href": "/project-management",
+              "aria-label": "Project management"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Tickets and incidentsResolve issues and incidents faster",
+            "attributes": {
+              "href": "/ticket-incident-management",
+              "aria-label": "Tickets and incidents"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Explore templates",
+            "attributes": {
+              "href": "/templates"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Explore use cases",
+            "attributes": {
+              "href": "/use-cases"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Join Zapier Early Access",
+            "attributes": {
+              "href": "/early-access"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Automation you can governSee how Zapier helps you manage, secure, and scale automation across your organization.",
+            "attributes": {
+              "href": "/govern",
+              "aria-label": "Automation you can govern"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Startups",
+            "attributes": {
+              "href": "/startups",
+              "aria-label": "Startups"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://zapier.com/apps/gmail/integrations/slack"
+        }
+      },
+      "observation": "Opened https://zapier.com/apps/gmail/integrations/slack"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://zapier.com/apps/gmail/integrations/slack",
+        "title": "Gmail Slack Integration - Quick Connect - Zapier",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to content",
+            "attributes": {
+              "href": "#main"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Zapier",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Zapier"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "Products",
+            "attributes": {}
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "ZapsDo-it-yourself automation for workflows",
+            "attributes": {
+              "href": "/workflows",
+              "aria-label": "Zaps"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "TablesStore data your Zaps can read and update",
+            "attributes": {
+              "href": "/tables",
+              "aria-label": "Tables"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "FormsCapture inputs that trigger workflows",
+            "attributes": {
+              "href": "/forms",
+              "aria-label": "Forms"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "CanvasPlan and map your workflows with AI",
+            "attributes": {
+              "href": "/canvas",
+              "aria-label": "Canvas"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "AgentsCreate your own AI assistants for any task",
+            "attributes": {
+              "href": "/agents",
+              "aria-label": "Agents"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "ChatbotsAnswer customer questions with AI chatbots",
+            "attributes": {
+              "href": "/ai/chatbot",
+              "aria-label": "Chatbots"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "App integrationsExplore 9,000+ app connections",
+            "attributes": {
+              "href": "/apps",
+              "aria-label": "App integrations"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "AI automation \ud83e\ude84Cutting-edge AI to upgrade your workflows",
+            "attributes": {
+              "href": "/ai",
+              "aria-label": "AI automation \ud83e\ude84"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "SecurityEnterprise-grade security",
+            "attributes": {
+              "href": "/security-compliance",
+              "aria-label": "Security"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Explore templates",
+            "attributes": {
+              "href": "/templates"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Explore use cases",
+            "attributes": {
+              "href": "/use-cases"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Join Zapier Early Access",
+            "attributes": {
+              "href": "/early-access"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Zapier MCPAdd Zapier to your AI chat",
+            "attributes": {
+              "href": "/mcp",
+              "aria-label": "Zapier MCP"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "Zapier SDKBetaInstall Zapier to your AI coding agent",
+            "attributes": {
+              "href": "/sdk",
+              "aria-label": "Zapier SDK"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "FunctionsBetaCode your workflows in a web IDE",
+            "attributes": {
+              "href": "/functions",
+              "aria-label": "Functions"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Lead RouterBetaTurn complex lead routing into one simple step",
+            "attributes": {
+              "href": "/l/leadrouter",
+              "aria-label": "Lead Router"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "button",
+            "text": "Solutions",
+            "attributes": {}
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "RevOpsDrive revenue through automation",
+            "attributes": {
+              "href": "/solutions/revops",
+              "aria-label": "RevOps"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "MarketingMultiply campaign effectiveness and ROI",
+            "attributes": {
+              "href": "/solutions/marketing",
+              "aria-label": "Marketing"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "ITBetter manage systems with automation",
+            "attributes": {
+              "href": "/solutions/it",
+              "aria-label": "IT"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "HREmpower your HR team with AI automation",
+            "attributes": {
+              "href": "/solutions/hr",
+              "aria-label": "HR"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "SalesClose more deals",
+            "attributes": {
+              "href": "/solutions/sales",
+              "aria-label": "Sales"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Customer SupportElevate customer satisfaction",
+            "attributes": {
+              "href": "/solutions/customer-support",
+              "aria-label": "Customer Support"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "LeadersStreamline decision-making processes",
+            "attributes": {
+              "href": "/solutions/leaders",
+              "aria-label": "Leaders"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Executive AssistantsEliminate repetitive admin tasks",
+            "attributes": {
+              "href": "/solutions/executive-assistants",
+              "aria-label": "Executive Assistants"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "NetSuite",
+            "attributes": {
+              "href": "/apps/netsuite/integrations",
+              "aria-label": "NetSuite"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Salesforce",
+            "attributes": {
+              "href": "/apps/salesforce/integrations",
+              "aria-label": "Salesforce"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "HubSpot",
+            "attributes": {
+              "href": "/apps/hubspot/integrations",
+              "aria-label": "HubSpot"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Slack",
+            "attributes": {
+              "href": "/apps/slack/integrations",
+              "aria-label": "Slack"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "ChatGPT (OpenAI)",
+            "attributes": {
+              "href": "/apps/chatgpt/integrations",
+              "aria-label": "ChatGPT (OpenAI)"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Microsoft Dynamics CRM",
+            "attributes": {
+              "href": "/apps/microsoft-dynamics-crm/integrations",
+              "aria-label": "Microsoft Dynamics CRM"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Microsoft Teams",
+            "attributes": {
+              "href": "/apps/microsoft-teams/integrations",
+              "aria-label": "Microsoft Teams"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Zendesk",
+            "attributes": {
+              "href": "/apps/zendesk/integrations",
+              "aria-label": "Zendesk"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Jira Software Cloud",
+            "attributes": {
+              "href": "/apps/jira-software-cloud/integrations",
+              "aria-label": "Jira Software Cloud"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "View all apps",
+            "attributes": {
+              "href": "/apps",
+              "aria-label": "View all apps"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Lead managementAutomate your way to more conversions",
+            "attributes": {
+              "href": "/lead-management",
+              "aria-label": "Lead management"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Sales pipelineAutomate handoffs and streamline sales",
+            "attributes": {
+              "href": "/sales-pipeline-management",
+              "aria-label": "Sales pipeline"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Marketing campaignsBoost your marketing campaign's impact",
+            "attributes": {
+              "href": "/marketing-campaigns",
+              "aria-label": "Marketing campaigns"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Customer supportQuickly route tickets and responses",
+            "attributes": {
+              "href": "/customer-support-management",
+              "aria-label": "Customer support"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Data managementConnect app data for more insights",
+            "attributes": {
+              "href": "/data-management",
+              "aria-label": "Data management"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Project managementDeliver projects seamlessly",
+            "attributes": {
+              "href": "/project-management",
+              "aria-label": "Project management"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Tickets and incidentsResolve issues and incidents faster",
+            "attributes": {
+              "href": "/ticket-incident-management",
+              "aria-label": "Tickets and incidents"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Explore templates",
+            "attributes": {
+              "href": "/templates"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Explore use cases",
+            "attributes": {
+              "href": "/use-cases"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Join Zapier Early Access",
+            "attributes": {
+              "href": "/early-access"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Automation you can governSee how Zapier helps you manage, secure, and scale automation across your organization.",
+            "attributes": {
+              "href": "/govern",
+              "aria-label": "Automation you can govern"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Startups",
+            "attributes": {
+              "href": "/startups",
+              "aria-label": "Startups"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => {\n  const main = document.querySelector('main') || document.body;\n  return main.innerText.slice(0, 8000);\n})()"
+        }
+      },
+      "observation": "Eval: \"Apps\\nGmail\\nSlack\\nGmail + Slack\\nConnect Gmail and Slack to power AI-driven automation\\nNo-code AI automation\\nFull audit trails and controls\\nSOC 2 and GDPR compliant\\nEasy visual workflow builder\\n9,000+ apps, 450+ AI tools\\nFree tier available\\nSwap apps\\nChoose a Trigger\\nWhen this happens...\\nChoose an Action\\nautomatically do this!\\nIntegrate for free\\n\\u00a0Start with Google for free\\nLaunch your first automated workflow\\n\\nStart with a template that brings Gmail and Slack together. Bu"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://zapier.com/apps/gmail/integrations/slack",
+        "title": "Gmail Slack Integration - Quick Connect - Zapier",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to content",
+            "attributes": {
+              "href": "#main"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Zapier",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Zapier"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "Products",
+            "attributes": {}
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "ZapsDo-it-yourself automation for workflows",
+            "attributes": {
+              "href": "/workflows",
+              "aria-label": "Zaps"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "TablesStore data your Zaps can read and update",
+            "attributes": {
+              "href": "/tables",
+              "aria-label": "Tables"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "FormsCapture inputs that trigger workflows",
+            "attributes": {
+              "href": "/forms",
+              "aria-label": "Forms"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "CanvasPlan and map your workflows with AI",
+            "attributes": {
+              "href": "/canvas",
+              "aria-label": "Canvas"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "AgentsCreate your own AI assistants for any task",
+            "attributes": {
+              "href": "/agents",
+              "aria-label": "Agents"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "ChatbotsAnswer customer questions with AI chatbots",
+            "attributes": {
+              "href": "/ai/chatbot",
+              "aria-label": "Chatbots"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "App integrationsExplore 9,000+ app connections",
+            "attributes": {
+              "href": "/apps",
+              "aria-label": "App integrations"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "AI automation \ud83e\ude84Cutting-edge AI to upgrade your workflows",
+            "attributes": {
+              "href": "/ai",
+              "aria-label": "AI automation \ud83e\ude84"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "SecurityEnterprise-grade security",
+            "attributes": {
+              "href": "/security-compliance",
+              "aria-label": "Security"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Explore templates",
+            "attributes": {
+              "href": "/templates"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Explore use cases",
+            "attributes": {
+              "href": "/use-cases"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Join Zapier Early Access",
+            "attributes": {
+              "href": "/early-access"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Zapier MCPAdd Zapier to your AI chat",
+            "attributes": {
+              "href": "/mcp",
+              "aria-label": "Zapier MCP"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "Zapier SDKBetaInstall Zapier to your AI coding agent",
+            "attributes": {
+              "href": "/sdk",
+              "aria-label": "Zapier SDK"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "FunctionsBetaCode your workflows in a web IDE",
+            "attributes": {
+              "href": "/functions",
+              "aria-label": "Functions"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Lead RouterBetaTurn complex lead routing into one simple step",
+            "attributes": {
+              "href": "/l/leadrouter",
+              "aria-label": "Lead Router"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "button",
+            "text": "Solutions",
+            "attributes": {}
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "RevOpsDrive revenue through automation",
+            "attributes": {
+              "href": "/solutions/revops",
+              "aria-label": "RevOps"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "MarketingMultiply campaign effectiveness and ROI",
+            "attributes": {
+              "href": "/solutions/marketing",
+              "aria-label": "Marketing"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "ITBetter manage systems with automation",
+            "attributes": {
+              "href": "/solutions/it",
+              "aria-label": "IT"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "HREmpower your HR team with AI automation",
+            "attributes": {
+              "href": "/solutions/hr",
+              "aria-label": "HR"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "SalesClose more deals",
+            "attributes": {
+              "href": "/solutions/sales",
+              "aria-label": "Sales"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Customer SupportElevate customer satisfaction",
+            "attributes": {
+              "href": "/solutions/customer-support",
+              "aria-label": "Customer Support"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "LeadersStreamline decision-making processes",
+            "attributes": {
+              "href": "/solutions/leaders",
+              "aria-label": "Leaders"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Executive AssistantsEliminate repetitive admin tasks",
+            "attributes": {
+              "href": "/solutions/executive-assistants",
+              "aria-label": "Executive Assistants"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "NetSuite",
+            "attributes": {
+              "href": "/apps/netsuite/integrations",
+              "aria-label": "NetSuite"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Salesforce",
+            "attributes": {
+              "href": "/apps/salesforce/integrations",
+              "aria-label": "Salesforce"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "HubSpot",
+            "attributes": {
+              "href": "/apps/hubspot/integrations",
+              "aria-label": "HubSpot"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Slack",
+            "attributes": {
+              "href": "/apps/slack/integrations",
+              "aria-label": "Slack"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "ChatGPT (OpenAI)",
+            "attributes": {
+              "href": "/apps/chatgpt/integrations",
+              "aria-label": "ChatGPT (OpenAI)"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Microsoft Dynamics CRM",
+            "attributes": {
+              "href": "/apps/microsoft-dynamics-crm/integrations",
+              "aria-label": "Microsoft Dynamics CRM"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Microsoft Teams",
+            "attributes": {
+              "href": "/apps/microsoft-teams/integrations",
+              "aria-label": "Microsoft Teams"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Zendesk",
+            "attributes": {
+              "href": "/apps/zendesk/integrations",
+              "aria-label": "Zendesk"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Jira Software Cloud",
+            "attributes": {
+              "href": "/apps/jira-software-cloud/integrations",
+              "aria-label": "Jira Software Cloud"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "View all apps",
+            "attributes": {
+              "href": "/apps",
+              "aria-label": "View all apps"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Lead managementAutomate your way to more conversions",
+            "attributes": {
+              "href": "/lead-management",
+              "aria-label": "Lead management"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Sales pipelineAutomate handoffs and streamline sales",
+            "attributes": {
+              "href": "/sales-pipeline-management",
+              "aria-label": "Sales pipeline"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Marketing campaignsBoost your marketing campaign's impact",
+            "attributes": {
+              "href": "/marketing-campaigns",
+              "aria-label": "Marketing campaigns"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Customer supportQuickly route tickets and responses",
+            "attributes": {
+              "href": "/customer-support-management",
+              "aria-label": "Customer support"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Data managementConnect app data for more insights",
+            "attributes": {
+              "href": "/data-management",
+              "aria-label": "Data management"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Project managementDeliver projects seamlessly",
+            "attributes": {
+              "href": "/project-management",
+              "aria-label": "Project management"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Tickets and incidentsResolve issues and incidents faster",
+            "attributes": {
+              "href": "/ticket-incident-management",
+              "aria-label": "Tickets and incidents"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Explore templates",
+            "attributes": {
+              "href": "/templates"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Explore use cases",
+            "attributes": {
+              "href": "/use-cases"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Join Zapier Early Access",
+            "attributes": {
+              "href": "/early-access"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Automation you can governSee how Zapier helps you manage, secure, and scale automation across your organization.",
+            "attributes": {
+              "href": "/govern",
+              "aria-label": "Automation you can govern"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Startups",
+            "attributes": {
+              "href": "/startups",
+              "aria-label": "Startups"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => {\n  const text = (document.querySelector('main') || document.body).innerText;\n  const lines = text.split('\\n').map(s => s.trim()).filter(Boolean);\n  return lines.filter(l => /gmail|slack|template|email|message|channel|Zap/i.test(l)).slice(0, 120);\n})()"
+        }
+      },
+      "observation": "Eval: [\"Gmail\", \"Slack\", \"Gmail + Slack\", \"Connect Gmail and Slack to power AI-driven automation\", \"Start with a template that brings Gmail and Slack together. Build enterprise-grade automation in minutes.\", \"Our most popular template\", \"Send new Gmail emails as Slack channel messages\", \"Gmail, Slack\", \"Gmail + Slack\", \"Send Slack notifications for new emails matching Gmail search queries\", \"Gmail, Slack\", \"Gmail + Slack\", \"Get new email notifications in Slack (containing subject, snippet, sender and "
+    },
+    {
+      "step": 4,
+      "state": {
+        "url": "https://zapier.com/apps/gmail/integrations/slack",
+        "title": "Gmail Slack Integration - Quick Connect - Zapier",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to content",
+            "attributes": {
+              "href": "#main"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Zapier",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Zapier"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "Products",
+            "attributes": {}
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "ZapsDo-it-yourself automation for workflows",
+            "attributes": {
+              "href": "/workflows",
+              "aria-label": "Zaps"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "TablesStore data your Zaps can read and update",
+            "attributes": {
+              "href": "/tables",
+              "aria-label": "Tables"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "FormsCapture inputs that trigger workflows",
+            "attributes": {
+              "href": "/forms",
+              "aria-label": "Forms"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "CanvasPlan and map your workflows with AI",
+            "attributes": {
+              "href": "/canvas",
+              "aria-label": "Canvas"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "AgentsCreate your own AI assistants for any task",
+            "attributes": {
+              "href": "/agents",
+              "aria-label": "Agents"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "ChatbotsAnswer customer questions with AI chatbots",
+            "attributes": {
+              "href": "/ai/chatbot",
+              "aria-label": "Chatbots"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "App integrationsExplore 9,000+ app connections",
+            "attributes": {
+              "href": "/apps",
+              "aria-label": "App integrations"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "AI automation \ud83e\ude84Cutting-edge AI to upgrade your workflows",
+            "attributes": {
+              "href": "/ai",
+              "aria-label": "AI automation \ud83e\ude84"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "SecurityEnterprise-grade security",
+            "attributes": {
+              "href": "/security-compliance",
+              "aria-label": "Security"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Explore templates",
+            "attributes": {
+              "href": "/templates"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Explore use cases",
+            "attributes": {
+              "href": "/use-cases"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Join Zapier Early Access",
+            "attributes": {
+              "href": "/early-access"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Zapier MCPAdd Zapier to your AI chat",
+            "attributes": {
+              "href": "/mcp",
+              "aria-label": "Zapier MCP"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "Zapier SDKBetaInstall Zapier to your AI coding agent",
+            "attributes": {
+              "href": "/sdk",
+              "aria-label": "Zapier SDK"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "FunctionsBetaCode your workflows in a web IDE",
+            "attributes": {
+              "href": "/functions",
+              "aria-label": "Functions"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Lead RouterBetaTurn complex lead routing into one simple step",
+            "attributes": {
+              "href": "/l/leadrouter",
+              "aria-label": "Lead Router"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "button",
+            "text": "Solutions",
+            "attributes": {}
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "RevOpsDrive revenue through automation",
+            "attributes": {
+              "href": "/solutions/revops",
+              "aria-label": "RevOps"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "MarketingMultiply campaign effectiveness and ROI",
+            "attributes": {
+              "href": "/solutions/marketing",
+              "aria-label": "Marketing"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "ITBetter manage systems with automation",
+            "attributes": {
+              "href": "/solutions/it",
+              "aria-label": "IT"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "HREmpower your HR team with AI automation",
+            "attributes": {
+              "href": "/solutions/hr",
+              "aria-label": "HR"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "SalesClose more deals",
+            "attributes": {
+              "href": "/solutions/sales",
+              "aria-label": "Sales"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Customer SupportElevate customer satisfaction",
+            "attributes": {
+              "href": "/solutions/customer-support",
+              "aria-label": "Customer Support"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "LeadersStreamline decision-making processes",
+            "attributes": {
+              "href": "/solutions/leaders",
+              "aria-label": "Leaders"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Executive AssistantsEliminate repetitive admin tasks",
+            "attributes": {
+              "href": "/solutions/executive-assistants",
+              "aria-label": "Executive Assistants"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "NetSuite",
+            "attributes": {
+              "href": "/apps/netsuite/integrations",
+              "aria-label": "NetSuite"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Salesforce",
+            "attributes": {
+              "href": "/apps/salesforce/integrations",
+              "aria-label": "Salesforce"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "HubSpot",
+            "attributes": {
+              "href": "/apps/hubspot/integrations",
+              "aria-label": "HubSpot"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Slack",
+            "attributes": {
+              "href": "/apps/slack/integrations",
+              "aria-label": "Slack"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "ChatGPT (OpenAI)",
+            "attributes": {
+              "href": "/apps/chatgpt/integrations",
+              "aria-label": "ChatGPT (OpenAI)"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Microsoft Dynamics CRM",
+            "attributes": {
+              "href": "/apps/microsoft-dynamics-crm/integrations",
+              "aria-label": "Microsoft Dynamics CRM"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Microsoft Teams",
+            "attributes": {
+              "href": "/apps/microsoft-teams/integrations",
+              "aria-label": "Microsoft Teams"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Zendesk",
+            "attributes": {
+              "href": "/apps/zendesk/integrations",
+              "aria-label": "Zendesk"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Jira Software Cloud",
+            "attributes": {
+              "href": "/apps/jira-software-cloud/integrations",
+              "aria-label": "Jira Software Cloud"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "View all apps",
+            "attributes": {
+              "href": "/apps",
+              "aria-label": "View all apps"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Lead managementAutomate your way to more conversions",
+            "attributes": {
+              "href": "/lead-management",
+              "aria-label": "Lead management"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Sales pipelineAutomate handoffs and streamline sales",
+            "attributes": {
+              "href": "/sales-pipeline-management",
+              "aria-label": "Sales pipeline"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Marketing campaignsBoost your marketing campaign's impact",
+            "attributes": {
+              "href": "/marketing-campaigns",
+              "aria-label": "Marketing campaigns"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Customer supportQuickly route tickets and responses",
+            "attributes": {
+              "href": "/customer-support-management",
+              "aria-label": "Customer support"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Data managementConnect app data for more insights",
+            "attributes": {
+              "href": "/data-management",
+              "aria-label": "Data management"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Project managementDeliver projects seamlessly",
+            "attributes": {
+              "href": "/project-management",
+              "aria-label": "Project management"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Tickets and incidentsResolve issues and incidents faster",
+            "attributes": {
+              "href": "/ticket-incident-management",
+              "aria-label": "Tickets and incidents"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Explore templates",
+            "attributes": {
+              "href": "/templates"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Explore use cases",
+            "attributes": {
+              "href": "/use-cases"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Join Zapier Early Access",
+            "attributes": {
+              "href": "/early-access"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Automation you can governSee how Zapier helps you manage, secure, and scale automation across your organization.",
+            "attributes": {
+              "href": "/govern",
+              "aria-label": "Automation you can govern"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Startups",
+            "attributes": {
+              "href": "/startups",
+              "aria-label": "Startups"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "Template found: \u201cSend new Gmail emails as Slack channel messages.\u201d The Zap automatically posts a message in a Slack channel whenever a new email arrives in Gmail."
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

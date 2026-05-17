@@ -1,0 +1,1761 @@
+{
+  "task_id": "wv-037",
+  "task_description": "On ESPN, find the next scheduled match for the United States men's national soccer team.",
+  "starting_url": "https://www.espn.com/soccer",
+  "passed": false,
+  "final_answer": "The next scheduled United States men\u2019s national soccer team match on ESPN is United States vs. Senegal on Sunday, May 31, 2026 at 10:30 PM, an International Friendly.",
+  "duration_s": 43.47,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://www.espn.com/soccer/",
+        "title": "Soccer on ESPN - Scores, Stats and Highlights",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "Skip to main content",
+            "attributes": {}
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "Skip to navigation",
+            "attributes": {}
+          },
+          {
+            "id": "pw-3",
+            "role": "combobox",
+            "text": "Top Events\n\n\tNBA\n\n\tNHL\n\n\tPGA Tour\n\n\tMLB\n\n\tWNBA\n\n\tLPGA Tour\n\n\tNCAA Baseball\n\n\tNCAA Softball\n\n\tTop Soccer\n\n\tMen's NCAA Lacrosse\n\n\tNFL Draft\n\n\tTennis (M)\n\n\tTennis (W)\n\n\tNASCAR\n\n\tF1\n\n\tPLL (Lacrosse)\n\n\tUFC\n\n\tNCAAF\n\n\tNCAAM\n\n\tNCAAW\n\n\tNLL (Lacrosse)\n\n\tWomen's NCAA Lacrosse\n\n\tWorld Cup\n\n\tPremier League\n\n\tLALIGA\n\n\tNWSL\n\n\tMLS\n\n\tSerie A\n\n\tUFL",
+            "attributes": {
+              "id": "league-nav"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Top Soccer",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Top Events",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "NBA",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "NHL",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "PGA Tour",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "MLB",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "WNBA",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "LPGA Tour",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "NCAA Baseball",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "NCAA Softball",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Top Soccer",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Men's NCAA Lacrosse",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "NFL Draft",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Tennis (M)",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Tennis (W)",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "NASCAR",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "F1",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "PLL (Lacrosse)",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "UFC",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "NCAAF",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "NCAAM",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "NCAAW",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "NLL (Lacrosse)",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Women's NCAA Lacrosse",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "World Cup",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Premier League",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "LALIGA",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "NWSL",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "MLS",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Serie A",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "UFL",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "combobox",
+            "text": null,
+            "attributes": {
+              "id": "conference-nav"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Full Scoreboard \u00bb",
+            "attributes": {
+              "href": "/soccer/scoreboard"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Summary",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740963/nottingham-forest-manchester-united"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Report",
+            "attributes": {
+              "href": "/soccer/report/_/gameId/740963"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "FT\nMAN\n3\nNFO\n2",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740963/nottingham-forest-manchester-united"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Summary",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740959/crystal-palace-brentford"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Report",
+            "attributes": {
+              "href": "/soccer/report/_/gameId/740959"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "FT\nBRE\n2\nCRY\n2",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740959/crystal-palace-brentford"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Summary",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740961/sunderland-everton"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Report",
+            "attributes": {
+              "href": "/soccer/report/_/gameId/740961"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "FT\nEVE\n1\nSUN\n3",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740961/sunderland-everton"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Summary",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740962/brighton-hove-albion-leeds-united"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "Report",
+            "attributes": {
+              "href": "/soccer/report/_/gameId/740962"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "FT\nLEE\n1\nBHA\n0",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740962/brighton-hove-albion-leeds-united"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://www.espn.com/soccer/team/fixtures/_/id/660/united-states"
+        }
+      },
+      "observation": "Opened https://www.espn.com/soccer/team/fixtures/_/id/660/united-states"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://www.espn.com/soccer/team/fixtures/_/id/660/united-states",
+        "title": "United States 2026 Schedule - ESPN",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "Skip to main content",
+            "attributes": {}
+          },
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "Skip to navigation",
+            "attributes": {}
+          },
+          {
+            "id": "pw-2",
+            "role": "combobox",
+            "text": "Sports",
+            "attributes": {
+              "name": "sportsDropdown",
+              "aria-label": "Sports"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "combobox",
+            "text": "hidden",
+            "attributes": {
+              "name": "fake-sportsDropdown"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "ESPN",
+            "attributes": {
+              "href": "/",
+              "aria-label": "ESPN Home Page"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "NFL",
+            "attributes": {
+              "id": "nav-link-nav-menu-item-7070",
+              "href": "/nfl/",
+              "aria-label": "ESPN NFL Home Page"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "button",
+            "text": "NFL",
+            "attributes": {
+              "id": "nav-menu-item-7070",
+              "aria-label": "NFL"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "NBA",
+            "attributes": {
+              "id": "nav-link-nav-menu-item-2773",
+              "href": "/nba/",
+              "aria-label": "ESPN NBA Home Page"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": "NBA",
+            "attributes": {
+              "id": "nav-menu-item-2773",
+              "aria-label": "NBA"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "MLB",
+            "attributes": {
+              "id": "nav-link-nav-menu-item-3042",
+              "href": "/mlb/",
+              "aria-label": "ESPN MLB Home Page"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "button",
+            "text": "MLB",
+            "attributes": {
+              "id": "nav-menu-item-3042",
+              "aria-label": "MLB"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "NHL",
+            "attributes": {
+              "id": "nav-link-nav-menu-item-3215",
+              "href": "/nhl/",
+              "aria-label": "ESPN NHL Home Page"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "NHL",
+            "attributes": {
+              "id": "nav-menu-item-3215",
+              "aria-label": "NHL"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Soccer",
+            "attributes": {
+              "id": "nav-link-nav-menu-item-1908",
+              "href": "/soccer/",
+              "aria-label": "ESPN Soccer Home Page"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "button",
+            "text": "Soccer",
+            "attributes": {
+              "id": "nav-menu-item-1908",
+              "aria-label": "Soccer"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "WNBA",
+            "attributes": {
+              "id": "nav-link-nav-menu-item-5168",
+              "href": "/wnba/",
+              "aria-label": "ESPN WNBA Home Page"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "button",
+            "text": "WNBA",
+            "attributes": {
+              "id": "nav-menu-item-5168",
+              "aria-label": "WNBA"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Golf",
+            "attributes": {
+              "id": "nav-link-nav-menu-item-9489",
+              "href": "/golf/",
+              "aria-label": "ESPN Golf Home Page"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "button",
+            "text": "Golf",
+            "attributes": {
+              "id": "nav-menu-item-9489",
+              "aria-label": "Golf"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "More Sports",
+            "attributes": {
+              "id": "nav-link-nav-menu-item-3581",
+              "href": "#",
+              "aria-label": "ESPN More Sports Home Page"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "button",
+            "text": "More Sports",
+            "attributes": {
+              "id": "nav-menu-item-3581",
+              "aria-label": "More Sports"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Watch",
+            "attributes": {
+              "id": "nav-link-nav-menu-item-4440",
+              "href": "http://www.espn.com/watch/"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "button",
+            "text": "Watch",
+            "attributes": {
+              "id": "nav-menu-item-4440",
+              "aria-label": "Watch"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Fantasy",
+            "attributes": {
+              "id": "nav-link-nav-menu-item-7006",
+              "href": "/fantasy/"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "Fantasy",
+            "attributes": {
+              "id": "nav-menu-item-7006",
+              "aria-label": "Fantasy"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Where to Watch",
+            "attributes": {
+              "id": "nav-link-undefined",
+              "href": "https://www.espn.com/where-to-watch"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-38",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "navuserbutton"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "id": "nav-link-nav-menu-item-2450",
+              "href": "/soccer/team/_/id/660"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Fixtures",
+            "attributes": {
+              "id": "nav-link-nav-menu-item-2810",
+              "href": "https://www.espn.com/soccer/team/fixtures/_/id/660/usa"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Results",
+            "attributes": {
+              "id": "nav-link-nav-menu-item-8208",
+              "href": "/soccer/team/results/_/id/660/usa"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Squad",
+            "attributes": {
+              "id": "nav-link-nav-menu-item-2391",
+              "href": "/soccer/team/squad/_/id/660/usa"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Stats",
+            "attributes": {
+              "id": "nav-link-nav-menu-item-7853",
+              "href": "/soccer/team/stats/_/id/660"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Table",
+            "attributes": {
+              "id": "nav-link-nav-menu-item-8132",
+              "href": "/soccer/table/_/league/fifa.world"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "NEW! Group Stage Challenge",
+            "attributes": {
+              "id": "nav-link-nav-menu-item-3941",
+              "href": "https://fantasy.espn.com/games/mens-group-stage-challenge-2026/?addata=mensgroupstagechallenge2026_soccer_web_soccerteamclubhousepage"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "NEW! Knockout Bracket Challenge",
+            "attributes": {
+              "id": "nav-link-nav-menu-item-997",
+              "href": "https://fantasy.espn.com/games/mens-knockout-bracket-challenge-2026/?addata=mensknockoutbracketchallenge2026_soccer_web_soccerteamclubhousepage"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "combobox",
+            "text": "All Competitions\nInternational Friendly\nFIFA World Cup\nConcacaf Gold Cup\nConcacaf Nations League\nCopa Am\u00e9rica\nFIFA World Cup Qualifying - Concacaf\nConcacaf Cup\nFIFA Confederations Cup\nMen's Olympic Soccer Tournament",
+            "attributes": {
+              "name": "1779043213811::20390000::62698277:fd40:4076:cd3c:be073efde5f7"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "combobox",
+            "text": "All Competitions",
+            "attributes": {
+              "name": "fake-1779043213811::20390000::62698277:fd40:4076:cd3c:be073efde5f7"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "United States",
+            "attributes": {
+              "href": "/soccer/team/_/id/660/united-states",
+              "data-testid": "formattedTeam"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/soccer/team/_/id/660/united-states"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "v",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/762592/senegal-united-states"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/soccer/team/_/id/654/senegal"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Senegal",
+            "attributes": {
+              "href": "/soccer/team/_/id/654/senegal",
+              "data-testid": "formattedTeam"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "10:30 PM",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/762592/senegal-united-states"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "link",
+            "text": "United States",
+            "attributes": {
+              "href": "/soccer/team/_/id/660/united-states",
+              "data-testid": "formattedTeam"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/soccer/team/_/id/660/united-states"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "link",
+            "text": "v",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/762260/germany-united-states"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/soccer/team/_/id/481/germany"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "link",
+            "text": "Germany",
+            "attributes": {
+              "href": "/soccer/team/_/id/481/germany",
+              "data-testid": "formattedTeam"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "document.body.innerText"
+        }
+      },
+      "observation": "Eval: \"Skip to main content\\nSkip to navigation\\nTop Events\\nTop Soccer\\nNBA\\nNHL\\nPGA Tour\\nMLB\\nWNBA\\nLPGA Tour\\nNCAA Baseball\\nNCAA Softball\\nMen's NCAA Lacrosse\\nNFL Draft\\nTennis (M)\\nTennis (W)\\nNASCAR\\nF1\\nPLL (Lacrosse)\\nUFC\\nNCAAF\\nNCAAM\\nNCAAW\\nNLL (Lacrosse)\\nWomen's NCAA Lacrosse\\nWorld Cup\\nPremier League\\nLALIGA\\nNWSL\\nMLS\\nSerie A\\nUFL\\nVIEW ALL\\nPremier League\\nSummary\\nReport\\nMAN\\n3\\nNFO\\n2\\nFT\\nSummary\\nReport\\nBRE\\n2\\nCRY\\n2\\nFT\\nSummary\\nReport\\nEVE\\n1\\nSUN\\n3\\nFT\\nSummary\\nReport"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://www.espn.com/soccer/team/fixtures/_/id/660/united-states",
+        "title": "United States 2026 Schedule - ESPN",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "Skip to main content",
+            "attributes": {}
+          },
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "Skip to navigation",
+            "attributes": {}
+          },
+          {
+            "id": "pw-2",
+            "role": "combobox",
+            "text": "Top Events\nTop Soccer\nNBA\nNHL\nPGA Tour\nMLB\nWNBA\nLPGA Tour\nNCAA Baseball\nNCAA Softball\nMen's NCAA Lacrosse\nNFL Draft\nTennis (M)\nTennis (W)\nNASCAR\nF1\nPLL (Lacrosse)\nUFC\nNCAAF\nNCAAM\nNCAAW\nNLL (Lacrosse)\nWomen's NCAA Lacrosse\nWorld Cup\nPremier League\nLALIGA\nNWSL\nMLS\nSerie A\nUFL",
+            "attributes": {
+              "name": "sportsDropdown",
+              "aria-label": "Sports"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "combobox",
+            "text": "Top Soccer",
+            "attributes": {
+              "name": "fake-sportsDropdown"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "VIEW ALL\nPremier League",
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740963/nottingham-forest-manchester-united"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Summary",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740963/nottingham-forest-manchester-united",
+              "aria-label": "Summary (MAN vs NFO)"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Report",
+            "attributes": {
+              "href": "/soccer/report/_/gameId/740963",
+              "aria-label": "Report (MAN vs NFO)"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740959/crystal-palace-brentford"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Summary",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740959/crystal-palace-brentford",
+              "aria-label": "Summary (BRE vs CRY)"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Report",
+            "attributes": {
+              "href": "/soccer/report/_/gameId/740959",
+              "aria-label": "Report (BRE vs CRY)"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740961/sunderland-everton"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Summary",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740961/sunderland-everton",
+              "aria-label": "Summary (EVE vs SUN)"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "Report",
+            "attributes": {
+              "href": "/soccer/report/_/gameId/740961",
+              "aria-label": "Report (EVE vs SUN)"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740962/brighton-hove-albion-leeds-united"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Summary",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740962/brighton-hove-albion-leeds-united",
+              "aria-label": "Summary (LEE vs BHA)"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Report",
+            "attributes": {
+              "href": "/soccer/report/_/gameId/740962",
+              "aria-label": "Report (LEE vs BHA)"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740965/fulham-wolverhampton-wanderers"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Summary",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740965/fulham-wolverhampton-wanderers",
+              "aria-label": "Summary (WOL vs FUL)"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Report",
+            "attributes": {
+              "href": "/soccer/report/_/gameId/740965",
+              "aria-label": "Report (WOL vs FUL)"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740964/west-ham-united-newcastle-united"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Summary",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740964/west-ham-united-newcastle-united",
+              "aria-label": "Summary (NEW vs WHU)"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Report",
+            "attributes": {
+              "href": "/soccer/report/_/gameId/740964",
+              "aria-label": "Report (NEW vs WHU)"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "VIEW ALL\nLALIGA",
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Gamecast",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748506",
+              "aria-label": "Gamecast (ATH vs CEL)"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Statistics",
+            "attributes": {
+              "href": "/soccer/matchstats/_/gameId/748506",
+              "aria-label": "Statistics (ATH vs CEL)"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "ATH\n1\nCEL\n1",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748506"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Gamecast",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748509",
+              "aria-label": "Gamecast (ATM vs GIR)"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Statistics",
+            "attributes": {
+              "href": "/soccer/matchstats/_/gameId/748509",
+              "aria-label": "Statistics (ATM vs GIR)"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "ATM\n1\nGIR\n0",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748509"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Gamecast",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748507",
+              "aria-label": "Gamecast (ELC vs GET)"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Statistics",
+            "attributes": {
+              "href": "/soccer/matchstats/_/gameId/748507",
+              "aria-label": "Statistics (ELC vs GET)"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "ELC\n1\nGET\n0",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748507"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Gamecast",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748510",
+              "aria-label": "Gamecast (LEV vs MLL)"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Statistics",
+            "attributes": {
+              "href": "/soccer/matchstats/_/gameId/748510",
+              "aria-label": "Statistics (LEV vs MLL)"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "LEV\n1\nMLL\n0",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748510"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Gamecast",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748511",
+              "aria-label": "Gamecast (OSA vs ESP)"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Statistics",
+            "attributes": {
+              "href": "/soccer/matchstats/_/gameId/748511",
+              "aria-label": "Statistics (OSA vs ESP)"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "OSA\n1\nESP\n2",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748511"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Gamecast",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748512",
+              "aria-label": "Gamecast (RAY vs VIL)"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Statistics",
+            "attributes": {
+              "href": "/soccer/matchstats/_/gameId/748512",
+              "aria-label": "Statistics (RAY vs VIL)"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "RAY\n2\nVIL\n0",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748512"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Gamecast",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748513",
+              "aria-label": "Gamecast (OVI vs ALA)"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Statistics",
+            "attributes": {
+              "href": "/soccer/matchstats/_/gameId/748513",
+              "aria-label": "Statistics (OVI vs ALA)"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "OVI\n0\nALA\n1",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748513"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "link",
+            "text": "Gamecast",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748505",
+              "aria-label": "Gamecast (RSO vs VAL)"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "link",
+            "text": "Statistics",
+            "attributes": {
+              "href": "/soccer/matchstats/_/gameId/748505",
+              "aria-label": "Statistics (RSO vs VAL)"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "link",
+            "text": "RSO\n3\nVAL\n2",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748505"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "link",
+            "text": "Gamecast",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748504",
+              "aria-label": "Gamecast (SEV vs RMA)"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "link",
+            "text": "Statistics",
+            "attributes": {
+              "href": "/soccer/matchstats/_/gameId/748504",
+              "aria-label": "Statistics (SEV vs RMA)"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "Array.from(document.querySelectorAll('table')).map(t=>t.innerText).join('\\n---\\n')"
+        }
+      },
+      "observation": "Eval: \"DATE\\tMATCH\\tTIME\\tCOMPETITION\\tTV\\n\\nSun, May 31\\n\\t\\nUnited States\\n\\t\\nv\\n\\t\\nSenegal\\n\\t10:30 PM\\tInternational Friendly\\tTNT/truTV/Tele/Universo/HBO Max/Peacock\\n---\\nDATE\\tMATCH\\tTIME\\tCOMPETITION\\tTV\\n\\nSat, Jun 6\\n\\t\\nUnited States\\n\\t\\nv\\n\\t\\nGermany\\n\\t9:30 PM\\tInternational Friendly\\tTNT/truTV/Tele/Universo/HBO Max/Peacock\\n\\nSat, Jun 13\\n\\t\\nUnited States\\n\\t\\nv\\n\\t\\nParaguay\\n\\t4:00 AM\\tFIFA World Cup\\tFOX/Tele/Peacock\\n\\nFri, Jun 19\\n\\t\\nUnited States\\n\\t\\nv\\n\\t\\nAustralia\\n\\t10:0"
+    },
+    {
+      "step": 4,
+      "state": {
+        "url": "https://www.espn.com/soccer/team/fixtures/_/id/660/united-states",
+        "title": "United States 2026 Schedule - ESPN",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "Skip to main content",
+            "attributes": {}
+          },
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "Skip to navigation",
+            "attributes": {}
+          },
+          {
+            "id": "pw-2",
+            "role": "combobox",
+            "text": "Top Events\nTop Soccer\nNBA\nNHL\nPGA Tour\nMLB\nWNBA\nLPGA Tour\nNCAA Baseball\nNCAA Softball\nMen's NCAA Lacrosse\nNFL Draft\nTennis (M)\nTennis (W)\nNASCAR\nF1\nPLL (Lacrosse)\nUFC\nNCAAF\nNCAAM\nNCAAW\nNLL (Lacrosse)\nWomen's NCAA Lacrosse\nWorld Cup\nPremier League\nLALIGA\nNWSL\nMLS\nSerie A\nUFL",
+            "attributes": {
+              "name": "sportsDropdown",
+              "aria-label": "Sports"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "combobox",
+            "text": "Top Soccer",
+            "attributes": {
+              "name": "fake-sportsDropdown"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "VIEW ALL\nPremier League",
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740963/nottingham-forest-manchester-united"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Summary",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740963/nottingham-forest-manchester-united",
+              "aria-label": "Summary (MAN vs NFO)"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Report",
+            "attributes": {
+              "href": "/soccer/report/_/gameId/740963",
+              "aria-label": "Report (MAN vs NFO)"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740959/crystal-palace-brentford"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Summary",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740959/crystal-palace-brentford",
+              "aria-label": "Summary (BRE vs CRY)"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Report",
+            "attributes": {
+              "href": "/soccer/report/_/gameId/740959",
+              "aria-label": "Report (BRE vs CRY)"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740961/sunderland-everton"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Summary",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740961/sunderland-everton",
+              "aria-label": "Summary (EVE vs SUN)"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "Report",
+            "attributes": {
+              "href": "/soccer/report/_/gameId/740961",
+              "aria-label": "Report (EVE vs SUN)"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740962/brighton-hove-albion-leeds-united"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Summary",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740962/brighton-hove-albion-leeds-united",
+              "aria-label": "Summary (LEE vs BHA)"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Report",
+            "attributes": {
+              "href": "/soccer/report/_/gameId/740962",
+              "aria-label": "Report (LEE vs BHA)"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740965/fulham-wolverhampton-wanderers"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Summary",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740965/fulham-wolverhampton-wanderers",
+              "aria-label": "Summary (WOL vs FUL)"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Report",
+            "attributes": {
+              "href": "/soccer/report/_/gameId/740965",
+              "aria-label": "Report (WOL vs FUL)"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740964/west-ham-united-newcastle-united"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Summary",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/740964/west-ham-united-newcastle-united",
+              "aria-label": "Summary (NEW vs WHU)"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Report",
+            "attributes": {
+              "href": "/soccer/report/_/gameId/740964",
+              "aria-label": "Report (NEW vs WHU)"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "VIEW ALL\nLALIGA",
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Gamecast",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748506",
+              "aria-label": "Gamecast (ATH vs CEL)"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Statistics",
+            "attributes": {
+              "href": "/soccer/matchstats/_/gameId/748506",
+              "aria-label": "Statistics (ATH vs CEL)"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "ATH\n1\nCEL\n1",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748506"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Gamecast",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748509",
+              "aria-label": "Gamecast (ATM vs GIR)"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Statistics",
+            "attributes": {
+              "href": "/soccer/matchstats/_/gameId/748509",
+              "aria-label": "Statistics (ATM vs GIR)"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "ATM\n1\nGIR\n0",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748509"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Gamecast",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748507",
+              "aria-label": "Gamecast (ELC vs GET)"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Statistics",
+            "attributes": {
+              "href": "/soccer/matchstats/_/gameId/748507",
+              "aria-label": "Statistics (ELC vs GET)"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "ELC\n1\nGET\n0",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748507"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Gamecast",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748510",
+              "aria-label": "Gamecast (LEV vs MLL)"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Statistics",
+            "attributes": {
+              "href": "/soccer/matchstats/_/gameId/748510",
+              "aria-label": "Statistics (LEV vs MLL)"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "LEV\n1\nMLL\n0",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748510"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Gamecast",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748511",
+              "aria-label": "Gamecast (OSA vs ESP)"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Statistics",
+            "attributes": {
+              "href": "/soccer/matchstats/_/gameId/748511",
+              "aria-label": "Statistics (OSA vs ESP)"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "OSA\n1\nESP\n2",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748511"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Gamecast",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748512",
+              "aria-label": "Gamecast (RAY vs VIL)"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Statistics",
+            "attributes": {
+              "href": "/soccer/matchstats/_/gameId/748512",
+              "aria-label": "Statistics (RAY vs VIL)"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "RAY\n2\nVIL\n0",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748512"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Gamecast",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748513",
+              "aria-label": "Gamecast (OVI vs ALA)"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Statistics",
+            "attributes": {
+              "href": "/soccer/matchstats/_/gameId/748513",
+              "aria-label": "Statistics (OVI vs ALA)"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "OVI\n0\nALA\n1",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748513"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "link",
+            "text": "Gamecast",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748505",
+              "aria-label": "Gamecast (RSO vs VAL)"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "link",
+            "text": "Statistics",
+            "attributes": {
+              "href": "/soccer/matchstats/_/gameId/748505",
+              "aria-label": "Statistics (RSO vs VAL)"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "link",
+            "text": "RSO\n3\nVAL\n2",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748505"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "link",
+            "text": "Gamecast",
+            "attributes": {
+              "href": "/soccer/match/_/gameId/748504",
+              "aria-label": "Gamecast (SEV vs RMA)"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "link",
+            "text": "Statistics",
+            "attributes": {
+              "href": "/soccer/matchstats/_/gameId/748504",
+              "aria-label": "Statistics (SEV vs RMA)"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "The next scheduled United States men\u2019s national soccer team match on ESPN is United States vs. Senegal on Sunday, May 31, 2026 at 10:30 PM, an International Friendly."
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

@@ -1,0 +1,1334 @@
+{
+  "task_id": "wv-085",
+  "task_description": "On Pinterest, find a dinner recipe pin for salmon and report the recipe title.",
+  "starting_url": "https://www.pinterest.com",
+  "passed": true,
+  "final_answer": "Honey Garlic Glazed Salmon",
+  "duration_s": 35.59,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://www.pinterest.com/",
+        "title": "Pinterest",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to content",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Pinterest home",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Pinterest home"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "href": "/ideas"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "About\n; Opens a new tab",
+            "attributes": {
+              "href": "/_/_/about/"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Businesses\n; Opens a new tab",
+            "attributes": {
+              "href": "/_/_/business/?utm_campaign=pinterest_homepage_blogicon_all_evergreen&utm_medium=organic-pinterest&utm_source=organicpins_pinsite_homepageicon"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Create\n; Opens a new tab",
+            "attributes": {
+              "href": "/_/_/create/"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "News\n; Opens a new tab",
+            "attributes": {
+              "href": "/_/_/blog/?utm_source=organicpins_pinsite_homepageicon&utm_campaign=pinterest_homepage_blogicon_all_evergreen&utm_medium=organic-pinterest"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "button",
+            "text": "Log in",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Sign up",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": "Join Pinterest for free",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Join Pinterest for free"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": "I already have an account",
+            "attributes": {
+              "type": "button",
+              "aria-label": "I already have an account"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": "Scroll up",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Scroll up"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "Scroll down",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Scroll down"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "button",
+            "text": "Scroll up",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Scroll up"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Try now",
+            "attributes": {
+              "href": "/search/pins/?q=bold%20lip&rs=typed",
+              "aria-label": "Try now"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "button",
+            "text": "Scroll down",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Scroll down"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": "Scroll up",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Scroll up"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "See an example",
+            "attributes": {
+              "href": "/trends/boho-maximalist-interiors/",
+              "aria-label": "See an example"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "button",
+            "text": "Scroll down",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Scroll down"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "button",
+            "text": "Scroll up",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Scroll up"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Learn more\n; Opens a new tab",
+            "attributes": {
+              "href": "https://newsroom.pinterest.com/en-ca/news/introducing-new-visual-search-features/",
+              "aria-label": "Learn more; Opens a new tab"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "button",
+            "text": "Scroll down",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Scroll down"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Password tips",
+            "attributes": {
+              "href": ""
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "button",
+            "text": "Continue",
+            "attributes": {
+              "type": "submit",
+              "aria-label": "Continue creating your Pinterest account"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Terms of Service",
+            "attributes": {
+              "href": "/_/_/policy/terms-of-service/"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Privacy Policy",
+            "attributes": {
+              "href": "https://www.pinterest.com/_/_/policy/privacy-policy/"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Notice at collection",
+            "attributes": {
+              "href": "https://policy.pinterest.com/notice-at-collection"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Log in",
+            "attributes": {
+              "href": "/login/"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "button",
+            "text": "Create a free business account",
+            "attributes": {}
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Pinterest home",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Pinterest home"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "iOS",
+            "attributes": {
+              "href": "https://itunes.apple.com/us/app/pinterest/id429047995"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Android",
+            "attributes": {
+              "href": "https://play.google.com/store/apps/details?id=com.pinterest"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "href": "/ideas/"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "link",
+            "text": "Shop",
+            "attributes": {
+              "href": "/shopping/"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "link",
+            "text": "Users",
+            "attributes": {
+              "href": "https://www.pinterest.com/html_sitemap/pinners_a.html"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "link",
+            "text": "Collections",
+            "attributes": {
+              "href": "https://www.pinterest.com/html_sitemap/boards_a.html"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "link",
+            "text": "Shopping",
+            "attributes": {
+              "href": "https://www.pinterest.com/html_sitemap/shopping_0.html"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "link",
+            "text": "Help Center",
+            "attributes": {
+              "href": "https://help.pinterest.com/"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "link",
+            "text": "Terms of service",
+            "attributes": {
+              "href": "_/_/policy/terms-of-service"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "link",
+            "text": "Privacy policy",
+            "attributes": {
+              "href": "_/_/policy/privacy-policy"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "link",
+            "text": "Non-user notice",
+            "attributes": {
+              "href": "https://policy.pinterest.com/non-user-notice"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "link",
+            "text": "cookie policy",
+            "attributes": {
+              "href": "https://www.pinterest.com/_/_/policy/cookies/"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "button",
+            "text": "Reject all",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "button",
+            "text": "Let me choose",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-70",
+            "role": "button",
+            "text": "Accept all",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-72",
+            "role": "textbox",
+            "text": null,
+            "attributes": {
+              "id": "g-recaptcha-response-100000",
+              "name": "g-recaptcha-response"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "img",
+            "text": "Pinterest logo",
+            "attributes": {
+              "aria-label": "Pinterest logo"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "main",
+            "text": "Create the life you love on Pinterest\nJoin Pinterest for free\nI already have an account\nBring your favorite ideas to life\nWith Pinterest, you can unlock tools that spark your creativity and help you find more inspiration.\nSearch by skin tone\nSearch with skin tone ranges for beauty ideas that represent you\nTry now\nCollaborate with group boards\nVisualize your ideas with others, using a Pinterest account\nSee an example\nSearch visually with images\nSearch objects within an image to find more styles you\u2019ll love\nLearn more\n; Opens a new tab\nSign up to get your ideas\nWelcome to Pinterest\nFind new ideas to try\nEmail\nContinue with email\nPassword\nUse 8 or more letters, numbers and symbols\nUse 8 or more letters, numbers and symbols\nPassword tips\nBirthdate\nContinue\n\nOR\n\nBy continuing, you agree to Pinterest's Terms of Service and acknowledge you've read our Privacy Policy. Notice at collection.\nAlready a member? Log in\nCreate a free business account\nGet the app\niOS\nAndroid\nQuick links\nExplore\nShop\nUsers\nCollections\nShopping\nHelp Center\nPolicies\nTerms of service\nPrivacy policy\nNon-user notice\n\u00a9 2026 Pinterest",
+            "attributes": {
+              "id": "mweb-unauth-container"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "presentation",
+            "text": null,
+            "attributes": {}
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://www.pinterest.com/search/pins/?q=salmon%20dinner%20recipe&rs=typed"
+        }
+      },
+      "observation": "Opened https://www.pinterest.com/search/pins/?q=salmon%20dinner%20recipe&rs=typed"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://www.pinterest.com/search/pins/?q=salmon%20dinner%20recipe&rs=typed",
+        "title": "Pinterest",
+        "elements": []
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => ({url: location.href, title: document.title, text: document.body ? document.body.innerText.slice(0, 5000) : '', links: Array.from(document.querySelectorAll('a')).slice(0,50).map(a => ({text:a.innerText, href:a.href, aria:a.getAttribute('aria-label')}))}))()"
+        }
+      },
+      "observation": "Eval: {\"url\": \"https://www.pinterest.com/search/pins/?q=salmon%20dinner%20recipe&rs=typed\", \"title\": \"Pinterest\", \"text\": \"Skip to content\\nExplore\\nLog in\\nSign up\\nSearch\\nHealthy\\nEasy\\nSmoked\\nAir fryer\\nBaked\\nBest\\nKeto\\nSimple\\nAip\\nDelicious\\nPan\\nLow carb\\nQuick and easy\\nAmazing\\nFrozen\\nFamily\\nLemon\\nTeriyaki\\nHigh protein\\nMediterranean\\nGrilled\\nRomantic\\nEasy healthy\\nSheet pan\\nOven\\nShowing more search results for salmon dinner recipe\\nAccept the use of cookies?\\nWe use cookies to del"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://www.pinterest.com/search/pins/?q=salmon%20dinner%20recipe&rs=typed",
+        "title": "Pinterest",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to content",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Pinterest home",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Pinterest home"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "href": "/ideas"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "combobox",
+            "text": "Search",
+            "attributes": {
+              "id": "search-input",
+              "name": "searchBoxInput",
+              "type": "text",
+              "aria-label": "Search",
+              "placeholder": "Search for easy dinners, fashion, etc.",
+              "value": "salmon dinner recipe"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "Remove search input",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Remove search input"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "button",
+            "text": "Log in",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "button",
+            "text": "Sign up",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Setting",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Setting"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": "Show filters",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Show filters"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "button",
+            "text": "Healthy",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "Easy",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "Smoked",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "button",
+            "text": "Air fryer",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "button",
+            "text": "Baked",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "button",
+            "text": "Best",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": "Keto",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "button",
+            "text": "Simple",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "button",
+            "text": "Aip",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "button",
+            "text": "Delicious",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "button",
+            "text": "Pan",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "button",
+            "text": "Low carb",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "Quick and easy",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "button",
+            "text": "Amazing",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "button",
+            "text": "Frozen",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "button",
+            "text": "Family",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "button",
+            "text": "Lemon",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "button",
+            "text": "Teriyaki",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "button",
+            "text": "High protein",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "button",
+            "text": "Mediterranean",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": "Grilled",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "Romantic",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "button",
+            "text": "Easy healthy",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "Sheet pan",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "button",
+            "text": "Oven",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Salmon Recipes",
+            "attributes": {
+              "href": "/pin/281543726893809/",
+              "aria-label": "Salmon Recipes"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Salmon Recipes",
+            "attributes": {
+              "href": "/pin/281543726893809/",
+              "aria-label": "Salmon Recipes"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "button",
+            "text": "More actions",
+            "attributes": {
+              "type": "button",
+              "aria-label": "More actions"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "link",
+            "text": "Honey Garlic Glazed Salmon is sweet, savory, and packed with sticky delicious flavor for the perfect dinner. This Honey Garlic Glazed Salmon creates a glossy caramelized finish with tender flaky salmon inside. Enjoy honey garlic glazed salmon recipe, sticky glazed salmon dinner idea, easy sweet savory salmon recipe, quick weeknight honey garlic fish meal, and restaurant style glazed salmon fillets. It\u2019s ready fast and tastes amazing with rice or steamed vegetables. Save this Honey Garlic Glazed Salmon recipe for your next easy dinner and enjoy bold flavor in every bite. #salmonrecipe #honeygarlic #quickdinner #easydinner #seafoodrecipes",
+            "attributes": {
+              "href": "/pin/993958580276236900/",
+              "aria-label": "Honey Garlic Glazed Salmon is sweet, savory, and packed with sticky delicious flavor for the perfect dinner. This Honey Garlic Glazed Salmon creates a glossy caramelized finish with tender flaky salmon inside. Enjoy honey garlic glazed salmon recipe, sticky glazed salmon dinner idea, easy sweet savory salmon recipe, quick weeknight honey garlic fish meal, and restaurant style glazed salmon fillets. It\u2019s ready fast and tastes amazing with rice or steamed vegetables. Save this Honey Garlic Glazed Salmon recipe for your next easy dinner and enjoy bold flavor in every bite. #salmonrecipe #honeygarlic #quickdinner #easydinner #seafoodrecipes "
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "link",
+            "text": "Honey Garlic Glazed Salmon is sweet, savory, and packed with sticky delicious flavor for the perfect dinner. This Honey Garlic Glazed Salmon creates a glossy caramelized finish with tender flaky salmon inside. Enjoy honey garlic glazed salmon recipe, sticky glazed salmon dinner idea, easy sweet savory salmon recipe, quick weeknight honey garlic fish meal, and restaurant style glazed salmon fillets. It\u2019s ready fast and tastes amazing with rice or steamed vegetables. Save this Honey Garlic Glazed Salmon recipe for your next easy dinner and enjoy bold flavor in every bite. #salmonrecipe #honeygarlic #quickdinner #easydinner #seafoodrecipes",
+            "attributes": {
+              "href": "/pin/993958580276236900/",
+              "aria-label": "Honey Garlic Glazed Salmon is sweet, savory, and packed with sticky delicious flavor for the perfect dinner. This Honey Garlic Glazed Salmon creates a glossy caramelized finish with tender flaky salmon inside. Enjoy honey garlic glazed salmon recipe, sticky glazed salmon dinner idea, easy sweet savory salmon recipe, quick weeknight honey garlic fish meal, and restaurant style glazed salmon fillets. It\u2019s ready fast and tastes amazing with rice or steamed vegetables. Save this Honey Garlic Glazed Salmon recipe for your next easy dinner and enjoy bold flavor in every bite. #salmonrecipe #honeygarlic #quickdinner #easydinner #seafoodrecipes "
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "button",
+            "text": "More actions",
+            "attributes": {
+              "type": "button",
+              "aria-label": "More actions"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "link",
+            "text": "salmon bowl with rice, vegetables, and sauce in a container",
+            "attributes": {
+              "href": "/pin/837458493251742639/",
+              "aria-label": "salmon bowl with rice, vegetables, and sauce in a container"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "link",
+            "text": "salmon bowl with rice, vegetables, and sauce in a container",
+            "attributes": {
+              "href": "/pin/837458493251742639/",
+              "aria-label": "salmon bowl with rice, vegetables, and sauce in a container"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "button",
+            "text": "More actions",
+            "attributes": {
+              "type": "button",
+              "aria-label": "More actions"
+            }
+          },
+          {
+            "id": "pw-73",
+            "role": "link",
+            "text": "Baked salmon fillet glazed with honey mustard sauce.",
+            "attributes": {
+              "href": "/pin/925700898425519621/",
+              "aria-label": "Baked salmon fillet glazed with honey mustard sauce."
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "link",
+            "text": "Baked salmon fillet glazed with honey mustard sauce.",
+            "attributes": {
+              "href": "/pin/925700898425519621/",
+              "aria-label": "Baked salmon fillet glazed with honey mustard sauce."
+            }
+          },
+          {
+            "id": "pw-75",
+            "role": "button",
+            "text": "More actions",
+            "attributes": {
+              "type": "button",
+              "aria-label": "More actions"
+            }
+          },
+          {
+            "id": "pw-79",
+            "role": "link",
+            "text": "salmon with teriyaki sauce served on rice and vegetables in a black plate next to broccoli",
+            "attributes": {
+              "href": "/pin/35888128286128217/",
+              "aria-label": "salmon with teriyaki sauce served on rice and vegetables in a black plate next to broccoli"
+            }
+          },
+          {
+            "id": "pw-80",
+            "role": "link",
+            "text": "salmon with teriyaki sauce served on rice and vegetables in a black plate next to broccoli",
+            "attributes": {
+              "href": "/pin/35888128286128217/",
+              "aria-label": "salmon with teriyaki sauce served on rice and vegetables in a black plate next to broccoli"
+            }
+          },
+          {
+            "id": "pw-81",
+            "role": "button",
+            "text": "More actions",
+            "attributes": {
+              "type": "button",
+              "aria-label": "More actions"
+            }
+          },
+          {
+            "id": "pw-85",
+            "role": "link",
+            "text": "honey garlic salmon recipe in a bowl with rice and asparagus",
+            "attributes": {
+              "href": "/pin/78179743527687579/",
+              "aria-label": "honey garlic salmon recipe in a bowl with rice and asparagus"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "click",
+        "args": {
+          "id": "pw-61"
+        }
+      },
+      "observation": "Action failed: Locator.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator(\"a[aria-label=\\\"Honey Garlic Glazed Salmon is sweet, savory, and packed with sticky delicious flavor for the perfect dinner. This Honey Garlic Glazed Salmon creates a glossy caramelized finish with tender flaky salmon inside. Enjoy honey garlic glazed salmon recipe, sticky glazed salmon dinner idea, easy sweet savory salmon recipe, quick weeknight honey garlic fish meal, and restaurant style glazed salmon fillets. It\u2019s ready fast and tastes amazing with rice or steamed vegetables. Save this Honey Garlic Glazed Salmon recipe for your next easy dinner and enjoy bold flavor in every bite. #salmonrecipe #honeygarlic #quickdinner #easydinner #seafoodrecipes \\\"]\").first\n    - locator resolved to <a rel=\"\" href=\"/pin/993958580276236900/\" class=\"etmDmh i7jpet gcIrSY KQwCbH Q3hcOU y1OnKm zlD4hU Acabuv\" aria-label=\"Honey Garlic Glazed Salmon is sweet, savory, and packed with sticky delicious flavor for the perfect dinner. This Honey Garlic Glazed Salmon creates a glossy caramelized finish with tender flaky salmon inside. Enjoy honey garlic glazed salmon recipe, sticky glazed salmon dinner idea, easy sweet savory salmon recipe, quick weeknight honey garlic fish meal, and restaurant style glaz\u2026>\u2026</a>\n  - attempting click action\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"ADXRXN _xSIdT\">\u2026</div> from <div class=\"unzjra\">\u2026</div> subtree intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <div class=\"WuRgKB aMgNKE YfEt3H v_eFe4 qnEc35 hxKTA7 mm0O_j\">\u2026</div> from <div class=\"unzjra\">\u2026</div> subtree intercepts pointer events\n  2 \u00d7 retrying click action\n      - waiting 100ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"ADXRXN OrJwfv xLeAAe\">\u2026</div> from <div class=\"unzjra\">\u2026</div> subtree intercepts pointer events\n  2 \u00d7 retrying click action\n      - waiting 500ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"ADXRXN _xSIdT\">\u2026</div> from <div class=\"unzjra\">\u2026</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"WuRgKB aMgNKE YfEt3H v_eFe4 qnEc35 hxKTA7 mm0O_j\">\u2026</div> from <div class=\"unzjra\">\u2026</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"ADXRXN OrJwfv xLeAAe\">\u2026</div> from <div class=\"unzjra\">\u2026</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"ADXRXN OrJwfv xLeAAe\">\u2026</div> from <div class=\"unzjra\">\u2026</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <div class=\"ADXRXN _xSIdT\">\u2026</div> from <div class=\"unzjra\">\u2026</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n"
+    },
+    {
+      "step": 4,
+      "state": {
+        "url": "https://www.pinterest.com/search/pins/?q=salmon%20dinner%20recipe&rs=typed",
+        "title": "Pinterest",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to content",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Pinterest home",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Pinterest home"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "href": "/ideas"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "combobox",
+            "text": "Search",
+            "attributes": {
+              "id": "search-input",
+              "name": "searchBoxInput",
+              "type": "text",
+              "aria-label": "Search",
+              "placeholder": "Search for easy dinners, fashion, etc.",
+              "value": "salmon dinner recipe"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "Remove search input",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Remove search input"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "button",
+            "text": "Log in",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "button",
+            "text": "Sign up",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Setting",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Setting"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": "Show filters",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Show filters"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "button",
+            "text": "Healthy",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "Easy",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "Smoked",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "button",
+            "text": "Air fryer",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "button",
+            "text": "Baked",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "button",
+            "text": "Best",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": "Keto",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "button",
+            "text": "Simple",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "button",
+            "text": "Aip",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "button",
+            "text": "Delicious",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "button",
+            "text": "Pan",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "button",
+            "text": "Low carb",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "Quick and easy",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "button",
+            "text": "Amazing",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "button",
+            "text": "Frozen",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "button",
+            "text": "Family",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "button",
+            "text": "Lemon",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "button",
+            "text": "Teriyaki",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "button",
+            "text": "High protein",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "button",
+            "text": "Mediterranean",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": "Grilled",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "Romantic",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "button",
+            "text": "Easy healthy",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "Sheet pan",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "button",
+            "text": "Oven",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Salmon Recipes",
+            "attributes": {
+              "href": "/pin/281543726893809/",
+              "aria-label": "Salmon Recipes"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Salmon Recipes",
+            "attributes": {
+              "href": "/pin/281543726893809/",
+              "aria-label": "Salmon Recipes"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "button",
+            "text": "More actions",
+            "attributes": {
+              "type": "button",
+              "aria-label": "More actions"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "link",
+            "text": "Honey Garlic Glazed Salmon is sweet, savory, and packed with sticky delicious flavor for the perfect dinner. This Honey Garlic Glazed Salmon creates a glossy caramelized finish with tender flaky salmon inside. Enjoy honey garlic glazed salmon recipe, sticky glazed salmon dinner idea, easy sweet savory salmon recipe, quick weeknight honey garlic fish meal, and restaurant style glazed salmon fillets. It\u2019s ready fast and tastes amazing with rice or steamed vegetables. Save this Honey Garlic Glazed Salmon recipe for your next easy dinner and enjoy bold flavor in every bite. #salmonrecipe #honeygarlic #quickdinner #easydinner #seafoodrecipes",
+            "attributes": {
+              "href": "/pin/993958580276236900/",
+              "aria-label": "Honey Garlic Glazed Salmon is sweet, savory, and packed with sticky delicious flavor for the perfect dinner. This Honey Garlic Glazed Salmon creates a glossy caramelized finish with tender flaky salmon inside. Enjoy honey garlic glazed salmon recipe, sticky glazed salmon dinner idea, easy sweet savory salmon recipe, quick weeknight honey garlic fish meal, and restaurant style glazed salmon fillets. It\u2019s ready fast and tastes amazing with rice or steamed vegetables. Save this Honey Garlic Glazed Salmon recipe for your next easy dinner and enjoy bold flavor in every bite. #salmonrecipe #honeygarlic #quickdinner #easydinner #seafoodrecipes "
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "link",
+            "text": "Honey Garlic Glazed Salmon is sweet, savory, and packed with sticky delicious flavor for the perfect dinner. This Honey Garlic Glazed Salmon creates a glossy caramelized finish with tender flaky salmon inside. Enjoy honey garlic glazed salmon recipe, sticky glazed salmon dinner idea, easy sweet savory salmon recipe, quick weeknight honey garlic fish meal, and restaurant style glazed salmon fillets. It\u2019s ready fast and tastes amazing with rice or steamed vegetables. Save this Honey Garlic Glazed Salmon recipe for your next easy dinner and enjoy bold flavor in every bite. #salmonrecipe #honeygarlic #quickdinner #easydinner #seafoodrecipes",
+            "attributes": {
+              "href": "/pin/993958580276236900/",
+              "aria-label": "Honey Garlic Glazed Salmon is sweet, savory, and packed with sticky delicious flavor for the perfect dinner. This Honey Garlic Glazed Salmon creates a glossy caramelized finish with tender flaky salmon inside. Enjoy honey garlic glazed salmon recipe, sticky glazed salmon dinner idea, easy sweet savory salmon recipe, quick weeknight honey garlic fish meal, and restaurant style glazed salmon fillets. It\u2019s ready fast and tastes amazing with rice or steamed vegetables. Save this Honey Garlic Glazed Salmon recipe for your next easy dinner and enjoy bold flavor in every bite. #salmonrecipe #honeygarlic #quickdinner #easydinner #seafoodrecipes "
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "button",
+            "text": "More actions",
+            "attributes": {
+              "type": "button",
+              "aria-label": "More actions"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "link",
+            "text": "salmon bowl with rice, vegetables, and sauce in a container",
+            "attributes": {
+              "href": "/pin/837458493251742639/",
+              "aria-label": "salmon bowl with rice, vegetables, and sauce in a container"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "link",
+            "text": "salmon bowl with rice, vegetables, and sauce in a container",
+            "attributes": {
+              "href": "/pin/837458493251742639/",
+              "aria-label": "salmon bowl with rice, vegetables, and sauce in a container"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "button",
+            "text": "More actions",
+            "attributes": {
+              "type": "button",
+              "aria-label": "More actions"
+            }
+          },
+          {
+            "id": "pw-73",
+            "role": "link",
+            "text": "Baked salmon fillet glazed with honey mustard sauce.",
+            "attributes": {
+              "href": "/pin/925700898425519621/",
+              "aria-label": "Baked salmon fillet glazed with honey mustard sauce."
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "link",
+            "text": "Baked salmon fillet glazed with honey mustard sauce.",
+            "attributes": {
+              "href": "/pin/925700898425519621/",
+              "aria-label": "Baked salmon fillet glazed with honey mustard sauce."
+            }
+          },
+          {
+            "id": "pw-75",
+            "role": "button",
+            "text": "More actions",
+            "attributes": {
+              "type": "button",
+              "aria-label": "More actions"
+            }
+          },
+          {
+            "id": "pw-79",
+            "role": "link",
+            "text": "salmon with teriyaki sauce served on rice and vegetables in a black plate next to broccoli",
+            "attributes": {
+              "href": "/pin/35888128286128217/",
+              "aria-label": "salmon with teriyaki sauce served on rice and vegetables in a black plate next to broccoli"
+            }
+          },
+          {
+            "id": "pw-80",
+            "role": "link",
+            "text": "salmon with teriyaki sauce served on rice and vegetables in a black plate next to broccoli",
+            "attributes": {
+              "href": "/pin/35888128286128217/",
+              "aria-label": "salmon with teriyaki sauce served on rice and vegetables in a black plate next to broccoli"
+            }
+          },
+          {
+            "id": "pw-81",
+            "role": "button",
+            "text": "More actions",
+            "attributes": {
+              "type": "button",
+              "aria-label": "More actions"
+            }
+          },
+          {
+            "id": "pw-85",
+            "role": "link",
+            "text": "honey garlic salmon recipe in a bowl with rice and asparagus",
+            "attributes": {
+              "href": "/pin/78179743527687579/",
+              "aria-label": "honey garlic salmon recipe in a bowl with rice and asparagus"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "Honey Garlic Glazed Salmon"
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

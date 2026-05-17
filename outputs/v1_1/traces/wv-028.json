@@ -1,0 +1,2315 @@
+{
+  "task_id": "wv-028",
+  "task_description": "On Booking.com, find a beachfront hotel in Barcelona and report one listed amenity.",
+  "starting_url": "https://www.booking.com",
+  "passed": true,
+  "final_answer": "W Barcelona is a beachfront hotel in Barcelona. One listed amenity is Free WiFi.",
+  "duration_s": 78.86,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://www.booking.com/",
+        "title": "Booking.com | Official site | The best hotels, flights, car rentals & accommodations",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#main"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Booking.com",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "aria-label": "Booking.com",
+              "data-testid": "header-booking-logo"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "USD",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Prices in U.S. Dollar",
+              "data-testid": "header-currency-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Language: English (US)",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Language: English (US)",
+              "data-testid": "header-language-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Customer support",
+            "attributes": {
+              "href": "https://secure.booking.com/help.html?source=header&src=profile_contact_cs",
+              "aria-label": "Customer support",
+              "data-testid": "header-help-center"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "List your property",
+            "attributes": {
+              "href": "https://join.booking.com/?utm_source=topbar",
+              "data-testid": "header-custom-action-button"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Register",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=index&prompt=signin&state=UrMBwUq-fhPs_KEgzWtGPasFUfRnk5VieHNLJOfv51MAKZmkPswmRWj1nBZsnqGBINwbtBPBdoSy3P8wTkfJVvx9TsG495suaN3kMqhVoZlfbZzcqeaPfqPgNcMeoz90Kwzroue5ROHzSY9HlvZo67xEowAqDpap2a1TqD351dWAMI0xcl_raGz8sc9KjGWnDat8q9UtL-ZKhMNiB-6wJ5PBt0y_AwNN-sDj2uRIPGuIhWAvTzU%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Register an account",
+              "data-testid": "header-sign-up-button"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=index&prompt=signin&state=UrMBwUq-fhPs_KEgzWtGPasFUfRnk5VieHNLJOfv51MAKZmkPswmRWj1nBZsnqGBINwbtBPBdoSy3P8wTkfJVvx9TsG495suaN3kMqhVoZlfbZzcqeaPfqPgNcMeoz90Kwzroue5ROHzSY9HlvZo67xEowAqDpap2a1TqD351dWAMI0xcl_raGz8sc9KjGWnDat8q9UtL-ZKhMNiB-6wJ5PBt0y_AwNN-sDj2uRIPGuIhWAvTzU%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Sign in",
+              "data-testid": "header-sign-in-button"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "combobox",
+            "text": "Where are you going?",
+            "attributes": {
+              "id": ":R55amr5:",
+              "name": "ss",
+              "aria-label": "Where are you going?",
+              "placeholder": "Where are you going?",
+              "value": ""
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": "Check-in date\n\u2014\nCheck-out date",
+            "attributes": {
+              "type": "button",
+              "data-testid": "searchbox-dates-container"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "button",
+            "text": "2 adults \u00b7 0 children \u00b7 1 room",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Number of travelers and rooms. Currently selected: 2 adults \u00b7 0 children \u00b7 1 room",
+              "data-testid": "occupancy-config"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Learn more",
+            "attributes": {
+              "href": "https://www.booking.com/co_brand_card.en-us.html",
+              "aria-label": "Learn more",
+              "data-testid": "promotional-banner-content-cta"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Las Vegas",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=20079110&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0",
+              "aria-label": "Las Vegas"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Orlando",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=20023488&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0",
+              "aria-label": "Orlando"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "New York",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=20088325&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0",
+              "aria-label": "New York"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Tokyo",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=-246227&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0",
+              "aria-label": "Tokyo"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Atlanta",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=20024809&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0",
+              "aria-label": "Atlanta"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "Guesthouse\nQuality Inn Panguitch near Bryce Canyon\nPanguitch, United States\n7.6\n7.6\nGood\n2,027 reviews\nStarting from\n$117\nPrice $117",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/bryce-canyon-western-resort.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "link",
+            "text": "Hotel\nAshland Hills Hotel & Suites\nAshland, United States\n8.3\n8.3\nVery Good\n640 reviews\nStarting from\n$179\nPrice $179",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/ashland-hills-and-suites.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "link",
+            "text": "Hotel\nThe Hotel Chalet at The Choo Choo\nChattanooga, United States\n9.2\n9.2\nWonderful\n1,988 reviews\nStarting from\n$199\n$169\nOriginal price $199. Current price $169.",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/chattanooga-choo-choo.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-72",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "link",
+            "text": "Hotel\nThe Box House Hotel\nBrooklyn, United States\n8.5\n8.5\nVery Good\n3,365 reviews\nStarting from\n$354\n$270\nOriginal price $354. Current price $270.",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/the-box-house.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-76",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-79",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-81",
+            "role": "link",
+            "text": "Hotel\nB Ocean Resort Fort Lauderdale Beach\nFort Lauderdale, United States\n7.1\n7.1\nGood\n1,792 reviews\nStarting from\n$224\n$210\nOriginal price $224. Current price $210.",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/b-ocean-resort.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-83",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-86",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-88",
+            "role": "link",
+            "text": "Hotel\nAnaheim Majestic Garden Hotel\nAnaheim, United States\n8.1\n8.1\nVery Good\n5,362 reviews\nStarting from\n$184\n$169\nOriginal price $184. Current price $169.",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/sheraton-anaheim.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-90",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-93",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-95",
+            "role": "link",
+            "text": "Hotel\nRoxy Hotel New York\nNew York, United States\n8.6\n8.6\nExcellent\n816 reviews\nStarting from\n$389\n$319\nOriginal price $389. Current price $319.",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/roxyhotelnyc.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-97",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-100",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-102",
+            "role": "link",
+            "text": "Hotel\nThe Logan Philadelphia, Curio Collection by Hilton\nPhiladelphia, United States\n8.3\n8.3\nVery Good\n651 reviews\nStarting from\n$204\nPrice $204",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/the-logan-philadelphia.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-104",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-106",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-108",
+            "role": "link",
+            "text": "Guesthouse\nCambria Pines Lodge\nCambria, United States\n8.6\n8.6\nExcellent\n1,462 reviews\nStarting from\n$319\nPrice $319",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/cambria-pines-lodge.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-110",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-112",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-114",
+            "role": "link",
+            "text": "Resort\nParis Las Vegas Hotel & Casino\nLas Vegas, United States\n7.9\n7.9\nGood\n21,341 reviews\nStarting from\n$284\nPrice $284",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/harrah-s-paris.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-116",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-119",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-121",
+            "role": "link",
+            "text": "Hotel\nThe Society Hotel\nPortland, United States\n8.1\n8.1\nVery Good\n873 reviews\nStarting from\n$127\n$102\nOriginal price $127. Current price $102.",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/the-society.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-123",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "type",
+        "args": {
+          "id": "pw-25",
+          "text": "Barcelona"
+        }
+      },
+      "observation": "Typed into pw-25"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://www.booking.com/",
+        "title": "Booking.com | Official site | The best hotels, flights, car rentals & accommodations",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#main"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Booking.com",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "aria-label": "Booking.com",
+              "data-testid": "header-booking-logo"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "USD",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Prices in U.S. Dollar",
+              "data-testid": "header-currency-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Language: English (US)",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Language: English (US)",
+              "data-testid": "header-language-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Customer support",
+            "attributes": {
+              "href": "https://secure.booking.com/help.html?source=header&src=profile_contact_cs",
+              "aria-label": "Customer support",
+              "data-testid": "header-help-center"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "List your property",
+            "attributes": {
+              "href": "https://join.booking.com/?utm_source=topbar",
+              "data-testid": "header-custom-action-button"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Register",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=index&prompt=signin&state=UrMBwUq-fhPs_KEgzWtGPasFUfRnk5VieHNLJOfv51MAKZmkPswmRWj1nBZsnqGBINwbtBPBdoSy3P8wTkfJVvx9TsG495suaN3kMqhVoZlfbZzcqeaPfqPgNcMeoz90Kwzroue5ROHzSY9HlvZo67xEowAqDpap2a1TqD351dWAMI0xcl_raGz8sc9KjGWnDat8q9UtL-ZKhMNiB-6wJ5PBt0y_AwNN-sDj2uRIPGuIhWAvTzU%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Register an account",
+              "data-testid": "header-sign-up-button"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=index&prompt=signin&state=UrMBwUq-fhPs_KEgzWtGPasFUfRnk5VieHNLJOfv51MAKZmkPswmRWj1nBZsnqGBINwbtBPBdoSy3P8wTkfJVvx9TsG495suaN3kMqhVoZlfbZzcqeaPfqPgNcMeoz90Kwzroue5ROHzSY9HlvZo67xEowAqDpap2a1TqD351dWAMI0xcl_raGz8sc9KjGWnDat8q9UtL-ZKhMNiB-6wJ5PBt0y_AwNN-sDj2uRIPGuIhWAvTzU%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Sign in",
+              "data-testid": "header-sign-in-button"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "combobox",
+            "text": "Where are you going?",
+            "attributes": {
+              "id": ":R55amr5:",
+              "name": "ss",
+              "aria-label": "Where are you going?",
+              "placeholder": "Where are you going?",
+              "value": "Barcelona"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "option",
+            "text": "London\nUnited Kingdom",
+            "attributes": {
+              "id": "autocomplete-result-0"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "button",
+            "text": "London\nUnited Kingdom",
+            "attributes": {}
+          },
+          {
+            "id": "pw-33",
+            "role": "option",
+            "text": "Manchester\nUnited Kingdom",
+            "attributes": {
+              "id": "autocomplete-result-1"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "Manchester\nUnited Kingdom",
+            "attributes": {}
+          },
+          {
+            "id": "pw-35",
+            "role": "option",
+            "text": "Paris\nFrance",
+            "attributes": {
+              "id": "autocomplete-result-2"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "button",
+            "text": "Paris\nFrance",
+            "attributes": {}
+          },
+          {
+            "id": "pw-37",
+            "role": "option",
+            "text": "Edinburgh\nUnited Kingdom",
+            "attributes": {
+              "id": "autocomplete-result-3"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "button",
+            "text": "Edinburgh\nUnited Kingdom",
+            "attributes": {}
+          },
+          {
+            "id": "pw-39",
+            "role": "option",
+            "text": "Liverpool\nUnited Kingdom",
+            "attributes": {
+              "id": "autocomplete-result-4"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "button",
+            "text": "Liverpool\nUnited Kingdom",
+            "attributes": {}
+          },
+          {
+            "id": "pw-41",
+            "role": "button",
+            "text": "Check-in date\n\u2014\nCheck-out date",
+            "attributes": {
+              "type": "button",
+              "data-testid": "searchbox-dates-container"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": "2 adults \u00b7 0 children \u00b7 1 room",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Number of travelers and rooms. Currently selected: 2 adults \u00b7 0 children \u00b7 1 room",
+              "data-testid": "occupancy-config"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Learn more",
+            "attributes": {
+              "href": "https://www.booking.com/co_brand_card.en-us.html",
+              "aria-label": "Learn more",
+              "data-testid": "promotional-banner-content-cta"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Las Vegas",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=20079110&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0",
+              "aria-label": "Las Vegas"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Orlando",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=20023488&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0",
+              "aria-label": "Orlando"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "New York",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=20088325&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0",
+              "aria-label": "New York"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "link",
+            "text": "Tokyo",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=-246227&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0",
+              "aria-label": "Tokyo"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "link",
+            "text": "Atlanta",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=20024809&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0",
+              "aria-label": "Atlanta"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "link",
+            "text": "Guesthouse\nQuality Inn Panguitch near Bryce Canyon\nPanguitch, United States\n7.6\n7.6\nGood\n2,027 reviews\nStarting from\n$117\nPrice $117",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/bryce-canyon-western-resort.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-70",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-73",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-75",
+            "role": "link",
+            "text": "Hotel\nAshland Hills Hotel & Suites\nAshland, United States\n8.3\n8.3\nVery Good\n640 reviews\nStarting from\n$179\nPrice $179",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/ashland-hills-and-suites.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-77",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-80",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-82",
+            "role": "link",
+            "text": "Hotel\nThe Hotel Chalet at The Choo Choo\nChattanooga, United States\n9.2\n9.2\nWonderful\n1,988 reviews\nStarting from\n$199\n$169\nOriginal price $199. Current price $169.",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/chattanooga-choo-choo.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-84",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-87",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-89",
+            "role": "link",
+            "text": "Hotel\nThe Box House Hotel\nBrooklyn, United States\n8.5\n8.5\nVery Good\n3,365 reviews\nStarting from\n$354\n$270\nOriginal price $354. Current price $270.",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/the-box-house.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-91",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-94",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-96",
+            "role": "link",
+            "text": "Hotel\nB Ocean Resort Fort Lauderdale Beach\nFort Lauderdale, United States\n7.1\n7.1\nGood\n1,792 reviews\nStarting from\n$224\n$210\nOriginal price $224. Current price $210.",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/b-ocean-resort.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-98",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-101",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-103",
+            "role": "link",
+            "text": "Hotel\nAnaheim Majestic Garden Hotel\nAnaheim, United States\n8.1\n8.1\nVery Good\n5,362 reviews\nStarting from\n$184\n$169\nOriginal price $184. Current price $169.",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/sheraton-anaheim.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-105",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-108",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-110",
+            "role": "link",
+            "text": "Hotel\nRoxy Hotel New York\nNew York, United States\n8.6\n8.6\nExcellent\n816 reviews\nStarting from\n$389\n$319\nOriginal price $389. Current price $319.",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/roxyhotelnyc.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-112",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-115",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "click",
+        "args": {
+          "id": "pw-43"
+        }
+      },
+      "observation": "Action failed: Locator.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator(\"div:nth-of-type(1) > div > div:nth-of-type(2) > div > main > div:nth-of-type(1) > div > div > div > div > div > div > div > div:nth-of-type(2) > div > div > form > div > div:nth-of-type(4) > button\").first\n    - locator resolved to <button type=\"submit\" class=\"de576f5064 b46cd7aad7 ced67027e5 dda427e6b5 f3e59d528f ca8e0b9533 cfd71fb584 a9d40b8d51\">\u2026</button>\n  - attempting click action\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"bbe73dce14\">\u2026</div> from <div class=\"dc7e768484 a37804931c\">\u2026</div> subtree intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"bbe73dce14\">\u2026</div> from <div class=\"dc7e768484 a37804931c\">\u2026</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    9 \u00d7 waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"bbe73dce14\">\u2026</div> from <div class=\"dc7e768484 a37804931c\">\u2026</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n    - waiting for element to be visible, enabled and stable\n"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://www.booking.com/",
+        "title": "Booking.com | Official site | The best hotels, flights, car rentals & accommodations",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#main"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Booking.com",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "aria-label": "Booking.com",
+              "data-testid": "header-booking-logo"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "USD",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Prices in U.S. Dollar",
+              "data-testid": "header-currency-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Language: English (US)",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Language: English (US)",
+              "data-testid": "header-language-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Customer support",
+            "attributes": {
+              "href": "https://secure.booking.com/help.html?source=header&src=profile_contact_cs",
+              "aria-label": "Customer support",
+              "data-testid": "header-help-center"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "List your property",
+            "attributes": {
+              "href": "https://join.booking.com/?utm_source=topbar",
+              "data-testid": "header-custom-action-button"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Register",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=index&prompt=signin&state=UrMBwUq-fhPs_KEgzWtGPasFUfRnk5VieHNLJOfv51MAKZmkPswmRWj1nBZsnqGBINwbtBPBdoSy3P8wTkfJVvx9TsG495suaN3kMqhVoZlfbZzcqeaPfqPgNcMeoz90Kwzroue5ROHzSY9HlvZo67xEowAqDpap2a1TqD351dWAMI0xcl_raGz8sc9KjGWnDat8q9UtL-ZKhMNiB-6wJ5PBt0y_AwNN-sDj2uRIPGuIhWAvTzU%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Register an account",
+              "data-testid": "header-sign-up-button"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=index&prompt=signin&state=UrMBwUq-fhPs_KEgzWtGPasFUfRnk5VieHNLJOfv51MAKZmkPswmRWj1nBZsnqGBINwbtBPBdoSy3P8wTkfJVvx9TsG495suaN3kMqhVoZlfbZzcqeaPfqPgNcMeoz90Kwzroue5ROHzSY9HlvZo67xEowAqDpap2a1TqD351dWAMI0xcl_raGz8sc9KjGWnDat8q9UtL-ZKhMNiB-6wJ5PBt0y_AwNN-sDj2uRIPGuIhWAvTzU%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Sign in",
+              "data-testid": "header-sign-in-button"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "combobox",
+            "text": "Where are you going?",
+            "attributes": {
+              "id": ":R55amr5:",
+              "name": "ss",
+              "aria-label": "Where are you going?",
+              "placeholder": "Where are you going?",
+              "value": "Barcelona"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "option",
+            "text": "Barcelona\nCatalonia (Barcelona Province), Spain",
+            "attributes": {
+              "id": "autocomplete-result-0"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "button",
+            "text": "Barcelona\nCatalonia (Barcelona Province), Spain",
+            "attributes": {}
+          },
+          {
+            "id": "pw-33",
+            "role": "option",
+            "text": "Downtown Barcelona\nBarcelona, Catalonia (Barcelona Province), Spain",
+            "attributes": {
+              "id": "autocomplete-result-1"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "Downtown Barcelona\nBarcelona, Catalonia (Barcelona Province), Spain",
+            "attributes": {}
+          },
+          {
+            "id": "pw-35",
+            "role": "option",
+            "text": "Barcelona-El Prat Airport\nBarcelona, Catalonia (Barcelona Province), Spain",
+            "attributes": {
+              "id": "autocomplete-result-2"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "button",
+            "text": "Barcelona-El Prat Airport\nBarcelona, Catalonia (Barcelona Province), Spain",
+            "attributes": {}
+          },
+          {
+            "id": "pw-37",
+            "role": "option",
+            "text": "Barcelona Province\nSpain",
+            "attributes": {
+              "id": "autocomplete-result-3"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "button",
+            "text": "Barcelona Province\nSpain",
+            "attributes": {}
+          },
+          {
+            "id": "pw-39",
+            "role": "option",
+            "text": "Barceloneta\nBarcelona, Catalonia, Spain",
+            "attributes": {
+              "id": "autocomplete-result-4"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "button",
+            "text": "Barceloneta\nBarcelona, Catalonia, Spain",
+            "attributes": {}
+          },
+          {
+            "id": "pw-41",
+            "role": "button",
+            "text": "Check-in date\n\u2014\nCheck-out date",
+            "attributes": {
+              "type": "button",
+              "data-testid": "searchbox-dates-container"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": "2 adults \u00b7 0 children \u00b7 1 room",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Number of travelers and rooms. Currently selected: 2 adults \u00b7 0 children \u00b7 1 room",
+              "data-testid": "occupancy-config"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Learn more",
+            "attributes": {
+              "href": "https://www.booking.com/co_brand_card.en-us.html",
+              "aria-label": "Learn more",
+              "data-testid": "promotional-banner-content-cta"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Las Vegas",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=20079110&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0",
+              "aria-label": "Las Vegas"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Orlando",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=20023488&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0",
+              "aria-label": "Orlando"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "New York",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=20088325&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0",
+              "aria-label": "New York"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "link",
+            "text": "Tokyo",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=-246227&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0",
+              "aria-label": "Tokyo"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "link",
+            "text": "Atlanta",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=20024809&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0",
+              "aria-label": "Atlanta"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "link",
+            "text": "Guesthouse\nQuality Inn Panguitch near Bryce Canyon\nPanguitch, United States\n7.6\n7.6\nGood\n2,027 reviews\nStarting from\n$117\nPrice $117",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/bryce-canyon-western-resort.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-70",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-73",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-75",
+            "role": "link",
+            "text": "Hotel\nAshland Hills Hotel & Suites\nAshland, United States\n8.3\n8.3\nVery Good\n640 reviews\nStarting from\n$179\nPrice $179",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/ashland-hills-and-suites.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-77",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-80",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-82",
+            "role": "link",
+            "text": "Hotel\nThe Hotel Chalet at The Choo Choo\nChattanooga, United States\n9.2\n9.2\nWonderful\n1,988 reviews\nStarting from\n$199\n$169\nOriginal price $199. Current price $169.",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/chattanooga-choo-choo.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-84",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-87",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-89",
+            "role": "link",
+            "text": "Hotel\nThe Box House Hotel\nBrooklyn, United States\n8.5\n8.5\nVery Good\n3,365 reviews\nStarting from\n$354\n$270\nOriginal price $354. Current price $270.",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/the-box-house.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-91",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-94",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-96",
+            "role": "link",
+            "text": "Hotel\nB Ocean Resort Fort Lauderdale Beach\nFort Lauderdale, United States\n7.1\n7.1\nGood\n1,792 reviews\nStarting from\n$224\n$210\nOriginal price $224. Current price $210.",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/b-ocean-resort.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-98",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-101",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-103",
+            "role": "link",
+            "text": "Hotel\nAnaheim Majestic Garden Hotel\nAnaheim, United States\n8.1\n8.1\nVery Good\n5,362 reviews\nStarting from\n$184\n$169\nOriginal price $184. Current price $169.",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/sheraton-anaheim.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-105",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-108",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-110",
+            "role": "link",
+            "text": "Hotel\nRoxy Hotel New York\nNew York, United States\n8.6\n8.6\nExcellent\n816 reviews\nStarting from\n$389\n$319\nOriginal price $389. Current price $319.",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/roxyhotelnyc.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-112",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-115",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "click",
+        "args": {
+          "id": "pw-32"
+        }
+      },
+      "observation": "Action failed: Locator.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator(\"div:nth-of-type(1) > div > div:nth-of-type(2) > div > main > div:nth-of-type(1) > div > div > div > div > div > div > div > div:nth-of-type(2) > div > div > form > div > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div > div > ul > li:nth-of-type(1) > div\").first\n    - locator resolved to <div role=\"button\" tabindex=\"-1\" class=\"e521bfa3f4\">\u2026</div>\n  - attempting click action\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"bbe73dce14\">\u2026</div> from <div class=\"dc7e768484 a37804931c\">\u2026</div> subtree intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"bbe73dce14\">\u2026</div> from <div class=\"dc7e768484 a37804931c\">\u2026</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    9 \u00d7 waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"bbe73dce14\">\u2026</div> from <div class=\"dc7e768484 a37804931c\">\u2026</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n    - waiting for element to be visible, enabled and stable\n"
+    },
+    {
+      "step": 4,
+      "state": {
+        "url": "https://www.booking.com/",
+        "title": "Booking.com | Official site | The best hotels, flights, car rentals & accommodations",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#main"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Booking.com",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "aria-label": "Booking.com",
+              "data-testid": "header-booking-logo"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "USD",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Prices in U.S. Dollar",
+              "data-testid": "header-currency-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Language: English (US)",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Language: English (US)",
+              "data-testid": "header-language-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Customer support",
+            "attributes": {
+              "href": "https://secure.booking.com/help.html?source=header&src=profile_contact_cs",
+              "aria-label": "Customer support",
+              "data-testid": "header-help-center"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "List your property",
+            "attributes": {
+              "href": "https://join.booking.com/?utm_source=topbar",
+              "data-testid": "header-custom-action-button"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Register",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=index&prompt=signin&state=UrMBwUq-fhPs_KEgzWtGPasFUfRnk5VieHNLJOfv51MAKZmkPswmRWj1nBZsnqGBINwbtBPBdoSy3P8wTkfJVvx9TsG495suaN3kMqhVoZlfbZzcqeaPfqPgNcMeoz90Kwzroue5ROHzSY9HlvZo67xEowAqDpap2a1TqD351dWAMI0xcl_raGz8sc9KjGWnDat8q9UtL-ZKhMNiB-6wJ5PBt0y_AwNN-sDj2uRIPGuIhWAvTzU%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Register an account",
+              "data-testid": "header-sign-up-button"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=index&prompt=signin&state=UrMBwUq-fhPs_KEgzWtGPasFUfRnk5VieHNLJOfv51MAKZmkPswmRWj1nBZsnqGBINwbtBPBdoSy3P8wTkfJVvx9TsG495suaN3kMqhVoZlfbZzcqeaPfqPgNcMeoz90Kwzroue5ROHzSY9HlvZo67xEowAqDpap2a1TqD351dWAMI0xcl_raGz8sc9KjGWnDat8q9UtL-ZKhMNiB-6wJ5PBt0y_AwNN-sDj2uRIPGuIhWAvTzU%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Sign in",
+              "data-testid": "header-sign-in-button"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "combobox",
+            "text": "Where are you going?",
+            "attributes": {
+              "id": ":R55amr5:",
+              "name": "ss",
+              "aria-label": "Where are you going?",
+              "placeholder": "Where are you going?",
+              "value": "Barcelona"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "option",
+            "text": "Barcelona\nCatalonia (Barcelona Province), Spain",
+            "attributes": {
+              "id": "autocomplete-result-0"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "button",
+            "text": "Barcelona\nCatalonia (Barcelona Province), Spain",
+            "attributes": {}
+          },
+          {
+            "id": "pw-33",
+            "role": "option",
+            "text": "Downtown Barcelona\nBarcelona, Catalonia (Barcelona Province), Spain",
+            "attributes": {
+              "id": "autocomplete-result-1"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "Downtown Barcelona\nBarcelona, Catalonia (Barcelona Province), Spain",
+            "attributes": {}
+          },
+          {
+            "id": "pw-35",
+            "role": "option",
+            "text": "Barcelona-El Prat Airport\nBarcelona, Catalonia (Barcelona Province), Spain",
+            "attributes": {
+              "id": "autocomplete-result-2"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "button",
+            "text": "Barcelona-El Prat Airport\nBarcelona, Catalonia (Barcelona Province), Spain",
+            "attributes": {}
+          },
+          {
+            "id": "pw-37",
+            "role": "option",
+            "text": "Barcelona Province\nSpain",
+            "attributes": {
+              "id": "autocomplete-result-3"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "button",
+            "text": "Barcelona Province\nSpain",
+            "attributes": {}
+          },
+          {
+            "id": "pw-39",
+            "role": "option",
+            "text": "Barceloneta\nBarcelona, Catalonia, Spain",
+            "attributes": {
+              "id": "autocomplete-result-4"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "button",
+            "text": "Barceloneta\nBarcelona, Catalonia, Spain",
+            "attributes": {}
+          },
+          {
+            "id": "pw-41",
+            "role": "button",
+            "text": "Check-in date\n\u2014\nCheck-out date",
+            "attributes": {
+              "type": "button",
+              "data-testid": "searchbox-dates-container"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": "2 adults \u00b7 0 children \u00b7 1 room",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Number of travelers and rooms. Currently selected: 2 adults \u00b7 0 children \u00b7 1 room",
+              "data-testid": "occupancy-config"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Learn more",
+            "attributes": {
+              "href": "https://www.booking.com/co_brand_card.en-us.html",
+              "aria-label": "Learn more",
+              "data-testid": "promotional-banner-content-cta"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Las Vegas",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=20079110&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0",
+              "aria-label": "Las Vegas"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Orlando",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=20023488&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0",
+              "aria-label": "Orlando"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "New York",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=20088325&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0",
+              "aria-label": "New York"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "link",
+            "text": "Tokyo",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=-246227&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0",
+              "aria-label": "Tokyo"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "link",
+            "text": "Atlanta",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=20024809&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0",
+              "aria-label": "Atlanta"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "link",
+            "text": "Guesthouse\nQuality Inn Panguitch near Bryce Canyon\nPanguitch, United States\n7.6\n7.6\nGood\n2,027 reviews\nStarting from\n$117\nPrice $117",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/bryce-canyon-western-resort.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-70",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-73",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-75",
+            "role": "link",
+            "text": "Hotel\nAshland Hills Hotel & Suites\nAshland, United States\n8.3\n8.3\nVery Good\n640 reviews\nStarting from\n$179\nPrice $179",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/ashland-hills-and-suites.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-77",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-80",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-82",
+            "role": "link",
+            "text": "Hotel\nThe Hotel Chalet at The Choo Choo\nChattanooga, United States\n9.2\n9.2\nWonderful\n1,988 reviews\nStarting from\n$199\n$169\nOriginal price $199. Current price $169.",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/chattanooga-choo-choo.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-84",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-87",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-89",
+            "role": "link",
+            "text": "Hotel\nThe Box House Hotel\nBrooklyn, United States\n8.5\n8.5\nVery Good\n3,365 reviews\nStarting from\n$354\n$270\nOriginal price $354. Current price $270.",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/the-box-house.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-91",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-94",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-96",
+            "role": "link",
+            "text": "Hotel\nB Ocean Resort Fort Lauderdale Beach\nFort Lauderdale, United States\n7.1\n7.1\nGood\n1,792 reviews\nStarting from\n$224\n$210\nOriginal price $224. Current price $210.",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/b-ocean-resort.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-98",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-101",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-103",
+            "role": "link",
+            "text": "Hotel\nAnaheim Majestic Garden Hotel\nAnaheim, United States\n8.1\n8.1\nVery Good\n5,362 reviews\nStarting from\n$184\n$169\nOriginal price $184. Current price $169.",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/sheraton-anaheim.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-105",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-108",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-110",
+            "role": "link",
+            "text": "Hotel\nRoxy Hotel New York\nNew York, United States\n8.6\n8.6\nExcellent\n816 reviews\nStarting from\n$389\n$319\nOriginal price $389. Current price $319.",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/roxyhotelnyc.html?ucfs=1&arphpl=1",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-112",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "data-testid": "preferred-badge-wrapper-trigger"
+            }
+          },
+          {
+            "id": "pw-115",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://www.booking.com/hotel/es/w-barcelona.html"
+        }
+      },
+      "observation": "Opened https://www.booking.com/hotel/es/w-barcelona.html"
+    },
+    {
+      "step": 5,
+      "state": {
+        "url": "https://www.booking.com/hotel/es/w-barcelona.html",
+        "title": "W Barcelona, Barcelona (updated prices 2026)",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#basiclayout"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Booking.com",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "aria-label": "Booking.com",
+              "data-testid": "header-booking-logo"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "USD",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Prices in U.S. Dollar",
+              "data-testid": "header-currency-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Language: English (US)",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Language: English (US)",
+              "data-testid": "header-language-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Customer support",
+            "attributes": {
+              "href": "https://secure.booking.com/help.html?source=header&src=profile_contact_cs",
+              "aria-label": "Customer support",
+              "data-testid": "header-help-center"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "List your property",
+            "attributes": {
+              "href": "https://join.booking.com/?utm_source=topbar",
+              "data-testid": "header-custom-action-button"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Register",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=hotel&prompt=signin&state=UswBwUq-fhPs_KEYr1caOtw23DhKfapNEAF8moc5BkT9tvzQ6-V6cqbZbyrx_WvzM8JuBuMpk2udTAgCr8Gt50bn8jIc_yIByNJxGVHYo7wTGFTHpphYNrSWJkse_9DKlXi8PvDlDhAnuw1catu6IyJ-ijYdcyUmHlAxS8-4XmRhKURBIhOP0F8yZJPVSoN8yUCRR_ybi11knSRSofELk7hx5h34dJcOOtixoyCnxKhrUHvG_7meP7vgATlA1JoHuc_6JbAdGi117ibW887e*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Register an account",
+              "data-testid": "header-sign-up-button"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=hotel&prompt=signin&state=UswBwUq-fhPs_KEYr1caOtw23DhKfapNEAF8moc5BkT9tvzQ6-V6cqbZbyrx_WvzM8JuBuMpk2udTAgCr8Gt50bn8jIc_yIByNJxGVHYo7wTGFTHpphYNrSWJkse_9DKlXi8PvDlDhAnuw1catu6IyJ-ijYdcyUmHlAxS8-4XmRhKURBIhOP0F8yZJPVSoN8yUCRR_ybi11knSRSofELk7hx5h34dJcOOtixoyCnxKhrUHvG_7meP7vgATlA1JoHuc_6JbAdGi117ibW887e*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Sign in",
+              "data-testid": "header-sign-in-button"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "combobox",
+            "text": "Where are you going?",
+            "attributes": {
+              "id": ":Raal71:",
+              "name": "ss",
+              "aria-label": "Where are you going?",
+              "placeholder": "Where are you going?",
+              "value": "Barcelona"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "button",
+            "text": "Check-in date\n\u2014\nCheck-out date",
+            "attributes": {
+              "type": "button",
+              "data-testid": "searchbox-dates-container"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "button",
+            "text": "2 adults \u00b7 0 children \u00b7 1 room",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Number of travelers and rooms. Currently selected: 2 adults \u00b7 0 children \u00b7 1 room",
+              "data-testid": "occupancy-config"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/index.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Spain",
+            "attributes": {
+              "href": "https://www.booking.com/country/es.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Catalonia",
+            "attributes": {
+              "href": "https://www.booking.com/region/es/catalonia.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Barcelona",
+            "attributes": {
+              "href": "https://www.booking.com/city/es/barcelona.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Ciutat Vella",
+            "attributes": {
+              "href": "https://www.booking.com/district/es/barcelona/ciutatvella.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button",
+              "aria-label": "Go back"
+            }
+          },
+          {
+            "id": "pw-87",
+            "role": "link",
+            "text": "Overview",
+            "attributes": {
+              "id": "overview-tab-trigger",
+              "href": "#hotelTmpl",
+              "data-testid": "Property-Header-Nav-Tab-Trigger-overview"
+            }
+          },
+          {
+            "id": "pw-88",
+            "role": "link",
+            "text": "Info & prices",
+            "attributes": {
+              "id": "availability-tab-trigger",
+              "href": "#availability",
+              "data-testid": "Property-Header-Nav-Tab-Trigger-availability"
+            }
+          },
+          {
+            "id": "pw-89",
+            "role": "link",
+            "text": "Amenities",
+            "attributes": {
+              "id": "facilities-tab-trigger",
+              "href": "#hp_facilities_box",
+              "data-testid": "Property-Header-Nav-Tab-Trigger-facilities"
+            }
+          },
+          {
+            "id": "pw-90",
+            "role": "link",
+            "text": "House rules",
+            "attributes": {
+              "id": "policies-tab-trigger",
+              "href": "#policies",
+              "data-testid": "Property-Header-Nav-Tab-Trigger-policies"
+            }
+          },
+          {
+            "id": "pw-91",
+            "role": "link",
+            "text": "Important and legal info",
+            "attributes": {
+              "id": "fine_print-tab-trigger",
+              "href": "#important_info",
+              "data-testid": "Property-Header-Nav-Tab-Trigger-fine_print"
+            }
+          },
+          {
+            "id": "pw-92",
+            "role": "link",
+            "text": "Guest reviews (3,603)",
+            "attributes": {
+              "id": "reviews-tab-trigger",
+              "href": "#blockdisplay4",
+              "data-testid": "Property-Header-Nav-Tab-Trigger-reviews"
+            }
+          },
+          {
+            "id": "pw-108",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-109",
+            "role": "button",
+            "text": "Share this property",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Share this property",
+              "data-testid": "property-share-button"
+            }
+          },
+          {
+            "id": "pw-110",
+            "role": "button",
+            "text": "Reserve",
+            "attributes": {
+              "id": "hcta",
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-111",
+            "role": "button",
+            "text": "We Price Match",
+            "attributes": {
+              "type": "button",
+              "data-testid": "price-match-trigger"
+            }
+          },
+          {
+            "id": "pw-112",
+            "role": "button",
+            "text": "Beachfront",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-113",
+            "role": "link",
+            "text": "W Barcelona",
+            "attributes": {
+              "id": "hp_hotel_name_reviews",
+              "href": "#availability"
+            }
+          },
+          {
+            "id": "pw-114",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "id": "map_trigger_header_pin",
+              "href": "#map_opened-map_trigger_header_pin"
+            }
+          },
+          {
+            "id": "pw-115",
+            "role": "button",
+            "text": "Pla\u00e7a Rosa dels Vents, 1 - Passeig Joan de Borbo, Ciutat Vella, 08039 Barcelona, Spain\nExcellent location \u2013 rated 9.3/10!(score from 3500 reviews)\nReal guests \u2022 Real stays \u2022 Real opinions",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-116",
+            "role": "link",
+            "text": "Excellent location \u2013 show map",
+            "attributes": {
+              "id": "map_trigger_header",
+              "href": "#map_opened-map_trigger_header"
+            }
+          },
+          {
+            "id": "pw-118",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-119",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-120",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-121",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-122",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-123",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-124",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-125",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-126",
+            "role": "link",
+            "text": "Scored 8.4\n8.4\nRated very good\nVery Good\n3,603 reviews",
+            "attributes": {
+              "href": "#blockdisplay4"
+            }
+          },
+          {
+            "id": "pw-138",
+            "role": "button",
+            "text": "Very Good Breakfast",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-142",
+            "role": "button",
+            "text": "Reserve",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-143",
+            "role": "button",
+            "text": "Save the property",
+            "attributes": {
+              "type": "button",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-144",
+            "role": "button",
+            "text": "We Price Match",
+            "attributes": {
+              "type": "button",
+              "data-testid": "price-match-trigger"
+            }
+          },
+          {
+            "id": "pw-147",
+            "role": "button",
+            "text": "Check-in date - Check-out date",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Select dates"
+            }
+          },
+          {
+            "id": "pw-148",
+            "role": "button",
+            "text": "2 adults \u00b7 0 children \u00b7 1 room",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Select occupancy"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "W Barcelona is a beachfront hotel in Barcelona. One listed amenity is Free WiFi."
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

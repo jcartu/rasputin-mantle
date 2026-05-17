@@ -1,0 +1,1297 @@
+{
+  "task_id": "wv-078",
+  "task_description": "On NVIDIA Developer, find the latest CUDA Toolkit version.",
+  "starting_url": "https://developer.nvidia.com/cuda-toolkit",
+  "passed": false,
+  "final_answer": "CUDA Toolkit 13.2",
+  "duration_s": 17.84,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://developer.nvidia.com/cuda/toolkit",
+        "title": "CUDA Toolkit - Free Tools and Training | NVIDIA Developer",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "Toggle Navigation",
+            "attributes": {
+              "id": "nav-toggle"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://developer.nvidia.com"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "id": "accessible-megamenu-1779043997891-2",
+              "href": "https://developer.nvidia.com/"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "Blog",
+            "attributes": {
+              "id": "accessible-megamenu-1779043997891-3",
+              "href": "https://developer.nvidia.com/blog/"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Forums",
+            "attributes": {
+              "id": "accessible-megamenu-1779043997891-4",
+              "href": "https://forums.developer.nvidia.com/"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Docs",
+            "attributes": {
+              "id": "accessible-megamenu-1779043997891-5",
+              "href": "https://docs.nvidia.com/"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Downloads",
+            "attributes": {
+              "id": "accessible-megamenu-1779043997891-6",
+              "href": "https://developer.nvidia.com/downloads"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Training",
+            "attributes": {
+              "id": "accessible-megamenu-1779043997891-7",
+              "href": "https://www.nvidia.com/en-us/deep-learning-ai/education/"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": "Search NVIDIA",
+            "attributes": {
+              "id": "btn-search",
+              "type": "submit",
+              "aria-label": "Search NVIDIA"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Join",
+            "attributes": {
+              "href": "https://developer.nvidia.com/login"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": ".n24-user-circle-cls-1 {fill: none; stroke: #CCC; stroke-miterlimit: 10; stroke-width: 1.5px;} .n24-bounds {fill: none;}",
+            "attributes": {
+              "id": "user-icon--mobile",
+              "href": "https://developer.nvidia.com/login",
+              "aria-label": "Log in"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Log in",
+            "attributes": {
+              "id": "user-icon--desktop",
+              "href": "https://developer.nvidia.com/login",
+              "aria-label": "Log in"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "Topics",
+            "attributes": {
+              "id": "accessible-megamenu-1779043997894-9",
+              "href": "javascript:void(0);"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Overview",
+            "attributes": {
+              "href": "https://developer.nvidia.com/topics/ai/"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "AI Inference",
+            "attributes": {
+              "href": "https://developer.nvidia.com/topics/ai/ai-inference/"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Conversational AI",
+            "attributes": {
+              "href": "https://developer.nvidia.com/topics/ai/conversational-ai/"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Cybersecurity",
+            "attributes": {
+              "href": "https://developer.nvidia.com/topics/ai/cybersecurity-ai/"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Data Science",
+            "attributes": {
+              "href": "https://developer.nvidia.com/topics/ai/data-science"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Generative AI",
+            "attributes": {
+              "href": "https://developer.nvidia.com/generative-ai"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Retrieval-Augmented Generation",
+            "attributes": {
+              "href": "https://developer.nvidia.com/topics/ai/retrieval-augmented-generation"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Vision AI",
+            "attributes": {
+              "href": "https://developer.nvidia.com/computer-vision"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Cloud-Native Technologies",
+            "attributes": {
+              "href": "https://developer.nvidia.com/cloud-native"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "IO Acceleration",
+            "attributes": {
+              "href": "https://developer.nvidia.com/magnum-io"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Networking",
+            "attributes": {
+              "href": "https://developer.nvidia.com/networking"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Computer Aided Engineering",
+            "attributes": {
+              "href": "https://developer.nvidia.com/topics/cae"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Extended Reality (XR)",
+            "attributes": {
+              "href": "https://developer.nvidia.com/xr"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Physics and Dynamics Simulation",
+            "attributes": {
+              "href": "https://developer.nvidia.com/physx-sdk"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Robotics Simulation",
+            "attributes": {
+              "href": "https://developer.nvidia.com/isaac/sim"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Self-Driving Vehicles Simulation",
+            "attributes": {
+              "href": "https://developer.nvidia.com/drive/simulation"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Ray Tracing",
+            "attributes": {
+              "href": "https://developer.nvidia.com/rtx/ray-tracing"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Video, Broadcast, and Display",
+            "attributes": {
+              "href": "https://developer.nvidia.com/video-and-audio-solutions"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Game Engines",
+            "attributes": {
+              "href": "https://developer.nvidia.com/game-engines"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Image Processing",
+            "attributes": {
+              "href": "https://developer.nvidia.com/image-processing"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Overview",
+            "attributes": {
+              "href": "https://developer.nvidia.com/hpc"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "HPC Compilers and Libraries",
+            "attributes": {
+              "href": "https://developer.nvidia.com/hpc-sdk"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Overview",
+            "attributes": {
+              "href": "https://developer.nvidia.com/embedded-computing"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Robotics Development",
+            "attributes": {
+              "href": "https://developer.nvidia.com/isaac"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "AI-Enabled Video Analytics",
+            "attributes": {
+              "href": "https://developer.nvidia.com/metropolis"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Developer Kits",
+            "attributes": {
+              "href": "https://developer.nvidia.com/embedded/jetson-developer-kits"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Production Modules",
+            "attributes": {
+              "href": "https://developer.nvidia.com/embedded/jetson-modules"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Overview",
+            "attributes": {
+              "href": "https://developer.nvidia.com/drive"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Development Platform",
+            "attributes": {
+              "href": "https://developer.nvidia.com/drive/drive-hyperion"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Modular Software Stack",
+            "attributes": {
+              "href": "https://developer.nvidia.com/drive/driveos"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Simulation Platform",
+            "attributes": {
+              "href": "https://developer.nvidia.com/drive/drive-sim"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "AV Infastructure",
+            "attributes": {
+              "href": "https://developer.nvidia.com/drive/infrastructure"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "CUDA-Q - Quantum Platform",
+            "attributes": {
+              "href": "https://developer.nvidia.com/cuda-q"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "CUDA-QX - Quantum Libraries",
+            "attributes": {
+              "href": "https://developer.nvidia.com/cuda-qx"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "cuQuantum - Quantum SDK",
+            "attributes": {
+              "href": "https://developer.nvidia.com/cuquantum-sdk"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "cuPQC - Accelerated PQC",
+            "attributes": {
+              "href": "https://developer.nvidia.com/cupqc"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Topics",
+            "attributes": {
+              "href": "https://developer.nvidia.com/topics"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => document.body.innerText.slice(0, 8000))()"
+        }
+      },
+      "observation": "Eval: \"HomeBlogForumsDocsDownloadsTraining\\nJoin\\nTopicsPlatforms and ToolsIndustriesResources\\nNVIDIA CUDA Toolkit\\n\\nThe NVIDIA\\u00ae CUDA\\u00ae Toolkit provides a development environment for creating high-performance, GPU-accelerated applications. With it, you can develop, optimize, and deploy your applications on GPU-accelerated embedded systems, desktop workstations, enterprise data centers, cloud-based platforms, and supercomputers. The toolkit includes GPU-accelerated libraries, debugging and o"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://developer.nvidia.com/cuda/toolkit",
+        "title": "CUDA Toolkit - Free Tools and Training | NVIDIA Developer",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "Toggle Navigation",
+            "attributes": {
+              "id": "nav-toggle"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://developer.nvidia.com"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "id": "accessible-megamenu-1779043997891-2",
+              "href": "https://developer.nvidia.com/"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "Blog",
+            "attributes": {
+              "id": "accessible-megamenu-1779043997891-3",
+              "href": "https://developer.nvidia.com/blog/"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Forums",
+            "attributes": {
+              "id": "accessible-megamenu-1779043997891-4",
+              "href": "https://forums.developer.nvidia.com/"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Docs",
+            "attributes": {
+              "id": "accessible-megamenu-1779043997891-5",
+              "href": "https://docs.nvidia.com/"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Downloads",
+            "attributes": {
+              "id": "accessible-megamenu-1779043997891-6",
+              "href": "https://developer.nvidia.com/downloads"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Training",
+            "attributes": {
+              "id": "accessible-megamenu-1779043997891-7",
+              "href": "https://www.nvidia.com/en-us/deep-learning-ai/education/"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": "Search NVIDIA",
+            "attributes": {
+              "id": "btn-search",
+              "type": "submit",
+              "aria-label": "Search NVIDIA"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Join",
+            "attributes": {
+              "href": "https://developer.nvidia.com/login"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": ".n24-user-circle-cls-1 {fill: none; stroke: #CCC; stroke-miterlimit: 10; stroke-width: 1.5px;} .n24-bounds {fill: none;}",
+            "attributes": {
+              "id": "user-icon--mobile",
+              "href": "https://developer.nvidia.com/login",
+              "aria-label": "Log in"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Log in",
+            "attributes": {
+              "id": "user-icon--desktop",
+              "href": "https://developer.nvidia.com/login",
+              "aria-label": "Log in"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "Topics",
+            "attributes": {
+              "id": "accessible-megamenu-1779043997894-9",
+              "href": "javascript:void(0);"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Overview",
+            "attributes": {
+              "href": "https://developer.nvidia.com/topics/ai/"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "AI Inference",
+            "attributes": {
+              "href": "https://developer.nvidia.com/topics/ai/ai-inference/"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Conversational AI",
+            "attributes": {
+              "href": "https://developer.nvidia.com/topics/ai/conversational-ai/"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Cybersecurity",
+            "attributes": {
+              "href": "https://developer.nvidia.com/topics/ai/cybersecurity-ai/"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Data Science",
+            "attributes": {
+              "href": "https://developer.nvidia.com/topics/ai/data-science"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Generative AI",
+            "attributes": {
+              "href": "https://developer.nvidia.com/generative-ai"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Retrieval-Augmented Generation",
+            "attributes": {
+              "href": "https://developer.nvidia.com/topics/ai/retrieval-augmented-generation"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Vision AI",
+            "attributes": {
+              "href": "https://developer.nvidia.com/computer-vision"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Cloud-Native Technologies",
+            "attributes": {
+              "href": "https://developer.nvidia.com/cloud-native"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "IO Acceleration",
+            "attributes": {
+              "href": "https://developer.nvidia.com/magnum-io"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Networking",
+            "attributes": {
+              "href": "https://developer.nvidia.com/networking"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Computer Aided Engineering",
+            "attributes": {
+              "href": "https://developer.nvidia.com/topics/cae"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Extended Reality (XR)",
+            "attributes": {
+              "href": "https://developer.nvidia.com/xr"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Physics and Dynamics Simulation",
+            "attributes": {
+              "href": "https://developer.nvidia.com/physx-sdk"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Robotics Simulation",
+            "attributes": {
+              "href": "https://developer.nvidia.com/isaac/sim"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Self-Driving Vehicles Simulation",
+            "attributes": {
+              "href": "https://developer.nvidia.com/drive/simulation"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Ray Tracing",
+            "attributes": {
+              "href": "https://developer.nvidia.com/rtx/ray-tracing"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Video, Broadcast, and Display",
+            "attributes": {
+              "href": "https://developer.nvidia.com/video-and-audio-solutions"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Game Engines",
+            "attributes": {
+              "href": "https://developer.nvidia.com/game-engines"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Image Processing",
+            "attributes": {
+              "href": "https://developer.nvidia.com/image-processing"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Overview",
+            "attributes": {
+              "href": "https://developer.nvidia.com/hpc"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "HPC Compilers and Libraries",
+            "attributes": {
+              "href": "https://developer.nvidia.com/hpc-sdk"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Overview",
+            "attributes": {
+              "href": "https://developer.nvidia.com/embedded-computing"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Robotics Development",
+            "attributes": {
+              "href": "https://developer.nvidia.com/isaac"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "AI-Enabled Video Analytics",
+            "attributes": {
+              "href": "https://developer.nvidia.com/metropolis"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Developer Kits",
+            "attributes": {
+              "href": "https://developer.nvidia.com/embedded/jetson-developer-kits"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Production Modules",
+            "attributes": {
+              "href": "https://developer.nvidia.com/embedded/jetson-modules"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Overview",
+            "attributes": {
+              "href": "https://developer.nvidia.com/drive"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Development Platform",
+            "attributes": {
+              "href": "https://developer.nvidia.com/drive/drive-hyperion"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Modular Software Stack",
+            "attributes": {
+              "href": "https://developer.nvidia.com/drive/driveos"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Simulation Platform",
+            "attributes": {
+              "href": "https://developer.nvidia.com/drive/drive-sim"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "AV Infastructure",
+            "attributes": {
+              "href": "https://developer.nvidia.com/drive/infrastructure"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "CUDA-Q - Quantum Platform",
+            "attributes": {
+              "href": "https://developer.nvidia.com/cuda-q"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "CUDA-QX - Quantum Libraries",
+            "attributes": {
+              "href": "https://developer.nvidia.com/cuda-qx"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "cuQuantum - Quantum SDK",
+            "attributes": {
+              "href": "https://developer.nvidia.com/cuquantum-sdk"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "cuPQC - Accelerated PQC",
+            "attributes": {
+              "href": "https://developer.nvidia.com/cupqc"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Topics",
+            "attributes": {
+              "href": "https://developer.nvidia.com/topics"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => { const text = document.body.innerText; const matches = [...text.matchAll(/CUDA Toolkit\\s*(?:version\\s*)?(\\d+\\.\\d+(?:\\.\\d+)?)/gi)].map(m => m[0]); return {title: document.title, url: location.href, matches, snippets: [...text.matchAll(/.{0,80}CUDA Toolkit.{0,120}/gis)].slice(0,20).map(m=>m[0].replace(/\\s+/g,' '))}; })()"
+        }
+      },
+      "observation": "Eval: {\"title\": \"CUDA Toolkit - Free Tools and Training | NVIDIA Developer\", \"url\": \"https://developer.nvidia.com/cuda/toolkit\", \"matches\": [\"CUDA Toolkit 13.2\"], \"snippets\": [\"sDocsDownloadsTraining Join TopicsPlatforms and ToolsIndustriesResources NVIDIA CUDA Toolkit The NVIDIA\\u00ae CUDA\\u00ae Toolkit provides a development environment for creating high-performance, GPU-accelerated applicatio\", \" and recursion into cuTile Python, and unifying the ARM ecosystem into a single CUDA toolkit for seamles"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://developer.nvidia.com/cuda/toolkit",
+        "title": "CUDA Toolkit - Free Tools and Training | NVIDIA Developer",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "Toggle Navigation",
+            "attributes": {
+              "id": "nav-toggle"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://developer.nvidia.com"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "id": "accessible-megamenu-1779043997891-2",
+              "href": "https://developer.nvidia.com/"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "Blog",
+            "attributes": {
+              "id": "accessible-megamenu-1779043997891-3",
+              "href": "https://developer.nvidia.com/blog/"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Forums",
+            "attributes": {
+              "id": "accessible-megamenu-1779043997891-4",
+              "href": "https://forums.developer.nvidia.com/"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Docs",
+            "attributes": {
+              "id": "accessible-megamenu-1779043997891-5",
+              "href": "https://docs.nvidia.com/"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Downloads",
+            "attributes": {
+              "id": "accessible-megamenu-1779043997891-6",
+              "href": "https://developer.nvidia.com/downloads"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Training",
+            "attributes": {
+              "id": "accessible-megamenu-1779043997891-7",
+              "href": "https://www.nvidia.com/en-us/deep-learning-ai/education/"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": "Search NVIDIA",
+            "attributes": {
+              "id": "btn-search",
+              "type": "submit",
+              "aria-label": "Search NVIDIA"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Join",
+            "attributes": {
+              "href": "https://developer.nvidia.com/login"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": ".n24-user-circle-cls-1 {fill: none; stroke: #CCC; stroke-miterlimit: 10; stroke-width: 1.5px;} .n24-bounds {fill: none;}",
+            "attributes": {
+              "id": "user-icon--mobile",
+              "href": "https://developer.nvidia.com/login",
+              "aria-label": "Log in"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Log in",
+            "attributes": {
+              "id": "user-icon--desktop",
+              "href": "https://developer.nvidia.com/login",
+              "aria-label": "Log in"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "Topics",
+            "attributes": {
+              "id": "accessible-megamenu-1779043997894-9",
+              "href": "javascript:void(0);"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Overview",
+            "attributes": {
+              "href": "https://developer.nvidia.com/topics/ai/"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "AI Inference",
+            "attributes": {
+              "href": "https://developer.nvidia.com/topics/ai/ai-inference/"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Conversational AI",
+            "attributes": {
+              "href": "https://developer.nvidia.com/topics/ai/conversational-ai/"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Cybersecurity",
+            "attributes": {
+              "href": "https://developer.nvidia.com/topics/ai/cybersecurity-ai/"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Data Science",
+            "attributes": {
+              "href": "https://developer.nvidia.com/topics/ai/data-science"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Generative AI",
+            "attributes": {
+              "href": "https://developer.nvidia.com/generative-ai"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Retrieval-Augmented Generation",
+            "attributes": {
+              "href": "https://developer.nvidia.com/topics/ai/retrieval-augmented-generation"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Vision AI",
+            "attributes": {
+              "href": "https://developer.nvidia.com/computer-vision"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Cloud-Native Technologies",
+            "attributes": {
+              "href": "https://developer.nvidia.com/cloud-native"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "IO Acceleration",
+            "attributes": {
+              "href": "https://developer.nvidia.com/magnum-io"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Networking",
+            "attributes": {
+              "href": "https://developer.nvidia.com/networking"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Computer Aided Engineering",
+            "attributes": {
+              "href": "https://developer.nvidia.com/topics/cae"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Extended Reality (XR)",
+            "attributes": {
+              "href": "https://developer.nvidia.com/xr"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Physics and Dynamics Simulation",
+            "attributes": {
+              "href": "https://developer.nvidia.com/physx-sdk"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Robotics Simulation",
+            "attributes": {
+              "href": "https://developer.nvidia.com/isaac/sim"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Self-Driving Vehicles Simulation",
+            "attributes": {
+              "href": "https://developer.nvidia.com/drive/simulation"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Ray Tracing",
+            "attributes": {
+              "href": "https://developer.nvidia.com/rtx/ray-tracing"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Video, Broadcast, and Display",
+            "attributes": {
+              "href": "https://developer.nvidia.com/video-and-audio-solutions"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Game Engines",
+            "attributes": {
+              "href": "https://developer.nvidia.com/game-engines"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Image Processing",
+            "attributes": {
+              "href": "https://developer.nvidia.com/image-processing"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Overview",
+            "attributes": {
+              "href": "https://developer.nvidia.com/hpc"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "HPC Compilers and Libraries",
+            "attributes": {
+              "href": "https://developer.nvidia.com/hpc-sdk"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Overview",
+            "attributes": {
+              "href": "https://developer.nvidia.com/embedded-computing"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Robotics Development",
+            "attributes": {
+              "href": "https://developer.nvidia.com/isaac"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "AI-Enabled Video Analytics",
+            "attributes": {
+              "href": "https://developer.nvidia.com/metropolis"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Developer Kits",
+            "attributes": {
+              "href": "https://developer.nvidia.com/embedded/jetson-developer-kits"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Production Modules",
+            "attributes": {
+              "href": "https://developer.nvidia.com/embedded/jetson-modules"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Overview",
+            "attributes": {
+              "href": "https://developer.nvidia.com/drive"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Development Platform",
+            "attributes": {
+              "href": "https://developer.nvidia.com/drive/drive-hyperion"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Modular Software Stack",
+            "attributes": {
+              "href": "https://developer.nvidia.com/drive/driveos"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Simulation Platform",
+            "attributes": {
+              "href": "https://developer.nvidia.com/drive/drive-sim"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "AV Infastructure",
+            "attributes": {
+              "href": "https://developer.nvidia.com/drive/infrastructure"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "CUDA-Q - Quantum Platform",
+            "attributes": {
+              "href": "https://developer.nvidia.com/cuda-q"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "CUDA-QX - Quantum Libraries",
+            "attributes": {
+              "href": "https://developer.nvidia.com/cuda-qx"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "cuQuantum - Quantum SDK",
+            "attributes": {
+              "href": "https://developer.nvidia.com/cuquantum-sdk"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "cuPQC - Accelerated PQC",
+            "attributes": {
+              "href": "https://developer.nvidia.com/cupqc"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Topics",
+            "attributes": {
+              "href": "https://developer.nvidia.com/topics"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "CUDA Toolkit 13.2"
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

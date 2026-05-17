@@ -1,0 +1,1447 @@
+{
+  "task_id": "wv-098",
+  "task_description": "On Wolfram Alpha, compute the derivative of sin(x) squared and report the simplified result.",
+  "starting_url": "https://www.wolframalpha.com",
+  "passed": true,
+  "final_answer": "sin(2x)",
+  "duration_s": 37.68,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://www.wolframalpha.com/",
+        "title": "Wolfram|Alpha: Computational Intelligence",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "UPGRADE TO PRO",
+            "attributes": {
+              "type": "button",
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "APPS",
+            "attributes": {
+              "type": "button",
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "TOUR",
+            "attributes": {
+              "href": "/tour"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Language and theme selector",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Language and theme selector"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "WolframAlpha logo",
+            "attributes": {
+              "href": "/",
+              "aria-label": "WolframAlpha logo"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "textbox",
+            "text": "WolframAlpha input field",
+            "attributes": {
+              "aria-label": "WolframAlpha input field"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Compute input button",
+            "attributes": {
+              "type": "submit",
+              "aria-label": "Compute input button"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": "NATURAL LANGUAGE",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": "MATH INPUT",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "button",
+            "text": "EXTENDED KEYBOARD",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "EXAMPLES",
+            "attributes": {
+              "href": "/examples"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": "UPLOAD",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "RANDOM",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Mathematics \u203a",
+            "attributes": {
+              "href": "/examples/mathematics",
+              "aria-label": "Mathematics "
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Step-by-Step Solutions",
+            "attributes": {
+              "href": "/examples/pro-features/step-by-step-solutions"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Elementary Math",
+            "attributes": {
+              "href": "/examples/mathematics/elementary-math"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Algebra",
+            "attributes": {
+              "href": "/examples/mathematics/algebra"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Plotting & Graphics",
+            "attributes": {
+              "href": "/examples/mathematics/plotting-and-graphics"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Calculus & Analysis",
+            "attributes": {
+              "href": "/examples/mathematics/calculus-and-analysis"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Geometry",
+            "attributes": {
+              "href": "/examples/mathematics/geometry"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Differential Equations",
+            "attributes": {
+              "href": "/examples/mathematics/differential-equations"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Statistics",
+            "attributes": {
+              "href": "/examples/mathematics/statistics"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "More Topics \u00bb",
+            "attributes": {
+              "href": "/examples/mathematics"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Science & Technology \u203a",
+            "attributes": {
+              "href": "/examples/science-and-technology",
+              "aria-label": "Science & Technology "
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Units & Measures",
+            "attributes": {
+              "href": "/examples/science-and-technology/units-and-measures"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Physics",
+            "attributes": {
+              "href": "/examples/science-and-technology/physics"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Chemistry",
+            "attributes": {
+              "href": "/examples/science-and-technology/chemistry"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Engineering",
+            "attributes": {
+              "href": "/examples/science-and-technology/engineering"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Computational Sciences",
+            "attributes": {
+              "href": "/examples/science-and-technology/computational-sciences"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Earth Sciences",
+            "attributes": {
+              "href": "/examples/science-and-technology/earth-sciences"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Materials",
+            "attributes": {
+              "href": "/examples/science-and-technology/materials"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Transportation",
+            "attributes": {
+              "href": "/examples/science-and-technology/transportation"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "More Topics \u00bb",
+            "attributes": {
+              "href": "/examples/science-and-technology"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Society & Culture \u203a",
+            "attributes": {
+              "href": "/examples/society-and-culture",
+              "aria-label": "Society & Culture "
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "People",
+            "attributes": {
+              "href": "/examples/society-and-culture/people"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Arts & Media",
+            "attributes": {
+              "href": "/examples/society-and-culture/arts-and-media"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Dates & Times",
+            "attributes": {
+              "href": "/examples/society-and-culture/dates-and-times"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Words & Linguistics",
+            "attributes": {
+              "href": "/examples/society-and-culture/words-and-linguistics"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Money & Finance",
+            "attributes": {
+              "href": "/examples/society-and-culture/money-and-finance"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Food & Nutrition",
+            "attributes": {
+              "href": "/examples/society-and-culture/food-and-nutrition"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Political Geography",
+            "attributes": {
+              "href": "/examples/society-and-culture/political-geography"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "History",
+            "attributes": {
+              "href": "/examples/society-and-culture/history"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "More Topics \u00bb",
+            "attributes": {
+              "href": "/examples/society-and-culture"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Everyday Life \u203a",
+            "attributes": {
+              "href": "/examples/everyday-life",
+              "aria-label": "Everyday Life "
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Personal Health",
+            "attributes": {
+              "href": "/examples/everyday-life/personal-health"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "Personal Finance",
+            "attributes": {
+              "href": "/examples/everyday-life/personal-finance"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Surprises",
+            "attributes": {
+              "href": "/examples/everyday-life/surprises"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Entertainment",
+            "attributes": {
+              "href": "/examples/everyday-life/entertainment"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "type",
+        "args": {
+          "id": "pw-8",
+          "text": "derivative of sin(x)^2"
+        }
+      },
+      "observation": "Typed into pw-8"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://www.wolframalpha.com/",
+        "title": "Wolfram|Alpha: Computational Intelligence",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "UPGRADE TO PRO",
+            "attributes": {
+              "type": "button",
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "APPS",
+            "attributes": {
+              "type": "button",
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "TOUR",
+            "attributes": {
+              "href": "/tour"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Sign in",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Language and theme selector",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Language and theme selector"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "WolframAlpha logo",
+            "attributes": {
+              "href": "/",
+              "aria-label": "WolframAlpha logo"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "textbox",
+            "text": "WolframAlpha input field",
+            "attributes": {
+              "aria-label": "WolframAlpha input field"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": "Compute input button",
+            "attributes": {
+              "type": "submit",
+              "aria-label": "Compute input button"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": "NATURAL LANGUAGE",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": "MATH INPUT",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "button",
+            "text": "EXTENDED KEYBOARD",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "EXAMPLES",
+            "attributes": {
+              "href": "/examples"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "UPLOAD",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "button",
+            "text": "RANDOM",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Mathematics \u203a",
+            "attributes": {
+              "href": "/examples/mathematics",
+              "aria-label": "Mathematics "
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Step-by-Step Solutions",
+            "attributes": {
+              "href": "/examples/pro-features/step-by-step-solutions"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Elementary Math",
+            "attributes": {
+              "href": "/examples/mathematics/elementary-math"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Algebra",
+            "attributes": {
+              "href": "/examples/mathematics/algebra"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Plotting & Graphics",
+            "attributes": {
+              "href": "/examples/mathematics/plotting-and-graphics"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Calculus & Analysis",
+            "attributes": {
+              "href": "/examples/mathematics/calculus-and-analysis"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Geometry",
+            "attributes": {
+              "href": "/examples/mathematics/geometry"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Differential Equations",
+            "attributes": {
+              "href": "/examples/mathematics/differential-equations"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Statistics",
+            "attributes": {
+              "href": "/examples/mathematics/statistics"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "More Topics \u00bb",
+            "attributes": {
+              "href": "/examples/mathematics"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Science & Technology \u203a",
+            "attributes": {
+              "href": "/examples/science-and-technology",
+              "aria-label": "Science & Technology "
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Units & Measures",
+            "attributes": {
+              "href": "/examples/science-and-technology/units-and-measures"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Physics",
+            "attributes": {
+              "href": "/examples/science-and-technology/physics"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Chemistry",
+            "attributes": {
+              "href": "/examples/science-and-technology/chemistry"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Engineering",
+            "attributes": {
+              "href": "/examples/science-and-technology/engineering"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Computational Sciences",
+            "attributes": {
+              "href": "/examples/science-and-technology/computational-sciences"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Earth Sciences",
+            "attributes": {
+              "href": "/examples/science-and-technology/earth-sciences"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Materials",
+            "attributes": {
+              "href": "/examples/science-and-technology/materials"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Transportation",
+            "attributes": {
+              "href": "/examples/science-and-technology/transportation"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "More Topics \u00bb",
+            "attributes": {
+              "href": "/examples/science-and-technology"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Society & Culture \u203a",
+            "attributes": {
+              "href": "/examples/society-and-culture",
+              "aria-label": "Society & Culture "
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "People",
+            "attributes": {
+              "href": "/examples/society-and-culture/people"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Arts & Media",
+            "attributes": {
+              "href": "/examples/society-and-culture/arts-and-media"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Dates & Times",
+            "attributes": {
+              "href": "/examples/society-and-culture/dates-and-times"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Words & Linguistics",
+            "attributes": {
+              "href": "/examples/society-and-culture/words-and-linguistics"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Money & Finance",
+            "attributes": {
+              "href": "/examples/society-and-culture/money-and-finance"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Food & Nutrition",
+            "attributes": {
+              "href": "/examples/society-and-culture/food-and-nutrition"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Political Geography",
+            "attributes": {
+              "href": "/examples/society-and-culture/political-geography"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "History",
+            "attributes": {
+              "href": "/examples/society-and-culture/history"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "More Topics \u00bb",
+            "attributes": {
+              "href": "/examples/society-and-culture"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Everyday Life \u203a",
+            "attributes": {
+              "href": "/examples/everyday-life",
+              "aria-label": "Everyday Life "
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "Personal Health",
+            "attributes": {
+              "href": "/examples/everyday-life/personal-health"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Personal Finance",
+            "attributes": {
+              "href": "/examples/everyday-life/personal-finance"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Surprises",
+            "attributes": {
+              "href": "/examples/everyday-life/surprises"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "click",
+        "args": {
+          "id": "pw-10"
+        }
+      },
+      "observation": "Clicked pw-10"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://www.wolframalpha.com/",
+        "title": "Wolfram|Alpha: Computational Intelligence",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "UPGRADE TO PRO",
+            "attributes": {
+              "type": "button",
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "APPS",
+            "attributes": {
+              "type": "button",
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "TOUR",
+            "attributes": {
+              "href": "/tour"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Sign in",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Language and theme selector",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Language and theme selector"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "WolframAlpha logo",
+            "attributes": {
+              "href": "/",
+              "aria-label": "WolframAlpha logo"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "textbox",
+            "text": "WolframAlpha input field",
+            "attributes": {
+              "aria-label": "WolframAlpha input field"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": "Compute input button",
+            "attributes": {
+              "type": "submit",
+              "aria-label": "Compute input button"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": "NATURAL LANGUAGE",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": "MATH INPUT",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "button",
+            "text": "EXTENDED KEYBOARD",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "EXAMPLES",
+            "attributes": {
+              "href": "/examples"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "UPLOAD",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "button",
+            "text": "RANDOM",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Mathematics \u203a",
+            "attributes": {
+              "href": "/examples/mathematics",
+              "aria-label": "Mathematics "
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Step-by-Step Solutions",
+            "attributes": {
+              "href": "/examples/pro-features/step-by-step-solutions"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Elementary Math",
+            "attributes": {
+              "href": "/examples/mathematics/elementary-math"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Algebra",
+            "attributes": {
+              "href": "/examples/mathematics/algebra"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Plotting & Graphics",
+            "attributes": {
+              "href": "/examples/mathematics/plotting-and-graphics"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Calculus & Analysis",
+            "attributes": {
+              "href": "/examples/mathematics/calculus-and-analysis"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Geometry",
+            "attributes": {
+              "href": "/examples/mathematics/geometry"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Differential Equations",
+            "attributes": {
+              "href": "/examples/mathematics/differential-equations"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Statistics",
+            "attributes": {
+              "href": "/examples/mathematics/statistics"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "More Topics \u00bb",
+            "attributes": {
+              "href": "/examples/mathematics"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Science & Technology \u203a",
+            "attributes": {
+              "href": "/examples/science-and-technology",
+              "aria-label": "Science & Technology "
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Units & Measures",
+            "attributes": {
+              "href": "/examples/science-and-technology/units-and-measures"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Physics",
+            "attributes": {
+              "href": "/examples/science-and-technology/physics"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Chemistry",
+            "attributes": {
+              "href": "/examples/science-and-technology/chemistry"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Engineering",
+            "attributes": {
+              "href": "/examples/science-and-technology/engineering"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Computational Sciences",
+            "attributes": {
+              "href": "/examples/science-and-technology/computational-sciences"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Earth Sciences",
+            "attributes": {
+              "href": "/examples/science-and-technology/earth-sciences"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Materials",
+            "attributes": {
+              "href": "/examples/science-and-technology/materials"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Transportation",
+            "attributes": {
+              "href": "/examples/science-and-technology/transportation"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "More Topics \u00bb",
+            "attributes": {
+              "href": "/examples/science-and-technology"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Society & Culture \u203a",
+            "attributes": {
+              "href": "/examples/society-and-culture",
+              "aria-label": "Society & Culture "
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "People",
+            "attributes": {
+              "href": "/examples/society-and-culture/people"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Arts & Media",
+            "attributes": {
+              "href": "/examples/society-and-culture/arts-and-media"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Dates & Times",
+            "attributes": {
+              "href": "/examples/society-and-culture/dates-and-times"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Words & Linguistics",
+            "attributes": {
+              "href": "/examples/society-and-culture/words-and-linguistics"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Money & Finance",
+            "attributes": {
+              "href": "/examples/society-and-culture/money-and-finance"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Food & Nutrition",
+            "attributes": {
+              "href": "/examples/society-and-culture/food-and-nutrition"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Political Geography",
+            "attributes": {
+              "href": "/examples/society-and-culture/political-geography"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "History",
+            "attributes": {
+              "href": "/examples/society-and-culture/history"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "More Topics \u00bb",
+            "attributes": {
+              "href": "/examples/society-and-culture"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Everyday Life \u203a",
+            "attributes": {
+              "href": "/examples/everyday-life",
+              "aria-label": "Everyday Life "
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "Personal Health",
+            "attributes": {
+              "href": "/examples/everyday-life/personal-health"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Personal Finance",
+            "attributes": {
+              "href": "/examples/everyday-life/personal-finance"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Surprises",
+            "attributes": {
+              "href": "/examples/everyday-life/surprises"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://www.wolframalpha.com/input?i=derivative+of+sin%28x%29%5E2"
+        }
+      },
+      "observation": "Opened https://www.wolframalpha.com/input?i=derivative+of+sin%28x%29%5E2"
+    },
+    {
+      "step": 4,
+      "state": {
+        "url": "https://www.wolframalpha.com/input?i=derivative+of+sin%28x%29%5E2",
+        "title": "derivative of sin(x)^2 - Wolfram|Alpha",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "UPGRADE TO PRO",
+            "attributes": {
+              "type": "button",
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "APPS",
+            "attributes": {
+              "type": "button",
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "TOUR",
+            "attributes": {
+              "href": "/tour"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Language and theme selector",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Language and theme selector"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "WolframAlpha logo",
+            "attributes": {
+              "href": "/",
+              "aria-label": "WolframAlpha logo"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "textbox",
+            "text": "WolframAlpha input field",
+            "attributes": {
+              "aria-label": "WolframAlpha input field"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Compute input button",
+            "attributes": {
+              "type": "submit",
+              "aria-label": "Compute input button"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": "NATURAL LANGUAGE",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": "MATH INPUT",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "button",
+            "text": "EXTENDED KEYBOARD",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "EXAMPLES",
+            "attributes": {
+              "href": "/examples"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": "UPLOAD",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "RANDOM",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "rect",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-6",
+            "role": "rect",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-17",
+            "role": "alert",
+            "text": null,
+            "attributes": {
+              "id": "__next-route-announcer__"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "sin(2x)"
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

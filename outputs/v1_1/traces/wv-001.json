@@ -2,8 +2,2058 @@
   "task_id": "wv-001",
   "task_description": "Find the current price of one Apple stock (AAPL) and report it.",
   "starting_url": "https://www.google.com",
-  "passed": false,
-  "final_answer": "",
-  "duration_s": 95.64943333098199,
-  "steps": []
+  "passed": true,
+  "final_answer": "Apple (AAPL) is currently priced at $300.23 per share (USD).",
+  "duration_s": 45.01,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://www.google.com/",
+        "title": "Google",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "About",
+            "attributes": {
+              "href": "https://about.google/?fg=1&utm_source=google-GB&utm_medium=referral&utm_campaign=hp-header"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Store",
+            "attributes": {
+              "href": "https://store.google.com/GB?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-GB"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "Gmail",
+            "attributes": {
+              "href": "https://mail.google.com/mail/&ogbl",
+              "aria-label": "Gmail "
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Images",
+            "attributes": {
+              "href": "https://www.google.com/imghp?hl=en&ogbl",
+              "aria-label": "Search for Images "
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "button",
+            "text": "Google apps",
+            "attributes": {
+              "href": "https://www.google.co.uk/intl/en/about/products",
+              "aria-label": "Google apps"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=futura_exp_og_so_72776762_e",
+              "aria-label": "Sign in"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "close",
+            "attributes": {
+              "id": "spchx",
+              "aria-label": "close"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "combobox",
+            "text": "Search",
+            "attributes": {
+              "id": "APjFqb",
+              "name": "q",
+              "aria-label": "Search",
+              "placeholder": "",
+              "value": ""
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "aria-label": "Clear"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "button",
+            "text": "Search by voice",
+            "attributes": {
+              "aria-label": "Search by voice"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "button",
+            "text": "Search by image",
+            "attributes": {
+              "aria-label": "Search by image"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "Close Choose what you\u2019re giving feedback on",
+            "attributes": {
+              "aria-label": "Close Choose what you\u2019re giving feedback on"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "option",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-25",
+            "role": "button",
+            "text": ".U48fD{-webkit-tap-highlight-color:transparent;cursor:pointer;display:block;line-height:18px;text-overflow:ellipsis;white-space:nowrap;padding:16px;padding-top:0;margin-top:16px;position:relative}.TQc1id .U48fD{margin-top:16px}.U48fD.df13ud{margin-top:16px}.U48fD.TOQyFc{margin-top:0}.U48fD.p8FEIf{padding-bottom:0}.jRKCUd.p8FEIf::before{bottom:-4px}.U48fD.ke7M4{padding-left:0;padding-right:0}.jRKCUd::before{bottom:12px;content:'';left:16px;position:absolute;right:16px;top:-4px}a.jRKCUd:hover{text-decoration:none}.ZFiwCf{display:flex;align-items:center;justify-content:center;position:relative;margin:0 auto;width:100%;border-radius:18px;outline:1px solid transparent;background-color:#f1f3f4;font-size:var(--hbmnje);font-family:var(--qR8X0);line-height:var(--CbdmE);font-weight:var(--Oycjt);max-width:372px;min-height:40px;border-radius:20px;}@media (forced-colors:active){.ZFiwCf{border:1px solid transparent}}.TQc1id .ZFiwCf{max-width:unset}.Zjtggb .ZFiwCf{max-width:unset}.ZFiwCf:hover{background-color:#e0e2e3}.nCFUpc .ZFiwCf{width:100%}.Bi9oQd{background-color:var(--gS5jXb);margin-top:18px;position:absolute;border:0;height:1px;left:0;width:100%;margin-top:20px;}.TQc1id .Bi9oQd{display:none}.kC8B4e .Bi9oQd{display:none}.w2fKdd svg{width:auto}.w2fKdd{color:var(--amnPwe)}.LGwnxb{-webkit-line-clamp:1;word-break:break-all;width:auto;padding-left:0;padding-right:8px;color:#202124;max-width:calc(100% - 64px);}.LGwnxb:empty{padding-right:0}.LGwnxb span,.LGwnxb div{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:auto}See more",
+            "attributes": {
+              "aria-label": "See more"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": ".JCHpcb:hover,.LvqzR .JCHpcb{color:#1558d6;text-decoration:underline}.JCHpcb{color:#70757a;font:13px Arial,sans-serif;cursor:pointer;align-self:center}@media (hover:hover){.sbai{visibility:hidden}.sbhl .sbai{visibility:inherit}}Delete",
+            "attributes": {}
+          },
+          {
+            "id": "pw-30",
+            "role": "option",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-31",
+            "role": "button",
+            "text": "Word pronunciation",
+            "attributes": {
+              "aria-label": "Word pronunciation"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "option",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "Delete",
+            "attributes": {}
+          },
+          {
+            "id": "pw-37",
+            "role": "option",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-38",
+            "role": "button",
+            "text": "Word pronunciation",
+            "attributes": {
+              "aria-label": "Word pronunciation"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "option",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": "Google Search",
+            "attributes": {
+              "name": "btnK",
+              "type": "submit",
+              "aria-label": "Google Search",
+              "value": "Google Search"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "button",
+            "text": "Report inappropriate predictions",
+            "attributes": {}
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "Google Search",
+            "attributes": {
+              "name": "btnK",
+              "type": "submit",
+              "aria-label": "Google Search",
+              "value": "Google Search"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "button",
+            "text": "I'm Feeling Lucky",
+            "attributes": {
+              "id": "gbqfbb",
+              "name": "btnI",
+              "type": "submit",
+              "aria-label": "I'm Feeling Lucky",
+              "value": "I'm Feeling Lucky"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "button",
+            "text": "I'm Feeling CuriousI'm Feeling HungryI'm Feeling AdventurousI'm Feeling PlayfulI'm Feeling StellarI'm Feeling DoodleyI'm Feeling TrendyI'm Feeling ArtisticI'm feeling funnyI'm feeling mindful",
+            "attributes": {}
+          },
+          {
+            "id": "pw-63",
+            "role": "link",
+            "text": "Advertising",
+            "attributes": {
+              "href": "https://www.google.com/intl/en_uk/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "link",
+            "text": "Business",
+            "attributes": {
+              "href": "https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "link",
+            "text": "How Search works",
+            "attributes": {
+              "href": "https://google.com/search/howsearchworks/?fg=1"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "Applying AI towards science and the environment",
+            "attributes": {
+              "href": "https://ai.google/societal_impact/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "link",
+            "text": "Privacy",
+            "attributes": {
+              "href": "https://policies.google.com/privacy?hl=en-GB&fg=1"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "link",
+            "text": "Terms",
+            "attributes": {
+              "href": "https://policies.google.com/terms?hl=en-GB&fg=1"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "button",
+            "text": "Settings",
+            "attributes": {}
+          },
+          {
+            "id": "pw-96",
+            "role": "link",
+            "text": "Dark theme: Off",
+            "attributes": {}
+          },
+          {
+            "id": "pw-98",
+            "role": "button",
+            "text": "EN",
+            "attributes": {
+              "id": "vc3jof",
+              "aria-label": "Language: \u202aEnglish\u202c"
+            }
+          },
+          {
+            "id": "pw-190",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "id": "gksS1d"
+            }
+          },
+          {
+            "id": "pw-192",
+            "role": "link",
+            "text": "cookies",
+            "attributes": {
+              "href": "https://policies.google.com/technologies/cookies?utm_source=ucbs&hl=en-GB"
+            }
+          },
+          {
+            "id": "pw-193",
+            "role": "button",
+            "text": "Reject all",
+            "attributes": {
+              "id": "W0wltc"
+            }
+          },
+          {
+            "id": "pw-195",
+            "role": "button",
+            "text": "Accept all",
+            "attributes": {
+              "id": "L2AGLb"
+            }
+          },
+          {
+            "id": "pw-197",
+            "role": "link",
+            "text": "More options",
+            "attributes": {
+              "id": "VnjCcb"
+            }
+          },
+          {
+            "id": "pw-198",
+            "role": "link",
+            "text": "More options",
+            "attributes": {
+              "aria-label": "More options for personalisation settings and cookies"
+            }
+          },
+          {
+            "id": "pw-199",
+            "role": "link",
+            "text": "Privacy",
+            "attributes": {
+              "id": "RP3V5c",
+              "href": "https://policies.google.com/privacy?hl=en-GB&fg=1&utm_source=ucbs"
+            }
+          },
+          {
+            "id": "pw-200",
+            "role": "link",
+            "text": "Terms",
+            "attributes": {
+              "id": "HQ1lb",
+              "href": "https://policies.google.com/terms?hl=en-GB&fg=1&utm_source=ucbs"
+            }
+          },
+          {
+            "id": "pw-201",
+            "role": "textbox",
+            "text": null,
+            "attributes": {
+              "name": "csi"
+            }
+          },
+          {
+            "id": "pw-0",
+            "role": "navigation",
+            "text": "About\nStore\nGmailImages\nSign in",
+            "attributes": {}
+          },
+          {
+            "id": "pw-3",
+            "role": "none",
+            "text": "GmailImages\nSign in",
+            "attributes": {
+              "id": "gb"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "img",
+            "text": "Google",
+            "attributes": {
+              "aria-label": "Google"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "search",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-15",
+            "role": "dialog",
+            "text": ".YB4h9{background-color:var(--TMYS9);color:var(--EpFNW);font-family:Google Sans,Roboto,Arial,sans-serif;padding:18px 60px 18px 12px;position:relative}.YB4h9.dNS45b{background-color:var(--xhUGwc);color:var(--bbQxAb);padding:0;}.YB4h9.dNS45b{margin-bottom:0}.YB4h9.dNS45b:not(.C7Cyn){padding-top:16px;padding-top:0;margin-top:0}.ctiYKd{background-color:var(--DEeStf);border-radius:16px;padding:16px;text-align:left;}.YB4h9.q7XNbb.C7Cyn .ctiYKd{border-radius:0 0 16px 16px}.ctiYKd .FsAdRd{display:none}.YB4h9.q7XNbb.C7Cyn .ctiYKd .FsAdRd{display:block;background-color:var(--ZEpPmd);height:1px;margin:0 -16px 16px -16px}.C85rO{font-size:20px}.YB4h9.dNS45b .C85rO{font-size:var(--uBdgTe);font-weight:500;padding-right:56px}.Gtr0ne{margin-top:4px}.twTT9c{}.YB4h9 .Gtr0ne .twTT9c{color:var(--EpFNW);padding:10px 0 0;text-decoration:underline;background:none;border:none;font:inherit}.YB4h9.dNS45b .Gtr0ne .twTT9c{color:inherit;padding:0}.YB4h9 .Job8vb{top:0;padding:20px;position:absolute;right:0}.YB4h9.dNS45b .Job8vb{top:50%;transform:translateY(-50%)}.YB4h9.q7XNbb{margin-bottom:44px}.YB4h9.q7XNbb.dNS45b{margin-top:0;margin-bottom:16px}.YB4h9.q7XNbb.dNS45b.C7Cyn{margin-top:-16px}#rhs .YB4h9.q7XNbb.dNS45b.C7Cyn{margin-top:-32px}Choose what you\u2019re giving feedback on",
+            "attributes": {
+              "aria-label": "Choose what you\u2019re giving feedback on"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "click",
+        "args": {
+          "id": "pw-193"
+        }
+      },
+      "observation": "Clicked pw-193"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://www.google.com/",
+        "title": "Google",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "About",
+            "attributes": {
+              "href": "https://about.google/?fg=1&utm_source=google-GB&utm_medium=referral&utm_campaign=hp-header"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Store",
+            "attributes": {
+              "href": "https://store.google.com/GB?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-GB"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "Gmail",
+            "attributes": {
+              "href": "https://mail.google.com/mail/&ogbl",
+              "aria-label": "Gmail "
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Images",
+            "attributes": {
+              "href": "https://www.google.com/imghp?hl=en&ogbl",
+              "aria-label": "Search for Images "
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "button",
+            "text": "Google apps",
+            "attributes": {
+              "href": "https://www.google.co.uk/intl/en/about/products",
+              "aria-label": "Google apps"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=futura_exp_og_so_72776762_e",
+              "aria-label": "Sign in"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "close",
+            "attributes": {
+              "id": "spchx",
+              "aria-label": "close"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "combobox",
+            "text": "Search",
+            "attributes": {
+              "id": "APjFqb",
+              "name": "q",
+              "aria-label": "Search",
+              "placeholder": "",
+              "value": ""
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "aria-label": "Clear"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "button",
+            "text": "Search by voice",
+            "attributes": {
+              "aria-label": "Search by voice"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "button",
+            "text": "Search by image",
+            "attributes": {
+              "aria-label": "Search by image"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "Close Choose what you\u2019re giving feedback on",
+            "attributes": {
+              "aria-label": "Close Choose what you\u2019re giving feedback on"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "option",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-25",
+            "role": "button",
+            "text": ".U48fD{-webkit-tap-highlight-color:transparent;cursor:pointer;display:block;line-height:18px;text-overflow:ellipsis;white-space:nowrap;padding:16px;padding-top:0;margin-top:16px;position:relative}.TQc1id .U48fD{margin-top:16px}.U48fD.df13ud{margin-top:16px}.U48fD.TOQyFc{margin-top:0}.U48fD.p8FEIf{padding-bottom:0}.jRKCUd.p8FEIf::before{bottom:-4px}.U48fD.ke7M4{padding-left:0;padding-right:0}.jRKCUd::before{bottom:12px;content:'';left:16px;position:absolute;right:16px;top:-4px}a.jRKCUd:hover{text-decoration:none}.ZFiwCf{display:flex;align-items:center;justify-content:center;position:relative;margin:0 auto;width:100%;border-radius:18px;outline:1px solid transparent;background-color:#f1f3f4;font-size:var(--hbmnje);font-family:var(--qR8X0);line-height:var(--CbdmE);font-weight:var(--Oycjt);max-width:372px;min-height:40px;border-radius:20px;}@media (forced-colors:active){.ZFiwCf{border:1px solid transparent}}.TQc1id .ZFiwCf{max-width:unset}.Zjtggb .ZFiwCf{max-width:unset}.ZFiwCf:hover{background-color:#e0e2e3}.nCFUpc .ZFiwCf{width:100%}.Bi9oQd{background-color:var(--gS5jXb);margin-top:18px;position:absolute;border:0;height:1px;left:0;width:100%;margin-top:20px;}.TQc1id .Bi9oQd{display:none}.kC8B4e .Bi9oQd{display:none}.w2fKdd svg{width:auto}.w2fKdd{color:var(--amnPwe)}.LGwnxb{-webkit-line-clamp:1;word-break:break-all;width:auto;padding-left:0;padding-right:8px;color:#202124;max-width:calc(100% - 64px);}.LGwnxb:empty{padding-right:0}.LGwnxb span,.LGwnxb div{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:auto}See more",
+            "attributes": {
+              "aria-label": "See more"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": ".JCHpcb:hover,.LvqzR .JCHpcb{color:#1558d6;text-decoration:underline}.JCHpcb{color:#70757a;font:13px Arial,sans-serif;cursor:pointer;align-self:center}@media (hover:hover){.sbai{visibility:hidden}.sbhl .sbai{visibility:inherit}}Delete",
+            "attributes": {}
+          },
+          {
+            "id": "pw-30",
+            "role": "option",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-31",
+            "role": "button",
+            "text": "Word pronunciation",
+            "attributes": {
+              "aria-label": "Word pronunciation"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "option",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "Delete",
+            "attributes": {}
+          },
+          {
+            "id": "pw-37",
+            "role": "option",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-38",
+            "role": "button",
+            "text": "Word pronunciation",
+            "attributes": {
+              "aria-label": "Word pronunciation"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "option",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": "Google Search",
+            "attributes": {
+              "name": "btnK",
+              "type": "submit",
+              "aria-label": "Google Search",
+              "value": "Google Search"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "button",
+            "text": "Report inappropriate predictions",
+            "attributes": {}
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "Google Search",
+            "attributes": {
+              "name": "btnK",
+              "type": "submit",
+              "aria-label": "Google Search",
+              "value": "Google Search"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "button",
+            "text": "I'm Feeling Lucky",
+            "attributes": {
+              "id": "gbqfbb",
+              "name": "btnI",
+              "type": "submit",
+              "aria-label": "I'm Feeling Lucky",
+              "value": "I'm Feeling Lucky"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "button",
+            "text": "I'm Feeling CuriousI'm Feeling HungryI'm Feeling AdventurousI'm Feeling PlayfulI'm Feeling StellarI'm Feeling DoodleyI'm Feeling TrendyI'm Feeling ArtisticI'm feeling funnyI'm feeling mindful",
+            "attributes": {}
+          },
+          {
+            "id": "pw-63",
+            "role": "link",
+            "text": "Advertising",
+            "attributes": {
+              "href": "https://www.google.com/intl/en_uk/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "link",
+            "text": "Business",
+            "attributes": {
+              "href": "https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "link",
+            "text": "How Search works",
+            "attributes": {
+              "href": "https://google.com/search/howsearchworks/?fg=1"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "Applying AI towards science and the environment",
+            "attributes": {
+              "href": "https://ai.google/societal_impact/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "link",
+            "text": "Privacy",
+            "attributes": {
+              "href": "https://policies.google.com/privacy?hl=en-GB&fg=1"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "link",
+            "text": "Terms",
+            "attributes": {
+              "href": "https://policies.google.com/terms?hl=en-GB&fg=1"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "button",
+            "text": "Settings",
+            "attributes": {}
+          },
+          {
+            "id": "pw-96",
+            "role": "link",
+            "text": "Dark theme: Off",
+            "attributes": {}
+          },
+          {
+            "id": "pw-98",
+            "role": "button",
+            "text": "en",
+            "attributes": {
+              "id": "vc3jof",
+              "aria-label": "Language: \u202aEnglish\u202c"
+            }
+          },
+          {
+            "id": "pw-190",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "id": "gksS1d"
+            }
+          },
+          {
+            "id": "pw-192",
+            "role": "link",
+            "text": "cookies",
+            "attributes": {
+              "href": "https://policies.google.com/technologies/cookies?utm_source=ucbs&hl=en-GB"
+            }
+          },
+          {
+            "id": "pw-193",
+            "role": "button",
+            "text": "Reject all",
+            "attributes": {
+              "id": "W0wltc"
+            }
+          },
+          {
+            "id": "pw-195",
+            "role": "button",
+            "text": "Accept all",
+            "attributes": {
+              "id": "L2AGLb"
+            }
+          },
+          {
+            "id": "pw-197",
+            "role": "link",
+            "text": "More options",
+            "attributes": {
+              "id": "VnjCcb"
+            }
+          },
+          {
+            "id": "pw-198",
+            "role": "link",
+            "text": "More options",
+            "attributes": {
+              "aria-label": "More options for personalisation settings and cookies"
+            }
+          },
+          {
+            "id": "pw-199",
+            "role": "link",
+            "text": "Privacy",
+            "attributes": {
+              "id": "RP3V5c",
+              "href": "https://policies.google.com/privacy?hl=en-GB&fg=1&utm_source=ucbs"
+            }
+          },
+          {
+            "id": "pw-200",
+            "role": "link",
+            "text": "Terms",
+            "attributes": {
+              "id": "HQ1lb",
+              "href": "https://policies.google.com/terms?hl=en-GB&fg=1&utm_source=ucbs"
+            }
+          },
+          {
+            "id": "pw-201",
+            "role": "textbox",
+            "text": null,
+            "attributes": {
+              "name": "csi"
+            }
+          },
+          {
+            "id": "pw-0",
+            "role": "navigation",
+            "text": "About\nStore\nGmailImages\nSign in",
+            "attributes": {}
+          },
+          {
+            "id": "pw-3",
+            "role": "none",
+            "text": "GmailImages\nSign in",
+            "attributes": {
+              "id": "gb"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "img",
+            "text": "Google",
+            "attributes": {
+              "aria-label": "Google"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "search",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-15",
+            "role": "dialog",
+            "text": ".YB4h9{background-color:var(--TMYS9);color:var(--EpFNW);font-family:Google Sans,Roboto,Arial,sans-serif;padding:18px 60px 18px 12px;position:relative}.YB4h9.dNS45b{background-color:var(--xhUGwc);color:var(--bbQxAb);padding:0;}.YB4h9.dNS45b{margin-bottom:0}.YB4h9.dNS45b:not(.C7Cyn){padding-top:16px;padding-top:0;margin-top:0}.ctiYKd{background-color:var(--DEeStf);border-radius:16px;padding:16px;text-align:left;}.YB4h9.q7XNbb.C7Cyn .ctiYKd{border-radius:0 0 16px 16px}.ctiYKd .FsAdRd{display:none}.YB4h9.q7XNbb.C7Cyn .ctiYKd .FsAdRd{display:block;background-color:var(--ZEpPmd);height:1px;margin:0 -16px 16px -16px}.C85rO{font-size:20px}.YB4h9.dNS45b .C85rO{font-size:var(--uBdgTe);font-weight:500;padding-right:56px}.Gtr0ne{margin-top:4px}.twTT9c{}.YB4h9 .Gtr0ne .twTT9c{color:var(--EpFNW);padding:10px 0 0;text-decoration:underline;background:none;border:none;font:inherit}.YB4h9.dNS45b .Gtr0ne .twTT9c{color:inherit;padding:0}.YB4h9 .Job8vb{top:0;padding:20px;position:absolute;right:0}.YB4h9.dNS45b .Job8vb{top:50%;transform:translateY(-50%)}.YB4h9.q7XNbb{margin-bottom:44px}.YB4h9.q7XNbb.dNS45b{margin-top:0;margin-bottom:16px}.YB4h9.q7XNbb.dNS45b.C7Cyn{margin-top:-16px}#rhs .YB4h9.q7XNbb.dNS45b.C7Cyn{margin-top:-32px}Choose what you\u2019re giving feedback on",
+            "attributes": {
+              "aria-label": "Choose what you\u2019re giving feedback on"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://www.google.com/finance/quote/AAPL:NASDAQ"
+        }
+      },
+      "observation": "Opened https://www.google.com/finance/quote/AAPL:NASDAQ"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://www.google.com/finance/beta/quote/AAPL:NASDAQ",
+        "title": "Apple Inc (AAPL) Stock Price & News - Google Finance",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Finance\nBeta",
+            "attributes": {
+              "href": "./"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "search_spark",
+            "attributes": {
+              "aria-label": "Search for stocks, ETFs, and more"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "settings",
+            "attributes": {
+              "aria-label": "Settings"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://www.google.com/finance/beta/quote/AAPL:NASDAQ&followup=https://www.google.com/finance/beta/quote/AAPL:NASDAQ&ec=GAZA4AU",
+              "aria-label": "Sign in"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "button",
+            "text": "arrow_drop_down",
+            "attributes": {
+              "aria-label": "Select list"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "button",
+            "text": "playlist_addNew list",
+            "attributes": {
+              "aria-label": "New list"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "button",
+            "text": "playlist_add",
+            "attributes": {
+              "aria-label": "New list"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "button",
+            "text": "expand_content",
+            "attributes": {
+              "aria-label": "Expand Lists"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": "keyboard_arrow_up",
+            "attributes": {
+              "aria-label": "Collapse list Equity sectors"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "button",
+            "text": "arrow_upwardSymbolsarrow_upwardSymbols",
+            "attributes": {
+              "aria-label": "Symbols"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "button",
+            "text": "arrow_upwardPrice",
+            "attributes": {
+              "aria-label": "Price"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "button",
+            "text": "arrow_upwardChange",
+            "attributes": {
+              "aria-label": "Change"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "button",
+            "text": "arrow_upward% Change",
+            "attributes": {
+              "aria-label": "% Change"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "button",
+            "text": "arrow_upwardPrev Close",
+            "attributes": {
+              "aria-label": "Prev Close"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "button",
+            "text": "arrow_upwardOpen",
+            "attributes": {
+              "aria-label": "Open"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "arrow_upwardHigh",
+            "attributes": {
+              "aria-label": "High"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "button",
+            "text": "arrow_upwardLow",
+            "attributes": {
+              "aria-label": "Low"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "button",
+            "text": "arrow_upwardVolume",
+            "attributes": {
+              "aria-label": "Volume"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "button",
+            "text": "arrow_upwardMkt Cap",
+            "attributes": {
+              "aria-label": "Mkt Cap"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Consumer Staples",
+            "attributes": {
+              "href": "./quote/SX3P:INDEXSTOXX",
+              "aria-label": "Consumer Staples"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Utilities",
+            "attributes": {
+              "href": "./quote/SX6P:INDEXSTOXX",
+              "aria-label": "Utilities"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Technology",
+            "attributes": {
+              "href": "./quote/SX8P:INDEXSTOXX",
+              "aria-label": "Technology"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Consumer Discretionary",
+            "attributes": {
+              "href": "./quote/SXAP:INDEXSTOXX",
+              "aria-label": "Consumer Discretionary"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Health Care",
+            "attributes": {
+              "href": "./quote/SXDP:INDEXSTOXX",
+              "aria-label": "Health Care"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Energy",
+            "attributes": {
+              "href": "./quote/SXEP:INDEXSTOXX",
+              "aria-label": "Energy"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Financials",
+            "attributes": {
+              "href": "./quote/SXFP:INDEXSTOXX",
+              "aria-label": "Financials"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Communications",
+            "attributes": {
+              "href": "./quote/SXKP:INDEXSTOXX",
+              "aria-label": "Communications"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Industrials",
+            "attributes": {
+              "href": "./quote/SXNP:INDEXSTOXX",
+              "aria-label": "Industrials"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Materials",
+            "attributes": {
+              "href": "./quote/SXPP:INDEXSTOXX",
+              "aria-label": "Materials"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "button",
+            "text": "check_indeterminate_small\nAdd to list",
+            "attributes": {
+              "aria-label": "Add to list"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "button",
+            "text": "area_chart\nArea",
+            "attributes": {
+              "aria-label": "Select Chart Type - Area selected"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "button",
+            "text": "stacked_line_chart\nCompare",
+            "attributes": {
+              "aria-label": "Compare to financial entity"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "button",
+            "text": "close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "button",
+            "text": "monitoring\nIndicators",
+            "attributes": {
+              "aria-label": "Select technical indicator"
+            }
+          },
+          {
+            "id": "pw-82",
+            "role": "link",
+            "text": "AMZN\nAmazon.com Inc\n$264.14\n-1.15%\narrow_downward",
+            "attributes": {
+              "href": "./quote/AMZN:NASDAQ"
+            }
+          },
+          {
+            "id": "pw-83",
+            "role": "link",
+            "text": "MSFT\nMicrosoft Corp\n$421.92\n+3.05%\narrow_upward",
+            "attributes": {
+              "href": "./quote/MSFT:NASDAQ"
+            }
+          },
+          {
+            "id": "pw-84",
+            "role": "link",
+            "text": "TSLA\nTesla Inc\n$422.24\n-4.75%\narrow_downward",
+            "attributes": {
+              "href": "./quote/TSLA:NASDAQ"
+            }
+          },
+          {
+            "id": "pw-85",
+            "role": "link",
+            "text": "NVDA\nNVIDIA Corp\n$225.32\n-4.42%\narrow_downward",
+            "attributes": {
+              "href": "./quote/NVDA:NASDAQ"
+            }
+          },
+          {
+            "id": "pw-86",
+            "role": "link",
+            "text": "Is It Too Late To Consider Apple (AAPL) After Strong 1 Year Share Price Gains?",
+            "attributes": {
+              "href": "https://simplywall.st/stocks/us/tech/nasdaq-aapl/apple/news/is-it-too-late-to-consider-apple-aapl-after-strong-1-year-sh"
+            }
+          },
+          {
+            "id": "pw-87",
+            "role": "link",
+            "text": "Samsung's phone delay handed Apple an opening for a big iPhone year",
+            "attributes": {
+              "href": "https://www.businessinsider.com/apple-iphone-17-sales-rise-amid-samsung-galaxy-s26-delay-2026-5"
+            }
+          },
+          {
+            "id": "pw-88",
+            "role": "link",
+            "text": "Apple Inc. $AAPL Position Lifted by Legacy Advisors LLC",
+            "attributes": {
+              "href": "https://www.marketbeat.com/instant-alerts/filing-apple-inc-aapl-position-lifted-by-legacy-advisors-llc-2026-05-17/"
+            }
+          },
+          {
+            "id": "pw-89",
+            "role": "link",
+            "text": "Viking Global Investors boosts Apple stake by 3.6M shares",
+            "attributes": {
+              "href": "https://www.tipranks.com/news/company-announcements/viking-global-investors-boosts-apple-stake-by-3-6m-shares"
+            }
+          },
+          {
+            "id": "pw-90",
+            "role": "link",
+            "text": "Under Greg Abel, Apple Stock Looks Like It's Here to Stay in Berkshire Hathaway's Portfolio",
+            "attributes": {
+              "href": "https://www.fool.com/investing/2026/05/16/under-greg-abel-apple-stock-looks-like-its-here-to/"
+            }
+          },
+          {
+            "id": "pw-91",
+            "role": "link",
+            "text": "Get a Pro-Level MacBook for Your Business at 75% Off",
+            "attributes": {
+              "href": "https://www.entrepreneur.com/science-technology/get-a-pro-level-macbook-for-your-business-at-75-off/504436"
+            }
+          },
+          {
+            "id": "pw-92",
+            "role": "link",
+            "text": "Apple shares climbed to a record high as investors look past AI concerns",
+            "attributes": {
+              "href": "https://appleinsider.com/articles/26/05/15/apple-shares-climbed-to-a-record-high-as-investors-look-past-ai-concerns"
+            }
+          },
+          {
+            "id": "pw-93",
+            "role": "link",
+            "text": "LocalSend puts your sneakernet out of business",
+            "attributes": {
+              "href": "https://www.theregister.com/personal-tech/2026/05/15/localsend-puts-your-sneakernet-out-of-business/5241407"
+            }
+          },
+          {
+            "id": "pw-94",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.ft.com/content/e6505cf8-9e86-4053-bd34-6ed376c74443?syn-25a6b1a6=1"
+            }
+          },
+          {
+            "id": "pw-95",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.reuters.com/business/finance/apple-boeing-citi-tesla-meta-executives-join-trumps-china-trip-2026-05-11/"
+            }
+          },
+          {
+            "id": "pw-96",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://9to5mac.com/2026/05/12/apples-latest-acquisition-further-confirms-a-new-priority-for-the-company/"
+            }
+          },
+          {
+            "id": "pw-97",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.foxbusiness.com/fox-news-tech/how-you-can-get-slice-apples-250m-iphone-settlement"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "document.body.innerText"
+        }
+      },
+      "observation": "Eval: \"Finance\\nBeta\\nAll\\nStock\\nIndex\\nMutual fund\\nCurrency\\nFutures\\n.DJI\\nDow Jones Industrial Average \\u00b7 INDEXDJX\\n49,526.17\\n-1.07%\\narrow_downward\\nRBLX\\nRoblox Corp \\u00b7 NYSE (US)\\n$42.85\\n-1.99%\\narrow_downward\\nTrending questions\\nprompt_suggestion\\nWhat's going on with the markets today?\\nprompt_suggestion\\nCompare the S&P 500 to the Dow Jones Industrial Average\\nsearch_spark\\nSearch\\u00a0for\\u00a0stocks,\\u00a0ETFs,\\u00a0and\\u00a0more\\nsettings\\nSettings\\nfeedback\\nSend feedback\\nSig"
+    },
+    {
+      "step": 4,
+      "state": {
+        "url": "https://www.google.com/finance/beta/quote/AAPL:NASDAQ",
+        "title": "Apple Inc (AAPL) Stock Price & News - Google Finance",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Finance\nBeta",
+            "attributes": {
+              "href": "./"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "button",
+            "text": "All",
+            "attributes": {}
+          },
+          {
+            "id": "pw-8",
+            "role": "button",
+            "text": "Stock",
+            "attributes": {}
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Index",
+            "attributes": {}
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": "Mutual fund",
+            "attributes": {}
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": "Currency",
+            "attributes": {}
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": "Futures",
+            "attributes": {}
+          },
+          {
+            "id": "pw-15",
+            "role": "option",
+            "text": ".DJI\nDow Jones Industrial Average \u00b7 INDEXDJX\n49,526.17\n-1.07%\narrow_downward",
+            "attributes": {}
+          },
+          {
+            "id": "pw-17",
+            "role": "option",
+            "text": "RBLX\nRoblox Corp \u00b7 NYSE (US)\n$42.85\n-1.99%\narrow_downward",
+            "attributes": {}
+          },
+          {
+            "id": "pw-21",
+            "role": "button",
+            "text": "prompt_suggestion\nWhat's going on with the markets today?",
+            "attributes": {}
+          },
+          {
+            "id": "pw-22",
+            "role": "button",
+            "text": "prompt_suggestion\nCompare the S&P 500 to the Dow Jones Industrial Average",
+            "attributes": {}
+          },
+          {
+            "id": "pw-23",
+            "role": "button",
+            "text": "search_spark\nSearch\u00a0for\u00a0stocks,\u00a0ETFs,\u00a0and\u00a0more",
+            "attributes": {
+              "aria-label": "Search for stocks, ETFs, and more"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "button",
+            "text": "settings",
+            "attributes": {
+              "aria-label": "Settings"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://www.google.com/finance/beta/quote/AAPL:NASDAQ&followup=https://www.google.com/finance/beta/quote/AAPL:NASDAQ&ec=GAZA4AU",
+              "aria-label": "Sign in"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "button",
+            "text": "arrow_drop_down",
+            "attributes": {
+              "aria-label": "Select list"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "button",
+            "text": "playlist_addNew list",
+            "attributes": {
+              "aria-label": "New list"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "button",
+            "text": "playlist_add",
+            "attributes": {
+              "aria-label": "New list"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "expand_content",
+            "attributes": {
+              "aria-label": "Expand Lists"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "keyboard_arrow_up",
+            "attributes": {
+              "aria-label": "Collapse list Equity sectors"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "button",
+            "text": "arrow_upwardSymbolsarrow_upwardSymbols",
+            "attributes": {
+              "aria-label": "Symbols"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "button",
+            "text": "arrow_upwardPrice",
+            "attributes": {
+              "aria-label": "Price"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "button",
+            "text": "arrow_upwardChange",
+            "attributes": {
+              "aria-label": "Change"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "button",
+            "text": "arrow_upward% Change",
+            "attributes": {
+              "aria-label": "% Change"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "button",
+            "text": "arrow_upwardPrev Close",
+            "attributes": {
+              "aria-label": "Prev Close"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "button",
+            "text": "arrow_upwardOpen",
+            "attributes": {
+              "aria-label": "Open"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "button",
+            "text": "arrow_upwardHigh",
+            "attributes": {
+              "aria-label": "High"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "button",
+            "text": "arrow_upwardLow",
+            "attributes": {
+              "aria-label": "Low"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "button",
+            "text": "arrow_upwardVolume",
+            "attributes": {
+              "aria-label": "Volume"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "button",
+            "text": "arrow_upwardMkt Cap",
+            "attributes": {
+              "aria-label": "Mkt Cap"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "Consumer Staples",
+            "attributes": {
+              "href": "./quote/SX3P:INDEXSTOXX",
+              "aria-label": "Consumer Staples"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "link",
+            "text": "Utilities",
+            "attributes": {
+              "href": "./quote/SX6P:INDEXSTOXX",
+              "aria-label": "Utilities"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "link",
+            "text": "Technology",
+            "attributes": {
+              "href": "./quote/SX8P:INDEXSTOXX",
+              "aria-label": "Technology"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "link",
+            "text": "Consumer Discretionary",
+            "attributes": {
+              "href": "./quote/SXAP:INDEXSTOXX",
+              "aria-label": "Consumer Discretionary"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "link",
+            "text": "Health Care",
+            "attributes": {
+              "href": "./quote/SXDP:INDEXSTOXX",
+              "aria-label": "Health Care"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "link",
+            "text": "Energy",
+            "attributes": {
+              "href": "./quote/SXEP:INDEXSTOXX",
+              "aria-label": "Energy"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "link",
+            "text": "Financials",
+            "attributes": {
+              "href": "./quote/SXFP:INDEXSTOXX",
+              "aria-label": "Financials"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "link",
+            "text": "Communications",
+            "attributes": {
+              "href": "./quote/SXKP:INDEXSTOXX",
+              "aria-label": "Communications"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "link",
+            "text": "Industrials",
+            "attributes": {
+              "href": "./quote/SXNP:INDEXSTOXX",
+              "aria-label": "Industrials"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "Materials",
+            "attributes": {
+              "href": "./quote/SXPP:INDEXSTOXX",
+              "aria-label": "Materials"
+            }
+          },
+          {
+            "id": "pw-70",
+            "role": "link",
+            "text": "arrow_back\nHome",
+            "attributes": {
+              "href": "./"
+            }
+          },
+          {
+            "id": "pw-71",
+            "role": "button",
+            "text": "add\nAdd to list",
+            "attributes": {
+              "aria-label": "Add to list"
+            }
+          },
+          {
+            "id": "pw-72",
+            "role": "button",
+            "text": "area_chart\nArea",
+            "attributes": {
+              "aria-label": "Select Chart Type - Area selected"
+            }
+          },
+          {
+            "id": "pw-78",
+            "role": "button",
+            "text": "stacked_line_chart\nCompare",
+            "attributes": {
+              "aria-label": "Compare to financial entity"
+            }
+          },
+          {
+            "id": "pw-81",
+            "role": "button",
+            "text": "close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-85",
+            "role": "option",
+            "text": "AMZNAmazon.com Inc \u00b7 NASDAQ (US)$264.14-1.15%arrow_downward",
+            "attributes": {}
+          },
+          {
+            "id": "pw-87",
+            "role": "option",
+            "text": "MSFTMicrosoft Corp \u00b7 NASDAQ (US)$421.92+3.05%arrow_upward",
+            "attributes": {}
+          },
+          {
+            "id": "pw-89",
+            "role": "option",
+            "text": "TSLATesla Inc \u00b7 NASDAQ (US)$422.24-4.75%arrow_downward",
+            "attributes": {}
+          },
+          {
+            "id": "pw-91",
+            "role": "option",
+            "text": "NVDANVIDIA Corp \u00b7 NASDAQ (US)$225.32-4.42%arrow_downward",
+            "attributes": {}
+          },
+          {
+            "id": "pw-92",
+            "role": "button",
+            "text": "monitoring\nIndicators",
+            "attributes": {
+              "aria-label": "Select technical indicator"
+            }
+          },
+          {
+            "id": "pw-111",
+            "role": "button",
+            "text": "keyboard_arrow_down",
+            "attributes": {
+              "aria-label": "Collapse"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => { const lines = document.body.innerText.split('\\n').map(s=>s.trim()).filter(Boolean); const idxs=[]; lines.forEach((l,i)=>{ if(/Apple Inc|AAPL|NASDAQ/.test(l)) idxs.push(i); }); return idxs.slice(0,10).map(i => lines.slice(Math.max(0,i-8), Math.min(lines.length,i+20)).join('\\n')).join('\\n---\\n'); })()"
+        }
+      },
+      "observation": "Eval: \"-2.47%\\narrow_downward\\nSXPP\\n-5.11%\\narrow_downward\\narrow_back\\nHome\\n|\\nAAPL:NASDAQ\\nadd\\nAdd to list\\nApple Inc\\n$300.23\\narrow_upward\\n+0.68%\\n(+2.02) Today\\nClosed:\\u00a0May 15, 4:00:01\\u202fPM UTC-4\\u00a0 \\u00b7 \\u00a0 USD\\n$299.85\\narrow_downward\\n-0.13%\\n(-0.38)\\nbedtime\\nAfter hours\\u00a0 \\u00b7 \\u00a08:01\\u202fPM\\narea_chart\\nArea\\nstacked_line_chart\\nCompare\\nmonitoring\\n---\\n-5.11%\\narrow_downward\\narrow_back\\nHome\\n|\\nAAPL:NASDAQ\\nadd\\nAdd to list\\nApple Inc\\n$300.23\\narrow_upward"
+    },
+    {
+      "step": 5,
+      "state": {
+        "url": "https://www.google.com/finance/beta/quote/AAPL:NASDAQ",
+        "title": "AAPL $300.23 (\u25b2 0.68%) Apple Inc | Google Finance",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Finance\nBeta",
+            "attributes": {
+              "href": "./"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "button",
+            "text": "All",
+            "attributes": {}
+          },
+          {
+            "id": "pw-8",
+            "role": "button",
+            "text": "Stock",
+            "attributes": {}
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Index",
+            "attributes": {}
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": "Mutual fund",
+            "attributes": {}
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": "Currency",
+            "attributes": {}
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": "Futures",
+            "attributes": {}
+          },
+          {
+            "id": "pw-15",
+            "role": "option",
+            "text": ".DJI\nDow Jones Industrial Average \u00b7 INDEXDJX\n49,526.17\n-1.07%\narrow_downward",
+            "attributes": {}
+          },
+          {
+            "id": "pw-17",
+            "role": "option",
+            "text": "RBLX\nRoblox Corp \u00b7 NYSE (US)\n$42.85\n-1.99%\narrow_downward",
+            "attributes": {}
+          },
+          {
+            "id": "pw-21",
+            "role": "button",
+            "text": "prompt_suggestion\nWhat's going on with the markets today?",
+            "attributes": {}
+          },
+          {
+            "id": "pw-22",
+            "role": "button",
+            "text": "prompt_suggestion\nCompare the S&P 500 to the Dow Jones Industrial Average",
+            "attributes": {}
+          },
+          {
+            "id": "pw-23",
+            "role": "button",
+            "text": "search_spark\nWhat's\u00a0going\u00a0on\u00a0with\u00a0the\u00a0markets\u00a0today?",
+            "attributes": {
+              "aria-label": "Search for stocks, ETFs, and more"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "button",
+            "text": "settings",
+            "attributes": {
+              "aria-label": "Settings"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://www.google.com/finance/beta/quote/AAPL:NASDAQ&followup=https://www.google.com/finance/beta/quote/AAPL:NASDAQ&ec=GAZA4AU",
+              "aria-label": "Sign in"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "button",
+            "text": "arrow_drop_down",
+            "attributes": {
+              "aria-label": "Select list"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "button",
+            "text": "playlist_addNew list",
+            "attributes": {
+              "aria-label": "New list"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "button",
+            "text": "playlist_add",
+            "attributes": {
+              "aria-label": "New list"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "expand_content",
+            "attributes": {
+              "aria-label": "Expand Lists"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "keyboard_arrow_up",
+            "attributes": {
+              "aria-label": "Collapse list Equity sectors"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "button",
+            "text": "arrow_upwardSymbolsarrow_upwardSymbols",
+            "attributes": {
+              "aria-label": "Symbols"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "button",
+            "text": "arrow_upwardPrice",
+            "attributes": {
+              "aria-label": "Price"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "button",
+            "text": "arrow_upwardChange",
+            "attributes": {
+              "aria-label": "Change"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "button",
+            "text": "arrow_upward% Change",
+            "attributes": {
+              "aria-label": "% Change"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "button",
+            "text": "arrow_upwardPrev Close",
+            "attributes": {
+              "aria-label": "Prev Close"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "button",
+            "text": "arrow_upwardOpen",
+            "attributes": {
+              "aria-label": "Open"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "button",
+            "text": "arrow_upwardHigh",
+            "attributes": {
+              "aria-label": "High"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "button",
+            "text": "arrow_upwardLow",
+            "attributes": {
+              "aria-label": "Low"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "button",
+            "text": "arrow_upwardVolume",
+            "attributes": {
+              "aria-label": "Volume"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "button",
+            "text": "arrow_upwardMkt Cap",
+            "attributes": {
+              "aria-label": "Mkt Cap"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "Consumer Staples",
+            "attributes": {
+              "href": "./quote/SX3P:INDEXSTOXX",
+              "aria-label": "Consumer Staples"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "link",
+            "text": "Utilities",
+            "attributes": {
+              "href": "./quote/SX6P:INDEXSTOXX",
+              "aria-label": "Utilities"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "link",
+            "text": "Technology",
+            "attributes": {
+              "href": "./quote/SX8P:INDEXSTOXX",
+              "aria-label": "Technology"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "link",
+            "text": "Consumer Discretionary",
+            "attributes": {
+              "href": "./quote/SXAP:INDEXSTOXX",
+              "aria-label": "Consumer Discretionary"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "link",
+            "text": "Health Care",
+            "attributes": {
+              "href": "./quote/SXDP:INDEXSTOXX",
+              "aria-label": "Health Care"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "link",
+            "text": "Energy",
+            "attributes": {
+              "href": "./quote/SXEP:INDEXSTOXX",
+              "aria-label": "Energy"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "link",
+            "text": "Financials",
+            "attributes": {
+              "href": "./quote/SXFP:INDEXSTOXX",
+              "aria-label": "Financials"
+            }
+          },
+          {
+            "id": "pw-71",
+            "role": "link",
+            "text": "Communications",
+            "attributes": {
+              "href": "./quote/SXKP:INDEXSTOXX",
+              "aria-label": "Communications"
+            }
+          },
+          {
+            "id": "pw-73",
+            "role": "link",
+            "text": "Industrials",
+            "attributes": {
+              "href": "./quote/SXNP:INDEXSTOXX",
+              "aria-label": "Industrials"
+            }
+          },
+          {
+            "id": "pw-75",
+            "role": "link",
+            "text": "Materials",
+            "attributes": {
+              "href": "./quote/SXPP:INDEXSTOXX",
+              "aria-label": "Materials"
+            }
+          },
+          {
+            "id": "pw-80",
+            "role": "link",
+            "text": "arrow_back\nHome",
+            "attributes": {
+              "href": "./"
+            }
+          },
+          {
+            "id": "pw-81",
+            "role": "button",
+            "text": "add\nAdd to list",
+            "attributes": {
+              "aria-label": "Add to list"
+            }
+          },
+          {
+            "id": "pw-82",
+            "role": "button",
+            "text": "area_chart\nArea",
+            "attributes": {
+              "aria-label": "Select Chart Type - Area selected"
+            }
+          },
+          {
+            "id": "pw-88",
+            "role": "button",
+            "text": "stacked_line_chart\nCompare",
+            "attributes": {
+              "aria-label": "Compare to financial entity"
+            }
+          },
+          {
+            "id": "pw-91",
+            "role": "button",
+            "text": "close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-95",
+            "role": "option",
+            "text": "AMZNAmazon.com Inc \u00b7 NASDAQ (US)$264.14-1.15%arrow_downward",
+            "attributes": {}
+          },
+          {
+            "id": "pw-97",
+            "role": "option",
+            "text": "MSFTMicrosoft Corp \u00b7 NASDAQ (US)$421.92+3.05%arrow_upward",
+            "attributes": {}
+          },
+          {
+            "id": "pw-99",
+            "role": "option",
+            "text": "TSLATesla Inc \u00b7 NASDAQ (US)$422.24-4.75%arrow_downward",
+            "attributes": {}
+          },
+          {
+            "id": "pw-101",
+            "role": "option",
+            "text": "NVDANVIDIA Corp \u00b7 NASDAQ (US)$225.32-4.42%arrow_downward",
+            "attributes": {}
+          },
+          {
+            "id": "pw-102",
+            "role": "button",
+            "text": "monitoring\nIndicators",
+            "attributes": {
+              "aria-label": "Select technical indicator"
+            }
+          },
+          {
+            "id": "pw-121",
+            "role": "button",
+            "text": "keyboard_arrow_down",
+            "attributes": {
+              "aria-label": "Collapse"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "Apple (AAPL) is currently priced at $300.23 per share (USD)."
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
 }

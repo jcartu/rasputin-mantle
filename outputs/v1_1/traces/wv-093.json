@@ -1,0 +1,1384 @@
+{
+  "task_id": "wv-093",
+  "task_description": "On X, find the current profile bio for NASA and report it.",
+  "starting_url": "https://x.com/NASA",
+  "passed": true,
+  "final_answer": "Making the seemingly impossible, possible.",
+  "duration_s": 28.31,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://x.com/NASA",
+        "title": "NASA (@NASA) / X",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Log in",
+            "attributes": {
+              "href": "/login",
+              "data-testid": "login"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Sign up",
+            "attributes": {
+              "href": "/i/flow/signup",
+              "data-testid": "signup"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "Show more about your choices.",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Accept all cookies",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Refuse non-essential cookies",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "Skip to home timeline",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Skip to home timeline"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "button",
+            "text": "Skip to trending",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Skip to trending"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "X",
+            "attributes": {
+              "href": "/",
+              "aria-label": "X"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "button",
+            "text": "Back",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Back",
+              "data-testid": "app-bar-back"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "See new posts",
+            "attributes": {
+              "type": "button",
+              "aria-label": "New posts are available. Push the period key to go to the them."
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/NASA/header_photo"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/NASA/photo"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "button",
+            "text": "Follow",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Follow @NASA",
+              "data-testid": "11348282-follow"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "button",
+            "text": "Provides details about verified accounts.",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Provides details about verified accounts."
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "119 Following",
+            "attributes": {
+              "href": "/NASA/following"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "91.9M Followers",
+            "attributes": {
+              "href": "/NASA/verified_followers"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "button",
+            "text": "Previous",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Previous"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "button",
+            "text": "Next",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/NASA"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "NASA",
+            "attributes": {
+              "href": "/NASA"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "@NASA",
+            "attributes": {
+              "href": "/NASA"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "9h",
+            "attributes": {
+              "href": "/NASA/status/2055936487187788000",
+              "aria-label": "9 hours ago"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "button",
+            "text": "More",
+            "attributes": {
+              "type": "button",
+              "aria-label": "More",
+              "data-testid": "caret"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "@Space_Station",
+            "attributes": {
+              "href": "/Space_Station"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "button",
+            "text": "Play Broadcast. 360.9K views",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Play Broadcast. 360.9K views"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "NASA\n@NASA\nNASA's SpaceX 34th Commercial Resupply Services Rendezvous and Docking",
+            "attributes": {
+              "href": "/i/broadcasts/1DGleElVOyDJL"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "button",
+            "text": "607",
+            "attributes": {
+              "type": "button",
+              "aria-label": "607 Replies. Reply",
+              "data-testid": "reply"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "button",
+            "text": "1.4K",
+            "attributes": {
+              "type": "button",
+              "aria-label": "1461 reposts. Repost",
+              "data-testid": "retweet"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "button",
+            "text": "5.4K",
+            "attributes": {
+              "type": "button",
+              "aria-label": "5499 Likes. Like",
+              "data-testid": "like"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "link",
+            "text": "1.2M",
+            "attributes": {
+              "href": "/NASA/status/2055936487187788000/analytics",
+              "aria-label": "1238518 views. View post analytics"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "button",
+            "text": "Bookmark",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Bookmark",
+              "data-testid": "bookmark"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "button",
+            "text": "Share post",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Share post"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/NASA"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "NASA",
+            "attributes": {
+              "href": "/NASA"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "link",
+            "text": "@NASA",
+            "attributes": {
+              "href": "/NASA"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "link",
+            "text": "10h",
+            "attributes": {
+              "href": "/NASA/status/2055933467959926832",
+              "aria-label": "10 hours ago"
+            }
+          },
+          {
+            "id": "pw-70",
+            "role": "button",
+            "text": "More",
+            "attributes": {
+              "type": "button",
+              "aria-label": "More",
+              "data-testid": "caret"
+            }
+          },
+          {
+            "id": "pw-71",
+            "role": "link",
+            "text": "@Space_Station",
+            "attributes": {
+              "href": "/Space_Station"
+            }
+          },
+          {
+            "id": "pw-72",
+            "role": "link",
+            "text": "@NASA",
+            "attributes": {
+              "href": "/NASA"
+            }
+          },
+          {
+            "id": "pw-73",
+            "role": "link",
+            "text": "@SpaceX",
+            "attributes": {
+              "href": "/SpaceX"
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "link",
+            "text": "NASA's SpaceX 34th Commercial Resupply Services Rendezvous and Docking - NASA+",
+            "attributes": {
+              "href": "https://t.co/xcK4BXiobb",
+              "aria-label": "plus.nasa.gov NASA's SpaceX 34th Commercial Resupply Services Rendezvous and Docking - NASA+"
+            }
+          },
+          {
+            "id": "pw-75",
+            "role": "link",
+            "text": "From plus.nasa.gov",
+            "attributes": {
+              "href": "https://t.co/xcK4BXiobb"
+            }
+          },
+          {
+            "id": "pw-77",
+            "role": "button",
+            "text": "0 Replies. Reply",
+            "attributes": {
+              "type": "button",
+              "aria-label": "0 Replies. Reply",
+              "data-testid": "reply"
+            }
+          },
+          {
+            "id": "pw-78",
+            "role": "button",
+            "text": "8",
+            "attributes": {
+              "type": "button",
+              "aria-label": "8 reposts. Repost",
+              "data-testid": "retweet"
+            }
+          },
+          {
+            "id": "pw-79",
+            "role": "button",
+            "text": "0 Likes. Like",
+            "attributes": {
+              "type": "button",
+              "aria-label": "0 Likes. Like",
+              "data-testid": "like"
+            }
+          },
+          {
+            "id": "pw-80",
+            "role": "link",
+            "text": "5.4K",
+            "attributes": {
+              "href": "/NASA/status/2055933467959926832/analytics",
+              "aria-label": "5471 views. View post analytics"
+            }
+          },
+          {
+            "id": "pw-81",
+            "role": "button",
+            "text": "Bookmark",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Bookmark",
+              "data-testid": "bookmark"
+            }
+          },
+          {
+            "id": "pw-82",
+            "role": "button",
+            "text": "Share post",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Share post"
+            }
+          },
+          {
+            "id": "pw-84",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/NASA"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "document.body.innerText"
+        }
+      },
+      "observation": "Eval: \"Don\\u2019t miss what\\u2019s happening\\nPeople on X are the first to know.\\nLog in\\nSign up\\nDid someone say \\u2026 cookies?\\nX and third parties integrated by X use cookies to provide you with a better, safer and faster service and to support our business. Some cookies are necessary to use our services, improve our services, and make sure they work properly. Show more about your choices.\\nAccept all cookies\\nRefuse non-essential cookies\\nNASA\\n74K posts\\nSee new posts\\nFollow\\nNASA\\n@NASA\\nMaki"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://x.com/NASA",
+        "title": "NASA (@NASA) / X",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Log in",
+            "attributes": {
+              "href": "/login",
+              "data-testid": "login"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Sign up",
+            "attributes": {
+              "href": "/i/flow/signup",
+              "data-testid": "signup"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "Show more about your choices.",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Accept all cookies",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Refuse non-essential cookies",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "Skip to home timeline",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Skip to home timeline"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "button",
+            "text": "Skip to trending",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Skip to trending"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "X",
+            "attributes": {
+              "href": "/",
+              "aria-label": "X"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "button",
+            "text": "Back",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Back",
+              "data-testid": "app-bar-back"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "See new posts",
+            "attributes": {
+              "type": "button",
+              "aria-label": "New posts are available. Push the period key to go to the them."
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/NASA/header_photo"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/NASA/photo"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "button",
+            "text": "Follow",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Follow @NASA",
+              "data-testid": "11348282-follow"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "button",
+            "text": "Provides details about verified accounts.",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Provides details about verified accounts."
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "119 Following",
+            "attributes": {
+              "href": "/NASA/following"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "91.9M Followers",
+            "attributes": {
+              "href": "/NASA/verified_followers"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "button",
+            "text": "Previous",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Previous"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "button",
+            "text": "Next",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/NASA"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "NASA",
+            "attributes": {
+              "href": "/NASA"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "@NASA",
+            "attributes": {
+              "href": "/NASA"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "9h",
+            "attributes": {
+              "href": "/NASA/status/2055936487187788000",
+              "aria-label": "9 hours ago"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "button",
+            "text": "More",
+            "attributes": {
+              "type": "button",
+              "aria-label": "More",
+              "data-testid": "caret"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "@Space_Station",
+            "attributes": {
+              "href": "/Space_Station"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "button",
+            "text": "Play Broadcast. 360.9K views",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Play Broadcast. 360.9K views"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "NASA\n@NASA\nNASA's SpaceX 34th Commercial Resupply Services Rendezvous and Docking",
+            "attributes": {
+              "href": "/i/broadcasts/1DGleElVOyDJL"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "button",
+            "text": "607",
+            "attributes": {
+              "type": "button",
+              "aria-label": "607 Replies. Reply",
+              "data-testid": "reply"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "button",
+            "text": "1.4K",
+            "attributes": {
+              "type": "button",
+              "aria-label": "1461 reposts. Repost",
+              "data-testid": "retweet"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "button",
+            "text": "5.4K",
+            "attributes": {
+              "type": "button",
+              "aria-label": "5499 Likes. Like",
+              "data-testid": "like"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "link",
+            "text": "1.2M",
+            "attributes": {
+              "href": "/NASA/status/2055936487187788000/analytics",
+              "aria-label": "1238518 views. View post analytics"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "button",
+            "text": "Bookmark",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Bookmark",
+              "data-testid": "bookmark"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "button",
+            "text": "Share post",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Share post"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/NASA"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "NASA",
+            "attributes": {
+              "href": "/NASA"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "link",
+            "text": "@NASA",
+            "attributes": {
+              "href": "/NASA"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "link",
+            "text": "10h",
+            "attributes": {
+              "href": "/NASA/status/2055933467959926832",
+              "aria-label": "10 hours ago"
+            }
+          },
+          {
+            "id": "pw-70",
+            "role": "button",
+            "text": "More",
+            "attributes": {
+              "type": "button",
+              "aria-label": "More",
+              "data-testid": "caret"
+            }
+          },
+          {
+            "id": "pw-71",
+            "role": "link",
+            "text": "@Space_Station",
+            "attributes": {
+              "href": "/Space_Station"
+            }
+          },
+          {
+            "id": "pw-72",
+            "role": "link",
+            "text": "@NASA",
+            "attributes": {
+              "href": "/NASA"
+            }
+          },
+          {
+            "id": "pw-73",
+            "role": "link",
+            "text": "@SpaceX",
+            "attributes": {
+              "href": "/SpaceX"
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "link",
+            "text": "NASA's SpaceX 34th Commercial Resupply Services Rendezvous and Docking - NASA+",
+            "attributes": {
+              "href": "https://t.co/xcK4BXiobb",
+              "aria-label": "plus.nasa.gov NASA's SpaceX 34th Commercial Resupply Services Rendezvous and Docking - NASA+"
+            }
+          },
+          {
+            "id": "pw-75",
+            "role": "link",
+            "text": "From plus.nasa.gov",
+            "attributes": {
+              "href": "https://t.co/xcK4BXiobb"
+            }
+          },
+          {
+            "id": "pw-77",
+            "role": "button",
+            "text": "0 Replies. Reply",
+            "attributes": {
+              "type": "button",
+              "aria-label": "0 Replies. Reply",
+              "data-testid": "reply"
+            }
+          },
+          {
+            "id": "pw-78",
+            "role": "button",
+            "text": "8",
+            "attributes": {
+              "type": "button",
+              "aria-label": "8 reposts. Repost",
+              "data-testid": "retweet"
+            }
+          },
+          {
+            "id": "pw-79",
+            "role": "button",
+            "text": "0 Likes. Like",
+            "attributes": {
+              "type": "button",
+              "aria-label": "0 Likes. Like",
+              "data-testid": "like"
+            }
+          },
+          {
+            "id": "pw-80",
+            "role": "link",
+            "text": "5.4K",
+            "attributes": {
+              "href": "/NASA/status/2055933467959926832/analytics",
+              "aria-label": "5471 views. View post analytics"
+            }
+          },
+          {
+            "id": "pw-81",
+            "role": "button",
+            "text": "Bookmark",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Bookmark",
+              "data-testid": "bookmark"
+            }
+          },
+          {
+            "id": "pw-82",
+            "role": "button",
+            "text": "Share post",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Share post"
+            }
+          },
+          {
+            "id": "pw-84",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/NASA"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => {\n  const selectors = [\n    '[data-testid=\"UserDescription\"]',\n    '[data-testid=\"UserName\"]',\n    '[data-testid=\"UserProfileHeader_Items\"]'\n  ];\n  const out = {};\n  for (const s of selectors) out[s] = Array.from(document.querySelectorAll(s)).map(e => e.innerText);\n  const text = document.body.innerText;\n  const idx = text.indexOf('@NASA');\n  out.bodySnippet = idx >= 0 ? text.slice(Math.max(0, idx - 100), idx + 500) : text.slice(0, 1000);\n  return JSON.stringify(out);\n})()"
+        }
+      },
+      "observation": "Eval: \"{\\\"[data-testid=\\\\\\\"UserDescription\\\\\\\"]\\\":[\\\"Making the seemingly impossible, possible. \\\"],\\\"[data-testid=\\\\\\\"UserName\\\\\\\"]\\\":[\\\"NASA\\\\n@NASA\\\"],\\\"[data-testid=\\\\\\\"UserProfileHeader_Items\\\\\\\"]\\\":[\\\"Pale Blue Dotnasa.govBorn October 1, 1958\\\\nJoined December 2007\\\"],\\\"bodySnippet\\\":\\\"r choices.\\\\nAccept all cookies\\\\nRefuse non-essential cookies\\\\nNASA\\\\n74K posts\\\\nSee new posts\\\\nFollow\\\\nNASA\\\\n@NASA\\\\nMaking the seemingly impossible, possible. \\\\nPale Blue Dotnasa.govBorn October 1, 1958\\\\"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://x.com/NASA",
+        "title": "NASA (@NASA) / X",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Log in",
+            "attributes": {
+              "href": "/login",
+              "data-testid": "login"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Sign up",
+            "attributes": {
+              "href": "/i/flow/signup",
+              "data-testid": "signup"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "Show more about your choices.",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Accept all cookies",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Refuse non-essential cookies",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "Skip to home timeline",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Skip to home timeline"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "button",
+            "text": "Skip to trending",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Skip to trending"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "X",
+            "attributes": {
+              "href": "/",
+              "aria-label": "X"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "button",
+            "text": "Back",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Back",
+              "data-testid": "app-bar-back"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "See new posts",
+            "attributes": {
+              "type": "button",
+              "aria-label": "New posts are available. Push the period key to go to the them."
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/NASA/header_photo"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/NASA/photo"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "button",
+            "text": "Follow",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Follow @NASA",
+              "data-testid": "11348282-follow"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "button",
+            "text": "Provides details about verified accounts.",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Provides details about verified accounts."
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "119 Following",
+            "attributes": {
+              "href": "/NASA/following"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "91.9M Followers",
+            "attributes": {
+              "href": "/NASA/verified_followers"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "button",
+            "text": "Previous",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Previous"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "button",
+            "text": "Next",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/NASA"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "NASA",
+            "attributes": {
+              "href": "/NASA"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "@NASA",
+            "attributes": {
+              "href": "/NASA"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "9h",
+            "attributes": {
+              "href": "/NASA/status/2055936487187788000",
+              "aria-label": "9 hours ago"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "button",
+            "text": "More",
+            "attributes": {
+              "type": "button",
+              "aria-label": "More",
+              "data-testid": "caret"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "@Space_Station",
+            "attributes": {
+              "href": "/Space_Station"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "button",
+            "text": "Play Broadcast. 360.9K views",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Play Broadcast. 360.9K views"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "NASA\n@NASA\nNASA's SpaceX 34th Commercial Resupply Services Rendezvous and Docking",
+            "attributes": {
+              "href": "/i/broadcasts/1DGleElVOyDJL"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "button",
+            "text": "607",
+            "attributes": {
+              "type": "button",
+              "aria-label": "607 Replies. Reply",
+              "data-testid": "reply"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "button",
+            "text": "1.4K",
+            "attributes": {
+              "type": "button",
+              "aria-label": "1461 reposts. Repost",
+              "data-testid": "retweet"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "button",
+            "text": "5.4K",
+            "attributes": {
+              "type": "button",
+              "aria-label": "5499 Likes. Like",
+              "data-testid": "like"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "link",
+            "text": "1.2M",
+            "attributes": {
+              "href": "/NASA/status/2055936487187788000/analytics",
+              "aria-label": "1238518 views. View post analytics"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "button",
+            "text": "Bookmark",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Bookmark",
+              "data-testid": "bookmark"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "button",
+            "text": "Share post",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Share post"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/NASA"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "NASA",
+            "attributes": {
+              "href": "/NASA"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "link",
+            "text": "@NASA",
+            "attributes": {
+              "href": "/NASA"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "link",
+            "text": "10h",
+            "attributes": {
+              "href": "/NASA/status/2055933467959926832",
+              "aria-label": "10 hours ago"
+            }
+          },
+          {
+            "id": "pw-70",
+            "role": "button",
+            "text": "More",
+            "attributes": {
+              "type": "button",
+              "aria-label": "More",
+              "data-testid": "caret"
+            }
+          },
+          {
+            "id": "pw-71",
+            "role": "link",
+            "text": "@Space_Station",
+            "attributes": {
+              "href": "/Space_Station"
+            }
+          },
+          {
+            "id": "pw-72",
+            "role": "link",
+            "text": "@NASA",
+            "attributes": {
+              "href": "/NASA"
+            }
+          },
+          {
+            "id": "pw-73",
+            "role": "link",
+            "text": "@SpaceX",
+            "attributes": {
+              "href": "/SpaceX"
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "link",
+            "text": "NASA's SpaceX 34th Commercial Resupply Services Rendezvous and Docking - NASA+",
+            "attributes": {
+              "href": "https://t.co/xcK4BXiobb",
+              "aria-label": "plus.nasa.gov NASA's SpaceX 34th Commercial Resupply Services Rendezvous and Docking - NASA+"
+            }
+          },
+          {
+            "id": "pw-75",
+            "role": "link",
+            "text": "From plus.nasa.gov",
+            "attributes": {
+              "href": "https://t.co/xcK4BXiobb"
+            }
+          },
+          {
+            "id": "pw-77",
+            "role": "button",
+            "text": "0 Replies. Reply",
+            "attributes": {
+              "type": "button",
+              "aria-label": "0 Replies. Reply",
+              "data-testid": "reply"
+            }
+          },
+          {
+            "id": "pw-78",
+            "role": "button",
+            "text": "8",
+            "attributes": {
+              "type": "button",
+              "aria-label": "8 reposts. Repost",
+              "data-testid": "retweet"
+            }
+          },
+          {
+            "id": "pw-79",
+            "role": "button",
+            "text": "0 Likes. Like",
+            "attributes": {
+              "type": "button",
+              "aria-label": "0 Likes. Like",
+              "data-testid": "like"
+            }
+          },
+          {
+            "id": "pw-80",
+            "role": "link",
+            "text": "5.4K",
+            "attributes": {
+              "href": "/NASA/status/2055933467959926832/analytics",
+              "aria-label": "5471 views. View post analytics"
+            }
+          },
+          {
+            "id": "pw-81",
+            "role": "button",
+            "text": "Bookmark",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Bookmark",
+              "data-testid": "bookmark"
+            }
+          },
+          {
+            "id": "pw-82",
+            "role": "button",
+            "text": "Share post",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Share post"
+            }
+          },
+          {
+            "id": "pw-84",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/NASA"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "Making the seemingly impossible, possible."
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

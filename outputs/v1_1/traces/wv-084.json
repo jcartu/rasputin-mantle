@@ -1,0 +1,886 @@
+{
+  "task_id": "wv-084",
+  "task_description": "On Pinterest, find a board about minimalist home office design and report its title.",
+  "starting_url": "https://www.pinterest.com",
+  "passed": true,
+  "final_answer": "Minimalist Home Office",
+  "duration_s": 21.31,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://www.pinterest.com/",
+        "title": "Pinterest",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to content",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Pinterest home",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Pinterest home"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "href": "/ideas"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "combobox",
+            "text": "Search",
+            "attributes": {
+              "id": "search-input",
+              "name": "searchBoxInput",
+              "type": "text",
+              "aria-label": "Search",
+              "placeholder": "Search for easy dinners, fashion, etc.",
+              "value": ""
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "About\n; Opens a new tab",
+            "attributes": {
+              "href": "/_/_/about/"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Businesses\n; Opens a new tab",
+            "attributes": {
+              "href": "/_/_/business/?utm_campaign=pinterest_homepage_blogicon_all_evergreen&utm_medium=organic-pinterest&utm_source=organicpins_pinsite_homepageicon"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Create\n; Opens a new tab",
+            "attributes": {
+              "href": "/_/_/create/"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "News\n; Opens a new tab",
+            "attributes": {
+              "href": "/_/_/blog/?utm_source=organicpins_pinsite_homepageicon&utm_campaign=pinterest_homepage_blogicon_all_evergreen&utm_medium=organic-pinterest"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": "Log in",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": "Sign up",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "button",
+            "text": "Join Pinterest for free",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Join Pinterest for free"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "button",
+            "text": "I already have an account",
+            "attributes": {
+              "type": "button",
+              "aria-label": "I already have an account"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-17",
+            "role": "button",
+            "text": "Scroll up",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Scroll up"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "button",
+            "text": "Scroll down",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Scroll down"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "button",
+            "text": "Scroll up",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Scroll up"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "button",
+            "text": "Join Pinterest",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Join Pinterest"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": "Scroll down",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Scroll down"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "button",
+            "text": "Scroll up",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Scroll up"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "button",
+            "text": "Join Pinterest",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Join Pinterest"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "button",
+            "text": "Scroll down",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Scroll down"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "Scroll up",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Scroll up"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "button",
+            "text": "Join Pinterest",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Join Pinterest"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "button",
+            "text": "Scroll down",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Scroll down"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Password tips",
+            "attributes": {
+              "href": ""
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "button",
+            "text": "Continue",
+            "attributes": {
+              "type": "submit",
+              "aria-label": "Continue creating your Pinterest account"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Terms of Service",
+            "attributes": {
+              "href": "/_/_/policy/terms-of-service/"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Privacy Policy",
+            "attributes": {
+              "href": "https://www.pinterest.com/_/_/policy/privacy-policy/"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "Notice at collection",
+            "attributes": {
+              "href": "https://policy.pinterest.com/notice-at-collection"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Log in",
+            "attributes": {
+              "href": "/login/"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "button",
+            "text": "Create a free business account",
+            "attributes": {}
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Pinterest home",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Pinterest home"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "iOS",
+            "attributes": {
+              "href": "https://itunes.apple.com/us/app/pinterest/id429047995"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "link",
+            "text": "Android",
+            "attributes": {
+              "href": "https://play.google.com/store/apps/details?id=com.pinterest"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "href": "/ideas/"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "link",
+            "text": "Shop",
+            "attributes": {
+              "href": "/shopping/"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "link",
+            "text": "Users",
+            "attributes": {
+              "href": "https://www.pinterest.com/html_sitemap/pinners_a.html"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "link",
+            "text": "Collections",
+            "attributes": {
+              "href": "https://www.pinterest.com/html_sitemap/boards_a.html"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "link",
+            "text": "Shopping",
+            "attributes": {
+              "href": "https://www.pinterest.com/html_sitemap/shopping_0.html"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "link",
+            "text": "Help Center",
+            "attributes": {
+              "href": "https://help.pinterest.com/"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "link",
+            "text": "Terms of service",
+            "attributes": {
+              "href": "_/_/policy/terms-of-service"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "Privacy policy",
+            "attributes": {
+              "href": "_/_/policy/privacy-policy"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "link",
+            "text": "Non-user notice",
+            "attributes": {
+              "href": "https://policy.pinterest.com/non-user-notice"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "link",
+            "text": "cookie policy",
+            "attributes": {
+              "href": "https://www.pinterest.com/_/_/policy/cookies/"
+            }
+          },
+          {
+            "id": "pw-70",
+            "role": "button",
+            "text": "Reject all",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-71",
+            "role": "button",
+            "text": "Let me choose",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-72",
+            "role": "button",
+            "text": "Accept all",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "textbox",
+            "text": null,
+            "attributes": {
+              "id": "g-recaptcha-response-100000",
+              "name": "g-recaptcha-response"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "img",
+            "text": "Pinterest logo",
+            "attributes": {
+              "aria-label": "Pinterest logo"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "img",
+            "text": "Search icon",
+            "attributes": {
+              "aria-label": "Search icon"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://www.pinterest.com/search/boards/?q=minimalist%20home%20office%20design&rs=typed"
+        }
+      },
+      "observation": "Opened https://www.pinterest.com/search/boards/?q=minimalist%20home%20office%20design&rs=typed"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://www.pinterest.com/search/boards/?q=minimalist%20home%20office%20design&rs=typed",
+        "title": "Pinterest",
+        "elements": []
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => ({url: location.href, title: document.title, bodyText: document.body ? document.body.innerText.slice(0,2000) : '', links: Array.from(document.querySelectorAll('a')).slice(0,50).map(a=>({text:a.innerText, href:a.href, aria:a.getAttribute('aria-label')}))}))()"
+        }
+      },
+      "observation": "Eval: {\"url\": \"https://www.pinterest.com/search/boards/?q=minimalist%20home%20office%20design&rs=typed\", \"title\": \"Pinterest\", \"bodyText\": \"Skip to content\\nExplore\\nLog in\\nSign up\\nSearch\\nShowing more search results for minimalist home office design\\nModern Minimalist Office\\nWorkspace Bliss | Office and Home Decor + Office Trends & Tips\\n88 Pins\\n\\u00b7\\n2w\\nMinimalist Home Ideas\\nLady Decluttered | Decluttering, Organizing, & Simple Living Tips\\n724 Pins\\n\\u00b7\\n4d\\nMinimalist Home Office\\nQuiet"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://www.pinterest.com/search/boards/?q=minimalist%20home%20office%20design&rs=typed",
+        "title": "Pinterest",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to content",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Pinterest home",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Pinterest home"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "href": "/ideas"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "combobox",
+            "text": "Search",
+            "attributes": {
+              "id": "search-input",
+              "name": "searchBoxInput",
+              "type": "text",
+              "aria-label": "Search",
+              "placeholder": "Search for easy dinners, fashion, etc.",
+              "value": "minimalist home office design"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "Remove search input",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Remove search input"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "button",
+            "text": "Log in",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "button",
+            "text": "Sign up",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Setting",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Setting"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": "Show filters",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Show filters"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Modern Minimalist Office\nWorkspace Bliss | Office and Home Decor + Office Trends & Tips\n88 Pins\n\u00b7\n2w",
+            "attributes": {
+              "href": "/WorkspaceBliss/modern-minimalist-office/"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Minimalist Home Ideas\nLady Decluttered | Decluttering, Organizing, & Simple Living Tips\n724 Pins\n\u00b7\n4d",
+            "attributes": {
+              "href": "/justjesLD/minimalist-home-ideas/"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Minimalist Home Office\nQuietly | Minimalist Interior Design | Calm Aesthetic\n89 Pins\n\u00b7\n1w",
+            "attributes": {
+              "href": "/quietly_interiors/minimalist-home-office/"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Home Office\nHometalk.com\n246 Pins\n\u00b7\n1w",
+            "attributes": {
+              "href": "/hometalk/home-office/"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Home Office\nKendra Hagerman | Budget Babe, Sale Alerts, and Copycat Finds\n228 Pins\n\u00b7\n3d",
+            "attributes": {
+              "href": "/KendraFoundIt/home-office/"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Minimalist Home Office\nEdward George\n120 Pins\n\u00b7\n8mo",
+            "attributes": {
+              "href": "/edwardgeorgelondon/minimalist-home-office/"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Offices\nAudrey Scheck Design\n237 Pins\n\u00b7\n3w",
+            "attributes": {
+              "href": "/audreyscheckdesign/offices/"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Home Offices\nJMAD\n86 Pins\n\u00b7\n4 sections\n\u00b7\n1d",
+            "attributes": {
+              "href": "/JMADarchitecture/home-offices/"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Minimalist Home Office\nGreen With Less | Minimalism, Decluttering & Sustainable Living\n25 Pins\n\u00b7\n1d",
+            "attributes": {
+              "href": "/greenwithless/minimalist-home-office/"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Home Office Decor Ideas\nEveryday Inspo\n275 Pins\n\u00b7\n2d",
+            "attributes": {
+              "href": "/everydayinspodotcom/home-office-decor-ideas/"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Japandi Home Office\nViva\n580 Pins\n\u00b7\n3d",
+            "attributes": {
+              "href": "/casassostenibles/japandi-home-office/"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Small Home Office\nQuiet Joy At Home | Home Decor & Garden Ideas\n12 Pins\n\u00b7\n2d",
+            "attributes": {
+              "href": "/QuietJoyAtHome/small-home-office/"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Forgot your password?",
+            "attributes": {
+              "href": "/password/reset/"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "button",
+            "text": "Log in",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "button",
+            "text": "Use QR code",
+            "attributes": {
+              "aria-label": "QR code login button"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Update login method",
+            "attributes": {
+              "href": "/password/reset/?lookup=true"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "Not on Pinterest yet? Sign up",
+            "attributes": {
+              "href": "/login/"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "link",
+            "text": "Get started here!",
+            "attributes": {
+              "href": "https://www.pinterest.com/business/create/"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "link",
+            "text": "Terms of Service",
+            "attributes": {
+              "href": "/_/_/policy/terms-of-service/"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "link",
+            "text": "Privacy Policy",
+            "attributes": {
+              "href": "https://www.pinterest.com/_/_/policy/privacy-policy/"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "link",
+            "text": "Notice at collection",
+            "attributes": {
+              "href": "https://policy.pinterest.com/notice-at-collection"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "textbox",
+            "text": null,
+            "attributes": {
+              "id": "g-recaptcha-response-100000",
+              "name": "g-recaptcha-response"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "img",
+            "text": "Pinterest logo",
+            "attributes": {
+              "aria-label": "Pinterest logo"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "img",
+            "text": null,
+            "attributes": {
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "img",
+            "text": null,
+            "attributes": {
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "main",
+            "text": "Search\nShowing more search results for minimalist home office design\nModern Minimalist Office\nWorkspace Bliss | Office and Home Decor + Office Trends & Tips\n88 Pins\n\u00b7\n2w\nMinimalist Home Ideas\nLady Decluttered | Decluttering, Organizing, & Simple Living Tips\n724 Pins\n\u00b7\n4d\nMinimalist Home Office\nQuietly | Minimalist Interior Design | Calm Aesthetic\n89 Pins\n\u00b7\n1w\nHome Office\nHometalk.com\n246 Pins\n\u00b7\n1w\nHome Office\nKendra Hagerman | Budget Babe, Sale Alerts, and Copycat Finds\n228 Pins\n\u00b7\n3d\nMinimalist Home Office\nEdward George\n120 Pins\n\u00b7\n8mo\nOffices\nAudrey Scheck Design\n237 Pins\n\u00b7\n3w\nHome Offices\nJMAD\n86 Pins\n\u00b7\n4 sections\n\u00b7\n1d\nMinimalist Home Office\nGreen With Less | Minimalism, Decluttering & Sustainable Living\n25 Pins\n\u00b7\n1d\nHome Office Decor Ideas\nEveryday Inspo\n275 Pins\n\u00b7\n2d\nJapandi Home Office\nViva\n580 Pins\n\u00b7\n3d\nSmall Home Office\nQuiet Joy At Home | Home Decor & Garden Ideas\n12 Pins\n\u00b7\n2d",
+            "attributes": {
+              "id": "mweb-unauth-container"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "img",
+            "text": null,
+            "attributes": {
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "radio",
+            "text": "All Pins",
+            "attributes": {
+              "id": "single-select-filter-0",
+              "name": "search-filter",
+              "type": "radio",
+              "value": "All Pins"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "radio",
+            "text": "Videos",
+            "attributes": {
+              "id": "single-select-filter-1",
+              "name": "search-filter",
+              "type": "radio",
+              "value": "Videos"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "radio",
+            "text": "Boards",
+            "attributes": {
+              "id": "single-select-filter-2",
+              "name": "search-filter",
+              "type": "radio",
+              "value": "Boards"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "radio",
+            "text": "Profiles",
+            "attributes": {
+              "id": "single-select-filter-3",
+              "name": "search-filter",
+              "type": "radio",
+              "value": "Profiles"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "radio",
+            "text": "Products",
+            "attributes": {
+              "id": "single-select-filter-4",
+              "name": "search-filter",
+              "type": "radio",
+              "value": "Products"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "list",
+            "text": "Modern Minimalist Office\nWorkspace Bliss | Office and Home Decor + Office Trends & Tips\n88 Pins\n\u00b7\n2w\nMinimalist Home Ideas\nLady Decluttered | Decluttering, Organizing, & Simple Living Tips\n724 Pins\n\u00b7\n4d\nMinimalist Home Office\nQuietly | Minimalist Interior Design | Calm Aesthetic\n89 Pins\n\u00b7\n1w\nHome Office\nHometalk.com\n246 Pins\n\u00b7\n1w\nHome Office\nKendra Hagerman | Budget Babe, Sale Alerts, and Copycat Finds\n228 Pins\n\u00b7\n3d\nMinimalist Home Office\nEdward George\n120 Pins\n\u00b7\n8mo\nOffices\nAudrey Scheck Design\n237 Pins\n\u00b7\n3w\nHome Offices\nJMAD\n86 Pins\n\u00b7\n4 sections\n\u00b7\n1d\nMinimalist Home Office\nGreen With Less | Minimalism, Decluttering & Sustainable Living\n25 Pins\n\u00b7\n1d\nHome Office Decor Ideas\nEveryday Inspo\n275 Pins\n\u00b7\n2d\nJapandi Home Office\nViva\n580 Pins\n\u00b7\n3d\nSmall Home Office\nQuiet Joy At Home | Home Decor & Garden Ideas\n12 Pins\n\u00b7\n2d",
+            "attributes": {}
+          },
+          {
+            "id": "pw-20",
+            "role": "listitem",
+            "text": "Modern Minimalist Office\nWorkspace Bliss | Office and Home Decor + Office Trends & Tips\n88 Pins\n\u00b7\n2w",
+            "attributes": {}
+          },
+          {
+            "id": "pw-22",
+            "role": "listitem",
+            "text": "Minimalist Home Ideas\nLady Decluttered | Decluttering, Organizing, & Simple Living Tips\n724 Pins\n\u00b7\n4d",
+            "attributes": {}
+          },
+          {
+            "id": "pw-24",
+            "role": "listitem",
+            "text": "Minimalist Home Office\nQuietly | Minimalist Interior Design | Calm Aesthetic\n89 Pins\n\u00b7\n1w",
+            "attributes": {}
+          },
+          {
+            "id": "pw-26",
+            "role": "listitem",
+            "text": "Home Office\nHometalk.com\n246 Pins\n\u00b7\n1w",
+            "attributes": {}
+          },
+          {
+            "id": "pw-28",
+            "role": "img",
+            "text": "Identity verification badge icon",
+            "attributes": {
+              "aria-label": "Identity verification badge icon"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "listitem",
+            "text": "Home Office\nKendra Hagerman | Budget Babe, Sale Alerts, and Copycat Finds\n228 Pins\n\u00b7\n3d",
+            "attributes": {}
+          },
+          {
+            "id": "pw-31",
+            "role": "listitem",
+            "text": "Minimalist Home Office\nEdward George\n120 Pins\n\u00b7\n8mo",
+            "attributes": {}
+          },
+          {
+            "id": "pw-33",
+            "role": "img",
+            "text": "Merchant verification badge icon",
+            "attributes": {
+              "aria-label": "Merchant verification badge icon"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "Minimalist Home Office"
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

@@ -1,0 +1,2084 @@
+{
+  "task_id": "wv-030",
+  "task_description": "On Cambridge Dictionary, find the British pronunciation audio label for the word 'schedule'.",
+  "starting_url": "https://dictionary.cambridge.org",
+  "passed": true,
+  "final_answer": "UK /\u02c8\u0283ed\u0292.u\u02d0l/",
+  "duration_s": 51.98,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://dictionary.cambridge.org/",
+        "title": "Cambridge Dictionary | English Dictionary, Translations & Thesaurus",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "AI Assistant \nDictionary\n \nTranslate\n \nGrammar\n \nThesaurus\n \n+Plus\n \nGames\n    Log in / Sign up  English (UK)",
+            "attributes": {
+              "id": "topNavBar",
+              "aria-label": "Close autocomplete"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "Open site navigation panel",
+            "attributes": {
+              "aria-label": "Open site navigation panel"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "AI Assistant",
+            "attributes": {
+              "href": "/assistant"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "AI Assistant",
+            "attributes": {}
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Dictionary",
+            "attributes": {
+              "href": "/dictionary/"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Translate",
+            "attributes": {
+              "href": "/translate/"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Grammar",
+            "attributes": {
+              "href": "/grammar/british-grammar/"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Thesaurus",
+            "attributes": {
+              "href": "/thesaurus/"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "+Plus",
+            "attributes": {
+              "href": "/plus/"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Games",
+            "attributes": {
+              "href": "/games/?utm_source=CDO&utm_medium=nav-bar&utm_campaign=gameshub-CDO-1&utm_id=games-nav&utm_content=games-nav"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "mobileLogButton",
+              "aria-label": "View user options"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Cambridge Dictionary +Plus",
+            "attributes": {
+              "href": "/plus/"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "My profile",
+            "attributes": {
+              "href": "/auth/profile"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "+Plus help",
+            "attributes": {
+              "href": "/howto.html"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "aria-label": "Open language selection panel"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.facebook.com/CUPCambridgeDictionary/"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.instagram.com/cambridgewords"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://twitter.com/CambridgeWords"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "desktopLogButton",
+              "aria-label": "View user options"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Cambridge Dictionary +Plus",
+            "attributes": {
+              "href": "/plus/"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "My profile",
+            "attributes": {
+              "href": "/auth/profile"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "+Plus help",
+            "attributes": {
+              "href": "/howto.html"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "button",
+            "text": "English (UK)",
+            "attributes": {
+              "aria-label": "Open language selection panel"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-29",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button",
+              "aria-label": "Reverse the from/to datasets"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "button",
+            "text": "English",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Choose a dictionary"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit",
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "button",
+            "text": "Grammar",
+            "attributes": {
+              "aria-label": "Set dictionary search to Grammar"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "English\u2013Spanish",
+            "attributes": {
+              "aria-label": "Set dictionary search to English\u2013Spanish"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "button",
+            "text": "Spanish\u2013English",
+            "attributes": {
+              "aria-label": "Set dictionary search to Spanish\u2013English"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "English",
+            "attributes": {
+              "href": "/dictionary/english/"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Learner\u2019s Dictionary",
+            "attributes": {
+              "href": "/dictionary/learner-english/"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Essential British English",
+            "attributes": {
+              "href": "/dictionary/essential-british-english/"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Essential American English",
+            "attributes": {
+              "href": "/dictionary/essential-american-english/"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Grammar",
+            "attributes": {
+              "href": "/grammar/british-grammar/"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Thesaurus",
+            "attributes": {
+              "href": "/thesaurus/"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Pronunciation",
+            "attributes": {
+              "href": "/pronunciation/"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "Change language direction",
+            "attributes": {
+              "aria-label": "Change language direction"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "English\u2013Chinese (Simplified)",
+            "attributes": {
+              "href": "/dictionary/english-chinese-simplified/"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Chinese (Simplified)\u2013English",
+            "attributes": {
+              "href": "/dictionary/chinese-simplified-english/"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "button",
+            "text": "Change language direction",
+            "attributes": {
+              "aria-label": "Change language direction"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "English\u2013Chinese (Traditional)",
+            "attributes": {
+              "href": "/dictionary/english-chinese-traditional/"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Chinese (Traditional)\u2013English",
+            "attributes": {
+              "href": "/dictionary/chinese-traditional-english/"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "button",
+            "text": "Change language direction",
+            "attributes": {
+              "aria-label": "Change language direction"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "English\u2013Danish",
+            "attributes": {
+              "href": "/dictionary/english-danish/"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Danish\u2013English",
+            "attributes": {
+              "href": "/dictionary/danish-english/"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "button",
+            "text": "Change language direction",
+            "attributes": {
+              "aria-label": "Change language direction"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "English\u2013Dutch",
+            "attributes": {
+              "href": "/dictionary/english-dutch/"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://dictionary.cambridge.org/dictionary/english/schedule"
+        }
+      },
+      "observation": "Opened https://dictionary.cambridge.org/dictionary/english/schedule"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://dictionary.cambridge.org/dictionary/english/schedule",
+        "title": "SCHEDULE | English meaning - Cambridge Dictionary",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "AI Assistant \nDictionary\n \nTranslate\n \nGrammar\n \nThesaurus\n \n+Plus\n \nGames\n    English (UK)",
+            "attributes": {
+              "id": "topNavBar",
+              "aria-label": "Close autocomplete"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "Open site navigation panel",
+            "attributes": {
+              "aria-label": "Open site navigation panel"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "AI Assistant",
+            "attributes": {
+              "href": "/assistant"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "AI Assistant",
+            "attributes": {}
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Dictionary",
+            "attributes": {
+              "href": "/dictionary/"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Translate",
+            "attributes": {
+              "href": "/translate/"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Grammar",
+            "attributes": {
+              "href": "/grammar/british-grammar/"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Thesaurus",
+            "attributes": {
+              "href": "/thesaurus/"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "+Plus",
+            "attributes": {
+              "href": "/plus/"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Games",
+            "attributes": {
+              "href": "/games/?utm_source=CDO&utm_medium=nav-bar&utm_campaign=gameshub-CDO-1&utm_id=games-nav&utm_content=games-nav"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "mobileLogButton",
+              "aria-label": "View user options"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Cambridge Dictionary +Plus",
+            "attributes": {
+              "href": "/plus/"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "My profile",
+            "attributes": {
+              "href": "/auth/profile"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "+Plus help",
+            "attributes": {
+              "href": "/howto.html"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "aria-label": "Open language selection panel"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.facebook.com/CUPCambridgeDictionary/"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.instagram.com/cambridgewords"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://twitter.com/CambridgeWords"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "desktopLogButton",
+              "aria-label": "View user options"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Cambridge Dictionary +Plus",
+            "attributes": {
+              "href": "/plus/"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "My profile",
+            "attributes": {
+              "href": "/auth/profile"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "+Plus help",
+            "attributes": {
+              "href": "/howto.html"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "button",
+            "text": "English (UK)",
+            "attributes": {
+              "aria-label": "Open language selection panel"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-28",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button",
+              "aria-label": "Reverse the from/to datasets"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "button",
+            "text": "English",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Choose a dictionary"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit",
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.facebook.com/sharer.php?u=https%3A%2F%2Fdictionary.cambridge.org%2Fdictionary%2Fenglish%2Fschedule&t="
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://twitter.com/intent/tweet?url=https%3A%2F%2Fdictionary.cambridge.org%2Fdictionary%2Fenglish%2Fschedule&text="
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "[ C ]",
+            "attributes": {
+              "href": "/help/codes.html"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-39",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "list",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/list"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "planned",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/planned"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "activities",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/activity"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "showing",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/showing"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "times",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/times"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "dates",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/date"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "intended",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/intended"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "happen",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/happen"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "production",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/production"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "hectic",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/hectic"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "tight",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/tight"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "busy",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/busy"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "according",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/accord"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "planned",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/planned"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "list",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/list"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "times",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/times"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => {\n  const bodyText = document.body.innerText;\n  const audioButtons = [...document.querySelectorAll('span.uk, span.us, .pron-info, .dpron-i, .daud, button')].map(el => ({tag: el.tagName, class: el.className, text: el.innerText || el.getAttribute('aria-label') || el.title || ''}));\n  return {bodyText: bodyText.slice(0, 2000), audioButtons};\n})()"
+        }
+      },
+      "observation": "Eval: {\"bodyText\": \" AI Assistant \\nDictionary\\n \\nTranslate\\n \\nGrammar\\n \\nThesaurus\\n \\n+Plus\\n \\nGames\\n    Log in / Sign up  English (UK) \\n English  \\nGrammar English\\u2013Spanish Spanish\\u2013English\\nMeaning of schedule in English\\n \\nschedule\\nnoun [ C ]\\nUK  /\\u02c8\\u0283ed\\u0292.u\\u02d0l/ US  /\\u02c8sked\\u0292.u\\u02d0l/\\nAdd to word list \\nB2\\na list of planned activities or things to be done showing the times or dates when they are intended to happen or be done:\\na production schedule\\na h"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://dictionary.cambridge.org/dictionary/english/schedule",
+        "title": "SCHEDULE | English meaning - Cambridge Dictionary",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "AI Assistant \nDictionary\n \nTranslate\n \nGrammar\n \nThesaurus\n \n+Plus\n \nGames\n    Log in / Sign up  English (UK)",
+            "attributes": {
+              "id": "topNavBar",
+              "aria-label": "Close autocomplete"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "Open site navigation panel",
+            "attributes": {
+              "aria-label": "Open site navigation panel"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "AI Assistant",
+            "attributes": {
+              "href": "/assistant"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "AI Assistant",
+            "attributes": {}
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Dictionary",
+            "attributes": {
+              "href": "/dictionary/"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Translate",
+            "attributes": {
+              "href": "/translate/"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Grammar",
+            "attributes": {
+              "href": "/grammar/british-grammar/"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Thesaurus",
+            "attributes": {
+              "href": "/thesaurus/"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "+Plus",
+            "attributes": {
+              "href": "/plus/"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Games",
+            "attributes": {
+              "href": "/games/?utm_source=CDO&utm_medium=nav-bar&utm_campaign=gameshub-CDO-1&utm_id=games-nav&utm_content=games-nav"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "mobileLogButton",
+              "aria-label": "View user options"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Cambridge Dictionary +Plus",
+            "attributes": {
+              "href": "/plus/"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "My profile",
+            "attributes": {
+              "href": "/auth/profile"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "+Plus help",
+            "attributes": {
+              "href": "/howto.html"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "aria-label": "Open language selection panel"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.facebook.com/CUPCambridgeDictionary/"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.instagram.com/cambridgewords"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://twitter.com/CambridgeWords"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "desktopLogButton",
+              "aria-label": "View user options"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Cambridge Dictionary +Plus",
+            "attributes": {
+              "href": "/plus/"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "My profile",
+            "attributes": {
+              "href": "/auth/profile"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "+Plus help",
+            "attributes": {
+              "href": "/howto.html"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "button",
+            "text": "English (UK)",
+            "attributes": {
+              "aria-label": "Open language selection panel"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-28",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button",
+              "aria-label": "Reverse the from/to datasets"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "button",
+            "text": "English",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Choose a dictionary"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit",
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "button",
+            "text": "Grammar",
+            "attributes": {
+              "aria-label": "Set dictionary search to Grammar"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "button",
+            "text": "English\u2013Spanish",
+            "attributes": {
+              "aria-label": "Set dictionary search to English\u2013Spanish"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "Spanish\u2013English",
+            "attributes": {
+              "aria-label": "Set dictionary search to Spanish\u2013English"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.facebook.com/sharer.php?u=https%3A%2F%2Fdictionary.cambridge.org%2Fdictionary%2Fenglish%2Fschedule&t="
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://twitter.com/intent/tweet?url=https%3A%2F%2Fdictionary.cambridge.org%2Fdictionary%2Fenglish%2Fschedule&text="
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "[ C ]",
+            "attributes": {
+              "href": "/help/codes.html"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "list",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/list"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "planned",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/planned"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "activities",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/activity"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "showing",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/showing"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "times",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/times"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "dates",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/date"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "intended",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/intended"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "happen",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/happen"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "production",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/production"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "hectic",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/hectic"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "tight",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/tight"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "busy",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/busy"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "according",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/accord"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => {\n  const entry = document.querySelector('.entry-body__el') || document.body;\n  const audios = [...entry.querySelectorAll('span.uk, .uk, span.us, .us, .daud, audio, source, button, .dpron-i')].slice(0,80).map((el, i) => ({\n    i,\n    tag: el.tagName,\n    class: el.className,\n    text: (el.innerText || el.textContent || '').trim(),\n    aria: el.getAttribute('aria-label'),\n    title: el.getAttribute('title'),\n    dataSrcMp3: el.getAttribute('data-src-mp3'),\n    dataSrcOgg: el.getAttribute('data-src-ogg'),\n    id: el.id,\n    html: el.outerHTML.slice(0,500)\n  }));\n  return audios;\n})()"
+        }
+      },
+      "observation": "Eval: [{\"i\": 0, \"tag\": \"SPAN\", \"class\": \"uk dpron-i \", \"text\": \"UK  /\\u02c8\\u0283ed\\u0292.u\\u02d0l/\", \"aria\": null, \"title\": null, \"dataSrcMp3\": null, \"dataSrcOgg\": null, \"id\": \"\", \"html\": \"<span class=\\\"uk dpron-i \\\"><span class=\\\"region dreg\\\">uk</span><span class=\\\"daud\\\">                    \\n    <audio class=\\\"hdn\\\" preload=\\\"none\\\" id=\\\"audio1\\\" controlslist=\\\"nodownload\\\">\\n        <div class=\\\"hdib\\\" fallback=\\\"\\\">\\n            <p>Your browser doesn't support HTML5 audio</p>\\n        </div>\\n "
+    },
+    {
+      "step": 4,
+      "state": {
+        "url": "https://dictionary.cambridge.org/dictionary/english/schedule",
+        "title": "SCHEDULE | English meaning - Cambridge Dictionary",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "AI Assistant \nDictionary\n \nTranslate\n \nGrammar\n \nThesaurus\n \n+Plus\n \nGames\n    Log in / Sign up  English (UK)",
+            "attributes": {
+              "id": "topNavBar",
+              "aria-label": "Close autocomplete"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "Open site navigation panel",
+            "attributes": {
+              "aria-label": "Open site navigation panel"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "AI Assistant",
+            "attributes": {
+              "href": "/assistant"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "AI Assistant",
+            "attributes": {}
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Dictionary",
+            "attributes": {
+              "href": "/dictionary/"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Translate",
+            "attributes": {
+              "href": "/translate/"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Grammar",
+            "attributes": {
+              "href": "/grammar/british-grammar/"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Thesaurus",
+            "attributes": {
+              "href": "/thesaurus/"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "+Plus",
+            "attributes": {
+              "href": "/plus/"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Games",
+            "attributes": {
+              "href": "/games/?utm_source=CDO&utm_medium=nav-bar&utm_campaign=gameshub-CDO-1&utm_id=games-nav&utm_content=games-nav"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "mobileLogButton",
+              "aria-label": "View user options"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Cambridge Dictionary +Plus",
+            "attributes": {
+              "href": "/plus/"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "My profile",
+            "attributes": {
+              "href": "/auth/profile"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "+Plus help",
+            "attributes": {
+              "href": "/howto.html"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "aria-label": "Open language selection panel"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.facebook.com/CUPCambridgeDictionary/"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.instagram.com/cambridgewords"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://twitter.com/CambridgeWords"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "desktopLogButton",
+              "aria-label": "View user options"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Cambridge Dictionary +Plus",
+            "attributes": {
+              "href": "/plus/"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "My profile",
+            "attributes": {
+              "href": "/auth/profile"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "+Plus help",
+            "attributes": {
+              "href": "/howto.html"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "button",
+            "text": "English (UK)",
+            "attributes": {
+              "aria-label": "Open language selection panel"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-28",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button",
+              "aria-label": "Reverse the from/to datasets"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "button",
+            "text": "English",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Choose a dictionary"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit",
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "button",
+            "text": "Grammar",
+            "attributes": {
+              "aria-label": "Set dictionary search to Grammar"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "button",
+            "text": "English\u2013Spanish",
+            "attributes": {
+              "aria-label": "Set dictionary search to English\u2013Spanish"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "Spanish\u2013English",
+            "attributes": {
+              "aria-label": "Set dictionary search to Spanish\u2013English"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.facebook.com/sharer.php?u=https%3A%2F%2Fdictionary.cambridge.org%2Fdictionary%2Fenglish%2Fschedule&t="
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://twitter.com/intent/tweet?url=https%3A%2F%2Fdictionary.cambridge.org%2Fdictionary%2Fenglish%2Fschedule&text="
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "[ C ]",
+            "attributes": {
+              "href": "/help/codes.html"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "list",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/list"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "planned",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/planned"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "activities",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/activity"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "showing",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/showing"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "times",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/times"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "dates",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/date"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "intended",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/intended"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "happen",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/happen"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "production",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/production"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "hectic",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/hectic"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "tight",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/tight"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "busy",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/busy"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "according",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/accord"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => {\n  const items = [...document.querySelectorAll('.entry-body__el .dpron-i')].map((el, idx) => {\n    const btn = el.querySelector('.daud button, button, .daud');\n    const audio = el.querySelector('audio');\n    const sources = [...el.querySelectorAll('source')].map(s => ({type:s.type, src:s.src || s.getAttribute('src')}));\n    return {\n      idx,\n      class: el.className,\n      text: el.innerText.trim(),\n      btnText: btn ? btn.innerText.trim() : null,\n      btnAria: btn ? btn.getAttribute('aria-label') : null,\n      btnTitle: btn ? btn.getAttribute('title') : null,\n      btnClass: btn ? btn.className : null,\n      audioId: audio ? audio.id : null,\n      sources,\n      html: el.outerHTML.slice(0,1200)\n    };\n  });\n  return items;\n})()"
+        }
+      },
+      "observation": "Eval: [{\"idx\": 0, \"class\": \"uk dpron-i \", \"text\": \"UK  /\\u02c8\\u0283ed\\u0292.u\\u02d0l/\", \"btnText\": \"\", \"btnAria\": null, \"btnTitle\": null, \"btnClass\": \"daud\", \"audioId\": \"audio1\", \"sources\": [{\"type\": \"audio/mpeg\", \"src\": \"https://dictionary.cambridge.org/media/english/uk_pron/u/uks/uksch/uksched001.mp3\"}, {\"type\": \"audio/ogg\", \"src\": \"https://dictionary.cambridge.org/media/english/uk_pron_ogg/u/uks/uksch/uksched001.ogg\"}], \"html\": \"<span class=\\\"uk dpron-i \\\"><span class=\\\"region dreg\\\">uk</span><spa"
+    },
+    {
+      "step": 5,
+      "state": {
+        "url": "https://dictionary.cambridge.org/dictionary/english/schedule",
+        "title": "SCHEDULE | English meaning - Cambridge Dictionary",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "AI Assistant \nDictionary\n \nTranslate\n \nGrammar\n \nThesaurus\n \n+Plus\n \nGames\n    Log in / Sign up  English (UK)",
+            "attributes": {
+              "id": "topNavBar",
+              "aria-label": "Close autocomplete"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "Open site navigation panel",
+            "attributes": {
+              "aria-label": "Open site navigation panel"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "AI Assistant",
+            "attributes": {
+              "href": "/assistant"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "AI Assistant",
+            "attributes": {}
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Dictionary",
+            "attributes": {
+              "href": "/dictionary/"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Translate",
+            "attributes": {
+              "href": "/translate/"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Grammar",
+            "attributes": {
+              "href": "/grammar/british-grammar/"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Thesaurus",
+            "attributes": {
+              "href": "/thesaurus/"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "+Plus",
+            "attributes": {
+              "href": "/plus/"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Games",
+            "attributes": {
+              "href": "/games/?utm_source=CDO&utm_medium=nav-bar&utm_campaign=gameshub-CDO-1&utm_id=games-nav&utm_content=games-nav"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "mobileLogButton",
+              "aria-label": "View user options"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Cambridge Dictionary +Plus",
+            "attributes": {
+              "href": "/plus/"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "My profile",
+            "attributes": {
+              "href": "/auth/profile"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "+Plus help",
+            "attributes": {
+              "href": "/howto.html"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "aria-label": "Open language selection panel"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.facebook.com/CUPCambridgeDictionary/"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.instagram.com/cambridgewords"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://twitter.com/CambridgeWords"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "desktopLogButton",
+              "aria-label": "View user options"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Cambridge Dictionary +Plus",
+            "attributes": {
+              "href": "/plus/"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "My profile",
+            "attributes": {
+              "href": "/auth/profile"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "+Plus help",
+            "attributes": {
+              "href": "/howto.html"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "button",
+            "text": "English (UK)",
+            "attributes": {
+              "aria-label": "Open language selection panel"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-28",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button",
+              "aria-label": "Reverse the from/to datasets"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "button",
+            "text": "English",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Choose a dictionary"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit",
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "button",
+            "text": "Grammar",
+            "attributes": {
+              "aria-label": "Set dictionary search to Grammar"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "button",
+            "text": "English\u2013Spanish",
+            "attributes": {
+              "aria-label": "Set dictionary search to English\u2013Spanish"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "Spanish\u2013English",
+            "attributes": {
+              "aria-label": "Set dictionary search to Spanish\u2013English"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.facebook.com/sharer.php?u=https%3A%2F%2Fdictionary.cambridge.org%2Fdictionary%2Fenglish%2Fschedule&t="
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://twitter.com/intent/tweet?url=https%3A%2F%2Fdictionary.cambridge.org%2Fdictionary%2Fenglish%2Fschedule&text="
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "[ C ]",
+            "attributes": {
+              "href": "/help/codes.html"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "list",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/list"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "planned",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/planned"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "activities",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/activity"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "showing",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/showing"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "times",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/times"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "dates",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/date"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "intended",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/intended"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "happen",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/happen"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "production",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/production"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "hectic",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/hectic"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "tight",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/tight"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "busy",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/busy"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "according",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/accord"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "UK /\u02c8\u0283ed\u0292.u\u02d0l/"
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

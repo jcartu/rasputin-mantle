@@ -1,0 +1,1307 @@
+{
+  "task_id": "wv-009",
+  "task_description": "Find the runtime of the movie 'Oppenheimer' (2023).",
+  "starting_url": "https://www.google.com",
+  "passed": true,
+  "final_answer": "The runtime of Oppenheimer (2023) is 180 minutes (3 hours).",
+  "duration_s": 27.48,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://www.google.com/",
+        "title": "Google",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "About",
+            "attributes": {
+              "href": "https://about.google/?fg=1&utm_source=google-GB&utm_medium=referral&utm_campaign=hp-header"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Store",
+            "attributes": {
+              "href": "https://store.google.com/GB?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-GB"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "Gmail",
+            "attributes": {
+              "href": "https://mail.google.com/mail/&ogbl",
+              "aria-label": "Gmail "
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Images",
+            "attributes": {
+              "href": "https://www.google.com/imghp?hl=en&ogbl",
+              "aria-label": "Search for Images "
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "button",
+            "text": "Google apps",
+            "attributes": {
+              "href": "https://www.google.co.uk/intl/en/about/products",
+              "aria-label": "Google apps"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=futura_exp_og_so_72776762_e",
+              "aria-label": "Sign in"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "close",
+            "attributes": {
+              "id": "spchx",
+              "aria-label": "close"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "combobox",
+            "text": "Search",
+            "attributes": {
+              "id": "APjFqb",
+              "name": "q",
+              "aria-label": "Search",
+              "placeholder": "",
+              "value": ""
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "aria-label": "Clear"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "button",
+            "text": "Search by voice",
+            "attributes": {
+              "aria-label": "Search by voice"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "button",
+            "text": "Search by image",
+            "attributes": {
+              "aria-label": "Search by image"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "Close Choose what you\u2019re giving feedback on",
+            "attributes": {
+              "aria-label": "Close Choose what you\u2019re giving feedback on"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "option",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-25",
+            "role": "button",
+            "text": ".U48fD{-webkit-tap-highlight-color:transparent;cursor:pointer;display:block;line-height:18px;text-overflow:ellipsis;white-space:nowrap;padding:16px;padding-top:0;margin-top:16px;position:relative}.TQc1id .U48fD{margin-top:16px}.U48fD.df13ud{margin-top:16px}.U48fD.TOQyFc{margin-top:0}.U48fD.p8FEIf{padding-bottom:0}.jRKCUd.p8FEIf::before{bottom:-4px}.U48fD.ke7M4{padding-left:0;padding-right:0}.jRKCUd::before{bottom:12px;content:'';left:16px;position:absolute;right:16px;top:-4px}a.jRKCUd:hover{text-decoration:none}.ZFiwCf{display:flex;align-items:center;justify-content:center;position:relative;margin:0 auto;width:100%;border-radius:18px;outline:1px solid transparent;background-color:#f1f3f4;font-size:var(--hbmnje);font-family:var(--qR8X0);line-height:var(--CbdmE);font-weight:var(--Oycjt);max-width:372px;min-height:40px;border-radius:20px;}@media (forced-colors:active){.ZFiwCf{border:1px solid transparent}}.TQc1id .ZFiwCf{max-width:unset}.Zjtggb .ZFiwCf{max-width:unset}.ZFiwCf:hover{background-color:#e0e2e3}.nCFUpc .ZFiwCf{width:100%}.Bi9oQd{background-color:var(--gS5jXb);margin-top:18px;position:absolute;border:0;height:1px;left:0;width:100%;margin-top:20px;}.TQc1id .Bi9oQd{display:none}.kC8B4e .Bi9oQd{display:none}.w2fKdd svg{width:auto}.w2fKdd{color:var(--amnPwe)}.LGwnxb{-webkit-line-clamp:1;word-break:break-all;width:auto;padding-left:0;padding-right:8px;color:#202124;max-width:calc(100% - 64px);}.LGwnxb:empty{padding-right:0}.LGwnxb span,.LGwnxb div{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:auto}See more",
+            "attributes": {
+              "aria-label": "See more"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": ".JCHpcb:hover,.LvqzR .JCHpcb{color:#1558d6;text-decoration:underline}.JCHpcb{color:#70757a;font:13px Arial,sans-serif;cursor:pointer;align-self:center}@media (hover:hover){.sbai{visibility:hidden}.sbhl .sbai{visibility:inherit}}Delete",
+            "attributes": {}
+          },
+          {
+            "id": "pw-30",
+            "role": "option",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-31",
+            "role": "button",
+            "text": "Word pronunciation",
+            "attributes": {
+              "aria-label": "Word pronunciation"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "option",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "Delete",
+            "attributes": {}
+          },
+          {
+            "id": "pw-37",
+            "role": "option",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-38",
+            "role": "button",
+            "text": "Word pronunciation",
+            "attributes": {
+              "aria-label": "Word pronunciation"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "option",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": "Google Search",
+            "attributes": {
+              "name": "btnK",
+              "type": "submit",
+              "aria-label": "Google Search",
+              "value": "Google Search"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "button",
+            "text": "Report inappropriate predictions",
+            "attributes": {}
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "Google Search",
+            "attributes": {
+              "name": "btnK",
+              "type": "submit",
+              "aria-label": "Google Search",
+              "value": "Google Search"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "button",
+            "text": "I'm Feeling Lucky",
+            "attributes": {
+              "id": "gbqfbb",
+              "name": "btnI",
+              "type": "submit",
+              "aria-label": "I'm Feeling Lucky",
+              "value": "I'm Feeling Lucky"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "button",
+            "text": "I'm Feeling CuriousI'm Feeling HungryI'm Feeling AdventurousI'm Feeling PlayfulI'm Feeling StellarI'm Feeling DoodleyI'm Feeling TrendyI'm Feeling ArtisticI'm feeling funnyI'm feeling mindful",
+            "attributes": {}
+          },
+          {
+            "id": "pw-63",
+            "role": "link",
+            "text": "Advertising",
+            "attributes": {
+              "href": "https://www.google.com/intl/en_uk/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "link",
+            "text": "Business",
+            "attributes": {
+              "href": "https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "link",
+            "text": "How Search works",
+            "attributes": {
+              "href": "https://google.com/search/howsearchworks/?fg=1"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "Applying AI towards science and the environment",
+            "attributes": {
+              "href": "https://ai.google/societal_impact/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "link",
+            "text": "Privacy",
+            "attributes": {
+              "href": "https://policies.google.com/privacy?hl=en-GB&fg=1"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "link",
+            "text": "Terms",
+            "attributes": {
+              "href": "https://policies.google.com/terms?hl=en-GB&fg=1"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "button",
+            "text": "Settings",
+            "attributes": {}
+          },
+          {
+            "id": "pw-96",
+            "role": "link",
+            "text": "Dark theme: Off",
+            "attributes": {}
+          },
+          {
+            "id": "pw-98",
+            "role": "button",
+            "text": "EN",
+            "attributes": {
+              "id": "vc3jof",
+              "aria-label": "Language: \u202aEnglish\u202c"
+            }
+          },
+          {
+            "id": "pw-190",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "id": "gksS1d"
+            }
+          },
+          {
+            "id": "pw-192",
+            "role": "link",
+            "text": "cookies",
+            "attributes": {
+              "href": "https://policies.google.com/technologies/cookies?utm_source=ucbs&hl=en-GB"
+            }
+          },
+          {
+            "id": "pw-193",
+            "role": "button",
+            "text": "Reject all",
+            "attributes": {
+              "id": "W0wltc"
+            }
+          },
+          {
+            "id": "pw-195",
+            "role": "button",
+            "text": "Accept all",
+            "attributes": {
+              "id": "L2AGLb"
+            }
+          },
+          {
+            "id": "pw-197",
+            "role": "link",
+            "text": "More options",
+            "attributes": {
+              "id": "VnjCcb"
+            }
+          },
+          {
+            "id": "pw-198",
+            "role": "link",
+            "text": "More options",
+            "attributes": {
+              "aria-label": "More options for personalisation settings and cookies"
+            }
+          },
+          {
+            "id": "pw-199",
+            "role": "link",
+            "text": "Privacy",
+            "attributes": {
+              "id": "RP3V5c",
+              "href": "https://policies.google.com/privacy?hl=en-GB&fg=1&utm_source=ucbs"
+            }
+          },
+          {
+            "id": "pw-200",
+            "role": "link",
+            "text": "Terms",
+            "attributes": {
+              "id": "HQ1lb",
+              "href": "https://policies.google.com/terms?hl=en-GB&fg=1&utm_source=ucbs"
+            }
+          },
+          {
+            "id": "pw-201",
+            "role": "textbox",
+            "text": null,
+            "attributes": {
+              "name": "csi"
+            }
+          },
+          {
+            "id": "pw-0",
+            "role": "navigation",
+            "text": "About\nStore\nGmailImages\nSign in",
+            "attributes": {}
+          },
+          {
+            "id": "pw-3",
+            "role": "none",
+            "text": "GmailImages\nSign in",
+            "attributes": {
+              "id": "gb"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "img",
+            "text": "Google",
+            "attributes": {
+              "aria-label": "Google"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "search",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-15",
+            "role": "dialog",
+            "text": ".YB4h9{background-color:var(--TMYS9);color:var(--EpFNW);font-family:Google Sans,Roboto,Arial,sans-serif;padding:18px 60px 18px 12px;position:relative}.YB4h9.dNS45b{background-color:var(--xhUGwc);color:var(--bbQxAb);padding:0;}.YB4h9.dNS45b{margin-bottom:0}.YB4h9.dNS45b:not(.C7Cyn){padding-top:16px;padding-top:0;margin-top:0}.ctiYKd{background-color:var(--DEeStf);border-radius:16px;padding:16px;text-align:left;}.YB4h9.q7XNbb.C7Cyn .ctiYKd{border-radius:0 0 16px 16px}.ctiYKd .FsAdRd{display:none}.YB4h9.q7XNbb.C7Cyn .ctiYKd .FsAdRd{display:block;background-color:var(--ZEpPmd);height:1px;margin:0 -16px 16px -16px}.C85rO{font-size:20px}.YB4h9.dNS45b .C85rO{font-size:var(--uBdgTe);font-weight:500;padding-right:56px}.Gtr0ne{margin-top:4px}.twTT9c{}.YB4h9 .Gtr0ne .twTT9c{color:var(--EpFNW);padding:10px 0 0;text-decoration:underline;background:none;border:none;font:inherit}.YB4h9.dNS45b .Gtr0ne .twTT9c{color:inherit;padding:0}.YB4h9 .Job8vb{top:0;padding:20px;position:absolute;right:0}.YB4h9.dNS45b .Job8vb{top:50%;transform:translateY(-50%)}.YB4h9.q7XNbb{margin-bottom:44px}.YB4h9.q7XNbb.dNS45b{margin-top:0;margin-bottom:16px}.YB4h9.q7XNbb.dNS45b.C7Cyn{margin-top:-16px}#rhs .YB4h9.q7XNbb.dNS45b.C7Cyn{margin-top:-32px}Choose what you\u2019re giving feedback on",
+            "attributes": {
+              "aria-label": "Choose what you\u2019re giving feedback on"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "type",
+        "args": {
+          "id": "pw-11",
+          "text": "Oppenheimer 2023 runtime"
+        }
+      },
+      "observation": "Typed into pw-11"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://www.google.com/",
+        "title": "Google",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "About",
+            "attributes": {
+              "href": "https://about.google/?fg=1&utm_source=google-GB&utm_medium=referral&utm_campaign=hp-header"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Store",
+            "attributes": {
+              "href": "https://store.google.com/GB?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-GB"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "Gmail",
+            "attributes": {
+              "href": "https://mail.google.com/mail/&ogbl",
+              "aria-label": "Gmail "
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Images",
+            "attributes": {
+              "href": "https://www.google.com/imghp?hl=en&ogbl",
+              "aria-label": "Search for Images "
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "button",
+            "text": "Google apps",
+            "attributes": {
+              "href": "https://www.google.co.uk/intl/en/about/products",
+              "aria-label": "Google apps"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=futura_exp_og_so_72776762_e",
+              "aria-label": "Sign in"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "close",
+            "attributes": {
+              "id": "spchx",
+              "aria-label": "close"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "combobox",
+            "text": "Search",
+            "attributes": {
+              "id": "APjFqb",
+              "name": "q",
+              "aria-label": "Search",
+              "placeholder": "",
+              "value": ""
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": "Clear",
+            "attributes": {
+              "aria-label": "Clear"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "button",
+            "text": "Search by voice",
+            "attributes": {
+              "aria-label": "Search by voice"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "button",
+            "text": "Search by image",
+            "attributes": {
+              "aria-label": "Search by image"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "Close Choose what you\u2019re giving feedback on",
+            "attributes": {
+              "aria-label": "Close Choose what you\u2019re giving feedback on"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "option",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-25",
+            "role": "button",
+            "text": ".U48fD{-webkit-tap-highlight-color:transparent;cursor:pointer;display:block;line-height:18px;text-overflow:ellipsis;white-space:nowrap;padding:16px;padding-top:0;margin-top:16px;position:relative}.TQc1id .U48fD{margin-top:16px}.U48fD.df13ud{margin-top:16px}.U48fD.TOQyFc{margin-top:0}.U48fD.p8FEIf{padding-bottom:0}.jRKCUd.p8FEIf::before{bottom:-4px}.U48fD.ke7M4{padding-left:0;padding-right:0}.jRKCUd::before{bottom:12px;content:'';left:16px;position:absolute;right:16px;top:-4px}a.jRKCUd:hover{text-decoration:none}.ZFiwCf{display:flex;align-items:center;justify-content:center;position:relative;margin:0 auto;width:100%;border-radius:18px;outline:1px solid transparent;background-color:#f1f3f4;font-size:var(--hbmnje);font-family:var(--qR8X0);line-height:var(--CbdmE);font-weight:var(--Oycjt);max-width:372px;min-height:40px;border-radius:20px;}@media (forced-colors:active){.ZFiwCf{border:1px solid transparent}}.TQc1id .ZFiwCf{max-width:unset}.Zjtggb .ZFiwCf{max-width:unset}.ZFiwCf:hover{background-color:#e0e2e3}.nCFUpc .ZFiwCf{width:100%}.Bi9oQd{background-color:var(--gS5jXb);margin-top:18px;position:absolute;border:0;height:1px;left:0;width:100%;margin-top:20px;}.TQc1id .Bi9oQd{display:none}.kC8B4e .Bi9oQd{display:none}.w2fKdd svg{width:auto}.w2fKdd{color:var(--amnPwe)}.LGwnxb{-webkit-line-clamp:1;word-break:break-all;width:auto;padding-left:0;padding-right:8px;color:#202124;max-width:calc(100% - 64px);}.LGwnxb:empty{padding-right:0}.LGwnxb span,.LGwnxb div{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:auto}See more",
+            "attributes": {
+              "aria-label": "See more"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": ".JCHpcb:hover,.LvqzR .JCHpcb{color:#1558d6;text-decoration:underline}.JCHpcb{color:#70757a;font:13px Arial,sans-serif;cursor:pointer;align-self:center}@media (hover:hover){.sbai{visibility:hidden}.sbhl .sbai{visibility:inherit}}Delete",
+            "attributes": {}
+          },
+          {
+            "id": "pw-30",
+            "role": "option",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-31",
+            "role": "button",
+            "text": "Word pronunciation",
+            "attributes": {
+              "aria-label": "Word pronunciation"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "option",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "Delete",
+            "attributes": {}
+          },
+          {
+            "id": "pw-37",
+            "role": "option",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-38",
+            "role": "button",
+            "text": "Word pronunciation",
+            "attributes": {
+              "aria-label": "Word pronunciation"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "option",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": "Google Search",
+            "attributes": {
+              "name": "btnK",
+              "type": "submit",
+              "aria-label": "Google Search",
+              "value": "Google Search"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "button",
+            "text": "Report inappropriate predictions",
+            "attributes": {}
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "Google Search",
+            "attributes": {
+              "name": "btnK",
+              "type": "submit",
+              "aria-label": "Google Search",
+              "value": "Google Search"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "button",
+            "text": "I'm Feeling Lucky",
+            "attributes": {
+              "id": "gbqfbb",
+              "name": "btnI",
+              "type": "submit",
+              "aria-label": "I'm Feeling Lucky",
+              "value": "I'm Feeling Lucky"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "button",
+            "text": "I'm Feeling CuriousI'm Feeling HungryI'm Feeling AdventurousI'm Feeling PlayfulI'm Feeling StellarI'm Feeling DoodleyI'm Feeling TrendyI'm Feeling ArtisticI'm feeling funnyI'm feeling mindful",
+            "attributes": {}
+          },
+          {
+            "id": "pw-63",
+            "role": "link",
+            "text": "Advertising",
+            "attributes": {
+              "href": "https://www.google.com/intl/en_uk/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "link",
+            "text": "Business",
+            "attributes": {
+              "href": "https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "link",
+            "text": "How Search works",
+            "attributes": {
+              "href": "https://google.com/search/howsearchworks/?fg=1"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "Applying AI towards science and the environment",
+            "attributes": {
+              "href": "https://ai.google/societal_impact/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "link",
+            "text": "Privacy",
+            "attributes": {
+              "href": "https://policies.google.com/privacy?hl=en-GB&fg=1"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "link",
+            "text": "Terms",
+            "attributes": {
+              "href": "https://policies.google.com/terms?hl=en-GB&fg=1"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "button",
+            "text": "Settings",
+            "attributes": {}
+          },
+          {
+            "id": "pw-96",
+            "role": "link",
+            "text": "Dark theme: Off",
+            "attributes": {}
+          },
+          {
+            "id": "pw-98",
+            "role": "button",
+            "text": "EN",
+            "attributes": {
+              "id": "vc3jof",
+              "aria-label": "Language: \u202aEnglish\u202c"
+            }
+          },
+          {
+            "id": "pw-190",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "id": "gksS1d"
+            }
+          },
+          {
+            "id": "pw-192",
+            "role": "link",
+            "text": "cookies",
+            "attributes": {
+              "href": "https://policies.google.com/technologies/cookies?utm_source=ucbs&hl=en-GB"
+            }
+          },
+          {
+            "id": "pw-193",
+            "role": "button",
+            "text": "Reject all",
+            "attributes": {
+              "id": "W0wltc"
+            }
+          },
+          {
+            "id": "pw-195",
+            "role": "button",
+            "text": "Accept all",
+            "attributes": {
+              "id": "L2AGLb"
+            }
+          },
+          {
+            "id": "pw-197",
+            "role": "link",
+            "text": "More options",
+            "attributes": {
+              "id": "VnjCcb"
+            }
+          },
+          {
+            "id": "pw-198",
+            "role": "link",
+            "text": "More options",
+            "attributes": {
+              "aria-label": "More options for personalisation settings and cookies"
+            }
+          },
+          {
+            "id": "pw-199",
+            "role": "link",
+            "text": "Privacy",
+            "attributes": {
+              "id": "RP3V5c",
+              "href": "https://policies.google.com/privacy?hl=en-GB&fg=1&utm_source=ucbs"
+            }
+          },
+          {
+            "id": "pw-200",
+            "role": "link",
+            "text": "Terms",
+            "attributes": {
+              "id": "HQ1lb",
+              "href": "https://policies.google.com/terms?hl=en-GB&fg=1&utm_source=ucbs"
+            }
+          },
+          {
+            "id": "pw-201",
+            "role": "textbox",
+            "text": null,
+            "attributes": {
+              "name": "csi"
+            }
+          },
+          {
+            "id": "pw-0",
+            "role": "navigation",
+            "text": "About\nStore\nGmailImages\nSign in",
+            "attributes": {}
+          },
+          {
+            "id": "pw-3",
+            "role": "none",
+            "text": "GmailImages\nSign in",
+            "attributes": {
+              "id": "gb"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "img",
+            "text": "Google",
+            "attributes": {
+              "aria-label": "Google"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "search",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-15",
+            "role": "dialog",
+            "text": ".YB4h9{background-color:var(--TMYS9);color:var(--EpFNW);font-family:Google Sans,Roboto,Arial,sans-serif;padding:18px 60px 18px 12px;position:relative}.YB4h9.dNS45b{background-color:var(--xhUGwc);color:var(--bbQxAb);padding:0;}.YB4h9.dNS45b{margin-bottom:0}.YB4h9.dNS45b:not(.C7Cyn){padding-top:16px;padding-top:0;margin-top:0}.ctiYKd{background-color:var(--DEeStf);border-radius:16px;padding:16px;text-align:left;}.YB4h9.q7XNbb.C7Cyn .ctiYKd{border-radius:0 0 16px 16px}.ctiYKd .FsAdRd{display:none}.YB4h9.q7XNbb.C7Cyn .ctiYKd .FsAdRd{display:block;background-color:var(--ZEpPmd);height:1px;margin:0 -16px 16px -16px}.C85rO{font-size:20px}.YB4h9.dNS45b .C85rO{font-size:var(--uBdgTe);font-weight:500;padding-right:56px}.Gtr0ne{margin-top:4px}.twTT9c{}.YB4h9 .Gtr0ne .twTT9c{color:var(--EpFNW);padding:10px 0 0;text-decoration:underline;background:none;border:none;font:inherit}.YB4h9.dNS45b .Gtr0ne .twTT9c{color:inherit;padding:0}.YB4h9 .Job8vb{top:0;padding:20px;position:absolute;right:0}.YB4h9.dNS45b .Job8vb{top:50%;transform:translateY(-50%)}.YB4h9.q7XNbb{margin-bottom:44px}.YB4h9.q7XNbb.dNS45b{margin-top:0;margin-bottom:16px}.YB4h9.q7XNbb.dNS45b.C7Cyn{margin-top:-16px}#rhs .YB4h9.q7XNbb.dNS45b.C7Cyn{margin-top:-32px}Choose what you\u2019re giving feedback on",
+            "attributes": {
+              "aria-label": "Choose what you\u2019re giving feedback on"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "click",
+        "args": {
+          "id": "pw-42"
+        }
+      },
+      "observation": "Action failed: Locator.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator(\"input[aria-label=\\\"Google Search\\\"]\").first\n    - locator resolved to <input name=\"btnK\" tabindex=\"0\" role=\"button\" type=\"submit\" class=\"gNO89b\" value=\"Google Search\" aria-label=\"Google Search\" data-ved=\"0ahUKEwiCkO-v-sCUAxX7IEQIHf27HgUQ4dUDCA8\"/>\n  - attempting click action\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 100ms\n    10 \u00d7 waiting for element to be visible, enabled and stable\n       - element is not visible\n     - retrying click action\n       - waiting 500ms\n"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://www.google.com/",
+        "title": "Google",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "About",
+            "attributes": {
+              "href": "https://about.google/?fg=1&utm_source=google-GB&utm_medium=referral&utm_campaign=hp-header"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Store",
+            "attributes": {
+              "href": "https://store.google.com/GB?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-GB"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "Gmail",
+            "attributes": {
+              "href": "https://mail.google.com/mail/&ogbl",
+              "aria-label": "Gmail "
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Images",
+            "attributes": {
+              "href": "https://www.google.com/imghp?hl=en&ogbl",
+              "aria-label": "Search for Images "
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "button",
+            "text": "Google apps",
+            "attributes": {
+              "href": "https://www.google.co.uk/intl/en/about/products",
+              "aria-label": "Google apps"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=futura_exp_og_so_72776762_e",
+              "aria-label": "Sign in"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "close",
+            "attributes": {
+              "id": "spchx",
+              "aria-label": "close"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "combobox",
+            "text": "Search",
+            "attributes": {
+              "id": "APjFqb",
+              "name": "q",
+              "aria-label": "Search",
+              "placeholder": "",
+              "value": ""
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": "Clear",
+            "attributes": {
+              "aria-label": "Clear"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "button",
+            "text": "Search by voice",
+            "attributes": {
+              "aria-label": "Search by voice"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "button",
+            "text": "Search by image",
+            "attributes": {
+              "aria-label": "Search by image"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "Close Choose what you\u2019re giving feedback on",
+            "attributes": {
+              "aria-label": "Close Choose what you\u2019re giving feedback on"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "option",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-25",
+            "role": "button",
+            "text": ".U48fD{-webkit-tap-highlight-color:transparent;cursor:pointer;display:block;line-height:18px;text-overflow:ellipsis;white-space:nowrap;padding:16px;padding-top:0;margin-top:16px;position:relative}.TQc1id .U48fD{margin-top:16px}.U48fD.df13ud{margin-top:16px}.U48fD.TOQyFc{margin-top:0}.U48fD.p8FEIf{padding-bottom:0}.jRKCUd.p8FEIf::before{bottom:-4px}.U48fD.ke7M4{padding-left:0;padding-right:0}.jRKCUd::before{bottom:12px;content:'';left:16px;position:absolute;right:16px;top:-4px}a.jRKCUd:hover{text-decoration:none}.ZFiwCf{display:flex;align-items:center;justify-content:center;position:relative;margin:0 auto;width:100%;border-radius:18px;outline:1px solid transparent;background-color:#f1f3f4;font-size:var(--hbmnje);font-family:var(--qR8X0);line-height:var(--CbdmE);font-weight:var(--Oycjt);max-width:372px;min-height:40px;border-radius:20px;}@media (forced-colors:active){.ZFiwCf{border:1px solid transparent}}.TQc1id .ZFiwCf{max-width:unset}.Zjtggb .ZFiwCf{max-width:unset}.ZFiwCf:hover{background-color:#e0e2e3}.nCFUpc .ZFiwCf{width:100%}.Bi9oQd{background-color:var(--gS5jXb);margin-top:18px;position:absolute;border:0;height:1px;left:0;width:100%;margin-top:20px;}.TQc1id .Bi9oQd{display:none}.kC8B4e .Bi9oQd{display:none}.w2fKdd svg{width:auto}.w2fKdd{color:var(--amnPwe)}.LGwnxb{-webkit-line-clamp:1;word-break:break-all;width:auto;padding-left:0;padding-right:8px;color:#202124;max-width:calc(100% - 64px);}.LGwnxb:empty{padding-right:0}.LGwnxb span,.LGwnxb div{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:auto}See more",
+            "attributes": {
+              "aria-label": "See more"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": ".JCHpcb:hover,.LvqzR .JCHpcb{color:#1558d6;text-decoration:underline}.JCHpcb{color:#70757a;font:13px Arial,sans-serif;cursor:pointer;align-self:center}@media (hover:hover){.sbai{visibility:hidden}.sbhl .sbai{visibility:inherit}}Delete",
+            "attributes": {}
+          },
+          {
+            "id": "pw-30",
+            "role": "option",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-31",
+            "role": "button",
+            "text": "Word pronunciation",
+            "attributes": {
+              "aria-label": "Word pronunciation"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "option",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "Delete",
+            "attributes": {}
+          },
+          {
+            "id": "pw-37",
+            "role": "option",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-38",
+            "role": "button",
+            "text": "Word pronunciation",
+            "attributes": {
+              "aria-label": "Word pronunciation"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "option",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": "Google Search",
+            "attributes": {
+              "name": "btnK",
+              "type": "submit",
+              "aria-label": "Google Search",
+              "value": "Google Search"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "button",
+            "text": "Report inappropriate predictions",
+            "attributes": {}
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "Google Search",
+            "attributes": {
+              "name": "btnK",
+              "type": "submit",
+              "aria-label": "Google Search",
+              "value": "Google Search"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "button",
+            "text": "I'm Feeling Lucky",
+            "attributes": {
+              "id": "gbqfbb",
+              "name": "btnI",
+              "type": "submit",
+              "aria-label": "I'm Feeling Lucky",
+              "value": "I'm Feeling Lucky"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "button",
+            "text": "I'm Feeling CuriousI'm Feeling HungryI'm Feeling AdventurousI'm Feeling PlayfulI'm Feeling StellarI'm Feeling DoodleyI'm Feeling TrendyI'm Feeling ArtisticI'm feeling funnyI'm feeling mindful",
+            "attributes": {}
+          },
+          {
+            "id": "pw-63",
+            "role": "link",
+            "text": "Advertising",
+            "attributes": {
+              "href": "https://www.google.com/intl/en_uk/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "link",
+            "text": "Business",
+            "attributes": {
+              "href": "https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "link",
+            "text": "How Search works",
+            "attributes": {
+              "href": "https://google.com/search/howsearchworks/?fg=1"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "Applying AI towards science and the environment",
+            "attributes": {
+              "href": "https://ai.google/societal_impact/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "link",
+            "text": "Privacy",
+            "attributes": {
+              "href": "https://policies.google.com/privacy?hl=en-GB&fg=1"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "link",
+            "text": "Terms",
+            "attributes": {
+              "href": "https://policies.google.com/terms?hl=en-GB&fg=1"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "button",
+            "text": "Settings",
+            "attributes": {}
+          },
+          {
+            "id": "pw-96",
+            "role": "link",
+            "text": "Dark theme: Off",
+            "attributes": {}
+          },
+          {
+            "id": "pw-98",
+            "role": "button",
+            "text": "EN",
+            "attributes": {
+              "id": "vc3jof",
+              "aria-label": "Language: \u202aEnglish\u202c"
+            }
+          },
+          {
+            "id": "pw-190",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "id": "gksS1d"
+            }
+          },
+          {
+            "id": "pw-192",
+            "role": "link",
+            "text": "cookies",
+            "attributes": {
+              "href": "https://policies.google.com/technologies/cookies?utm_source=ucbs&hl=en-GB"
+            }
+          },
+          {
+            "id": "pw-193",
+            "role": "button",
+            "text": "Reject all",
+            "attributes": {
+              "id": "W0wltc"
+            }
+          },
+          {
+            "id": "pw-195",
+            "role": "button",
+            "text": "Accept all",
+            "attributes": {
+              "id": "L2AGLb"
+            }
+          },
+          {
+            "id": "pw-197",
+            "role": "link",
+            "text": "More options",
+            "attributes": {
+              "id": "VnjCcb"
+            }
+          },
+          {
+            "id": "pw-198",
+            "role": "link",
+            "text": "More options",
+            "attributes": {
+              "aria-label": "More options for personalisation settings and cookies"
+            }
+          },
+          {
+            "id": "pw-199",
+            "role": "link",
+            "text": "Privacy",
+            "attributes": {
+              "id": "RP3V5c",
+              "href": "https://policies.google.com/privacy?hl=en-GB&fg=1&utm_source=ucbs"
+            }
+          },
+          {
+            "id": "pw-200",
+            "role": "link",
+            "text": "Terms",
+            "attributes": {
+              "id": "HQ1lb",
+              "href": "https://policies.google.com/terms?hl=en-GB&fg=1&utm_source=ucbs"
+            }
+          },
+          {
+            "id": "pw-201",
+            "role": "textbox",
+            "text": null,
+            "attributes": {
+              "name": "csi"
+            }
+          },
+          {
+            "id": "pw-0",
+            "role": "navigation",
+            "text": "About\nStore\nGmailImages\nSign in",
+            "attributes": {}
+          },
+          {
+            "id": "pw-3",
+            "role": "none",
+            "text": "GmailImages\nSign in",
+            "attributes": {
+              "id": "gb"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "img",
+            "text": "Google",
+            "attributes": {
+              "aria-label": "Google"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "search",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-15",
+            "role": "dialog",
+            "text": ".YB4h9{background-color:var(--TMYS9);color:var(--EpFNW);font-family:Google Sans,Roboto,Arial,sans-serif;padding:18px 60px 18px 12px;position:relative}.YB4h9.dNS45b{background-color:var(--xhUGwc);color:var(--bbQxAb);padding:0;}.YB4h9.dNS45b{margin-bottom:0}.YB4h9.dNS45b:not(.C7Cyn){padding-top:16px;padding-top:0;margin-top:0}.ctiYKd{background-color:var(--DEeStf);border-radius:16px;padding:16px;text-align:left;}.YB4h9.q7XNbb.C7Cyn .ctiYKd{border-radius:0 0 16px 16px}.ctiYKd .FsAdRd{display:none}.YB4h9.q7XNbb.C7Cyn .ctiYKd .FsAdRd{display:block;background-color:var(--ZEpPmd);height:1px;margin:0 -16px 16px -16px}.C85rO{font-size:20px}.YB4h9.dNS45b .C85rO{font-size:var(--uBdgTe);font-weight:500;padding-right:56px}.Gtr0ne{margin-top:4px}.twTT9c{}.YB4h9 .Gtr0ne .twTT9c{color:var(--EpFNW);padding:10px 0 0;text-decoration:underline;background:none;border:none;font:inherit}.YB4h9.dNS45b .Gtr0ne .twTT9c{color:inherit;padding:0}.YB4h9 .Job8vb{top:0;padding:20px;position:absolute;right:0}.YB4h9.dNS45b .Job8vb{top:50%;transform:translateY(-50%)}.YB4h9.q7XNbb{margin-bottom:44px}.YB4h9.q7XNbb.dNS45b{margin-top:0;margin-bottom:16px}.YB4h9.q7XNbb.dNS45b.C7Cyn{margin-top:-16px}#rhs .YB4h9.q7XNbb.dNS45b.C7Cyn{margin-top:-32px}Choose what you\u2019re giving feedback on",
+            "attributes": {
+              "aria-label": "Choose what you\u2019re giving feedback on"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://www.google.com/search?q=Oppenheimer+2023+runtime"
+        }
+      },
+      "observation": "Opened https://www.google.com/search?q=Oppenheimer+2023+runtime"
+    },
+    {
+      "step": 4,
+      "state": {
+        "url": "https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DOppenheimer%2B2023%2Bruntime%26sei%3DfQkKarqSCd2MhbIP6tP9iAQ&q=EgTBuqJKGP2SqNAGIjBHXsmbCVanBbAHfMiSTmWJ3ItKtVEDpCq5b8FG7tpJqr3xnMiUyK6SI5qA14Ic48IyAVJaAUM",
+        "title": "https://www.google.com/search?q=Oppenheimer+2023+runtime&sei=fQkKarqSCd2MhbIP6tP9iAQ",
+        "elements": [
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Why did this happen?",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Terms of Service",
+            "attributes": {
+              "href": "//www.google.com/policies/terms/"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "Learn more",
+            "attributes": {
+              "href": "//support.google.com/websearch/answer/86640"
+            }
+          },
+          {
+            "id": "pw-0",
+            "role": "hidden",
+            "text": "EgTBuqJKGP2SqNAGIjBHXsmbCVanBbAHfMiSTmWJ3ItKtVEDpCq5b8FG7tpJqr3xnMiUyK6SI5qA14Ic48IyAVJaAUM",
+            "attributes": {
+              "name": "q",
+              "type": "hidden",
+              "value": "EgTBuqJKGP2SqNAGIjBHXsmbCVanBbAHfMiSTmWJ3ItKtVEDpCq5b8FG7tpJqr3xnMiUyK6SI5qA14Ic48IyAVJaAUM"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "hidden",
+            "text": "https://www.google.com/search?q=Oppenheimer+2023+runtime&sei=fQkKarqSCd2MhbIP6tP9iAQ",
+            "attributes": {
+              "name": "continue",
+              "type": "hidden",
+              "value": "https://www.google.com/search?q=Oppenheimer+2023+runtime&sei=fQkKarqSCd2MhbIP6tP9iAQ"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "The runtime of Oppenheimer (2023) is 180 minutes (3 hours)."
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

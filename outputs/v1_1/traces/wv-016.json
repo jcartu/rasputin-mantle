@@ -1,0 +1,3185 @@
+{
+  "task_id": "wv-016",
+  "task_description": "On Amazon, find a 1 TB portable SSD under $100 and report its price and review count.",
+  "starting_url": "https://www.amazon.com",
+  "passed": false,
+  "final_answer": "Found: 1TB Magnetic Portable External Solid State Drive (portable external SSD). Price: EUR 76.58 (under $100 equivalent). Review count: 8 ratings.",
+  "duration_s": 140.44,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://www.amazon.com/",
+        "title": "Amazon.com. Spend less. Smile more.",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Main content",
+            "attributes": {
+              "id": "nav-assist-skip-to-main-content",
+              "href": "#skippedLink",
+              "aria-label": "main content"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Search\nalt\n+\n/",
+            "attributes": {
+              "id": "nav-assist-search",
+              "href": "javascript:void(0)",
+              "aria-label": "Search, alt, forward slash"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Cart\nshift\n+\nalt\n+\nC",
+            "attributes": {
+              "id": "nav-assist-cart",
+              "href": "javascript:void(0)",
+              "aria-label": "Cart, shift, alt, c"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "Home\nshift\n+\nalt\n+\nH",
+            "attributes": {
+              "id": "nav-assist-home",
+              "href": "javascript:void(0)",
+              "aria-label": "Home, shift, alt, h"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Orders\nshift\n+\nalt\n+\nO",
+            "attributes": {
+              "id": "nav-assist-your-orders",
+              "href": "javascript:void(0)",
+              "aria-label": "Your orders, shift, alt, o"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "button",
+            "text": "Show/Hide shortcuts\nshift\n+\nalt\n+\nZ",
+            "attributes": {
+              "id": "nav-assist-show-shortcuts",
+              "aria-label": "Show/hide shortcuts, shift, alt, z"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Amazon",
+            "attributes": {
+              "id": "nav-logo-sprites",
+              "href": "/ref=nav_logo",
+              "aria-label": "Amazon"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Deliver to\nGermany",
+            "attributes": {
+              "id": "nav-global-location-popover-link",
+              "href": ""
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "combobox",
+            "text": "All Departments\nArts & Crafts\nAutomotive\nBaby\nBeauty & Personal Care\nBooks\nBoys' Fashion\nComputers\nDeals\nDigital Music\nElectronics\nGirls' Fashion\nHealth & Household\nHome & Kitchen\nIndustrial & Scientific\nKindle Store\nLuggage\nMen's Fashion\nMovies & TV\nMusic, CDs & Vinyl\nPet Supplies\nPrime Video\nSoftware\nSports & Outdoors\nTools & Home Improvement\nToys & Games\nVideo Games\nWomen's Fashion",
+            "attributes": {
+              "id": "searchDropdownBox",
+              "name": "url"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "searchbox",
+            "text": "Search Amazon",
+            "attributes": {
+              "id": "twotabsearchtextbox",
+              "name": "field-keywords",
+              "type": "text",
+              "aria-label": "Search Amazon",
+              "placeholder": "Search Amazon",
+              "value": ""
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "EN",
+            "attributes": {
+              "href": "/customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang_ais",
+              "aria-label": "Choose a language for shopping in Amazon United States. The current selection is English (EN).\n"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "button",
+            "text": "Expand to Change Language or Country",
+            "attributes": {
+              "aria-label": "Expand to Change Language or Country"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Hello, sign in\nAccount & Lists",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2F%3Fref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "button",
+            "text": "Expand Account and Lists",
+            "attributes": {
+              "aria-label": "Expand Account and Lists"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Returns\n& Orders",
+            "attributes": {
+              "id": "nav-orders",
+              "href": "/gp/css/order-history?ref_=nav_orders_first"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "0\nCart",
+            "attributes": {
+              "id": "nav-cart",
+              "href": "/gp/cart/view.html?ref_=nav_cart",
+              "aria-label": "0 items in cart"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2F%3Fref_%3Dnav_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Start here.",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/register?openid.return_to=https%3A%2F%2Fwww.amazon.com%2F%3F_encoding%3DUTF8%26ref_%3Dnav_newcust&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0",
+              "aria-label": "New to Amazon? Start here to create an account"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Create a List",
+            "attributes": {
+              "href": "/hz/wishlist/ls?triggerElementID=createList&ref_=nav_ListFlyout_navFlyout_createList_lv_redirect"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Find a List or Registry",
+            "attributes": {
+              "href": "/registries?ref_=nav_ListFlyout_find"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Account",
+            "attributes": {
+              "href": "/gp/css/homepage.html?ref_=nav_AccountFlyout_ya"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Orders",
+            "attributes": {
+              "id": "nav_prefetch_yourorders",
+              "href": "/gp/css/order-history?ref_=nav_AccountFlyout_orders"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Recommendations",
+            "attributes": {
+              "href": "/gp/yourstore?ref_=nav_AccountFlyout_recs"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Browsing History",
+            "attributes": {
+              "href": "/gp/history?ref_=nav_AccountFlyout_browsinghistory"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Your Shopping preferences",
+            "attributes": {
+              "href": "https://www.amazon.com/slc/hub?ref_=nav_AccountFlyout_sl_ph_navflyout"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Watchlist",
+            "attributes": {
+              "href": "/gp/video/watchlist?ref_=nav_AccountFlyout_ywl"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Video Purchases & Rentals",
+            "attributes": {
+              "href": "/gp/video/library?ref_=nav_AccountFlyout_yvl"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Kindle Unlimited",
+            "attributes": {
+              "href": "/gp/kindle/ku/ku_central?ref_=nav_AccountFlyout_ku"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Content & Devices",
+            "attributes": {
+              "href": "/hz/mycd/myx?pageType=content&ref_=nav_AccountFlyout_myk"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Subscribe & Save Items",
+            "attributes": {
+              "href": "/gp/subscribe-and-save/manager/viewsubscriptions?ref_=nav_AccountFlyout_sns"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "Memberships & Subscriptions",
+            "attributes": {
+              "href": "/hz5/yourmembershipsandsubscriptions?ref_=nav_AccountFlyout_digital_subscriptions"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Music Library",
+            "attributes": {
+              "href": "https://music.amazon.com?ref=nav_youraccount_cldplyr"
+            }
+          },
+          {
+            "id": "pw-77",
+            "role": "button",
+            "text": "All",
+            "attributes": {
+              "id": "nav-hamburger-menu",
+              "href": "javascript: void(0)",
+              "aria-label": "Open All Categories Menu"
+            }
+          },
+          {
+            "id": "pw-78",
+            "role": "link",
+            "text": "Today's Deals",
+            "attributes": {
+              "href": "/gp/goldbox?ref_=nav_cs_gb"
+            }
+          },
+          {
+            "id": "pw-79",
+            "role": "link",
+            "text": "Gift Cards",
+            "attributes": {
+              "href": "/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc"
+            }
+          },
+          {
+            "id": "pw-80",
+            "role": "link",
+            "text": "Sell",
+            "attributes": {
+              "href": "/b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell"
+            }
+          },
+          {
+            "id": "pw-81",
+            "role": "link",
+            "text": "Registry",
+            "attributes": {
+              "href": "/gp/browse.html?node=16115931011&ref_=nav_cs_registry"
+            }
+          },
+          {
+            "id": "pw-82",
+            "role": "link",
+            "text": "Prime Video",
+            "attributes": {
+              "href": "/Amazon-Video/b/?ie=UTF8&node=2858778011&ref_=nav_cs_prime_video"
+            }
+          },
+          {
+            "id": "pw-83",
+            "role": "link",
+            "text": "Customer Service",
+            "attributes": {
+              "href": "/gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice"
+            }
+          },
+          {
+            "id": "pw-84",
+            "role": "link",
+            "text": "Disability Customer Support",
+            "attributes": {
+              "href": "/gp/help/customer/accessibility",
+              "aria-label": "Click to call our Disability Customer Support line, or reach us directly at 1-888-283-1678"
+            }
+          },
+          {
+            "id": "pw-89",
+            "role": "button",
+            "text": "Previous slide",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-91",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/s/?_encoding=UTF8&k=Kitchen%20Appliances&dc=&_encoding=UTF8&qid=1747513660&rnid=386465011&ref=sr_nr_p_36_0_0&low-price=&high-price=50&pd_rd_w=5phSa&content-id=amzn1.sym.b019278b-d2d7-43ec-80e2-dad1a75b0e4b&pf_rd_p=b019278b-d2d7-43ec-80e2-dad1a75b0e4b&pf_rd_r=ERBY9D17QXMKCA7A8B9Z&pd_rd_wg=RNZaC&pd_rd_r=34afabcb-3a83-46fc-92c6-c6068cd0343f&ref_=pd_hp_d_hero_unk"
+            }
+          },
+          {
+            "id": "pw-92",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/s/?_encoding=UTF8&k=toys%20for%20little%20kids&crid=1OHUIL9BQQM31&sprefix=toys%20for%20little%20kids%2Caps%2C210&ref=nb_sb_noss_1&pd_rd_w=uiLKY&content-id=amzn1.sym.a0713598-501e-43b5-a9b4-9a08fdd8bc09&pf_rd_p=a0713598-501e-43b5-a9b4-9a08fdd8bc09&pf_rd_r=ERBY9D17QXMKCA7A8B9Z&pd_rd_wg=RNZaC&pd_rd_r=34afabcb-3a83-46fc-92c6-c6068cd0343f&ref_=pd_hp_d_hero_unk"
+            }
+          },
+          {
+            "id": "pw-93",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/s/?_encoding=UTF8&k=gaming&pd_rd_w=rneiS&content-id=amzn1.sym.64a77fff-ef41-41d1-a696-c7679f8c506b&pf_rd_p=64a77fff-ef41-41d1-a696-c7679f8c506b&pf_rd_r=ERBY9D17QXMKCA7A8B9Z&pd_rd_wg=RNZaC&pd_rd_r=34afabcb-3a83-46fc-92c6-c6068cd0343f&ref_=pd_hp_d_hero_unk"
+            }
+          },
+          {
+            "id": "pw-94",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/b/?_encoding=UTF8&ie=UTF8&node=23466307011&pd_rd_w=1CGwV&content-id=amzn1.sym.d0c26c1c-3bcd-42f6-b67b-4c106529cf66&pf_rd_p=d0c26c1c-3bcd-42f6-b67b-4c106529cf66&pf_rd_r=ERBY9D17QXMKCA7A8B9Z&pd_rd_wg=RNZaC&pd_rd_r=34afabcb-3a83-46fc-92c6-c6068cd0343f&ref_=pd_hp_d_hero_unk"
+            }
+          },
+          {
+            "id": "pw-95",
+            "role": "button",
+            "text": "Next slide",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-96",
+            "role": "link",
+            "text": "Click here to go to amazon.de",
+            "attributes": {
+              "href": "/gp/redirect.html/?ie=UTF8&_encoding=UTF8&location=https%3A%2F%2Fwww.amazon.de%2F%3Fref%3Daisgw_intl_stripe_de&source=standards&token=A187CE9C464B84867DD65FD7D377C182BA72F93F&pd_rd_w=3EbEj&content-id=amzn1.sym.cae4f8d7-7f7b-4c65-9b29-52aae3d1bbfd&pf_rd_p=cae4f8d7-7f7b-4c65-9b29-52aae3d1bbfd&pf_rd_r=ERBY9D17QXMKCA7A8B9Z&pd_rd_wg=2g1yx&pd_rd_r=66fdf7cb-bad6-45a8-a28c-dcf9384b1aae&ref_=pd_hp_d_atf_unk"
+            }
+          },
+          {
+            "id": "pw-97",
+            "role": "link",
+            "text": "Shop gaming\nShop gaming",
+            "attributes": {
+              "href": "/s/?_encoding=UTF8&k=gaming&pd_rd_w=OXvv0&content-id=amzn1.sym.bd749ccd-05a5-46df-9094-58bcc6398482&pf_rd_p=bd749ccd-05a5-46df-9094-58bcc6398482&pf_rd_r=ERBY9D17QXMKCA7A8B9Z&pd_rd_wg=2g1yx&pd_rd_r=66fdf7cb-bad6-45a8-a28c-dcf9384b1aae&ref_=pd_hp_d_atf_unk"
+            }
+          },
+          {
+            "id": "pw-98",
+            "role": "link",
+            "text": "Kitchen & Dining",
+            "attributes": {
+              "href": "/s/?_encoding=UTF8&k=kitchen%20and%20dining&rh=p_36%3A-5000&s=date-desc-rank&pd_rd_w=uHB3f&content-id=amzn1.sym.679a99a5-333c-46b8-a493-b812dbdccbc0&pf_rd_p=679a99a5-333c-46b8-a493-b812dbdccbc0&pf_rd_r=ERBY9D17QXMKCA7A8B9Z&pd_rd_wg=2g1yx&pd_rd_r=66fdf7cb-bad6-45a8-a28c-dcf9384b1aae&ref_=pd_hp_d_atf_unk",
+              "aria-label": "Kitchen & dining"
+            }
+          },
+          {
+            "id": "pw-99",
+            "role": "link",
+            "text": "Home Improvement",
+            "attributes": {
+              "href": "/s/?_encoding=UTF8&k=home%20improvement&i=tools&rh=n%3A228013%2Cp_36%3A-5000&dc=&ds=v1%3AU%2F9vxcfd6LLqNGLcdfGjetkk3KJGd0ZuNoxWMV3LcAk&pd_rd_w=uHB3f&content-id=amzn1.sym.679a99a5-333c-46b8-a493-b812dbdccbc0&pf_rd_p=679a99a5-333c-46b8-a493-b812dbdccbc0&pf_rd_r=ERBY9D17QXMKCA7A8B9Z&pd_rd_wg=2g1yx&pd_rd_r=66fdf7cb-bad6-45a8-a28c-dcf9384b1aae&ref_=pd_hp_d_atf_unk",
+              "aria-label": "Home improvement"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "type",
+        "args": {
+          "id": "pw-16",
+          "text": "1TB portable SSD under 100"
+        }
+      },
+      "observation": "Typed into pw-16"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://www.amazon.com/",
+        "title": "Amazon.com. Spend less. Smile more.",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Main content",
+            "attributes": {
+              "id": "nav-assist-skip-to-main-content",
+              "href": "#skippedLink",
+              "aria-label": "main content"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Search\nalt\n+\n/",
+            "attributes": {
+              "id": "nav-assist-search",
+              "href": "javascript:void(0)",
+              "aria-label": "Search, alt, forward slash"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Cart\nshift\n+\nalt\n+\nC",
+            "attributes": {
+              "id": "nav-assist-cart",
+              "href": "javascript:void(0)",
+              "aria-label": "Cart, shift, alt, c"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "Home\nshift\n+\nalt\n+\nH",
+            "attributes": {
+              "id": "nav-assist-home",
+              "href": "javascript:void(0)",
+              "aria-label": "Home, shift, alt, h"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Orders\nshift\n+\nalt\n+\nO",
+            "attributes": {
+              "id": "nav-assist-your-orders",
+              "href": "javascript:void(0)",
+              "aria-label": "Your orders, shift, alt, o"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "button",
+            "text": "Show/Hide shortcuts\nshift\n+\nalt\n+\nZ",
+            "attributes": {
+              "id": "nav-assist-show-shortcuts",
+              "aria-label": "Show/hide shortcuts, shift, alt, z"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Amazon",
+            "attributes": {
+              "id": "nav-logo-sprites",
+              "href": "/ref=nav_logo",
+              "aria-label": "Amazon"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Deliver to\nGermany",
+            "attributes": {
+              "id": "nav-global-location-popover-link",
+              "href": ""
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "combobox",
+            "text": "All Departments\nArts & Crafts\nAutomotive\nBaby\nBeauty & Personal Care\nBooks\nBoys' Fashion\nComputers\nDeals\nDigital Music\nElectronics\nGirls' Fashion\nHealth & Household\nHome & Kitchen\nIndustrial & Scientific\nKindle Store\nLuggage\nMen's Fashion\nMovies & TV\nMusic, CDs & Vinyl\nPet Supplies\nPrime Video\nSoftware\nSports & Outdoors\nTools & Home Improvement\nToys & Games\nVideo Games\nWomen's Fashion",
+            "attributes": {
+              "id": "searchDropdownBox",
+              "name": "url"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "searchbox",
+            "text": "Search Amazon",
+            "attributes": {
+              "id": "twotabsearchtextbox",
+              "name": "field-keywords",
+              "type": "text",
+              "aria-label": "Search Amazon",
+              "placeholder": "Search Amazon",
+              "value": ""
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "EN",
+            "attributes": {
+              "href": "/customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang_ais",
+              "aria-label": "Choose a language for shopping in Amazon United States. The current selection is English (EN).\n"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "button",
+            "text": "Expand to Change Language or Country",
+            "attributes": {
+              "aria-label": "Expand to Change Language or Country"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Hello, sign in\nAccount & Lists",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2F%3Fref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "button",
+            "text": "Expand Account and Lists",
+            "attributes": {
+              "aria-label": "Expand Account and Lists"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Returns\n& Orders",
+            "attributes": {
+              "id": "nav-orders",
+              "href": "/gp/css/order-history?ref_=nav_orders_first"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "0\nCart",
+            "attributes": {
+              "id": "nav-cart",
+              "href": "/gp/cart/view.html?ref_=nav_cart",
+              "aria-label": "0 items in cart"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2F%3Fref_%3Dnav_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Start here.",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/register?openid.return_to=https%3A%2F%2Fwww.amazon.com%2F%3F_encoding%3DUTF8%26ref_%3Dnav_newcust&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0",
+              "aria-label": "New to Amazon? Start here to create an account"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Create a List",
+            "attributes": {
+              "href": "/hz/wishlist/ls?triggerElementID=createList&ref_=nav_ListFlyout_navFlyout_createList_lv_redirect"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Find a List or Registry",
+            "attributes": {
+              "href": "/registries?ref_=nav_ListFlyout_find"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Account",
+            "attributes": {
+              "href": "/gp/css/homepage.html?ref_=nav_AccountFlyout_ya"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Orders",
+            "attributes": {
+              "id": "nav_prefetch_yourorders",
+              "href": "/gp/css/order-history?ref_=nav_AccountFlyout_orders"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Recommendations",
+            "attributes": {
+              "href": "/gp/yourstore?ref_=nav_AccountFlyout_recs"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Browsing History",
+            "attributes": {
+              "href": "/gp/history?ref_=nav_AccountFlyout_browsinghistory"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Your Shopping preferences",
+            "attributes": {
+              "href": "https://www.amazon.com/slc/hub?ref_=nav_AccountFlyout_sl_ph_navflyout"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Watchlist",
+            "attributes": {
+              "href": "/gp/video/watchlist?ref_=nav_AccountFlyout_ywl"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Video Purchases & Rentals",
+            "attributes": {
+              "href": "/gp/video/library?ref_=nav_AccountFlyout_yvl"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Kindle Unlimited",
+            "attributes": {
+              "href": "/gp/kindle/ku/ku_central?ref_=nav_AccountFlyout_ku"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Content & Devices",
+            "attributes": {
+              "href": "/hz/mycd/myx?pageType=content&ref_=nav_AccountFlyout_myk"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Subscribe & Save Items",
+            "attributes": {
+              "href": "/gp/subscribe-and-save/manager/viewsubscriptions?ref_=nav_AccountFlyout_sns"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "Memberships & Subscriptions",
+            "attributes": {
+              "href": "/hz5/yourmembershipsandsubscriptions?ref_=nav_AccountFlyout_digital_subscriptions"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Music Library",
+            "attributes": {
+              "href": "https://music.amazon.com?ref=nav_youraccount_cldplyr"
+            }
+          },
+          {
+            "id": "pw-77",
+            "role": "button",
+            "text": "All",
+            "attributes": {
+              "id": "nav-hamburger-menu",
+              "href": "javascript: void(0)",
+              "aria-label": "Open All Categories Menu"
+            }
+          },
+          {
+            "id": "pw-78",
+            "role": "link",
+            "text": "Today's Deals",
+            "attributes": {
+              "href": "/gp/goldbox?ref_=nav_cs_gb"
+            }
+          },
+          {
+            "id": "pw-79",
+            "role": "link",
+            "text": "Gift Cards",
+            "attributes": {
+              "href": "/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc"
+            }
+          },
+          {
+            "id": "pw-80",
+            "role": "link",
+            "text": "Sell",
+            "attributes": {
+              "href": "/b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell"
+            }
+          },
+          {
+            "id": "pw-81",
+            "role": "link",
+            "text": "Registry",
+            "attributes": {
+              "href": "/gp/browse.html?node=16115931011&ref_=nav_cs_registry"
+            }
+          },
+          {
+            "id": "pw-82",
+            "role": "link",
+            "text": "Prime Video",
+            "attributes": {
+              "href": "/Amazon-Video/b/?ie=UTF8&node=2858778011&ref_=nav_cs_prime_video"
+            }
+          },
+          {
+            "id": "pw-83",
+            "role": "link",
+            "text": "Customer Service",
+            "attributes": {
+              "href": "/gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice"
+            }
+          },
+          {
+            "id": "pw-84",
+            "role": "link",
+            "text": "Disability Customer Support",
+            "attributes": {
+              "href": "/gp/help/customer/accessibility",
+              "aria-label": "Click to call our Disability Customer Support line, or reach us directly at 1-888-283-1678"
+            }
+          },
+          {
+            "id": "pw-89",
+            "role": "button",
+            "text": "Previous slide",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-91",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/s/?_encoding=UTF8&k=toys%20for%20little%20kids&crid=1OHUIL9BQQM31&sprefix=toys%20for%20little%20kids%2Caps%2C210&ref=nb_sb_noss_1&pd_rd_w=uiLKY&content-id=amzn1.sym.a0713598-501e-43b5-a9b4-9a08fdd8bc09&pf_rd_p=a0713598-501e-43b5-a9b4-9a08fdd8bc09&pf_rd_r=ERBY9D17QXMKCA7A8B9Z&pd_rd_wg=RNZaC&pd_rd_r=34afabcb-3a83-46fc-92c6-c6068cd0343f&ref_=pd_hp_d_hero_unk"
+            }
+          },
+          {
+            "id": "pw-92",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/s/?_encoding=UTF8&k=gaming&pd_rd_w=rneiS&content-id=amzn1.sym.64a77fff-ef41-41d1-a696-c7679f8c506b&pf_rd_p=64a77fff-ef41-41d1-a696-c7679f8c506b&pf_rd_r=ERBY9D17QXMKCA7A8B9Z&pd_rd_wg=RNZaC&pd_rd_r=34afabcb-3a83-46fc-92c6-c6068cd0343f&ref_=pd_hp_d_hero_unk"
+            }
+          },
+          {
+            "id": "pw-93",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/b/?_encoding=UTF8&ie=UTF8&node=23466307011&pd_rd_w=1CGwV&content-id=amzn1.sym.d0c26c1c-3bcd-42f6-b67b-4c106529cf66&pf_rd_p=d0c26c1c-3bcd-42f6-b67b-4c106529cf66&pf_rd_r=ERBY9D17QXMKCA7A8B9Z&pd_rd_wg=RNZaC&pd_rd_r=34afabcb-3a83-46fc-92c6-c6068cd0343f&ref_=pd_hp_d_hero_unk"
+            }
+          },
+          {
+            "id": "pw-94",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/s/?_encoding=UTF8&k=Kitchen%20Appliances&dc=&_encoding=UTF8&qid=1747513660&rnid=386465011&ref=sr_nr_p_36_0_0&low-price=&high-price=50&pd_rd_w=5phSa&content-id=amzn1.sym.b019278b-d2d7-43ec-80e2-dad1a75b0e4b&pf_rd_p=b019278b-d2d7-43ec-80e2-dad1a75b0e4b&pf_rd_r=ERBY9D17QXMKCA7A8B9Z&pd_rd_wg=RNZaC&pd_rd_r=34afabcb-3a83-46fc-92c6-c6068cd0343f&ref_=pd_hp_d_hero_unk"
+            }
+          },
+          {
+            "id": "pw-95",
+            "role": "button",
+            "text": "Next slide",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-96",
+            "role": "link",
+            "text": "Click here to go to amazon.de",
+            "attributes": {
+              "href": "/gp/redirect.html/?ie=UTF8&_encoding=UTF8&location=https%3A%2F%2Fwww.amazon.de%2F%3Fref%3Daisgw_intl_stripe_de&source=standards&token=A187CE9C464B84867DD65FD7D377C182BA72F93F&pd_rd_w=3EbEj&content-id=amzn1.sym.cae4f8d7-7f7b-4c65-9b29-52aae3d1bbfd&pf_rd_p=cae4f8d7-7f7b-4c65-9b29-52aae3d1bbfd&pf_rd_r=ERBY9D17QXMKCA7A8B9Z&pd_rd_wg=2g1yx&pd_rd_r=66fdf7cb-bad6-45a8-a28c-dcf9384b1aae&ref_=pd_hp_d_atf_unk"
+            }
+          },
+          {
+            "id": "pw-97",
+            "role": "link",
+            "text": "Shop gaming\nShop gaming",
+            "attributes": {
+              "href": "/s/?_encoding=UTF8&k=gaming&pd_rd_w=OXvv0&content-id=amzn1.sym.bd749ccd-05a5-46df-9094-58bcc6398482&pf_rd_p=bd749ccd-05a5-46df-9094-58bcc6398482&pf_rd_r=ERBY9D17QXMKCA7A8B9Z&pd_rd_wg=2g1yx&pd_rd_r=66fdf7cb-bad6-45a8-a28c-dcf9384b1aae&ref_=pd_hp_d_atf_unk"
+            }
+          },
+          {
+            "id": "pw-98",
+            "role": "link",
+            "text": "Kitchen & Dining",
+            "attributes": {
+              "href": "/s/?_encoding=UTF8&k=kitchen%20and%20dining&rh=p_36%3A-5000&s=date-desc-rank&pd_rd_w=uHB3f&content-id=amzn1.sym.679a99a5-333c-46b8-a493-b812dbdccbc0&pf_rd_p=679a99a5-333c-46b8-a493-b812dbdccbc0&pf_rd_r=ERBY9D17QXMKCA7A8B9Z&pd_rd_wg=2g1yx&pd_rd_r=66fdf7cb-bad6-45a8-a28c-dcf9384b1aae&ref_=pd_hp_d_atf_unk",
+              "aria-label": "Kitchen & dining"
+            }
+          },
+          {
+            "id": "pw-99",
+            "role": "link",
+            "text": "Home Improvement",
+            "attributes": {
+              "href": "/s/?_encoding=UTF8&k=home%20improvement&i=tools&rh=n%3A228013%2Cp_36%3A-5000&dc=&ds=v1%3AU%2F9vxcfd6LLqNGLcdfGjetkk3KJGd0ZuNoxWMV3LcAk&pd_rd_w=uHB3f&content-id=amzn1.sym.679a99a5-333c-46b8-a493-b812dbdccbc0&pf_rd_p=679a99a5-333c-46b8-a493-b812dbdccbc0&pf_rd_r=ERBY9D17QXMKCA7A8B9Z&pd_rd_wg=2g1yx&pd_rd_r=66fdf7cb-bad6-45a8-a28c-dcf9384b1aae&ref_=pd_hp_d_atf_unk",
+              "aria-label": "Home improvement"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://www.amazon.com/s?k=1TB+portable+SSD&rh=p_36%3A-10000"
+        }
+      },
+      "observation": "Opened https://www.amazon.com/s?k=1TB+portable+SSD&rh=p_36%3A-10000"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://www.amazon.com/s?k=1TB+portable+SSD&rh=p_36%3A-10000",
+        "title": "Amazon.com : 1TB portable SSD",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Main content",
+            "attributes": {
+              "id": "nav-assist-skip-to-main-content",
+              "href": "#skippedLink",
+              "aria-label": "main content"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Results",
+            "attributes": {
+              "id": "nav-assist-skip-to-results",
+              "href": ".s-asin a:has(h2)",
+              "aria-label": "Results"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Filters",
+            "attributes": {
+              "id": "nav-assist-skip-to-filters",
+              "href": "#s-refinements > div.a-section > div:first-child",
+              "aria-label": "Filters"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Filters",
+            "attributes": {
+              "id": "nav-assist-skip-to-filter-sidebar",
+              "aria-label": "Filters"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Search\n          \n              alt\n              +\n              /",
+            "attributes": {
+              "id": "nav-assist-search",
+              "href": "javascript:void(0)",
+              "aria-label": "Search, alt, forward slash"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Cart\n          \n              shift\n              +\n              alt\n              +\n              C",
+            "attributes": {
+              "id": "nav-assist-cart",
+              "href": "javascript:void(0)",
+              "aria-label": "Cart, shift, alt, c"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Home\n          \n              shift\n              +\n              alt\n              +\n              H",
+            "attributes": {
+              "id": "nav-assist-home",
+              "href": "javascript:void(0)",
+              "aria-label": "Home, shift, alt, h"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Orders\n          \n              shift\n              +\n              alt\n              +\n              O",
+            "attributes": {
+              "id": "nav-assist-your-orders",
+              "href": "javascript:void(0)",
+              "aria-label": "Your orders, shift, alt, o"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Show/Hide shortcuts\n          \n              shift\n              +\n              alt\n              +\n              Z",
+            "attributes": {
+              "id": "nav-assist-show-shortcuts",
+              "aria-label": "Show/hide shortcuts, shift, alt, z"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Amazon",
+            "attributes": {
+              "id": "nav-logo-sprites",
+              "href": "/ref=nav_logo",
+              "aria-label": "Amazon"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": "Deliver to\nGermany",
+            "attributes": {
+              "id": "nav-global-location-popover-link",
+              "href": ""
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "combobox",
+            "text": "All Departments\nArts & Crafts\nAutomotive\nBaby\nBeauty & Personal Care\nBooks\nBoys' Fashion\nComputers\nDeals\nDigital Music\nElectronics\nGirls' Fashion\nHealth & Household\nHome & Kitchen\nIndustrial & Scientific\nKindle Store\nLuggage\nMen's Fashion\nMovies & TV\nMusic, CDs & Vinyl\nPet Supplies\nPrime Video\nSoftware\nSports & Outdoors\nTools & Home Improvement\nToys & Games\nVideo Games\nWomen's Fashion",
+            "attributes": {
+              "id": "searchDropdownBox",
+              "name": "url"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "searchbox",
+            "text": "Search Amazon",
+            "attributes": {
+              "id": "twotabsearchtextbox",
+              "name": "field-keywords",
+              "type": "text",
+              "aria-label": "Search Amazon",
+              "placeholder": "Search Amazon",
+              "value": "1TB portable SSD"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "EN",
+            "attributes": {
+              "href": "/customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang_ais",
+              "aria-label": "Choose a language for shopping in Amazon United States. The current selection is English (EN).\n"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "button",
+            "text": "Expand to Change Language or Country",
+            "attributes": {
+              "aria-label": "Expand to Change Language or Country"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Hello, sign in\nAccount & Lists",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%2F%3F_encoding%3DUTF8%26k%3D1TB%2520portable%2520SSD%26rh%3Dp_36%253A-10000%26ref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "button",
+            "text": "Expand Account and Lists",
+            "attributes": {
+              "aria-label": "Expand Account and Lists"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Returns\n& Orders",
+            "attributes": {
+              "id": "nav-orders",
+              "href": "/gp/css/order-history?ref_=nav_orders_first"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "0\nCart",
+            "attributes": {
+              "id": "nav-cart",
+              "href": "/gp/cart/view.html?ref_=nav_cart",
+              "aria-label": "0 items in cart"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "button",
+            "text": "All",
+            "attributes": {
+              "id": "nav-hamburger-menu",
+              "href": "javascript: void(0)",
+              "aria-label": "Open All Categories Menu"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Today's Deals",
+            "attributes": {
+              "href": "/gp/goldbox?ref_=nav_cs_gb"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Gift Cards",
+            "attributes": {
+              "href": "/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Sell",
+            "attributes": {
+              "href": "/b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Registry",
+            "attributes": {
+              "href": "/gp/browse.html?node=16115931011&ref_=nav_cs_registry"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Prime Video",
+            "attributes": {
+              "href": "/Amazon-Video/b/?ie=UTF8&node=2858778011&ref_=nav_cs_prime_video"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Customer Service",
+            "attributes": {
+              "href": "/gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Disability Customer Support",
+            "attributes": {
+              "href": "/gp/help/customer/accessibility",
+              "aria-label": "Click to call our Disability Customer Support line, or reach us directly at 1-888-283-1678"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "combobox",
+            "text": "Featured\nPrice: Low to High\nPrice: High to Low\nAvg. Customer Review\nNewest Arrivals\nBest Sellers",
+            "attributes": {
+              "id": "s-result-sort-select",
+              "name": "s",
+              "aria-label": "Sort by:"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/SSK-Portable-External-Transmission-Smartphone/dp/B0BGKXX9TK/ref=sr_1_1?dib=eyJ2IjoiMSJ9.9JqNL5KFMWl46dJ9t6pogbF2PnpH0N3CcQyENN2WuTIh7Mrly_d3gnFNlt_cBrKsHiq-eBjS-HRIZiDnED5njynM_tbid3lcJVZZsV7m8I7SyO1i7RguhIFo9kO6SAH66PKgZ67FAbHIwIVm21qFaVW_GGcw8FHGCondQZkHdyJRpZl9QkqIkp-w4zDE_o19HC1IAMUj2l2BszWYaCb8mPn1VfchQt5QQivpy6Z-pdE.Pycu_OjQCwSxSVLkNPuZMmXRR4MPPyPkN1T5kw1uTy8&dib_tag=se&keywords=1TB+portable+SSD&qid=1779042792&refinements=p_36%3A-10000&sr=8-1"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "SSK Portable SSD 500GB External Solid State Drives, up to 1050MB/s USB C SSD External Hard Drive USB 3.2 Gen2 for iPhone 15/16/17Pro, Windows, Mac, Android Phones and Tablets",
+            "attributes": {
+              "href": "/SSK-Portable-External-Transmission-Smartphone/dp/B0BGKXX9TK/ref=sr_1_1?dib=eyJ2IjoiMSJ9.9JqNL5KFMWl46dJ9t6pogbF2PnpH0N3CcQyENN2WuTIh7Mrly_d3gnFNlt_cBrKsHiq-eBjS-HRIZiDnED5njynM_tbid3lcJVZZsV7m8I7SyO1i7RguhIFo9kO6SAH66PKgZ67FAbHIwIVm21qFaVW_GGcw8FHGCondQZkHdyJRpZl9QkqIkp-w4zDE_o19HC1IAMUj2l2BszWYaCb8mPn1VfchQt5QQivpy6Z-pdE.Pycu_OjQCwSxSVLkNPuZMmXRR4MPPyPkN1T5kw1uTy8&dib_tag=se&keywords=1TB+portable+SSD&qid=1779042792&refinements=p_36%3A-10000&sr=8-1"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "button",
+            "text": "4.5 out of 5 stars",
+            "attributes": {
+              "href": "javascript:void(0)",
+              "aria-label": "4.5 out of 5 stars, rating details"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "(3.3K)",
+            "attributes": {
+              "href": "/SSK-Portable-External-Transmission-Smartphone/dp/B0BGKXX9TK/ref=sr_1_1?dib=eyJ2IjoiMSJ9.9JqNL5KFMWl46dJ9t6pogbF2PnpH0N3CcQyENN2WuTIh7Mrly_d3gnFNlt_cBrKsHiq-eBjS-HRIZiDnED5njynM_tbid3lcJVZZsV7m8I7SyO1i7RguhIFo9kO6SAH66PKgZ67FAbHIwIVm21qFaVW_GGcw8FHGCondQZkHdyJRpZl9QkqIkp-w4zDE_o19HC1IAMUj2l2BszWYaCb8mPn1VfchQt5QQivpy6Z-pdE.Pycu_OjQCwSxSVLkNPuZMmXRR4MPPyPkN1T5kw1uTy8&dib_tag=se&keywords=1TB+portable+SSD&qid=1779042792&refinements=p_36%3A-10000&sr=8-1#customerReviews",
+              "aria-label": "3,341 ratings"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "EUR\u00a077.44\nEUR77\n.\n44",
+            "attributes": {
+              "href": "/SSK-Portable-External-Transmission-Smartphone/dp/B0BGKXX9TK/ref=sr_1_1?dib=eyJ2IjoiMSJ9.9JqNL5KFMWl46dJ9t6pogbF2PnpH0N3CcQyENN2WuTIh7Mrly_d3gnFNlt_cBrKsHiq-eBjS-HRIZiDnED5njynM_tbid3lcJVZZsV7m8I7SyO1i7RguhIFo9kO6SAH66PKgZ67FAbHIwIVm21qFaVW_GGcw8FHGCondQZkHdyJRpZl9QkqIkp-w4zDE_o19HC1IAMUj2l2BszWYaCb8mPn1VfchQt5QQivpy6Z-pdE.Pycu_OjQCwSxSVLkNPuZMmXRR4MPPyPkN1T5kw1uTy8&dib_tag=se&keywords=1TB+portable+SSD&qid=1779042792&refinements=p_36%3A-10000&sr=8-1"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "button",
+            "text": "Small Business",
+            "attributes": {
+              "href": "javascript:void(0)"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Learn more",
+            "attributes": {
+              "href": "https://www.amazon.com/b/ref=s9_acss_bw_cg_sbp22c_1e1_w/ref=SBE_navbar_5?pf_rd_r=6W5X52VNZRB7GK1E1VX2&pf_rd_p=56621c3d-cff4-45e1-9bf4-79bbeb8006fc&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=merchandised-search-top-3&pf_rd_t=30901&pf_rd_i=17879387011&node=18018208011"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "button",
+            "text": "Add to cart",
+            "attributes": {
+              "name": "submit.addToCart",
+              "type": "button",
+              "aria-label": "Add to cart"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/UnionSine-Portable-External-HDD-USB-Laptop/dp/B0FV7VF5BQ/ref=sr_1_2?dib=eyJ2IjoiMSJ9.9JqNL5KFMWl46dJ9t6pogbF2PnpH0N3CcQyENN2WuTIh7Mrly_d3gnFNlt_cBrKsHiq-eBjS-HRIZiDnED5njynM_tbid3lcJVZZsV7m8I7SyO1i7RguhIFo9kO6SAH66PKgZ67FAbHIwIVm21qFaVW_GGcw8FHGCondQZkHdyJRpZl9QkqIkp-w4zDE_o19HC1IAMUj2l2BszWYaCb8mPn1VfchQt5QQivpy6Z-pdE.Pycu_OjQCwSxSVLkNPuZMmXRR4MPPyPkN1T5kw1uTy8&dib_tag=se&keywords=1TB+portable+SSD&qid=1779042792&refinements=p_36%3A-10000&sr=8-2"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "link",
+            "text": "UnionSine 1TB Ultra Slim Portable External Hard Drive HDD-USB 3.0 for PC, Mac, Laptop, PS4, Xbox one, Xbox 360-(Black)",
+            "attributes": {
+              "href": "/UnionSine-Portable-External-HDD-USB-Laptop/dp/B0FV7VF5BQ/ref=sr_1_2?dib=eyJ2IjoiMSJ9.9JqNL5KFMWl46dJ9t6pogbF2PnpH0N3CcQyENN2WuTIh7Mrly_d3gnFNlt_cBrKsHiq-eBjS-HRIZiDnED5njynM_tbid3lcJVZZsV7m8I7SyO1i7RguhIFo9kO6SAH66PKgZ67FAbHIwIVm21qFaVW_GGcw8FHGCondQZkHdyJRpZl9QkqIkp-w4zDE_o19HC1IAMUj2l2BszWYaCb8mPn1VfchQt5QQivpy6Z-pdE.Pycu_OjQCwSxSVLkNPuZMmXRR4MPPyPkN1T5kw1uTy8&dib_tag=se&keywords=1TB+portable+SSD&qid=1779042792&refinements=p_36%3A-10000&sr=8-2"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "button",
+            "text": "4.3 out of 5 stars",
+            "attributes": {
+              "href": "javascript:void(0)",
+              "aria-label": "4.3 out of 5 stars, rating details"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "link",
+            "text": "(1.8K)",
+            "attributes": {
+              "href": "/UnionSine-Portable-External-HDD-USB-Laptop/dp/B0FV7VF5BQ/ref=sr_1_2?dib=eyJ2IjoiMSJ9.9JqNL5KFMWl46dJ9t6pogbF2PnpH0N3CcQyENN2WuTIh7Mrly_d3gnFNlt_cBrKsHiq-eBjS-HRIZiDnED5njynM_tbid3lcJVZZsV7m8I7SyO1i7RguhIFo9kO6SAH66PKgZ67FAbHIwIVm21qFaVW_GGcw8FHGCondQZkHdyJRpZl9QkqIkp-w4zDE_o19HC1IAMUj2l2BszWYaCb8mPn1VfchQt5QQivpy6Z-pdE.Pycu_OjQCwSxSVLkNPuZMmXRR4MPPyPkN1T5kw1uTy8&dib_tag=se&keywords=1TB+portable+SSD&qid=1779042792&refinements=p_36%3A-10000&sr=8-2#customerReviews",
+              "aria-label": "1,828 ratings"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "link",
+            "text": "EUR\u00a055.59\nEUR55\n.\n59 \nList Price: EUR\u00a058.51\nList Price: \nEUR\u00a058.51\nEUR58.51",
+            "attributes": {
+              "href": "/UnionSine-Portable-External-HDD-USB-Laptop/dp/B0FV7VF5BQ/ref=sr_1_2?dib=eyJ2IjoiMSJ9.9JqNL5KFMWl46dJ9t6pogbF2PnpH0N3CcQyENN2WuTIh7Mrly_d3gnFNlt_cBrKsHiq-eBjS-HRIZiDnED5njynM_tbid3lcJVZZsV7m8I7SyO1i7RguhIFo9kO6SAH66PKgZ67FAbHIwIVm21qFaVW_GGcw8FHGCondQZkHdyJRpZl9QkqIkp-w4zDE_o19HC1IAMUj2l2BszWYaCb8mPn1VfchQt5QQivpy6Z-pdE.Pycu_OjQCwSxSVLkNPuZMmXRR4MPPyPkN1T5kw1uTy8&dib_tag=se&keywords=1TB+portable+SSD&qid=1779042792&refinements=p_36%3A-10000&sr=8-2"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "link",
+            "text": "See options",
+            "attributes": {
+              "href": "/UnionSine-Portable-External-HDD-USB-Laptop/dp/B0FV7VF5BQ/ref=sr_1_2_so_COMPUTER_DRIVE_OR_STORAGE?dib=eyJ2IjoiMSJ9.9JqNL5KFMWl46dJ9t6pogbF2PnpH0N3CcQyENN2WuTIh7Mrly_d3gnFNlt_cBrKsHiq-eBjS-HRIZiDnED5njynM_tbid3lcJVZZsV7m8I7SyO1i7RguhIFo9kO6SAH66PKgZ67FAbHIwIVm21qFaVW_GGcw8FHGCondQZkHdyJRpZl9QkqIkp-w4zDE_o19HC1IAMUj2l2BszWYaCb8mPn1VfchQt5QQivpy6Z-pdE.Pycu_OjQCwSxSVLkNPuZMmXRR4MPPyPkN1T5kw1uTy8&dib_tag=se&keywords=1TB+portable+SSD&qid=1779042792&refinements=p_36%3A-10000&sr=8-2"
+            }
+          },
+          {
+            "id": "pw-71",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/External-Magnetic-Portable-2000MB-Smartphone/dp/B0GGPXDH1R/ref=sr_1_3?dib=eyJ2IjoiMSJ9.9JqNL5KFMWl46dJ9t6pogbF2PnpH0N3CcQyENN2WuTIh7Mrly_d3gnFNlt_cBrKsHiq-eBjS-HRIZiDnED5njynM_tbid3lcJVZZsV7m8I7SyO1i7RguhIFo9kO6SAH66PKgZ67FAbHIwIVm21qFaVW_GGcw8FHGCondQZkHdyJRpZl9QkqIkp-w4zDE_o19HC1IAMUj2l2BszWYaCb8mPn1VfchQt5QQivpy6Z-pdE.Pycu_OjQCwSxSVLkNPuZMmXRR4MPPyPkN1T5kw1uTy8&dib_tag=se&keywords=1TB+portable+SSD&qid=1779042792&refinements=p_36%3A-10000&sr=8-3"
+            }
+          },
+          {
+            "id": "pw-72",
+            "role": "link",
+            "text": "512G External SSD Magnetic Portable SSD USB 3.2 Gen 2x2 up to 2000MB/s 4K 120 fps ProRes HDR Video Record Metal USB-C External Solid State Drive for iPhone 16 Pro Max, Smartphone, Tablet, Laptop",
+            "attributes": {
+              "href": "/External-Magnetic-Portable-2000MB-Smartphone/dp/B0GGPXDH1R/ref=sr_1_3?dib=eyJ2IjoiMSJ9.9JqNL5KFMWl46dJ9t6pogbF2PnpH0N3CcQyENN2WuTIh7Mrly_d3gnFNlt_cBrKsHiq-eBjS-HRIZiDnED5njynM_tbid3lcJVZZsV7m8I7SyO1i7RguhIFo9kO6SAH66PKgZ67FAbHIwIVm21qFaVW_GGcw8FHGCondQZkHdyJRpZl9QkqIkp-w4zDE_o19HC1IAMUj2l2BszWYaCb8mPn1VfchQt5QQivpy6Z-pdE.Pycu_OjQCwSxSVLkNPuZMmXRR4MPPyPkN1T5kw1uTy8&dib_tag=se&keywords=1TB+portable+SSD&qid=1779042792&refinements=p_36%3A-10000&sr=8-3"
+            }
+          },
+          {
+            "id": "pw-73",
+            "role": "button",
+            "text": "4.2 out of 5 stars",
+            "attributes": {
+              "href": "javascript:void(0)",
+              "aria-label": "4.2 out of 5 stars, rating details"
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "link",
+            "text": "(30)",
+            "attributes": {
+              "href": "/External-Magnetic-Portable-2000MB-Smartphone/dp/B0GGPXDH1R/ref=sr_1_3?dib=eyJ2IjoiMSJ9.9JqNL5KFMWl46dJ9t6pogbF2PnpH0N3CcQyENN2WuTIh7Mrly_d3gnFNlt_cBrKsHiq-eBjS-HRIZiDnED5njynM_tbid3lcJVZZsV7m8I7SyO1i7RguhIFo9kO6SAH66PKgZ67FAbHIwIVm21qFaVW_GGcw8FHGCondQZkHdyJRpZl9QkqIkp-w4zDE_o19HC1IAMUj2l2BszWYaCb8mPn1VfchQt5QQivpy6Z-pdE.Pycu_OjQCwSxSVLkNPuZMmXRR4MPPyPkN1T5kw1uTy8&dib_tag=se&keywords=1TB+portable+SSD&qid=1779042792&refinements=p_36%3A-10000&sr=8-3#customerReviews",
+              "aria-label": "30 ratings"
+            }
+          },
+          {
+            "id": "pw-75",
+            "role": "link",
+            "text": "EUR\u00a071.41\nEUR71\n.\n41 \nList: EUR\u00a0111.86\nList: \nEUR\u00a0111.86\nEUR111.86",
+            "attributes": {
+              "href": "/External-Magnetic-Portable-2000MB-Smartphone/dp/B0GGPXDH1R/ref=sr_1_3?dib=eyJ2IjoiMSJ9.9JqNL5KFMWl46dJ9t6pogbF2PnpH0N3CcQyENN2WuTIh7Mrly_d3gnFNlt_cBrKsHiq-eBjS-HRIZiDnED5njynM_tbid3lcJVZZsV7m8I7SyO1i7RguhIFo9kO6SAH66PKgZ67FAbHIwIVm21qFaVW_GGcw8FHGCondQZkHdyJRpZl9QkqIkp-w4zDE_o19HC1IAMUj2l2BszWYaCb8mPn1VfchQt5QQivpy6Z-pdE.Pycu_OjQCwSxSVLkNPuZMmXRR4MPPyPkN1T5kw1uTy8&dib_tag=se&keywords=1TB+portable+SSD&qid=1779042792&refinements=p_36%3A-10000&sr=8-3"
+            }
+          },
+          {
+            "id": "pw-84",
+            "role": "button",
+            "text": "Add to cart",
+            "attributes": {
+              "name": "submit.addToCart",
+              "type": "button",
+              "aria-label": "Add to cart"
+            }
+          },
+          {
+            "id": "pw-88",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/Toshiba-Canvio-Basics-Portable-External/dp/B0BQX6DVWY/ref=sr_1_4?dib=eyJ2IjoiMSJ9.9JqNL5KFMWl46dJ9t6pogbF2PnpH0N3CcQyENN2WuTIh7Mrly_d3gnFNlt_cBrKsHiq-eBjS-HRIZiDnED5njynM_tbid3lcJVZZsV7m8I7SyO1i7RguhIFo9kO6SAH66PKgZ67FAbHIwIVm21qFaVW_GGcw8FHGCondQZkHdyJRpZl9QkqIkp-w4zDE_o19HC1IAMUj2l2BszWYaCb8mPn1VfchQt5QQivpy6Z-pdE.Pycu_OjQCwSxSVLkNPuZMmXRR4MPPyPkN1T5kw1uTy8&dib_tag=se&keywords=1TB+portable+SSD&qid=1779042792&refinements=p_36%3A-10000&sr=8-4"
+            }
+          },
+          {
+            "id": "pw-89",
+            "role": "link",
+            "text": "Toshiba Canvio Basics 1TB Portable External Hard Drive USB 3.0, Black - HDTB510XK3AA",
+            "attributes": {
+              "href": "/Toshiba-Canvio-Basics-Portable-External/dp/B0BQX6DVWY/ref=sr_1_4?dib=eyJ2IjoiMSJ9.9JqNL5KFMWl46dJ9t6pogbF2PnpH0N3CcQyENN2WuTIh7Mrly_d3gnFNlt_cBrKsHiq-eBjS-HRIZiDnED5njynM_tbid3lcJVZZsV7m8I7SyO1i7RguhIFo9kO6SAH66PKgZ67FAbHIwIVm21qFaVW_GGcw8FHGCondQZkHdyJRpZl9QkqIkp-w4zDE_o19HC1IAMUj2l2BszWYaCb8mPn1VfchQt5QQivpy6Z-pdE.Pycu_OjQCwSxSVLkNPuZMmXRR4MPPyPkN1T5kw1uTy8&dib_tag=se&keywords=1TB+portable+SSD&qid=1779042792&refinements=p_36%3A-10000&sr=8-4"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "Array.from(document.querySelectorAll('[data-component-type=\"s-search-result\"]')).map((el,i)=>({i:i+1,asin:el.getAttribute('data-asin'),title:el.querySelector('h2 span')?.innerText || el.innerText.split('\\n').slice(0,5).join(' '),price:el.querySelector('.a-price .a-offscreen')?.innerText || '',reviews:el.querySelector('a[href*=\"#customerReviews\"] span')?.innerText || el.querySelector('a[href*=\"#customerReviews\"]')?.getAttribute('aria-label') || '',rating:el.querySelector('[aria-label*=\"out of 5 stars\"]')?.getAttribute('aria-label') || ''})).slice(0,30)"
+        }
+      },
+      "observation": "Eval: [{\"i\": 1, \"asin\": \"B0BGKXX9TK\", \"title\": \"SSK Portable SSD 500GB External Solid State Drives, up to 1050MB/s USB C SSD External Hard Drive USB 3.2 Gen2 for iPhone 15/16/17Pro, Windows, Mac, Android Phones and Tablets\", \"price\": \"EUR\\u00a077.44\", \"reviews\": \"(3.3K)\", \"rating\": \"4.5 out of 5 stars, rating details\"}, {\"i\": 2, \"asin\": \"B0FV7VF5BQ\", \"title\": \"UnionSine 1TB Ultra Slim Portable External Hard Drive HDD-USB 3.0 for PC, Mac, Laptop, PS4, Xbox one, Xbox 360-(Black)\", \"price\": \"EUR\\u00a055."
+    },
+    {
+      "step": 4,
+      "state": {
+        "url": "https://www.amazon.com/s?k=1TB+portable+SSD&rh=p_36%3A-10000",
+        "title": "Amazon.com : 1TB portable SSD",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Main content",
+            "attributes": {
+              "id": "nav-assist-skip-to-main-content",
+              "href": "#skippedLink",
+              "aria-label": "main content"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Results",
+            "attributes": {
+              "id": "nav-assist-skip-to-results",
+              "href": ".s-asin a:has(h2)",
+              "aria-label": "Results"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Filters",
+            "attributes": {
+              "id": "nav-assist-skip-to-filters",
+              "href": "#s-refinements > div.a-section > div:first-child",
+              "aria-label": "Filters"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Filters",
+            "attributes": {
+              "id": "nav-assist-skip-to-filter-sidebar",
+              "aria-label": "Filters"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Search\nalt\n+\n/",
+            "attributes": {
+              "id": "nav-assist-search",
+              "href": "javascript:void(0)",
+              "aria-label": "Search, alt, forward slash"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Cart\nshift\n+\nalt\n+\nC",
+            "attributes": {
+              "id": "nav-assist-cart",
+              "href": "javascript:void(0)",
+              "aria-label": "Cart, shift, alt, c"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Home\nshift\n+\nalt\n+\nH",
+            "attributes": {
+              "id": "nav-assist-home",
+              "href": "javascript:void(0)",
+              "aria-label": "Home, shift, alt, h"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Orders\nshift\n+\nalt\n+\nO",
+            "attributes": {
+              "id": "nav-assist-your-orders",
+              "href": "javascript:void(0)",
+              "aria-label": "Your orders, shift, alt, o"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Show/Hide shortcuts\nshift\n+\nalt\n+\nZ",
+            "attributes": {
+              "id": "nav-assist-show-shortcuts",
+              "aria-label": "Show/hide shortcuts, shift, alt, z"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Amazon",
+            "attributes": {
+              "id": "nav-logo-sprites",
+              "href": "/ref=nav_logo",
+              "aria-label": "Amazon"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": "Deliver to\nGermany",
+            "attributes": {
+              "id": "nav-global-location-popover-link",
+              "href": ""
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "combobox",
+            "text": "All Departments\nArts & Crafts\nAutomotive\nBaby\nBeauty & Personal Care\nBooks\nBoys' Fashion\nComputers\nDeals\nDigital Music\nElectronics\nGirls' Fashion\nHealth & Household\nHome & Kitchen\nIndustrial & Scientific\nKindle Store\nLuggage\nMen's Fashion\nMovies & TV\nMusic, CDs & Vinyl\nPet Supplies\nPrime Video\nSoftware\nSports & Outdoors\nTools & Home Improvement\nToys & Games\nVideo Games\nWomen's Fashion",
+            "attributes": {
+              "id": "searchDropdownBox",
+              "name": "url"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "searchbox",
+            "text": "Search Amazon",
+            "attributes": {
+              "id": "twotabsearchtextbox",
+              "name": "field-keywords",
+              "type": "text",
+              "aria-label": "Search Amazon",
+              "placeholder": "Search Amazon",
+              "value": "1TB portable SSD"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "EN",
+            "attributes": {
+              "href": "/customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang_ais",
+              "aria-label": "Choose a language for shopping in Amazon United States. The current selection is English (EN).\n"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "button",
+            "text": "Expand to Change Language or Country",
+            "attributes": {
+              "aria-label": "Expand to Change Language or Country"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Hello, sign in\nAccount & Lists",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%3Fk%3D1TB%2Bportable%2BSSD%26rh%3Dp_36%253A-10000%26ref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "button",
+            "text": "Expand Account and Lists",
+            "attributes": {
+              "aria-label": "Expand Account and Lists"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Returns\n& Orders",
+            "attributes": {
+              "id": "nav-orders",
+              "href": "/gp/css/order-history?ref_=nav_orders_first"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "0\nCart",
+            "attributes": {
+              "id": "nav-cart",
+              "href": "/gp/cart/view.html?ref_=nav_cart",
+              "aria-label": "0 items in cart"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%3Fk%3D1TB%2Bportable%2BSSD%26rh%3Dp_36%253A-10000%26ref_%3Dnav_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Start here.",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/register?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%2F%3F_encoding%3DUTF8%26k%3D1TB%2520portable%2520SSD%26rh%3Dp_36%253A-10000%26ref_%3Dnav_newcust&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0",
+              "aria-label": "New to Amazon? Start here to create an account"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Create a List",
+            "attributes": {
+              "href": "/hz/wishlist/ls?triggerElementID=createList&ref_=nav_ListFlyout_navFlyout_createList_lv_redirect"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Find a List or Registry",
+            "attributes": {
+              "href": "/registries?ref_=nav_ListFlyout_find"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Account",
+            "attributes": {
+              "href": "/gp/css/homepage.html?ref_=nav_AccountFlyout_ya"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Orders",
+            "attributes": {
+              "id": "nav_prefetch_yourorders",
+              "href": "/gp/css/order-history?ref_=nav_AccountFlyout_orders"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Recommendations",
+            "attributes": {
+              "href": "/gp/yourstore?ref_=nav_AccountFlyout_recs"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Browsing History",
+            "attributes": {
+              "href": "/gp/history?ref_=nav_AccountFlyout_browsinghistory"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Your Shopping preferences",
+            "attributes": {
+              "href": "https://www.amazon.com/slc/hub?ref_=nav_AccountFlyout_sl_ph_navflyout"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Watchlist",
+            "attributes": {
+              "href": "/gp/video/watchlist?ref_=nav_AccountFlyout_ywl"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Video Purchases & Rentals",
+            "attributes": {
+              "href": "/gp/video/library?ref_=nav_AccountFlyout_yvl"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "Kindle Unlimited",
+            "attributes": {
+              "href": "/gp/kindle/ku/ku_central?ref_=nav_AccountFlyout_ku"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Content & Devices",
+            "attributes": {
+              "href": "/hz/mycd/myx?pageType=content&ref_=nav_AccountFlyout_myk"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Subscribe & Save Items",
+            "attributes": {
+              "href": "/gp/subscribe-and-save/manager/viewsubscriptions?ref_=nav_AccountFlyout_sns"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Memberships & Subscriptions",
+            "attributes": {
+              "href": "/hz5/yourmembershipsandsubscriptions?ref_=nav_AccountFlyout_digital_subscriptions"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "Music Library",
+            "attributes": {
+              "href": "https://music.amazon.com?ref=nav_youraccount_cldplyr"
+            }
+          },
+          {
+            "id": "pw-78",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%3Fk%3D1TB%2Bportable%2BSSD%26rh%3Dp_36%253A-10000%26ref_%3Dnav_custrec_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            }
+          },
+          {
+            "id": "pw-79",
+            "role": "link",
+            "text": "Start here.",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/register?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%2F%3F_encoding%3DUTF8%26k%3D1TB%2520portable%2520SSD%26rh%3Dp_36%253A-10000%26ref_%3Dnav_custrec_newcust&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0",
+              "aria-label": "New to Amazon? Start here to create an account"
+            }
+          },
+          {
+            "id": "pw-82",
+            "role": "button",
+            "text": "All",
+            "attributes": {
+              "id": "nav-hamburger-menu",
+              "href": "javascript: void(0)",
+              "aria-label": "Open All Categories Menu"
+            }
+          },
+          {
+            "id": "pw-83",
+            "role": "link",
+            "text": "Today's Deals",
+            "attributes": {
+              "href": "/gp/goldbox?ref_=nav_cs_gb"
+            }
+          },
+          {
+            "id": "pw-84",
+            "role": "link",
+            "text": "Gift Cards",
+            "attributes": {
+              "href": "/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc"
+            }
+          },
+          {
+            "id": "pw-85",
+            "role": "link",
+            "text": "Sell",
+            "attributes": {
+              "href": "/b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell"
+            }
+          },
+          {
+            "id": "pw-86",
+            "role": "link",
+            "text": "Registry",
+            "attributes": {
+              "href": "/gp/browse.html?node=16115931011&ref_=nav_cs_registry"
+            }
+          },
+          {
+            "id": "pw-87",
+            "role": "link",
+            "text": "Prime Video",
+            "attributes": {
+              "href": "/Amazon-Video/b/?ie=UTF8&node=2858778011&ref_=nav_cs_prime_video"
+            }
+          },
+          {
+            "id": "pw-88",
+            "role": "link",
+            "text": "Customer Service",
+            "attributes": {
+              "href": "/gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice"
+            }
+          },
+          {
+            "id": "pw-89",
+            "role": "link",
+            "text": "Disability Customer Support",
+            "attributes": {
+              "href": "/gp/help/customer/accessibility",
+              "aria-label": "Click to call our Disability Customer Support line, or reach us directly at 1-888-283-1678"
+            }
+          },
+          {
+            "id": "pw-94",
+            "role": "combobox",
+            "text": "Featured\nPrice: Low to High\nPrice: High to Low\nAvg. Customer Review\nNewest Arrivals\nBest Sellers",
+            "attributes": {
+              "id": "s-result-sort-select",
+              "name": "s",
+              "aria-label": "Sort by:"
+            }
+          },
+          {
+            "id": "pw-97",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/SSK-Portable-External-Transmission-Smartphone/dp/B0BGKXX9TK/ref=sr_1_1?dib=eyJ2IjoiMSJ9.9JqNL5KFMWl46dJ9t6pogbF2PnpH0N3CcQyENN2WuTIh7Mrly_d3gnFNlt_cBrKsHiq-eBjS-HRIZiDnED5njynM_tbid3lcJVZZsV7m8I7SyO1i7RguhIFo9kO6SAH66PKgZ67FAbHIwIVm21qFaVW_GGcw8FHGCondQZkHdyJRpZl9QkqIkp-w4zDE_o19HC1IAMUj2l2BszWYaCb8mPn1VfchQt5QQivpy6Z-pdE.Pycu_OjQCwSxSVLkNPuZMmXRR4MPPyPkN1T5kw1uTy8&dib_tag=se&keywords=1TB+portable+SSD&qid=1779042792&refinements=p_36%3A-10000&sr=8-1"
+            }
+          },
+          {
+            "id": "pw-98",
+            "role": "link",
+            "text": "SSK Portable SSD 500GB External Solid State Drives, up to 1050MB/s USB C SSD External Hard Drive USB 3.2 Gen2 for iPhone 15/16/17Pro, Windows, Mac, Android Phones and Tablets",
+            "attributes": {
+              "href": "/SSK-Portable-External-Transmission-Smartphone/dp/B0BGKXX9TK/ref=sr_1_1?dib=eyJ2IjoiMSJ9.9JqNL5KFMWl46dJ9t6pogbF2PnpH0N3CcQyENN2WuTIh7Mrly_d3gnFNlt_cBrKsHiq-eBjS-HRIZiDnED5njynM_tbid3lcJVZZsV7m8I7SyO1i7RguhIFo9kO6SAH66PKgZ67FAbHIwIVm21qFaVW_GGcw8FHGCondQZkHdyJRpZl9QkqIkp-w4zDE_o19HC1IAMUj2l2BszWYaCb8mPn1VfchQt5QQivpy6Z-pdE.Pycu_OjQCwSxSVLkNPuZMmXRR4MPPyPkN1T5kw1uTy8&dib_tag=se&keywords=1TB+portable+SSD&qid=1779042792&refinements=p_36%3A-10000&sr=8-1"
+            }
+          },
+          {
+            "id": "pw-99",
+            "role": "button",
+            "text": "4.5 out of 5 stars",
+            "attributes": {
+              "href": "javascript:void(0)",
+              "aria-label": "4.5 out of 5 stars, rating details"
+            }
+          },
+          {
+            "id": "pw-100",
+            "role": "link",
+            "text": "(3.3K)",
+            "attributes": {
+              "href": "/SSK-Portable-External-Transmission-Smartphone/dp/B0BGKXX9TK/ref=sr_1_1?dib=eyJ2IjoiMSJ9.9JqNL5KFMWl46dJ9t6pogbF2PnpH0N3CcQyENN2WuTIh7Mrly_d3gnFNlt_cBrKsHiq-eBjS-HRIZiDnED5njynM_tbid3lcJVZZsV7m8I7SyO1i7RguhIFo9kO6SAH66PKgZ67FAbHIwIVm21qFaVW_GGcw8FHGCondQZkHdyJRpZl9QkqIkp-w4zDE_o19HC1IAMUj2l2BszWYaCb8mPn1VfchQt5QQivpy6Z-pdE.Pycu_OjQCwSxSVLkNPuZMmXRR4MPPyPkN1T5kw1uTy8&dib_tag=se&keywords=1TB+portable+SSD&qid=1779042792&refinements=p_36%3A-10000&sr=8-1#customerReviews",
+              "aria-label": "3,341 ratings"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => {\n  const results = Array.from(document.querySelectorAll('[data-component-type=\"s-search-result\"]')).map((el,i)=>{\n    const title = el.querySelector('h2 span')?.innerText?.trim() || '';\n    const price = el.querySelector('.a-price .a-offscreen')?.innerText?.trim() || '';\n    const reviewLink = el.querySelector('a[href*=\"#customerReviews\"]');\n    const reviews = reviewLink?.getAttribute('aria-label') || reviewLink?.innerText?.trim() || '';\n    const rating = el.querySelector('[aria-label*=\"out of 5 stars\"]')?.getAttribute('aria-label') || '';\n    return {i:i+1, asin:el.getAttribute('data-asin'), title, price, reviews, rating};\n  });\n  return results.filter(r => /\\b1\\s*TB\\b|\\b1TB\\b/i.test(r.title) && /SSD|Solid State/i.test(r.title) && !/HDD|Hard Drive HDD/i.test(r.title)).slice(0,20);\n})()"
+        }
+      },
+      "observation": "Eval: [{\"i\": 5, \"asin\": \"B0D8TRS8WH\", \"title\": \"1TB Magnetic Portable External Solid State Drive, Aluminum Alloy, 4K ProRes HDR Record and Store, PD100W Charging Up to 1000MB/s USB 3.2, Compatible with iPhone 16/17, Laptops (White)\", \"price\": \"EUR\\u00a076.58\", \"reviews\": \"8 ratings\", \"rating\": \"4.1 out of 5 stars, rating details\"}, {\"i\": 6, \"asin\": \"B0D95LJ6XB\", \"title\": \"ORICO 1TB Magnetic External SSD, 4K ProRes HDR Record and Store, 2000MB/s Stable Transmission and Storage, Portable Solid State Dri"
+    },
+    {
+      "step": 5,
+      "state": {
+        "url": "https://www.amazon.com/s?k=1TB+portable+SSD&rh=p_36%3A-10000",
+        "title": "Amazon.com : 1TB portable SSD",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Main content",
+            "attributes": {
+              "id": "nav-assist-skip-to-main-content",
+              "href": "#skippedLink",
+              "aria-label": "main content"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Results",
+            "attributes": {
+              "id": "nav-assist-skip-to-results",
+              "href": ".s-asin a:has(h2)",
+              "aria-label": "Results"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Filters",
+            "attributes": {
+              "id": "nav-assist-skip-to-filters",
+              "href": "#s-refinements > div.a-section > div:first-child",
+              "aria-label": "Filters"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Filters",
+            "attributes": {
+              "id": "nav-assist-skip-to-filter-sidebar",
+              "aria-label": "Filters"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Search\nalt\n+\n/",
+            "attributes": {
+              "id": "nav-assist-search",
+              "href": "javascript:void(0)",
+              "aria-label": "Search, alt, forward slash"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Cart\nshift\n+\nalt\n+\nC",
+            "attributes": {
+              "id": "nav-assist-cart",
+              "href": "javascript:void(0)",
+              "aria-label": "Cart, shift, alt, c"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Home\nshift\n+\nalt\n+\nH",
+            "attributes": {
+              "id": "nav-assist-home",
+              "href": "javascript:void(0)",
+              "aria-label": "Home, shift, alt, h"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Orders\nshift\n+\nalt\n+\nO",
+            "attributes": {
+              "id": "nav-assist-your-orders",
+              "href": "javascript:void(0)",
+              "aria-label": "Your orders, shift, alt, o"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Show/Hide shortcuts\nshift\n+\nalt\n+\nZ",
+            "attributes": {
+              "id": "nav-assist-show-shortcuts",
+              "aria-label": "Show/hide shortcuts, shift, alt, z"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Amazon",
+            "attributes": {
+              "id": "nav-logo-sprites",
+              "href": "/ref=nav_logo",
+              "aria-label": "Amazon"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": "Deliver to\nGermany",
+            "attributes": {
+              "id": "nav-global-location-popover-link",
+              "href": ""
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "combobox",
+            "text": "All Departments\nArts & Crafts\nAutomotive\nBaby\nBeauty & Personal Care\nBooks\nBoys' Fashion\nComputers\nDeals\nDigital Music\nElectronics\nGirls' Fashion\nHealth & Household\nHome & Kitchen\nIndustrial & Scientific\nKindle Store\nLuggage\nMen's Fashion\nMovies & TV\nMusic, CDs & Vinyl\nPet Supplies\nPrime Video\nSoftware\nSports & Outdoors\nTools & Home Improvement\nToys & Games\nVideo Games\nWomen's Fashion",
+            "attributes": {
+              "id": "searchDropdownBox",
+              "name": "url"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "searchbox",
+            "text": "Search Amazon",
+            "attributes": {
+              "id": "twotabsearchtextbox",
+              "name": "field-keywords",
+              "type": "text",
+              "aria-label": "Search Amazon",
+              "placeholder": "Search Amazon",
+              "value": "1TB portable SSD"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "EN",
+            "attributes": {
+              "href": "/customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang_ais",
+              "aria-label": "Choose a language for shopping in Amazon United States. The current selection is English (EN).\n"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "button",
+            "text": "Expand to Change Language or Country",
+            "attributes": {
+              "aria-label": "Expand to Change Language or Country"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Hello, sign in\nAccount & Lists",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%3Fk%3D1TB%2Bportable%2BSSD%26rh%3Dp_36%253A-10000%26ref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "button",
+            "text": "Expand Account and Lists",
+            "attributes": {
+              "aria-label": "Expand Account and Lists"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Returns\n& Orders",
+            "attributes": {
+              "id": "nav-orders",
+              "href": "/gp/css/order-history?ref_=nav_orders_first"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "0\nCart",
+            "attributes": {
+              "id": "nav-cart",
+              "href": "/gp/cart/view.html?ref_=nav_cart",
+              "aria-label": "0 items in cart"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%3Fk%3D1TB%2Bportable%2BSSD%26rh%3Dp_36%253A-10000%26ref_%3Dnav_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Start here.",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/register?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%2F%3F_encoding%3DUTF8%26k%3D1TB%2520portable%2520SSD%26rh%3Dp_36%253A-10000%26ref_%3Dnav_newcust&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0",
+              "aria-label": "New to Amazon? Start here to create an account"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Create a List",
+            "attributes": {
+              "href": "/hz/wishlist/ls?triggerElementID=createList&ref_=nav_ListFlyout_navFlyout_createList_lv_redirect"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Find a List or Registry",
+            "attributes": {
+              "href": "/registries?ref_=nav_ListFlyout_find"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Account",
+            "attributes": {
+              "href": "/gp/css/homepage.html?ref_=nav_AccountFlyout_ya"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Orders",
+            "attributes": {
+              "id": "nav_prefetch_yourorders",
+              "href": "/gp/css/order-history?ref_=nav_AccountFlyout_orders"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Recommendations",
+            "attributes": {
+              "href": "/gp/yourstore?ref_=nav_AccountFlyout_recs"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Browsing History",
+            "attributes": {
+              "href": "/gp/history?ref_=nav_AccountFlyout_browsinghistory"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Your Shopping preferences",
+            "attributes": {
+              "href": "https://www.amazon.com/slc/hub?ref_=nav_AccountFlyout_sl_ph_navflyout"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Watchlist",
+            "attributes": {
+              "href": "/gp/video/watchlist?ref_=nav_AccountFlyout_ywl"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Video Purchases & Rentals",
+            "attributes": {
+              "href": "/gp/video/library?ref_=nav_AccountFlyout_yvl"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "Kindle Unlimited",
+            "attributes": {
+              "href": "/gp/kindle/ku/ku_central?ref_=nav_AccountFlyout_ku"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Content & Devices",
+            "attributes": {
+              "href": "/hz/mycd/myx?pageType=content&ref_=nav_AccountFlyout_myk"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Subscribe & Save Items",
+            "attributes": {
+              "href": "/gp/subscribe-and-save/manager/viewsubscriptions?ref_=nav_AccountFlyout_sns"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Memberships & Subscriptions",
+            "attributes": {
+              "href": "/hz5/yourmembershipsandsubscriptions?ref_=nav_AccountFlyout_digital_subscriptions"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "Music Library",
+            "attributes": {
+              "href": "https://music.amazon.com?ref=nav_youraccount_cldplyr"
+            }
+          },
+          {
+            "id": "pw-78",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%3Fk%3D1TB%2Bportable%2BSSD%26rh%3Dp_36%253A-10000%26ref_%3Dnav_custrec_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            }
+          },
+          {
+            "id": "pw-79",
+            "role": "link",
+            "text": "Start here.",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/register?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%2F%3F_encoding%3DUTF8%26k%3D1TB%2520portable%2520SSD%26rh%3Dp_36%253A-10000%26ref_%3Dnav_custrec_newcust&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0",
+              "aria-label": "New to Amazon? Start here to create an account"
+            }
+          },
+          {
+            "id": "pw-82",
+            "role": "button",
+            "text": "All",
+            "attributes": {
+              "id": "nav-hamburger-menu",
+              "href": "javascript: void(0)",
+              "aria-label": "Open All Categories Menu"
+            }
+          },
+          {
+            "id": "pw-83",
+            "role": "link",
+            "text": "Today's Deals",
+            "attributes": {
+              "href": "/gp/goldbox?ref_=nav_cs_gb"
+            }
+          },
+          {
+            "id": "pw-84",
+            "role": "link",
+            "text": "Gift Cards",
+            "attributes": {
+              "href": "/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc"
+            }
+          },
+          {
+            "id": "pw-85",
+            "role": "link",
+            "text": "Sell",
+            "attributes": {
+              "href": "/b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell"
+            }
+          },
+          {
+            "id": "pw-86",
+            "role": "link",
+            "text": "Registry",
+            "attributes": {
+              "href": "/gp/browse.html?node=16115931011&ref_=nav_cs_registry"
+            }
+          },
+          {
+            "id": "pw-87",
+            "role": "link",
+            "text": "Prime Video",
+            "attributes": {
+              "href": "/Amazon-Video/b/?ie=UTF8&node=2858778011&ref_=nav_cs_prime_video"
+            }
+          },
+          {
+            "id": "pw-88",
+            "role": "link",
+            "text": "Customer Service",
+            "attributes": {
+              "href": "/gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice"
+            }
+          },
+          {
+            "id": "pw-89",
+            "role": "link",
+            "text": "Disability Customer Support",
+            "attributes": {
+              "href": "/gp/help/customer/accessibility",
+              "aria-label": "Click to call our Disability Customer Support line, or reach us directly at 1-888-283-1678"
+            }
+          },
+          {
+            "id": "pw-94",
+            "role": "combobox",
+            "text": "Featured\nPrice: Low to High\nPrice: High to Low\nAvg. Customer Review\nNewest Arrivals\nBest Sellers",
+            "attributes": {
+              "id": "s-result-sort-select",
+              "name": "s",
+              "aria-label": "Sort by:"
+            }
+          },
+          {
+            "id": "pw-97",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/SSK-Portable-External-Transmission-Smartphone/dp/B0BGKXX9TK/ref=sr_1_1?dib=eyJ2IjoiMSJ9.9JqNL5KFMWl46dJ9t6pogbF2PnpH0N3CcQyENN2WuTIh7Mrly_d3gnFNlt_cBrKsHiq-eBjS-HRIZiDnED5njynM_tbid3lcJVZZsV7m8I7SyO1i7RguhIFo9kO6SAH66PKgZ67FAbHIwIVm21qFaVW_GGcw8FHGCondQZkHdyJRpZl9QkqIkp-w4zDE_o19HC1IAMUj2l2BszWYaCb8mPn1VfchQt5QQivpy6Z-pdE.Pycu_OjQCwSxSVLkNPuZMmXRR4MPPyPkN1T5kw1uTy8&dib_tag=se&keywords=1TB+portable+SSD&qid=1779042792&refinements=p_36%3A-10000&sr=8-1"
+            }
+          },
+          {
+            "id": "pw-98",
+            "role": "link",
+            "text": "SSK Portable SSD 500GB External Solid State Drives, up to 1050MB/s USB C SSD External Hard Drive USB 3.2 Gen2 for iPhone 15/16/17Pro, Windows, Mac, Android Phones and Tablets",
+            "attributes": {
+              "href": "/SSK-Portable-External-Transmission-Smartphone/dp/B0BGKXX9TK/ref=sr_1_1?dib=eyJ2IjoiMSJ9.9JqNL5KFMWl46dJ9t6pogbF2PnpH0N3CcQyENN2WuTIh7Mrly_d3gnFNlt_cBrKsHiq-eBjS-HRIZiDnED5njynM_tbid3lcJVZZsV7m8I7SyO1i7RguhIFo9kO6SAH66PKgZ67FAbHIwIVm21qFaVW_GGcw8FHGCondQZkHdyJRpZl9QkqIkp-w4zDE_o19HC1IAMUj2l2BszWYaCb8mPn1VfchQt5QQivpy6Z-pdE.Pycu_OjQCwSxSVLkNPuZMmXRR4MPPyPkN1T5kw1uTy8&dib_tag=se&keywords=1TB+portable+SSD&qid=1779042792&refinements=p_36%3A-10000&sr=8-1"
+            }
+          },
+          {
+            "id": "pw-99",
+            "role": "button",
+            "text": "4.5 out of 5 stars",
+            "attributes": {
+              "href": "javascript:void(0)",
+              "aria-label": "4.5 out of 5 stars, rating details"
+            }
+          },
+          {
+            "id": "pw-100",
+            "role": "link",
+            "text": "(3.3K)",
+            "attributes": {
+              "href": "/SSK-Portable-External-Transmission-Smartphone/dp/B0BGKXX9TK/ref=sr_1_1?dib=eyJ2IjoiMSJ9.9JqNL5KFMWl46dJ9t6pogbF2PnpH0N3CcQyENN2WuTIh7Mrly_d3gnFNlt_cBrKsHiq-eBjS-HRIZiDnED5njynM_tbid3lcJVZZsV7m8I7SyO1i7RguhIFo9kO6SAH66PKgZ67FAbHIwIVm21qFaVW_GGcw8FHGCondQZkHdyJRpZl9QkqIkp-w4zDE_o19HC1IAMUj2l2BszWYaCb8mPn1VfchQt5QQivpy6Z-pdE.Pycu_OjQCwSxSVLkNPuZMmXRR4MPPyPkN1T5kw1uTy8&dib_tag=se&keywords=1TB+portable+SSD&qid=1779042792&refinements=p_36%3A-10000&sr=8-1#customerReviews",
+              "aria-label": "3,341 ratings"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => {\n  const results = Array.from(document.querySelectorAll('[data-component-type=\"s-search-result\"]')).map((el,i)=>{\n    const title = el.querySelector('h2 span')?.innerText?.trim() || '';\n    const price = el.querySelector('.a-price .a-offscreen')?.innerText?.trim() || '';\n    const reviewLink = el.querySelector('a[href*=\"#customerReviews\"]');\n    const reviews = reviewLink?.getAttribute('aria-label') || reviewLink?.innerText?.trim() || '';\n    const rating = el.querySelector('[aria-label*=\"out of 5 stars\"]')?.getAttribute('aria-label') || '';\n    return {i:i+1, asin:el.getAttribute('data-asin'), title, price, reviews, rating};\n  });\n  return results.filter(r => /(\\b1\\s*TB\\b|\\b1TB\\b)/i.test(r.title) && /(SSD|Solid State)/i.test(r.title) && !/(HDD|Hard Drive HDD)/i.test(r.title)).slice(0,10);\n})()"
+        }
+      },
+      "observation": "Eval: [{\"i\": 5, \"asin\": \"B0D8TRS8WH\", \"title\": \"1TB Magnetic Portable External Solid State Drive, Aluminum Alloy, 4K ProRes HDR Record and Store, PD100W Charging Up to 1000MB/s USB 3.2, Compatible with iPhone 16/17, Laptops (White)\", \"price\": \"EUR\\u00a076.58\", \"reviews\": \"8 ratings\", \"rating\": \"4.1 out of 5 stars, rating details\"}, {\"i\": 6, \"asin\": \"B0D95LJ6XB\", \"title\": \"ORICO 1TB Magnetic External SSD, 4K ProRes HDR Record and Store, 2000MB/s Stable Transmission and Storage, Portable Solid State Dri"
+    },
+    {
+      "step": 6,
+      "state": {
+        "url": "https://www.amazon.com/s?k=1TB+portable+SSD&rh=p_36%3A-10000",
+        "title": "Amazon.com : 1TB portable SSD",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Main content",
+            "attributes": {
+              "id": "nav-assist-skip-to-main-content",
+              "href": "#skippedLink",
+              "aria-label": "main content"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Results",
+            "attributes": {
+              "id": "nav-assist-skip-to-results",
+              "href": ".s-asin a:has(h2)",
+              "aria-label": "Results"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Filters",
+            "attributes": {
+              "id": "nav-assist-skip-to-filters",
+              "href": "#s-refinements > div.a-section > div:first-child",
+              "aria-label": "Filters"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Filters",
+            "attributes": {
+              "id": "nav-assist-skip-to-filter-sidebar",
+              "aria-label": "Filters"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Search\nalt\n+\n/",
+            "attributes": {
+              "id": "nav-assist-search",
+              "href": "javascript:void(0)",
+              "aria-label": "Search, alt, forward slash"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Cart\nshift\n+\nalt\n+\nC",
+            "attributes": {
+              "id": "nav-assist-cart",
+              "href": "javascript:void(0)",
+              "aria-label": "Cart, shift, alt, c"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Home\nshift\n+\nalt\n+\nH",
+            "attributes": {
+              "id": "nav-assist-home",
+              "href": "javascript:void(0)",
+              "aria-label": "Home, shift, alt, h"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Orders\nshift\n+\nalt\n+\nO",
+            "attributes": {
+              "id": "nav-assist-your-orders",
+              "href": "javascript:void(0)",
+              "aria-label": "Your orders, shift, alt, o"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Show/Hide shortcuts\nshift\n+\nalt\n+\nZ",
+            "attributes": {
+              "id": "nav-assist-show-shortcuts",
+              "aria-label": "Show/hide shortcuts, shift, alt, z"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Amazon",
+            "attributes": {
+              "id": "nav-logo-sprites",
+              "href": "/ref=nav_logo",
+              "aria-label": "Amazon"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": "Deliver to\nGermany",
+            "attributes": {
+              "id": "nav-global-location-popover-link",
+              "href": ""
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "combobox",
+            "text": "All Departments\nArts & Crafts\nAutomotive\nBaby\nBeauty & Personal Care\nBooks\nBoys' Fashion\nComputers\nDeals\nDigital Music\nElectronics\nGirls' Fashion\nHealth & Household\nHome & Kitchen\nIndustrial & Scientific\nKindle Store\nLuggage\nMen's Fashion\nMovies & TV\nMusic, CDs & Vinyl\nPet Supplies\nPrime Video\nSoftware\nSports & Outdoors\nTools & Home Improvement\nToys & Games\nVideo Games\nWomen's Fashion",
+            "attributes": {
+              "id": "searchDropdownBox",
+              "name": "url"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "searchbox",
+            "text": "Search Amazon",
+            "attributes": {
+              "id": "twotabsearchtextbox",
+              "name": "field-keywords",
+              "type": "text",
+              "aria-label": "Search Amazon",
+              "placeholder": "Search Amazon",
+              "value": "1TB portable SSD"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "EN",
+            "attributes": {
+              "href": "/customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang_ais",
+              "aria-label": "Choose a language for shopping in Amazon United States. The current selection is English (EN).\n"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "button",
+            "text": "Expand to Change Language or Country",
+            "attributes": {
+              "aria-label": "Expand to Change Language or Country"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Hello, sign in\nAccount & Lists",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%3Fk%3D1TB%2Bportable%2BSSD%26rh%3Dp_36%253A-10000%26ref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "button",
+            "text": "Expand Account and Lists",
+            "attributes": {
+              "aria-label": "Expand Account and Lists"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Returns\n& Orders",
+            "attributes": {
+              "id": "nav-orders",
+              "href": "/gp/css/order-history?ref_=nav_orders_first"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "0\nCart",
+            "attributes": {
+              "id": "nav-cart",
+              "href": "/gp/cart/view.html?ref_=nav_cart",
+              "aria-label": "0 items in cart"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%3Fk%3D1TB%2Bportable%2BSSD%26rh%3Dp_36%253A-10000%26ref_%3Dnav_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Start here.",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/register?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%2F%3F_encoding%3DUTF8%26k%3D1TB%2520portable%2520SSD%26rh%3Dp_36%253A-10000%26ref_%3Dnav_newcust&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0",
+              "aria-label": "New to Amazon? Start here to create an account"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Create a List",
+            "attributes": {
+              "href": "/hz/wishlist/ls?triggerElementID=createList&ref_=nav_ListFlyout_navFlyout_createList_lv_redirect"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Find a List or Registry",
+            "attributes": {
+              "href": "/registries?ref_=nav_ListFlyout_find"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Account",
+            "attributes": {
+              "href": "/gp/css/homepage.html?ref_=nav_AccountFlyout_ya"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Orders",
+            "attributes": {
+              "id": "nav_prefetch_yourorders",
+              "href": "/gp/css/order-history?ref_=nav_AccountFlyout_orders"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Recommendations",
+            "attributes": {
+              "href": "/gp/yourstore?ref_=nav_AccountFlyout_recs"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Browsing History",
+            "attributes": {
+              "href": "/gp/history?ref_=nav_AccountFlyout_browsinghistory"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Your Shopping preferences",
+            "attributes": {
+              "href": "https://www.amazon.com/slc/hub?ref_=nav_AccountFlyout_sl_ph_navflyout"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Watchlist",
+            "attributes": {
+              "href": "/gp/video/watchlist?ref_=nav_AccountFlyout_ywl"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Video Purchases & Rentals",
+            "attributes": {
+              "href": "/gp/video/library?ref_=nav_AccountFlyout_yvl"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "Kindle Unlimited",
+            "attributes": {
+              "href": "/gp/kindle/ku/ku_central?ref_=nav_AccountFlyout_ku"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Content & Devices",
+            "attributes": {
+              "href": "/hz/mycd/myx?pageType=content&ref_=nav_AccountFlyout_myk"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Subscribe & Save Items",
+            "attributes": {
+              "href": "/gp/subscribe-and-save/manager/viewsubscriptions?ref_=nav_AccountFlyout_sns"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Memberships & Subscriptions",
+            "attributes": {
+              "href": "/hz5/yourmembershipsandsubscriptions?ref_=nav_AccountFlyout_digital_subscriptions"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "Music Library",
+            "attributes": {
+              "href": "https://music.amazon.com?ref=nav_youraccount_cldplyr"
+            }
+          },
+          {
+            "id": "pw-78",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%3Fk%3D1TB%2Bportable%2BSSD%26rh%3Dp_36%253A-10000%26ref_%3Dnav_custrec_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            }
+          },
+          {
+            "id": "pw-79",
+            "role": "link",
+            "text": "Start here.",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/register?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%2F%3F_encoding%3DUTF8%26k%3D1TB%2520portable%2520SSD%26rh%3Dp_36%253A-10000%26ref_%3Dnav_custrec_newcust&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0",
+              "aria-label": "New to Amazon? Start here to create an account"
+            }
+          },
+          {
+            "id": "pw-82",
+            "role": "button",
+            "text": "All",
+            "attributes": {
+              "id": "nav-hamburger-menu",
+              "href": "javascript: void(0)",
+              "aria-label": "Open All Categories Menu"
+            }
+          },
+          {
+            "id": "pw-83",
+            "role": "link",
+            "text": "Today's Deals",
+            "attributes": {
+              "href": "/gp/goldbox?ref_=nav_cs_gb"
+            }
+          },
+          {
+            "id": "pw-84",
+            "role": "link",
+            "text": "Gift Cards",
+            "attributes": {
+              "href": "/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc"
+            }
+          },
+          {
+            "id": "pw-85",
+            "role": "link",
+            "text": "Sell",
+            "attributes": {
+              "href": "/b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell"
+            }
+          },
+          {
+            "id": "pw-86",
+            "role": "link",
+            "text": "Registry",
+            "attributes": {
+              "href": "/gp/browse.html?node=16115931011&ref_=nav_cs_registry"
+            }
+          },
+          {
+            "id": "pw-87",
+            "role": "link",
+            "text": "Prime Video",
+            "attributes": {
+              "href": "/Amazon-Video/b/?ie=UTF8&node=2858778011&ref_=nav_cs_prime_video"
+            }
+          },
+          {
+            "id": "pw-88",
+            "role": "link",
+            "text": "Customer Service",
+            "attributes": {
+              "href": "/gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice"
+            }
+          },
+          {
+            "id": "pw-89",
+            "role": "link",
+            "text": "Disability Customer Support",
+            "attributes": {
+              "href": "/gp/help/customer/accessibility",
+              "aria-label": "Click to call our Disability Customer Support line, or reach us directly at 1-888-283-1678"
+            }
+          },
+          {
+            "id": "pw-94",
+            "role": "combobox",
+            "text": "Featured\nPrice: Low to High\nPrice: High to Low\nAvg. Customer Review\nNewest Arrivals\nBest Sellers",
+            "attributes": {
+              "id": "s-result-sort-select",
+              "name": "s",
+              "aria-label": "Sort by:"
+            }
+          },
+          {
+            "id": "pw-97",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/SSK-Portable-External-Transmission-Smartphone/dp/B0BGKXX9TK/ref=sr_1_1?dib=eyJ2IjoiMSJ9.9JqNL5KFMWl46dJ9t6pogbF2PnpH0N3CcQyENN2WuTIh7Mrly_d3gnFNlt_cBrKsHiq-eBjS-HRIZiDnED5njynM_tbid3lcJVZZsV7m8I7SyO1i7RguhIFo9kO6SAH66PKgZ67FAbHIwIVm21qFaVW_GGcw8FHGCondQZkHdyJRpZl9QkqIkp-w4zDE_o19HC1IAMUj2l2BszWYaCb8mPn1VfchQt5QQivpy6Z-pdE.Pycu_OjQCwSxSVLkNPuZMmXRR4MPPyPkN1T5kw1uTy8&dib_tag=se&keywords=1TB+portable+SSD&qid=1779042792&refinements=p_36%3A-10000&sr=8-1"
+            }
+          },
+          {
+            "id": "pw-98",
+            "role": "link",
+            "text": "SSK Portable SSD 500GB External Solid State Drives, up to 1050MB/s USB C SSD External Hard Drive USB 3.2 Gen2 for iPhone 15/16/17Pro, Windows, Mac, Android Phones and Tablets",
+            "attributes": {
+              "href": "/SSK-Portable-External-Transmission-Smartphone/dp/B0BGKXX9TK/ref=sr_1_1?dib=eyJ2IjoiMSJ9.9JqNL5KFMWl46dJ9t6pogbF2PnpH0N3CcQyENN2WuTIh7Mrly_d3gnFNlt_cBrKsHiq-eBjS-HRIZiDnED5njynM_tbid3lcJVZZsV7m8I7SyO1i7RguhIFo9kO6SAH66PKgZ67FAbHIwIVm21qFaVW_GGcw8FHGCondQZkHdyJRpZl9QkqIkp-w4zDE_o19HC1IAMUj2l2BszWYaCb8mPn1VfchQt5QQivpy6Z-pdE.Pycu_OjQCwSxSVLkNPuZMmXRR4MPPyPkN1T5kw1uTy8&dib_tag=se&keywords=1TB+portable+SSD&qid=1779042792&refinements=p_36%3A-10000&sr=8-1"
+            }
+          },
+          {
+            "id": "pw-99",
+            "role": "button",
+            "text": "4.5 out of 5 stars",
+            "attributes": {
+              "href": "javascript:void(0)",
+              "aria-label": "4.5 out of 5 stars, rating details"
+            }
+          },
+          {
+            "id": "pw-100",
+            "role": "link",
+            "text": "(3.3K)",
+            "attributes": {
+              "href": "/SSK-Portable-External-Transmission-Smartphone/dp/B0BGKXX9TK/ref=sr_1_1?dib=eyJ2IjoiMSJ9.9JqNL5KFMWl46dJ9t6pogbF2PnpH0N3CcQyENN2WuTIh7Mrly_d3gnFNlt_cBrKsHiq-eBjS-HRIZiDnED5njynM_tbid3lcJVZZsV7m8I7SyO1i7RguhIFo9kO6SAH66PKgZ67FAbHIwIVm21qFaVW_GGcw8FHGCondQZkHdyJRpZl9QkqIkp-w4zDE_o19HC1IAMUj2l2BszWYaCb8mPn1VfchQt5QQivpy6Z-pdE.Pycu_OjQCwSxSVLkNPuZMmXRR4MPPyPkN1T5kw1uTy8&dib_tag=se&keywords=1TB+portable+SSD&qid=1779042792&refinements=p_36%3A-10000&sr=8-1#customerReviews",
+              "aria-label": "3,341 ratings"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => {\n  const candidates = Array.from(document.querySelectorAll('[data-component-type=\"s-search-result\"]')).map((el,i)=>{\n    const title = el.querySelector('h2 span')?.innerText?.trim() || '';\n    const price = el.querySelector('.a-price .a-offscreen')?.innerText?.trim() || '';\n    const reviewLink = el.querySelector('a[href*=\"#customerReviews\"]');\n    const reviews = reviewLink?.getAttribute('aria-label') || reviewLink?.innerText?.trim() || '';\n    return {i:i+1, title, price, reviews};\n  }).filter(r => /(\\b1\\s*TB\\b|\\b1TB\\b)/i.test(r.title) && /(SSD|Solid State)/i.test(r.title) && /Portable|External/i.test(r.title) && !/HDD/i.test(r.title));\n  return candidates.slice(0,5);\n})()"
+        }
+      },
+      "observation": "Eval: [{\"i\": 5, \"title\": \"1TB Magnetic Portable External Solid State Drive, Aluminum Alloy, 4K ProRes HDR Record and Store, PD100W Charging Up to 1000MB/s USB 3.2, Compatible with iPhone 16/17, Laptops (White)\", \"price\": \"EUR\\u00a076.58\", \"reviews\": \"8 ratings\"}, {\"i\": 6, \"title\": \"ORICO 1TB Magnetic External SSD, 4K ProRes HDR Record and Store, 2000MB/s Stable Transmission and Storage, Portable Solid State Drive, Compatible with Smartphone, Tablet, Computer - A20PLUS\", \"price\": \"EUR\\u00a086.04\", \"rev"
+    },
+    {
+      "step": 7,
+      "state": {
+        "url": "https://www.amazon.com/s?k=1TB+portable+SSD&rh=p_36%3A-10000",
+        "title": "Amazon.com : 1TB portable SSD",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Main content",
+            "attributes": {
+              "id": "nav-assist-skip-to-main-content",
+              "href": "#skippedLink",
+              "aria-label": "main content"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Results",
+            "attributes": {
+              "id": "nav-assist-skip-to-results",
+              "href": ".s-asin a:has(h2)",
+              "aria-label": "Results"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Filters",
+            "attributes": {
+              "id": "nav-assist-skip-to-filters",
+              "href": "#s-refinements > div.a-section > div:first-child",
+              "aria-label": "Filters"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Filters",
+            "attributes": {
+              "id": "nav-assist-skip-to-filter-sidebar",
+              "aria-label": "Filters"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Search\nalt\n+\n/",
+            "attributes": {
+              "id": "nav-assist-search",
+              "href": "javascript:void(0)",
+              "aria-label": "Search, alt, forward slash"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Cart\nshift\n+\nalt\n+\nC",
+            "attributes": {
+              "id": "nav-assist-cart",
+              "href": "javascript:void(0)",
+              "aria-label": "Cart, shift, alt, c"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Home\nshift\n+\nalt\n+\nH",
+            "attributes": {
+              "id": "nav-assist-home",
+              "href": "javascript:void(0)",
+              "aria-label": "Home, shift, alt, h"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Orders\nshift\n+\nalt\n+\nO",
+            "attributes": {
+              "id": "nav-assist-your-orders",
+              "href": "javascript:void(0)",
+              "aria-label": "Your orders, shift, alt, o"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Show/Hide shortcuts\nshift\n+\nalt\n+\nZ",
+            "attributes": {
+              "id": "nav-assist-show-shortcuts",
+              "aria-label": "Show/hide shortcuts, shift, alt, z"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Amazon",
+            "attributes": {
+              "id": "nav-logo-sprites",
+              "href": "/ref=nav_logo",
+              "aria-label": "Amazon"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": "Deliver to\nGermany",
+            "attributes": {
+              "id": "nav-global-location-popover-link",
+              "href": ""
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "combobox",
+            "text": "All Departments\nArts & Crafts\nAutomotive\nBaby\nBeauty & Personal Care\nBooks\nBoys' Fashion\nComputers\nDeals\nDigital Music\nElectronics\nGirls' Fashion\nHealth & Household\nHome & Kitchen\nIndustrial & Scientific\nKindle Store\nLuggage\nMen's Fashion\nMovies & TV\nMusic, CDs & Vinyl\nPet Supplies\nPrime Video\nSoftware\nSports & Outdoors\nTools & Home Improvement\nToys & Games\nVideo Games\nWomen's Fashion",
+            "attributes": {
+              "id": "searchDropdownBox",
+              "name": "url"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "searchbox",
+            "text": "Search Amazon",
+            "attributes": {
+              "id": "twotabsearchtextbox",
+              "name": "field-keywords",
+              "type": "text",
+              "aria-label": "Search Amazon",
+              "placeholder": "Search Amazon",
+              "value": "1TB portable SSD"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "EN",
+            "attributes": {
+              "href": "/customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang_ais",
+              "aria-label": "Choose a language for shopping in Amazon United States. The current selection is English (EN).\n"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "button",
+            "text": "Expand to Change Language or Country",
+            "attributes": {
+              "aria-label": "Expand to Change Language or Country"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Hello, sign in\nAccount & Lists",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%3Fk%3D1TB%2Bportable%2BSSD%26rh%3Dp_36%253A-10000%26ref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "button",
+            "text": "Expand Account and Lists",
+            "attributes": {
+              "aria-label": "Expand Account and Lists"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Returns\n& Orders",
+            "attributes": {
+              "id": "nav-orders",
+              "href": "/gp/css/order-history?ref_=nav_orders_first"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "0\nCart",
+            "attributes": {
+              "id": "nav-cart",
+              "href": "/gp/cart/view.html?ref_=nav_cart",
+              "aria-label": "0 items in cart"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%3Fk%3D1TB%2Bportable%2BSSD%26rh%3Dp_36%253A-10000%26ref_%3Dnav_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Start here.",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/register?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%2F%3F_encoding%3DUTF8%26k%3D1TB%2520portable%2520SSD%26rh%3Dp_36%253A-10000%26ref_%3Dnav_newcust&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0",
+              "aria-label": "New to Amazon? Start here to create an account"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Create a List",
+            "attributes": {
+              "href": "/hz/wishlist/ls?triggerElementID=createList&ref_=nav_ListFlyout_navFlyout_createList_lv_redirect"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Find a List or Registry",
+            "attributes": {
+              "href": "/registries?ref_=nav_ListFlyout_find"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Account",
+            "attributes": {
+              "href": "/gp/css/homepage.html?ref_=nav_AccountFlyout_ya"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Orders",
+            "attributes": {
+              "id": "nav_prefetch_yourorders",
+              "href": "/gp/css/order-history?ref_=nav_AccountFlyout_orders"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Recommendations",
+            "attributes": {
+              "href": "/gp/yourstore?ref_=nav_AccountFlyout_recs"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Browsing History",
+            "attributes": {
+              "href": "/gp/history?ref_=nav_AccountFlyout_browsinghistory"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Your Shopping preferences",
+            "attributes": {
+              "href": "https://www.amazon.com/slc/hub?ref_=nav_AccountFlyout_sl_ph_navflyout"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Watchlist",
+            "attributes": {
+              "href": "/gp/video/watchlist?ref_=nav_AccountFlyout_ywl"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Video Purchases & Rentals",
+            "attributes": {
+              "href": "/gp/video/library?ref_=nav_AccountFlyout_yvl"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "Kindle Unlimited",
+            "attributes": {
+              "href": "/gp/kindle/ku/ku_central?ref_=nav_AccountFlyout_ku"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Content & Devices",
+            "attributes": {
+              "href": "/hz/mycd/myx?pageType=content&ref_=nav_AccountFlyout_myk"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Subscribe & Save Items",
+            "attributes": {
+              "href": "/gp/subscribe-and-save/manager/viewsubscriptions?ref_=nav_AccountFlyout_sns"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Memberships & Subscriptions",
+            "attributes": {
+              "href": "/hz5/yourmembershipsandsubscriptions?ref_=nav_AccountFlyout_digital_subscriptions"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "Music Library",
+            "attributes": {
+              "href": "https://music.amazon.com?ref=nav_youraccount_cldplyr"
+            }
+          },
+          {
+            "id": "pw-78",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%3Fk%3D1TB%2Bportable%2BSSD%26rh%3Dp_36%253A-10000%26ref_%3Dnav_custrec_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            }
+          },
+          {
+            "id": "pw-79",
+            "role": "link",
+            "text": "Start here.",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/register?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%2F%3F_encoding%3DUTF8%26k%3D1TB%2520portable%2520SSD%26rh%3Dp_36%253A-10000%26ref_%3Dnav_custrec_newcust&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0",
+              "aria-label": "New to Amazon? Start here to create an account"
+            }
+          },
+          {
+            "id": "pw-82",
+            "role": "button",
+            "text": "All",
+            "attributes": {
+              "id": "nav-hamburger-menu",
+              "href": "javascript: void(0)",
+              "aria-label": "Open All Categories Menu"
+            }
+          },
+          {
+            "id": "pw-83",
+            "role": "link",
+            "text": "Today's Deals",
+            "attributes": {
+              "href": "/gp/goldbox?ref_=nav_cs_gb"
+            }
+          },
+          {
+            "id": "pw-84",
+            "role": "link",
+            "text": "Gift Cards",
+            "attributes": {
+              "href": "/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc"
+            }
+          },
+          {
+            "id": "pw-85",
+            "role": "link",
+            "text": "Sell",
+            "attributes": {
+              "href": "/b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell"
+            }
+          },
+          {
+            "id": "pw-86",
+            "role": "link",
+            "text": "Registry",
+            "attributes": {
+              "href": "/gp/browse.html?node=16115931011&ref_=nav_cs_registry"
+            }
+          },
+          {
+            "id": "pw-87",
+            "role": "link",
+            "text": "Prime Video",
+            "attributes": {
+              "href": "/Amazon-Video/b/?ie=UTF8&node=2858778011&ref_=nav_cs_prime_video"
+            }
+          },
+          {
+            "id": "pw-88",
+            "role": "link",
+            "text": "Customer Service",
+            "attributes": {
+              "href": "/gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice"
+            }
+          },
+          {
+            "id": "pw-89",
+            "role": "link",
+            "text": "Disability Customer Support",
+            "attributes": {
+              "href": "/gp/help/customer/accessibility",
+              "aria-label": "Click to call our Disability Customer Support line, or reach us directly at 1-888-283-1678"
+            }
+          },
+          {
+            "id": "pw-94",
+            "role": "combobox",
+            "text": "Featured\nPrice: Low to High\nPrice: High to Low\nAvg. Customer Review\nNewest Arrivals\nBest Sellers",
+            "attributes": {
+              "id": "s-result-sort-select",
+              "name": "s",
+              "aria-label": "Sort by:"
+            }
+          },
+          {
+            "id": "pw-97",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/SSK-Portable-External-Transmission-Smartphone/dp/B0BGKXX9TK/ref=sr_1_1?dib=eyJ2IjoiMSJ9.9JqNL5KFMWl46dJ9t6pogbF2PnpH0N3CcQyENN2WuTIh7Mrly_d3gnFNlt_cBrKsHiq-eBjS-HRIZiDnED5njynM_tbid3lcJVZZsV7m8I7SyO1i7RguhIFo9kO6SAH66PKgZ67FAbHIwIVm21qFaVW_GGcw8FHGCondQZkHdyJRpZl9QkqIkp-w4zDE_o19HC1IAMUj2l2BszWYaCb8mPn1VfchQt5QQivpy6Z-pdE.Pycu_OjQCwSxSVLkNPuZMmXRR4MPPyPkN1T5kw1uTy8&dib_tag=se&keywords=1TB+portable+SSD&qid=1779042792&refinements=p_36%3A-10000&sr=8-1"
+            }
+          },
+          {
+            "id": "pw-98",
+            "role": "link",
+            "text": "SSK Portable SSD 500GB External Solid State Drives, up to 1050MB/s USB C SSD External Hard Drive USB 3.2 Gen2 for iPhone 15/16/17Pro, Windows, Mac, Android Phones and Tablets",
+            "attributes": {
+              "href": "/SSK-Portable-External-Transmission-Smartphone/dp/B0BGKXX9TK/ref=sr_1_1?dib=eyJ2IjoiMSJ9.9JqNL5KFMWl46dJ9t6pogbF2PnpH0N3CcQyENN2WuTIh7Mrly_d3gnFNlt_cBrKsHiq-eBjS-HRIZiDnED5njynM_tbid3lcJVZZsV7m8I7SyO1i7RguhIFo9kO6SAH66PKgZ67FAbHIwIVm21qFaVW_GGcw8FHGCondQZkHdyJRpZl9QkqIkp-w4zDE_o19HC1IAMUj2l2BszWYaCb8mPn1VfchQt5QQivpy6Z-pdE.Pycu_OjQCwSxSVLkNPuZMmXRR4MPPyPkN1T5kw1uTy8&dib_tag=se&keywords=1TB+portable+SSD&qid=1779042792&refinements=p_36%3A-10000&sr=8-1"
+            }
+          },
+          {
+            "id": "pw-99",
+            "role": "button",
+            "text": "4.5 out of 5 stars",
+            "attributes": {
+              "href": "javascript:void(0)",
+              "aria-label": "4.5 out of 5 stars, rating details"
+            }
+          },
+          {
+            "id": "pw-100",
+            "role": "link",
+            "text": "(3.3K)",
+            "attributes": {
+              "href": "/SSK-Portable-External-Transmission-Smartphone/dp/B0BGKXX9TK/ref=sr_1_1?dib=eyJ2IjoiMSJ9.9JqNL5KFMWl46dJ9t6pogbF2PnpH0N3CcQyENN2WuTIh7Mrly_d3gnFNlt_cBrKsHiq-eBjS-HRIZiDnED5njynM_tbid3lcJVZZsV7m8I7SyO1i7RguhIFo9kO6SAH66PKgZ67FAbHIwIVm21qFaVW_GGcw8FHGCondQZkHdyJRpZl9QkqIkp-w4zDE_o19HC1IAMUj2l2BszWYaCb8mPn1VfchQt5QQivpy6Z-pdE.Pycu_OjQCwSxSVLkNPuZMmXRR4MPPyPkN1T5kw1uTy8&dib_tag=se&keywords=1TB+portable+SSD&qid=1779042792&refinements=p_36%3A-10000&sr=8-1#customerReviews",
+              "aria-label": "3,341 ratings"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "Found: 1TB Magnetic Portable External Solid State Drive (portable external SSD). Price: EUR 76.58 (under $100 equivalent). Review count: 8 ratings."
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

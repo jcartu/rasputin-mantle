@@ -1,0 +1,1357 @@
+{
+  "task_id": "wv-015",
+  "task_description": "On Amazon, compare two USB-C wall chargers and report which has the higher customer rating.",
+  "starting_url": "https://www.amazon.com",
+  "passed": true,
+  "final_answer": "Comparing the first two USB-C wall chargers shown: the Ocupwei USB C Charger Block 20W 2-pack has a 4.6 out of 5 stars rating, while the 3-Pack Dual Port USB C Fast Charging Block has a 4.5 out of 5 stars rating. The Ocupwei 20W 2-pack has the higher customer rating.",
+  "duration_s": 33.36,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://www.amazon.com/",
+        "title": "Amazon.com. Spend less. Smile more.",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Main content",
+            "attributes": {
+              "id": "nav-assist-skip-to-main-content",
+              "href": "#skippedLink",
+              "aria-label": "main content"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Search\nopt\n+\n/",
+            "attributes": {
+              "id": "nav-assist-search",
+              "href": "javascript:void(0)",
+              "aria-label": "Search, option, forward slash"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Cart\nshift\n+\nopt\n+\nC",
+            "attributes": {
+              "id": "nav-assist-cart",
+              "href": "javascript:void(0)",
+              "aria-label": "Cart, shift, option, c"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "Home\nshift\n+\nopt\n+\nH",
+            "attributes": {
+              "id": "nav-assist-home",
+              "href": "javascript:void(0)",
+              "aria-label": "Home, shift, option, h"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Orders\nshift\n+\nopt\n+\nO",
+            "attributes": {
+              "id": "nav-assist-your-orders",
+              "href": "javascript:void(0)",
+              "aria-label": "Your orders, shift, option, o"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "button",
+            "text": "Show/Hide shortcuts\nshift\n+\nopt\n+\nZ",
+            "attributes": {
+              "id": "nav-assist-show-shortcuts",
+              "aria-label": "Show/hide shortcuts, shift, option, z"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Amazon",
+            "attributes": {
+              "id": "nav-logo-sprites",
+              "href": "/ref=nav_logo",
+              "aria-label": "Amazon"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "combobox",
+            "text": "All Departments\nAlexa Skills\nAll the Best Pet Care\nAmazon Devices\nAmazon Fresh\nAmazon Global Store\nAmazon Haul\nAmazon One Medical\nAmazon Pharmacy\nAmazon Resale\nAppliances\nApps & Games\nArts, Crafts & Sewing\nAudible Books & Originals\nAutomotive Parts & Accessories\nBaby\nBartell's\nBeauty & Personal Care\nBooks\nBristol Farms\nCardenas\nCards Supermarket\nCDs & Vinyl\nCell Phones & Accessories\nClothing, Shoes & Jewelry\nWomen's Clothing, Shoes & Jewelry\nMen's Clothing, Shoes & Jewelry\nGirl's Clothing, Shoes & Jewelry\nBoy's Clothing, Shoes & Jewelry\nBaby Clothing, Shoes & Jewelry\nCollectibles & Fine Art\nComputers\nCredit and Payment Cards\nCub\nDigital Music\nElectronics\nFoodMaxx\nFresh Thyme\nGarden & Outdoor\nGift Cards\nGrocery & Gourmet Food\nHandmade\nHealth, Household & Baby Care\nHome & Business Services\nHome & Kitchen\nIndustrial & Scientific\nJust for Prime\nKegNBottle\nKindle Store\nLazy Acres Natural Market\nLucky\nLuggage & Travel Gear\nLuxury Stores\nMagazine Subscriptions\nMetropolitan Market\nMission Wine & Spirits\nMovies & TV\nMusical Instruments\nNew Seasons Market\nOffice Products\nPet Food Express\nPet Supplies\nPetco\nPremium Beauty\nPrime Video\nRite Aid\nSame-Day Store\nSave Mart\nSedano's\nSmart Home\nSoftware\nSousa's Wine & Liquors\nSports & Outdoors\nSubscribe & Save\nSubscription Boxes\nSurdyk's Liquor & Cheese Shop\nTools & Home Improvement\nToys & Games\nUnder $10\nVideo Games\nWeis\nWhole Foods Market\nWinn Dixie",
+            "attributes": {
+              "id": "searchDropdownBox",
+              "name": "url"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "searchbox",
+            "text": "Search Amazon",
+            "attributes": {
+              "id": "twotabsearchtextbox",
+              "name": "field-keywords",
+              "type": "text",
+              "aria-label": "Search Amazon",
+              "placeholder": "Search Amazon",
+              "value": ""
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "EN",
+            "attributes": {
+              "href": "/customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang",
+              "aria-label": "Choose a language for shopping in Amazon United States. The current selection is English (EN).\n"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": "Expand to Change Language or Country",
+            "attributes": {
+              "aria-label": "Expand to Change Language or Country"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "Hello\nAccount & Lists",
+            "attributes": {
+              "href": "http://www.amazon.com/gp/css/homepage.html?ref_=nav_youraccount_btn_b"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "button",
+            "text": "Expand Account and Lists",
+            "attributes": {
+              "aria-label": "Expand Account and Lists"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Returns\n& Orders",
+            "attributes": {
+              "id": "nav-orders",
+              "href": "/gp/css/order-history?ref_=nav_orders_first"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Cart",
+            "attributes": {
+              "id": "nav-cart",
+              "href": "/gp/cart/view.html?ref_=nav_cart",
+              "aria-label": " items in cart"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Create a List",
+            "attributes": {
+              "href": "/hz/wishlist/ls?triggerElementID=createList&ref_=nav_ListFlyout_navFlyout_createList_lv_redirect"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Find a List or Registry",
+            "attributes": {
+              "href": "/registries?ref_=nav_ListFlyout_find"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Account",
+            "attributes": {
+              "href": "/gp/css/homepage.html?ref_=nav_AccountFlyout_ya"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Orders",
+            "attributes": {
+              "id": "nav_prefetch_yourorders",
+              "href": "/gp/css/order-history?ref_=nav_AccountFlyout_orders"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Keep Shopping For",
+            "attributes": {
+              "href": "/hz/mobile/mission?ref_=nav_AccountFlyout_ci_mcx_mi_d_nf"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Recommendations",
+            "attributes": {
+              "href": "/gp/yourstore?ref_=nav_AccountFlyout_recs"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Browsing History",
+            "attributes": {
+              "href": "/gp/history?ref_=nav_AccountFlyout_browsinghistory"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Your Shopping preferences",
+            "attributes": {
+              "href": "https://www.amazon.com/slc/hub?ref_=nav_AccountFlyout_sl_ph_navflyout"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Amazon Credit Cards",
+            "attributes": {
+              "href": "https://www.amazon.com/credit/landing?ref_=nav_AccountFlyout_ya_amazon_cc_landing_ms"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Watchlist",
+            "attributes": {
+              "href": "/gp/video/watchlist?ref_=nav_AccountFlyout_ywl"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Video Purchases & Rentals",
+            "attributes": {
+              "href": "/gp/video/library?ref_=nav_AccountFlyout_yvl"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Kindle Unlimited",
+            "attributes": {
+              "href": "/gp/kindle/ku/ku_central?ref_=nav_AccountFlyout_ku"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Content & Devices",
+            "attributes": {
+              "href": "/hz/mycd/myx?pageType=content&ref_=nav_AccountFlyout_myk"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Subscribe & Save Items",
+            "attributes": {
+              "href": "/gp/subscribe-and-save/manager/viewsubscriptions?ref_=nav_AccountFlyout_sns"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Memberships & Subscriptions",
+            "attributes": {
+              "href": "/hz5/yourmembershipsandsubscriptions?ref_=nav_AccountFlyout_digital_subscriptions"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Prime Membership",
+            "attributes": {
+              "href": "/gp/subs/primeclub/account/homepage.html?ref_=nav_AccountFlyout_prime"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Music Library",
+            "attributes": {
+              "href": "https://music.amazon.com?ref=nav_youraccount_cldplyr"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Start a Selling Account",
+            "attributes": {
+              "href": "/b/?node=12766669011&ld=AZUSSOA-yaflyout&ref_=nav_AccountFlyout_cs_sell"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Create Your Free Business Account",
+            "attributes": {
+              "href": "/gp/browse.html?node=11261610011&ref_=nav_AccountFlyout_b2b_reg_bottom"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Customer Service",
+            "attributes": {
+              "href": "https://www.amazon.com/hz/contact-us?ref_=nav_AccountFlyout_CS"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "button",
+            "text": "All",
+            "attributes": {
+              "id": "nav-hamburger-menu",
+              "href": "javascript: void(0)",
+              "aria-label": "Open All Categories Menu"
+            }
+          },
+          {
+            "id": "pw-70",
+            "role": "link",
+            "text": "Medical Care",
+            "attributes": {
+              "href": "https://health.amazon.com/prime?ref_=nav_cs_all_health_ingress_onem_h"
+            }
+          },
+          {
+            "id": "pw-71",
+            "role": "button",
+            "text": "Medical Care Details",
+            "attributes": {
+              "aria-label": "Medical Care Details"
+            }
+          },
+          {
+            "id": "pw-72",
+            "role": "link",
+            "text": "Amazon Basics",
+            "attributes": {
+              "href": "/Amazon_Basics?channel=discovbar&field-lbr_brands_browse-bin=AmazonBasics&ref_=nav_cs_amazonbasics"
+            }
+          },
+          {
+            "id": "pw-73",
+            "role": "link",
+            "text": "Best Sellers",
+            "attributes": {
+              "href": "/gp/bestsellers/?ref_=nav_cs_bestsellers"
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "link",
+            "text": "Books",
+            "attributes": {
+              "href": "/books-used-books-textbooks/b/?ie=UTF8&node=283155&ref_=nav_cs_books"
+            }
+          },
+          {
+            "id": "pw-75",
+            "role": "link",
+            "text": "Registry",
+            "attributes": {
+              "href": "/gp/browse.html?node=16115931011&ref_=nav_cs_registry"
+            }
+          },
+          {
+            "id": "pw-76",
+            "role": "link",
+            "text": "Gift Cards",
+            "attributes": {
+              "href": "/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc"
+            }
+          },
+          {
+            "id": "pw-77",
+            "role": "button",
+            "text": "Gift Cards Details",
+            "attributes": {
+              "aria-label": "Gift Cards Details"
+            }
+          },
+          {
+            "id": "pw-78",
+            "role": "link",
+            "text": "Smart Home",
+            "attributes": {
+              "href": "/Smart-Home/b/?ie=UTF8&node=6563140011&ref_=nav_cs_smart_home"
+            }
+          },
+          {
+            "id": "pw-79",
+            "role": "link",
+            "text": "New Releases",
+            "attributes": {
+              "href": "/gp/new-releases/?ref_=nav_cs_newreleases"
+            }
+          },
+          {
+            "id": "pw-80",
+            "role": "link",
+            "text": "Today's Deals",
+            "attributes": {
+              "href": "/deals?ref_=nav_cs_gb"
+            }
+          },
+          {
+            "id": "pw-81",
+            "role": "link",
+            "text": "Groceries",
+            "attributes": {
+              "href": "/fmc/learn-more?ref_=nav_cs_groceries"
+            }
+          },
+          {
+            "id": "pw-82",
+            "role": "button",
+            "text": "Groceries Details",
+            "attributes": {
+              "aria-label": "Groceries Details"
+            }
+          },
+          {
+            "id": "pw-83",
+            "role": "link",
+            "text": "Pharmacy",
+            "attributes": {
+              "href": "https://pharmacy.amazon.com/?nodl=0&ref_=nav_cs_pharmacy"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "type",
+        "args": {
+          "id": "pw-11",
+          "text": "USB-C wall charger\n"
+        }
+      },
+      "observation": "Typed into pw-11"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://www.amazon.com/",
+        "title": "Amazon.com. Spend less. Smile more.",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Main content",
+            "attributes": {
+              "id": "nav-assist-skip-to-main-content",
+              "href": "#skippedLink",
+              "aria-label": "main content"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Search\nopt\n+\n/",
+            "attributes": {
+              "id": "nav-assist-search",
+              "href": "javascript:void(0)",
+              "aria-label": "Search, option, forward slash"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Cart\nshift\n+\nopt\n+\nC",
+            "attributes": {
+              "id": "nav-assist-cart",
+              "href": "javascript:void(0)",
+              "aria-label": "Cart, shift, option, c"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "Home\nshift\n+\nopt\n+\nH",
+            "attributes": {
+              "id": "nav-assist-home",
+              "href": "javascript:void(0)",
+              "aria-label": "Home, shift, option, h"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Orders\nshift\n+\nopt\n+\nO",
+            "attributes": {
+              "id": "nav-assist-your-orders",
+              "href": "javascript:void(0)",
+              "aria-label": "Your orders, shift, option, o"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "button",
+            "text": "Show/Hide shortcuts\nshift\n+\nopt\n+\nZ",
+            "attributes": {
+              "id": "nav-assist-show-shortcuts",
+              "aria-label": "Show/hide shortcuts, shift, option, z"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Amazon",
+            "attributes": {
+              "id": "nav-logo-sprites",
+              "href": "/ref=nav_logo",
+              "aria-label": "Amazon"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "combobox",
+            "text": "All Departments\nAlexa Skills\nAll the Best Pet Care\nAmazon Devices\nAmazon Fresh\nAmazon Global Store\nAmazon Haul\nAmazon One Medical\nAmazon Pharmacy\nAmazon Resale\nAppliances\nApps & Games\nArts, Crafts & Sewing\nAudible Books & Originals\nAutomotive Parts & Accessories\nBaby\nBartell's\nBeauty & Personal Care\nBooks\nBristol Farms\nCardenas\nCards Supermarket\nCDs & Vinyl\nCell Phones & Accessories\nClothing, Shoes & Jewelry\nWomen's Clothing, Shoes & Jewelry\nMen's Clothing, Shoes & Jewelry\nGirl's Clothing, Shoes & Jewelry\nBoy's Clothing, Shoes & Jewelry\nBaby Clothing, Shoes & Jewelry\nCollectibles & Fine Art\nComputers\nCredit and Payment Cards\nCub\nDigital Music\nElectronics\nFoodMaxx\nFresh Thyme\nGarden & Outdoor\nGift Cards\nGrocery & Gourmet Food\nHandmade\nHealth, Household & Baby Care\nHome & Business Services\nHome & Kitchen\nIndustrial & Scientific\nJust for Prime\nKegNBottle\nKindle Store\nLazy Acres Natural Market\nLucky\nLuggage & Travel Gear\nLuxury Stores\nMagazine Subscriptions\nMetropolitan Market\nMission Wine & Spirits\nMovies & TV\nMusical Instruments\nNew Seasons Market\nOffice Products\nPet Food Express\nPet Supplies\nPetco\nPremium Beauty\nPrime Video\nRite Aid\nSame-Day Store\nSave Mart\nSedano's\nSmart Home\nSoftware\nSousa's Wine & Liquors\nSports & Outdoors\nSubscribe & Save\nSubscription Boxes\nSurdyk's Liquor & Cheese Shop\nTools & Home Improvement\nToys & Games\nUnder $10\nVideo Games\nWeis\nWhole Foods Market\nWinn Dixie",
+            "attributes": {
+              "id": "searchDropdownBox",
+              "name": "url"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "searchbox",
+            "text": "Search Amazon",
+            "attributes": {
+              "id": "twotabsearchtextbox",
+              "name": "field-keywords",
+              "type": "text",
+              "aria-label": "Search Amazon",
+              "placeholder": "Search Amazon",
+              "value": ""
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "EN",
+            "attributes": {
+              "href": "/customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang",
+              "aria-label": "Choose a language for shopping in Amazon United States. The current selection is English (EN).\n"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": "Expand to Change Language or Country",
+            "attributes": {
+              "aria-label": "Expand to Change Language or Country"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "Hello\nAccount & Lists",
+            "attributes": {
+              "href": "http://www.amazon.com/gp/css/homepage.html?ref_=nav_youraccount_btn_b"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "button",
+            "text": "Expand Account and Lists",
+            "attributes": {
+              "aria-label": "Expand Account and Lists"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Returns\n& Orders",
+            "attributes": {
+              "id": "nav-orders",
+              "href": "/gp/css/order-history?ref_=nav_orders_first"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Cart",
+            "attributes": {
+              "id": "nav-cart",
+              "href": "/gp/cart/view.html?ref_=nav_cart",
+              "aria-label": " items in cart"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Create a List",
+            "attributes": {
+              "href": "/hz/wishlist/ls?triggerElementID=createList&ref_=nav_ListFlyout_navFlyout_createList_lv_redirect"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Find a List or Registry",
+            "attributes": {
+              "href": "/registries?ref_=nav_ListFlyout_find"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Account",
+            "attributes": {
+              "href": "/gp/css/homepage.html?ref_=nav_AccountFlyout_ya"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Orders",
+            "attributes": {
+              "id": "nav_prefetch_yourorders",
+              "href": "/gp/css/order-history?ref_=nav_AccountFlyout_orders"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Keep Shopping For",
+            "attributes": {
+              "href": "/hz/mobile/mission?ref_=nav_AccountFlyout_ci_mcx_mi_d_nf"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Recommendations",
+            "attributes": {
+              "href": "/gp/yourstore?ref_=nav_AccountFlyout_recs"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Browsing History",
+            "attributes": {
+              "href": "/gp/history?ref_=nav_AccountFlyout_browsinghistory"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Your Shopping preferences",
+            "attributes": {
+              "href": "https://www.amazon.com/slc/hub?ref_=nav_AccountFlyout_sl_ph_navflyout"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Amazon Credit Cards",
+            "attributes": {
+              "href": "https://www.amazon.com/credit/landing?ref_=nav_AccountFlyout_ya_amazon_cc_landing_ms"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Watchlist",
+            "attributes": {
+              "href": "/gp/video/watchlist?ref_=nav_AccountFlyout_ywl"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Video Purchases & Rentals",
+            "attributes": {
+              "href": "/gp/video/library?ref_=nav_AccountFlyout_yvl"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Kindle Unlimited",
+            "attributes": {
+              "href": "/gp/kindle/ku/ku_central?ref_=nav_AccountFlyout_ku"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Content & Devices",
+            "attributes": {
+              "href": "/hz/mycd/myx?pageType=content&ref_=nav_AccountFlyout_myk"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Subscribe & Save Items",
+            "attributes": {
+              "href": "/gp/subscribe-and-save/manager/viewsubscriptions?ref_=nav_AccountFlyout_sns"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Memberships & Subscriptions",
+            "attributes": {
+              "href": "/hz5/yourmembershipsandsubscriptions?ref_=nav_AccountFlyout_digital_subscriptions"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Prime Membership",
+            "attributes": {
+              "href": "/gp/subs/primeclub/account/homepage.html?ref_=nav_AccountFlyout_prime"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Music Library",
+            "attributes": {
+              "href": "https://music.amazon.com?ref=nav_youraccount_cldplyr"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Start a Selling Account",
+            "attributes": {
+              "href": "/b/?node=12766669011&ld=AZUSSOA-yaflyout&ref_=nav_AccountFlyout_cs_sell"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Create Your Free Business Account",
+            "attributes": {
+              "href": "/gp/browse.html?node=11261610011&ref_=nav_AccountFlyout_b2b_reg_bottom"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Customer Service",
+            "attributes": {
+              "href": "https://www.amazon.com/hz/contact-us?ref_=nav_AccountFlyout_CS"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "button",
+            "text": "All",
+            "attributes": {
+              "id": "nav-hamburger-menu",
+              "href": "javascript: void(0)",
+              "aria-label": "Open All Categories Menu"
+            }
+          },
+          {
+            "id": "pw-70",
+            "role": "link",
+            "text": "Medical Care",
+            "attributes": {
+              "href": "https://health.amazon.com/prime?ref_=nav_cs_all_health_ingress_onem_h"
+            }
+          },
+          {
+            "id": "pw-71",
+            "role": "button",
+            "text": "Medical Care Details",
+            "attributes": {
+              "aria-label": "Medical Care Details"
+            }
+          },
+          {
+            "id": "pw-72",
+            "role": "link",
+            "text": "Amazon Basics",
+            "attributes": {
+              "href": "/Amazon_Basics?channel=discovbar&field-lbr_brands_browse-bin=AmazonBasics&ref_=nav_cs_amazonbasics"
+            }
+          },
+          {
+            "id": "pw-73",
+            "role": "link",
+            "text": "Best Sellers",
+            "attributes": {
+              "href": "/gp/bestsellers/?ref_=nav_cs_bestsellers"
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "link",
+            "text": "Books",
+            "attributes": {
+              "href": "/books-used-books-textbooks/b/?ie=UTF8&node=283155&ref_=nav_cs_books"
+            }
+          },
+          {
+            "id": "pw-75",
+            "role": "link",
+            "text": "Registry",
+            "attributes": {
+              "href": "/gp/browse.html?node=16115931011&ref_=nav_cs_registry"
+            }
+          },
+          {
+            "id": "pw-76",
+            "role": "link",
+            "text": "Gift Cards",
+            "attributes": {
+              "href": "/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc"
+            }
+          },
+          {
+            "id": "pw-77",
+            "role": "button",
+            "text": "Gift Cards Details",
+            "attributes": {
+              "aria-label": "Gift Cards Details"
+            }
+          },
+          {
+            "id": "pw-78",
+            "role": "link",
+            "text": "Smart Home",
+            "attributes": {
+              "href": "/Smart-Home/b/?ie=UTF8&node=6563140011&ref_=nav_cs_smart_home"
+            }
+          },
+          {
+            "id": "pw-79",
+            "role": "link",
+            "text": "New Releases",
+            "attributes": {
+              "href": "/gp/new-releases/?ref_=nav_cs_newreleases"
+            }
+          },
+          {
+            "id": "pw-80",
+            "role": "link",
+            "text": "Today's Deals",
+            "attributes": {
+              "href": "/deals?ref_=nav_cs_gb"
+            }
+          },
+          {
+            "id": "pw-81",
+            "role": "link",
+            "text": "Groceries",
+            "attributes": {
+              "href": "/fmc/learn-more?ref_=nav_cs_groceries"
+            }
+          },
+          {
+            "id": "pw-82",
+            "role": "button",
+            "text": "Groceries Details",
+            "attributes": {
+              "aria-label": "Groceries Details"
+            }
+          },
+          {
+            "id": "pw-83",
+            "role": "link",
+            "text": "Pharmacy",
+            "attributes": {
+              "href": "https://pharmacy.amazon.com/?nodl=0&ref_=nav_cs_pharmacy"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://www.amazon.com/s?k=USB-C+wall+charger"
+        }
+      },
+      "observation": "Opened https://www.amazon.com/s?k=USB-C+wall+charger"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://www.amazon.com/s?k=USB-C+wall+charger",
+        "title": "Amazon.com : USB-C wall charger",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Main content",
+            "attributes": {
+              "id": "nav-assist-skip-to-main-content",
+              "href": "#skippedLink",
+              "aria-label": "main content"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Results",
+            "attributes": {
+              "id": "nav-assist-skip-to-results",
+              "href": ".s-asin a:has(h2)",
+              "aria-label": "Results"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Filters",
+            "attributes": {
+              "id": "nav-assist-skip-to-filters",
+              "href": "#s-refinements > div.a-section > div:first-child",
+              "aria-label": "Filters"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Filters",
+            "attributes": {
+              "id": "nav-assist-skip-to-filter-sidebar",
+              "aria-label": "Filters"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Search\n          \n              alt\n              +\n              /",
+            "attributes": {
+              "id": "nav-assist-search",
+              "href": "javascript:void(0)",
+              "aria-label": "Search, alt, forward slash"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Cart\n          \n              shift\n              +\n              alt\n              +\n              C",
+            "attributes": {
+              "id": "nav-assist-cart",
+              "href": "javascript:void(0)",
+              "aria-label": "Cart, shift, alt, c"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Home\n          \n              shift\n              +\n              alt\n              +\n              H",
+            "attributes": {
+              "id": "nav-assist-home",
+              "href": "javascript:void(0)",
+              "aria-label": "Home, shift, alt, h"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Orders\n          \n              shift\n              +\n              alt\n              +\n              O",
+            "attributes": {
+              "id": "nav-assist-your-orders",
+              "href": "javascript:void(0)",
+              "aria-label": "Your orders, shift, alt, o"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Show/Hide shortcuts\n          \n              shift\n              +\n              alt\n              +\n              Z",
+            "attributes": {
+              "id": "nav-assist-show-shortcuts",
+              "aria-label": "Show/hide shortcuts, shift, alt, z"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Amazon",
+            "attributes": {
+              "id": "nav-logo-sprites",
+              "href": "/ref=nav_logo",
+              "aria-label": "Amazon"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": "Deliver to\nGermany",
+            "attributes": {
+              "id": "nav-global-location-popover-link",
+              "href": ""
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "combobox",
+            "text": "All Departments\nArts & Crafts\nAutomotive\nBaby\nBeauty & Personal Care\nBooks\nBoys' Fashion\nComputers\nDeals\nDigital Music\nElectronics\nGirls' Fashion\nHealth & Household\nHome & Kitchen\nIndustrial & Scientific\nKindle Store\nLuggage\nMen's Fashion\nMovies & TV\nMusic, CDs & Vinyl\nPet Supplies\nPrime Video\nSoftware\nSports & Outdoors\nTools & Home Improvement\nToys & Games\nVideo Games\nWomen's Fashion",
+            "attributes": {
+              "id": "searchDropdownBox",
+              "name": "url"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "searchbox",
+            "text": "Search Amazon",
+            "attributes": {
+              "id": "twotabsearchtextbox",
+              "name": "field-keywords",
+              "type": "text",
+              "aria-label": "Search Amazon",
+              "placeholder": "Search Amazon",
+              "value": "USB-C wall charger"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "EN",
+            "attributes": {
+              "href": "/customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang_ais",
+              "aria-label": "Choose a language for shopping in Amazon United States. The current selection is English (EN).\n"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "button",
+            "text": "Expand to Change Language or Country",
+            "attributes": {
+              "aria-label": "Expand to Change Language or Country"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Hello, sign in\nAccount & Lists",
+            "attributes": {
+              "href": "https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fs%2F%3F_encoding%3DUTF8%26k%3DUSB-C%2520wall%2520charger%26ref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "button",
+            "text": "Expand Account and Lists",
+            "attributes": {
+              "aria-label": "Expand Account and Lists"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Returns\n& Orders",
+            "attributes": {
+              "id": "nav-orders",
+              "href": "/gp/css/order-history?ref_=nav_orders_first"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "0\nCart",
+            "attributes": {
+              "id": "nav-cart",
+              "href": "/gp/cart/view.html?ref_=nav_cart",
+              "aria-label": "0 items in cart"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "button",
+            "text": "All",
+            "attributes": {
+              "id": "nav-hamburger-menu",
+              "href": "javascript: void(0)",
+              "aria-label": "Open All Categories Menu"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Today's Deals",
+            "attributes": {
+              "href": "/gp/goldbox?ref_=nav_cs_gb"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Gift Cards",
+            "attributes": {
+              "href": "/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Sell",
+            "attributes": {
+              "href": "/b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Registry",
+            "attributes": {
+              "href": "/gp/browse.html?node=16115931011&ref_=nav_cs_registry"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Prime Video",
+            "attributes": {
+              "href": "/Amazon-Video/b/?ie=UTF8&node=2858778011&ref_=nav_cs_prime_video"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Customer Service",
+            "attributes": {
+              "href": "/gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Disability Customer Support",
+            "attributes": {
+              "href": "/gp/help/customer/accessibility",
+              "aria-label": "Click to call our Disability Customer Support line, or reach us directly at 1-888-283-1678"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "combobox",
+            "text": "Featured\nPrice: Low to High\nPrice: High to Low\nAvg. Customer Review\nNewest Arrivals\nBest Sellers",
+            "attributes": {
+              "id": "s-result-sort-select",
+              "name": "s",
+              "aria-label": "Sort by:"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/Pack-Charger-Block-Ocupwei-Fast/dp/B0B79JGSTL/ref=sr_1_1?dib=eyJ2IjoiMSJ9.W2xIc3CCViAAFRMSrvQp7jyeg3HRWozgsM3aW7Jf00MK3Ayc2O_X5drQWjZt1Mrap4lcQv7XtGd6bAOFancliyFeNOTCdZOlInwXZe_Ahvkil0X2FR1uGA5jbQIh0keMlVvgJrHnWQy2lzp36hdv1DyXl0UbSsl8y-iypDlWy3pXuQxno1cZgD4qANDWylOS8y_IPp66vxij4l9yordKkR7aAsAd2nch2mrjwQ2YrKs.ffrOxfQszRIRM91cUP2RcCAFhsRiD7XaxTc43rCEg90&dib_tag=se&keywords=USB-C+wall+charger&qid=1779042760&sr=8-1"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "USB C Charger Block 20W, Ocupwei PD 3.0 Fast Charging Wall Charger USBC Power Adapter Type C Brick Cube for iPhone 17/Pro/Pro Max/17 Air/ 16/16 Pro/16 Pro Max/15/Plus/Pro/Pro Max [2 Pack]",
+            "attributes": {
+              "href": "/Pack-Charger-Block-Ocupwei-Fast/dp/B0B79JGSTL/ref=sr_1_1?dib=eyJ2IjoiMSJ9.W2xIc3CCViAAFRMSrvQp7jyeg3HRWozgsM3aW7Jf00MK3Ayc2O_X5drQWjZt1Mrap4lcQv7XtGd6bAOFancliyFeNOTCdZOlInwXZe_Ahvkil0X2FR1uGA5jbQIh0keMlVvgJrHnWQy2lzp36hdv1DyXl0UbSsl8y-iypDlWy3pXuQxno1cZgD4qANDWylOS8y_IPp66vxij4l9yordKkR7aAsAd2nch2mrjwQ2YrKs.ffrOxfQszRIRM91cUP2RcCAFhsRiD7XaxTc43rCEg90&dib_tag=se&keywords=USB-C+wall+charger&qid=1779042760&sr=8-1"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "4.6 out of 5 stars",
+            "attributes": {
+              "href": "javascript:void(0)",
+              "aria-label": "4.6 out of 5 stars, rating details"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "(8.6K)",
+            "attributes": {
+              "href": "/Pack-Charger-Block-Ocupwei-Fast/dp/B0B79JGSTL/ref=sr_1_1?dib=eyJ2IjoiMSJ9.W2xIc3CCViAAFRMSrvQp7jyeg3HRWozgsM3aW7Jf00MK3Ayc2O_X5drQWjZt1Mrap4lcQv7XtGd6bAOFancliyFeNOTCdZOlInwXZe_Ahvkil0X2FR1uGA5jbQIh0keMlVvgJrHnWQy2lzp36hdv1DyXl0UbSsl8y-iypDlWy3pXuQxno1cZgD4qANDWylOS8y_IPp66vxij4l9yordKkR7aAsAd2nch2mrjwQ2YrKs.ffrOxfQszRIRM91cUP2RcCAFhsRiD7XaxTc43rCEg90&dib_tag=se&keywords=USB-C+wall+charger&qid=1779042760&sr=8-1#customerReviews",
+              "aria-label": "8,624 ratings"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "EUR\u00a05.41\nEUR5\n.\n41 (\nEUR\u00a02.71\nEUR2.71/count) \nTypical: EUR\u00a06.01\nTypical: \nEUR\u00a06.01\nEUR6.01",
+            "attributes": {
+              "href": "/Pack-Charger-Block-Ocupwei-Fast/dp/B0B79JGSTL/ref=sr_1_1?dib=eyJ2IjoiMSJ9.W2xIc3CCViAAFRMSrvQp7jyeg3HRWozgsM3aW7Jf00MK3Ayc2O_X5drQWjZt1Mrap4lcQv7XtGd6bAOFancliyFeNOTCdZOlInwXZe_Ahvkil0X2FR1uGA5jbQIh0keMlVvgJrHnWQy2lzp36hdv1DyXl0UbSsl8y-iypDlWy3pXuQxno1cZgD4qANDWylOS8y_IPp66vxij4l9yordKkR7aAsAd2nch2mrjwQ2YrKs.ffrOxfQszRIRM91cUP2RcCAFhsRiD7XaxTc43rCEg90&dib_tag=se&keywords=USB-C+wall+charger&qid=1779042760&sr=8-1"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "button",
+            "text": "Add to cart",
+            "attributes": {
+              "name": "submit.addToCart",
+              "type": "button",
+              "aria-label": "Add to cart"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/Charger-Charging-Block%EF%BC%8CType-iPhone16-Samsung/dp/B0CZ9BFXJ1/ref=sr_1_2?dib=eyJ2IjoiMSJ9.W2xIc3CCViAAFRMSrvQp7jyeg3HRWozgsM3aW7Jf00MK3Ayc2O_X5drQWjZt1Mrap4lcQv7XtGd6bAOFancliyFeNOTCdZOlInwXZe_Ahvkil0X2FR1uGA5jbQIh0keMlVvgJrHnWQy2lzp36hdv1DyXl0UbSsl8y-iypDlWy3pXuQxno1cZgD4qANDWylOS8y_IPp66vxij4l9yordKkR7aAsAd2nch2mrjwQ2YrKs.ffrOxfQszRIRM91cUP2RcCAFhsRiD7XaxTc43rCEg90&dib_tag=se&keywords=USB-C+wall+charger&qid=1779042760&sr=8-2"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "link",
+            "text": "USB C Charger Block,3-Pack Dual Port USB C Fast Charging Block\uff0cType C Wall Charger Plug for iPhone 17/16/15/14/13/12/11/ Pro Max/Plus/Xs Max/XR/X,iPad Pro (20W)",
+            "attributes": {
+              "href": "/Charger-Charging-Block%EF%BC%8CType-iPhone16-Samsung/dp/B0CZ9BFXJ1/ref=sr_1_2?dib=eyJ2IjoiMSJ9.W2xIc3CCViAAFRMSrvQp7jyeg3HRWozgsM3aW7Jf00MK3Ayc2O_X5drQWjZt1Mrap4lcQv7XtGd6bAOFancliyFeNOTCdZOlInwXZe_Ahvkil0X2FR1uGA5jbQIh0keMlVvgJrHnWQy2lzp36hdv1DyXl0UbSsl8y-iypDlWy3pXuQxno1cZgD4qANDWylOS8y_IPp66vxij4l9yordKkR7aAsAd2nch2mrjwQ2YrKs.ffrOxfQszRIRM91cUP2RcCAFhsRiD7XaxTc43rCEg90&dib_tag=se&keywords=USB-C+wall+charger&qid=1779042760&sr=8-2"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "button",
+            "text": "4.5 out of 5 stars",
+            "attributes": {
+              "href": "javascript:void(0)",
+              "aria-label": "4.5 out of 5 stars, rating details"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "link",
+            "text": "(2.4K)",
+            "attributes": {
+              "href": "/Charger-Charging-Block%EF%BC%8CType-iPhone16-Samsung/dp/B0CZ9BFXJ1/ref=sr_1_2?dib=eyJ2IjoiMSJ9.W2xIc3CCViAAFRMSrvQp7jyeg3HRWozgsM3aW7Jf00MK3Ayc2O_X5drQWjZt1Mrap4lcQv7XtGd6bAOFancliyFeNOTCdZOlInwXZe_Ahvkil0X2FR1uGA5jbQIh0keMlVvgJrHnWQy2lzp36hdv1DyXl0UbSsl8y-iypDlWy3pXuQxno1cZgD4qANDWylOS8y_IPp66vxij4l9yordKkR7aAsAd2nch2mrjwQ2YrKs.ffrOxfQszRIRM91cUP2RcCAFhsRiD7XaxTc43rCEg90&dib_tag=se&keywords=USB-C+wall+charger&qid=1779042760&sr=8-2#customerReviews",
+              "aria-label": "2,453 ratings"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "link",
+            "text": "EUR\u00a08.60\nEUR8\n.\n60 (\nEUR\u00a02.87\nEUR2.87/count)",
+            "attributes": {
+              "href": "/Charger-Charging-Block%EF%BC%8CType-iPhone16-Samsung/dp/B0CZ9BFXJ1/ref=sr_1_2?dib=eyJ2IjoiMSJ9.W2xIc3CCViAAFRMSrvQp7jyeg3HRWozgsM3aW7Jf00MK3Ayc2O_X5drQWjZt1Mrap4lcQv7XtGd6bAOFancliyFeNOTCdZOlInwXZe_Ahvkil0X2FR1uGA5jbQIh0keMlVvgJrHnWQy2lzp36hdv1DyXl0UbSsl8y-iypDlWy3pXuQxno1cZgD4qANDWylOS8y_IPp66vxij4l9yordKkR7aAsAd2nch2mrjwQ2YrKs.ffrOxfQszRIRM91cUP2RcCAFhsRiD7XaxTc43rCEg90&dib_tag=se&keywords=USB-C+wall+charger&qid=1779042760&sr=8-2"
+            }
+          },
+          {
+            "id": "pw-70",
+            "role": "button",
+            "text": "Add to cart",
+            "attributes": {
+              "name": "submit.addToCart",
+              "type": "button",
+              "aria-label": "Add to cart"
+            }
+          },
+          {
+            "id": "pw-73",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/Charger-Charging-5-Port-Adapter-Multiport/dp/B0F1YGC8KB/ref=sr_1_3?dib=eyJ2IjoiMSJ9.W2xIc3CCViAAFRMSrvQp7jyeg3HRWozgsM3aW7Jf00MK3Ayc2O_X5drQWjZt1Mrap4lcQv7XtGd6bAOFancliyFeNOTCdZOlInwXZe_Ahvkil0X2FR1uGA5jbQIh0keMlVvgJrHnWQy2lzp36hdv1DyXl0UbSsl8y-iypDlWy3pXuQxno1cZgD4qANDWylOS8y_IPp66vxij4l9yordKkR7aAsAd2nch2mrjwQ2YrKs.ffrOxfQszRIRM91cUP2RcCAFhsRiD7XaxTc43rCEg90&dib_tag=se&keywords=USB-C+wall+charger&qid=1779042760&sr=8-3"
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "link",
+            "text": "USB C Fast Charger Block, 60W USBC Wall Charger Plug, 2Pack 5-Port Type C Phone Charging Cubes Power Adapter Multiport Brick for iPhone 17/16/15/14/13/12/11/Pro Max/Plus/Air, iPad mini/Pro,Galaxy S25",
+            "attributes": {
+              "href": "/Charger-Charging-5-Port-Adapter-Multiport/dp/B0F1YGC8KB/ref=sr_1_3?dib=eyJ2IjoiMSJ9.W2xIc3CCViAAFRMSrvQp7jyeg3HRWozgsM3aW7Jf00MK3Ayc2O_X5drQWjZt1Mrap4lcQv7XtGd6bAOFancliyFeNOTCdZOlInwXZe_Ahvkil0X2FR1uGA5jbQIh0keMlVvgJrHnWQy2lzp36hdv1DyXl0UbSsl8y-iypDlWy3pXuQxno1cZgD4qANDWylOS8y_IPp66vxij4l9yordKkR7aAsAd2nch2mrjwQ2YrKs.ffrOxfQszRIRM91cUP2RcCAFhsRiD7XaxTc43rCEg90&dib_tag=se&keywords=USB-C+wall+charger&qid=1779042760&sr=8-3"
+            }
+          },
+          {
+            "id": "pw-75",
+            "role": "button",
+            "text": "4.6 out of 5 stars",
+            "attributes": {
+              "href": "javascript:void(0)",
+              "aria-label": "4.6 out of 5 stars, rating details"
+            }
+          },
+          {
+            "id": "pw-76",
+            "role": "link",
+            "text": "(2K)",
+            "attributes": {
+              "href": "/Charger-Charging-5-Port-Adapter-Multiport/dp/B0F1YGC8KB/ref=sr_1_3?dib=eyJ2IjoiMSJ9.W2xIc3CCViAAFRMSrvQp7jyeg3HRWozgsM3aW7Jf00MK3Ayc2O_X5drQWjZt1Mrap4lcQv7XtGd6bAOFancliyFeNOTCdZOlInwXZe_Ahvkil0X2FR1uGA5jbQIh0keMlVvgJrHnWQy2lzp36hdv1DyXl0UbSsl8y-iypDlWy3pXuQxno1cZgD4qANDWylOS8y_IPp66vxij4l9yordKkR7aAsAd2nch2mrjwQ2YrKs.ffrOxfQszRIRM91cUP2RcCAFhsRiD7XaxTc43rCEg90&dib_tag=se&keywords=USB-C+wall+charger&qid=1779042760&sr=8-3#customerReviews",
+              "aria-label": "2,030 ratings"
+            }
+          },
+          {
+            "id": "pw-77",
+            "role": "link",
+            "text": "EUR\u00a018.92\nEUR18\n.\n92 (\nEUR\u00a09.47\nEUR9.47/count)",
+            "attributes": {
+              "href": "/Charger-Charging-5-Port-Adapter-Multiport/dp/B0F1YGC8KB/ref=sr_1_3?dib=eyJ2IjoiMSJ9.W2xIc3CCViAAFRMSrvQp7jyeg3HRWozgsM3aW7Jf00MK3Ayc2O_X5drQWjZt1Mrap4lcQv7XtGd6bAOFancliyFeNOTCdZOlInwXZe_Ahvkil0X2FR1uGA5jbQIh0keMlVvgJrHnWQy2lzp36hdv1DyXl0UbSsl8y-iypDlWy3pXuQxno1cZgD4qANDWylOS8y_IPp66vxij4l9yordKkR7aAsAd2nch2mrjwQ2YrKs.ffrOxfQszRIRM91cUP2RcCAFhsRiD7XaxTc43rCEg90&dib_tag=se&keywords=USB-C+wall+charger&qid=1779042760&sr=8-3"
+            }
+          },
+          {
+            "id": "pw-86",
+            "role": "button",
+            "text": "Add to cart",
+            "attributes": {
+              "name": "submit.addToCart",
+              "type": "button",
+              "aria-label": "Add to cart"
+            }
+          },
+          {
+            "id": "pw-88",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/sspa/click?ie=UTF8&spc=MTo1NjAxMDA4ODU4OTU1NDM4OjE3NzkwNDI3NjA6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMDkwNzI4NDE0ODQwMjo6MDo6&url=%2Fwegear-Charging-Charger-Dual-Port-Foldable%2Fdp%2FB0F8PYR4P9%2Fref%3Dsxin_17_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.a2d8fef6-2d68-4a6a-b5d9-51823ece2f68%253Aamzn1.sym.a2d8fef6-2d68-4a6a-b5d9-51823ece2f68%26cv_ct_cx%3DUSB-C%2Bwall%2Bcharger%26keywords%3DUSB-C%2Bwall%2Bcharger%26pd_rd_i%3DB0F8PYR4P9%26pd_rd_r%3Dee99397f-c4a8-47b4-92c1-5b758a6e47b9%26pd_rd_w%3Dq3NK2%26pd_rd_wg%3DEbs6K%26pf_rd_p%3Da2d8fef6-2d68-4a6a-b5d9-51823ece2f68%26pf_rd_r%3DQDT84AXA77HQ15QMSVHQ%26qid%3D1779042760%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-bbb9804a-c7e9-4d92-96ec-63fab7f26c09-spons%26aref%3Dro6YcxQJMm%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=ro6YcxQJMm"
+            }
+          },
+          {
+            "id": "pw-89",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-91",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-93",
+            "role": "button",
+            "text": "Compact Size",
+            "attributes": {
+              "aria-label": "Compact Size"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "Comparing the first two USB-C wall chargers shown: the Ocupwei USB C Charger Block 20W 2-pack has a 4.6 out of 5 stars rating, while the 3-Pack Dual Port USB C Fast Charging Block has a 4.5 out of 5 stars rating. The Ocupwei 20W 2-pack has the higher customer rating."
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

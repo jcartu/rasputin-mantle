@@ -1,0 +1,2010 @@
+{
+  "task_id": "wv-055",
+  "task_description": "On Hugging Face Spaces, find a running image-to-text demo and report its creator.",
+  "starting_url": "https://huggingface.co/spaces",
+  "passed": true,
+  "final_answer": "A running image-to-text demo is \u201cPP-OCRv5 Online Demo,\u201d and its creator is PaddlePaddle.",
+  "duration_s": 60.97,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://huggingface.co/spaces",
+        "title": "Spaces - Hugging Face",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Hugging Face",
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Models",
+            "attributes": {
+              "href": "/models"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Datasets",
+            "attributes": {
+              "href": "/datasets"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Spaces",
+            "attributes": {
+              "href": "/spaces"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Buckets\nNEW",
+            "attributes": {
+              "href": "/storage"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Docs",
+            "attributes": {
+              "href": "/docs"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Enterprise",
+            "attributes": {
+              "href": "/enterprise"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Pricing",
+            "attributes": {
+              "href": "/pricing"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Tasks",
+            "attributes": {
+              "href": "/tasks"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "HuggingChat",
+            "attributes": {
+              "href": "/chat"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Collections",
+            "attributes": {
+              "href": "/collections"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Languages",
+            "attributes": {
+              "href": "/languages"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Organizations",
+            "attributes": {
+              "href": "/organizations"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Blog",
+            "attributes": {
+              "href": "/blog"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Posts",
+            "attributes": {
+              "href": "/posts"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Daily Papers",
+            "attributes": {
+              "href": "/papers"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Learn",
+            "attributes": {
+              "href": "/learn"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Discord",
+            "attributes": {
+              "href": "/join/discord"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Forum",
+            "attributes": {
+              "href": "https://discuss.huggingface.co/"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "GitHub",
+            "attributes": {
+              "href": "https://github.com/huggingface"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Team & Enterprise",
+            "attributes": {
+              "href": "/enterprise"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Hugging Face PRO",
+            "attributes": {
+              "href": "/pro"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Enterprise Support",
+            "attributes": {
+              "href": "/support"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Inference Providers",
+            "attributes": {
+              "href": "/inference/models"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Inference Endpoints",
+            "attributes": {
+              "href": "/inference-endpoints"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Storage Buckets",
+            "attributes": {
+              "href": "/storage"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Log In",
+            "attributes": {
+              "href": "/login"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Sign Up",
+            "attributes": {
+              "href": "/join"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Spaces",
+            "attributes": {
+              "href": "/spaces"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "link",
+            "text": "New Space",
+            "attributes": {
+              "href": "/new-space"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "link",
+            "text": "Get PRO",
+            "attributes": {
+              "href": "/pro"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "link",
+            "text": "Learn more",
+            "attributes": {
+              "href": "/spaces/launch"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-69",
+            "role": "button",
+            "text": "Roll dice",
+            "attributes": {
+              "aria-label": "Roll dice"
+            }
+          },
+          {
+            "id": "pw-145",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-148",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-150",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-154",
+            "role": "button",
+            "text": "Filters\n(0)",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-156",
+            "role": "button",
+            "text": "Sort:\u00a0 Relevance",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-158",
+            "role": "link",
+            "text": "Running\non\nZERO\nAgents\n147\nPixal3D\n\ud83c\udfc6\n\nHigh-fidelity pixel-aligned image-to-3D generation.\n\nTencentARC\n2 days ago",
+            "attributes": {
+              "href": "/spaces/TencentARC/Pixal3D"
+            }
+          },
+          {
+            "id": "pw-163",
+            "role": "button",
+            "text": "TencentARC",
+            "attributes": {}
+          },
+          {
+            "id": "pw-164",
+            "role": "link",
+            "text": "Running\nFeatured\n112\nSupertonic 3 (TTS)\n\u26a1\n\nLightning-Fast, On-Device, Multilingual, Accurate TTS\n\nSupertone\n11 days ago",
+            "attributes": {
+              "href": "/spaces/Supertone/supertonic-3"
+            }
+          },
+          {
+            "id": "pw-167",
+            "role": "button",
+            "text": "Supertone",
+            "attributes": {}
+          },
+          {
+            "id": "pw-168",
+            "role": "link",
+            "text": "Running\nAgents\nFeatured\n93\nHiDream O1 Image\n\ud83d\ude80\n\nGenerate custom images from text prompts\n\nHiDream-ai\n8 days ago",
+            "attributes": {
+              "href": "/spaces/HiDream-ai/HiDream-O1-Image"
+            }
+          },
+          {
+            "id": "pw-172",
+            "role": "button",
+            "text": "HiDream-ai",
+            "attributes": {}
+          },
+          {
+            "id": "pw-173",
+            "role": "link",
+            "text": "Running\non\nZERO\nAgents\n97\nLTX 2.3 Studio\n\ud83c\udfac\n\nGenerate videos from text, images, audio, or keyframes\n\ntechfreakworm\n4 days ago",
+            "attributes": {
+              "href": "/spaces/techfreakworm/LTX2.3-Studio"
+            }
+          },
+          {
+            "id": "pw-178",
+            "role": "button",
+            "text": "techfreakworm",
+            "attributes": {}
+          },
+          {
+            "id": "pw-179",
+            "role": "link",
+            "text": "Running\non\nZERO\nAgents\n24\nSenseNova U1\n\ud83d\udc41\n\nImage Editing and text-to-image unified model\n\nmultimodalart\n3 days ago",
+            "attributes": {
+              "href": "/spaces/multimodalart/SenseNova-U1"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "async () => {\n  const urls = [\n    '/api/spaces?filter=image-to-text&sort=likes&full=true',\n    '/api/spaces?pipeline_tag=image-to-text&sort=likes&full=true',\n    '/api/spaces?search=image-to-text&sort=likes&full=true'\n  ];\n  const results = [];\n  for (const url of urls) {\n    try {\n      const r = await fetch(url);\n      const text = await r.text();\n      results.push({url, status:r.status, text:text.slice(0,2000)});\n    } catch(e) { results.push({url, error:String(e)}); }\n  }\n  return results;\n}"
+        }
+      },
+      "observation": "Eval: [{\"url\": \"/api/spaces?filter=image-to-text&sort=likes&full=true\", \"status\": 200, \"text\": \"[{\\\"_id\\\":\\\"682c3b2ca1d4a0b41e348ad7\\\",\\\"id\\\":\\\"PaddlePaddle/PP-OCRv5_Online_Demo\\\",\\\"author\\\":\\\"PaddlePaddle\\\",\\\"cardData\\\":{\\\"title\\\":\\\"PP-OCRv5 Online Demo\\\",\\\"emoji\\\":\\\"\\ud83c\\udf0d\\\",\\\"colorFrom\\\":\\\"purple\\\",\\\"colorTo\\\":\\\"green\\\",\\\"sdk\\\":\\\"gradio\\\",\\\"sdk_version\\\":\\\"5.30.0\\\",\\\"python_version\\\":\\\"3.10\\\",\\\"app_file\\\":\\\"app.py\\\",\\\"pinned\\\":false,\\\"license\\\":\\\"apache-2.0\\\",\\\"short_description\\\":\\\"Universal"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://huggingface.co/spaces",
+        "title": "Spaces - Hugging Face",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Hugging Face",
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Models",
+            "attributes": {
+              "href": "/models"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Datasets",
+            "attributes": {
+              "href": "/datasets"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Spaces",
+            "attributes": {
+              "href": "/spaces"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Buckets\nNEW",
+            "attributes": {
+              "href": "/storage"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Docs",
+            "attributes": {
+              "href": "/docs"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Enterprise",
+            "attributes": {
+              "href": "/enterprise"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Pricing",
+            "attributes": {
+              "href": "/pricing"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Tasks",
+            "attributes": {
+              "href": "/tasks"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "HuggingChat",
+            "attributes": {
+              "href": "/chat"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Collections",
+            "attributes": {
+              "href": "/collections"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Languages",
+            "attributes": {
+              "href": "/languages"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Organizations",
+            "attributes": {
+              "href": "/organizations"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Blog",
+            "attributes": {
+              "href": "/blog"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Posts",
+            "attributes": {
+              "href": "/posts"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Daily Papers",
+            "attributes": {
+              "href": "/papers"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Learn",
+            "attributes": {
+              "href": "/learn"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Discord",
+            "attributes": {
+              "href": "/join/discord"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Forum",
+            "attributes": {
+              "href": "https://discuss.huggingface.co/"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "GitHub",
+            "attributes": {
+              "href": "https://github.com/huggingface"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Team & Enterprise",
+            "attributes": {
+              "href": "/enterprise"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Hugging Face PRO",
+            "attributes": {
+              "href": "/pro"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Enterprise Support",
+            "attributes": {
+              "href": "/support"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Inference Providers",
+            "attributes": {
+              "href": "/inference/models"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Inference Endpoints",
+            "attributes": {
+              "href": "/inference-endpoints"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Storage Buckets",
+            "attributes": {
+              "href": "/storage"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Log In",
+            "attributes": {
+              "href": "/login"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Sign Up",
+            "attributes": {
+              "href": "/join"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Spaces",
+            "attributes": {
+              "href": "/spaces"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "link",
+            "text": "New Space",
+            "attributes": {
+              "href": "/new-space"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "link",
+            "text": "Get PRO",
+            "attributes": {
+              "href": "/pro"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "link",
+            "text": "Learn more",
+            "attributes": {
+              "href": "/spaces/launch"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-69",
+            "role": "button",
+            "text": "Roll dice",
+            "attributes": {
+              "aria-label": "Roll dice"
+            }
+          },
+          {
+            "id": "pw-145",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-148",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-150",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-154",
+            "role": "button",
+            "text": "Filters\n(0)",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-156",
+            "role": "button",
+            "text": "Sort:\u00a0 Relevance",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-158",
+            "role": "link",
+            "text": "Running\non\nZERO\nAgents\n147\nPixal3D\n\ud83c\udfc6\n\nHigh-fidelity pixel-aligned image-to-3D generation.\n\nTencentARC\n2 days ago",
+            "attributes": {
+              "href": "/spaces/TencentARC/Pixal3D"
+            }
+          },
+          {
+            "id": "pw-163",
+            "role": "button",
+            "text": "TencentARC",
+            "attributes": {}
+          },
+          {
+            "id": "pw-164",
+            "role": "link",
+            "text": "Running\nFeatured\n112\nSupertonic 3 (TTS)\n\u26a1\n\nLightning-Fast, On-Device, Multilingual, Accurate TTS\n\nSupertone\n11 days ago",
+            "attributes": {
+              "href": "/spaces/Supertone/supertonic-3"
+            }
+          },
+          {
+            "id": "pw-167",
+            "role": "button",
+            "text": "Supertone",
+            "attributes": {}
+          },
+          {
+            "id": "pw-168",
+            "role": "link",
+            "text": "Running\nAgents\nFeatured\n93\nHiDream O1 Image\n\ud83d\ude80\n\nGenerate custom images from text prompts\n\nHiDream-ai\n8 days ago",
+            "attributes": {
+              "href": "/spaces/HiDream-ai/HiDream-O1-Image"
+            }
+          },
+          {
+            "id": "pw-172",
+            "role": "button",
+            "text": "HiDream-ai",
+            "attributes": {}
+          },
+          {
+            "id": "pw-173",
+            "role": "link",
+            "text": "Running\non\nZERO\nAgents\n97\nLTX 2.3 Studio\n\ud83c\udfac\n\nGenerate videos from text, images, audio, or keyframes\n\ntechfreakworm\n4 days ago",
+            "attributes": {
+              "href": "/spaces/techfreakworm/LTX2.3-Studio"
+            }
+          },
+          {
+            "id": "pw-178",
+            "role": "button",
+            "text": "techfreakworm",
+            "attributes": {}
+          },
+          {
+            "id": "pw-179",
+            "role": "link",
+            "text": "Running\non\nZERO\nAgents\n24\nSenseNova U1\n\ud83d\udc41\n\nImage Editing and text-to-image unified model\n\nmultimodalart\n3 days ago",
+            "attributes": {
+              "href": "/spaces/multimodalart/SenseNova-U1"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "async () => {\n  const r = await fetch('/api/spaces?filter=image-to-text&sort=likes&full=true');\n  const spaces = await r.json();\n  return spaces.slice(0,20).map(s => ({id:s.id, author:s.author, title:s.cardData?.title, pipeline_tag:s.cardData?.pipeline_tag, short_description:s.cardData?.short_description, runtime:s.runtime}));\n}"
+        }
+      },
+      "observation": "Eval: [{\"id\": \"PaddlePaddle/PP-OCRv5_Online_Demo\", \"author\": \"PaddlePaddle\", \"title\": \"PP-OCRv5 Online Demo\", \"pipeline_tag\": null, \"short_description\": \"Universal-Scene Text Recognition Model with High-Accuracy\", \"runtime\": null}, {\"id\": \"Camais03/camie-tagger-v2-app\", \"author\": \"Camais03\", \"title\": \"Camie Tagger V2 App\", \"pipeline_tag\": null, \"short_description\": \"camie-tagger-v2 inference space.\", \"runtime\": null}, {\"id\": \"LPX55/QwenStorytellerV2\", \"author\": \"LPX55\", \"title\": \"Qwen2.5-VL | \\ud83d\\u"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://huggingface.co/spaces",
+        "title": "Spaces - Hugging Face",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Hugging Face",
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Models",
+            "attributes": {
+              "href": "/models"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Datasets",
+            "attributes": {
+              "href": "/datasets"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Spaces",
+            "attributes": {
+              "href": "/spaces"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Buckets\nNEW",
+            "attributes": {
+              "href": "/storage"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Docs",
+            "attributes": {
+              "href": "/docs"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Enterprise",
+            "attributes": {
+              "href": "/enterprise"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Pricing",
+            "attributes": {
+              "href": "/pricing"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Tasks",
+            "attributes": {
+              "href": "/tasks"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "HuggingChat",
+            "attributes": {
+              "href": "/chat"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Collections",
+            "attributes": {
+              "href": "/collections"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Languages",
+            "attributes": {
+              "href": "/languages"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Organizations",
+            "attributes": {
+              "href": "/organizations"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Blog",
+            "attributes": {
+              "href": "/blog"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Posts",
+            "attributes": {
+              "href": "/posts"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Daily Papers",
+            "attributes": {
+              "href": "/papers"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Learn",
+            "attributes": {
+              "href": "/learn"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Discord",
+            "attributes": {
+              "href": "/join/discord"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Forum",
+            "attributes": {
+              "href": "https://discuss.huggingface.co/"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "GitHub",
+            "attributes": {
+              "href": "https://github.com/huggingface"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Team & Enterprise",
+            "attributes": {
+              "href": "/enterprise"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Hugging Face PRO",
+            "attributes": {
+              "href": "/pro"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Enterprise Support",
+            "attributes": {
+              "href": "/support"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Inference Providers",
+            "attributes": {
+              "href": "/inference/models"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Inference Endpoints",
+            "attributes": {
+              "href": "/inference-endpoints"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Storage Buckets",
+            "attributes": {
+              "href": "/storage"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Log In",
+            "attributes": {
+              "href": "/login"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Sign Up",
+            "attributes": {
+              "href": "/join"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Spaces",
+            "attributes": {
+              "href": "/spaces"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "link",
+            "text": "New Space",
+            "attributes": {
+              "href": "/new-space"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "link",
+            "text": "Get PRO",
+            "attributes": {
+              "href": "/pro"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "link",
+            "text": "Learn more",
+            "attributes": {
+              "href": "/spaces/launch"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-69",
+            "role": "button",
+            "text": "Roll dice",
+            "attributes": {
+              "aria-label": "Roll dice"
+            }
+          },
+          {
+            "id": "pw-145",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-148",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-150",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-154",
+            "role": "button",
+            "text": "Filters\n(0)",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-156",
+            "role": "button",
+            "text": "Sort:\u00a0 Relevance",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-158",
+            "role": "link",
+            "text": "Running\non\nZERO\nAgents\n147\nPixal3D\n\ud83c\udfc6\n\nHigh-fidelity pixel-aligned image-to-3D generation.\n\nTencentARC\n2 days ago",
+            "attributes": {
+              "href": "/spaces/TencentARC/Pixal3D"
+            }
+          },
+          {
+            "id": "pw-163",
+            "role": "button",
+            "text": "TencentARC",
+            "attributes": {}
+          },
+          {
+            "id": "pw-164",
+            "role": "link",
+            "text": "Running\nFeatured\n112\nSupertonic 3 (TTS)\n\u26a1\n\nLightning-Fast, On-Device, Multilingual, Accurate TTS\n\nSupertone\n11 days ago",
+            "attributes": {
+              "href": "/spaces/Supertone/supertonic-3"
+            }
+          },
+          {
+            "id": "pw-167",
+            "role": "button",
+            "text": "Supertone",
+            "attributes": {}
+          },
+          {
+            "id": "pw-168",
+            "role": "link",
+            "text": "Running\nAgents\nFeatured\n93\nHiDream O1 Image\n\ud83d\ude80\n\nGenerate custom images from text prompts\n\nHiDream-ai\n8 days ago",
+            "attributes": {
+              "href": "/spaces/HiDream-ai/HiDream-O1-Image"
+            }
+          },
+          {
+            "id": "pw-172",
+            "role": "button",
+            "text": "HiDream-ai",
+            "attributes": {}
+          },
+          {
+            "id": "pw-173",
+            "role": "link",
+            "text": "Running\non\nZERO\nAgents\n97\nLTX 2.3 Studio\n\ud83c\udfac\n\nGenerate videos from text, images, audio, or keyframes\n\ntechfreakworm\n4 days ago",
+            "attributes": {
+              "href": "/spaces/techfreakworm/LTX2.3-Studio"
+            }
+          },
+          {
+            "id": "pw-178",
+            "role": "button",
+            "text": "techfreakworm",
+            "attributes": {}
+          },
+          {
+            "id": "pw-179",
+            "role": "link",
+            "text": "Running\non\nZERO\nAgents\n24\nSenseNova U1\n\ud83d\udc41\n\nImage Editing and text-to-image unified model\n\nmultimodalart\n3 days ago",
+            "attributes": {
+              "href": "/spaces/multimodalart/SenseNova-U1"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "async () => {\n  const spaces = await (await fetch('/api/spaces?filter=image-to-text&sort=likes&full=true')).json();\n  const candidates = spaces.slice(0,10).map(s => s.id);\n  const out = [];\n  for (const id of candidates) {\n    const infoUrl = '/api/spaces/' + encodeURIComponent(id);\n    const rtUrl = '/api/spaces/' + encodeURIComponent(id) + '/runtime';\n    const row = {id};\n    try {\n      const info = await (await fetch(infoUrl)).json();\n      row.author = info.author;\n      row.title = info.cardData?.title || info.id;\n      row.sdk = info.sdk || info.cardData?.sdk;\n      row.pipeline_tag = info.pipeline_tag || info.cardData?.pipeline_tag;\n    } catch(e) { row.infoError = String(e); }\n    try {\n      const rtResp = await fetch(rtUrl);\n      row.runtimeStatus = rtResp.status;\n      row.runtime = await rtResp.json();\n    } catch(e) { row.runtimeError = String(e); }\n    out.push(row);\n  }\n  return out;\n}"
+        }
+      },
+      "observation": "Eval: [{\"id\": \"PaddlePaddle/PP-OCRv5_Online_Demo\", \"author\": null, \"title\": null, \"sdk\": null, \"pipeline_tag\": null, \"runtimeStatus\": 401, \"runtime\": {\"error\": \"Invalid username or password.\"}}, {\"id\": \"Camais03/camie-tagger-v2-app\", \"author\": null, \"title\": null, \"sdk\": null, \"pipeline_tag\": null, \"runtimeStatus\": 401, \"runtime\": {\"error\": \"Invalid username or password.\"}}, {\"id\": \"LPX55/QwenStorytellerV2\", \"author\": null, \"title\": null, \"sdk\": null, \"pipeline_tag\": null, \"runtimeStatus\": 401, \"runti"
+    },
+    {
+      "step": 4,
+      "state": {
+        "url": "https://huggingface.co/spaces",
+        "title": "Spaces - Hugging Face",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Hugging Face",
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Models",
+            "attributes": {
+              "href": "/models"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Datasets",
+            "attributes": {
+              "href": "/datasets"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Spaces",
+            "attributes": {
+              "href": "/spaces"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Buckets\nNEW",
+            "attributes": {
+              "href": "/storage"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Docs",
+            "attributes": {
+              "href": "/docs"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Enterprise",
+            "attributes": {
+              "href": "/enterprise"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Pricing",
+            "attributes": {
+              "href": "/pricing"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Tasks",
+            "attributes": {
+              "href": "/tasks"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "HuggingChat",
+            "attributes": {
+              "href": "/chat"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Collections",
+            "attributes": {
+              "href": "/collections"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Languages",
+            "attributes": {
+              "href": "/languages"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Organizations",
+            "attributes": {
+              "href": "/organizations"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Blog",
+            "attributes": {
+              "href": "/blog"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Posts",
+            "attributes": {
+              "href": "/posts"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Daily Papers",
+            "attributes": {
+              "href": "/papers"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Learn",
+            "attributes": {
+              "href": "/learn"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Discord",
+            "attributes": {
+              "href": "/join/discord"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Forum",
+            "attributes": {
+              "href": "https://discuss.huggingface.co/"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "GitHub",
+            "attributes": {
+              "href": "https://github.com/huggingface"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Team & Enterprise",
+            "attributes": {
+              "href": "/enterprise"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Hugging Face PRO",
+            "attributes": {
+              "href": "/pro"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Enterprise Support",
+            "attributes": {
+              "href": "/support"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Inference Providers",
+            "attributes": {
+              "href": "/inference/models"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Inference Endpoints",
+            "attributes": {
+              "href": "/inference-endpoints"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Storage Buckets",
+            "attributes": {
+              "href": "/storage"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Log In",
+            "attributes": {
+              "href": "/login"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Sign Up",
+            "attributes": {
+              "href": "/join"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Spaces",
+            "attributes": {
+              "href": "/spaces"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "link",
+            "text": "New Space",
+            "attributes": {
+              "href": "/new-space"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "link",
+            "text": "Get PRO",
+            "attributes": {
+              "href": "/pro"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "link",
+            "text": "Learn more",
+            "attributes": {
+              "href": "/spaces/launch"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-69",
+            "role": "button",
+            "text": "Roll dice",
+            "attributes": {
+              "aria-label": "Roll dice"
+            }
+          },
+          {
+            "id": "pw-145",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-148",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-150",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-154",
+            "role": "button",
+            "text": "Filters\n(0)",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-156",
+            "role": "button",
+            "text": "Sort:\u00a0 Relevance",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-158",
+            "role": "link",
+            "text": "Running\non\nZERO\nAgents\n147\nPixal3D\n\ud83c\udfc6\n\nHigh-fidelity pixel-aligned image-to-3D generation.\n\nTencentARC\n2 days ago",
+            "attributes": {
+              "href": "/spaces/TencentARC/Pixal3D"
+            }
+          },
+          {
+            "id": "pw-163",
+            "role": "button",
+            "text": "TencentARC",
+            "attributes": {}
+          },
+          {
+            "id": "pw-164",
+            "role": "link",
+            "text": "Running\nFeatured\n112\nSupertonic 3 (TTS)\n\u26a1\n\nLightning-Fast, On-Device, Multilingual, Accurate TTS\n\nSupertone\n11 days ago",
+            "attributes": {
+              "href": "/spaces/Supertone/supertonic-3"
+            }
+          },
+          {
+            "id": "pw-167",
+            "role": "button",
+            "text": "Supertone",
+            "attributes": {}
+          },
+          {
+            "id": "pw-168",
+            "role": "link",
+            "text": "Running\nAgents\nFeatured\n93\nHiDream O1 Image\n\ud83d\ude80\n\nGenerate custom images from text prompts\n\nHiDream-ai\n8 days ago",
+            "attributes": {
+              "href": "/spaces/HiDream-ai/HiDream-O1-Image"
+            }
+          },
+          {
+            "id": "pw-172",
+            "role": "button",
+            "text": "HiDream-ai",
+            "attributes": {}
+          },
+          {
+            "id": "pw-173",
+            "role": "link",
+            "text": "Running\non\nZERO\nAgents\n97\nLTX 2.3 Studio\n\ud83c\udfac\n\nGenerate videos from text, images, audio, or keyframes\n\ntechfreakworm\n4 days ago",
+            "attributes": {
+              "href": "/spaces/techfreakworm/LTX2.3-Studio"
+            }
+          },
+          {
+            "id": "pw-178",
+            "role": "button",
+            "text": "techfreakworm",
+            "attributes": {}
+          },
+          {
+            "id": "pw-179",
+            "role": "link",
+            "text": "Running\non\nZERO\nAgents\n24\nSenseNova U1\n\ud83d\udc41\n\nImage Editing and text-to-image unified model\n\nmultimodalart\n3 days ago",
+            "attributes": {
+              "href": "/spaces/multimodalart/SenseNova-U1"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "async () => {\n  const spaces = await (await fetch('/api/spaces?filter=image-to-text&sort=likes&full=true')).json();\n  const out = [];\n  for (const s of spaces.slice(0,15)) {\n    const row = {id:s.id, author:s.author, title:s.cardData?.title, runtimeFromList:s.runtime, likes:s.likes};\n    try {\n      const info = await (await fetch('/api/spaces/' + s.id)).json();\n      row.infoAuthor = info.author;\n      row.infoTitle = info.cardData?.title;\n      row.infoRuntime = info.runtime;\n      row.stage = info.runtime?.stage;\n      row.pipeline_tag = info.cardData?.pipeline_tag || info.pipeline_tag;\n    } catch(e) { row.infoError = String(e); }\n    out.push(row);\n  }\n  return out;\n}"
+        }
+      },
+      "observation": "Eval: [{\"id\": \"PaddlePaddle/PP-OCRv5_Online_Demo\", \"author\": \"PaddlePaddle\", \"title\": \"PP-OCRv5 Online Demo\", \"runtimeFromList\": null, \"likes\": 80, \"infoAuthor\": \"PaddlePaddle\", \"infoTitle\": \"PP-OCRv5 Online Demo\", \"infoRuntime\": {\"stage\": \"RUNNING\", \"hardware\": {\"current\": \"cpu-basic\", \"requested\": \"cpu-basic\"}, \"gcTimeout\": 172800, \"replicas\": {\"current\": 1, \"requested\": 1}, \"devMode\": false, \"domains\": [{\"domain\": \"paddlepaddle-pp-ocrv5-online-demo.hf.space\", \"stage\": \"READY\"}], \"sha\": \"1d1dd16b6d0"
+    },
+    {
+      "step": 5,
+      "state": {
+        "url": "https://huggingface.co/spaces",
+        "title": "Spaces - Hugging Face",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Hugging Face",
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Models",
+            "attributes": {
+              "href": "/models"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Datasets",
+            "attributes": {
+              "href": "/datasets"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Spaces",
+            "attributes": {
+              "href": "/spaces"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Buckets\nNEW",
+            "attributes": {
+              "href": "/storage"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Docs",
+            "attributes": {
+              "href": "/docs"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Enterprise",
+            "attributes": {
+              "href": "/enterprise"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Pricing",
+            "attributes": {
+              "href": "/pricing"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Tasks",
+            "attributes": {
+              "href": "/tasks"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "HuggingChat",
+            "attributes": {
+              "href": "/chat"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Collections",
+            "attributes": {
+              "href": "/collections"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Languages",
+            "attributes": {
+              "href": "/languages"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Organizations",
+            "attributes": {
+              "href": "/organizations"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Blog",
+            "attributes": {
+              "href": "/blog"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Posts",
+            "attributes": {
+              "href": "/posts"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Daily Papers",
+            "attributes": {
+              "href": "/papers"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Learn",
+            "attributes": {
+              "href": "/learn"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Discord",
+            "attributes": {
+              "href": "/join/discord"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Forum",
+            "attributes": {
+              "href": "https://discuss.huggingface.co/"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "GitHub",
+            "attributes": {
+              "href": "https://github.com/huggingface"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Team & Enterprise",
+            "attributes": {
+              "href": "/enterprise"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Hugging Face PRO",
+            "attributes": {
+              "href": "/pro"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Enterprise Support",
+            "attributes": {
+              "href": "/support"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Inference Providers",
+            "attributes": {
+              "href": "/inference/models"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Inference Endpoints",
+            "attributes": {
+              "href": "/inference-endpoints"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Storage Buckets",
+            "attributes": {
+              "href": "/storage"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Log In",
+            "attributes": {
+              "href": "/login"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Sign Up",
+            "attributes": {
+              "href": "/join"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Spaces",
+            "attributes": {
+              "href": "/spaces"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "link",
+            "text": "New Space",
+            "attributes": {
+              "href": "/new-space"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "link",
+            "text": "Get PRO",
+            "attributes": {
+              "href": "/pro"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "link",
+            "text": "Learn more",
+            "attributes": {
+              "href": "/spaces/launch"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-69",
+            "role": "button",
+            "text": "Roll dice",
+            "attributes": {
+              "aria-label": "Roll dice"
+            }
+          },
+          {
+            "id": "pw-145",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-148",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-150",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-154",
+            "role": "button",
+            "text": "Filters\n(0)",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-156",
+            "role": "button",
+            "text": "Sort:\u00a0 Relevance",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-158",
+            "role": "link",
+            "text": "Running\non\nZERO\nAgents\n147\nPixal3D\n\ud83c\udfc6\n\nHigh-fidelity pixel-aligned image-to-3D generation.\n\nTencentARC\n2 days ago",
+            "attributes": {
+              "href": "/spaces/TencentARC/Pixal3D"
+            }
+          },
+          {
+            "id": "pw-163",
+            "role": "button",
+            "text": "TencentARC",
+            "attributes": {}
+          },
+          {
+            "id": "pw-164",
+            "role": "link",
+            "text": "Running\nFeatured\n112\nSupertonic 3 (TTS)\n\u26a1\n\nLightning-Fast, On-Device, Multilingual, Accurate TTS\n\nSupertone\n11 days ago",
+            "attributes": {
+              "href": "/spaces/Supertone/supertonic-3"
+            }
+          },
+          {
+            "id": "pw-167",
+            "role": "button",
+            "text": "Supertone",
+            "attributes": {}
+          },
+          {
+            "id": "pw-168",
+            "role": "link",
+            "text": "Running\nAgents\nFeatured\n93\nHiDream O1 Image\n\ud83d\ude80\n\nGenerate custom images from text prompts\n\nHiDream-ai\n8 days ago",
+            "attributes": {
+              "href": "/spaces/HiDream-ai/HiDream-O1-Image"
+            }
+          },
+          {
+            "id": "pw-172",
+            "role": "button",
+            "text": "HiDream-ai",
+            "attributes": {}
+          },
+          {
+            "id": "pw-173",
+            "role": "link",
+            "text": "Running\non\nZERO\nAgents\n97\nLTX 2.3 Studio\n\ud83c\udfac\n\nGenerate videos from text, images, audio, or keyframes\n\ntechfreakworm\n4 days ago",
+            "attributes": {
+              "href": "/spaces/techfreakworm/LTX2.3-Studio"
+            }
+          },
+          {
+            "id": "pw-178",
+            "role": "button",
+            "text": "techfreakworm",
+            "attributes": {}
+          },
+          {
+            "id": "pw-179",
+            "role": "link",
+            "text": "Running\non\nZERO\nAgents\n24\nSenseNova U1\n\ud83d\udc41\n\nImage Editing and text-to-image unified model\n\nmultimodalart\n3 days ago",
+            "attributes": {
+              "href": "/spaces/multimodalart/SenseNova-U1"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "A running image-to-text demo is \u201cPP-OCRv5 Online Demo,\u201d and its creator is PaddlePaddle."
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

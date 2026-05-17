@@ -1,0 +1,842 @@
+{
+  "task_id": "wv-031",
+  "task_description": "On Cambridge Dictionary, find an example sentence for the word 'resilient'.",
+  "starting_url": "https://dictionary.cambridge.org",
+  "passed": true,
+  "final_answer": "She's a resilient girl - she won't be unhappy for long.",
+  "duration_s": 21.6,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://dictionary.cambridge.org/",
+        "title": "Cambridge Dictionary | English Dictionary, Translations & Thesaurus",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "AI Assistant \nDictionary\n \nTranslate\n \nGrammar\n \nThesaurus\n \n+Plus\n \nGames\n    Log in / Sign up  English (UK)",
+            "attributes": {
+              "id": "topNavBar",
+              "aria-label": "Close autocomplete"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "Open site navigation panel",
+            "attributes": {
+              "aria-label": "Open site navigation panel"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "AI Assistant",
+            "attributes": {
+              "href": "/assistant"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "AI Assistant",
+            "attributes": {}
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Dictionary",
+            "attributes": {
+              "href": "/dictionary/"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Translate",
+            "attributes": {
+              "href": "/translate/"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Grammar",
+            "attributes": {
+              "href": "/grammar/british-grammar/"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Thesaurus",
+            "attributes": {
+              "href": "/thesaurus/"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "+Plus",
+            "attributes": {
+              "href": "/plus/"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Games",
+            "attributes": {
+              "href": "/games/?utm_source=CDO&utm_medium=nav-bar&utm_campaign=gameshub-CDO-1&utm_id=games-nav&utm_content=games-nav"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "mobileLogButton",
+              "aria-label": "View user options"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Cambridge Dictionary +Plus",
+            "attributes": {
+              "href": "/plus/"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "My profile",
+            "attributes": {
+              "href": "/auth/profile"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "+Plus help",
+            "attributes": {
+              "href": "/howto.html"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "aria-label": "Open language selection panel"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.facebook.com/CUPCambridgeDictionary/"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.instagram.com/cambridgewords"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://twitter.com/CambridgeWords"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "desktopLogButton",
+              "aria-label": "View user options"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Cambridge Dictionary +Plus",
+            "attributes": {
+              "href": "/plus/"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "My profile",
+            "attributes": {
+              "href": "/auth/profile"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "+Plus help",
+            "attributes": {
+              "href": "/howto.html"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "button",
+            "text": "English (UK)",
+            "attributes": {
+              "aria-label": "Open language selection panel"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-29",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button",
+              "aria-label": "Reverse the from/to datasets"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "button",
+            "text": "English",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Choose a dictionary"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit",
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "button",
+            "text": "Grammar",
+            "attributes": {
+              "aria-label": "Set dictionary search to Grammar"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "English\u2013Spanish",
+            "attributes": {
+              "aria-label": "Set dictionary search to English\u2013Spanish"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "button",
+            "text": "Spanish\u2013English",
+            "attributes": {
+              "aria-label": "Set dictionary search to Spanish\u2013English"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "English",
+            "attributes": {
+              "href": "/dictionary/english/"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Learner\u2019s Dictionary",
+            "attributes": {
+              "href": "/dictionary/learner-english/"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Essential British English",
+            "attributes": {
+              "href": "/dictionary/essential-british-english/"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Essential American English",
+            "attributes": {
+              "href": "/dictionary/essential-american-english/"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Grammar",
+            "attributes": {
+              "href": "/grammar/british-grammar/"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Thesaurus",
+            "attributes": {
+              "href": "/thesaurus/"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Pronunciation",
+            "attributes": {
+              "href": "/pronunciation/"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "Change language direction",
+            "attributes": {
+              "aria-label": "Change language direction"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "English\u2013Chinese (Simplified)",
+            "attributes": {
+              "href": "/dictionary/english-chinese-simplified/"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Chinese (Simplified)\u2013English",
+            "attributes": {
+              "href": "/dictionary/chinese-simplified-english/"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "button",
+            "text": "Change language direction",
+            "attributes": {
+              "aria-label": "Change language direction"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "English\u2013Chinese (Traditional)",
+            "attributes": {
+              "href": "/dictionary/english-chinese-traditional/"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Chinese (Traditional)\u2013English",
+            "attributes": {
+              "href": "/dictionary/chinese-traditional-english/"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "button",
+            "text": "Change language direction",
+            "attributes": {
+              "aria-label": "Change language direction"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "English\u2013Danish",
+            "attributes": {
+              "href": "/dictionary/english-danish/"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Danish\u2013English",
+            "attributes": {
+              "href": "/dictionary/danish-english/"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "button",
+            "text": "Change language direction",
+            "attributes": {
+              "aria-label": "Change language direction"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "English\u2013Dutch",
+            "attributes": {
+              "href": "/dictionary/english-dutch/"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://dictionary.cambridge.org/dictionary/english/resilient"
+        }
+      },
+      "observation": "Opened https://dictionary.cambridge.org/dictionary/english/resilient"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://dictionary.cambridge.org/dictionary/english/resilient",
+        "title": "RESILIENT | English meaning - Cambridge Dictionary",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "AI Assistant \nDictionary\n \nTranslate\n \nGrammar\n \nThesaurus\n \n+Plus\n \nGames\n    English (UK)",
+            "attributes": {
+              "id": "topNavBar",
+              "aria-label": "Close autocomplete"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "Open site navigation panel",
+            "attributes": {
+              "aria-label": "Open site navigation panel"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "AI Assistant",
+            "attributes": {
+              "href": "/assistant"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "AI Assistant",
+            "attributes": {}
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Dictionary",
+            "attributes": {
+              "href": "/dictionary/"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Translate",
+            "attributes": {
+              "href": "/translate/"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Grammar",
+            "attributes": {
+              "href": "/grammar/british-grammar/"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Thesaurus",
+            "attributes": {
+              "href": "/thesaurus/"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "+Plus",
+            "attributes": {
+              "href": "/plus/"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Games",
+            "attributes": {
+              "href": "/games/?utm_source=CDO&utm_medium=nav-bar&utm_campaign=gameshub-CDO-1&utm_id=games-nav&utm_content=games-nav"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "mobileLogButton",
+              "aria-label": "View user options"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Cambridge Dictionary +Plus",
+            "attributes": {
+              "href": "/plus/"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "My profile",
+            "attributes": {
+              "href": "/auth/profile"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "+Plus help",
+            "attributes": {
+              "href": "/howto.html"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "aria-label": "Open language selection panel"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.facebook.com/CUPCambridgeDictionary/"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.instagram.com/cambridgewords"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://twitter.com/CambridgeWords"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "desktopLogButton",
+              "aria-label": "View user options"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Cambridge Dictionary +Plus",
+            "attributes": {
+              "href": "/plus/"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "My profile",
+            "attributes": {
+              "href": "/auth/profile"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "+Plus help",
+            "attributes": {
+              "href": "/howto.html"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "button",
+            "text": "English (UK)",
+            "attributes": {
+              "aria-label": "Open language selection panel"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-28",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button",
+              "aria-label": "Reverse the from/to datasets"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "button",
+            "text": "English",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Choose a dictionary"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit",
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.facebook.com/sharer.php?u=https%3A%2F%2Fdictionary.cambridge.org%2Fdictionary%2Fenglish%2Fresilient&t="
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://twitter.com/intent/tweet?url=https%3A%2F%2Fdictionary.cambridge.org%2Fdictionary%2Fenglish%2Fresilient&text="
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-38",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "able",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/able"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "happy",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/happy"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "successful",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/successful"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "difficult",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/difficult"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "bad",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/bad"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "happened",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/happen"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "girl",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/girl"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "unhappy",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/unhappy"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "long",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/long"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "argue",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/argue"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "economy",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/economy"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "prove",
+            "attributes": {
+              "href": "https://dictionary.cambridge.org/dictionary/english/prove"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "button",
+            "text": "Thesaurus: synonyms, antonyms, and examples",
+            "attributes": {
+              "id": "8_AMP_header_0"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "having a lot of physical or mental strength",
+            "attributes": {
+              "href": "/thesaurus/articles/having-a-lot-of-physical-or-mental-strength"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "strong",
+            "attributes": {
+              "href": "/thesaurus/strong"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "strong",
+            "attributes": {
+              "href": "/thesaurus/strong"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "powerful",
+            "attributes": {
+              "href": "/thesaurus/powerful"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "She's a resilient girl - she won't be unhappy for long."
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

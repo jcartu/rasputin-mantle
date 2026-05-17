@@ -1,0 +1,906 @@
+{
+  "task_id": "wv-061",
+  "task_description": "On Khan Academy, find the SAT math practice section and report one listed topic.",
+  "starting_url": "https://www.khanacademy.org/test-prep/sat",
+  "passed": true,
+  "final_answer": "One listed SAT Math practice topic is \u201cSolving linear equations and inequalities: foundations.\u201d",
+  "duration_s": 33.91,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://support.khanacademy.org/hc/en-us/articles/17921365165581",
+        "title": "Just a moment...",
+        "elements": [
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Cloudflare",
+            "attributes": {
+              "href": "https://www.cloudflare.com?utm_source=challenge&utm_campaign=m"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "Privacy",
+            "attributes": {
+              "id": "privacy-link",
+              "href": "https://www.cloudflare.com/privacypolicy/"
+            }
+          },
+          {
+            "id": "pw-0",
+            "role": "main",
+            "text": "support.khanacademy.org\nPerforming security verification\n\nThis website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.",
+            "attributes": {}
+          },
+          {
+            "id": "pw-1",
+            "role": "hidden",
+            "text": null,
+            "attributes": {
+              "id": "cf-chl-widget-fdx8n_response",
+              "name": "cf-turnstile-response",
+              "type": "hidden"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "contentinfo",
+            "text": "Ray ID: 9fd4cb2c0a2bb8f6\nPerformance and Security by Cloudflare\nPrivacy",
+            "attributes": {}
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://www.khanacademy.org/test-prep/v2-sat-math"
+        }
+      },
+      "observation": "Opened https://www.khanacademy.org/test-prep/v2-sat-math"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://www.khanacademy.org/test-prep/v2-sat-math",
+        "title": "Khan Academy | Khan Academy",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "id": "triggerless-modal-focus-anchor",
+              "href": "#main-content"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "Explore",
+            "attributes": {
+              "type": "button",
+              "data-testid": "learn-menu-dropdown"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Search for courses, skills, and videos",
+              "data-testid": "navbar-search-button"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "Khan Academy",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Khan Academy",
+              "data-testid": "header-logo"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "Donate",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Donate (opens in new window)",
+              "data-testid": "header-donate-link"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Log in",
+            "attributes": {
+              "id": "login-or-signup",
+              "href": "/login?continue=%2Ftest-prep%2Fv2-sat-math"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Sign up",
+            "attributes": {
+              "href": "/signup?continue=%2Ftest-prep%2Fv2-sat-math"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Search for courses, skills, and videos",
+            "attributes": {
+              "href": "/search",
+              "data-testid": "mobile-search-button"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Open menu",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Open menu",
+              "data-testid": "mobile-header-menu-button"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Donate",
+            "attributes": {
+              "href": "https://donate.khanacademy.org/campaign/580662/donate?c_src2=Webapp.footer"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "volunteer",
+            "attributes": {
+              "href": "/contribute"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "About",
+            "attributes": {
+              "href": "/about"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://blog.khanacademy.org/news/"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Impact",
+            "attributes": {
+              "href": "https://blog.khanacademy.org/research/"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Our team",
+            "attributes": {
+              "href": "/about/the-team"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Our interns",
+            "attributes": {
+              "href": "/about/our-interns"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Our content specialists",
+            "attributes": {
+              "href": "/about/our-content-specialists"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Our leadership",
+            "attributes": {
+              "href": "/about/our-board"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Our supporters",
+            "attributes": {
+              "href": "/about/our-supporters"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Our contributors",
+            "attributes": {
+              "href": "/contribute/credits"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Our finances",
+            "attributes": {
+              "href": "https://khanacademyannualreport.org/#finances"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Careers",
+            "attributes": {
+              "href": "/careers",
+              "aria-label": "Careers at Khan Academy"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Internships",
+            "attributes": {
+              "href": "/careers/interns"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Cookie Preferences",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Help center",
+            "attributes": {
+              "href": "https://khanacademy.zendesk.com/hc/en-us"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Support community",
+            "attributes": {
+              "href": "https://khanacademy.zendesk.com/hc/en-us/community/topics"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Share your story",
+            "attributes": {
+              "href": "/stories"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Press",
+            "attributes": {
+              "href": "https://khanacademy.zendesk.com/hc/en-us/articles/202483630"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Download our apps",
+            "attributes": {
+              "href": "/downloads"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://itunes.apple.com/app/apple-store/id469863705?pt=698519&ct=website%20footer&mt=8"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://play.google.com/store/apps/details?id=org.khanacademy.android&referrer=utm_source%3Dwebsite%2520footer%26utm_medium%3Dwebsite%2520footer%26utm_campaign%3Dwebsite%2520footer"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "button",
+            "text": "en",
+            "attributes": {
+              "id": ":r0:",
+              "aria-label": "Change language",
+              "data-testid": "language_picker"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "U.S.",
+            "attributes": {
+              "href": "https://www.khanacademy.org"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "India",
+            "attributes": {
+              "href": "https://india.khanacademy.org"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Mexico",
+            "attributes": {
+              "href": "https://es.khanacademy.org"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Brazil",
+            "attributes": {
+              "href": "https://pt.khanacademy.org"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Terms of use",
+            "attributes": {
+              "href": "/about/docs/khan-academy-terms-of-service"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Privacy Policy",
+            "attributes": {
+              "href": "/about/privacy-policy"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Cookie Notice",
+            "attributes": {
+              "href": "/about/cookie-policy"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Accessibility Statement",
+            "attributes": {
+              "href": "/about/accessibility-statement"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Follow us on Facebook",
+            "attributes": {
+              "href": "https://www.facebook.com/khanacademy",
+              "aria-label": "Follow us on Facebook"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Follow us on Twitter",
+            "attributes": {
+              "href": "https://twitter.com/khanacademy",
+              "aria-label": "Follow us on Twitter"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Follow us on Instagram",
+            "attributes": {
+              "href": "https://instagram.com/khanacademy",
+              "aria-label": "Follow us on Instagram"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "navigation",
+            "text": "Explore\nSearch\nDonate\nLog in\nSign up",
+            "attributes": {
+              "aria-label": "page header"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "region",
+            "text": "menu",
+            "attributes": {
+              "id": "page-header-responsive-nav-menu",
+              "aria-label": "menu",
+              "data-testid": "responsive-nav-menu"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "presentation",
+            "text": "Site Navigation\nAbout\nNews\nImpact\nOur team\nOur interns\nOur content specialists\nOur leadership\nOur supporters\nOur contributors\nOur finances\nCareers\nInternships\nCookie Preferences\nContact\nHelp center\nSupport community\nShare your story\nPress\nDownload our apps\nCourses",
+            "attributes": {}
+          },
+          {
+            "id": "pw-14",
+            "role": "navigation",
+            "text": "About\nNews\nImpact\nOur team\nOur interns\nOur content specialists\nOur leadership\nOur supporters\nOur contributors\nOur finances\nCareers\nInternships\nCookie Preferences\nContact\nHelp center\nSupport community\nShare your story\nPress\nDownload our apps\nCourses",
+            "attributes": {
+              "aria-label": "footer"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "document.body.innerText"
+        }
+      },
+      "observation": "Eval: \"Skip to main content\\nExplore\\nSearch\\nDonate\\nLog in\\nSign up\\nWelcome to Khan Academy!\\nSo we can give you the right tools, let us know if you're a...\\nLearner\\nTeacher\\nParent\\nSAT Math\\n13 UNITS \\u00b7 111 SKILLS\\nUNIT 1\\nAbout the SAT\\nUNIT 2\\nFoundations: Algebra\\nUNIT 3\\nFoundations: Problem solving and data analysis\\nUNIT 4\\nFoundations: Advanced math\\nUNIT 5\\nFoundations: Geometry and trigonometry\\nUNIT 6\\nMedium: Algebra\\nUNIT 7\\nMedium: Problem solving and data analysis\\nUNIT 8\\nMedi"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://www.khanacademy.org/test-prep/v2-sat-math",
+        "title": "SAT Math | Test prep | Khan Academy",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "id": "triggerless-modal-focus-anchor",
+              "href": "#main-content"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "Explore",
+            "attributes": {
+              "type": "button",
+              "data-testid": "learn-menu-dropdown"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Search for courses, skills, and videos",
+              "data-testid": "navbar-search-button"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Khan Academy",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Khan Academy",
+              "data-testid": "header-logo"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "Donate",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Donate (opens in new window)",
+              "data-testid": "header-donate-link"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Log in",
+            "attributes": {
+              "id": "login-or-signup",
+              "href": "/login?continue=%2Ftest-prep%2Fv2-sat-math"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Sign up",
+            "attributes": {
+              "href": "/signup?continue=%2Ftest-prep%2Fv2-sat-math"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Search for courses, skills, and videos",
+            "attributes": {
+              "href": "/search",
+              "data-testid": "mobile-search-button"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "button",
+            "text": "Open menu",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Open menu",
+              "data-testid": "mobile-header-menu-button"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "button",
+            "text": "Close Welcome Banner",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Close Welcome Banner",
+              "data-testid": "close-button"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "button",
+            "text": "Learner",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": "Teacher",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "button",
+            "text": "Parent",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "SAT Math\n13 UNITS \u00b7 111 SKILLS",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "UNIT 1\nAbout the SAT",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:about-the-digital-sat"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "UNIT 2\nFoundations: Algebra",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:algebra-easier"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "UNIT 3\nFoundations: Problem solving and data analysis",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:problem-solving-and-data-analysis-easier"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "UNIT 4\nFoundations: Advanced math",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:advanced-math-easier"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "UNIT 5\nFoundations: Geometry and trigonometry",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:geometry-and-trigonometry-easier"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "UNIT 6\nMedium: Algebra",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:algebra-medium"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "UNIT 7\nMedium: Problem solving and data analysis",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:problem-solving-and-data-analysis-medium"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "UNIT 8\nMedium: Advanced math",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:advanced-math-medium"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "UNIT 9\nMedium: Geometry and trigonometry",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:geometry-and-trigonometry-medium"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "UNIT 10\nAdvanced: Algebra",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:algebra-harder"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "UNIT 11\nAdvanced: Problem solving and data analysis",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:problem-solving-and-data-analysis-harder"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "UNIT 12\nAdvanced: Advanced math",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:advanced-math-harder"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "UNIT 13\nAdvanced: Geometry and trigonometry",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:geometry-and-trigonometry-harder"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Start Course challenge",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/test/x0fcc98a58ba3bea7:course-challenge"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Home"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Test prep",
+            "attributes": {
+              "href": "/test-prep"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "link",
+            "text": "Unit 1",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:about-the-digital-sat"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "link",
+            "text": "Unit 2",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:algebra-easier"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "link",
+            "text": "Solving linear equations and inequalities: foundations",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:algebra-easier/x0fcc98a58ba3bea7:solving-linear-equations-and-inequalities-easier/e/v2-solving-linear-equations-and-inequalities-1"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "link",
+            "text": "Linear equation word problems: foundations",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:algebra-easier/x0fcc98a58ba3bea7:linear-equation-word-problems-easier/e/v2-linear-equation-word-problems-1"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "link",
+            "text": "Linear relationship word problems: foundations",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:algebra-easier/x0fcc98a58ba3bea7:linear-relationship-word-problems-easier/e/v2-linear-relationship-word-problems-1"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "link",
+            "text": "Graphs of linear equations and functions: foundations",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:algebra-easier/x0fcc98a58ba3bea7:graphs-of-linear-equations-and-functions-easier/e/v2-graphs-of-linear-equations-and-functions-1"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "link",
+            "text": "Foundations: Algebra: Quiz 1",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:algebra-easier/x0fcc98a58ba3bea7:graphs-of-linear-equations-and-functions-easier/quiz/x0fcc98a58ba3bea7:algebra-easier-quiz-1"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "Solving systems of linear equations: foundations",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:algebra-easier/x0fcc98a58ba3bea7:solving-systems-of-linear-equations-easier/e/v2-solving-systems-of-linear-equations-1"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "link",
+            "text": "Systems of linear equations word problems: foundations",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:algebra-easier/x0fcc98a58ba3bea7:systems-of-linear-equations-word-problems-easier/e/v2-systems-of-linear-equations-word-problems-1"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "link",
+            "text": "Linear inequality word problems: foundations",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:algebra-easier/x0fcc98a58ba3bea7:linear-inequality-word-problems-easier/e/v2-linear-inequality-word-problems-1"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "link",
+            "text": "Graphs of linear systems and inequalities: foundations",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:algebra-easier/x0fcc98a58ba3bea7:graphs-of-linear-systems-and-inequalities-easier/e/v2-graphs-of-linear-systems-and-inequalities-1"
+            }
+          },
+          {
+            "id": "pw-70",
+            "role": "link",
+            "text": "Foundations: Algebra: Quiz 2",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:algebra-easier/x0fcc98a58ba3bea7:graphs-of-linear-systems-and-inequalities-easier/quiz/x0fcc98a58ba3bea7:algebra-easier-quiz-2"
+            }
+          },
+          {
+            "id": "pw-71",
+            "role": "link",
+            "text": "Foundations: Algebra: Unit test",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:algebra-easier/x0fcc98a58ba3bea7:graphs-of-linear-systems-and-inequalities-easier/test/x0fcc98a58ba3bea7:algebra-easier-unit-test"
+            }
+          },
+          {
+            "id": "pw-72",
+            "role": "link",
+            "text": "Unit 3",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:problem-solving-and-data-analysis-easier"
+            }
+          },
+          {
+            "id": "pw-73",
+            "role": "link",
+            "text": "Ratios, rates, and proportions: foundations",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:problem-solving-and-data-analysis-easier/x0fcc98a58ba3bea7:ratios-rates-and-proportions-easier/e/v2-ratios-rates-and-proportions-1"
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "link",
+            "text": "Unit conversion: foundations",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:problem-solving-and-data-analysis-easier/x0fcc98a58ba3bea7:unit-conversion-easier/e/v2-unit-conversion-1"
+            }
+          },
+          {
+            "id": "pw-75",
+            "role": "link",
+            "text": "Percentages: foundations",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:problem-solving-and-data-analysis-easier/x0fcc98a58ba3bea7:percentages-easier/e/v2-percentages-1"
+            }
+          },
+          {
+            "id": "pw-76",
+            "role": "link",
+            "text": "Foundations: Problem solving and data analysis: Quiz 1",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:problem-solving-and-data-analysis-easier/x0fcc98a58ba3bea7:percentages-easier/quiz/x0fcc98a58ba3bea7:problem-solving-and-data-analysis-easier-quiz-1"
+            }
+          },
+          {
+            "id": "pw-77",
+            "role": "link",
+            "text": "Center, spread, and shape of distributions: foundations",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:problem-solving-and-data-analysis-easier/x0fcc98a58ba3bea7:center-spread-and-shape-of-distributions-easier/e/v2-center-spread-and-shape-of-distributions-1"
+            }
+          },
+          {
+            "id": "pw-78",
+            "role": "link",
+            "text": "Data representations: foundations",
+            "attributes": {
+              "href": "/test-prep/v2-sat-math/x0fcc98a58ba3bea7:problem-solving-and-data-analysis-easier/x0fcc98a58ba3bea7:data-representations-easier/e/v2-data-representations-1"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "One listed SAT Math practice topic is \u201cSolving linear equations and inequalities: foundations.\u201d"
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

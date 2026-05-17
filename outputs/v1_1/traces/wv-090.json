@@ -1,0 +1,80 @@
+{
+  "task_id": "wv-090",
+  "task_description": "On Stack Overflow, find the tag wiki excerpt for the javascript tag.",
+  "starting_url": "https://stackoverflow.com/tags/javascript/info",
+  "passed": false,
+  "final_answer": "Error planning: Extra data: line 2 column 1 (char 87)",
+  "duration_s": 77.35,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://stackoverflow.com/tags/javascript/info",
+        "title": "Just a moment...",
+        "elements": [
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Cloudflare",
+            "attributes": {
+              "href": "https://www.cloudflare.com?utm_source=challenge&utm_campaign=m"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "Privacy",
+            "attributes": {
+              "id": "privacy-link",
+              "href": "https://www.cloudflare.com/privacypolicy/"
+            }
+          },
+          {
+            "id": "pw-0",
+            "role": "main",
+            "text": "stackoverflow.com\nPerforming security verification\n\nThis website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.",
+            "attributes": {}
+          },
+          {
+            "id": "pw-1",
+            "role": "hidden",
+            "text": null,
+            "attributes": {
+              "id": "cf-chl-widget-0vndr_response",
+              "name": "cf-turnstile-response",
+              "type": "hidden"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "contentinfo",
+            "text": "Ray ID: 9fd4d70daf46d3db\nPerformance and Security by Cloudflare\nPrivacy",
+            "attributes": {}
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://api.stackexchange.com/2.3/tags/javascript/wikis?site=stackoverflow&filter=default"
+        }
+      },
+      "observation": "Opened https://api.stackexchange.com/2.3/tags/javascript/wikis?site=stackoverflow&filter=default"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://api.stackexchange.com/2.3/tags/javascript/wikis?site=stackoverflow&filter=default",
+        "title": "",
+        "elements": []
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "Error planning: Extra data: line 2 column 1 (char 87)"
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

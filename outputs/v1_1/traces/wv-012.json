@@ -1,0 +1,106 @@
+{
+  "task_id": "wv-012",
+  "task_description": "On Allrecipes, find a vegetarian lasagna recipe and list two main ingredients.",
+  "starting_url": "https://www.allrecipes.com",
+  "passed": true,
+  "final_answer": "A vegetarian lasagna recipe on Allrecipes is \u201cVegetarian Lasagna.\u201d Two main ingredients are lasagna noodles and fresh mushrooms.",
+  "duration_s": 24.77,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://www.allrecipes.com/",
+        "title": "",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "support@people.inc",
+            "attributes": {
+              "href": "mailto:support@people.inc"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "icanhazip.com",
+            "attributes": {
+              "href": "https://icanhazip.com"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "whatismyip.com",
+            "attributes": {
+              "href": "https://www.whatismyip.com"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "contentlicensing@people.inc",
+            "attributes": {
+              "href": "mailto:contentlicensing@people.inc"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://www.allrecipes.com/search?q=vegetarian%20lasagna"
+        }
+      },
+      "observation": "Opened https://www.allrecipes.com/search?q=vegetarian%20lasagna"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://www.allrecipes.com/search?q=vegetarian%20lasagna",
+        "title": "",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "support@people.inc",
+            "attributes": {
+              "href": "mailto:support@people.inc"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "icanhazip.com",
+            "attributes": {
+              "href": "https://icanhazip.com"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "whatismyip.com",
+            "attributes": {
+              "href": "https://www.whatismyip.com"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "contentlicensing@people.inc",
+            "attributes": {
+              "href": "mailto:contentlicensing@people.inc"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "A vegetarian lasagna recipe on Allrecipes is \u201cVegetarian Lasagna.\u201d Two main ingredients are lasagna noodles and fresh mushrooms."
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

@@ -1,0 +1,838 @@
+{
+  "task_id": "wv-054",
+  "task_description": "On Hugging Face, find the license for the bert-base-uncased model.",
+  "starting_url": "https://huggingface.co",
+  "passed": true,
+  "final_answer": "The license for google-bert/bert-base-uncased is Apache 2.0 (apache-2.0).",
+  "duration_s": 24.05,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://huggingface.co/",
+        "title": "Hugging Face \u2013 The AI community building the future.",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Hugging Face",
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Models",
+            "attributes": {
+              "href": "/models"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Datasets",
+            "attributes": {
+              "href": "/datasets"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Spaces",
+            "attributes": {
+              "href": "/spaces"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Buckets\nNEW",
+            "attributes": {
+              "href": "/storage"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Docs",
+            "attributes": {
+              "href": "/docs"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Enterprise",
+            "attributes": {
+              "href": "/enterprise"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Pricing",
+            "attributes": {
+              "href": "/pricing"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Tasks",
+            "attributes": {
+              "href": "/tasks"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "HuggingChat",
+            "attributes": {
+              "href": "/chat"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Collections",
+            "attributes": {
+              "href": "/collections"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Languages",
+            "attributes": {
+              "href": "/languages"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Organizations",
+            "attributes": {
+              "href": "/organizations"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Blog",
+            "attributes": {
+              "href": "/blog"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Posts",
+            "attributes": {
+              "href": "/posts"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Daily Papers",
+            "attributes": {
+              "href": "/papers"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Learn",
+            "attributes": {
+              "href": "/learn"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Discord",
+            "attributes": {
+              "href": "/join/discord"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Forum",
+            "attributes": {
+              "href": "https://discuss.huggingface.co/"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "GitHub",
+            "attributes": {
+              "href": "https://github.com/huggingface"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Team & Enterprise",
+            "attributes": {
+              "href": "/enterprise"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Hugging Face PRO",
+            "attributes": {
+              "href": "/pro"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Enterprise Support",
+            "attributes": {
+              "href": "/support"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Inference Providers",
+            "attributes": {
+              "href": "/inference/models"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Inference Endpoints",
+            "attributes": {
+              "href": "/inference-endpoints"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Storage Buckets",
+            "attributes": {
+              "href": "/storage"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Log In",
+            "attributes": {
+              "href": "/login"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Sign Up",
+            "attributes": {
+              "href": "/join"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Explore AI Apps",
+            "attributes": {
+              "href": "/spaces"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "Browse 2M+ models",
+            "attributes": {
+              "href": "/models"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "link",
+            "text": "openbmb/MiniCPM-V-4.6\nUpdated about 12 hours ago\n\u2022\n56.5k\n\u2022\n686",
+            "attributes": {
+              "href": "/openbmb/MiniCPM-V-4.6"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "link",
+            "text": "SulphurAI/Sulphur-2-base\nUpdated 14 minutes ago\n\u2022\n970k\n\u2022\n1.07k",
+            "attributes": {
+              "href": "/SulphurAI/Sulphur-2-base"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "link",
+            "text": "Supertone/supertonic-3\nUpdated 11 days ago\n\u2022\n20.2k\n\u2022\n347",
+            "attributes": {
+              "href": "/Supertone/supertonic-3"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "link",
+            "text": "unsloth/Qwen3.6-27B-MTP-GGUF\nUpdated about 4 hours ago\n\u2022\n185k\n\u2022\n223",
+            "attributes": {
+              "href": "/unsloth/Qwen3.6-27B-MTP-GGUF"
+            }
+          },
+          {
+            "id": "pw-71",
+            "role": "link",
+            "text": "HiDream-ai/HiDream-O1-Image\nUpdated 2 days ago\n\u2022\n14.3k\n\u2022\n371",
+            "attributes": {
+              "href": "/HiDream-ai/HiDream-O1-Image"
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "link",
+            "text": "Browse 2M+ models",
+            "attributes": {
+              "href": "/models"
+            }
+          },
+          {
+            "id": "pw-76",
+            "role": "link",
+            "text": "Pixal3D\n\ud83c\udfc6\n147\n\nHigh-fidelity pixel-aligned image-to-3D generation.",
+            "attributes": {
+              "href": "/spaces/TencentARC/Pixal3D"
+            }
+          },
+          {
+            "id": "pw-83",
+            "role": "link",
+            "text": "Wan2.2 14B Fast Preview\n\ud83d\udc0c\n1.21k\n\ngenerate a video from an image with a text prompt",
+            "attributes": {
+              "href": "/spaces/r3gm/wan2-2-fp8da-aoti-preview-2"
+            }
+          },
+          {
+            "id": "pw-88",
+            "role": "link",
+            "text": "Gemma-4-E4B-Uncensored-HauhauCS-Aggressive-Q5_K_P\n\ud83d\udd25\n253\n\nThis Space uses ''HauhauCS/Gemma-4-E4B-Uncensored-Hauh...''.",
+            "attributes": {
+              "href": "/spaces/mikeee/qwen-7b-chat"
+            }
+          },
+          {
+            "id": "pw-91",
+            "role": "link",
+            "text": "Supertonic 3 (TTS)\n\u26a1\n112\n\nLightning-Fast, On-Device, Multilingual, Accurate TTS",
+            "attributes": {
+              "href": "/spaces/Supertone/supertonic-3"
+            }
+          },
+          {
+            "id": "pw-96",
+            "role": "link",
+            "text": "FireRed Image Edit 1.0 Fast\n\ud83c\udf16\n1.27k\n\nFireRed-Image-Edit \u00d7 Qwen-Image-Edit-Rapid (Transformers)",
+            "attributes": {
+              "href": "/spaces/prithivMLmods/FireRed-Image-Edit-1.0-Fast"
+            }
+          },
+          {
+            "id": "pw-103",
+            "role": "link",
+            "text": "Browse 1M+ applications",
+            "attributes": {
+              "href": "/spaces"
+            }
+          },
+          {
+            "id": "pw-105",
+            "role": "link",
+            "text": "TuringEnterprises/Open-MM-RL\nUpdated 4 days ago\n\u2022\n6.09k\n\u2022\n112",
+            "attributes": {
+              "href": "/datasets/TuringEnterprises/Open-MM-RL"
+            }
+          },
+          {
+            "id": "pw-108",
+            "role": "link",
+            "text": "PsiBotAI/SynData\nUpdated 4 days ago\n\u2022\n29.3k\n\u2022\n136",
+            "attributes": {
+              "href": "/datasets/PsiBotAI/SynData"
+            }
+          },
+          {
+            "id": "pw-111",
+            "role": "link",
+            "text": "angrygiraffe/claude-opus-4.6-4.7-reasoning-8.7k\nUpdated 16 days ago\n\u2022\n2.72k\n\u2022\n119",
+            "attributes": {
+              "href": "/datasets/angrygiraffe/claude-opus-4.6-4.7-reasoning-8.7k"
+            }
+          },
+          {
+            "id": "pw-114",
+            "role": "link",
+            "text": "AlienKevin/SWE-ZERO-12M-trajectories\nUpdated 3 days ago\n\u2022\n6.55k\n\u2022\n63",
+            "attributes": {
+              "href": "/datasets/AlienKevin/SWE-ZERO-12M-trajectories"
+            }
+          },
+          {
+            "id": "pw-117",
+            "role": "link",
+            "text": "ADSKAILab/Zero-To-CAD-1m\nUpdated 14 days ago\n\u2022\n23.4k\n\u2022\n113",
+            "attributes": {
+              "href": "/datasets/ADSKAILab/Zero-To-CAD-1m"
+            }
+          },
+          {
+            "id": "pw-120",
+            "role": "link",
+            "text": "Browse 500k+ datasets",
+            "attributes": {
+              "href": "/datasets"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://huggingface.co/bert-base-uncased"
+        }
+      },
+      "observation": "Opened https://huggingface.co/bert-base-uncased"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://huggingface.co/google-bert/bert-base-uncased",
+        "title": "google-bert/bert-base-uncased \u00b7 Hugging Face",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Hugging Face",
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Models",
+            "attributes": {
+              "href": "/models"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Datasets",
+            "attributes": {
+              "href": "/datasets"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Spaces",
+            "attributes": {
+              "href": "/spaces"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Buckets\nNEW",
+            "attributes": {
+              "href": "/storage"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Docs",
+            "attributes": {
+              "href": "/docs"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Enterprise",
+            "attributes": {
+              "href": "/enterprise"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Pricing",
+            "attributes": {
+              "href": "/pricing"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Tasks",
+            "attributes": {
+              "href": "/tasks"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "HuggingChat",
+            "attributes": {
+              "href": "/chat"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Collections",
+            "attributes": {
+              "href": "/collections"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Languages",
+            "attributes": {
+              "href": "/languages"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Organizations",
+            "attributes": {
+              "href": "/organizations"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Blog",
+            "attributes": {
+              "href": "/blog"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Posts",
+            "attributes": {
+              "href": "/posts"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Daily Papers",
+            "attributes": {
+              "href": "/papers"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Learn",
+            "attributes": {
+              "href": "/learn"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Discord",
+            "attributes": {
+              "href": "/join/discord"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Forum",
+            "attributes": {
+              "href": "https://discuss.huggingface.co/"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "GitHub",
+            "attributes": {
+              "href": "https://github.com/huggingface"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Team & Enterprise",
+            "attributes": {
+              "href": "/enterprise"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Hugging Face PRO",
+            "attributes": {
+              "href": "/pro"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Enterprise Support",
+            "attributes": {
+              "href": "/support"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Inference Providers",
+            "attributes": {
+              "href": "/inference/models"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Inference Endpoints",
+            "attributes": {
+              "href": "/inference-endpoints"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Storage Buckets",
+            "attributes": {
+              "href": "/storage"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Log In",
+            "attributes": {
+              "href": "/login"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Sign Up",
+            "attributes": {
+              "href": "/join"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/google-bert"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "google-bert",
+            "attributes": {
+              "href": "/google-bert"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "link",
+            "text": "bert-base-uncased",
+            "attributes": {
+              "href": "/google-bert/bert-base-uncased"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "button",
+            "text": "like",
+            "attributes": {}
+          },
+          {
+            "id": "pw-63",
+            "role": "button",
+            "text": "2.65k",
+            "attributes": {}
+          },
+          {
+            "id": "pw-64",
+            "role": "button",
+            "text": "Follow\nBERT community",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "button",
+            "text": "1.04k",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "Fill-Mask",
+            "attributes": {
+              "href": "/models?pipeline_tag=fill-mask"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "link",
+            "text": "Transformers",
+            "attributes": {
+              "href": "/models?library=transformers"
+            }
+          },
+          {
+            "id": "pw-70",
+            "role": "link",
+            "text": "PyTorch",
+            "attributes": {
+              "href": "/models?library=pytorch"
+            }
+          },
+          {
+            "id": "pw-72",
+            "role": "link",
+            "text": "TensorFlow",
+            "attributes": {
+              "href": "/models?library=tf"
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "link",
+            "text": "JAX",
+            "attributes": {
+              "href": "/models?library=jax"
+            }
+          },
+          {
+            "id": "pw-76",
+            "role": "link",
+            "text": "Rust",
+            "attributes": {
+              "href": "/models?library=rust"
+            }
+          },
+          {
+            "id": "pw-78",
+            "role": "link",
+            "text": "Core ML",
+            "attributes": {
+              "href": "/models?library=coreml"
+            }
+          },
+          {
+            "id": "pw-80",
+            "role": "link",
+            "text": "ONNX",
+            "attributes": {
+              "href": "/models?library=onnx"
+            }
+          },
+          {
+            "id": "pw-82",
+            "role": "link",
+            "text": "Safetensors",
+            "attributes": {
+              "href": "/models?library=safetensors"
+            }
+          },
+          {
+            "id": "pw-84",
+            "role": "button",
+            "text": "bookcorpus",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-86",
+            "role": "button",
+            "text": "wikipedia",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-88",
+            "role": "link",
+            "text": "English",
+            "attributes": {
+              "href": "/models?language=en"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "The license for google-bert/bert-base-uncased is Apache 2.0 (apache-2.0)."
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

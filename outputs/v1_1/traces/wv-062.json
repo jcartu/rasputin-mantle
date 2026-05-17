@@ -1,0 +1,840 @@
+{
+  "task_id": "wv-062",
+  "task_description": "On LinkedIn, find OpenAI's company page and report its listed industry.",
+  "starting_url": "https://www.linkedin.com",
+  "passed": true,
+  "final_answer": "OpenAI\u2019s listed industry on LinkedIn is Research Services.",
+  "duration_s": 22.97,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://www.linkedin.com/",
+        "title": "LinkedIn: Log In or Sign Up",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#main-content"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Cookie Policy",
+            "attributes": {
+              "href": "https://www.linkedin.com/legal/cookie-policy"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "settings",
+            "attributes": {
+              "href": "https://www.linkedin.com/mypreferences/g/guest-cookies"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Accept",
+            "attributes": {}
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "Reject",
+            "attributes": {}
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "User Agreement",
+            "attributes": {
+              "href": "/legal/user-agreement?trk=linkedin-tc_auth-button_user-agreement"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Privacy Policy",
+            "attributes": {
+              "href": "/legal/privacy-policy?trk=linkedin-tc_auth-button_privacy-policy"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Cookie Policy",
+            "attributes": {
+              "href": "/legal/cookie-policy?trk=linkedin-tc_auth-button_cookie-policy"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "LinkedIn",
+            "attributes": {
+              "href": "/?trk=guest_homepage-basic_nav-header-logo"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Top Content",
+            "attributes": {
+              "href": "https://www.linkedin.com/top-content?trk=guest_homepage-basic_guest_nav_menu_topContent"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "People",
+            "attributes": {
+              "href": "https://www.linkedin.com/pub/dir/+/+?trk=guest_homepage-basic_guest_nav_menu_people"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Learning",
+            "attributes": {
+              "href": "https://www.linkedin.com/learning/search?trk=guest_homepage-basic_guest_nav_menu_learning"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Jobs",
+            "attributes": {
+              "href": "https://www.linkedin.com/jobs/search?trk=guest_homepage-basic_guest_nav_menu_jobs"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Games",
+            "attributes": {
+              "href": "https://www.linkedin.com/games?trk=guest_homepage-basic_guest_nav_menu_games"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Join now",
+            "attributes": {
+              "href": "https://www.linkedin.com/signup?trk=guest_homepage-basic_nav-header-join"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "button",
+            "text": "Continue with google",
+            "attributes": {
+              "aria-label": "Continue with google"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Sign in with email",
+            "attributes": {
+              "href": "https://www.linkedin.com/login"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "User Agreement",
+            "attributes": {
+              "href": "/legal/user-agreement?trk=linkedin-tc_auth-button_user-agreement"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Privacy Policy",
+            "attributes": {
+              "href": "/legal/privacy-policy?trk=linkedin-tc_auth-button_privacy-policy"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Cookie Policy",
+            "attributes": {
+              "href": "/legal/cookie-policy?trk=linkedin-tc_auth-button_cookie-policy"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Join now",
+            "attributes": {
+              "href": "https://www.linkedin.com/signup"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Career",
+            "attributes": {
+              "href": "https://www.linkedin.com/top-content/career/"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Productivity",
+            "attributes": {
+              "href": "https://www.linkedin.com/top-content/productivity/"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Finance",
+            "attributes": {
+              "href": "https://www.linkedin.com/top-content/finance/"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Soft Skills & Emotional Intelligence",
+            "attributes": {
+              "href": "https://www.linkedin.com/top-content/soft-skills-emotional-intelligence/"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Project Management",
+            "attributes": {
+              "href": "https://www.linkedin.com/top-content/project-management/"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Education",
+            "attributes": {
+              "href": "https://www.linkedin.com/top-content/education/"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Technology",
+            "attributes": {
+              "href": "https://www.linkedin.com/top-content/technology/"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Leadership",
+            "attributes": {
+              "href": "https://www.linkedin.com/top-content/leadership/"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Ecommerce",
+            "attributes": {
+              "href": "https://www.linkedin.com/top-content/ecommerce/"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Show all",
+            "attributes": {
+              "href": "https://www.linkedin.com/top-content/",
+              "aria-label": "Show all top content"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Engineering",
+            "attributes": {
+              "href": "https://www.linkedin.com/jobs/engineering-jobs-united-kingdom?trk=homepage-basic_suggested-search"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Business Development",
+            "attributes": {
+              "href": "https://www.linkedin.com/jobs/business-development-jobs-united-kingdom?trk=homepage-basic_suggested-search"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Finance",
+            "attributes": {
+              "href": "https://www.linkedin.com/jobs/finance-jobs-united-kingdom?trk=homepage-basic_suggested-search"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Administrative Assistant",
+            "attributes": {
+              "href": "https://www.linkedin.com/jobs/administrative-assistant-jobs-united-kingdom?trk=homepage-basic_suggested-search"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Retail Associate",
+            "attributes": {
+              "href": "https://www.linkedin.com/jobs/retail-associate-jobs-united-kingdom?trk=homepage-basic_suggested-search"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Customer Service",
+            "attributes": {
+              "href": "https://www.linkedin.com/jobs/customer-service-jobs-united-kingdom?trk=homepage-basic_suggested-search"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Operations",
+            "attributes": {
+              "href": "https://www.linkedin.com/jobs/operations-jobs-united-kingdom?trk=homepage-basic_suggested-search"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Information Technology",
+            "attributes": {
+              "href": "https://www.linkedin.com/jobs/information-technology-jobs-united-kingdom?trk=homepage-basic_suggested-search"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Marketing",
+            "attributes": {
+              "href": "https://www.linkedin.com/jobs/marketing-jobs-united-kingdom?trk=homepage-basic_suggested-search"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Human Resources",
+            "attributes": {
+              "href": "https://www.linkedin.com/jobs/human-resources-jobs-united-kingdom?trk=homepage-basic_suggested-search"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Healthcare Service",
+            "attributes": {
+              "href": "https://www.linkedin.com/jobs/healthcare-services-jobs-united-kingdom?trk=homepage-basic_suggested-search"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Sales",
+            "attributes": {
+              "href": "https://www.linkedin.com/jobs/sales-jobs-united-kingdom?trk=homepage-basic_suggested-search"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Program and Project Management",
+            "attributes": {
+              "href": "https://www.linkedin.com/jobs/program-and-project-management-jobs-united-kingdom?trk=homepage-basic_suggested-search"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Accounting",
+            "attributes": {
+              "href": "https://www.linkedin.com/jobs/accounting-jobs-united-kingdom?trk=homepage-basic_suggested-search"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "Arts and Design",
+            "attributes": {
+              "href": "https://www.linkedin.com/jobs/arts-and-design-jobs-united-kingdom?trk=homepage-basic_suggested-search"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Community and Social Services",
+            "attributes": {
+              "href": "https://www.linkedin.com/jobs/community-and-social-services-jobs-united-kingdom?trk=homepage-basic_suggested-search"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Consulting",
+            "attributes": {
+              "href": "https://www.linkedin.com/jobs/consulting-jobs-united-kingdom?trk=homepage-basic_suggested-search"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Education",
+            "attributes": {
+              "href": "https://www.linkedin.com/jobs/education-jobs-united-kingdom?trk=homepage-basic_suggested-search"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://www.linkedin.com/company/openai/"
+        }
+      },
+      "observation": "Opened https://www.linkedin.com/company/openai/"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://www.linkedin.com/company/openai/",
+        "title": "OpenAI | LinkedIn",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.linkedin.com/legal/cookie-policy"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.linkedin.com/mypreferences/g/guest-cookies"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#main-content"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "LinkedIn",
+            "attributes": {
+              "href": "/?trk=organization_guest_nav-header-logo"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Top Content",
+            "attributes": {
+              "href": "https://www.linkedin.com/top-content?trk=organization_guest_guest_nav_menu_topContent"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "People",
+            "attributes": {
+              "href": "https://www.linkedin.com/pub/dir/+/+?trk=organization_guest_guest_nav_menu_people"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Learning",
+            "attributes": {
+              "href": "https://www.linkedin.com/learning/search?trk=organization_guest_guest_nav_menu_learning"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Jobs",
+            "attributes": {
+              "href": "https://www.linkedin.com/jobs/search?trk=organization_guest_guest_nav_menu_jobs"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Games",
+            "attributes": {
+              "href": "https://www.linkedin.com/games?trk=organization_guest_guest_nav_menu_games"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://www.linkedin.com/login?session_redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fcompany%2Fopenai&fromSignIn=true&trk=organization_guest_nav-header-signin"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Join now",
+            "attributes": {
+              "href": "https://www.linkedin.com/signup/cold-join?session_redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fcompany%2Fopenai&trk=organization_guest_nav-header-join"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.linkedin.com/login?session_redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fcompany%2Fopenai&fromSignIn=true&trk=organization_guest_nav-header-signin",
+              "aria-label": "Sign in"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "See jobs",
+            "attributes": {
+              "href": "https://www.linkedin.com/jobs/openai-jobs-worldwide?f_C=11130470&trk=top-card_top-card-primary-button-top-card-primary-cta"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Follow",
+            "attributes": {
+              "href": "https://www.linkedin.com/login?session_redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fcompany%2Fopenai&fromSignIn=true&trk=top-card_top-card-secondary-button-top-card-secondary-cta"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "View all 8,776 employees",
+            "attributes": {
+              "href": "https://www.linkedin.com/signup/cold-join?session_redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fsearch%2Fresults%2Fpeople%2F%3FfacetCurrentCompany%3D%255B11130470%255D&trk=org-employees_cta_face-pile-cta"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "button",
+            "text": "Open menu",
+            "attributes": {
+              "aria-label": "Open menu"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Overview",
+            "attributes": {
+              "href": "https://www.linkedin.com/company/openai?trk=nav_type_overview"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Jobs",
+            "attributes": {
+              "href": "https://www.linkedin.com/company/openai/jobs?trk=nav_type_jobs"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Life",
+            "attributes": {
+              "href": "https://www.linkedin.com/company/openai/life?trk=nav_type_life"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "https://openai.com/",
+            "attributes": {
+              "href": "https://www.linkedin.com/redir/redirect?url=https%3A%2F%2Fopenai%2Ecom%2F&urlhash=ILNa&trk=about_website"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Get directions",
+            "attributes": {
+              "href": "https://www.bing.com/maps?where=San+Francisco+94110+CA+US&trk=org-locations_url"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Krish Bandaru",
+            "attributes": {
+              "href": "https://www.linkedin.com/in/krish?trk=org-employees"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Fred von Lohmann",
+            "attributes": {
+              "href": "https://www.linkedin.com/in/fredvl?trk=org-employees"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Michael Brown",
+            "attributes": {
+              "href": "https://www.linkedin.com/in/bumike?trk=org-employees"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Dazza Greenwood",
+            "attributes": {
+              "href": "https://www.linkedin.com/in/dazzagreenwood?trk=org-employees"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "See all employees",
+            "attributes": {
+              "href": "https://www.linkedin.com/signup/cold-join?session_redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fsearch%2Fresults%2Fpeople%2F%3FfacetCurrentCompany%3D%255B11130470%255D&trk=public_biz_employees-join"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Update 1",
+            "attributes": {
+              "href": "https://www.linkedin.com/posts/openai_the-openai-podcast-activity-7461165690599886848-HoIF",
+              "aria-label": "Update 1"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.linkedin.com/company/openai?trk=organization_guest_main-feed-card_feed-actor-image"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "OpenAI",
+            "attributes": {
+              "href": "https://www.linkedin.com/company/openai?trk=organization_guest_main-feed-card_feed-actor-name",
+              "aria-label": "View organization page for OpenAI"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "button",
+            "text": "Open menu",
+            "attributes": {
+              "aria-label": "Open menu"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Adele Li",
+            "attributes": {
+              "href": "https://www.linkedin.com/in/adeleli?trk=organization_guest_main-feed-card-text"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Kenji Hata",
+            "attributes": {
+              "href": "https://www.linkedin.com/in/kenjihata?trk=organization_guest_main-feed-card-text"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Andrew Mayne",
+            "attributes": {
+              "href": "https://www.linkedin.com/in/andrew-mayne-99584b23?trk=organization_guest_main-feed-card-text"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "https://lnkd.in/dr9D6-8i",
+            "attributes": {
+              "href": "https://lnkd.in/dr9D6-8i?trk=organization_guest_main-feed-card-text"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "The OpenAI Podcast\nopenai.com",
+            "attributes": {
+              "href": "https://www.linkedin.com/redir/redirect?url=https%3A%2F%2Fopenai%2Ecom%2Fpodcast%2F&urlhash=NrwF&trk=organization_guest_main-feed-card_feed-article-content"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "549",
+            "attributes": {
+              "href": "https://www.linkedin.com/signup/cold-join?session_redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fcompany%2Fopenai&trk=organization_guest_main-feed-card_social-actions-reactions",
+              "aria-label": "549 Reactions"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "74 Comments",
+            "attributes": {
+              "href": "https://www.linkedin.com/signup/cold-join?session_redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fcompany%2Fopenai&trk=organization_guest_main-feed-card_social-actions-comments"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Like",
+            "attributes": {
+              "href": "https://www.linkedin.com/signup/cold-join?session_redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fcompany%2Fopenai&trk=organization_guest_main-feed-card_like-cta"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Comment",
+            "attributes": {
+              "href": "https://www.linkedin.com/signup/cold-join?session_redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fcompany%2Fopenai&trk=organization_guest_main-feed-card_comment-cta"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Share",
+            "attributes": {
+              "href": "https://www.linkedin.com/signup/cold-join?session_redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fcompany%2Fopenai&trk=organization_guest_main-feed-card_share-cta"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Update 2",
+            "attributes": {
+              "href": "https://www.linkedin.com/posts/openai_work-with-codex-from-anywhere-activity-7460784183288971264-BkYW",
+              "aria-label": "Update 2"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.linkedin.com/company/openai?trk=organization_guest_main-feed-card_feed-actor-image"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "OpenAI",
+            "attributes": {
+              "href": "https://www.linkedin.com/company/openai?trk=organization_guest_main-feed-card_feed-actor-name",
+              "aria-label": "View organization page for OpenAI"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "button",
+            "text": "Open menu",
+            "attributes": {
+              "aria-label": "Open menu"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "link",
+            "text": "https://lnkd.in/gE6DZ3UD",
+            "attributes": {
+              "href": "https://lnkd.in/gE6DZ3UD?trk=organization_guest_main-feed-card-text"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-60",
+            "role": "link",
+            "text": "2,634",
+            "attributes": {
+              "href": "https://www.linkedin.com/signup/cold-join?session_redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fcompany%2Fopenai&trk=organization_guest_main-feed-card_social-actions-reactions",
+              "aria-label": "2,634 Reactions"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "link",
+            "text": "152 Comments",
+            "attributes": {
+              "href": "https://www.linkedin.com/signup/cold-join?session_redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fcompany%2Fopenai&trk=organization_guest_main-feed-card_social-actions-comments"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "OpenAI\u2019s listed industry on LinkedIn is Research Services."
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

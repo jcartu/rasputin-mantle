@@ -1,0 +1,856 @@
+{
+  "task_id": "wv-071",
+  "task_description": "On MDN Web Docs, find the syntax for Array.prototype.map in JavaScript.",
+  "starting_url": "https://developer.mozilla.org",
+  "passed": true,
+  "final_answer": "The MDN syntax for `Array.prototype.map()` is:\n\n```js\nmap(callbackFn)\nmap(callbackFn, thisArg)\n```",
+  "duration_s": 17.6,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://developer.mozilla.org/en-US/",
+        "title": "MDN Web Docs",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#content"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Skip to search",
+            "attributes": {
+              "href": "#search"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/en-US/"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Toggle navigation",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Toggle navigation"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "HTML",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "HTML: Markup language",
+            "attributes": {
+              "href": "/en-US/docs/Web/HTML"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Elements",
+            "attributes": {
+              "href": "/en-US/docs/Web/HTML/Reference/Elements"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Global attributes",
+            "attributes": {
+              "href": "/en-US/docs/Web/HTML/Reference/Global_attributes"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Attributes",
+            "attributes": {
+              "href": "/en-US/docs/Web/HTML/Reference/Attributes"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "See all\u2026",
+            "attributes": {
+              "href": "/en-US/docs/Web/HTML/Reference",
+              "aria-label": "See all HTML references"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Responsive images",
+            "attributes": {
+              "href": "/en-US/docs/Web/HTML/Guides/Responsive_images"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "HTML cheatsheet",
+            "attributes": {
+              "href": "/en-US/docs/Web/HTML/Guides/Cheatsheet"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Date & time formats",
+            "attributes": {
+              "href": "/en-US/docs/Web/HTML/Guides/Date_and_time_formats"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "See all\u2026",
+            "attributes": {
+              "href": "/en-US/docs/Web/HTML/Guides",
+              "aria-label": "See all HTML guides"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "SVG",
+            "attributes": {
+              "href": "/en-US/docs/Web/SVG"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "MathML",
+            "attributes": {
+              "href": "/en-US/docs/Web/MathML"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "XML",
+            "attributes": {
+              "href": "/en-US/docs/Web/XML"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "CSS",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "CSS: Styling language",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Properties",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS/Reference/Properties"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Selectors",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS/Reference/Selectors"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "At-rules",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS/Reference/At-rules"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Values",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS/Reference/Values"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "See all\u2026",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS/Reference",
+              "aria-label": "See all CSS references"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Box model",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS/Guides/Box_model/Introduction"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Animations",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS/Guides/Animations/Using"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Flexbox",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Colors",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS/Guides/Colors/Applying_color"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "See all\u2026",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS/Guides",
+              "aria-label": "See all CSS guides"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Column layouts",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS/How_to/Layout_cookbook/Column_layouts"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Centering an element",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Card component",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS/How_to/Layout_cookbook/Card"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "See all\u2026",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS/How_to/Layout_cookbook"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "JavaScript",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "JavaScript: Scripting language",
+            "attributes": {
+              "href": "/en-US/docs/Web/JavaScript"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Standard built-in objects",
+            "attributes": {
+              "href": "/en-US/docs/Web/JavaScript/Reference/Global_Objects"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Expressions & operators",
+            "attributes": {
+              "href": "/en-US/docs/Web/JavaScript/Reference/Operators"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Statements & declarations",
+            "attributes": {
+              "href": "/en-US/docs/Web/JavaScript/Reference/Statements"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Functions",
+            "attributes": {
+              "href": "/en-US/docs/Web/JavaScript/Reference/Functions"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "See all\u2026",
+            "attributes": {
+              "href": "/en-US/docs/Web/JavaScript/Reference",
+              "aria-label": "See all JavaScript references"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Control flow & error handing",
+            "attributes": {
+              "href": "/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Loops and iteration",
+            "attributes": {
+              "href": "/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Working with objects",
+            "attributes": {
+              "href": "/en-US/docs/Web/JavaScript/Guide/Working_with_objects"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Using classes",
+            "attributes": {
+              "href": "/en-US/docs/Web/JavaScript/Guide/Using_classes"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "See all\u2026",
+            "attributes": {
+              "href": "/en-US/docs/Web/JavaScript/Guide",
+              "aria-label": "See all JavaScript guides"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "button",
+            "text": "Web APIs",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Web APIs: Programming interfaces",
+            "attributes": {
+              "href": "/en-US/docs/Web/API"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "File system API",
+            "attributes": {
+              "href": "/en-US/docs/Web/API/File_System_API"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Fetch API",
+            "attributes": {
+              "href": "/en-US/docs/Web/API/Fetch_API"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Geolocation API",
+            "attributes": {
+              "href": "/en-US/docs/Web/API/Geolocation_API"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
+        }
+      },
+      "observation": "Opened https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map",
+        "title": "Array.prototype.map() - JavaScript | MDN",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#content"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Skip to search",
+            "attributes": {
+              "href": "#search"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/en-US/"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Toggle navigation",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Toggle navigation"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "HTML",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "HTML: Markup language",
+            "attributes": {
+              "href": "/en-US/docs/Web/HTML"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Elements",
+            "attributes": {
+              "href": "/en-US/docs/Web/HTML/Reference/Elements"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Global attributes",
+            "attributes": {
+              "href": "/en-US/docs/Web/HTML/Reference/Global_attributes"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Attributes",
+            "attributes": {
+              "href": "/en-US/docs/Web/HTML/Reference/Attributes"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "See all\u2026",
+            "attributes": {
+              "href": "/en-US/docs/Web/HTML/Reference",
+              "aria-label": "See all HTML references"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Responsive images",
+            "attributes": {
+              "href": "/en-US/docs/Web/HTML/Guides/Responsive_images"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "HTML cheatsheet",
+            "attributes": {
+              "href": "/en-US/docs/Web/HTML/Guides/Cheatsheet"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Date & time formats",
+            "attributes": {
+              "href": "/en-US/docs/Web/HTML/Guides/Date_and_time_formats"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "See all\u2026",
+            "attributes": {
+              "href": "/en-US/docs/Web/HTML/Guides",
+              "aria-label": "See all HTML guides"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "SVG",
+            "attributes": {
+              "href": "/en-US/docs/Web/SVG"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "MathML",
+            "attributes": {
+              "href": "/en-US/docs/Web/MathML"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "XML",
+            "attributes": {
+              "href": "/en-US/docs/Web/XML"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "CSS",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "CSS: Styling language",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Properties",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS/Reference/Properties"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Selectors",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS/Reference/Selectors"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "At-rules",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS/Reference/At-rules"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Values",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS/Reference/Values"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "See all\u2026",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS/Reference",
+              "aria-label": "See all CSS references"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Box model",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS/Guides/Box_model/Introduction"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Animations",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS/Guides/Animations/Using"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Flexbox",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Colors",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS/Guides/Colors/Applying_color"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "See all\u2026",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS/Guides",
+              "aria-label": "See all CSS guides"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Column layouts",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS/How_to/Layout_cookbook/Column_layouts"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Centering an element",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Card component",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS/How_to/Layout_cookbook/Card"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "See all\u2026",
+            "attributes": {
+              "href": "/en-US/docs/Web/CSS/How_to/Layout_cookbook"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "JavaScript",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "JavaScript: Scripting language",
+            "attributes": {
+              "href": "/en-US/docs/Web/JavaScript"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Standard built-in objects",
+            "attributes": {
+              "href": "/en-US/docs/Web/JavaScript/Reference/Global_Objects"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Expressions & operators",
+            "attributes": {
+              "href": "/en-US/docs/Web/JavaScript/Reference/Operators"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Statements & declarations",
+            "attributes": {
+              "href": "/en-US/docs/Web/JavaScript/Reference/Statements"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Functions",
+            "attributes": {
+              "href": "/en-US/docs/Web/JavaScript/Reference/Functions"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "See all\u2026",
+            "attributes": {
+              "href": "/en-US/docs/Web/JavaScript/Reference",
+              "aria-label": "See all JavaScript references"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Control flow & error handing",
+            "attributes": {
+              "href": "/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Loops and iteration",
+            "attributes": {
+              "href": "/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Working with objects",
+            "attributes": {
+              "href": "/en-US/docs/Web/JavaScript/Guide/Working_with_objects"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Using classes",
+            "attributes": {
+              "href": "/en-US/docs/Web/JavaScript/Guide/Using_classes"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "See all\u2026",
+            "attributes": {
+              "href": "/en-US/docs/Web/JavaScript/Guide",
+              "aria-label": "See all JavaScript guides"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "button",
+            "text": "Web APIs",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Web APIs: Programming interfaces",
+            "attributes": {
+              "href": "/en-US/docs/Web/API"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "File system API",
+            "attributes": {
+              "href": "/en-US/docs/Web/API/File_System_API"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Fetch API",
+            "attributes": {
+              "href": "/en-US/docs/Web/API/Fetch_API"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Geolocation API",
+            "attributes": {
+              "href": "/en-US/docs/Web/API/Geolocation_API"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "The MDN syntax for `Array.prototype.map()` is:\n\n```js\nmap(callbackFn)\nmap(callbackFn, thisArg)\n```"
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

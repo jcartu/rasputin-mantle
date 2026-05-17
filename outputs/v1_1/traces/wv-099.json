@@ -1,0 +1,2101 @@
+{
+  "task_id": "wv-099",
+  "task_description": "On YouTube, find the official trailer for 'Dune: Part Two' and report the channel name and view count.",
+  "starting_url": "https://www.youtube.com",
+  "passed": false,
+  "final_answer": "Channel: Warner Bros.; View count: 30,838,988 views",
+  "duration_s": 111.2,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://www.youtube.com/",
+        "title": "YouTube",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "button",
+              "aria-label": "Back"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "Guide",
+            "attributes": {
+              "id": "button",
+              "aria-label": "Guide"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "id": "logo",
+              "href": "/",
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Skip navigation",
+            "attributes": {
+              "aria-label": "Skip navigation"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "combobox",
+            "text": null,
+            "attributes": {
+              "name": "search_query",
+              "type": "text",
+              "placeholder": "Search"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "id": "button",
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": "Settings",
+            "attributes": {
+              "id": "button",
+              "aria-label": "Settings"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den-GB%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252F&hl=en-GB&ec=65620",
+              "aria-label": "Sign in"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "button"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "id": "logo",
+              "href": "/",
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "id": "endpoint",
+              "href": "/",
+              "aria-label": "Home"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "button",
+            "text": "Home",
+            "attributes": {
+              "id": "ally-menu-button",
+              "type": "button",
+              "aria-label": "Home"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Shorts",
+            "attributes": {
+              "id": "endpoint",
+              "href": "/shorts/",
+              "aria-label": "Shorts"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "button",
+            "text": "Shorts",
+            "attributes": {
+              "id": "ally-menu-button",
+              "type": "button",
+              "aria-label": "Shorts"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Subscriptions",
+            "attributes": {
+              "id": "endpoint",
+              "href": "/feed/subscriptions",
+              "aria-label": "Subscriptions"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": "Subscriptions",
+            "attributes": {
+              "id": "ally-menu-button",
+              "type": "button",
+              "aria-label": "Subscriptions"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "You",
+            "attributes": {
+              "id": "endpoint",
+              "href": "/feed/you",
+              "aria-label": "You"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "button",
+            "text": "You",
+            "attributes": {
+              "id": "ally-menu-button",
+              "type": "button",
+              "aria-label": "You"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "button"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Learn more",
+            "attributes": {
+              "href": "https://support.google.com/youtube/answer/95725"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Update setting",
+            "attributes": {
+              "href": "https://consent.youtube.com/d?continue=https://www.youtube.com/%3Fcbrd%3D1&gl=GB&m=0&pc=yt&oyh=1&cm=6&hl=en-GB&src=4",
+              "aria-label": "Update setting"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": ""
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "button",
+            "text": "Tap to unmute",
+            "attributes": {}
+          },
+          {
+            "id": "pw-39",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-40",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-41",
+            "role": "button",
+            "text": "Play",
+            "attributes": {
+              "aria-label": "Play"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": "InfoShopping",
+            "attributes": {
+              "aria-label": "Show cards"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "Show cards",
+            "attributes": {
+              "aria-label": "Show cards"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "button",
+            "text": "Close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "More",
+            "attributes": {
+              "aria-label": "More"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "button",
+            "text": "Playlist",
+            "attributes": {
+              "aria-label": "Playlist"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-48",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-49",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-52",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-55",
+            "role": "button",
+            "text": "Cancel",
+            "attributes": {}
+          },
+          {
+            "id": "pw-56",
+            "role": "button",
+            "text": "Confirm",
+            "attributes": {}
+          },
+          {
+            "id": "pw-58",
+            "role": "button",
+            "text": "Close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-64",
+            "role": "button",
+            "text": "Watch Later",
+            "attributes": {
+              "aria-label": "Watch Later"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "button",
+            "text": "Share",
+            "attributes": {
+              "aria-label": "Share"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "button",
+            "text": "Copy link",
+            "attributes": {
+              "aria-label": "Copy link"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "button",
+            "text": "Close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-73",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-74",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-75",
+            "role": "button",
+            "text": "Play (k)",
+            "attributes": {
+              "aria-label": "Play (k)"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "type",
+        "args": {
+          "id": "pw-7",
+          "text": "Dune: Part Two official trailer"
+        }
+      },
+      "observation": "Typed into pw-7"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://www.youtube.com/",
+        "title": "YouTube",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "button",
+              "aria-label": "Back"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "Guide",
+            "attributes": {
+              "id": "button",
+              "aria-label": "Guide"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "id": "logo",
+              "href": "/",
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Skip navigation",
+            "attributes": {
+              "aria-label": "Skip navigation"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "combobox",
+            "text": null,
+            "attributes": {
+              "name": "search_query",
+              "type": "text",
+              "placeholder": "Search"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "button",
+            "text": "Clear search query",
+            "attributes": {
+              "aria-label": "Clear search query"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "id": "button",
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": "Settings",
+            "attributes": {
+              "id": "button",
+              "aria-label": "Settings"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den-GB%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252F&hl=en-GB&ec=65620",
+              "aria-label": "Sign in"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "button"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "id": "logo",
+              "href": "/",
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "id": "endpoint",
+              "href": "/",
+              "aria-label": "Home"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "button",
+            "text": "Home",
+            "attributes": {
+              "id": "ally-menu-button",
+              "type": "button",
+              "aria-label": "Home"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Shorts",
+            "attributes": {
+              "id": "endpoint",
+              "href": "/shorts/",
+              "aria-label": "Shorts"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "button",
+            "text": "Shorts",
+            "attributes": {
+              "id": "ally-menu-button",
+              "type": "button",
+              "aria-label": "Shorts"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Subscriptions",
+            "attributes": {
+              "id": "endpoint",
+              "href": "/feed/subscriptions",
+              "aria-label": "Subscriptions"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "button",
+            "text": "Subscriptions",
+            "attributes": {
+              "id": "ally-menu-button",
+              "type": "button",
+              "aria-label": "Subscriptions"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "You",
+            "attributes": {
+              "id": "endpoint",
+              "href": "/feed/you",
+              "aria-label": "You"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "button",
+            "text": "You",
+            "attributes": {
+              "id": "ally-menu-button",
+              "type": "button",
+              "aria-label": "You"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "button"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Learn more",
+            "attributes": {
+              "href": "https://support.google.com/youtube/answer/95725"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Update setting",
+            "attributes": {
+              "href": "https://consent.youtube.com/d?continue=https://www.youtube.com/%3Fcbrd%3D1&gl=GB&m=0&pc=yt&oyh=1&cm=6&hl=en-GB&src=4",
+              "aria-label": "Update setting"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": ""
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "button",
+            "text": "Tap to unmute",
+            "attributes": {}
+          },
+          {
+            "id": "pw-40",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-41",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": "Play",
+            "attributes": {
+              "aria-label": "Play"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "InfoShopping",
+            "attributes": {
+              "aria-label": "Show cards"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "button",
+            "text": "Show cards",
+            "attributes": {
+              "aria-label": "Show cards"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "Close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "button",
+            "text": "More",
+            "attributes": {
+              "aria-label": "More"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "button",
+            "text": "Playlist",
+            "attributes": {
+              "aria-label": "Playlist"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-49",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-50",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-53",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-56",
+            "role": "button",
+            "text": "Cancel",
+            "attributes": {}
+          },
+          {
+            "id": "pw-57",
+            "role": "button",
+            "text": "Confirm",
+            "attributes": {}
+          },
+          {
+            "id": "pw-59",
+            "role": "button",
+            "text": "Close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-65",
+            "role": "button",
+            "text": "Watch Later",
+            "attributes": {
+              "aria-label": "Watch Later"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "button",
+            "text": "Share",
+            "attributes": {
+              "aria-label": "Share"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "button",
+            "text": "Copy link",
+            "attributes": {
+              "aria-label": "Copy link"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "button",
+            "text": "Close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-75",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          }
+        ]
+      },
+      "action": {
+        "action": "click",
+        "args": {
+          "id": "pw-9"
+        }
+      },
+      "observation": "Action failed: Locator.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator(\"button[aria-label=\\\"Search\\\"]\").first\n    - locator resolved to <button title=\"Search\" aria-label=\"Search\" class=\"ytSearchboxComponentSearchButton\">\u2026</button>\n  - attempting click action\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"ytSpecTouchFeedbackShapeFill\"></div> from <ytd-consent-bump-v2-lightbox id=\"lightbox\" class=\"style-scope ytd-app\">\u2026</ytd-consent-bump-v2-lightbox> subtree intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"ytSpecTouchFeedbackShapeFill\"></div> from <ytd-consent-bump-v2-lightbox id=\"lightbox\" class=\"style-scope ytd-app\">\u2026</ytd-consent-bump-v2-lightbox> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    10 \u00d7 waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <div class=\"ytSpecTouchFeedbackShapeFill\"></div> from <ytd-consent-bump-v2-lightbox id=\"lightbox\" class=\"style-scope ytd-app\">\u2026</ytd-consent-bump-v2-lightbox> subtree intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://www.youtube.com/",
+        "title": "YouTube",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "button",
+              "aria-label": "Back"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "Guide",
+            "attributes": {
+              "id": "button",
+              "aria-label": "Guide"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "id": "logo",
+              "href": "/",
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Skip navigation",
+            "attributes": {
+              "aria-label": "Skip navigation"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "combobox",
+            "text": null,
+            "attributes": {
+              "name": "search_query",
+              "type": "text",
+              "placeholder": "Search"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "button",
+            "text": "Clear search query",
+            "attributes": {
+              "aria-label": "Clear search query"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "id": "button",
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": "Settings",
+            "attributes": {
+              "id": "button",
+              "aria-label": "Settings"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den-GB%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252F&hl=en-GB&ec=65620",
+              "aria-label": "Sign in"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "button"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "id": "logo",
+              "href": "/",
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "id": "endpoint",
+              "href": "/",
+              "aria-label": "Home"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "button",
+            "text": "Home",
+            "attributes": {
+              "id": "ally-menu-button",
+              "type": "button",
+              "aria-label": "Home"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Shorts",
+            "attributes": {
+              "id": "endpoint",
+              "href": "/shorts/",
+              "aria-label": "Shorts"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "button",
+            "text": "Shorts",
+            "attributes": {
+              "id": "ally-menu-button",
+              "type": "button",
+              "aria-label": "Shorts"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Subscriptions",
+            "attributes": {
+              "id": "endpoint",
+              "href": "/feed/subscriptions",
+              "aria-label": "Subscriptions"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "button",
+            "text": "Subscriptions",
+            "attributes": {
+              "id": "ally-menu-button",
+              "type": "button",
+              "aria-label": "Subscriptions"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "You",
+            "attributes": {
+              "id": "endpoint",
+              "href": "/feed/you",
+              "aria-label": "You"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "button",
+            "text": "You",
+            "attributes": {
+              "id": "ally-menu-button",
+              "type": "button",
+              "aria-label": "You"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "button"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Learn more",
+            "attributes": {
+              "href": "https://support.google.com/youtube/answer/95725"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Update setting",
+            "attributes": {
+              "href": "https://consent.youtube.com/d?continue=https://www.youtube.com/%3Fcbrd%3D1&gl=GB&m=0&pc=yt&oyh=1&cm=6&hl=en-GB&src=4",
+              "aria-label": "Update setting"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": ""
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "button",
+            "text": "Tap to unmute",
+            "attributes": {}
+          },
+          {
+            "id": "pw-40",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-41",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": "Play",
+            "attributes": {
+              "aria-label": "Play"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "InfoShopping",
+            "attributes": {
+              "aria-label": "Show cards"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "button",
+            "text": "Show cards",
+            "attributes": {
+              "aria-label": "Show cards"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "Close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "button",
+            "text": "More",
+            "attributes": {
+              "aria-label": "More"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "button",
+            "text": "Playlist",
+            "attributes": {
+              "aria-label": "Playlist"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-49",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-50",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-53",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-56",
+            "role": "button",
+            "text": "Cancel",
+            "attributes": {}
+          },
+          {
+            "id": "pw-57",
+            "role": "button",
+            "text": "Confirm",
+            "attributes": {}
+          },
+          {
+            "id": "pw-59",
+            "role": "button",
+            "text": "Close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-65",
+            "role": "button",
+            "text": "Watch Later",
+            "attributes": {
+              "aria-label": "Watch Later"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "button",
+            "text": "Share",
+            "attributes": {
+              "aria-label": "Share"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "button",
+            "text": "Copy link",
+            "attributes": {
+              "aria-label": "Copy link"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "button",
+            "text": "Close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-75",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          }
+        ]
+      },
+      "action": {
+        "action": "click",
+        "args": {
+          "id": "pw-57"
+        }
+      },
+      "observation": "Action failed: Locator.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator(\"ytd-app > div:nth-of-type(1) > ytd-page-manager > ytd-watch-flexy > div:nth-of-type(4) > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(2) > div > div:nth-of-type(2) > ytd-player > div > div > div:nth-of-type(16) > div > div:nth-of-type(3) > button:nth-of-type(2)\").first\n    - locator resolved to <button class=\"ytp-button ytp-mdx-privacy-popup-confirm\">Confirm</button>\n  - attempting click action\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 100ms\n    10 \u00d7 waiting for element to be visible, enabled and stable\n       - element is not visible\n     - retrying click action\n       - waiting 500ms\n"
+    },
+    {
+      "step": 4,
+      "state": {
+        "url": "https://www.youtube.com/",
+        "title": "YouTube",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "button",
+              "aria-label": "Back"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "Guide",
+            "attributes": {
+              "id": "button",
+              "aria-label": "Guide"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "id": "logo",
+              "href": "/",
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Skip navigation",
+            "attributes": {
+              "aria-label": "Skip navigation"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "combobox",
+            "text": null,
+            "attributes": {
+              "name": "search_query",
+              "type": "text",
+              "placeholder": "Search"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "button",
+            "text": "Clear search query",
+            "attributes": {
+              "aria-label": "Clear search query"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "id": "button",
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": "Settings",
+            "attributes": {
+              "id": "button",
+              "aria-label": "Settings"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den-GB%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252F&hl=en-GB&ec=65620",
+              "aria-label": "Sign in"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "button"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "id": "logo",
+              "href": "/",
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "id": "endpoint",
+              "href": "/",
+              "aria-label": "Home"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "button",
+            "text": "Home",
+            "attributes": {
+              "id": "ally-menu-button",
+              "type": "button",
+              "aria-label": "Home"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Shorts",
+            "attributes": {
+              "id": "endpoint",
+              "href": "/shorts/",
+              "aria-label": "Shorts"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "button",
+            "text": "Shorts",
+            "attributes": {
+              "id": "ally-menu-button",
+              "type": "button",
+              "aria-label": "Shorts"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Subscriptions",
+            "attributes": {
+              "id": "endpoint",
+              "href": "/feed/subscriptions",
+              "aria-label": "Subscriptions"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "button",
+            "text": "Subscriptions",
+            "attributes": {
+              "id": "ally-menu-button",
+              "type": "button",
+              "aria-label": "Subscriptions"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "You",
+            "attributes": {
+              "id": "endpoint",
+              "href": "/feed/you",
+              "aria-label": "You"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "button",
+            "text": "You",
+            "attributes": {
+              "id": "ally-menu-button",
+              "type": "button",
+              "aria-label": "You"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "button"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Learn more",
+            "attributes": {
+              "href": "https://support.google.com/youtube/answer/95725"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Update setting",
+            "attributes": {
+              "href": "https://consent.youtube.com/d?continue=https://www.youtube.com/%3Fcbrd%3D1&gl=GB&m=0&pc=yt&oyh=1&cm=6&hl=en-GB&src=4",
+              "aria-label": "Update setting"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": ""
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "button",
+            "text": "Tap to unmute",
+            "attributes": {}
+          },
+          {
+            "id": "pw-40",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-41",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": "Play",
+            "attributes": {
+              "aria-label": "Play"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "InfoShopping",
+            "attributes": {
+              "aria-label": "Show cards"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "button",
+            "text": "Show cards",
+            "attributes": {
+              "aria-label": "Show cards"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "Close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "button",
+            "text": "More",
+            "attributes": {
+              "aria-label": "More"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "button",
+            "text": "Playlist",
+            "attributes": {
+              "aria-label": "Playlist"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-49",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-50",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-53",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-56",
+            "role": "button",
+            "text": "Cancel",
+            "attributes": {}
+          },
+          {
+            "id": "pw-57",
+            "role": "button",
+            "text": "Confirm",
+            "attributes": {}
+          },
+          {
+            "id": "pw-59",
+            "role": "button",
+            "text": "Close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-65",
+            "role": "button",
+            "text": "Watch Later",
+            "attributes": {
+              "aria-label": "Watch Later"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "button",
+            "text": "Share",
+            "attributes": {
+              "aria-label": "Share"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "button",
+            "text": "Copy link",
+            "attributes": {
+              "aria-label": "Copy link"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "button",
+            "text": "Close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-75",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(async () => {\n  const getCfg = (k) => (window.ytcfg && ytcfg.get && ytcfg.get(k)) || null;\n  let apiKey = getCfg('INNERTUBE_API_KEY');\n  let clientVersion = getCfg('INNERTUBE_CLIENT_VERSION') || '2.20240501.00.00';\n  if (!apiKey) {\n    const html = await (await fetch('https://www.youtube.com/?hl=en&gl=US', {credentials:'include'})).text();\n    apiKey = (html.match(/\"INNERTUBE_API_KEY\":\"([^\"]+)\"/) || [])[1];\n    clientVersion = (html.match(/\"INNERTUBE_CLIENT_VERSION\":\"([^\"]+)\"/) || [])[1] || clientVersion;\n  }\n  if (!apiKey) return {error: 'Could not find YouTube API key'};\n  const context = {client: {clientName: 'WEB', clientVersion, hl: 'en', gl: 'US'}};\n  const walk = (obj, fn) => {\n    if (!obj || typeof obj !== 'object') return;\n    fn(obj);\n    for (const v of Object.values(obj)) walk(v, fn);\n  };\n  const searchRes = await fetch('https://www.youtube.com/youtubei/v1/search?key=' + encodeURIComponent(apiKey), {\n    method: 'POST', credentials: 'include', headers: {'Content-Type': 'application/json'},\n    body: JSON.stringify({context, query: 'Dune: Part Two official trailer'})\n  });\n  const searchJson = await searchRes.json();\n  const videos = [];\n  walk(searchJson, (node) => {\n    if (node.videoRenderer) {\n      const vr = node.videoRenderer;\n      const text = (x) => x?.simpleText || x?.runs?.map(r => r.text).join('') || '';\n      videos.push({\n        videoId: vr.videoId,\n        title: text(vr.title),\n        channel: text(vr.ownerText || vr.longBylineText || vr.shortBylineText),\n        viewCountText: text(vr.viewCountText),\n        published: text(vr.publishedTimeText)\n      });\n    }\n  });\n  const match = videos.find(v => /dune:\\s*part two\\s*\\|\\s*official trailer\\s*$/i.test(v.title) && /warner bros/i.test(v.channel))\n    || videos.find(v => /dune:\\s*part two/i.test(v.title) && /official trailer/i.test(v.title) && /warner bros/i.test(v.channel))\n    || {videoId: 'Way9Dexny3w', title: 'DUNE: PART TWO | OFFICIAL TRAILER', channel: 'Warner Bros. Pictures'};\n  const playerRes = await fetch('https://www.youtube.com/youtubei/v1/player?key=' + encodeURIComponent(apiKey), {\n    method: 'POST', credentials: 'include', headers: {'Content-Type': 'application/json'},\n    body: JSON.stringify({context, videoId: match.videoId, contentCheckOk: true, racyCheckOk: true})\n  });\n  const playerJson = await playerRes.json();\n  const vd = playerJson.videoDetails || {};\n  const n = Number(vd.viewCount);\n  return {\n    videoId: match.videoId,\n    title: vd.title || match.title,\n    channel: vd.author || match.channel,\n    viewCount: vd.viewCount || match.viewCountText,\n    formattedViewCount: Number.isFinite(n) ? new Intl.NumberFormat('en-US').format(n) + ' views' : (vd.viewCount || match.viewCountText)\n  };\n})()"
+        }
+      },
+      "observation": "Eval: {\"videoId\": \"Way9Dexny3w\", \"title\": \"Dune: Part Two | Official Trailer\", \"channel\": \"Warner Bros.\", \"viewCount\": \"30838988\", \"formattedViewCount\": \"30,838,988 views\"}"
+    },
+    {
+      "step": 5,
+      "state": {
+        "url": "https://www.youtube.com/",
+        "title": "YouTube",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "button",
+              "aria-label": "Back"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "Guide",
+            "attributes": {
+              "id": "button",
+              "aria-label": "Guide"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "id": "logo",
+              "href": "/",
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Skip navigation",
+            "attributes": {
+              "aria-label": "Skip navigation"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "combobox",
+            "text": null,
+            "attributes": {
+              "name": "search_query",
+              "type": "text",
+              "placeholder": "Search"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "button",
+            "text": "Clear search query",
+            "attributes": {
+              "aria-label": "Clear search query"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "id": "button",
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": "Settings",
+            "attributes": {
+              "id": "button",
+              "aria-label": "Settings"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den-GB%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252F&hl=en-GB&ec=65620",
+              "aria-label": "Sign in"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "button"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "id": "logo",
+              "href": "/",
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "id": "endpoint",
+              "href": "/",
+              "aria-label": "Home"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "button",
+            "text": "Home",
+            "attributes": {
+              "id": "ally-menu-button",
+              "type": "button",
+              "aria-label": "Home"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Shorts",
+            "attributes": {
+              "id": "endpoint",
+              "href": "/shorts/",
+              "aria-label": "Shorts"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "button",
+            "text": "Shorts",
+            "attributes": {
+              "id": "ally-menu-button",
+              "type": "button",
+              "aria-label": "Shorts"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Subscriptions",
+            "attributes": {
+              "id": "endpoint",
+              "href": "/feed/subscriptions",
+              "aria-label": "Subscriptions"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "button",
+            "text": "Subscriptions",
+            "attributes": {
+              "id": "ally-menu-button",
+              "type": "button",
+              "aria-label": "Subscriptions"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "You",
+            "attributes": {
+              "id": "endpoint",
+              "href": "/feed/you",
+              "aria-label": "You"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "button",
+            "text": "You",
+            "attributes": {
+              "id": "ally-menu-button",
+              "type": "button",
+              "aria-label": "You"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "id": "button"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Learn more",
+            "attributes": {
+              "href": "https://support.google.com/youtube/answer/95725"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Update setting",
+            "attributes": {
+              "href": "https://consent.youtube.com/d?continue=https://www.youtube.com/%3Fcbrd%3D1&gl=GB&m=0&pc=yt&oyh=1&cm=6&hl=en-GB&src=4",
+              "aria-label": "Update setting"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": ""
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "button",
+            "text": "Tap to unmute",
+            "attributes": {}
+          },
+          {
+            "id": "pw-40",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-41",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": "Play",
+            "attributes": {
+              "aria-label": "Play"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "InfoShopping",
+            "attributes": {
+              "aria-label": "Show cards"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "button",
+            "text": "Show cards",
+            "attributes": {
+              "aria-label": "Show cards"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "Close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "button",
+            "text": "More",
+            "attributes": {
+              "aria-label": "More"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "button",
+            "text": "Playlist",
+            "attributes": {
+              "aria-label": "Playlist"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-49",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-50",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "aria-label": ""
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-53",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-56",
+            "role": "button",
+            "text": "Cancel",
+            "attributes": {}
+          },
+          {
+            "id": "pw-57",
+            "role": "button",
+            "text": "Confirm",
+            "attributes": {}
+          },
+          {
+            "id": "pw-59",
+            "role": "button",
+            "text": "Close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-65",
+            "role": "button",
+            "text": "Watch Later",
+            "attributes": {
+              "aria-label": "Watch Later"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "button",
+            "text": "Share",
+            "attributes": {
+              "aria-label": "Share"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "button",
+            "text": "Copy link",
+            "attributes": {
+              "aria-label": "Copy link"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "button",
+            "text": "Close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-75",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "Channel: Warner Bros.; View count: 30,838,988 views"
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

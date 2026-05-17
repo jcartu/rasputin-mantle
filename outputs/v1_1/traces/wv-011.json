@@ -1,0 +1,106 @@
+{
+  "task_id": "wv-011",
+  "task_description": "On Allrecipes, find a highly rated chocolate chip cookie recipe and report its rating and total prep time.",
+  "starting_url": "https://www.allrecipes.com",
+  "passed": true,
+  "final_answer": "A highly rated Allrecipes chocolate chip cookie recipe is \u201cBest Chocolate Chip Cookies.\u201d It has a rating of 4.6 stars, and the total time is 30 minutes.",
+  "duration_s": 25.08,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://www.allrecipes.com/",
+        "title": "",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "support@people.inc",
+            "attributes": {
+              "href": "mailto:support@people.inc"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "icanhazip.com",
+            "attributes": {
+              "href": "https://icanhazip.com"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "whatismyip.com",
+            "attributes": {
+              "href": "https://www.whatismyip.com"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "contentlicensing@people.inc",
+            "attributes": {
+              "href": "mailto:contentlicensing@people.inc"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://www.allrecipes.com/recipe/10813/best-chocolate-chip-cookies/"
+        }
+      },
+      "observation": "Opened https://www.allrecipes.com/recipe/10813/best-chocolate-chip-cookies/"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://www.allrecipes.com/recipe/10813/best-chocolate-chip-cookies/",
+        "title": "",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "support@people.inc",
+            "attributes": {
+              "href": "mailto:support@people.inc"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "icanhazip.com",
+            "attributes": {
+              "href": "https://icanhazip.com"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "whatismyip.com",
+            "attributes": {
+              "href": "https://www.whatismyip.com"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "contentlicensing@people.inc",
+            "attributes": {
+              "href": "mailto:contentlicensing@people.inc"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "A highly rated Allrecipes chocolate chip cookie recipe is \u201cBest Chocolate Chip Cookies.\u201d It has a rating of 4.6 stars, and the total time is 30 minutes."
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "task_id": "wv-091",
+  "task_description": "On Stack Overflow, find a recent unanswered question tagged rust and report its title.",
+  "starting_url": "https://stackoverflow.com/questions/tagged/rust?tab=Unanswered",
+  "passed": true,
+  "final_answer": "How can i reuse rust's type inference for numeric types given a string representing a number",
+  "duration_s": 32.77,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://stackoverflow.com/questions/tagged/rust?tab=Unanswered",
+        "title": "Just a moment...",
+        "elements": [
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Cloudflare",
+            "attributes": {
+              "href": "https://www.cloudflare.com?utm_source=challenge&utm_campaign=m"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "Privacy",
+            "attributes": {
+              "id": "privacy-link",
+              "href": "https://www.cloudflare.com/privacypolicy/"
+            }
+          },
+          {
+            "id": "pw-0",
+            "role": "main",
+            "text": "stackoverflow.com\nPerforming security verification\n\nThis website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.",
+            "attributes": {}
+          },
+          {
+            "id": "pw-1",
+            "role": "hidden",
+            "text": null,
+            "attributes": {
+              "id": "cf-chl-widget-tbx9g_response",
+              "name": "cf-turnstile-response",
+              "type": "hidden"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "contentinfo",
+            "text": "Ray ID: 9fd4d7a2bc7d2cb3\nPerformance and Security by Cloudflare\nPrivacy",
+            "attributes": {}
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://api.stackexchange.com/2.3/questions/unanswered?order=desc&sort=creation&tagged=rust&site=stackoverflow&pagesize=1&filter=!9_bDDxJY5"
+        }
+      },
+      "observation": "Opened https://api.stackexchange.com/2.3/questions/unanswered?order=desc&sort=creation&tagged=rust&site=stackoverflow&pagesize=1&filter=!9_bDDxJY5"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://api.stackexchange.com/2.3/questions/unanswered?order=desc&sort=creation&tagged=rust&site=stackoverflow&pagesize=1&filter=!9_bDDxJY5",
+        "title": "",
+        "elements": []
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "document.body.innerText"
+        }
+      },
+      "observation": "Eval: \"{\\\"items\\\":[{\\\"tags\\\":[\\\"rust\\\"],\\\"owner\\\":{\\\"reputation\\\":39866,\\\"user_id\\\":811335,\\\"user_type\\\":\\\"registered\\\",\\\"accept_rate\\\":85,\\\"profile_image\\\":\\\"https://www.gravatar.com/avatar/ca588e5bfb1ac0a5d8ec8acb422aa564?s=256&d=identicon&r=PG\\\",\\\"display_name\\\":\\\"A. K.\\\",\\\"link\\\":\\\"https://stackoverflow.com/users/811335/a-k\\\"},\\\"is_answered\\\":false,\\\"view_count\\\":59,\\\"answer_count\\\":0,\\\"score\\\":-4,\\\"last_activity_date\\\":1778985042,\\\"creation_date\\\":1778985042,\\\"question_id\\\":79942339,\\\"content_lic"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://api.stackexchange.com/2.3/questions/unanswered?order=desc&sort=creation&tagged=rust&site=stackoverflow&pagesize=1&filter=!9_bDDxJY5",
+        "title": "",
+        "elements": []
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "JSON.parse(document.body.innerText).items[0].title"
+        }
+      },
+      "observation": "Eval: \"How can i reuse rust&#39;s type inference for numeric types given a string representing a number\""
+    },
+    {
+      "step": 4,
+      "state": {
+        "url": "https://api.stackexchange.com/2.3/questions/unanswered?order=desc&sort=creation&tagged=rust&site=stackoverflow&pagesize=1&filter=!9_bDDxJY5",
+        "title": "",
+        "elements": []
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "How can i reuse rust's type inference for numeric types given a string representing a number"
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

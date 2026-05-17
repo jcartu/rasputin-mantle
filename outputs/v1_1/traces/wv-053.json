@@ -1,0 +1,1203 @@
+{
+  "task_id": "wv-053",
+  "task_description": "On Hugging Face, find the most downloaded text-generation model this week and report its downloads.",
+  "starting_url": "https://huggingface.co/models",
+  "passed": false,
+  "final_answer": "Error planning: Extra data: line 2 column 1 (char 80)",
+  "duration_s": 52.94,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://huggingface.co/models",
+        "title": "Models \u2013 Hugging Face",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Hugging Face",
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Models",
+            "attributes": {
+              "href": "/models"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Datasets",
+            "attributes": {
+              "href": "/datasets"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Spaces",
+            "attributes": {
+              "href": "/spaces"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Buckets\nNEW",
+            "attributes": {
+              "href": "/storage"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Docs",
+            "attributes": {
+              "href": "/docs"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Enterprise",
+            "attributes": {
+              "href": "/enterprise"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Pricing",
+            "attributes": {
+              "href": "/pricing"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Tasks",
+            "attributes": {
+              "href": "/tasks"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "HuggingChat",
+            "attributes": {
+              "href": "/chat"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Collections",
+            "attributes": {
+              "href": "/collections"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Languages",
+            "attributes": {
+              "href": "/languages"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Organizations",
+            "attributes": {
+              "href": "/organizations"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Blog",
+            "attributes": {
+              "href": "/blog"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Posts",
+            "attributes": {
+              "href": "/posts"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Daily Papers",
+            "attributes": {
+              "href": "/papers"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Learn",
+            "attributes": {
+              "href": "/learn"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Discord",
+            "attributes": {
+              "href": "/join/discord"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Forum",
+            "attributes": {
+              "href": "https://discuss.huggingface.co/"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "GitHub",
+            "attributes": {
+              "href": "https://github.com/huggingface"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Team & Enterprise",
+            "attributes": {
+              "href": "/enterprise"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Hugging Face PRO",
+            "attributes": {
+              "href": "/pro"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Enterprise Support",
+            "attributes": {
+              "href": "/support"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Inference Providers",
+            "attributes": {
+              "href": "/inference/models"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Inference Endpoints",
+            "attributes": {
+              "href": "/inference-endpoints"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Storage Buckets",
+            "attributes": {
+              "href": "/storage"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Log In",
+            "attributes": {
+              "href": "/login"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Sign Up",
+            "attributes": {
+              "href": "/join"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "button",
+            "text": "Main",
+            "attributes": {}
+          },
+          {
+            "id": "pw-59",
+            "role": "button",
+            "text": "Tasks",
+            "attributes": {}
+          },
+          {
+            "id": "pw-60",
+            "role": "button",
+            "text": "Libraries",
+            "attributes": {}
+          },
+          {
+            "id": "pw-61",
+            "role": "button",
+            "text": "Languages",
+            "attributes": {}
+          },
+          {
+            "id": "pw-62",
+            "role": "button",
+            "text": "Licenses",
+            "attributes": {}
+          },
+          {
+            "id": "pw-63",
+            "role": "button",
+            "text": "Other",
+            "attributes": {}
+          },
+          {
+            "id": "pw-64",
+            "role": "link",
+            "text": "Text Generation",
+            "attributes": {
+              "href": "/models?pipeline_tag=text-generation"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "Any-to-Any",
+            "attributes": {
+              "href": "/models?pipeline_tag=any-to-any"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "link",
+            "text": "Image-Text-to-Text",
+            "attributes": {
+              "href": "/models?pipeline_tag=image-text-to-text"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "link",
+            "text": "Image-to-Text",
+            "attributes": {
+              "href": "/models?pipeline_tag=image-to-text"
+            }
+          },
+          {
+            "id": "pw-71",
+            "role": "link",
+            "text": "Image-to-Image",
+            "attributes": {
+              "href": "/models?pipeline_tag=image-to-image"
+            }
+          },
+          {
+            "id": "pw-73",
+            "role": "link",
+            "text": "Text-to-Image",
+            "attributes": {
+              "href": "/models?pipeline_tag=text-to-image"
+            }
+          },
+          {
+            "id": "pw-75",
+            "role": "link",
+            "text": "Text-to-Video",
+            "attributes": {
+              "href": "/models?pipeline_tag=text-to-video"
+            }
+          },
+          {
+            "id": "pw-77",
+            "role": "link",
+            "text": "Text-to-Speech",
+            "attributes": {
+              "href": "/models?pipeline_tag=text-to-speech"
+            }
+          },
+          {
+            "id": "pw-79",
+            "role": "button",
+            "text": "+ 44",
+            "attributes": {}
+          },
+          {
+            "id": "pw-80",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-85",
+            "role": "button",
+            "text": "< 1B",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-86",
+            "role": "button",
+            "text": "6B",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-87",
+            "role": "button",
+            "text": "12B",
+            "attributes": {
+              "type": "button"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "click",
+        "args": {
+          "id": "pw-64"
+        }
+      },
+      "observation": "Clicked pw-64"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://huggingface.co/models?pipeline_tag=text-generation",
+        "title": "Text Generation Models \u2013 Hugging Face",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Hugging Face",
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Models",
+            "attributes": {
+              "href": "/models"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Datasets",
+            "attributes": {
+              "href": "/datasets"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Spaces",
+            "attributes": {
+              "href": "/spaces"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Buckets\nNEW",
+            "attributes": {
+              "href": "/storage"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Docs",
+            "attributes": {
+              "href": "/docs"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Enterprise",
+            "attributes": {
+              "href": "/enterprise"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Pricing",
+            "attributes": {
+              "href": "/pricing"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Tasks",
+            "attributes": {
+              "href": "/tasks"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "HuggingChat",
+            "attributes": {
+              "href": "/chat"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Collections",
+            "attributes": {
+              "href": "/collections"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Languages",
+            "attributes": {
+              "href": "/languages"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Organizations",
+            "attributes": {
+              "href": "/organizations"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Blog",
+            "attributes": {
+              "href": "/blog"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Posts",
+            "attributes": {
+              "href": "/posts"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Daily Papers",
+            "attributes": {
+              "href": "/papers"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Learn",
+            "attributes": {
+              "href": "/learn"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Discord",
+            "attributes": {
+              "href": "/join/discord"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Forum",
+            "attributes": {
+              "href": "https://discuss.huggingface.co/"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "GitHub",
+            "attributes": {
+              "href": "https://github.com/huggingface"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Team & Enterprise",
+            "attributes": {
+              "href": "/enterprise"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Hugging Face PRO",
+            "attributes": {
+              "href": "/pro"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Enterprise Support",
+            "attributes": {
+              "href": "/support"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Inference Providers",
+            "attributes": {
+              "href": "/inference/models"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Inference Endpoints",
+            "attributes": {
+              "href": "/inference-endpoints"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Storage Buckets",
+            "attributes": {
+              "href": "/storage"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Log In",
+            "attributes": {
+              "href": "/login"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Sign Up",
+            "attributes": {
+              "href": "/join"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "button",
+            "text": "Main",
+            "attributes": {}
+          },
+          {
+            "id": "pw-59",
+            "role": "button",
+            "text": "Tasks\n1",
+            "attributes": {}
+          },
+          {
+            "id": "pw-60",
+            "role": "button",
+            "text": "Libraries",
+            "attributes": {}
+          },
+          {
+            "id": "pw-61",
+            "role": "button",
+            "text": "Languages",
+            "attributes": {}
+          },
+          {
+            "id": "pw-62",
+            "role": "button",
+            "text": "Licenses",
+            "attributes": {}
+          },
+          {
+            "id": "pw-63",
+            "role": "button",
+            "text": "Other",
+            "attributes": {}
+          },
+          {
+            "id": "pw-64",
+            "role": "button",
+            "text": "Reset Tasks",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "Text Generation",
+            "attributes": {
+              "href": "/models?pipeline_tag=text-generation"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/models?pipeline_tag=any-to-any"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "text",
+            "text": null,
+            "attributes": {
+              "name": "",
+              "type": "text",
+              "placeholder": "Search models, datasets, users...",
+              "value": ""
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "img",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-4",
+            "role": "img",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-6",
+            "role": "img",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-8",
+            "role": "img",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-10",
+            "role": "img",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-12",
+            "role": "img",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-14",
+            "role": "img",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-16",
+            "role": "img",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-19",
+            "role": "img",
+            "text": null,
+            "attributes": {}
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(async () => { const res = await fetch('/api/models?pipeline_tag=text-generation&sort=downloads&direction=-1&limit=10'); const data = await res.json(); return data.map(m => ({id:m.id, downloads:m.downloads, likes:m.likes, pipeline_tag:m.pipeline_tag})); })()"
+        }
+      },
+      "observation": "Eval: [{\"id\": \"Qwen/Qwen3-0.6B\", \"downloads\": 18893896, \"likes\": 1248, \"pipeline_tag\": \"text-generation\"}, {\"id\": \"openai-community/gpt2\", \"downloads\": 15974270, \"likes\": 3241, \"pipeline_tag\": \"text-generation\"}, {\"id\": \"Qwen/Qwen2.5-1.5B-Instruct\", \"downloads\": 13065099, \"likes\": 699, \"pipeline_tag\": \"text-generation\"}, {\"id\": \"Qwen/Qwen2.5-7B-Instruct\", \"downloads\": 12681487, \"likes\": 1281, \"pipeline_tag\": \"text-generation\"}, {\"id\": \"Qwen/Qwen3-8B\", \"downloads\": 11636634, \"likes\": 1091, \"pipeline_ta"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://huggingface.co/models?pipeline_tag=text-generation",
+        "title": "Text Generation Models \u2013 Hugging Face",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Hugging Face",
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Models",
+            "attributes": {
+              "href": "/models"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Datasets",
+            "attributes": {
+              "href": "/datasets"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Spaces",
+            "attributes": {
+              "href": "/spaces"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Buckets\nNEW",
+            "attributes": {
+              "href": "/storage"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Docs",
+            "attributes": {
+              "href": "/docs"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Enterprise",
+            "attributes": {
+              "href": "/enterprise"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Pricing",
+            "attributes": {
+              "href": "/pricing"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Tasks",
+            "attributes": {
+              "href": "/tasks"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "HuggingChat",
+            "attributes": {
+              "href": "/chat"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Collections",
+            "attributes": {
+              "href": "/collections"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Languages",
+            "attributes": {
+              "href": "/languages"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Organizations",
+            "attributes": {
+              "href": "/organizations"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Blog",
+            "attributes": {
+              "href": "/blog"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Posts",
+            "attributes": {
+              "href": "/posts"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Daily Papers",
+            "attributes": {
+              "href": "/papers"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Learn",
+            "attributes": {
+              "href": "/learn"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Discord",
+            "attributes": {
+              "href": "/join/discord"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Forum",
+            "attributes": {
+              "href": "https://discuss.huggingface.co/"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "GitHub",
+            "attributes": {
+              "href": "https://github.com/huggingface"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Team & Enterprise",
+            "attributes": {
+              "href": "/enterprise"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Hugging Face PRO",
+            "attributes": {
+              "href": "/pro"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Enterprise Support",
+            "attributes": {
+              "href": "/support"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Inference Providers",
+            "attributes": {
+              "href": "/inference/models"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Inference Endpoints",
+            "attributes": {
+              "href": "/inference-endpoints"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Storage Buckets",
+            "attributes": {
+              "href": "/storage"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Log In",
+            "attributes": {
+              "href": "/login"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Sign Up",
+            "attributes": {
+              "href": "/join"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "button",
+            "text": "Main",
+            "attributes": {}
+          },
+          {
+            "id": "pw-59",
+            "role": "button",
+            "text": "Tasks\n1",
+            "attributes": {}
+          },
+          {
+            "id": "pw-60",
+            "role": "button",
+            "text": "Libraries",
+            "attributes": {}
+          },
+          {
+            "id": "pw-61",
+            "role": "button",
+            "text": "Languages",
+            "attributes": {}
+          },
+          {
+            "id": "pw-62",
+            "role": "button",
+            "text": "Licenses",
+            "attributes": {}
+          },
+          {
+            "id": "pw-63",
+            "role": "button",
+            "text": "Other",
+            "attributes": {}
+          },
+          {
+            "id": "pw-64",
+            "role": "button",
+            "text": "Reset Tasks",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "Text Generation",
+            "attributes": {
+              "href": "/models?pipeline_tag=text-generation"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "link",
+            "text": "Any-to-Any",
+            "attributes": {
+              "href": "/models?pipeline_tag=any-to-any"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "link",
+            "text": "Image-Text-to-Text",
+            "attributes": {
+              "href": "/models?pipeline_tag=image-text-to-text"
+            }
+          },
+          {
+            "id": "pw-71",
+            "role": "link",
+            "text": "Image-to-Text",
+            "attributes": {
+              "href": "/models?pipeline_tag=image-to-text"
+            }
+          },
+          {
+            "id": "pw-73",
+            "role": "link",
+            "text": "Image-to-Image",
+            "attributes": {
+              "href": "/models?pipeline_tag=image-to-image"
+            }
+          },
+          {
+            "id": "pw-75",
+            "role": "link",
+            "text": "Text-to-Image",
+            "attributes": {
+              "href": "/models?pipeline_tag=text-to-image"
+            }
+          },
+          {
+            "id": "pw-77",
+            "role": "link",
+            "text": "Text-to-Video",
+            "attributes": {
+              "href": "/models?pipeline_tag=text-to-video"
+            }
+          },
+          {
+            "id": "pw-79",
+            "role": "link",
+            "text": "Text-to-Speech",
+            "attributes": {
+              "href": "/models?pipeline_tag=text-to-speech"
+            }
+          },
+          {
+            "id": "pw-81",
+            "role": "button",
+            "text": "+ 44",
+            "attributes": {}
+          },
+          {
+            "id": "pw-82",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-87",
+            "role": "button",
+            "text": "< 1B",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-88",
+            "role": "button",
+            "text": "6B",
+            "attributes": {
+              "type": "button"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "Error planning: Extra data: line 2 column 1 (char 80)"
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

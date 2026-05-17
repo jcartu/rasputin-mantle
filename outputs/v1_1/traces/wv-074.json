@@ -1,0 +1,1247 @@
+{
+  "task_id": "wv-074",
+  "task_description": "On Netflix, find the description for the show 'Stranger Things'.",
+  "starting_url": "https://www.netflix.com",
+  "passed": true,
+  "final_answer": "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.",
+  "duration_s": 30.81,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://www.netflix.com/gb/",
+        "title": "Netflix United Kingdom \u2013 Watch series online, watch films online",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Sign In",
+            "attributes": {
+              "href": "/gb/login"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Get Started",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "Learn more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "button",
+            "text": "At Home With The Furys\n1\n1",
+            "attributes": {}
+          },
+          {
+            "id": "pw-7",
+            "role": "button",
+            "text": "Legends\n2\n2",
+            "attributes": {}
+          },
+          {
+            "id": "pw-8",
+            "role": "button",
+            "text": "Apex\n3\n3",
+            "attributes": {}
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Should I Marry A Murderer?\n4\n4",
+            "attributes": {}
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": "Ronda Rousey vs. Gina Carano\n5\n5",
+            "attributes": {}
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": "Worst Ex Ever\n6\n6",
+            "attributes": {}
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": "Man on Fire\n7\n7",
+            "attributes": {}
+          },
+          {
+            "id": "pw-13",
+            "role": "button",
+            "text": "Swapped\n8\n8",
+            "attributes": {}
+          },
+          {
+            "id": "pw-14",
+            "role": "button",
+            "text": "The Roast of Kevin Hart\n9\n9",
+            "attributes": {}
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": "Untold UK: Jamie Vardy\n10\n10",
+            "attributes": {}
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "Next",
+            "attributes": {
+              "aria-label": "Next"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "What is Netflix?",
+            "attributes": {
+              "id": "button--nmhp-faq-accordion--0",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "button",
+            "text": "How much does Netflix cost?",
+            "attributes": {
+              "id": "button--nmhp-faq-accordion--1",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": "Where can I watch?",
+            "attributes": {
+              "id": "button--nmhp-faq-accordion--2",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "button",
+            "text": "How do I cancel?",
+            "attributes": {
+              "id": "button--nmhp-faq-accordion--3",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "What can I watch on Netflix?",
+            "attributes": {
+              "id": "button--nmhp-faq-accordion--4",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "button",
+            "text": "Is Netflix good for children?",
+            "attributes": {
+              "id": "button--nmhp-faq-accordion--5",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "Get Started",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "0808 502 2730",
+            "attributes": {
+              "href": "tel:0808 502 2730"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "FAQ",
+            "attributes": {
+              "href": "https://help.netflix.com/support/412"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Help Centre",
+            "attributes": {
+              "href": "https://help.netflix.com"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Account",
+            "attributes": {
+              "href": "/youraccount"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Media Centre",
+            "attributes": {
+              "href": "https://media.netflix.com/"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Investor Relations",
+            "attributes": {
+              "href": "http://ir.netflix.com/"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Jobs",
+            "attributes": {
+              "href": "https://jobs.netflix.com/jobs"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Netflix Shop",
+            "attributes": {
+              "href": "https://netflix.shop/"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "Redeem gift cards",
+            "attributes": {
+              "href": "/redeem"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Buy gift cards",
+            "attributes": {
+              "href": "/gift-cards"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Ways to Watch",
+            "attributes": {
+              "href": "/watch"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Terms of Use",
+            "attributes": {
+              "href": "https://help.netflix.com/legal/termsofuse"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "Privacy",
+            "attributes": {
+              "href": "https://help.netflix.com/legal/privacy"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "link",
+            "text": "Cookie Preferences",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "link",
+            "text": "Corporate Information",
+            "attributes": {
+              "href": "https://help.netflix.com/legal/corpinfo"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "link",
+            "text": "Contact Us",
+            "attributes": {
+              "href": "https://help.netflix.com/contactus"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "link",
+            "text": "Speed Test",
+            "attributes": {
+              "href": "https://fast.com"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "link",
+            "text": "Legal Guarantee",
+            "attributes": {
+              "href": "https://netflix.com/legal/guarantee"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "link",
+            "text": "Legal Notices",
+            "attributes": {
+              "href": "https://help.netflix.com/legal/notices"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "link",
+            "text": "Only on Netflix",
+            "attributes": {
+              "href": "https://www.netflix.com/gb/browse/genre/839338"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "link",
+            "text": "Advert choices",
+            "attributes": {
+              "href": "https://netflix.com/adchoices"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "combobox",
+            "text": "English",
+            "attributes": {
+              "id": ":R59qlbanb96:",
+              "name": "LanguageSelect"
+            }
+          },
+          {
+            "id": "pw-72",
+            "role": "link",
+            "text": "cookies and similar technologies",
+            "attributes": {
+              "href": "https://help.netflix.com/legal/privacy#cookies"
+            }
+          },
+          {
+            "id": "pw-73",
+            "role": "button",
+            "text": "Learn more",
+            "attributes": {
+              "id": "onetrust-pc-btn-handler",
+              "aria-label": "Learn more, Opens the preference center dialog"
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "button",
+            "text": "Reject",
+            "attributes": {
+              "id": "onetrust-reject-all-handler"
+            }
+          },
+          {
+            "id": "pw-75",
+            "role": "button",
+            "text": "Accept",
+            "attributes": {
+              "id": "onetrust-accept-btn-handler"
+            }
+          },
+          {
+            "id": "pw-76",
+            "role": "button",
+            "text": "Close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-79",
+            "role": "button",
+            "text": "Close preference center",
+            "attributes": {
+              "id": "close-pc-btn-handler",
+              "aria-label": "Close preference center"
+            }
+          },
+          {
+            "id": "pw-93",
+            "role": "link",
+            "text": "Cookies and other Technologies",
+            "attributes": {
+              "href": "https://help.netflix.com/legal/privacy#cookies"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://www.netflix.com/gb/title/80057281"
+        }
+      },
+      "observation": "Opened https://www.netflix.com/gb/title/80057281"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://www.netflix.com/gb/title/80057281",
+        "title": "Watch Stranger Things | Netflix Official Site",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Netflix Home",
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Netflix Home",
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Sign In",
+            "attributes": {
+              "href": "/login?locale=en-GB&nextpage=https%3A%2F%2Fwww.netflix.com%2Fgb%2Ftitle%2F80057281"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Previous navigation options",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Previous navigation options"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Trailers",
+            "attributes": {
+              "href": "#lodp-trailers",
+              "aria-label": "Jump to the trailers section"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Episodes",
+            "attributes": {
+              "href": "#episodes",
+              "aria-label": "Jump to the episodes section"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "More to watch",
+            "attributes": {
+              "href": "#lodp-more-to-watch",
+              "aria-label": "Jump to the more to watch section"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Plans",
+            "attributes": {
+              "href": "#lodp-plans",
+              "aria-label": "Jump to the plans section"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": "Next navigation options",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next navigation options"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "button",
+            "text": "Join now",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "button",
+            "text": "Join now",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "button",
+            "text": "Join now",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "button",
+            "text": "Join now",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "button",
+            "text": "Join now",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "button",
+            "text": "Join now",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "button",
+            "text": "Join now",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": "Play",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Play"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "button",
+            "text": "Unmute",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Unmute"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "button",
+            "text": "Expand",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Expand"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "button",
+            "text": "Subtitles",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Subtitles"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "button",
+            "text": "Join now",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": "Join now",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "Join now",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "button",
+            "text": "Join now",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "Join now",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "button",
+            "text": "Join now",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "button",
+            "text": "Join now",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "button",
+            "text": "2m 15s\n\nTRAILER\n\nFranchise Trailer: Stranger Things",
+            "attributes": {}
+          },
+          {
+            "id": "pw-51",
+            "role": "button",
+            "text": "1m 57s\n\nTRAILER\n\nTrailer Part 2: Stranger Things 5",
+            "attributes": {}
+          },
+          {
+            "id": "pw-53",
+            "role": "button",
+            "text": "18m\n\nStranger Scenes: Chapter Eight: The Rightside Up",
+            "attributes": {}
+          },
+          {
+            "id": "pw-55",
+            "role": "button",
+            "text": "10m\n\nStranger Scenes; Chapter Seven: The Bridge",
+            "attributes": {}
+          },
+          {
+            "id": "pw-57",
+            "role": "button",
+            "text": "11m\n\nStranger Scenes: Chapter Six: Escape from Camazotz",
+            "attributes": {}
+          },
+          {
+            "id": "pw-59",
+            "role": "button",
+            "text": "10m\n\nStranger Scenes: Chapter Five: Shock Jock",
+            "attributes": {}
+          },
+          {
+            "id": "pw-61",
+            "role": "button",
+            "text": "14m\n\nStranger Scenes: Chapter Four: Sorcerer",
+            "attributes": {}
+          },
+          {
+            "id": "pw-63",
+            "role": "button",
+            "text": "10m\n\nStranger Scenes: Chapter Three: The Turnbow Trap",
+            "attributes": {}
+          },
+          {
+            "id": "pw-65",
+            "role": "button",
+            "text": "11m\n\nStranger Scenes: Chapter Two: The Vanishing of Holly Wheeler",
+            "attributes": {}
+          },
+          {
+            "id": "pw-67",
+            "role": "button",
+            "text": "9m\n\nStranger Scenes: Chapter One: The Crawl",
+            "attributes": {}
+          },
+          {
+            "id": "pw-69",
+            "role": "button",
+            "text": "Next",
+            "attributes": {
+              "aria-label": "Next"
+            }
+          },
+          {
+            "id": "pw-71",
+            "role": "combobox",
+            "text": "Stranger Things\nStranger Things 2\nStranger Things 3\nStranger Things 4\nStranger Things 5",
+            "attributes": {
+              "id": ":R26lejba6:",
+              "name": "seasonSelect"
+            }
+          },
+          {
+            "id": "pw-75",
+            "role": "button",
+            "text": "Next",
+            "attributes": {
+              "aria-label": "Next"
+            }
+          },
+          {
+            "id": "pw-77",
+            "role": "link",
+            "text": "Tudum.com",
+            "attributes": {
+              "href": "https://tudum.com/stranger-things"
+            }
+          },
+          {
+            "id": "pw-78",
+            "role": "link",
+            "text": "Stranger Things: Tales From '85",
+            "attributes": {
+              "href": "https://www.netflix.com/title/81398721",
+              "aria-label": "Go to Stranger Things: Tales From '85"
+            }
+          },
+          {
+            "id": "pw-79",
+            "role": "link",
+            "text": "The 7 Lives of Lea",
+            "attributes": {
+              "href": "https://www.netflix.com/title/81213803",
+              "aria-label": "Go to The 7 Lives of Lea"
+            }
+          },
+          {
+            "id": "pw-80",
+            "role": "link",
+            "text": "The A List",
+            "attributes": {
+              "href": "https://www.netflix.com/title/80196382",
+              "aria-label": "Go to The A List"
+            }
+          },
+          {
+            "id": "pw-81",
+            "role": "link",
+            "text": "Lockwood & Co.",
+            "attributes": {
+              "href": "https://www.netflix.com/title/81116060",
+              "aria-label": "Go to Lockwood & Co."
+            }
+          },
+          {
+            "id": "pw-82",
+            "role": "link",
+            "text": "Mr. Harrigan's Phone",
+            "attributes": {
+              "href": "https://www.netflix.com/title/81288353",
+              "aria-label": "Go to Mr. Harrigan's Phone"
+            }
+          },
+          {
+            "id": "pw-83",
+            "role": "link",
+            "text": "Mr. Midnight: Beware The Monsters",
+            "attributes": {
+              "href": "https://www.netflix.com/title/81022058",
+              "aria-label": "Go to Mr. Midnight: Beware The Monsters"
+            }
+          },
+          {
+            "id": "pw-84",
+            "role": "link",
+            "text": "Ghostbusters: Frozen Empire",
+            "attributes": {
+              "href": "https://www.netflix.com/title/81762779",
+              "aria-label": "Go to Ghostbusters: Frozen Empire"
+            }
+          },
+          {
+            "id": "pw-85",
+            "role": "link",
+            "text": "Tarot",
+            "attributes": {
+              "href": "https://www.netflix.com/title/81691511",
+              "aria-label": "Go to Tarot"
+            }
+          },
+          {
+            "id": "pw-86",
+            "role": "link",
+            "text": "Lucifer",
+            "attributes": {
+              "href": "https://www.netflix.com/title/80057918",
+              "aria-label": "Go to Lucifer"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => { const meta = document.querySelector('meta[name=\"description\"]')?.content || document.querySelector('meta[property=\"og:description\"]')?.content; const body = document.body.innerText; return {meta, body: body.slice(0, 3000)}; })()"
+        }
+      },
+      "observation": "Eval: {\"meta\": \"When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl. Watch trailers & learn more.\", \"body\": \"Netflix Home\\nSign In\\nTrailers\\nEpisodes\\nMore to watch\\nPlans\\nStranger Things\\nStranger Things\\nEmail address\\nJoin now\\n\\nEndless entertainment starting at \\u00a35.99\\n\\nStranger Things\\nEmail address\\nJoin now\\n\\nEndless entertainment starting at \\u00a35.99\\n\\nStranger Things\\n20255 Seasons\\u206"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://www.netflix.com/gb/title/80057281",
+        "title": "Watch Stranger Things | Netflix Official Site",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Netflix Home",
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Netflix Home",
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Sign In",
+            "attributes": {
+              "href": "/login?locale=en-GB&nextpage=https%3A%2F%2Fwww.netflix.com%2Fgb%2Ftitle%2F80057281"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Previous navigation options",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Previous navigation options"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Trailers",
+            "attributes": {
+              "href": "#lodp-trailers",
+              "aria-label": "Jump to the trailers section"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Episodes",
+            "attributes": {
+              "href": "#episodes",
+              "aria-label": "Jump to the episodes section"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "More to watch",
+            "attributes": {
+              "href": "#lodp-more-to-watch",
+              "aria-label": "Jump to the more to watch section"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Plans",
+            "attributes": {
+              "href": "#lodp-plans",
+              "aria-label": "Jump to the plans section"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": "Next navigation options",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next navigation options"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "button",
+            "text": "Join now",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "button",
+            "text": "Join now",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "button",
+            "text": "Join now",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "button",
+            "text": "Join now",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "button",
+            "text": "Join now",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "button",
+            "text": "Join now",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "button",
+            "text": "Join now",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": "Pause",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Pause"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "button",
+            "text": "Unmute",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Unmute"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "button",
+            "text": "Expand",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Expand"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "button",
+            "text": "Subtitles",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Subtitles"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "button",
+            "text": "Join now",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": "Join now",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "Join now",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "button",
+            "text": "Join now",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "Join now",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "button",
+            "text": "Join now",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "button",
+            "text": "Join now",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "button",
+            "text": "2m 15s\n\nTRAILER\n\nFranchise Trailer: Stranger Things",
+            "attributes": {}
+          },
+          {
+            "id": "pw-51",
+            "role": "button",
+            "text": "1m 57s\n\nTRAILER\n\nTrailer Part 2: Stranger Things 5",
+            "attributes": {}
+          },
+          {
+            "id": "pw-53",
+            "role": "button",
+            "text": "18m\n\nStranger Scenes: Chapter Eight: The Rightside Up",
+            "attributes": {}
+          },
+          {
+            "id": "pw-55",
+            "role": "button",
+            "text": "10m\n\nStranger Scenes; Chapter Seven: The Bridge",
+            "attributes": {}
+          },
+          {
+            "id": "pw-57",
+            "role": "button",
+            "text": "11m\n\nStranger Scenes: Chapter Six: Escape from Camazotz",
+            "attributes": {}
+          },
+          {
+            "id": "pw-59",
+            "role": "button",
+            "text": "10m\n\nStranger Scenes: Chapter Five: Shock Jock",
+            "attributes": {}
+          },
+          {
+            "id": "pw-61",
+            "role": "button",
+            "text": "14m\n\nStranger Scenes: Chapter Four: Sorcerer",
+            "attributes": {}
+          },
+          {
+            "id": "pw-63",
+            "role": "button",
+            "text": "10m\n\nStranger Scenes: Chapter Three: The Turnbow Trap",
+            "attributes": {}
+          },
+          {
+            "id": "pw-65",
+            "role": "button",
+            "text": "11m\n\nStranger Scenes: Chapter Two: The Vanishing of Holly Wheeler",
+            "attributes": {}
+          },
+          {
+            "id": "pw-67",
+            "role": "button",
+            "text": "9m\n\nStranger Scenes: Chapter One: The Crawl",
+            "attributes": {}
+          },
+          {
+            "id": "pw-69",
+            "role": "button",
+            "text": "Next",
+            "attributes": {
+              "aria-label": "Next"
+            }
+          },
+          {
+            "id": "pw-71",
+            "role": "link",
+            "text": "Tudum.com",
+            "attributes": {
+              "href": "https://tudum.com/stranger-things"
+            }
+          },
+          {
+            "id": "pw-72",
+            "role": "link",
+            "text": "Stranger Things: Tales From '85",
+            "attributes": {
+              "href": "https://www.netflix.com/title/81398721",
+              "aria-label": "Go to Stranger Things: Tales From '85"
+            }
+          },
+          {
+            "id": "pw-73",
+            "role": "link",
+            "text": "The 7 Lives of Lea",
+            "attributes": {
+              "href": "https://www.netflix.com/title/81213803",
+              "aria-label": "Go to The 7 Lives of Lea"
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "link",
+            "text": "The A List",
+            "attributes": {
+              "href": "https://www.netflix.com/title/80196382",
+              "aria-label": "Go to The A List"
+            }
+          },
+          {
+            "id": "pw-75",
+            "role": "link",
+            "text": "Lockwood & Co.",
+            "attributes": {
+              "href": "https://www.netflix.com/title/81116060",
+              "aria-label": "Go to Lockwood & Co."
+            }
+          },
+          {
+            "id": "pw-76",
+            "role": "link",
+            "text": "Mr. Harrigan's Phone",
+            "attributes": {
+              "href": "https://www.netflix.com/title/81288353",
+              "aria-label": "Go to Mr. Harrigan's Phone"
+            }
+          },
+          {
+            "id": "pw-77",
+            "role": "link",
+            "text": "Mr. Midnight: Beware The Monsters",
+            "attributes": {
+              "href": "https://www.netflix.com/title/81022058",
+              "aria-label": "Go to Mr. Midnight: Beware The Monsters"
+            }
+          },
+          {
+            "id": "pw-78",
+            "role": "link",
+            "text": "Ghostbusters: Frozen Empire",
+            "attributes": {
+              "href": "https://www.netflix.com/title/81762779",
+              "aria-label": "Go to Ghostbusters: Frozen Empire"
+            }
+          },
+          {
+            "id": "pw-79",
+            "role": "link",
+            "text": "Tarot",
+            "attributes": {
+              "href": "https://www.netflix.com/title/81691511",
+              "aria-label": "Go to Tarot"
+            }
+          },
+          {
+            "id": "pw-80",
+            "role": "link",
+            "text": "Lucifer",
+            "attributes": {
+              "href": "https://www.netflix.com/title/80057918",
+              "aria-label": "Go to Lucifer"
+            }
+          },
+          {
+            "id": "pw-81",
+            "role": "button",
+            "text": "Next",
+            "attributes": {
+              "aria-label": "Next"
+            }
+          },
+          {
+            "id": "pw-83",
+            "role": "link",
+            "text": "At Home With The Furys",
+            "attributes": {
+              "href": "https://www.netflix.com/title/81615144",
+              "aria-label": "Go to At Home With The Furys"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl."
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

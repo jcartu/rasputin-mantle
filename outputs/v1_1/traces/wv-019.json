@@ -1,0 +1,856 @@
+{
+  "task_id": "wv-019",
+  "task_description": "On Apple's support site, find how to take a screenshot on a Mac.",
+  "starting_url": "https://support.apple.com",
+  "passed": true,
+  "final_answer": "On a Mac, press and hold Shift + Command + 3 to take a screenshot of the entire screen. If a thumbnail appears in the corner, click it to edit the screenshot, or wait for it to save to your desktop.\n\nOther options:\n- Shift + Command + 4: capture a selected portion of the screen.\n- Shift + Command + 4, then Space bar: capture a window or menu.\n- Shift + Command + 5: open the Screenshot toolbar for more capture and recording options.",
+  "duration_s": 22.49,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://support.apple.com/",
+        "title": "Official Apple Support",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "Main menu",
+            "attributes": {
+              "aria-label": "Main menu"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Apple",
+            "attributes": {
+              "href": "https://www.apple.com",
+              "aria-label": "Apple"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Store",
+            "attributes": {
+              "href": "https://www.apple.com/us/store",
+              "aria-label": "Store"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Store menu",
+            "attributes": {
+              "id": "globalnav-menubutton-link-store",
+              "aria-label": "Store menu"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "Shop the latest Apple products",
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/store",
+              "aria-label": "Shop the latest Apple products"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/buy_mac"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/buy_ipad"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/buy_iphone"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/buy_watch"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/buy_vision"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/airpods/accessories"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/buy_accessories"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/retail/"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/order/list"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/trade_in"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/payment_plan"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/personal_setup"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/special_deals"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/educationrouting"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/retail/business/"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/eppstore/veteransandmilitary"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/r/store/government/"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Mac",
+            "attributes": {
+              "href": "https://www.apple.com/mac/",
+              "aria-label": "Mac"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "button",
+            "text": "Mac menu",
+            "attributes": {
+              "id": "globalnav-menubutton-link-mac",
+              "aria-label": "Mac menu"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/mac/"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/macbook-neo/"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/macbook-air/"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/macbook-pro/"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "iMac",
+            "attributes": {
+              "href": "https://www.apple.com/imac/",
+              "aria-label": "iMac"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/mac-mini/"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/mac-studio/"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/displays/"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/mac/compare/"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/mac/mac-does-that/"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/buy_mac"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/mac/best-mac/"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/mac/accessories"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/trade_in#mac"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/payment_plan"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/personal_setup"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://support.apple.com/mac?cid=gn-ols-mac-psp-prodfly"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/applecare/?filter=mac"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/os/macos/"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/apple-intelligence/"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/apps/"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/apple-creator-studio/"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/macos/continuity/"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/icloud/"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/business/mac/"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/education/"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://support.apple.com/en-us/102646"
+        }
+      },
+      "observation": "Opened https://support.apple.com/en-us/102646"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://support.apple.com/en-us/102646",
+        "title": "Take a screenshot on Mac - Apple Support",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "Main menu",
+            "attributes": {
+              "aria-label": "Main menu"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Apple",
+            "attributes": {
+              "href": "https://www.apple.com/",
+              "aria-label": "Apple"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Store",
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/store",
+              "aria-label": "Store"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Store menu",
+            "attributes": {
+              "id": "globalnav-menubutton-link-store",
+              "aria-label": "Store menu"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "Shop the latest Apple products",
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/store",
+              "aria-label": "Shop the latest Apple products"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/buy_mac"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/buy_ipad"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/buy_iphone"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/buy_watch"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/buy_vision"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/airpods/accessories"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/buy_accessories"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/retail/"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/order/list"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/trade_in"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/payment_plan"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/personal_setup"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/special_deals"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/educationrouting"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/retail/business/"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/eppstore/veteransandmilitary"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/r/store/government/"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Mac",
+            "attributes": {
+              "href": "https://www.apple.com/mac/",
+              "aria-label": "Mac"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "button",
+            "text": "Mac menu",
+            "attributes": {
+              "id": "globalnav-menubutton-link-mac",
+              "aria-label": "Mac menu"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/mac/"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/macbook-neo/"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/macbook-air/"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/macbook-pro/"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "iMac",
+            "attributes": {
+              "href": "https://www.apple.com/imac/",
+              "aria-label": "iMac"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/mac-mini/"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/mac-studio/"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/displays/"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/mac/compare/"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/mac/mac-does-that/"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/buy_mac"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/mac/best-mac/"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/mac/accessories"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/trade_in#mac"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/payment_plan"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/us/shop/goto/personal_setup"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://support.apple.com/mac?cid=gn-ols-mac-psp-prodfly"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/applecare/?filter=mac"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/os/macos/"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/apple-intelligence/"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/apps/"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/apple-creator-studio/"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/macos/continuity/"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/icloud/"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/business/mac/"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.apple.com/education/"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "On a Mac, press and hold Shift + Command + 3 to take a screenshot of the entire screen. If a thumbnail appears in the corner, click it to edit the screenshot, or wait for it to save to your desktop.\n\nOther options:\n- Shift + Command + 4: capture a selected portion of the screen.\n- Shift + Command + 4, then Space bar: capture a window or menu.\n- Shift + Command + 5: open the Screenshot toolbar for more capture and recording options."
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

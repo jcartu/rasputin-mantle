@@ -1,0 +1,932 @@
+{
+  "task_id": "wv-032",
+  "task_description": "On Coursera, find a beginner machine learning course and report its provider and rating.",
+  "starting_url": "https://www.coursera.org",
+  "passed": false,
+  "final_answer": "Error planning: Extra data: line 2 column 1 (char 451)",
+  "duration_s": 61.89,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://www.coursera.org/",
+        "title": "Coursera | Courses, Professional Certificates, and Degrees Online",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "For Individuals",
+            "attributes": {
+              "href": "https://www.coursera.org/"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "For Businesses",
+            "attributes": {
+              "href": "https://www.coursera.org/business?utm_content=corp-to-home-for-enterprise&utm_campaign=website&utm_medium=coursera&utm_source=header&utm_term=b-out"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "For Universities",
+            "attributes": {
+              "href": "https://www.coursera.org/campus?utm_content=corp-to-landing-for-campus&utm_campaign=website&utm_medium=coursera&utm_source=header&utm_term=b-out"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "For Governments",
+            "attributes": {
+              "href": "https://www.coursera.org/government?utm_content=corp-to-landing-for-government&utm_campaign=website&utm_medium=coursera&utm_source=header&utm_term=b-out"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Coursera",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Coursera",
+              "data-testid": "home-logo"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "button",
+            "text": "Explore",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Explore our catalog",
+              "data-testid": "megamenu-explore-button"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "button",
+            "text": "Degrees",
+            "attributes": {
+              "href": "/degrees",
+              "data-testid": "nav-link-grid-item-degrees"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "combobox",
+            "text": "Search catalog",
+            "attributes": {
+              "id": "search-autocomplete-input",
+              "name": "query",
+              "type": "text",
+              "aria-label": "Search catalog",
+              "placeholder": "What do you want to learn?",
+              "value": "",
+              "data-testid": "search-autocomplete-input"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit",
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": "Log In",
+            "attributes": {
+              "href": "/?authMode=login"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "button",
+            "text": "Join for Free",
+            "attributes": {
+              "href": "/?authMode=signup"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "button",
+            "text": "Open Navigation Menu",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Open Navigation Menu"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Coursera",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Coursera",
+              "data-testid": "home-logo"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "Join for Free",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "button",
+            "text": "Join for Free",
+            "attributes": {
+              "type": "button",
+              "data-testid": "enroll-button"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Enroll now",
+            "attributes": {
+              "href": "https://www.coursera.org/specialization/gemini-for-developers"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Start learning skills",
+            "attributes": {
+              "href": "https://www.coursera.org/explore/ai-for-professionals"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": "Previous",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "button",
+            "text": "Next",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "button",
+            "text": "Go to item 1",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "button",
+            "text": "Go to item 2",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "button",
+            "text": "Go to item 3",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Most popular",
+            "attributes": {
+              "href": "/explore/most-popular-courses"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Google Data Analytics",
+            "attributes": {
+              "id": "cds-react-aria6693499884-:rq:-product-card-title",
+              "href": "/professional-certificates/google-data-analytics",
+              "aria-label": "Google Data Analytics, offered by Google, PROFESSIONAL CERTIFICATE, 4.8 out of 5 stars"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Foundations: Data, Data, Everywhere",
+            "attributes": {
+              "id": "cds-react-aria6693499884-:rt:-product-card-title",
+              "href": "/learn/foundations-data",
+              "aria-label": "Foundations: Data, Data, Everywhere, offered by Google, COURSE, 4.8 out of 5 stars"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Python for Everybody",
+            "attributes": {
+              "id": "cds-react-aria6693499884-:r10:-product-card-title",
+              "href": "/specializations/python",
+              "aria-label": "Python for Everybody, offered by University of Michigan, SPECIALIZATION, 4.8 out of 5 stars"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Hot new releases",
+            "attributes": {
+              "href": "/explore/new-on-coursera"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Gemini for Developers",
+            "attributes": {
+              "id": "cds-react-aria6693499884-:r15:-product-card-title",
+              "href": "/specializations/gemini-for-developers",
+              "aria-label": "Gemini for Developers, offered by Google DeepMind, SPECIALIZATION"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Project Management and Planning",
+            "attributes": {
+              "id": "cds-react-aria6693499884-:r16:-product-card-title",
+              "href": "/specializations/project-management-and-planning",
+              "aria-label": "Project Management and Planning, offered by Johns Hopkins University, SPECIALIZATION, 4.7 out of 5 stars"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "IBM Management Consultant",
+            "attributes": {
+              "id": "cds-react-aria6693499884-:r19:-product-card-title",
+              "href": "/professional-certificates/ibm-management-consultant",
+              "aria-label": "IBM Management Consultant, offered by IBM, SkillUp, PROFESSIONAL CERTIFICATE, 4.7 out of 5 stars"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Trending now",
+            "attributes": {
+              "href": "/browse"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Google AI",
+            "attributes": {
+              "id": "cds-react-aria6693499884-:r1e:-product-card-title",
+              "href": "/professional-certificates/google-ai",
+              "aria-label": "Google AI, offered by Google, PROFESSIONAL CERTIFICATE, 4.8 out of 5 stars"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Authentic Communication With Confidence And Impact",
+            "attributes": {
+              "id": "cds-react-aria6693499884-:r1h:-product-card-title",
+              "href": "/specializations/authentic-communication-with-confidence-and-impact",
+              "aria-label": "Authentic Communication With Confidence And Impact, offered by University of London, Royal Central School of Speech and Drama, SPECIALIZATION, 4.7 out of 5 stars"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Digital Marketing with Canva",
+            "attributes": {
+              "id": "cds-react-aria6693499884-:r1k:-product-card-title",
+              "href": "/specializations/digital-marketing-with-canva",
+              "aria-label": "Digital Marketing with Canva, offered by Coursera, SPECIALIZATION, 4.5 out of 5 stars"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "button",
+            "text": "Previous",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "button",
+            "text": "Next",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "link",
+            "text": "Build online communities that connect, grow, and last",
+            "attributes": {
+              "href": "https://www.coursera.org/professional-certificates/meta-community-management"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "button",
+            "text": "Enroll now",
+            "attributes": {
+              "id": "cta-670wRjFBJatxkew6Zb61eO",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "link",
+            "text": "Drive your business forward and empower your teams",
+            "attributes": {
+              "href": "https://www.coursera.org/business"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "button",
+            "text": "Try Coursera for Business",
+            "attributes": {
+              "id": "cta-6tZ3N3rfRrpvmuLqUdrqwk",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "link",
+            "text": "Google",
+            "attributes": {
+              "href": "/google-career-certificates"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "IBM",
+            "attributes": {
+              "href": "/explore/ibm-online-courses"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "link",
+            "text": "Microsoft",
+            "attributes": {
+              "href": "/explore/microsoft-certificates"
+            }
+          },
+          {
+            "id": "pw-70",
+            "role": "link",
+            "text": "University of Illinois",
+            "attributes": {
+              "href": "https://www.coursera.org/partners/illinois"
+            }
+          },
+          {
+            "id": "pw-72",
+            "role": "link",
+            "text": "OpenAI",
+            "attributes": {
+              "href": "https://www.coursera.org/partners/openai"
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "link",
+            "text": "Anthropic",
+            "attributes": {
+              "href": "https://www.coursera.org/partners/anthropic"
+            }
+          },
+          {
+            "id": "pw-76",
+            "role": "link",
+            "text": "DeepLearning.AI",
+            "attributes": {
+              "href": "/explore/deep-learning-ai-online-courses"
+            }
+          },
+          {
+            "id": "pw-78",
+            "role": "link",
+            "text": "Stanford University",
+            "attributes": {
+              "href": "/explore/stanford-online-courses"
+            }
+          },
+          {
+            "id": "pw-80",
+            "role": "link",
+            "text": "University of Pennsylvania",
+            "attributes": {
+              "href": "/explore/university-of-pennsylvania-online-courses"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "type",
+        "args": {
+          "id": "pw-10",
+          "text": "beginner machine learning"
+        }
+      },
+      "observation": "Typed into pw-10"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://www.coursera.org/",
+        "title": "Coursera | Courses, Professional Certificates, and Degrees Online",
+        "elements": [
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "For Individuals",
+            "attributes": {
+              "href": "https://www.coursera.org/"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "For Businesses",
+            "attributes": {
+              "href": "https://www.coursera.org/business?utm_content=corp-to-home-for-enterprise&utm_campaign=website&utm_medium=coursera&utm_source=header&utm_term=b-out"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "For Universities",
+            "attributes": {
+              "href": "https://www.coursera.org/campus?utm_content=corp-to-landing-for-campus&utm_campaign=website&utm_medium=coursera&utm_source=header&utm_term=b-out"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "For Governments",
+            "attributes": {
+              "href": "https://www.coursera.org/government?utm_content=corp-to-landing-for-government&utm_campaign=website&utm_medium=coursera&utm_source=header&utm_term=b-out"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Coursera",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Coursera",
+              "data-testid": "home-logo"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Explore",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Explore our catalog",
+              "data-testid": "megamenu-explore-button"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": "Degrees",
+            "attributes": {
+              "href": "/degrees",
+              "data-testid": "nav-link-grid-item-degrees"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "combobox",
+            "text": "Search catalog",
+            "attributes": {
+              "id": "search-autocomplete-input",
+              "name": "query",
+              "type": "text",
+              "aria-label": "Search catalog",
+              "placeholder": "What do you want to learn?",
+              "value": "beginner machine learning",
+              "data-testid": "search-autocomplete-input"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "button",
+            "text": "Clear search",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Clear search"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit",
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "option",
+            "text": "Google Data Analytics\nGoogle \u2022 Professional Certificate \u2022 Beginner",
+            "attributes": {
+              "id": "react-aria-:RalalalahcqH1:-option-GoogleDataAnalytics"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "option",
+            "text": "artificial intelligence",
+            "attributes": {
+              "id": "react-aria-:RalalalahcqH1:-option-artificialintelligence"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "option",
+            "text": "python",
+            "attributes": {
+              "id": "react-aria-:RalalalahcqH1:-option-python"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "option",
+            "text": "microsoft excel",
+            "attributes": {
+              "id": "react-aria-:RalalalahcqH1:-option-microsoftexcel"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "option",
+            "text": "ai",
+            "attributes": {
+              "id": "react-aria-:RalalalahcqH1:-option-ai"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "option",
+            "text": "excel",
+            "attributes": {
+              "id": "react-aria-:RalalalahcqH1:-option-excel"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "option",
+            "text": "machine learning",
+            "attributes": {
+              "id": "react-aria-:RalalalahcqH1:-option-machinelearning"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "option",
+            "text": "project management",
+            "attributes": {
+              "id": "react-aria-:RalalalahcqH1:-option-projectmanagement"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "option",
+            "text": "Not sure where to start?\nTake a short quiz",
+            "attributes": {
+              "id": "react-aria-:RalalalahcqH1:-option-onboarding~~/onboarding/learning-goal?referrer=%2F"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "button",
+            "text": "Log In",
+            "attributes": {
+              "href": "/?authMode=login"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "Join for Free",
+            "attributes": {
+              "href": "/?authMode=signup"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "button",
+            "text": "Open Navigation Menu",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Open Navigation Menu"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Coursera",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Coursera",
+              "data-testid": "home-logo"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "button",
+            "text": "Join for Free",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "button",
+            "text": "Join for Free",
+            "attributes": {
+              "type": "button",
+              "data-testid": "enroll-button"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Enroll now",
+            "attributes": {
+              "href": "https://www.coursera.org/specialization/gemini-for-developers"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "Start learning skills",
+            "attributes": {
+              "href": "https://www.coursera.org/explore/ai-for-professionals"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "button",
+            "text": "Previous",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "button",
+            "text": "Next",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "button",
+            "text": "Go to item 1",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "button",
+            "text": "Go to item 2",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "button",
+            "text": "Go to item 3",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "Most popular",
+            "attributes": {
+              "href": "/explore/most-popular-courses"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "link",
+            "text": "Google Data Analytics",
+            "attributes": {
+              "id": "cds-react-aria6693499884-:rq:-product-card-title",
+              "href": "/professional-certificates/google-data-analytics",
+              "aria-label": "Google Data Analytics, offered by Google, PROFESSIONAL CERTIFICATE, 4.8 out of 5 stars"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "link",
+            "text": "Foundations: Data, Data, Everywhere",
+            "attributes": {
+              "id": "cds-react-aria6693499884-:rt:-product-card-title",
+              "href": "/learn/foundations-data",
+              "aria-label": "Foundations: Data, Data, Everywhere, offered by Google, COURSE, 4.8 out of 5 stars"
+            }
+          },
+          {
+            "id": "pw-71",
+            "role": "link",
+            "text": "Python for Everybody",
+            "attributes": {
+              "id": "cds-react-aria6693499884-:r10:-product-card-title",
+              "href": "/specializations/python",
+              "aria-label": "Python for Everybody, offered by University of Michigan, SPECIALIZATION, 4.8 out of 5 stars"
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "link",
+            "text": "Hot new releases",
+            "attributes": {
+              "href": "/explore/new-on-coursera"
+            }
+          },
+          {
+            "id": "pw-75",
+            "role": "link",
+            "text": "Gemini for Developers",
+            "attributes": {
+              "id": "cds-react-aria6693499884-:r15:-product-card-title",
+              "href": "/specializations/gemini-for-developers",
+              "aria-label": "Gemini for Developers, offered by Google DeepMind, SPECIALIZATION"
+            }
+          },
+          {
+            "id": "pw-76",
+            "role": "link",
+            "text": "Project Management and Planning",
+            "attributes": {
+              "id": "cds-react-aria6693499884-:r16:-product-card-title",
+              "href": "/specializations/project-management-and-planning",
+              "aria-label": "Project Management and Planning, offered by Johns Hopkins University, SPECIALIZATION, 4.7 out of 5 stars"
+            }
+          },
+          {
+            "id": "pw-78",
+            "role": "link",
+            "text": "IBM Management Consultant",
+            "attributes": {
+              "id": "cds-react-aria6693499884-:r19:-product-card-title",
+              "href": "/professional-certificates/ibm-management-consultant",
+              "aria-label": "IBM Management Consultant, offered by IBM, SkillUp, PROFESSIONAL CERTIFICATE, 4.7 out of 5 stars"
+            }
+          },
+          {
+            "id": "pw-81",
+            "role": "link",
+            "text": "Trending now",
+            "attributes": {
+              "href": "/browse"
+            }
+          },
+          {
+            "id": "pw-82",
+            "role": "link",
+            "text": "Google AI",
+            "attributes": {
+              "id": "cds-react-aria6693499884-:r1e:-product-card-title",
+              "href": "/professional-certificates/google-ai",
+              "aria-label": "Google AI, offered by Google, PROFESSIONAL CERTIFICATE, 4.8 out of 5 stars"
+            }
+          },
+          {
+            "id": "pw-84",
+            "role": "link",
+            "text": "Authentic Communication With Confidence And Impact",
+            "attributes": {
+              "id": "cds-react-aria6693499884-:r1h:-product-card-title",
+              "href": "/specializations/authentic-communication-with-confidence-and-impact",
+              "aria-label": "Authentic Communication With Confidence And Impact, offered by University of London, Royal Central School of Speech and Drama, SPECIALIZATION, 4.7 out of 5 stars"
+            }
+          },
+          {
+            "id": "pw-86",
+            "role": "link",
+            "text": "Digital Marketing with Canva",
+            "attributes": {
+              "id": "cds-react-aria6693499884-:r1k:-product-card-title",
+              "href": "/specializations/digital-marketing-with-canva",
+              "aria-label": "Digital Marketing with Canva, offered by Coursera, SPECIALIZATION, 4.5 out of 5 stars"
+            }
+          },
+          {
+            "id": "pw-88",
+            "role": "button",
+            "text": "Previous",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-89",
+            "role": "button",
+            "text": "Next",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-90",
+            "role": "link",
+            "text": "Build online communities that connect, grow, and last",
+            "attributes": {
+              "href": "https://www.coursera.org/professional-certificates/meta-community-management"
+            }
+          },
+          {
+            "id": "pw-91",
+            "role": "button",
+            "text": "Enroll now",
+            "attributes": {
+              "id": "cta-670wRjFBJatxkew6Zb61eO",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-92",
+            "role": "link",
+            "text": "Drive your business forward and empower your teams",
+            "attributes": {
+              "href": "https://www.coursera.org/business"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "click",
+        "args": {
+          "id": "pw-14"
+        }
+      },
+      "observation": "Clicked pw-14"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://www.coursera.org/search?query=beginner%20machine%20learning",
+        "title": "Coursera | Online Courses From Top Universities. Join for Free",
+        "elements": []
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "Error planning: Extra data: line 2 column 1 (char 451)"
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

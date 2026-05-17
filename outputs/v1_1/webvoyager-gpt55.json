@@ -1,0 +1,610 @@
+{
+  "benchmark": "webvoyager",
+  "total": 100,
+  "passed": 0,
+  "failed": 100,
+  "pass_rate": 0.0,
+  "timestamp": "2026-05-17T16:03:58Z",
+  "results": [
+    {
+      "id": "wv-001",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.005284285056404769
+    },
+    {
+      "id": "wv-002",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.002068227040581405
+    },
+    {
+      "id": "wv-003",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.001953801023773849
+    },
+    {
+      "id": "wv-004",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0019114139722660184
+    },
+    {
+      "id": "wv-005",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0013193930499255657
+    },
+    {
+      "id": "wv-006",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0012590140104293823
+    },
+    {
+      "id": "wv-007",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0012559520546346903
+    },
+    {
+      "id": "wv-008",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0012274810578674078
+    },
+    {
+      "id": "wv-009",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0012236490147188306
+    },
+    {
+      "id": "wv-010",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011927940649911761
+    },
+    {
+      "id": "wv-011",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011656619608402252
+    },
+    {
+      "id": "wv-012",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.001137326005846262
+    },
+    {
+      "id": "wv-013",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0012367300223559141
+    },
+    {
+      "id": "wv-014",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0012188040418550372
+    },
+    {
+      "id": "wv-015",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011677719885483384
+    },
+    {
+      "id": "wv-016",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011219800217077136
+    },
+    {
+      "id": "wv-017",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0012169290566816926
+    },
+    {
+      "id": "wv-018",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011899879900738597
+    },
+    {
+      "id": "wv-019",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.001166473957709968
+    },
+    {
+      "id": "wv-020",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011476679937914014
+    },
+    {
+      "id": "wv-021",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0012009099591523409
+    },
+    {
+      "id": "wv-022",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011662259930744767
+    },
+    {
+      "id": "wv-023",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011346499668434262
+    },
+    {
+      "id": "wv-024",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011027269065380096
+    },
+    {
+      "id": "wv-025",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0012432780349627137
+    },
+    {
+      "id": "wv-026",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0012075509876012802
+    },
+    {
+      "id": "wv-027",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011772060533985496
+    },
+    {
+      "id": "wv-028",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.001134066958911717
+    },
+    {
+      "id": "wv-029",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.001168524962849915
+    },
+    {
+      "id": "wv-030",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.001136503997258842
+    },
+    {
+      "id": "wv-031",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011035000206902623
+    },
+    {
+      "id": "wv-032",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0010721050202846527
+    },
+    {
+      "id": "wv-033",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011597770499065518
+    },
+    {
+      "id": "wv-034",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011335270246490836
+    },
+    {
+      "id": "wv-035",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0010987649438902736
+    },
+    {
+      "id": "wv-036",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0010680051054805517
+    },
+    {
+      "id": "wv-037",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011705269571393728
+    },
+    {
+      "id": "wv-038",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.001148912007920444
+    },
+    {
+      "id": "wv-039",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011132580693811178
+    },
+    {
+      "id": "wv-040",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.001080129062756896
+    },
+    {
+      "id": "wv-041",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.001173533033579588
+    },
+    {
+      "id": "wv-042",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.001145389978773892
+    },
+    {
+      "id": "wv-043",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011039800010621548
+    },
+    {
+      "id": "wv-044",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0010660249972715974
+    },
+    {
+      "id": "wv-045",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011690780520439148
+    },
+    {
+      "id": "wv-046",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011391869047656655
+    },
+    {
+      "id": "wv-047",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011080839904025197
+    },
+    {
+      "id": "wv-048",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0010802899487316608
+    },
+    {
+      "id": "wv-049",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011424209224060178
+    },
+    {
+      "id": "wv-050",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.001126228948123753
+    },
+    {
+      "id": "wv-051",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011017940705642104
+    },
+    {
+      "id": "wv-052",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0010761270532384515
+    },
+    {
+      "id": "wv-053",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.001173980999737978
+    },
+    {
+      "id": "wv-054",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011475099017843604
+    },
+    {
+      "id": "wv-055",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011251630494371057
+    },
+    {
+      "id": "wv-056",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011048840824514627
+    },
+    {
+      "id": "wv-057",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011803939705714583
+    },
+    {
+      "id": "wv-058",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.001166322035714984
+    },
+    {
+      "id": "wv-059",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.001123019028455019
+    },
+    {
+      "id": "wv-060",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0010978160426020622
+    },
+    {
+      "id": "wv-061",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011725740041583776
+    },
+    {
+      "id": "wv-062",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011471580946817994
+    },
+    {
+      "id": "wv-063",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.001123087015002966
+    },
+    {
+      "id": "wv-064",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0010904909577220678
+    },
+    {
+      "id": "wv-065",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011853639734908938
+    },
+    {
+      "id": "wv-066",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011538289254531264
+    },
+    {
+      "id": "wv-067",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011221059830859303
+    },
+    {
+      "id": "wv-068",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.001092268037609756
+    },
+    {
+      "id": "wv-069",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011517209932208061
+    },
+    {
+      "id": "wv-070",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011248260270804167
+    },
+    {
+      "id": "wv-071",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011373759480193257
+    },
+    {
+      "id": "wv-072",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.001110794022679329
+    },
+    {
+      "id": "wv-073",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011855339398607612
+    },
+    {
+      "id": "wv-074",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011636860435828567
+    },
+    {
+      "id": "wv-075",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011394249740988016
+    },
+    {
+      "id": "wv-076",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.001103256014175713
+    },
+    {
+      "id": "wv-077",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011799769708886743
+    },
+    {
+      "id": "wv-078",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.001143604051321745
+    },
+    {
+      "id": "wv-079",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.00110915198456496
+    },
+    {
+      "id": "wv-080",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0010834119748324156
+    },
+    {
+      "id": "wv-081",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011818009661510587
+    },
+    {
+      "id": "wv-082",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011545720044523478
+    },
+    {
+      "id": "wv-083",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011213369434699416
+    },
+    {
+      "id": "wv-084",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0010787720093503594
+    },
+    {
+      "id": "wv-085",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011688900412991643
+    },
+    {
+      "id": "wv-086",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011365070240572095
+    },
+    {
+      "id": "wv-087",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011066860752180219
+    },
+    {
+      "id": "wv-088",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0010813260450959206
+    },
+    {
+      "id": "wv-089",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.001183883985504508
+    },
+    {
+      "id": "wv-090",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011767700780183077
+    },
+    {
+      "id": "wv-091",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011487419251352549
+    },
+    {
+      "id": "wv-092",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011246009962633252
+    },
+    {
+      "id": "wv-093",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011906749568879604
+    },
+    {
+      "id": "wv-094",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011627289932221174
+    },
+    {
+      "id": "wv-095",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011315910378471017
+    },
+    {
+      "id": "wv-096",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.0011003499384969473
+    },
+    {
+      "id": "wv-097",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.001176724093966186
+    },
+    {
+      "id": "wv-098",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.001145560061559081
+    },
+    {
+      "id": "wv-099",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.001111067016609013
+    },
+    {
+      "id": "wv-100",
+      "passed": false,
+      "error": "ConnectError: All connection attempts failed",
+      "duration_s": 0.001078976085409522
+    }
+  ]
+}

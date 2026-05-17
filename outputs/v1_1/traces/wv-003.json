@@ -1,0 +1,836 @@
+{
+  "task_id": "wv-003",
+  "task_description": "On Wikipedia, find the year Marie Curie won her first Nobel Prize.",
+  "starting_url": "https://en.wikipedia.org",
+  "passed": true,
+  "final_answer": "1903",
+  "duration_s": 12.91,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://en.wikipedia.org/wiki/Main_Page",
+        "title": "Wikipedia, the free encyclopedia",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Jump to content",
+            "attributes": {
+              "href": "#bodyContent"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "Main menu",
+            "attributes": {
+              "id": "vector-main-menu-dropdown-checkbox",
+              "type": "checkbox",
+              "aria-label": "Main menu"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "hide",
+            "attributes": {}
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/wiki/Main_Page"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/wiki/Wikipedia:Contents"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/wiki/Portal:Current_events"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/wiki/Special:Random"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/wiki/Wikipedia:About"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "//en.wikipedia.org/wiki/Wikipedia:Contact_us"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/wiki/Help:Contents"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/wiki/Help:Introduction"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/wiki/Wikipedia:Community_portal"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/wiki/Special:RecentChanges"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/wiki/Wikipedia:File_upload_wizard"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/wiki/Special:SpecialPages"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/wiki/Main_Page"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Search",
+            "attributes": {
+              "href": "/wiki/Special:Search"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "button",
+            "text": "Search",
+            "attributes": {}
+          },
+          {
+            "id": "pw-22",
+            "role": "button",
+            "text": "Appearance",
+            "attributes": {
+              "id": "vector-appearance-dropdown-checkbox",
+              "type": "checkbox",
+              "aria-label": "Appearance"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Donate",
+            "attributes": {
+              "href": "https://donate.wikimedia.org/?wmf_source=donate&wmf_medium=sidebar&wmf_campaign=en.wikipedia.org&uselang=en"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Create account",
+            "attributes": {
+              "href": "/w/index.php?title=Special:CreateAccount&returnto=Main+Page"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Log in",
+            "attributes": {
+              "href": "/w/index.php?title=Special:UserLogin&returnto=Main+Page"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": "Personal tools",
+            "attributes": {
+              "id": "vector-user-links-dropdown-checkbox",
+              "type": "checkbox",
+              "aria-label": "Personal tools"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Donate",
+            "attributes": {
+              "href": "https://donate.wikimedia.org/?wmf_source=donate&wmf_medium=sidebar&wmf_campaign=en.wikipedia.org&uselang=en"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Create account",
+            "attributes": {
+              "href": "/w/index.php?title=Special:CreateAccount&returnto=Main+Page"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Log in",
+            "attributes": {
+              "href": "/w/index.php?title=Special:UserLogin&returnto=Main+Page"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Main Page",
+            "attributes": {
+              "href": "/wiki/Main_Page"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Talk",
+            "attributes": {
+              "href": "/wiki/Talk:Main_Page"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "button",
+            "text": "Change language variant",
+            "attributes": {
+              "id": "vector-variants-dropdown-checkbox",
+              "type": "checkbox",
+              "aria-label": "Change language variant"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Read",
+            "attributes": {
+              "href": "/wiki/Main_Page"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "View source",
+            "attributes": {
+              "href": "/w/index.php?title=Main_Page&action=edit"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "View history",
+            "attributes": {
+              "href": "/w/index.php?title=Main_Page&action=history"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "button",
+            "text": "Tools",
+            "attributes": {
+              "id": "vector-page-tools-dropdown-checkbox",
+              "type": "checkbox",
+              "aria-label": "Tools"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-38",
+            "role": "button",
+            "text": "hide",
+            "attributes": {}
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Read",
+            "attributes": {
+              "href": "/wiki/Main_Page"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "View source",
+            "attributes": {
+              "href": "/w/index.php?title=Main_Page&action=edit"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "View history",
+            "attributes": {
+              "href": "/w/index.php?title=Main_Page&action=history"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/wiki/Special:WhatLinksHere/Main_Page"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/wiki/Special:RecentChangesLinked/Main_Page"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Upload file",
+            "attributes": {
+              "href": "//en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://en.wikipedia.org/w/index.php?title=Main_Page&oldid=1345340283"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/w/index.php?title=Main_Page&action=info"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Cite this page",
+            "attributes": {
+              "href": "/w/index.php?title=Special:CiteThisPage&page=Main_Page&id=1345340283&wpFormIdentifier=titleform"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/w/index.php?title=Special:UrlShortener&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMain_Page"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.wikidata.org/wiki/Special:EntityPage/Q5296#sitelinks-wikipedia"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/w/index.php?title=Special:DownloadAsPdf&page=Main_Page&action=show-download-screen"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/w/index.php?title=Main_Page&printable=yes"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://abstract.wikipedia.org/wiki/Abstract_Wikipedia:Main_page"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://en.wikipedia.org/wiki/Marie_Curie"
+        }
+      },
+      "observation": "Opened https://en.wikipedia.org/wiki/Marie_Curie"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://en.wikipedia.org/wiki/Marie_Curie",
+        "title": "Marie Curie - Wikipedia",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Jump to content",
+            "attributes": {
+              "href": "#bodyContent"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "Main menu",
+            "attributes": {
+              "id": "vector-main-menu-dropdown-checkbox",
+              "type": "checkbox",
+              "aria-label": "Main menu"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "hide",
+            "attributes": {}
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/wiki/Main_Page"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/wiki/Wikipedia:Contents"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/wiki/Portal:Current_events"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/wiki/Special:Random"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/wiki/Wikipedia:About"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "//en.wikipedia.org/wiki/Wikipedia:Contact_us"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/wiki/Help:Contents"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/wiki/Help:Introduction"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/wiki/Wikipedia:Community_portal"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/wiki/Special:RecentChanges"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/wiki/Wikipedia:File_upload_wizard"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/wiki/Special:SpecialPages"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/wiki/Main_Page"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Search",
+            "attributes": {
+              "href": "/wiki/Special:Search"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "button",
+            "text": "Search",
+            "attributes": {}
+          },
+          {
+            "id": "pw-22",
+            "role": "button",
+            "text": "Appearance",
+            "attributes": {
+              "id": "vector-appearance-dropdown-checkbox",
+              "type": "checkbox",
+              "aria-label": "Appearance"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Donate",
+            "attributes": {
+              "href": "https://donate.wikimedia.org/?wmf_source=donate&wmf_medium=sidebar&wmf_campaign=en.wikipedia.org&uselang=en"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Create account",
+            "attributes": {
+              "href": "/w/index.php?title=Special:CreateAccount&returnto=Marie+Curie"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Log in",
+            "attributes": {
+              "href": "/w/index.php?title=Special:UserLogin&returnto=Marie+Curie"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": "Personal tools",
+            "attributes": {
+              "id": "vector-user-links-dropdown-checkbox",
+              "type": "checkbox",
+              "aria-label": "Personal tools"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Donate",
+            "attributes": {
+              "href": "https://donate.wikimedia.org/?wmf_source=donate&wmf_medium=sidebar&wmf_campaign=en.wikipedia.org&uselang=en"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Create account",
+            "attributes": {
+              "href": "/w/index.php?title=Special:CreateAccount&returnto=Marie+Curie"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Log in",
+            "attributes": {
+              "href": "/w/index.php?title=Special:UserLogin&returnto=Marie+Curie"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "button",
+            "text": "move to sidebar",
+            "attributes": {}
+          },
+          {
+            "id": "pw-31",
+            "role": "button",
+            "text": "hide",
+            "attributes": {}
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "(Top)",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Life and career",
+            "attributes": {
+              "href": "#Life_and_career"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "Toggle Life and career subsection",
+            "attributes": {}
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Early years",
+            "attributes": {
+              "href": "#Early_years"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Life in Paris",
+            "attributes": {
+              "href": "#Life_in_Paris"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "New elements",
+            "attributes": {
+              "href": "#New_elements"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Nobel Prizes",
+            "attributes": {
+              "href": "#Nobel_Prizes"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "World War I",
+            "attributes": {
+              "href": "#World_War_I"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Postwar years",
+            "attributes": {
+              "href": "#Postwar_years"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Death",
+            "attributes": {
+              "href": "#Death"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Legacy",
+            "attributes": {
+              "href": "#Legacy"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Commemorations",
+            "attributes": {
+              "href": "#Commemorations"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "See also",
+            "attributes": {
+              "href": "#See_also"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Notes",
+            "attributes": {
+              "href": "#Notes"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "References",
+            "attributes": {
+              "href": "#References"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Further reading",
+            "attributes": {
+              "href": "#Further_reading"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "button",
+            "text": "Toggle Further reading subsection",
+            "attributes": {}
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Nonfiction",
+            "attributes": {
+              "href": "#Nonfiction"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Fiction",
+            "attributes": {
+              "href": "#Fiction"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "External links",
+            "attributes": {
+              "href": "#External_links"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "button",
+            "text": "Toggle the table of contents",
+            "attributes": {
+              "id": "vector-page-titlebar-toc-checkbox",
+              "type": "checkbox",
+              "aria-label": "Toggle the table of contents"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "1903"
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

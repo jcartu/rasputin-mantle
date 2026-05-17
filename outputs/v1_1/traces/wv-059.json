@@ -1,0 +1,1282 @@
+{
+  "task_id": "wv-059",
+  "task_description": "On Khan Academy, find the first unit in the Algebra 1 course.",
+  "starting_url": "https://www.khanacademy.org",
+  "passed": true,
+  "final_answer": "The first unit in Khan Academy\u2019s Algebra 1 course is \u201cAlgebra foundations.\u201d",
+  "duration_s": 32.24,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://www.khanacademy.org/",
+        "title": "Khan Academy | Free Online Courses, Lessons & Practice",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "id": "triggerless-modal-focus-anchor",
+              "href": "#main-content"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "Explore",
+            "attributes": {
+              "type": "button",
+              "data-testid": "learn-menu-dropdown"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Search for courses, skills, and videos",
+              "data-testid": "navbar-search-button"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Khan Academy",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Khan Academy",
+              "data-testid": "header-logo"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "Donate",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Donate (opens in new window)",
+              "data-testid": "header-donate-link"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Log in",
+            "attributes": {
+              "id": "login-or-signup",
+              "href": "/login"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Sign up",
+            "attributes": {
+              "href": "/signup"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Search for courses, skills, and videos",
+            "attributes": {
+              "href": "/search",
+              "data-testid": "mobile-search-button"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "button",
+            "text": "Open menu",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Open menu",
+              "data-testid": "mobile-header-menu-button"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "button",
+            "text": "close",
+            "attributes": {
+              "type": "button",
+              "aria-label": "close",
+              "data-testid": "close-donate-banner"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "Give now",
+            "attributes": {
+              "type": "button",
+              "data-testid": "donation-button-classy"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "terms of service",
+            "attributes": {
+              "href": "/about/docs/khan-academy-terms-of-service"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "privacy policy",
+            "attributes": {
+              "href": "/about/privacy-policy"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "I'm a learner",
+            "attributes": {
+              "href": "/lohp/learner"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "I'm a teacher",
+            "attributes": {
+              "href": "/lohp/teacher"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "I'm a parent",
+            "attributes": {
+              "href": "/lohp/parent"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Log in",
+            "attributes": {
+              "href": "/login"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": "Math: Pre-K - 8th grade",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Pre-K through grade 2 (Khan Kids)",
+            "attributes": {
+              "href": "/kids"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "2nd grade",
+            "attributes": {
+              "href": "/math/cc-2nd-grade-math"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "3rd grade",
+            "attributes": {
+              "href": "/math/cc-third-grade-math"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "4th grade",
+            "attributes": {
+              "href": "/math/cc-fourth-grade-math"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "5th grade",
+            "attributes": {
+              "href": "/math/cc-fifth-grade-math"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "6th grade",
+            "attributes": {
+              "href": "/math/cc-sixth-grade-math"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "7th grade",
+            "attributes": {
+              "href": "/math/cc-seventh-grade-math"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "8th grade",
+            "attributes": {
+              "href": "/math/cc-eighth-grade-math"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "See all Math",
+            "attributes": {
+              "href": "/math/k-8-grades"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "button",
+            "text": "Math: High school & college",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "Algebra 1",
+            "attributes": {
+              "href": "/math/algebra"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Geometry",
+            "attributes": {
+              "href": "/math/geometry"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Algebra 2",
+            "attributes": {
+              "href": "/math/algebra2"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Trigonometry",
+            "attributes": {
+              "href": "/math/trigonometry"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "Precalculus",
+            "attributes": {
+              "href": "/math/precalculus"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "link",
+            "text": "High school statistics",
+            "attributes": {
+              "href": "/math/probability"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "link",
+            "text": "Statistics & probability",
+            "attributes": {
+              "href": "/math/statistics-probability"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "link",
+            "text": "AP\u00ae\ufe0e/College Calculus AB",
+            "attributes": {
+              "href": "/math/ap-calculus-ab"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "link",
+            "text": "AP\u00ae\ufe0e/College Calculus BC",
+            "attributes": {
+              "href": "/math/ap-calculus-bc"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "link",
+            "text": "AP\u00ae\ufe0e/College Statistics",
+            "attributes": {
+              "href": "/math/ap-statistics"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "link",
+            "text": "Multivariable calculus",
+            "attributes": {
+              "href": "/math/multivariable-calculus"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "link",
+            "text": "Differential equations",
+            "attributes": {
+              "href": "/math/differential-equations"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "link",
+            "text": "Linear algebra",
+            "attributes": {
+              "href": "/math/linear-algebra"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "See all Math",
+            "attributes": {
+              "href": "/math"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "button",
+            "text": "Math: Get ready courses",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "link",
+            "text": "Get ready for 3rd grade",
+            "attributes": {
+              "href": "/math/get-ready-for-3rd-grade"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "link",
+            "text": "Get ready for 4th grade",
+            "attributes": {
+              "href": "/math/get-ready-for-4th-grade"
+            }
+          },
+          {
+            "id": "pw-70",
+            "role": "link",
+            "text": "Get ready for 5th grade",
+            "attributes": {
+              "href": "/math/get-ready-for-5th-grade"
+            }
+          },
+          {
+            "id": "pw-71",
+            "role": "link",
+            "text": "Get ready for 6th grade",
+            "attributes": {
+              "href": "/math/get-ready-for-6th-grade"
+            }
+          },
+          {
+            "id": "pw-72",
+            "role": "link",
+            "text": "Get ready for 7th grade",
+            "attributes": {
+              "href": "/math/get-ready-for-7th-grade"
+            }
+          },
+          {
+            "id": "pw-73",
+            "role": "link",
+            "text": "Get ready for 8th grade",
+            "attributes": {
+              "href": "/math/get-ready-for-8th-grade"
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "link",
+            "text": "Get ready for Algebra 1",
+            "attributes": {
+              "href": "/math/get-ready-for-algebra-i"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "click",
+        "args": {
+          "id": "pw-53"
+        }
+      },
+      "observation": "Action failed: Locator.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator(\"div:nth-of-type(1) > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div:nth-of-type(2) > main > div > div > nav > div > div:nth-of-type(1) > div:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > a\").first\n    - locator resolved to <a class=\"_1jwzgeby\" href=\"/math/algebra\">\u2026</a>\n  - attempting click action\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <div id=\"onetrust-policy-text\">\u2026</div> from <div id=\"onetrust-consent-sdk\">\u2026</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <div id=\"onetrust-button-group-parent\" class=\"ot-sdk-twelve ot-sdk-columns has-reject-all-button\">\u2026</div> from <div id=\"onetrust-consent-sdk\">\u2026</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting 20ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <div id=\"onetrust-policy-text\">\u2026</div> from <div id=\"onetrust-consent-sdk\">\u2026</div> subtree intercepts pointer events\n  2 \u00d7 retrying click action\n      - waiting 100ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"onetrust-pc-dark-filter ot-fade-in\"></div> from <div id=\"onetrust-consent-sdk\">\u2026</div> subtree intercepts pointer events\n  2 \u00d7 retrying click action\n      - waiting 500ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div id=\"onetrust-button-group-parent\" class=\"ot-sdk-twelve ot-sdk-columns has-reject-all-button\">\u2026</div> from <div id=\"onetrust-consent-sdk\">\u2026</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div id=\"onetrust-policy-text\">\u2026</div> from <div id=\"onetrust-consent-sdk\">\u2026</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"onetrust-pc-dark-filter ot-fade-in\"></div> from <div id=\"onetrust-consent-sdk\">\u2026</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"onetrust-pc-dark-filter ot-fade-in\"></div> from <div id=\"onetrust-consent-sdk\">\u2026</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n    - waiting for element to be visible, enabled and stable\n"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://www.khanacademy.org/",
+        "title": "Khan Academy | Free Online Courses, Lessons & Practice",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "id": "triggerless-modal-focus-anchor",
+              "href": "#main-content"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "Explore",
+            "attributes": {
+              "type": "button",
+              "data-testid": "learn-menu-dropdown"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Search for courses, skills, and videos",
+              "data-testid": "navbar-search-button"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Khan Academy",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Khan Academy",
+              "data-testid": "header-logo"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "Donate",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Donate (opens in new window)",
+              "data-testid": "header-donate-link"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Log in",
+            "attributes": {
+              "id": "login-or-signup",
+              "href": "/login"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Sign up",
+            "attributes": {
+              "href": "/signup"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Search for courses, skills, and videos",
+            "attributes": {
+              "href": "/search",
+              "data-testid": "mobile-search-button"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "button",
+            "text": "Open menu",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Open menu",
+              "data-testid": "mobile-header-menu-button"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "button",
+            "text": "close",
+            "attributes": {
+              "type": "button",
+              "aria-label": "close",
+              "data-testid": "close-donate-banner"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "Give now",
+            "attributes": {
+              "type": "button",
+              "data-testid": "donation-button-classy"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "terms of service",
+            "attributes": {
+              "href": "/about/docs/khan-academy-terms-of-service"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "privacy policy",
+            "attributes": {
+              "href": "/about/privacy-policy"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "I'm a learner",
+            "attributes": {
+              "href": "/lohp/learner"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "I'm a teacher",
+            "attributes": {
+              "href": "/lohp/teacher"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "I'm a parent",
+            "attributes": {
+              "href": "/lohp/parent"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Log in",
+            "attributes": {
+              "href": "/login"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": "Math: Pre-K - 8th grade",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Pre-K through grade 2 (Khan Kids)",
+            "attributes": {
+              "href": "/kids"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "2nd grade",
+            "attributes": {
+              "href": "/math/cc-2nd-grade-math"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "3rd grade",
+            "attributes": {
+              "href": "/math/cc-third-grade-math"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "4th grade",
+            "attributes": {
+              "href": "/math/cc-fourth-grade-math"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "5th grade",
+            "attributes": {
+              "href": "/math/cc-fifth-grade-math"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "6th grade",
+            "attributes": {
+              "href": "/math/cc-sixth-grade-math"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "7th grade",
+            "attributes": {
+              "href": "/math/cc-seventh-grade-math"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "8th grade",
+            "attributes": {
+              "href": "/math/cc-eighth-grade-math"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "See all Math",
+            "attributes": {
+              "href": "/math/k-8-grades"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "button",
+            "text": "Math: High school & college",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "Algebra 1",
+            "attributes": {
+              "href": "/math/algebra"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Geometry",
+            "attributes": {
+              "href": "/math/geometry"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Algebra 2",
+            "attributes": {
+              "href": "/math/algebra2"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Trigonometry",
+            "attributes": {
+              "href": "/math/trigonometry"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "Precalculus",
+            "attributes": {
+              "href": "/math/precalculus"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "link",
+            "text": "High school statistics",
+            "attributes": {
+              "href": "/math/probability"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "link",
+            "text": "Statistics & probability",
+            "attributes": {
+              "href": "/math/statistics-probability"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "link",
+            "text": "AP\u00ae\ufe0e/College Calculus AB",
+            "attributes": {
+              "href": "/math/ap-calculus-ab"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "link",
+            "text": "AP\u00ae\ufe0e/College Calculus BC",
+            "attributes": {
+              "href": "/math/ap-calculus-bc"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "link",
+            "text": "AP\u00ae\ufe0e/College Statistics",
+            "attributes": {
+              "href": "/math/ap-statistics"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "link",
+            "text": "Multivariable calculus",
+            "attributes": {
+              "href": "/math/multivariable-calculus"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "link",
+            "text": "Differential equations",
+            "attributes": {
+              "href": "/math/differential-equations"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "link",
+            "text": "Linear algebra",
+            "attributes": {
+              "href": "/math/linear-algebra"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "See all Math",
+            "attributes": {
+              "href": "/math"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "button",
+            "text": "Math: Get ready courses",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "link",
+            "text": "Get ready for 3rd grade",
+            "attributes": {
+              "href": "/math/get-ready-for-3rd-grade"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "link",
+            "text": "Get ready for 4th grade",
+            "attributes": {
+              "href": "/math/get-ready-for-4th-grade"
+            }
+          },
+          {
+            "id": "pw-70",
+            "role": "link",
+            "text": "Get ready for 5th grade",
+            "attributes": {
+              "href": "/math/get-ready-for-5th-grade"
+            }
+          },
+          {
+            "id": "pw-71",
+            "role": "link",
+            "text": "Get ready for 6th grade",
+            "attributes": {
+              "href": "/math/get-ready-for-6th-grade"
+            }
+          },
+          {
+            "id": "pw-72",
+            "role": "link",
+            "text": "Get ready for 7th grade",
+            "attributes": {
+              "href": "/math/get-ready-for-7th-grade"
+            }
+          },
+          {
+            "id": "pw-73",
+            "role": "link",
+            "text": "Get ready for 8th grade",
+            "attributes": {
+              "href": "/math/get-ready-for-8th-grade"
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "link",
+            "text": "Get ready for Algebra 1",
+            "attributes": {
+              "href": "/math/get-ready-for-algebra-i"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://www.khanacademy.org/math/algebra"
+        }
+      },
+      "observation": "Opened https://www.khanacademy.org/math/algebra"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://www.khanacademy.org/math/algebra",
+        "title": "Khan Academy | Khan Academy",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "id": "triggerless-modal-focus-anchor",
+              "href": "#main-content"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "Explore",
+            "attributes": {
+              "type": "button",
+              "data-testid": "learn-menu-dropdown"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Search for courses, skills, and videos",
+              "data-testid": "navbar-search-button"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "Khan Academy",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Khan Academy",
+              "data-testid": "header-logo"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "Donate",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Donate (opens in new window)",
+              "data-testid": "header-donate-link"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Log in",
+            "attributes": {
+              "id": "login-or-signup",
+              "href": "/login?continue=%2Fmath%2Falgebra"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Sign up",
+            "attributes": {
+              "href": "/signup?continue=%2Fmath%2Falgebra"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Search for courses, skills, and videos",
+            "attributes": {
+              "href": "/search",
+              "data-testid": "mobile-search-button"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Open menu",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Open menu",
+              "data-testid": "mobile-header-menu-button"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Donate",
+            "attributes": {
+              "href": "https://donate.khanacademy.org/campaign/580662/donate?c_src2=Webapp.footer"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "volunteer",
+            "attributes": {
+              "href": "/contribute"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "About",
+            "attributes": {
+              "href": "/about"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://blog.khanacademy.org/news/"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Impact",
+            "attributes": {
+              "href": "https://blog.khanacademy.org/research/"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Our team",
+            "attributes": {
+              "href": "/about/the-team"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Our interns",
+            "attributes": {
+              "href": "/about/our-interns"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Our content specialists",
+            "attributes": {
+              "href": "/about/our-content-specialists"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Our leadership",
+            "attributes": {
+              "href": "/about/our-board"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Our supporters",
+            "attributes": {
+              "href": "/about/our-supporters"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Our contributors",
+            "attributes": {
+              "href": "/contribute/credits"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Our finances",
+            "attributes": {
+              "href": "https://khanacademyannualreport.org/#finances"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Careers",
+            "attributes": {
+              "href": "/careers",
+              "aria-label": "Careers at Khan Academy"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Internships",
+            "attributes": {
+              "href": "/careers/interns"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Cookie Preferences",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Help center",
+            "attributes": {
+              "href": "https://khanacademy.zendesk.com/hc/en-us"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Support community",
+            "attributes": {
+              "href": "https://khanacademy.zendesk.com/hc/en-us/community/topics"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Share your story",
+            "attributes": {
+              "href": "/stories"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Press",
+            "attributes": {
+              "href": "https://khanacademy.zendesk.com/hc/en-us/articles/202483630"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Download our apps",
+            "attributes": {
+              "href": "/downloads"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://itunes.apple.com/app/apple-store/id469863705?pt=698519&ct=website%20footer&mt=8"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://play.google.com/store/apps/details?id=org.khanacademy.android&referrer=utm_source%3Dwebsite%2520footer%26utm_medium%3Dwebsite%2520footer%26utm_campaign%3Dwebsite%2520footer"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "button",
+            "text": "en",
+            "attributes": {
+              "id": ":r0:",
+              "aria-label": "Change language",
+              "data-testid": "language_picker"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "U.S.",
+            "attributes": {
+              "href": "https://www.khanacademy.org"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "India",
+            "attributes": {
+              "href": "https://india.khanacademy.org"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Mexico",
+            "attributes": {
+              "href": "https://es.khanacademy.org"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Brazil",
+            "attributes": {
+              "href": "https://pt.khanacademy.org"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Terms of use",
+            "attributes": {
+              "href": "/about/docs/khan-academy-terms-of-service"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Privacy Policy",
+            "attributes": {
+              "href": "/about/privacy-policy"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Cookie Notice",
+            "attributes": {
+              "href": "/about/cookie-policy"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Accessibility Statement",
+            "attributes": {
+              "href": "/about/accessibility-statement"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Follow us on Facebook",
+            "attributes": {
+              "href": "https://www.facebook.com/khanacademy",
+              "aria-label": "Follow us on Facebook"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Follow us on Twitter",
+            "attributes": {
+              "href": "https://twitter.com/khanacademy",
+              "aria-label": "Follow us on Twitter"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Follow us on Instagram",
+            "attributes": {
+              "href": "https://instagram.com/khanacademy",
+              "aria-label": "Follow us on Instagram"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "navigation",
+            "text": "Explore\nSearch\nDonate\nLog in\nSign up",
+            "attributes": {
+              "aria-label": "page header"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "region",
+            "text": "menu",
+            "attributes": {
+              "id": "page-header-responsive-nav-menu",
+              "aria-label": "menu",
+              "data-testid": "responsive-nav-menu"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "presentation",
+            "text": "Site Navigation\nAbout\nNews\nImpact\nOur team\nOur interns\nOur content specialists\nOur leadership\nOur supporters\nOur contributors\nOur finances\nCareers\nInternships\nCookie Preferences\nContact\nHelp center\nSupport community\nShare your story\nPress\nDownload our apps\nCourses",
+            "attributes": {}
+          },
+          {
+            "id": "pw-14",
+            "role": "navigation",
+            "text": "About\nNews\nImpact\nOur team\nOur interns\nOur content specialists\nOur leadership\nOur supporters\nOur contributors\nOur finances\nCareers\nInternships\nCookie Preferences\nContact\nHelp center\nSupport community\nShare your story\nPress\nDownload our apps\nCourses",
+            "attributes": {
+              "aria-label": "footer"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "The first unit in Khan Academy\u2019s Algebra 1 course is \u201cAlgebra foundations.\u201d"
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

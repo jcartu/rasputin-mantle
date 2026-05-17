@@ -1,0 +1,863 @@
+{
+  "task_id": "wv-021",
+  "task_description": "On arXiv, find the abstract for the paper 'Attention Is All You Need' and report the first author.",
+  "starting_url": "https://arxiv.org",
+  "passed": false,
+  "final_answer": "Ashish Vaswani",
+  "duration_s": 14.65,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://arxiv.org/",
+        "title": "arXiv.org e-Print archive",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#content"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.cornell.edu/"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Learn about arXiv becoming an independent nonprofit.",
+            "attributes": {
+              "href": "https://tech.cornell.edu/arxiv/"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "member institutions",
+            "attributes": {
+              "href": "https://info.arxiv.org/about/ourmembers.html"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "Donate",
+            "attributes": {
+              "href": "https://info.arxiv.org/about/donate.html"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/IgnoreMe"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "button",
+            "text": "Status",
+            "attributes": {
+              "id": "opt-in-status-button"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Login",
+            "attributes": {
+              "href": "https://arxiv.org/login"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Help",
+            "attributes": {
+              "href": "https://info.arxiv.org/help"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Advanced Search",
+            "attributes": {
+              "href": "https://arxiv.org/search/advanced"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "combobox",
+            "text": "All fields\nTitle\nAuthor\nAbstract\nComments\nJournal reference\nACM classification\nMSC classification\nReport number\narXiv identifier\nDOI\nORCID\narXiv author ID\nHelp pages\nFull text",
+            "attributes": {
+              "name": "searchtype",
+              "aria-label": "Field to search"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "button",
+            "text": "Search",
+            "attributes": {}
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://arxiv.org/"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.cornell.edu/"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "Open search",
+            "attributes": {
+              "aria-label": "Open search"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "button",
+            "text": "GO",
+            "attributes": {}
+          },
+          {
+            "id": "pw-21",
+            "role": "button",
+            "text": "Open navigation menu",
+            "attributes": {
+              "aria-label": "Open navigation menu"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Login",
+            "attributes": {
+              "href": "https://arxiv.org/login"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Help Pages",
+            "attributes": {
+              "href": "https://info.arxiv.org/help"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "About",
+            "attributes": {
+              "href": "https://info.arxiv.org/about"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "combobox",
+            "text": "Physics\nMathematics\nQuantitative Biology\nComputer Science\nQuantitative Finance\nStatistics\nElectrical Engineering and Systems Science\nEconomics",
+            "attributes": {
+              "id": "search-category",
+              "name": "group"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "id": "adv-search-btn",
+              "type": "button",
+              "value": "Search"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Astrophysics",
+            "attributes": {
+              "id": "main-astro-ph",
+              "href": "/archive/astro-ph"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "new",
+            "attributes": {
+              "id": "new-astro-ph",
+              "href": "/list/astro-ph/new"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "recent",
+            "attributes": {
+              "id": "recent-astro-ph",
+              "href": "/list/astro-ph/recent"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "search",
+            "attributes": {
+              "id": "search-astro-ph",
+              "href": "https://arxiv.org/search/astro-ph"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Astrophysics of Galaxies",
+            "attributes": {
+              "id": "astro-ph.GA",
+              "href": "/list/astro-ph.GA/recent"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Cosmology and Nongalactic Astrophysics",
+            "attributes": {
+              "id": "astro-ph.CO",
+              "href": "/list/astro-ph.CO/recent"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Earth and Planetary Astrophysics",
+            "attributes": {
+              "id": "astro-ph.EP",
+              "href": "/list/astro-ph.EP/recent"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "High Energy Astrophysical Phenomena",
+            "attributes": {
+              "id": "astro-ph.HE",
+              "href": "/list/astro-ph.HE/recent"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Instrumentation and Methods for Astrophysics",
+            "attributes": {
+              "id": "astro-ph.IM",
+              "href": "/list/astro-ph.IM/recent"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Solar and Stellar Astrophysics",
+            "attributes": {
+              "id": "astro-ph.SR",
+              "href": "/list/astro-ph.SR/recent"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Condensed Matter",
+            "attributes": {
+              "id": "main-cond-mat",
+              "href": "/archive/cond-mat"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "new",
+            "attributes": {
+              "id": "new-cond-mat",
+              "href": "/list/cond-mat/new"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "recent",
+            "attributes": {
+              "id": "recent-cond-mat",
+              "href": "/list/cond-mat/recent"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "search",
+            "attributes": {
+              "id": "search-cond-mat",
+              "href": "https://arxiv.org/search/cond-mat"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Disordered Systems and Neural Networks",
+            "attributes": {
+              "id": "cond-mat.dis-nn",
+              "href": "/list/cond-mat.dis-nn/recent"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Materials Science",
+            "attributes": {
+              "id": "cond-mat.mtrl-sci",
+              "href": "/list/cond-mat.mtrl-sci/recent"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Mesoscale and Nanoscale Physics",
+            "attributes": {
+              "id": "cond-mat.mes-hall",
+              "href": "/list/cond-mat.mes-hall/recent"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Other Condensed Matter",
+            "attributes": {
+              "id": "cond-mat.other",
+              "href": "/list/cond-mat.other/recent"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Quantum Gases",
+            "attributes": {
+              "id": "cond-mat.quant-gas",
+              "href": "/list/cond-mat.quant-gas/recent"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Soft Condensed Matter",
+            "attributes": {
+              "id": "cond-mat.soft",
+              "href": "/list/cond-mat.soft/recent"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Statistical Mechanics",
+            "attributes": {
+              "id": "cond-mat.stat-mech",
+              "href": "/list/cond-mat.stat-mech/recent"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Strongly Correlated Electrons",
+            "attributes": {
+              "id": "cond-mat.str-el",
+              "href": "/list/cond-mat.str-el/recent"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Superconductivity",
+            "attributes": {
+              "id": "cond-mat.supr-con",
+              "href": "/list/cond-mat.supr-con/recent"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "General Relativity and Quantum Cosmology",
+            "attributes": {
+              "id": "main-gr-qc",
+              "href": "/archive/gr-qc"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "new",
+            "attributes": {
+              "id": "new-gr-qc",
+              "href": "/list/gr-qc/new"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "recent",
+            "attributes": {
+              "id": "recent-gr-qc",
+              "href": "/list/gr-qc/recent"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "search",
+            "attributes": {
+              "id": "search-gr-qc",
+              "href": "https://arxiv.org/search/gr-qc"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "High Energy Physics - Experiment",
+            "attributes": {
+              "id": "main-hep-ex",
+              "href": "/archive/hep-ex"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://arxiv.org/abs/1706.03762"
+        }
+      },
+      "observation": "Opened https://arxiv.org/abs/1706.03762"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://arxiv.org/abs/1706.03762",
+        "title": "[1706.03762] Attention Is All You Need",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#content"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.cornell.edu/"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Learn about arXiv becoming an independent nonprofit.",
+            "attributes": {
+              "href": "https://tech.cornell.edu/arxiv/"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "member institutions",
+            "attributes": {
+              "href": "https://info.arxiv.org/about/ourmembers.html"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "Donate",
+            "attributes": {
+              "href": "https://info.arxiv.org/about/donate.html"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/IgnoreMe"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "cs",
+            "attributes": {
+              "href": "/list/cs/recent"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Help",
+            "attributes": {
+              "href": "https://info.arxiv.org/help"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Advanced Search",
+            "attributes": {
+              "href": "https://arxiv.org/search/advanced"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "combobox",
+            "text": "All fields\nTitle\nAuthor\nAbstract\nComments\nJournal reference\nACM classification\nMSC classification\nReport number\narXiv identifier\nDOI\nORCID\narXiv author ID\nHelp pages\nFull text",
+            "attributes": {
+              "name": "searchtype",
+              "aria-label": "Field to search"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "button",
+            "text": "Search",
+            "attributes": {}
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://arxiv.org/"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.cornell.edu/"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "button",
+            "text": "open search",
+            "attributes": {}
+          },
+          {
+            "id": "pw-21",
+            "role": "button",
+            "text": "GO",
+            "attributes": {}
+          },
+          {
+            "id": "pw-22",
+            "role": "button",
+            "text": "open navigation menu",
+            "attributes": {}
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Login",
+            "attributes": {
+              "href": "https://arxiv.org/login"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Help Pages",
+            "attributes": {
+              "href": "https://info.arxiv.org/help"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "About",
+            "attributes": {
+              "href": "https://info.arxiv.org/about"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "v1",
+            "attributes": {
+              "href": "https://arxiv.org/abs/1706.03762v1"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Ashish Vaswani",
+            "attributes": {
+              "href": "https://arxiv.org/search/cs?searchtype=author&query=Vaswani,+A"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Noam Shazeer",
+            "attributes": {
+              "href": "https://arxiv.org/search/cs?searchtype=author&query=Shazeer,+N"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Niki Parmar",
+            "attributes": {
+              "href": "https://arxiv.org/search/cs?searchtype=author&query=Parmar,+N"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Jakob Uszkoreit",
+            "attributes": {
+              "href": "https://arxiv.org/search/cs?searchtype=author&query=Uszkoreit,+J"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Llion Jones",
+            "attributes": {
+              "href": "https://arxiv.org/search/cs?searchtype=author&query=Jones,+L"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Aidan N. Gomez",
+            "attributes": {
+              "href": "https://arxiv.org/search/cs?searchtype=author&query=Gomez,+A+N"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Lukasz Kaiser",
+            "attributes": {
+              "href": "https://arxiv.org/search/cs?searchtype=author&query=Kaiser,+L"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Illia Polosukhin",
+            "attributes": {
+              "href": "https://arxiv.org/search/cs?searchtype=author&query=Polosukhin,+I"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "View PDF",
+            "attributes": {
+              "href": "/pdf/1706.03762"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "HTML (experimental)",
+            "attributes": {
+              "href": "https://arxiv.org/html/1706.03762v7"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "arXiv:1706.03762",
+            "attributes": {
+              "href": "https://arxiv.org/abs/1706.03762"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "arXiv:1706.03762v7",
+            "attributes": {
+              "href": "https://arxiv.org/abs/1706.03762v7"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "https://doi.org/10.48550/arXiv.1706.03762",
+            "attributes": {
+              "id": "arxiv-doi-link",
+              "href": "https://doi.org/10.48550/arXiv.1706.03762"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "button",
+            "text": "Focus to learn more",
+            "attributes": {}
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "view email",
+            "attributes": {
+              "href": "/show-email/f53b7360/1706.03762"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "[v1]",
+            "attributes": {
+              "href": "/abs/1706.03762v1"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "[v2]",
+            "attributes": {
+              "href": "/abs/1706.03762v2"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "[v3]",
+            "attributes": {
+              "href": "/abs/1706.03762v3"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "[v4]",
+            "attributes": {
+              "href": "/abs/1706.03762v4"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "[v5]",
+            "attributes": {
+              "href": "/abs/1706.03762v5"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "[v6]",
+            "attributes": {
+              "href": "/abs/1706.03762v6"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "View PDF",
+            "attributes": {
+              "href": "/pdf/1706.03762"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "HTML (experimental)",
+            "attributes": {
+              "id": "latexml-download-link",
+              "href": "https://arxiv.org/html/1706.03762v7"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "TeX Source",
+            "attributes": {
+              "href": "/src/1706.03762"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "view license",
+            "attributes": {
+              "href": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "<\u00a0prev",
+            "attributes": {
+              "href": "/prevnext?id=1706.03762&function=prev&context=cs.CL"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "next\u00a0>",
+            "attributes": {
+              "href": "/prevnext?id=1706.03762&function=next&context=cs.CL"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "new",
+            "attributes": {
+              "href": "/list/cs.CL/new"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "link",
+            "text": "recent",
+            "attributes": {
+              "href": "/list/cs.CL/recent"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "Ashish Vaswani"
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

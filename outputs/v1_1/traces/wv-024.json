@@ -1,0 +1,2982 @@
+{
+  "task_id": "wv-024",
+  "task_description": "On BBC Weather, find tomorrow's forecast high temperature for London.",
+  "starting_url": "https://www.bbc.com/weather",
+  "passed": true,
+  "final_answer": "Tomorrow's forecast high temperature for London is 15\u00b0C.",
+  "duration_s": 57.97,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://www.bbc.co.uk/weather",
+        "title": "BBC Weather - Home",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "OK",
+            "attributes": {
+              "id": "bbcprivacy-continue-button",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Find out what's changed",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/usingthebbc/your-data-matters"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "We use cookies",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Accept additional cookies",
+            "attributes": {
+              "id": "bbccookies-accept-button",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Reject additional cookies",
+            "attributes": {
+              "id": "bbccookies-reject-button",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Let me choose",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Homepage",
+            "attributes": {
+              "id": "homepage-link",
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Skip to content",
+            "attributes": {
+              "href": "#wr-masthead-location-search-id"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Accessibility Help",
+            "attributes": {
+              "id": "orb-accessibility-help",
+              "href": "https://www.bbc.co.uk/accessibility/"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "id": "idcta-link",
+              "href": "https://session.bbc.co.uk/session?ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fweather&userOrigin=weather_ps&context=weather&sequenceId=faf8042e-ce9c-47df-b5c5-40d55ce7934b"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Notifications",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/notifications"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/news"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sport"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Weather",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/weather"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "iPlayer",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/iplayer"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Sounds",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sounds"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Bitesize",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/bitesize"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "CBeebies",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbeebies"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "CBBC",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbbc"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Food",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/food"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.com/"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.com/news"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.com/sport"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Business",
+            "attributes": {
+              "href": "https://www.bbc.com/business"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Technology",
+            "attributes": {
+              "href": "https://www.bbc.com/technology"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Health",
+            "attributes": {
+              "href": "https://www.bbc.com/health"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Culture",
+            "attributes": {
+              "href": "https://www.bbc.com/culture"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Arts",
+            "attributes": {
+              "href": "https://www.bbc.com/arts"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "href": "https://www.bbc.com/travel"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Earth",
+            "attributes": {
+              "href": "https://www.bbc.com/future-planet"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Audio",
+            "attributes": {
+              "href": "https://www.bbc.com/audio"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Video",
+            "attributes": {
+              "href": "https://www.bbc.com/video"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Live",
+            "attributes": {
+              "href": "https://www.bbc.com/live"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "button",
+            "text": "More menu",
+            "attributes": {
+              "id": "orbit-more-button",
+              "href": "#orbit-more-drawer",
+              "aria-label": "All BBC destinations menu"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Search BBC",
+            "attributes": {
+              "id": "orbit-search-button",
+              "href": "https://search.bbc.co.uk/search?scope=all&destination=weather_ps"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/news"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sport"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Weather",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/weather"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "iPlayer",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/iplayer"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Sounds",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sounds"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Bitesize",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/bitesize"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "CBeebies",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbeebies"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "CBBC",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbbc"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Food",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/food"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.com/"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.com/news"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.com/sport"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Business",
+            "attributes": {
+              "href": "https://www.bbc.com/business"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "click",
+        "args": {
+          "id": "pw-0"
+        }
+      },
+      "observation": "Action failed: Locator.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator(\"#bbcprivacy-continue-button\").first\n    - locator resolved to <button type=\"button\" class=\"banner-button\" id=\"bbcprivacy-continue-button\">\u2026</button>\n  - attempting click action\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 100ms\n    10 \u00d7 waiting for element to be visible, enabled and stable\n       - element is not visible\n     - retrying click action\n       - waiting 500ms\n"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://www.bbc.co.uk/weather",
+        "title": "BBC Weather - Home",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "OK",
+            "attributes": {
+              "id": "bbcprivacy-continue-button",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Find out what's changed",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/usingthebbc/your-data-matters"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "We use cookies",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Accept additional cookies",
+            "attributes": {
+              "id": "bbccookies-accept-button",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Reject additional cookies",
+            "attributes": {
+              "id": "bbccookies-reject-button",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Let me choose",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Homepage",
+            "attributes": {
+              "id": "homepage-link",
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Skip to content",
+            "attributes": {
+              "href": "#wr-masthead-location-search-id"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Accessibility Help",
+            "attributes": {
+              "id": "orb-accessibility-help",
+              "href": "https://www.bbc.co.uk/accessibility/"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "id": "idcta-link",
+              "href": "https://session.bbc.co.uk/session?ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fweather&userOrigin=weather_ps&context=weather&sequenceId=faf8042e-ce9c-47df-b5c5-40d55ce7934b"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Notifications",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/notifications"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/news"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sport"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Weather",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/weather"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "iPlayer",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/iplayer"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Sounds",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sounds"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Bitesize",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/bitesize"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "CBeebies",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbeebies"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "CBBC",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbbc"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Food",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/food"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.com/"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.com/news"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.com/sport"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Business",
+            "attributes": {
+              "href": "https://www.bbc.com/business"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Technology",
+            "attributes": {
+              "href": "https://www.bbc.com/technology"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Health",
+            "attributes": {
+              "href": "https://www.bbc.com/health"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Culture",
+            "attributes": {
+              "href": "https://www.bbc.com/culture"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Arts",
+            "attributes": {
+              "href": "https://www.bbc.com/arts"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "href": "https://www.bbc.com/travel"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Earth",
+            "attributes": {
+              "href": "https://www.bbc.com/future-planet"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Audio",
+            "attributes": {
+              "href": "https://www.bbc.com/audio"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Video",
+            "attributes": {
+              "href": "https://www.bbc.com/video"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Live",
+            "attributes": {
+              "href": "https://www.bbc.com/live"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "button",
+            "text": "More menu",
+            "attributes": {
+              "id": "orbit-more-button",
+              "href": "#orbit-more-drawer",
+              "aria-label": "All BBC destinations menu"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Search BBC",
+            "attributes": {
+              "id": "orbit-search-button",
+              "href": "https://search.bbc.co.uk/search?scope=all&destination=weather_ps"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/news"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sport"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Weather",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/weather"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "iPlayer",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/iplayer"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Sounds",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sounds"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Bitesize",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/bitesize"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "CBeebies",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbeebies"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "CBBC",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbbc"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Food",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/food"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.com/"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.com/news"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.com/sport"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Business",
+            "attributes": {
+              "href": "https://www.bbc.com/business"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://www.bbc.co.uk/weather/2643743"
+        }
+      },
+      "observation": "Opened https://www.bbc.co.uk/weather/2643743"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://www.bbc.co.uk/weather/2643743",
+        "title": "London - BBC Weather",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Homepage",
+            "attributes": {
+              "id": "homepage-link",
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Skip to content",
+            "attributes": {
+              "href": "#wr-location-name-id"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Accessibility Help",
+            "attributes": {
+              "id": "orb-accessibility-help",
+              "href": "https://www.bbc.co.uk/accessibility/"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "id": "idcta-link",
+              "href": "https://session.bbc.co.uk/session?ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fweather%2F2643743&userOrigin=weather_ps&context=weather&sequenceId=faf8042e-ce9c-47df-b5c5-40d55ce7934b"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Notifications",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/notifications"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/news"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sport"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Weather",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/weather"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "iPlayer",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/iplayer"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Sounds",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sounds"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Bitesize",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/bitesize"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "CBeebies",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbeebies"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "CBBC",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbbc"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Food",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/food"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.com/"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.com/news"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.com/sport"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Business",
+            "attributes": {
+              "href": "https://www.bbc.com/business"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Technology",
+            "attributes": {
+              "href": "https://www.bbc.com/technology"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Health",
+            "attributes": {
+              "href": "https://www.bbc.com/health"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Culture",
+            "attributes": {
+              "href": "https://www.bbc.com/culture"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Arts",
+            "attributes": {
+              "href": "https://www.bbc.com/arts"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "href": "https://www.bbc.com/travel"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Earth",
+            "attributes": {
+              "href": "https://www.bbc.com/future-planet"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Audio",
+            "attributes": {
+              "href": "https://www.bbc.com/audio"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Video",
+            "attributes": {
+              "href": "https://www.bbc.com/video"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Live",
+            "attributes": {
+              "href": "https://www.bbc.com/live"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "button",
+            "text": "More menu",
+            "attributes": {
+              "id": "orbit-more-button",
+              "href": "#orbit-more-drawer",
+              "aria-label": "All BBC destinations menu"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Search BBC",
+            "attributes": {
+              "id": "orbit-search-button",
+              "href": "https://search.bbc.co.uk/search?scope=all&destination=weather_ps"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/news"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sport"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Weather",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/weather"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "iPlayer",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/iplayer"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Sounds",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sounds"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Bitesize",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/bitesize"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "CBeebies",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbeebies"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "CBBC",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbbc"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Food",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/food"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.com/"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.com/news"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.com/sport"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Business",
+            "attributes": {
+              "href": "https://www.bbc.com/business"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Technology",
+            "attributes": {
+              "href": "https://www.bbc.com/technology"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Health",
+            "attributes": {
+              "href": "https://www.bbc.com/health"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Culture",
+            "attributes": {
+              "href": "https://www.bbc.com/culture"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Arts",
+            "attributes": {
+              "href": "https://www.bbc.com/arts"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "href": "https://www.bbc.com/travel"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Earth",
+            "attributes": {
+              "href": "https://www.bbc.com/future-planet"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => document.body.innerText)()"
+        }
+      },
+      "observation": "Eval: \"Cookies on the BBC website\\n\\nWe use cookies to give you the best online experience. Strictly necessary cookies are on by default. Additional cookies are off by default.\\n\\nAccept additional cookies\\nReject additional cookies\\nLet me choose\\nHomepage\\nAccessibility links\\nSkip to content\\nAccessibility Help\\nSign in\\nNotifications\\nHome\\nNews\\nSport\\nWeather\\niPlayer\\nSounds\\nBitesize\\nMore menu\\nSearch BBC\\nBBC Weather\\nSearch for a location\\nSearch\\nFind my location\\nLondon\\nAddto your locati"
+    },
+    {
+      "step": 4,
+      "state": {
+        "url": "https://www.bbc.co.uk/weather/2643743",
+        "title": "London - BBC Weather",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "OK",
+            "attributes": {
+              "id": "bbcprivacy-continue-button",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Find out what's changed",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/usingthebbc/your-data-matters"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "We use cookies",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Accept additional cookies",
+            "attributes": {
+              "id": "bbccookies-accept-button",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Reject additional cookies",
+            "attributes": {
+              "id": "bbccookies-reject-button",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Let me choose",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Homepage",
+            "attributes": {
+              "id": "homepage-link",
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Skip to content",
+            "attributes": {
+              "href": "#wr-location-name-id"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Accessibility Help",
+            "attributes": {
+              "id": "orb-accessibility-help",
+              "href": "https://www.bbc.co.uk/accessibility/"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "id": "idcta-link",
+              "href": "https://session.bbc.co.uk/session?ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fweather%2F2643743&userOrigin=weather_ps&context=weather&sequenceId=faf8042e-ce9c-47df-b5c5-40d55ce7934b"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Notifications",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/notifications"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/news"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sport"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Weather",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/weather"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "iPlayer",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/iplayer"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Sounds",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sounds"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Bitesize",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/bitesize"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "CBeebies",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbeebies"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "CBBC",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbbc"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Food",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/food"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.com/"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.com/news"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.com/sport"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Business",
+            "attributes": {
+              "href": "https://www.bbc.com/business"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Technology",
+            "attributes": {
+              "href": "https://www.bbc.com/technology"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Health",
+            "attributes": {
+              "href": "https://www.bbc.com/health"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Culture",
+            "attributes": {
+              "href": "https://www.bbc.com/culture"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Arts",
+            "attributes": {
+              "href": "https://www.bbc.com/arts"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "href": "https://www.bbc.com/travel"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Earth",
+            "attributes": {
+              "href": "https://www.bbc.com/future-planet"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Audio",
+            "attributes": {
+              "href": "https://www.bbc.com/audio"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Video",
+            "attributes": {
+              "href": "https://www.bbc.com/video"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Live",
+            "attributes": {
+              "href": "https://www.bbc.com/live"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "button",
+            "text": "More menu",
+            "attributes": {
+              "id": "orbit-more-button",
+              "href": "#orbit-more-drawer",
+              "aria-label": "All BBC destinations menu"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Search BBC",
+            "attributes": {
+              "id": "orbit-search-button",
+              "href": "https://search.bbc.co.uk/search?scope=all&destination=weather_ps"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/news"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sport"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Weather",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/weather"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "iPlayer",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/iplayer"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Sounds",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sounds"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Bitesize",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/bitesize"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "CBeebies",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbeebies"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "CBBC",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbbc"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Food",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/food"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.com/"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.com/news"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.com/sport"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Business",
+            "attributes": {
+              "href": "https://www.bbc.com/business"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => { const text = document.body.innerText; const idx = text.search(/Tomorrow/i); return idx >= 0 ? text.slice(idx, idx + 1000) : text.slice(0, 3000); })()"
+        }
+      },
+      "observation": "Eval: \"Cookies on the BBC website\\n\\nWe use cookies to give you the best online experience. Strictly necessary cookies are on by default. Additional cookies are off by default.\\n\\nAccept additional cookies\\nReject additional cookies\\nLet me choose\\nHomepage\\nAccessibility links\\nSkip to content\\nAccessibility Help\\nSign in\\nNotifications\\nHome\\nNews\\nSport\\nWeather\\niPlayer\\nSounds\\nBitesize\\nMore menu\\nSearch BBC\\nBBC Weather\\nSearch for a location\\nSearch\\nFind my location\\nLondon\\nAddto your locati"
+    },
+    {
+      "step": 5,
+      "state": {
+        "url": "https://www.bbc.co.uk/weather/2643743",
+        "title": "London - BBC Weather",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "OK",
+            "attributes": {
+              "id": "bbcprivacy-continue-button",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Find out what's changed",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/usingthebbc/your-data-matters"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "We use cookies",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Accept additional cookies",
+            "attributes": {
+              "id": "bbccookies-accept-button",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Reject additional cookies",
+            "attributes": {
+              "id": "bbccookies-reject-button",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Let me choose",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Homepage",
+            "attributes": {
+              "id": "homepage-link",
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Skip to content",
+            "attributes": {
+              "href": "#wr-location-name-id"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Accessibility Help",
+            "attributes": {
+              "id": "orb-accessibility-help",
+              "href": "https://www.bbc.co.uk/accessibility/"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "id": "idcta-link",
+              "href": "https://session.bbc.co.uk/session?ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fweather%2F2643743&userOrigin=weather_ps&context=weather&sequenceId=faf8042e-ce9c-47df-b5c5-40d55ce7934b"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Notifications",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/notifications"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/news"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sport"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Weather",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/weather"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "iPlayer",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/iplayer"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Sounds",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sounds"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Bitesize",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/bitesize"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "CBeebies",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbeebies"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "CBBC",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbbc"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Food",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/food"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.com/"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.com/news"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.com/sport"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Business",
+            "attributes": {
+              "href": "https://www.bbc.com/business"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Technology",
+            "attributes": {
+              "href": "https://www.bbc.com/technology"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Health",
+            "attributes": {
+              "href": "https://www.bbc.com/health"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Culture",
+            "attributes": {
+              "href": "https://www.bbc.com/culture"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Arts",
+            "attributes": {
+              "href": "https://www.bbc.com/arts"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "href": "https://www.bbc.com/travel"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Earth",
+            "attributes": {
+              "href": "https://www.bbc.com/future-planet"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Audio",
+            "attributes": {
+              "href": "https://www.bbc.com/audio"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Video",
+            "attributes": {
+              "href": "https://www.bbc.com/video"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Live",
+            "attributes": {
+              "href": "https://www.bbc.com/live"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "button",
+            "text": "More menu",
+            "attributes": {
+              "id": "orbit-more-button",
+              "href": "#orbit-more-drawer",
+              "aria-label": "All BBC destinations menu"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Search BBC",
+            "attributes": {
+              "id": "orbit-search-button",
+              "href": "https://search.bbc.co.uk/search?scope=all&destination=weather_ps"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/news"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sport"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Weather",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/weather"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "iPlayer",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/iplayer"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Sounds",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sounds"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Bitesize",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/bitesize"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "CBeebies",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbeebies"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "CBBC",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbbc"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Food",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/food"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.com/"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.com/news"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.com/sport"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Business",
+            "attributes": {
+              "href": "https://www.bbc.com/business"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "click",
+        "args": {
+          "id": "pw-4"
+        }
+      },
+      "observation": "Clicked pw-4"
+    },
+    {
+      "step": 6,
+      "state": {
+        "url": "https://www.bbc.co.uk/weather/2643743",
+        "title": "London - BBC Weather",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "OK",
+            "attributes": {
+              "id": "bbcprivacy-continue-button",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Find out what's changed",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/usingthebbc/your-data-matters"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "We use cookies",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Accept additional cookies",
+            "attributes": {
+              "id": "bbccookies-accept-button",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Reject additional cookies",
+            "attributes": {
+              "id": "bbccookies-reject-button",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Let me choose",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Homepage",
+            "attributes": {
+              "id": "homepage-link",
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Skip to content",
+            "attributes": {
+              "href": "#wr-location-name-id"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Accessibility Help",
+            "attributes": {
+              "id": "orb-accessibility-help",
+              "href": "https://www.bbc.co.uk/accessibility/"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "id": "idcta-link",
+              "href": "https://session.bbc.co.uk/session?ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fweather%2F2643743&userOrigin=weather_ps&context=weather&sequenceId=faf8042e-ce9c-47df-b5c5-40d55ce7934b"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Notifications",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/notifications"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/news"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sport"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Weather",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/weather"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "iPlayer",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/iplayer"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Sounds",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sounds"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Bitesize",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/bitesize"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "CBeebies",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbeebies"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "CBBC",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbbc"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Food",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/food"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.com/"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.com/news"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.com/sport"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Business",
+            "attributes": {
+              "href": "https://www.bbc.com/business"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Technology",
+            "attributes": {
+              "href": "https://www.bbc.com/technology"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Health",
+            "attributes": {
+              "href": "https://www.bbc.com/health"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Culture",
+            "attributes": {
+              "href": "https://www.bbc.com/culture"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Arts",
+            "attributes": {
+              "href": "https://www.bbc.com/arts"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "href": "https://www.bbc.com/travel"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Earth",
+            "attributes": {
+              "href": "https://www.bbc.com/future-planet"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Audio",
+            "attributes": {
+              "href": "https://www.bbc.com/audio"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Video",
+            "attributes": {
+              "href": "https://www.bbc.com/video"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Live",
+            "attributes": {
+              "href": "https://www.bbc.com/live"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "button",
+            "text": "More menu",
+            "attributes": {
+              "id": "orbit-more-button",
+              "href": "#orbit-more-drawer",
+              "aria-label": "All BBC destinations menu"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Search BBC",
+            "attributes": {
+              "id": "orbit-search-button",
+              "href": "https://search.bbc.co.uk/search?scope=all&destination=weather_ps"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/news"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sport"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Weather",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/weather"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "iPlayer",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/iplayer"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Sounds",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sounds"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Bitesize",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/bitesize"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "CBeebies",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbeebies"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "CBBC",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbbc"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Food",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/food"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.com/"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.com/news"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.com/sport"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Business",
+            "attributes": {
+              "href": "https://www.bbc.com/business"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => document.body.innerText)()"
+        }
+      },
+      "observation": "Eval: \"Homepage\\nAccessibility links\\nSkip to content\\nAccessibility Help\\nSign in\\nNotifications\\nHome\\nNews\\nSport\\nWeather\\niPlayer\\nSounds\\nBitesize\\nMore menu\\nSearch BBC\\nBBC Weather\\nSearch for a location\\nSearch\\nFind my location\\nLondon\\nAddto your locations\\nAdd to your locations\\nForecast - London\\nDay by day forecast\\nTonight\\n,\\n,\\nLow\\n8\\u00b0\\n,\\nLight rain and a gentle breeze\\nMon\\u00a018th\\n,\\n,\\nHigh\\n15\\u00b0\\nLow\\n11\\u00b0\\n,\\nTue\\u00a019th\\n,\\n,\\nHigh\\n17\\u00b0\\nLow\\n11\\u00b0\\n,\\n"
+    },
+    {
+      "step": 7,
+      "state": {
+        "url": "https://www.bbc.co.uk/weather/2643743",
+        "title": "London - BBC Weather",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "OK",
+            "attributes": {
+              "id": "bbcprivacy-continue-button",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Find out what's changed",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/usingthebbc/your-data-matters"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "We use cookies",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Accept additional cookies",
+            "attributes": {
+              "id": "bbccookies-accept-button",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Reject additional cookies",
+            "attributes": {
+              "id": "bbccookies-reject-button",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Let me choose",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Homepage",
+            "attributes": {
+              "id": "homepage-link",
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Skip to content",
+            "attributes": {
+              "href": "#wr-location-name-id"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Accessibility Help",
+            "attributes": {
+              "id": "orb-accessibility-help",
+              "href": "https://www.bbc.co.uk/accessibility/"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "id": "idcta-link",
+              "href": "https://session.bbc.co.uk/session?ptrt=https%3A%2F%2Fwww.bbc.co.uk%2Fweather%2F2643743&userOrigin=weather_ps&context=weather&sequenceId=faf8042e-ce9c-47df-b5c5-40d55ce7934b"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Notifications",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/notifications"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/news"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sport"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Weather",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/weather"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "iPlayer",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/iplayer"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": "Sounds",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sounds"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "Bitesize",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/bitesize"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "CBeebies",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbeebies"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "CBBC",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbbc"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Food",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/food"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.com/"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.com/news"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.com/sport"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Business",
+            "attributes": {
+              "href": "https://www.bbc.com/business"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Technology",
+            "attributes": {
+              "href": "https://www.bbc.com/technology"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Health",
+            "attributes": {
+              "href": "https://www.bbc.com/health"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Culture",
+            "attributes": {
+              "href": "https://www.bbc.com/culture"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Arts",
+            "attributes": {
+              "href": "https://www.bbc.com/arts"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "href": "https://www.bbc.com/travel"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Earth",
+            "attributes": {
+              "href": "https://www.bbc.com/future-planet"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Audio",
+            "attributes": {
+              "href": "https://www.bbc.com/audio"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Video",
+            "attributes": {
+              "href": "https://www.bbc.com/video"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Live",
+            "attributes": {
+              "href": "https://www.bbc.com/live"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "button",
+            "text": "More menu",
+            "attributes": {
+              "id": "orbit-more-button",
+              "href": "#orbit-more-drawer",
+              "aria-label": "All BBC destinations menu"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Search BBC",
+            "attributes": {
+              "id": "orbit-search-button",
+              "href": "https://search.bbc.co.uk/search?scope=all&destination=weather_ps"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.co.uk"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/news"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sport"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Weather",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/weather"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "iPlayer",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/iplayer"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Sounds",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/sounds"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Bitesize",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/bitesize"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "CBeebies",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbeebies"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "CBBC",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/cbbc"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Food",
+            "attributes": {
+              "href": "https://www.bbc.co.uk/food"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.bbc.com/"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "News",
+            "attributes": {
+              "href": "https://www.bbc.com/news"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Sport",
+            "attributes": {
+              "href": "https://www.bbc.com/sport"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Business",
+            "attributes": {
+              "href": "https://www.bbc.com/business"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "Tomorrow's forecast high temperature for London is 15\u00b0C."
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

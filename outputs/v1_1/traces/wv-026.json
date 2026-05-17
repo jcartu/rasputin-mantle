@@ -1,0 +1,2740 @@
+{
+  "task_id": "wv-026",
+  "task_description": "On Booking.com, find a hotel in Paris for a two-night stay next month and report its displayed rating and price.",
+  "starting_url": "https://www.booking.com",
+  "passed": false,
+  "final_answer": "Error planning: Extra data: line 1 column 675 (char 674)",
+  "duration_s": 105.68,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://www.booking.com/",
+        "title": "Booking.com | Official site | The best hotels, flights, car rentals & accommodations",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#main"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Booking.com",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "aria-label": "Booking.com",
+              "data-testid": "header-booking-logo"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "USD",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Prices in U.S. Dollar",
+              "data-testid": "header-currency-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Language: English (US)",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Language: English (US)",
+              "data-testid": "header-language-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Customer support",
+            "attributes": {
+              "href": "https://secure.booking.com/help.html?source=header&src=profile_contact_cs",
+              "aria-label": "Customer support",
+              "data-testid": "header-help-center"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "List your property",
+            "attributes": {
+              "href": "https://join.booking.com/?utm_source=topbar",
+              "data-testid": "header-custom-action-button"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Register",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=index&prompt=signin&state=UrMBwUq-fhPs_KEX1UFpH9VYy4xb6ByPtG6Mj8kcu_vPw-h7OM6VTspyW6vI9uBDE3FvI3R1aUsrMF5sVduT39atak9dfrIq5tJ9sxjSRzWO-F5Z399WqWBkEd2Sy_nXilDZgO0tysi-MnZ7jrVwHhatN3xuEkeAPc1pOTrJVGN4teQRXnvWCWiPu_CoPkq7n_NFK4EmoskYWKWDBuUO_Ribu8LUmo-kpfdlp8MZVAnNs_pxGWQ%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Register an account",
+              "data-testid": "header-sign-up-button"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=index&prompt=signin&state=UrMBwUq-fhPs_KEX1UFpH9VYy4xb6ByPtG6Mj8kcu_vPw-h7OM6VTspyW6vI9uBDE3FvI3R1aUsrMF5sVduT39atak9dfrIq5tJ9sxjSRzWO-F5Z399WqWBkEd2Sy_nXilDZgO0tysi-MnZ7jrVwHhatN3xuEkeAPc1pOTrJVGN4teQRXnvWCWiPu_CoPkq7n_NFK4EmoskYWKWDBuUO_Ribu8LUmo-kpfdlp8MZVAnNs_pxGWQ%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Sign in",
+              "data-testid": "header-sign-in-button"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "combobox",
+            "text": "Where are you going?",
+            "attributes": {
+              "id": ":R55amr5:",
+              "name": "ss",
+              "aria-label": "Where are you going?",
+              "placeholder": "Where are you going?",
+              "value": ""
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": "Check-in date\n\u2014\nCheck-out date",
+            "attributes": {
+              "type": "button",
+              "data-testid": "searchbox-dates-container"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "button",
+            "text": "2 adults \u00b7 0 children \u00b7 1 room",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Number of travelers and rooms. Currently selected: 2 adults \u00b7 0 children \u00b7 1 room",
+              "data-testid": "occupancy-config"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Learn more",
+            "attributes": {
+              "href": "https://www.booking.com/co_brand_card.en-us.html",
+              "aria-label": "Learn more",
+              "data-testid": "promotional-banner-content-cta"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Las Vegas",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=20079110&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0",
+              "aria-label": "Las Vegas"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Orlando",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=20023488&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0",
+              "aria-label": "Orlando"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "New York",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=20088325&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0",
+              "aria-label": "New York"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Tokyo",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=-246227&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0",
+              "aria-label": "Tokyo"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Atlanta",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=20024809&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0",
+              "aria-label": "Atlanta"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Discover homes",
+            "attributes": {
+              "href": "https://www.booking.com/booking-home/index.html",
+              "aria-label": "Discover homes"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Aparthotel Stare Miasto\nOld Town, Poland, Krakow\n8.8\n8.8\nExcellent\nExcellent\n3,162 reviews\nStarting from\n$100\nPrice $100",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=260295&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=260295",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "link",
+            "text": "N\u0112RO Boutique Hotel\nGreece, Imerovigli\n9.7\n9.7\nExceptional\nExceptional\n93 reviews\nStarting from\n$295\nPrice $295",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=1754883&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=1754883",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "link",
+            "text": "Leman Locke\nTower Hamlets, United Kingdom, London\n8.3\n8.3\nVery Good\nVery Good\n944 reviews\nStarting from\n$126\nPrice $126",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=1920592&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=1920592",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "7Seasons Apartments Budapest\n06. Ter\u00e9zv\u00e1ros, Hungary, Budapest\n8.8\n8.8\nExcellent\nExcellent\n10,011 reviews\nStarting from\n$148\nPrice $148",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=78365&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=78365",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-70",
+            "role": "link",
+            "text": "Numa Florence Vita\nSanta Maria Novella, Italy, Florence\n8.9\n8.9\nExcellent\nExcellent\n1,022 reviews\nStarting from\n$349\nPrice $349",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=2132601&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=2132601",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-72",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "link",
+            "text": "New Sugar Loft Apartments\nSanta Teresa, Brazil, Rio de Janeiro\n7.7\n7.7\nGood\nGood\n811 reviews\nStarting from\n$61\nPrice $61",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=913677&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=913677",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-76",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-78",
+            "role": "link",
+            "text": "3 Epoques Apartments by Adrez\nPrague 1, Czech Republic, Prague\n8.8\n8.8\nExcellent\nExcellent\n721 reviews\nStarting from\n$82\nPrice $82",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=381352&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=381352",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-80",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-82",
+            "role": "link",
+            "text": "The Apartments by The Sloane Club\nKensington and Chelsea, United Kingdom, London\n9.0\n9.0\nWonderful\nWonderful\n259 reviews\nStarting from\n$697\nPrice $697",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=1129506&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=1129506",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-84",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-86",
+            "role": "link",
+            "text": "Cheval Three Quays at The Tower of London\nCity of London, United Kingdom, London\n9.5\n9.5\nExceptional\nExceptional\n827 reviews\nStarting from\n$396\nPrice $396",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=785838&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=785838",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-88",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-90",
+            "role": "link",
+            "text": "Flora Chiado Apartments\nSanta Maria Maior, Portugal, Lisbon\n9.7\n9.7\nExceptional\nExceptional\n165 reviews\nStarting from\n$329\nPrice $329",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=2031755&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=2031755",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-92",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-93",
+            "role": "button",
+            "text": "Previous",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Previous"
+            }
+          },
+          {
+            "id": "pw-94",
+            "role": "button",
+            "text": "Next",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next"
+            }
+          },
+          {
+            "id": "pw-97",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/index.en-us.html",
+              "aria-label": "Hotels",
+              "data-testid": "web-core-stacked-card"
+            }
+          },
+          {
+            "id": "pw-100",
+            "role": "link",
+            "text": "Apartments",
+            "attributes": {
+              "href": "https://www.booking.com/apartments/index.en-us.html",
+              "aria-label": "Apartments",
+              "data-testid": "web-core-stacked-card"
+            }
+          },
+          {
+            "id": "pw-103",
+            "role": "link",
+            "text": "Resorts",
+            "attributes": {
+              "href": "https://www.booking.com/resorts/index.en-us.html",
+              "aria-label": "Resorts",
+              "data-testid": "web-core-stacked-card"
+            }
+          },
+          {
+            "id": "pw-106",
+            "role": "link",
+            "text": "Villas",
+            "attributes": {
+              "href": "https://www.booking.com/villas/index.en-us.html",
+              "aria-label": "Villas",
+              "data-testid": "web-core-stacked-card"
+            }
+          },
+          {
+            "id": "pw-109",
+            "role": "link",
+            "text": "Cabins",
+            "attributes": {
+              "href": "https://www.booking.com/chalet/index.en-us.html",
+              "aria-label": "Cabins",
+              "data-testid": "web-core-stacked-card"
+            }
+          },
+          {
+            "id": "pw-112",
+            "role": "link",
+            "text": "Cottages",
+            "attributes": {
+              "href": "https://www.booking.com/cottages/index.en-us.html",
+              "aria-label": "Cottages",
+              "data-testid": "web-core-stacked-card"
+            }
+          },
+          {
+            "id": "pw-115",
+            "role": "link",
+            "text": "Glamping Sites",
+            "attributes": {
+              "href": "https://www.booking.com/glamping/index.en-us.html",
+              "aria-label": "Glamping Sites",
+              "data-testid": "web-core-stacked-card"
+            }
+          },
+          {
+            "id": "pw-118",
+            "role": "link",
+            "text": "Serviced apartments",
+            "attributes": {
+              "href": "https://www.booking.com/aparthotels/index.en-us.html",
+              "aria-label": "Serviced apartments",
+              "data-testid": "web-core-stacked-card"
+            }
+          },
+          {
+            "id": "pw-121",
+            "role": "link",
+            "text": "Vacation Homes",
+            "attributes": {
+              "href": "https://www.booking.com/holiday-homes/index.en-us.html",
+              "aria-label": "Vacation Homes",
+              "data-testid": "web-core-stacked-card"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://www.booking.com/searchresults.html?ss=Paris%2C%20Ile-de-France%2C%20France&dest_id=-1456928&dest_type=city&checkin=2026-06-17&checkout=2026-06-19&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD"
+        }
+      },
+      "observation": "Opened https://www.booking.com/searchresults.html?ss=Paris%2C%20Ile-de-France%2C%20France&dest_id=-1456928&dest_type=city&checkin=2026-06-17&checkout=2026-06-19&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://www.booking.com/city/fr/paris.html",
+        "title": "10 Best Paris Hotels, France (From US$73)",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#indexsearch"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Booking.com",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "aria-label": "Booking.com",
+              "data-testid": "header-booking-logo"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "USD",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Prices in U.S. Dollar",
+              "data-testid": "header-currency-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Language: English (US)",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Language: English (US)",
+              "data-testid": "header-language-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Customer support",
+            "attributes": {
+              "href": "https://secure.booking.com/help.html?source=header&src=profile_contact_cs",
+              "aria-label": "Customer support",
+              "data-testid": "header-help-center"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "List your property",
+            "attributes": {
+              "href": "https://join.booking.com/?utm_source=topbar",
+              "data-testid": "header-custom-action-button"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Register",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=city&prompt=signin&state=UsQBwUq-fhPs_KG8j-EujaSEyH1Hvu0ai5RDiB9zPzOI0ceySn2IjJDIoj8NvoAT4EWeBwTyStOwaBsLf6pX5hNhan8BDSt73ctM2G7dCzqKJ33JyaJYwCbLxh4TaaIpm56P4vvqmD5lTt2GDzdUBG7rtgSawEwHfp9m35t42-CdG0zuoqP-Q5LVmlo6oKsE4splU96Njn-DHRG6NT9tP4cT_QXWlMkja6LPEcGQeu6MpQoc3hSC_LnAaHAR9guMw5oc72qJZg%3D%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Register an account",
+              "data-testid": "header-sign-up-button"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=city&prompt=signin&state=UsQBwUq-fhPs_KG8j-EujaSEyH1Hvu0ai5RDiB9zPzOI0ceySn2IjJDIoj8NvoAT4EWeBwTyStOwaBsLf6pX5hNhan8BDSt73ctM2G7dCzqKJ33JyaJYwCbLxh4TaaIpm56P4vvqmD5lTt2GDzdUBG7rtgSawEwHfp9m35t42-CdG0zuoqP-Q5LVmlo6oKsE4splU96Njn-DHRG6NT9tP4cT_QXWlMkja6LPEcGQeu6MpQoc3hSC_LnAaHAR9guMw5oc72qJZg%3D%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Sign in",
+              "data-testid": "header-sign-in-button"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "combobox",
+            "text": "Where are you going?",
+            "attributes": {
+              "id": ":Raalqmkm:",
+              "name": "ss",
+              "aria-label": "Where are you going?",
+              "placeholder": "Where are you going?",
+              "value": "Paris"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "button",
+            "text": "Check-in date\n\u2014\nCheck-out date",
+            "attributes": {
+              "type": "button",
+              "data-testid": "searchbox-dates-container"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "button",
+            "text": "Calendar",
+            "attributes": {
+              "id": "calendar-searchboxdatepicker-tab-trigger",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "button",
+            "text": "I'm flexible",
+            "attributes": {
+              "id": "flexible-searchboxdatepicker-tab-trigger",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "button",
+            "text": "Next month",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next month"
+            }
+          },
+          {
+            "id": "pw-176",
+            "role": "button",
+            "text": "Previous",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Previous"
+            }
+          },
+          {
+            "id": "pw-177",
+            "role": "button",
+            "text": "Next",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next"
+            }
+          },
+          {
+            "id": "pw-179",
+            "role": "button",
+            "text": "2 adults \u00b7 0 children \u00b7 1 room",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Number of travelers and rooms. Currently selected: 2 adults \u00b7 0 children \u00b7 1 room",
+              "data-testid": "occupancy-config"
+            }
+          },
+          {
+            "id": "pw-180",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-184",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-185",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/index.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-186",
+            "role": "link",
+            "text": "France",
+            "attributes": {
+              "href": "https://www.booking.com/country/fr.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-187",
+            "role": "link",
+            "text": "Ile de France",
+            "attributes": {
+              "href": "https://www.booking.com/region/fr/ile-de-france.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-188",
+            "role": "link",
+            "text": "Show hotels on map",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html"
+            }
+          },
+          {
+            "id": "pw-189",
+            "role": "link",
+            "text": "5 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-191",
+            "role": "link",
+            "text": "4 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-193",
+            "role": "link",
+            "text": "3 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-195",
+            "role": "link",
+            "text": "2 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-197",
+            "role": "link",
+            "text": "1 star",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-199",
+            "role": "link",
+            "text": "Wonderful: 9+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-201",
+            "role": "link",
+            "text": "Very Good: 8+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-203",
+            "role": "link",
+            "text": "Good: 7+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-205",
+            "role": "link",
+            "text": "Pleasant: 6+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-207",
+            "role": "button",
+            "text": "Our top picks",
+            "attributes": {}
+          },
+          {
+            "id": "pw-208",
+            "role": "button",
+            "text": "Lowest Price First",
+            "attributes": {}
+          },
+          {
+            "id": "pw-209",
+            "role": "button",
+            "text": "Star rating and price",
+            "attributes": {}
+          },
+          {
+            "id": "pw-210",
+            "role": "button",
+            "text": "Top reviewed",
+            "attributes": {}
+          },
+          {
+            "id": "pw-211",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-212",
+            "role": "link",
+            "text": "1.75 Paris Le Charme\nHotel in 13th arr., Paris",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/fr/1-75-paris-le-charme.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-215",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-216",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-217",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-218",
+            "role": "link",
+            "text": "Les Rives Oceanik\nHotel in 5th arr., Paris",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/fr/les-rives-oceanik.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-221",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-222",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-223",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-224",
+            "role": "link",
+            "text": "LE CLARK HOTEL\nHotel in 11th arr., Paris",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/fr/le-clark.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-227",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-228",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-229",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-230",
+            "role": "link",
+            "text": "Too Hotel & Spa Paris - MGallery Collection\nHotel in 13th arr., Paris",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/fr/too-paris-mgallery.html",
+              "data-testid": "titleLink"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => {\n  const txt = document.body.innerText;\n  return {url: location.href, title: document.title, text: txt.slice(0, 5000)};\n})()"
+        }
+      },
+      "observation": "Eval: {\"url\": \"https://www.booking.com/city/fr/paris.html\", \"title\": \"10 Best Paris Hotels, France (From US$73)\", \"text\": \"Skip to main content\\nUSD\\nList your property\\nRegister\\nSign in\\nStays\\nFlights\\nFlight + Hotel\\nCar rental\\nCruises\\nAttractions\\nAirport taxis\\nSearch hotels in Paris\\n\\nEnter your dates to see the latest prices and deals for Paris hotels\\n\\nCheck-in date\\n\\u2014\\nCheck-out date\\nCalendar\\nI'm flexible\\nMay 2026\\nSu\\n\\t\\nMo\\n\\t\\nTu\\n\\t\\nWe\\n\\t\\nTh\\n\\t\\nFr\\n\\t\\nSa\\n\\n\\t\\t\\t\\t\\t\\"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://www.booking.com/city/fr/paris.html",
+        "title": "10 Best Paris Hotels, France (From US$73)",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#indexsearch"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Booking.com",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "aria-label": "Booking.com",
+              "data-testid": "header-booking-logo"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "USD",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Prices in U.S. Dollar",
+              "data-testid": "header-currency-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Language: English (US)",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Language: English (US)",
+              "data-testid": "header-language-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Customer support",
+            "attributes": {
+              "href": "https://secure.booking.com/help.html?source=header&src=profile_contact_cs",
+              "aria-label": "Customer support",
+              "data-testid": "header-help-center"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "List your property",
+            "attributes": {
+              "href": "https://join.booking.com/?utm_source=topbar",
+              "data-testid": "header-custom-action-button"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Register",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=city&prompt=signin&state=UsQBwUq-fhPs_KG8j-EujaSEyH1Hvu0ai5RDiB9zPzOI0ceySn2IjJDIoj8NvoAT4EWeBwTyStOwaBsLf6pX5hNhan8BDSt73ctM2G7dCzqKJ33JyaJYwCbLxh4TaaIpm56P4vvqmD5lTt2GDzdUBG7rtgSawEwHfp9m35t42-CdG0zuoqP-Q5LVmlo6oKsE4splU96Njn-DHRG6NT9tP4cT_QXWlMkja6LPEcGQeu6MpQoc3hSC_LnAaHAR9guMw5oc72qJZg%3D%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Register an account",
+              "data-testid": "header-sign-up-button"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=city&prompt=signin&state=UsQBwUq-fhPs_KG8j-EujaSEyH1Hvu0ai5RDiB9zPzOI0ceySn2IjJDIoj8NvoAT4EWeBwTyStOwaBsLf6pX5hNhan8BDSt73ctM2G7dCzqKJ33JyaJYwCbLxh4TaaIpm56P4vvqmD5lTt2GDzdUBG7rtgSawEwHfp9m35t42-CdG0zuoqP-Q5LVmlo6oKsE4splU96Njn-DHRG6NT9tP4cT_QXWlMkja6LPEcGQeu6MpQoc3hSC_LnAaHAR9guMw5oc72qJZg%3D%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Sign in",
+              "data-testid": "header-sign-in-button"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "combobox",
+            "text": "Where are you going?",
+            "attributes": {
+              "id": ":ri:",
+              "name": "ss",
+              "aria-label": "Where are you going?",
+              "placeholder": "Where are you going?",
+              "value": "Paris"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "button",
+            "text": "Check-in date\n\u2014\nCheck-out date",
+            "attributes": {
+              "type": "button",
+              "data-testid": "searchbox-dates-container"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "Next month",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next month"
+            }
+          },
+          {
+            "id": "pw-179",
+            "role": "button",
+            "text": "Previous",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Previous"
+            }
+          },
+          {
+            "id": "pw-180",
+            "role": "button",
+            "text": "Next",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next"
+            }
+          },
+          {
+            "id": "pw-182",
+            "role": "button",
+            "text": "2 adults \u00b7 0 children \u00b7 1 room",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Number of travelers and rooms. Currently selected: 2 adults \u00b7 0 children \u00b7 1 room",
+              "data-testid": "occupancy-config"
+            }
+          },
+          {
+            "id": "pw-183",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-188",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-189",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/index.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-190",
+            "role": "link",
+            "text": "France",
+            "attributes": {
+              "href": "https://www.booking.com/country/fr.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-191",
+            "role": "link",
+            "text": "Ile de France",
+            "attributes": {
+              "href": "https://www.booking.com/region/fr/ile-de-france.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-192",
+            "role": "link",
+            "text": "Show hotels on map",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html"
+            }
+          },
+          {
+            "id": "pw-193",
+            "role": "link",
+            "text": "5 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-195",
+            "role": "link",
+            "text": "4 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-197",
+            "role": "link",
+            "text": "3 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-199",
+            "role": "link",
+            "text": "2 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-201",
+            "role": "link",
+            "text": "1 star",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-203",
+            "role": "link",
+            "text": "Wonderful: 9+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-205",
+            "role": "link",
+            "text": "Very Good: 8+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-207",
+            "role": "link",
+            "text": "Good: 7+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-209",
+            "role": "link",
+            "text": "Pleasant: 6+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-211",
+            "role": "button",
+            "text": "Our top picks",
+            "attributes": {}
+          },
+          {
+            "id": "pw-212",
+            "role": "button",
+            "text": "Lowest Price First",
+            "attributes": {}
+          },
+          {
+            "id": "pw-213",
+            "role": "button",
+            "text": "Star rating and price",
+            "attributes": {}
+          },
+          {
+            "id": "pw-214",
+            "role": "button",
+            "text": "Top reviewed",
+            "attributes": {}
+          },
+          {
+            "id": "pw-215",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-216",
+            "role": "link",
+            "text": "1.75 Paris Le Charme\nHotel in 13th arr., Paris",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/fr/1-75-paris-le-charme.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-219",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-220",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-221",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-222",
+            "role": "link",
+            "text": "Les Rives Oceanik\nHotel in 5th arr., Paris",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/fr/les-rives-oceanik.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-225",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-226",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-227",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-228",
+            "role": "link",
+            "text": "LE CLARK HOTEL\nHotel in 11th arr., Paris",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/fr/le-clark.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-231",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-232",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-233",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-234",
+            "role": "link",
+            "text": "Too Hotel & Spa Paris - MGallery Collection\nHotel in 13th arr., Paris",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/fr/too-paris-mgallery.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-237",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-238",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => {\n  const buttons = [...document.querySelectorAll('button, [role=button], a')].map((el, i) => ({\n    i,\n    tag: el.tagName,\n    text: (el.innerText || el.textContent || '').trim().replace(/\\s+/g,' ').slice(0,100),\n    aria: el.getAttribute('aria-label'),\n    data: el.getAttribute('data-testid'),\n    type: el.getAttribute('type'),\n    id: el.id,\n    href: el.href || null\n  })).filter(x => x.text || x.aria || x.data || x.href);\n  return {url: location.href, title: document.title, buttons: buttons.slice(0,220), body: document.body.innerText.slice(0,3000)};\n})()"
+        }
+      },
+      "observation": "Eval: {\"url\": \"https://www.booking.com/city/fr/paris.html\", \"title\": \"10 Best Paris Hotels, France (From US$73)\", \"buttons\": [{\"i\": 0, \"tag\": \"A\", \"text\": \"Skip to main content\", \"aria\": null, \"data\": null, \"type\": null, \"id\": \"\", \"href\": \"https://www.booking.com/city/fr/paris.html#indexsearch\"}, {\"i\": 1, \"tag\": \"A\", \"text\": \"\", \"aria\": \"Booking.com\", \"data\": \"header-booking-logo\", \"type\": null, \"id\": \"\", \"href\": \"https://www.booking.com/index.html\"}, {\"i\": 2, \"tag\": \"BUTTON\", \"text\": \"USD\", \"aria\": \""
+    },
+    {
+      "step": 4,
+      "state": {
+        "url": "https://www.booking.com/city/fr/paris.html",
+        "title": "10 Best Paris Hotels, France (From US$73)",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#indexsearch"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Booking.com",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "aria-label": "Booking.com",
+              "data-testid": "header-booking-logo"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "USD",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Prices in U.S. Dollar",
+              "data-testid": "header-currency-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Language: English (US)",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Language: English (US)",
+              "data-testid": "header-language-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Customer support",
+            "attributes": {
+              "href": "https://secure.booking.com/help.html?source=header&src=profile_contact_cs",
+              "aria-label": "Customer support",
+              "data-testid": "header-help-center"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "List your property",
+            "attributes": {
+              "href": "https://join.booking.com/?utm_source=topbar",
+              "data-testid": "header-custom-action-button"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Register",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=city&prompt=signin&state=UsQBwUq-fhPs_KG8j-EujaSEyH1Hvu0ai5RDiB9zPzOI0ceySn2IjJDIoj8NvoAT4EWeBwTyStOwaBsLf6pX5hNhan8BDSt73ctM2G7dCzqKJ33JyaJYwCbLxh4TaaIpm56P4vvqmD5lTt2GDzdUBG7rtgSawEwHfp9m35t42-CdG0zuoqP-Q5LVmlo6oKsE4splU96Njn-DHRG6NT9tP4cT_QXWlMkja6LPEcGQeu6MpQoc3hSC_LnAaHAR9guMw5oc72qJZg%3D%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Register an account",
+              "data-testid": "header-sign-up-button"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=city&prompt=signin&state=UsQBwUq-fhPs_KG8j-EujaSEyH1Hvu0ai5RDiB9zPzOI0ceySn2IjJDIoj8NvoAT4EWeBwTyStOwaBsLf6pX5hNhan8BDSt73ctM2G7dCzqKJ33JyaJYwCbLxh4TaaIpm56P4vvqmD5lTt2GDzdUBG7rtgSawEwHfp9m35t42-CdG0zuoqP-Q5LVmlo6oKsE4splU96Njn-DHRG6NT9tP4cT_QXWlMkja6LPEcGQeu6MpQoc3hSC_LnAaHAR9guMw5oc72qJZg%3D%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Sign in",
+              "data-testid": "header-sign-in-button"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "combobox",
+            "text": "Where are you going?",
+            "attributes": {
+              "id": ":ri:",
+              "name": "ss",
+              "aria-label": "Where are you going?",
+              "placeholder": "Where are you going?",
+              "value": "Paris"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "button",
+            "text": "Check-in date\n\u2014\nCheck-out date",
+            "attributes": {
+              "type": "button",
+              "data-testid": "searchbox-dates-container"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "Next month",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next month"
+            }
+          },
+          {
+            "id": "pw-179",
+            "role": "button",
+            "text": "Previous",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Previous"
+            }
+          },
+          {
+            "id": "pw-180",
+            "role": "button",
+            "text": "Next",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next"
+            }
+          },
+          {
+            "id": "pw-182",
+            "role": "button",
+            "text": "2 adults \u00b7 0 children \u00b7 1 room",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Number of travelers and rooms. Currently selected: 2 adults \u00b7 0 children \u00b7 1 room",
+              "data-testid": "occupancy-config"
+            }
+          },
+          {
+            "id": "pw-183",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-188",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-189",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/index.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-190",
+            "role": "link",
+            "text": "France",
+            "attributes": {
+              "href": "https://www.booking.com/country/fr.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-191",
+            "role": "link",
+            "text": "Ile de France",
+            "attributes": {
+              "href": "https://www.booking.com/region/fr/ile-de-france.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-192",
+            "role": "link",
+            "text": "Show hotels on map",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html"
+            }
+          },
+          {
+            "id": "pw-193",
+            "role": "link",
+            "text": "5 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-195",
+            "role": "link",
+            "text": "4 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-197",
+            "role": "link",
+            "text": "3 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-199",
+            "role": "link",
+            "text": "2 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-201",
+            "role": "link",
+            "text": "1 star",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-203",
+            "role": "link",
+            "text": "Wonderful: 9+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-205",
+            "role": "link",
+            "text": "Very Good: 8+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-207",
+            "role": "link",
+            "text": "Good: 7+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-209",
+            "role": "link",
+            "text": "Pleasant: 6+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-211",
+            "role": "button",
+            "text": "Our top picks",
+            "attributes": {}
+          },
+          {
+            "id": "pw-212",
+            "role": "button",
+            "text": "Lowest Price First",
+            "attributes": {}
+          },
+          {
+            "id": "pw-213",
+            "role": "button",
+            "text": "Star rating and price",
+            "attributes": {}
+          },
+          {
+            "id": "pw-214",
+            "role": "button",
+            "text": "Top reviewed",
+            "attributes": {}
+          },
+          {
+            "id": "pw-215",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-216",
+            "role": "link",
+            "text": "1.75 Paris Le Charme\nHotel in 13th arr., Paris",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/fr/1-75-paris-le-charme.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-219",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-220",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-221",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-222",
+            "role": "link",
+            "text": "Les Rives Oceanik\nHotel in 5th arr., Paris",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/fr/les-rives-oceanik.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-225",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-226",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-227",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-228",
+            "role": "link",
+            "text": "LE CLARK HOTEL\nHotel in 11th arr., Paris",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/fr/le-clark.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-231",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-232",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-233",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-234",
+            "role": "link",
+            "text": "Too Hotel & Spa Paris - MGallery Collection\nHotel in 13th arr., Paris",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/fr/too-paris-mgallery.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-237",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-238",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => {\n  const els = [...document.querySelectorAll('button, span, div, td')];\n  return els.map((el, i) => ({\n    i,\n    tag: el.tagName,\n    role: el.getAttribute('role'),\n    text: (el.innerText || el.textContent || '').trim().replace(/\\s+/g,' ').slice(0,80),\n    aria: el.getAttribute('aria-label'),\n    data: el.getAttribute('data-testid'),\n    disabled: el.disabled || el.getAttribute('aria-disabled'),\n    classes: el.className && String(el.className).slice(0,80)\n  })).filter(x => x.text || x.aria || x.data).slice(0,300);\n})()"
+        }
+      },
+      "observation": "Eval: [{\"i\": 0, \"tag\": \"DIV\", \"role\": null, \"text\": \"Skip to main content\", \"aria\": null, \"data\": null, \"disabled\": null, \"classes\": \"bypass_menu\"}, {\"i\": 1, \"tag\": \"DIV\", \"role\": null, \"text\": \"Skip to main content\", \"aria\": null, \"data\": null, \"disabled\": null, \"classes\": \"bui-inline-container bui-inline-container--align bui-inline-container--size-smal\"}, {\"i\": 2, \"tag\": \"DIV\", \"role\": null, \"text\": \"Skip to main content\", \"aria\": null, \"data\": null, \"disabled\": null, \"classes\": \"bui-inline-containe"
+    },
+    {
+      "step": 5,
+      "state": {
+        "url": "https://www.booking.com/city/fr/paris.html",
+        "title": "10 Best Paris Hotels, France (From US$73)",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#indexsearch"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Booking.com",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "aria-label": "Booking.com",
+              "data-testid": "header-booking-logo"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "USD",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Prices in U.S. Dollar",
+              "data-testid": "header-currency-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Language: English (US)",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Language: English (US)",
+              "data-testid": "header-language-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Customer support",
+            "attributes": {
+              "href": "https://secure.booking.com/help.html?source=header&src=profile_contact_cs",
+              "aria-label": "Customer support",
+              "data-testid": "header-help-center"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "List your property",
+            "attributes": {
+              "href": "https://join.booking.com/?utm_source=topbar",
+              "data-testid": "header-custom-action-button"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Register",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=city&prompt=signin&state=UsQBwUq-fhPs_KG8j-EujaSEyH1Hvu0ai5RDiB9zPzOI0ceySn2IjJDIoj8NvoAT4EWeBwTyStOwaBsLf6pX5hNhan8BDSt73ctM2G7dCzqKJ33JyaJYwCbLxh4TaaIpm56P4vvqmD5lTt2GDzdUBG7rtgSawEwHfp9m35t42-CdG0zuoqP-Q5LVmlo6oKsE4splU96Njn-DHRG6NT9tP4cT_QXWlMkja6LPEcGQeu6MpQoc3hSC_LnAaHAR9guMw5oc72qJZg%3D%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Register an account",
+              "data-testid": "header-sign-up-button"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=city&prompt=signin&state=UsQBwUq-fhPs_KG8j-EujaSEyH1Hvu0ai5RDiB9zPzOI0ceySn2IjJDIoj8NvoAT4EWeBwTyStOwaBsLf6pX5hNhan8BDSt73ctM2G7dCzqKJ33JyaJYwCbLxh4TaaIpm56P4vvqmD5lTt2GDzdUBG7rtgSawEwHfp9m35t42-CdG0zuoqP-Q5LVmlo6oKsE4splU96Njn-DHRG6NT9tP4cT_QXWlMkja6LPEcGQeu6MpQoc3hSC_LnAaHAR9guMw5oc72qJZg%3D%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Sign in",
+              "data-testid": "header-sign-in-button"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "combobox",
+            "text": "Where are you going?",
+            "attributes": {
+              "id": ":ri:",
+              "name": "ss",
+              "aria-label": "Where are you going?",
+              "placeholder": "Where are you going?",
+              "value": "Paris"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "button",
+            "text": "Check-in date\n\u2014\nCheck-out date",
+            "attributes": {
+              "type": "button",
+              "data-testid": "searchbox-dates-container"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "Next month",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next month"
+            }
+          },
+          {
+            "id": "pw-179",
+            "role": "button",
+            "text": "Previous",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Previous"
+            }
+          },
+          {
+            "id": "pw-180",
+            "role": "button",
+            "text": "Next",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next"
+            }
+          },
+          {
+            "id": "pw-182",
+            "role": "button",
+            "text": "2 adults \u00b7 0 children \u00b7 1 room",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Number of travelers and rooms. Currently selected: 2 adults \u00b7 0 children \u00b7 1 room",
+              "data-testid": "occupancy-config"
+            }
+          },
+          {
+            "id": "pw-183",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-188",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-189",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/index.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-190",
+            "role": "link",
+            "text": "France",
+            "attributes": {
+              "href": "https://www.booking.com/country/fr.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-191",
+            "role": "link",
+            "text": "Ile de France",
+            "attributes": {
+              "href": "https://www.booking.com/region/fr/ile-de-france.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-192",
+            "role": "link",
+            "text": "Show hotels on map",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html"
+            }
+          },
+          {
+            "id": "pw-193",
+            "role": "link",
+            "text": "5 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-195",
+            "role": "link",
+            "text": "4 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-197",
+            "role": "link",
+            "text": "3 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-199",
+            "role": "link",
+            "text": "2 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-201",
+            "role": "link",
+            "text": "1 star",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-203",
+            "role": "link",
+            "text": "Wonderful: 9+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-205",
+            "role": "link",
+            "text": "Very Good: 8+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-207",
+            "role": "link",
+            "text": "Good: 7+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-209",
+            "role": "link",
+            "text": "Pleasant: 6+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-211",
+            "role": "button",
+            "text": "Our top picks",
+            "attributes": {}
+          },
+          {
+            "id": "pw-212",
+            "role": "button",
+            "text": "Lowest Price First",
+            "attributes": {}
+          },
+          {
+            "id": "pw-213",
+            "role": "button",
+            "text": "Star rating and price",
+            "attributes": {}
+          },
+          {
+            "id": "pw-214",
+            "role": "button",
+            "text": "Top reviewed",
+            "attributes": {}
+          },
+          {
+            "id": "pw-215",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-216",
+            "role": "link",
+            "text": "1.75 Paris Le Charme\nHotel in 13th arr., Paris",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/fr/1-75-paris-le-charme.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-219",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-220",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-221",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-222",
+            "role": "link",
+            "text": "Les Rives Oceanik\nHotel in 5th arr., Paris",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/fr/les-rives-oceanik.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-225",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-226",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-227",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-228",
+            "role": "link",
+            "text": "LE CLARK HOTEL\nHotel in 11th arr., Paris",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/fr/le-clark.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-231",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-232",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-233",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-234",
+            "role": "link",
+            "text": "Too Hotel & Spa Paris - MGallery Collection\nHotel in 13th arr., Paris",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/fr/too-paris-mgallery.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-237",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-238",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => {\n  const out = [];\n  for (const el of document.querySelectorAll('button, [role=\"button\"], td, [data-date], [aria-label]')) {\n    const text = (el.innerText || el.textContent || '').trim().replace(/\\s+/g,' ');\n    const aria = el.getAttribute('aria-label');\n    const dataDate = el.getAttribute('data-date') || el.getAttribute('data-testid');\n    if ((text || aria || dataDate) && (dataDate || /2026|May|June|Jun|17|18|19|Next|Previous|Search|Check/i.test(text + ' ' + aria))) {\n      out.push({tag: el.tagName, text: text.slice(0,120), aria, dataDate, role: el.getAttribute('role'), disabled: el.disabled || el.getAttribute('aria-disabled')});\n    }\n  }\n  return {url: location.href, title: document.title, items: out.slice(0,200), body: document.body.innerText.slice(0,2000)};\n})()"
+        }
+      },
+      "observation": "Eval: {\"url\": \"https://www.booking.com/city/fr/paris.html\", \"title\": \"10 Best Paris Hotels, France (From US$73)\", \"items\": [{\"tag\": \"A\", \"text\": \"\", \"aria\": \"Booking.com\", \"dataDate\": \"header-booking-logo\", \"role\": null, \"disabled\": null}, {\"tag\": \"BUTTON\", \"text\": \"USD\", \"aria\": \"Prices in U.S. Dollar\", \"dataDate\": \"header-currency-picker-trigger\", \"role\": null, \"disabled\": null}, {\"tag\": \"BUTTON\", \"text\": \"\", \"aria\": \"Language: English (US)\", \"dataDate\": \"header-language-picker-trigger\", \"role\": nul"
+    },
+    {
+      "step": 6,
+      "state": {
+        "url": "https://www.booking.com/city/fr/paris.html",
+        "title": "10 Best Paris Hotels, France (From US$73)",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#indexsearch"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Booking.com",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "aria-label": "Booking.com",
+              "data-testid": "header-booking-logo"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "USD",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Prices in U.S. Dollar",
+              "data-testid": "header-currency-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Language: English (US)",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Language: English (US)",
+              "data-testid": "header-language-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Customer support",
+            "attributes": {
+              "href": "https://secure.booking.com/help.html?source=header&src=profile_contact_cs",
+              "aria-label": "Customer support",
+              "data-testid": "header-help-center"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "List your property",
+            "attributes": {
+              "href": "https://join.booking.com/?utm_source=topbar",
+              "data-testid": "header-custom-action-button"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Register",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=city&prompt=signin&state=UsQBwUq-fhPs_KG8j-EujaSEyH1Hvu0ai5RDiB9zPzOI0ceySn2IjJDIoj8NvoAT4EWeBwTyStOwaBsLf6pX5hNhan8BDSt73ctM2G7dCzqKJ33JyaJYwCbLxh4TaaIpm56P4vvqmD5lTt2GDzdUBG7rtgSawEwHfp9m35t42-CdG0zuoqP-Q5LVmlo6oKsE4splU96Njn-DHRG6NT9tP4cT_QXWlMkja6LPEcGQeu6MpQoc3hSC_LnAaHAR9guMw5oc72qJZg%3D%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Register an account",
+              "data-testid": "header-sign-up-button"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=city&prompt=signin&state=UsQBwUq-fhPs_KG8j-EujaSEyH1Hvu0ai5RDiB9zPzOI0ceySn2IjJDIoj8NvoAT4EWeBwTyStOwaBsLf6pX5hNhan8BDSt73ctM2G7dCzqKJ33JyaJYwCbLxh4TaaIpm56P4vvqmD5lTt2GDzdUBG7rtgSawEwHfp9m35t42-CdG0zuoqP-Q5LVmlo6oKsE4splU96Njn-DHRG6NT9tP4cT_QXWlMkja6LPEcGQeu6MpQoc3hSC_LnAaHAR9guMw5oc72qJZg%3D%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Sign in",
+              "data-testid": "header-sign-in-button"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "combobox",
+            "text": "Where are you going?",
+            "attributes": {
+              "id": ":ri:",
+              "name": "ss",
+              "aria-label": "Where are you going?",
+              "placeholder": "Where are you going?",
+              "value": "Paris"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "button",
+            "text": "Check-in date\n\u2014\nCheck-out date",
+            "attributes": {
+              "type": "button",
+              "data-testid": "searchbox-dates-container"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "Next month",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next month"
+            }
+          },
+          {
+            "id": "pw-179",
+            "role": "button",
+            "text": "Previous",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Previous"
+            }
+          },
+          {
+            "id": "pw-180",
+            "role": "button",
+            "text": "Next",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next"
+            }
+          },
+          {
+            "id": "pw-182",
+            "role": "button",
+            "text": "2 adults \u00b7 0 children \u00b7 1 room",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Number of travelers and rooms. Currently selected: 2 adults \u00b7 0 children \u00b7 1 room",
+              "data-testid": "occupancy-config"
+            }
+          },
+          {
+            "id": "pw-183",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-188",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-189",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/index.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-190",
+            "role": "link",
+            "text": "France",
+            "attributes": {
+              "href": "https://www.booking.com/country/fr.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-191",
+            "role": "link",
+            "text": "Ile de France",
+            "attributes": {
+              "href": "https://www.booking.com/region/fr/ile-de-france.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-192",
+            "role": "link",
+            "text": "Show hotels on map",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html"
+            }
+          },
+          {
+            "id": "pw-193",
+            "role": "link",
+            "text": "5 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-195",
+            "role": "link",
+            "text": "4 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-197",
+            "role": "link",
+            "text": "3 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-199",
+            "role": "link",
+            "text": "2 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-201",
+            "role": "link",
+            "text": "1 star",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-203",
+            "role": "link",
+            "text": "Wonderful: 9+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-205",
+            "role": "link",
+            "text": "Very Good: 8+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-207",
+            "role": "link",
+            "text": "Good: 7+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-209",
+            "role": "link",
+            "text": "Pleasant: 6+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-211",
+            "role": "button",
+            "text": "Our top picks",
+            "attributes": {}
+          },
+          {
+            "id": "pw-212",
+            "role": "button",
+            "text": "Lowest Price First",
+            "attributes": {}
+          },
+          {
+            "id": "pw-213",
+            "role": "button",
+            "text": "Star rating and price",
+            "attributes": {}
+          },
+          {
+            "id": "pw-214",
+            "role": "button",
+            "text": "Top reviewed",
+            "attributes": {}
+          },
+          {
+            "id": "pw-215",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-216",
+            "role": "link",
+            "text": "1.75 Paris Le Charme\nHotel in 13th arr., Paris",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/fr/1-75-paris-le-charme.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-219",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-220",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-221",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-222",
+            "role": "link",
+            "text": "Les Rives Oceanik\nHotel in 5th arr., Paris",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/fr/les-rives-oceanik.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-225",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-226",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-227",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-228",
+            "role": "link",
+            "text": "LE CLARK HOTEL\nHotel in 11th arr., Paris",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/fr/le-clark.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-231",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-232",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-233",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-234",
+            "role": "link",
+            "text": "Too Hotel & Spa Paris - MGallery Collection\nHotel in 13th arr., Paris",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/fr/too-paris-mgallery.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-237",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-238",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "Error planning: Extra data: line 1 column 675 (char 674)"
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

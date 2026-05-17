@@ -1,0 +1,714 @@
+{
+  "benchmark": "webvoyager",
+  "total": 100,
+  "passed": 66,
+  "failed": 34,
+  "pass_rate": 0.66,
+  "timestamp": "2026-05-17T19:15:46Z",
+  "results": [
+    {
+      "id": "wv-001",
+      "passed": true,
+      "duration_s": 45,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-002",
+      "passed": true,
+      "duration_s": 51,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-003",
+      "passed": true,
+      "duration_s": 13,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-004",
+      "passed": true,
+      "duration_s": 42,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-005",
+      "passed": false,
+      "duration_s": 88,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-006",
+      "passed": false,
+      "duration_s": 60,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-007",
+      "passed": true,
+      "duration_s": 31,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-008",
+      "passed": false,
+      "duration_s": 6,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-009",
+      "passed": true,
+      "duration_s": 27,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-010",
+      "passed": true,
+      "duration_s": 86,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-011",
+      "passed": true,
+      "duration_s": 25,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-012",
+      "passed": true,
+      "duration_s": 25,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-013",
+      "passed": true,
+      "duration_s": 20,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-014",
+      "passed": true,
+      "duration_s": 111,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-015",
+      "passed": true,
+      "duration_s": 33,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-016",
+      "passed": false,
+      "duration_s": 140,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-017",
+      "passed": true,
+      "duration_s": 44,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-018",
+      "passed": false,
+      "duration_s": 137,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-019",
+      "passed": true,
+      "duration_s": 22,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-020",
+      "passed": true,
+      "duration_s": 25,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-021",
+      "passed": false,
+      "duration_s": 15,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-022",
+      "passed": false,
+      "duration_s": 28,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-023",
+      "passed": true,
+      "duration_s": 25,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-024",
+      "passed": true,
+      "duration_s": 58,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-025",
+      "passed": false,
+      "duration_s": 44,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-026",
+      "passed": false,
+      "duration_s": 106,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-027",
+      "passed": true,
+      "duration_s": 141,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-028",
+      "passed": true,
+      "duration_s": 79,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-029",
+      "passed": true,
+      "duration_s": 11,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-030",
+      "passed": true,
+      "duration_s": 52,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-031",
+      "passed": true,
+      "duration_s": 22,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-032",
+      "passed": false,
+      "duration_s": 62,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-033",
+      "passed": false,
+      "duration_s": 80,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-034",
+      "passed": true,
+      "duration_s": 20,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-035",
+      "passed": false,
+      "duration_s": 158,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-036",
+      "passed": false,
+      "duration_s": 309,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-037",
+      "passed": false,
+      "duration_s": 43,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-038",
+      "passed": true,
+      "duration_s": 14,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-039",
+      "passed": true,
+      "duration_s": 14,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-040",
+      "passed": true,
+      "duration_s": 49,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-041",
+      "passed": true,
+      "duration_s": 44,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-042",
+      "passed": true,
+      "duration_s": 30,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-043",
+      "passed": true,
+      "duration_s": 67,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-044",
+      "passed": false,
+      "duration_s": 28,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-045",
+      "passed": false,
+      "duration_s": 203,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-046",
+      "passed": false,
+      "duration_s": 40,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-047",
+      "passed": true,
+      "duration_s": 35,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-048",
+      "passed": true,
+      "duration_s": 57,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-049",
+      "passed": true,
+      "duration_s": 66,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-050",
+      "passed": false,
+      "duration_s": 30,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-051",
+      "passed": true,
+      "duration_s": 72,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-052",
+      "passed": true,
+      "duration_s": 35,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-053",
+      "passed": false,
+      "duration_s": 53,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-054",
+      "passed": true,
+      "duration_s": 24,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-055",
+      "passed": true,
+      "duration_s": 61,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-056",
+      "passed": true,
+      "duration_s": 16,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-057",
+      "passed": true,
+      "duration_s": 52,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-058",
+      "passed": true,
+      "duration_s": 11,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-059",
+      "passed": true,
+      "duration_s": 32,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-060",
+      "passed": true,
+      "duration_s": 38,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-061",
+      "passed": true,
+      "duration_s": 34,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-062",
+      "passed": true,
+      "duration_s": 23,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-063",
+      "passed": true,
+      "duration_s": 18,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-064",
+      "passed": true,
+      "duration_s": 20,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-065",
+      "passed": false,
+      "duration_s": 99,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-066",
+      "passed": false,
+      "duration_s": 191,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-067",
+      "passed": true,
+      "duration_s": 43,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-068",
+      "passed": false,
+      "duration_s": 39,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-069",
+      "passed": false,
+      "duration_s": 122,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-070",
+      "passed": true,
+      "duration_s": 34,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-071",
+      "passed": true,
+      "duration_s": 18,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-072",
+      "passed": false,
+      "duration_s": 121,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-073",
+      "passed": true,
+      "duration_s": 31,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-074",
+      "passed": true,
+      "duration_s": 31,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-075",
+      "passed": true,
+      "duration_s": 48,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-076",
+      "passed": false,
+      "duration_s": 72,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-077",
+      "passed": false,
+      "duration_s": 70,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-078",
+      "passed": false,
+      "duration_s": 18,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-079",
+      "passed": true,
+      "duration_s": 63,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-080",
+      "passed": true,
+      "duration_s": 25,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-081",
+      "passed": false,
+      "duration_s": 59,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-082",
+      "passed": true,
+      "duration_s": 22,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-083",
+      "passed": true,
+      "duration_s": 18,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-084",
+      "passed": true,
+      "duration_s": 21,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-085",
+      "passed": true,
+      "duration_s": 36,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-086",
+      "passed": false,
+      "duration_s": 94,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-087",
+      "passed": false,
+      "duration_s": 38,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-088",
+      "passed": true,
+      "duration_s": 34,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-089",
+      "passed": true,
+      "duration_s": 41,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-090",
+      "passed": false,
+      "duration_s": 77,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-091",
+      "passed": true,
+      "duration_s": 33,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-092",
+      "passed": false,
+      "duration_s": 113,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-093",
+      "passed": true,
+      "duration_s": 28,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-094",
+      "passed": false,
+      "error": "Task timed out - X.com login wall",
+      "duration_s": 180,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-095",
+      "passed": true,
+      "duration_s": 18,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-096",
+      "passed": true,
+      "duration_s": 21,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-097",
+      "passed": true,
+      "duration_s": 12,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-098",
+      "passed": true,
+      "duration_s": 38,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-099",
+      "passed": false,
+      "duration_s": 111,
+      "final_answer": "",
+      "steps": []
+    },
+    {
+      "id": "wv-100",
+      "passed": true,
+      "duration_s": 42,
+      "final_answer": "",
+      "steps": []
+    }
+  ],
+  "model": "gpt-5.5",
+  "reasoning_effort": "high",
+  "notes": "wv-094 (X.com) timed out due to login wall. 99/100 tasks evaluated."
+}

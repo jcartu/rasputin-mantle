@@ -1,0 +1,1940 @@
+{
+  "task_id": "wv-043",
+  "task_description": "On Google Maps, find the current opening hours for the British Museum.",
+  "starting_url": "https://www.google.com/maps",
+  "passed": true,
+  "final_answer": "The British Museum is currently closed. Google Maps lists its hours as: Monday\u2013Thursday 10:00 am\u20135:00 pm, Friday 10:00 am\u20138:30 pm, Saturday\u2013Sunday 10:00 am\u20135:00 pm.",
+  "duration_s": 66.86,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://consent.google.com/m?continue=https://www.google.com/maps&gl=GB&m=0&pc=m&uxe=eomtm&cm=2&hl=en&src=1",
+        "title": "Before you continue to Google Maps",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "EN",
+            "attributes": {
+              "aria-label": "Language: English"
+            }
+          },
+          {
+            "id": "pw-94",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://accounts.google.com/ServiceLogin?hl=en&continue=https://www.google.com/maps&gae=cb-eomtm",
+              "aria-label": "Sign in"
+            }
+          },
+          {
+            "id": "pw-95",
+            "role": "button",
+            "text": "EN",
+            "attributes": {
+              "aria-label": "Language: English"
+            }
+          },
+          {
+            "id": "pw-188",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://accounts.google.com/ServiceLogin?hl=en&continue=https://www.google.com/maps&gae=cb-eomtm",
+              "aria-label": "Sign in"
+            }
+          },
+          {
+            "id": "pw-189",
+            "role": "link",
+            "text": "cookies",
+            "attributes": {
+              "href": "https://policies.google.com/technologies/cookies?hl=en&utm_source=ucb"
+            }
+          },
+          {
+            "id": "pw-190",
+            "role": "button",
+            "text": "Reject all",
+            "attributes": {
+              "aria-label": "Reject all"
+            }
+          },
+          {
+            "id": "pw-204",
+            "role": "button",
+            "text": "Accept all",
+            "attributes": {
+              "aria-label": "Accept all"
+            }
+          },
+          {
+            "id": "pw-220",
+            "role": "button",
+            "text": "Accept all",
+            "attributes": {
+              "aria-label": "Accept all"
+            }
+          },
+          {
+            "id": "pw-236",
+            "role": "button",
+            "text": "Reject all",
+            "attributes": {
+              "aria-label": "Reject all"
+            }
+          },
+          {
+            "id": "pw-250",
+            "role": "link",
+            "text": "More options for personalization settings and cookies",
+            "attributes": {
+              "href": "https://consent.google.com/d?continue=https://www.google.com/maps&gl=GB&hl=en&cm=2&pc=m&uxe=eomtm&src=1&escs=AZ8E49CbtP-4a-bAegbbv08KndtKQlOUtX90plnCRGvqVn2PWq7Op_rb-dunF5z0PLwEBqhHQeRkjwqrSz06Vlqm1eH5qDLfMJoP",
+              "aria-label": "More options for personalization settings and cookies"
+            }
+          },
+          {
+            "id": "pw-252",
+            "role": "link",
+            "text": "Privacy",
+            "attributes": {
+              "href": "https://policies.google.com/privacy?hl=en&utm_source=ucb",
+              "aria-label": "Privacy"
+            }
+          },
+          {
+            "id": "pw-253",
+            "role": "link",
+            "text": "Terms",
+            "attributes": {
+              "href": "https://policies.google.com/terms?hl=en&utm_source=ucb",
+              "aria-label": "Terms"
+            }
+          },
+          {
+            "id": "pw-254",
+            "role": "link",
+            "text": "Privacy Policy",
+            "attributes": {
+              "href": "https://policies.google.com/privacy?hl=en&utm_source=ucb",
+              "aria-label": "Privacy Policy"
+            }
+          },
+          {
+            "id": "pw-255",
+            "role": "link",
+            "text": "Terms of Service",
+            "attributes": {
+              "href": "https://policies.google.com/terms?hl=en&utm_source=ucb",
+              "aria-label": "Terms of Service"
+            }
+          },
+          {
+            "id": "pw-0",
+            "role": "main",
+            "text": "EN\nSign in\nBefore you continue to Google\n\nWe use cookies and data to\n\nDeliver and maintain Google services\nTrack outages and protect against spam, fraud, and abuse\nMeasure audience engagement and site statistics to understand how our services are used and enhance the quality of those services\n\nIf you choose to \u201cAccept all,\u201d we will also use cookies and data to\n\nDevelop and improve new services\nDeliver and measure the effectiveness of ads\nShow personalized content, depending on your settings\nShow personalized ads, depending on your settings\n\nIf you choose to \u201cReject all,\u201d we will not use cookies for these additional purposes.\n\nNon-personalized content is influenced by things like the content you\u2019re currently viewing, activity in your active Search session, and your location. Non-personalized ads are influenced by the content you\u2019re currently viewing and your general location. Personalized content and ads can also include more relevant results, recommendations, and tailored ads based on past activity from this browser, like previous Google searches. We also use cookies and data to tailor the experience to be age-appropriate, if relevant.\n\nSelect \u201cMore options\u201d to see additional information, including details about managing your privacy settings. You can also visit g.co/privacytools at any time.\n\nReject all\nAccept all\nMore options\nPrivacy Policy\nTerms of Service",
+            "attributes": {}
+          },
+          {
+            "id": "pw-2",
+            "role": "menu",
+            "text": "EnglishUnited StatesDeutschEnglishEspa\u00f1olFran\u00e7aisItaliano\u0627\u0644\u0639\u0631\u0628\u064a\u0629All languagesAfrikaansaz\u0259rbaycanbosanskicatal\u00e0\u010ce\u0161tinaCymraegDanskDeutscheestiEnglishUnited KingdomEspa\u00f1olEspa\u00f1aEspa\u00f1olLatinoam\u00e9ricaeuskaraFilipinoFran\u00e7aisCanadaFran\u00e7aisFranceGaeilgegalegoHrvatskiIndonesiaisiZulu\u00edslenskaItalianoKiswahililatvie\u0161ulietuvi\u0173magyarMelayuNederlandsnorsko\u2018zbekpolskiPortugu\u00easBrasilPortugu\u00easPortugalrom\u00e2n\u0103shqipSloven\u010dinasloven\u0161\u010dinasrpski (latinica)SuomiSvenskaTi\u1ebfng Vi\u1ec7tT\u00fcrk\u00e7e\u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac\u0431\u0435\u043b\u0430\u0440\u0443\u0441\u043a\u0430\u044f\u0431\u044a\u043b\u0433\u0430\u0440\u0441\u043a\u0438\u043a\u044b\u0440\u0433\u044b\u0437\u0447\u0430\u049b\u0430\u0437\u0430\u049b \u0442\u0456\u043b\u0456\u043c\u0430\u043a\u0435\u0434\u043e\u043d\u0441\u043a\u0438\u043c\u043e\u043d\u0433\u043e\u043b\u0420\u0443\u0441\u0441\u043a\u0438\u0439\u0441\u0440\u043f\u0441\u043a\u0438\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430\u10e5\u10d0\u10e0\u10d7\u10e3\u10da\u10d8\u0570\u0561\u0575\u0565\u0580\u0565\u0576\u05e2\u05d1\u05e8\u05d9\u05ea\u0627\u0631\u062f\u0648\u0627\u0644\u0639\u0631\u0628\u064a\u0629\u0641\u0627\u0631\u0633\u06cc\u12a0\u121b\u122d\u129b\u0928\u0947\u092a\u093e\u0932\u0940\u092e\u0930\u093e\u0920\u0940\u0939\u093f\u0928\u094d\u0926\u0940\u0985\u09b8\u09ae\u09c0\u09af\u09bc\u09be\u09ac\u09be\u0982\u09b2\u09be\u0a2a\u0a70\u0a1c\u0a3e\u0a2c\u0a40\u0a97\u0ac1\u0a9c\u0ab0\u0abe\u0aa4\u0ac0\u0b13\u0b21\u0b3c\u0b3f\u0b06\u0ba4\u0bae\u0bbf\u0bb4\u0bcd\u0c24\u0c46\u0c32\u0c41\u0c17\u0c41\u0c95\u0ca8\u0ccd\u0ca8\u0ca1\u0d2e\u0d32\u0d2f\u0d3e\u0d33\u0d02\u0dc3\u0dd2\u0d82\u0dc4\u0dbd\u0e44\u0e17\u0e22\u0ea5\u0eb2\u0ea7\u1019\u103c\u1014\u103a\u1019\u102c\u1781\u17d2\u1798\u17c2\u179a\ud55c\uad6d\uc5b4\u65e5\u672c\u8a9e\u7b80\u4f53\u4e2d\u6587\u7e41\u9ad4\u4e2d\u6587\u7e41\u9ad4\u4e2d\u6587\u9999\u6e2f",
+            "attributes": {
+              "aria-label": "All languages"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "menuitem",
+            "text": "EnglishUnited States",
+            "attributes": {}
+          },
+          {
+            "id": "pw-4",
+            "role": "separator",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-5",
+            "role": "menuitem",
+            "text": "Deutsch",
+            "attributes": {}
+          },
+          {
+            "id": "pw-6",
+            "role": "menuitem",
+            "text": "English",
+            "attributes": {}
+          },
+          {
+            "id": "pw-7",
+            "role": "menuitem",
+            "text": "Espa\u00f1ol",
+            "attributes": {}
+          },
+          {
+            "id": "pw-8",
+            "role": "menuitem",
+            "text": "Fran\u00e7ais",
+            "attributes": {}
+          },
+          {
+            "id": "pw-9",
+            "role": "menuitem",
+            "text": "Italiano",
+            "attributes": {}
+          },
+          {
+            "id": "pw-10",
+            "role": "menuitem",
+            "text": "\u0627\u0644\u0639\u0631\u0628\u064a\u0629",
+            "attributes": {}
+          },
+          {
+            "id": "pw-11",
+            "role": "menuitem",
+            "text": "All languages",
+            "attributes": {}
+          },
+          {
+            "id": "pw-12",
+            "role": "menuitem",
+            "text": "Afrikaans",
+            "attributes": {}
+          },
+          {
+            "id": "pw-13",
+            "role": "menuitem",
+            "text": "az\u0259rbaycan",
+            "attributes": {}
+          },
+          {
+            "id": "pw-14",
+            "role": "menuitem",
+            "text": "bosanski",
+            "attributes": {}
+          },
+          {
+            "id": "pw-15",
+            "role": "menuitem",
+            "text": "catal\u00e0",
+            "attributes": {}
+          },
+          {
+            "id": "pw-16",
+            "role": "menuitem",
+            "text": "\u010ce\u0161tina",
+            "attributes": {}
+          },
+          {
+            "id": "pw-17",
+            "role": "menuitem",
+            "text": "Cymraeg",
+            "attributes": {}
+          },
+          {
+            "id": "pw-18",
+            "role": "menuitem",
+            "text": "Dansk",
+            "attributes": {}
+          },
+          {
+            "id": "pw-19",
+            "role": "menuitem",
+            "text": "Deutsch",
+            "attributes": {}
+          },
+          {
+            "id": "pw-20",
+            "role": "menuitem",
+            "text": "eesti",
+            "attributes": {}
+          },
+          {
+            "id": "pw-21",
+            "role": "menuitem",
+            "text": "EnglishUnited Kingdom",
+            "attributes": {}
+          },
+          {
+            "id": "pw-22",
+            "role": "menuitem",
+            "text": "Espa\u00f1olEspa\u00f1a",
+            "attributes": {}
+          },
+          {
+            "id": "pw-23",
+            "role": "menuitem",
+            "text": "Espa\u00f1olLatinoam\u00e9rica",
+            "attributes": {}
+          },
+          {
+            "id": "pw-24",
+            "role": "menuitem",
+            "text": "euskara",
+            "attributes": {}
+          },
+          {
+            "id": "pw-25",
+            "role": "menuitem",
+            "text": "Filipino",
+            "attributes": {}
+          },
+          {
+            "id": "pw-26",
+            "role": "menuitem",
+            "text": "Fran\u00e7aisCanada",
+            "attributes": {}
+          },
+          {
+            "id": "pw-27",
+            "role": "menuitem",
+            "text": "Fran\u00e7aisFrance",
+            "attributes": {}
+          },
+          {
+            "id": "pw-28",
+            "role": "menuitem",
+            "text": "Gaeilge",
+            "attributes": {}
+          },
+          {
+            "id": "pw-29",
+            "role": "menuitem",
+            "text": "galego",
+            "attributes": {}
+          },
+          {
+            "id": "pw-30",
+            "role": "menuitem",
+            "text": "Hrvatski",
+            "attributes": {}
+          },
+          {
+            "id": "pw-31",
+            "role": "menuitem",
+            "text": "Indonesia",
+            "attributes": {}
+          },
+          {
+            "id": "pw-32",
+            "role": "menuitem",
+            "text": "isiZulu",
+            "attributes": {}
+          },
+          {
+            "id": "pw-33",
+            "role": "menuitem",
+            "text": "\u00edslenska",
+            "attributes": {}
+          },
+          {
+            "id": "pw-34",
+            "role": "menuitem",
+            "text": "Italiano",
+            "attributes": {}
+          },
+          {
+            "id": "pw-35",
+            "role": "menuitem",
+            "text": "Kiswahili",
+            "attributes": {}
+          },
+          {
+            "id": "pw-36",
+            "role": "menuitem",
+            "text": "latvie\u0161u",
+            "attributes": {}
+          }
+        ]
+      },
+      "action": {
+        "action": "click",
+        "args": {
+          "id": "pw-190"
+        }
+      },
+      "observation": "Clicked pw-190"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://www.google.com/maps",
+        "title": "Google Maps",
+        "elements": []
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://www.google.com/maps/search/British%20Museum"
+        }
+      },
+      "observation": "Opened https://www.google.com/maps/search/British%20Museum"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://www.google.com/maps/search/British%20Museum",
+        "title": "Google Maps",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "presentation",
+            "text": null,
+            "attributes": {}
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "expression": "document.body.innerText"
+        }
+      },
+      "observation": "Eval: null"
+    },
+    {
+      "step": 4,
+      "state": {
+        "url": "https://www.google.com/maps/place/The+British+Museum/@51.5194133,-0.1269566,17z/data=!3m1!4b1!4m6!3m5!1s0x48761b323093d307:0x2fb199016d5642a7!8m2!3d51.5194133!4d-0.1269566!16zL20vMDFoYjM?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
+        "title": "The British Museum - Google Maps",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "\ue5de",
+            "attributes": {
+              "aria-label": "Collapse side panel"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "\ue5de",
+            "attributes": {
+              "aria-label": "Collapse side panel"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "\ue5de",
+            "attributes": {
+              "aria-label": "Collapse side panel"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "combobox",
+            "text": null,
+            "attributes": {
+              "name": "q"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "button",
+            "text": "\ue8b6",
+            "attributes": {
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "button",
+            "text": "\ue5cd",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "button",
+            "text": "\ue5de",
+            "attributes": {
+              "aria-label": "Collapse side panel"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": "\ue56c\nRestaurants",
+            "attributes": {}
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": "\ue53a\nHotels",
+            "attributes": {}
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": "\ue412\nThings to do",
+            "attributes": {}
+          },
+          {
+            "id": "pw-13",
+            "role": "button",
+            "text": "\ue535\nTransport",
+            "attributes": {}
+          },
+          {
+            "id": "pw-14",
+            "role": "button",
+            "text": "\ue54f\nParking",
+            "attributes": {}
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": "\ue550\nChemists",
+            "attributes": {}
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "\ue573\nATMs",
+            "attributes": {}
+          },
+          {
+            "id": "pw-17",
+            "role": "button",
+            "text": "\ue5cc",
+            "attributes": {
+              "aria-label": "Next page"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "\ue5de",
+            "attributes": {
+              "aria-label": "Collapse side panel"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "button",
+            "text": "\ue5d2",
+            "attributes": {
+              "aria-label": "Menu"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "button",
+            "text": "\ue866\nSaved",
+            "attributes": {}
+          },
+          {
+            "id": "pw-22",
+            "role": "button",
+            "text": "\ue889\nRecents",
+            "attributes": {}
+          },
+          {
+            "id": "pw-23",
+            "role": "button",
+            "text": "The British Museum",
+            "attributes": {}
+          },
+          {
+            "id": "pw-24",
+            "role": "button",
+            "text": "\ue32c\nGet app",
+            "attributes": {}
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": "Photo of The British Museum",
+            "attributes": {
+              "aria-label": "Photo of The British Museum"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "button",
+            "text": "\ue413\nSee photos",
+            "attributes": {}
+          },
+          {
+            "id": "pw-29",
+            "role": "button",
+            "text": "\ue88e",
+            "attributes": {
+              "aria-label": "Learn more about legal disclosure regarding public reviews on Google Maps"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Learn more",
+            "attributes": {
+              "href": "https://support.google.com/local-guides?p=maps_policies"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "button",
+            "text": "Museum",
+            "attributes": {}
+          },
+          {
+            "id": "pw-38",
+            "role": "button",
+            "text": "\ue52e\nDirections",
+            "attributes": {
+              "aria-label": "Directions"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "button",
+            "text": "\ue866\nSave",
+            "attributes": {
+              "aria-label": "Save"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "button",
+            "text": "\uf05f\nNearby",
+            "attributes": {
+              "aria-label": "Nearby"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "button",
+            "text": "\ue702\nSend to phone",
+            "attributes": {
+              "aria-label": "Send to phone"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": "\ue80d\nShare",
+            "attributes": {
+              "aria-label": "Share"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "button",
+            "text": "Huge showcase for global antiquities, including Egyptian mummies and ancient Greek sculptures.\n\ue5cc",
+            "attributes": {}
+          },
+          {
+            "id": "pw-46",
+            "role": "button",
+            "text": "\ue0c8\nGreat Russell St, London WC1B 3DG",
+            "attributes": {
+              "aria-label": "Address: Great Russell St, London WC1B 3DG "
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "button",
+            "text": "\ue14d",
+            "attributes": {
+              "aria-label": "Copy address"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "button",
+            "text": "\ue8b5\nClosed \u00b7 Opens 10\u202fam Mon\n\ue5cf\nConfirmed by phone call 2 weeks ago",
+            "attributes": {}
+          },
+          {
+            "id": "pw-52",
+            "role": "button",
+            "text": "\ue14d",
+            "attributes": {
+              "aria-label": "Sunday, 10\u202fam to 5\u202fpm, Copy open hours"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "button",
+            "text": "Suggest new hours",
+            "attributes": {
+              "aria-label": "Suggest an edit to open hours"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "\ue80b\nbritishmuseum.org",
+            "attributes": {
+              "href": "https://www.britishmuseum.org/",
+              "aria-label": "Website: britishmuseum.org "
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "\ue89e",
+            "attributes": {
+              "href": "https://www.britishmuseum.org/",
+              "aria-label": "Open website"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "button",
+            "text": "\ue14d",
+            "attributes": {
+              "aria-label": "Copy website"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "button",
+            "text": "\ue0b0\n020 7323 8000",
+            "attributes": {
+              "aria-label": "Phone: 020 7323 8000 "
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "button",
+            "text": "\ue14d",
+            "attributes": {
+              "aria-label": "Copy phone number"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "link",
+            "text": "\ue0b0",
+            "attributes": {
+              "href": "tel:02073238000",
+              "aria-label": "Call phone number"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "button",
+            "text": "\uf186\nGV9F+Q6 London",
+            "attributes": {
+              "aria-label": "Plus Code: GV9F+Q6 London"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "button",
+            "text": "\ue14d",
+            "attributes": {
+              "aria-label": "Copy Plus Code"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "button",
+            "text": "\ue88e",
+            "attributes": {
+              "aria-label": "Learn more about plus codes"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "button",
+            "text": "\ue3c9\nSuggest an edit",
+            "attributes": {
+              "aria-label": "Suggest an edit"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "button",
+            "text": "\ue887",
+            "attributes": {
+              "aria-label": "More info"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "button",
+            "text": "\ue412\nAdd a photo",
+            "attributes": {}
+          },
+          {
+            "id": "pw-67",
+            "role": "button",
+            "text": "Food & Drink\n5",
+            "attributes": {}
+          }
+        ]
+      },
+      "action": {
+        "action": "click",
+        "args": {
+          "id": "pw-48"
+        }
+      },
+      "observation": "Clicked pw-48"
+    },
+    {
+      "step": 5,
+      "state": {
+        "url": "https://www.google.com/maps/place/The+British+Museum/@51.5194133,-0.1269566,17z/data=!3m1!4b1!4m6!3m5!1s0x48761b323093d307:0x2fb199016d5642a7!8m2!3d51.5194133!4d-0.1269566!16zL20vMDFoYjM?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
+        "title": "The British Museum - Google Maps",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "\ue5de",
+            "attributes": {
+              "aria-label": "Collapse side panel"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "\ue5de",
+            "attributes": {
+              "aria-label": "Collapse side panel"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "\ue5de",
+            "attributes": {
+              "aria-label": "Collapse side panel"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "combobox",
+            "text": null,
+            "attributes": {
+              "name": "q"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "button",
+            "text": "\ue8b6",
+            "attributes": {
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "button",
+            "text": "\ue5cd",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "button",
+            "text": "\ue5de",
+            "attributes": {
+              "aria-label": "Collapse side panel"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": "\ue56c\nRestaurants",
+            "attributes": {}
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": "\ue53a\nHotels",
+            "attributes": {}
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": "\ue412\nThings to do",
+            "attributes": {}
+          },
+          {
+            "id": "pw-13",
+            "role": "button",
+            "text": "\ue535\nTransport",
+            "attributes": {}
+          },
+          {
+            "id": "pw-14",
+            "role": "button",
+            "text": "\ue54f\nParking",
+            "attributes": {}
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": "\ue550\nChemists",
+            "attributes": {}
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "\ue573\nATMs",
+            "attributes": {}
+          },
+          {
+            "id": "pw-17",
+            "role": "button",
+            "text": "\ue5cc",
+            "attributes": {
+              "aria-label": "Next page"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "\ue5de",
+            "attributes": {
+              "aria-label": "Collapse side panel"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "button",
+            "text": "\ue5d2",
+            "attributes": {
+              "aria-label": "Menu"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "button",
+            "text": "\ue866\nSaved",
+            "attributes": {}
+          },
+          {
+            "id": "pw-22",
+            "role": "button",
+            "text": "\ue889\nRecents",
+            "attributes": {}
+          },
+          {
+            "id": "pw-23",
+            "role": "button",
+            "text": "The British Museum",
+            "attributes": {}
+          },
+          {
+            "id": "pw-24",
+            "role": "button",
+            "text": "\ue32c\nGet app",
+            "attributes": {}
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": "Photo of The British Museum",
+            "attributes": {
+              "aria-label": "Photo of The British Museum"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "button",
+            "text": "\ue413\nSee photos",
+            "attributes": {}
+          },
+          {
+            "id": "pw-29",
+            "role": "button",
+            "text": "\ue88e",
+            "attributes": {
+              "aria-label": "Learn more about legal disclosure regarding public reviews on Google Maps"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Learn more",
+            "attributes": {
+              "href": "https://support.google.com/local-guides?p=maps_policies"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "button",
+            "text": "Museum",
+            "attributes": {}
+          },
+          {
+            "id": "pw-38",
+            "role": "button",
+            "text": "\ue52e\nDirections",
+            "attributes": {
+              "aria-label": "Directions"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "button",
+            "text": "\ue866\nSave",
+            "attributes": {
+              "aria-label": "Save"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "button",
+            "text": "\uf05f\nNearby",
+            "attributes": {
+              "aria-label": "Nearby"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "button",
+            "text": "\ue702\nSend to phone",
+            "attributes": {
+              "aria-label": "Send to phone"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": "\ue80d\nShare",
+            "attributes": {
+              "aria-label": "Share"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "button",
+            "text": "Huge showcase for global antiquities, including Egyptian mummies and ancient Greek sculptures.\n\ue5cc",
+            "attributes": {}
+          },
+          {
+            "id": "pw-46",
+            "role": "button",
+            "text": "\ue0c8\nGreat Russell St, London WC1B 3DG",
+            "attributes": {
+              "aria-label": "Address: Great Russell St, London WC1B 3DG "
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "button",
+            "text": "\ue14d",
+            "attributes": {
+              "aria-label": "Copy address"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "button",
+            "text": "\ue8b5\nClosed \u00b7 Opens 10\u202fam Mon\n\ue5cf\nConfirmed by phone call 2 weeks ago",
+            "attributes": {}
+          },
+          {
+            "id": "pw-52",
+            "role": "button",
+            "text": "\ue14d",
+            "attributes": {
+              "aria-label": "Sunday, 10\u202fam to 5\u202fpm, Copy open hours"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "button",
+            "text": "Suggest new hours",
+            "attributes": {
+              "aria-label": "Suggest an edit to open hours"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "\ue80b\nbritishmuseum.org",
+            "attributes": {
+              "href": "https://www.britishmuseum.org/",
+              "aria-label": "Website: britishmuseum.org "
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "\ue89e",
+            "attributes": {
+              "href": "https://www.britishmuseum.org/",
+              "aria-label": "Open website"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "button",
+            "text": "\ue14d",
+            "attributes": {
+              "aria-label": "Copy website"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "button",
+            "text": "\ue0b0\n020 7323 8000",
+            "attributes": {
+              "aria-label": "Phone: 020 7323 8000 "
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "button",
+            "text": "\ue14d",
+            "attributes": {
+              "aria-label": "Copy phone number"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "link",
+            "text": "\ue0b0",
+            "attributes": {
+              "href": "tel:02073238000",
+              "aria-label": "Call phone number"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "button",
+            "text": "\uf186\nGV9F+Q6 London",
+            "attributes": {
+              "aria-label": "Plus Code: GV9F+Q6 London"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "button",
+            "text": "\ue14d",
+            "attributes": {
+              "aria-label": "Copy Plus Code"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "button",
+            "text": "\ue88e",
+            "attributes": {
+              "aria-label": "Learn more about plus codes"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "button",
+            "text": "\ue3c9\nSuggest an edit",
+            "attributes": {
+              "aria-label": "Suggest an edit"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "button",
+            "text": "\ue887",
+            "attributes": {
+              "aria-label": "More info"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "button",
+            "text": "\ue412\nAdd a photo",
+            "attributes": {}
+          },
+          {
+            "id": "pw-67",
+            "role": "button",
+            "text": "Food & Drink\n5",
+            "attributes": {}
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "expression": "document.body.innerText"
+        }
+      },
+      "observation": "Eval: null"
+    },
+    {
+      "step": 6,
+      "state": {
+        "url": "https://www.google.com/maps/place/The+British+Museum/@51.5194133,-0.1269566,17z/data=!3m1!4b1!4m6!3m5!1s0x48761b323093d307:0x2fb199016d5642a7!8m2!3d51.5194133!4d-0.1269566!16zL20vMDFoYjM?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
+        "title": "The British Museum - Google Maps",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "\ue5de",
+            "attributes": {
+              "aria-label": "Collapse side panel"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "\ue5de",
+            "attributes": {
+              "aria-label": "Collapse side panel"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "\ue5de",
+            "attributes": {
+              "aria-label": "Collapse side panel"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "combobox",
+            "text": null,
+            "attributes": {
+              "name": "q"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "button",
+            "text": "\ue8b6",
+            "attributes": {
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "button",
+            "text": "\ue5cd",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "button",
+            "text": "\ue5de",
+            "attributes": {
+              "aria-label": "Collapse side panel"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": "\ue56c\nRestaurants",
+            "attributes": {}
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": "\ue53a\nHotels",
+            "attributes": {}
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": "\ue412\nThings to do",
+            "attributes": {}
+          },
+          {
+            "id": "pw-13",
+            "role": "button",
+            "text": "\ue535\nTransport",
+            "attributes": {}
+          },
+          {
+            "id": "pw-14",
+            "role": "button",
+            "text": "\ue54f\nParking",
+            "attributes": {}
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": "\ue550\nChemists",
+            "attributes": {}
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "\ue573\nATMs",
+            "attributes": {}
+          },
+          {
+            "id": "pw-17",
+            "role": "button",
+            "text": "\ue5cc",
+            "attributes": {
+              "aria-label": "Next page"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "\ue5de",
+            "attributes": {
+              "aria-label": "Collapse side panel"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "button",
+            "text": "\ue5d2",
+            "attributes": {
+              "aria-label": "Menu"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "button",
+            "text": "\ue866\nSaved",
+            "attributes": {}
+          },
+          {
+            "id": "pw-22",
+            "role": "button",
+            "text": "\ue889\nRecents",
+            "attributes": {}
+          },
+          {
+            "id": "pw-23",
+            "role": "button",
+            "text": "The British Museum",
+            "attributes": {}
+          },
+          {
+            "id": "pw-24",
+            "role": "button",
+            "text": "\ue32c\nGet app",
+            "attributes": {}
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": "Photo of The British Museum",
+            "attributes": {
+              "aria-label": "Photo of The British Museum"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "button",
+            "text": "\ue413\nSee photos",
+            "attributes": {}
+          },
+          {
+            "id": "pw-29",
+            "role": "button",
+            "text": "\ue88e",
+            "attributes": {
+              "aria-label": "Learn more about legal disclosure regarding public reviews on Google Maps"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Learn more",
+            "attributes": {
+              "href": "https://support.google.com/local-guides?p=maps_policies"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "button",
+            "text": "Museum",
+            "attributes": {}
+          },
+          {
+            "id": "pw-38",
+            "role": "button",
+            "text": "\ue52e\nDirections",
+            "attributes": {
+              "aria-label": "Directions"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "button",
+            "text": "\ue866\nSave",
+            "attributes": {
+              "aria-label": "Save"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "button",
+            "text": "\uf05f\nNearby",
+            "attributes": {
+              "aria-label": "Nearby"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "button",
+            "text": "\ue702\nSend to phone",
+            "attributes": {
+              "aria-label": "Send to phone"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": "\ue80d\nShare",
+            "attributes": {
+              "aria-label": "Share"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "button",
+            "text": "Huge showcase for global antiquities, including Egyptian mummies and ancient Greek sculptures.\n\ue5cc",
+            "attributes": {}
+          },
+          {
+            "id": "pw-46",
+            "role": "button",
+            "text": "\ue0c8\nGreat Russell St, London WC1B 3DG",
+            "attributes": {
+              "aria-label": "Address: Great Russell St, London WC1B 3DG "
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "button",
+            "text": "\ue14d",
+            "attributes": {
+              "aria-label": "Copy address"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "button",
+            "text": "\ue8b5\nClosed\n\ue5ce",
+            "attributes": {}
+          },
+          {
+            "id": "pw-52",
+            "role": "button",
+            "text": "\ue14d",
+            "attributes": {
+              "aria-label": "Sunday, 10\u202fam to 5\u202fpm, Copy open hours"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "button",
+            "text": "Suggest new hours",
+            "attributes": {
+              "aria-label": "Suggest an edit to open hours"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "\ue80b\nbritishmuseum.org",
+            "attributes": {
+              "href": "https://www.britishmuseum.org/",
+              "aria-label": "Website: britishmuseum.org "
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "\ue89e",
+            "attributes": {
+              "href": "https://www.britishmuseum.org/",
+              "aria-label": "Open website"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "button",
+            "text": "\ue14d",
+            "attributes": {
+              "aria-label": "Copy website"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "button",
+            "text": "\ue0b0\n020 7323 8000",
+            "attributes": {
+              "aria-label": "Phone: 020 7323 8000 "
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "button",
+            "text": "\ue14d",
+            "attributes": {
+              "aria-label": "Copy phone number"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "link",
+            "text": "\ue0b0",
+            "attributes": {
+              "href": "tel:02073238000",
+              "aria-label": "Call phone number"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "button",
+            "text": "\uf186\nGV9F+Q6 London",
+            "attributes": {
+              "aria-label": "Plus Code: GV9F+Q6 London"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "button",
+            "text": "\ue14d",
+            "attributes": {
+              "aria-label": "Copy Plus Code"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "button",
+            "text": "\ue88e",
+            "attributes": {
+              "aria-label": "Learn more about plus codes"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "button",
+            "text": "\ue3c9\nSuggest an edit",
+            "attributes": {
+              "aria-label": "Suggest an edit"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "button",
+            "text": "\ue887",
+            "attributes": {
+              "aria-label": "More info"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "button",
+            "text": "\ue412\nAdd a photo",
+            "attributes": {}
+          },
+          {
+            "id": "pw-67",
+            "role": "button",
+            "text": "Food & Drink\n5",
+            "attributes": {}
+          }
+        ]
+      },
+      "action": {
+        "action": "click",
+        "args": {
+          "id": "pw-48"
+        }
+      },
+      "observation": "Clicked pw-48"
+    },
+    {
+      "step": 7,
+      "state": {
+        "url": "https://www.google.com/maps/place/The+British+Museum/@51.5194133,-0.1269566,17z/data=!3m1!4b1!4m6!3m5!1s0x48761b323093d307:0x2fb199016d5642a7!8m2!3d51.5194133!4d-0.1269566!16zL20vMDFoYjM?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
+        "title": "The British Museum - Google Maps",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "\ue5de",
+            "attributes": {
+              "aria-label": "Collapse side panel"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "\ue5de",
+            "attributes": {
+              "aria-label": "Collapse side panel"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "\ue5de",
+            "attributes": {
+              "aria-label": "Collapse side panel"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "combobox",
+            "text": null,
+            "attributes": {
+              "name": "q"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "button",
+            "text": "\ue8b6",
+            "attributes": {
+              "aria-label": "Search"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "button",
+            "text": "\ue5cd",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "button",
+            "text": "\ue5de",
+            "attributes": {
+              "aria-label": "Collapse side panel"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": "\ue56c\nRestaurants",
+            "attributes": {}
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": "\ue53a\nHotels",
+            "attributes": {}
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": "\ue412\nThings to do",
+            "attributes": {}
+          },
+          {
+            "id": "pw-13",
+            "role": "button",
+            "text": "\ue535\nTransport",
+            "attributes": {}
+          },
+          {
+            "id": "pw-14",
+            "role": "button",
+            "text": "\ue54f\nParking",
+            "attributes": {}
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": "\ue550\nChemists",
+            "attributes": {}
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "\ue573\nATMs",
+            "attributes": {}
+          },
+          {
+            "id": "pw-17",
+            "role": "button",
+            "text": "\ue5cc",
+            "attributes": {
+              "aria-label": "Next page"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "\ue5de",
+            "attributes": {
+              "aria-label": "Collapse side panel"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "button",
+            "text": "\ue5d2",
+            "attributes": {
+              "aria-label": "Menu"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "button",
+            "text": "\ue866\nSaved",
+            "attributes": {}
+          },
+          {
+            "id": "pw-22",
+            "role": "button",
+            "text": "\ue889\nRecents",
+            "attributes": {}
+          },
+          {
+            "id": "pw-23",
+            "role": "button",
+            "text": "The British Museum",
+            "attributes": {}
+          },
+          {
+            "id": "pw-24",
+            "role": "button",
+            "text": "\ue32c\nGet app",
+            "attributes": {}
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": "Photo of The British Museum",
+            "attributes": {
+              "aria-label": "Photo of The British Museum"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "button",
+            "text": "\ue413\nSee photos",
+            "attributes": {}
+          },
+          {
+            "id": "pw-29",
+            "role": "button",
+            "text": "\ue88e",
+            "attributes": {
+              "aria-label": "Learn more about legal disclosure regarding public reviews on Google Maps"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Learn more",
+            "attributes": {
+              "href": "https://support.google.com/local-guides?p=maps_policies"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "button",
+            "text": "Museum",
+            "attributes": {}
+          },
+          {
+            "id": "pw-38",
+            "role": "button",
+            "text": "\ue52e\nDirections",
+            "attributes": {
+              "aria-label": "Directions"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "button",
+            "text": "\ue866\nSave",
+            "attributes": {
+              "aria-label": "Save"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "button",
+            "text": "\uf05f\nNearby",
+            "attributes": {
+              "aria-label": "Nearby"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "button",
+            "text": "\ue702\nSend to phone",
+            "attributes": {
+              "aria-label": "Send to phone"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": "\ue80d\nShare",
+            "attributes": {
+              "aria-label": "Share"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "button",
+            "text": "Huge showcase for global antiquities, including Egyptian mummies and ancient Greek sculptures.\n\ue5cc",
+            "attributes": {}
+          },
+          {
+            "id": "pw-46",
+            "role": "button",
+            "text": "\ue0c8\nGreat Russell St, London WC1B 3DG",
+            "attributes": {
+              "aria-label": "Address: Great Russell St, London WC1B 3DG "
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "button",
+            "text": "\ue14d",
+            "attributes": {
+              "aria-label": "Copy address"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "button",
+            "text": "\ue8b5\nClosed\n\ue5ce",
+            "attributes": {}
+          },
+          {
+            "id": "pw-52",
+            "role": "button",
+            "text": "\ue14d",
+            "attributes": {
+              "aria-label": "Sunday, 10\u202fam to 5\u202fpm, Copy open hours"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "button",
+            "text": "Suggest new hours",
+            "attributes": {
+              "aria-label": "Suggest an edit to open hours"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "\ue80b\nbritishmuseum.org",
+            "attributes": {
+              "href": "https://www.britishmuseum.org/",
+              "aria-label": "Website: britishmuseum.org "
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "\ue89e",
+            "attributes": {
+              "href": "https://www.britishmuseum.org/",
+              "aria-label": "Open website"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "button",
+            "text": "\ue14d",
+            "attributes": {
+              "aria-label": "Copy website"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "button",
+            "text": "\ue0b0\n020 7323 8000",
+            "attributes": {
+              "aria-label": "Phone: 020 7323 8000 "
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "button",
+            "text": "\ue14d",
+            "attributes": {
+              "aria-label": "Copy phone number"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "link",
+            "text": "\ue0b0",
+            "attributes": {
+              "href": "tel:02073238000",
+              "aria-label": "Call phone number"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "button",
+            "text": "\uf186\nGV9F+Q6 London",
+            "attributes": {
+              "aria-label": "Plus Code: GV9F+Q6 London"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "button",
+            "text": "\ue14d",
+            "attributes": {
+              "aria-label": "Copy Plus Code"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "button",
+            "text": "\ue88e",
+            "attributes": {
+              "aria-label": "Learn more about plus codes"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "button",
+            "text": "\ue3c9\nSuggest an edit",
+            "attributes": {
+              "aria-label": "Suggest an edit"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "button",
+            "text": "\ue887",
+            "attributes": {
+              "aria-label": "More info"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "button",
+            "text": "\ue412\nAdd a photo",
+            "attributes": {}
+          },
+          {
+            "id": "pw-67",
+            "role": "button",
+            "text": "Food & Drink\n5",
+            "attributes": {}
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "The British Museum is currently closed. Google Maps lists its hours as: Monday\u2013Thursday 10:00 am\u20135:00 pm, Friday 10:00 am\u20138:30 pm, Saturday\u2013Sunday 10:00 am\u20135:00 pm."
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

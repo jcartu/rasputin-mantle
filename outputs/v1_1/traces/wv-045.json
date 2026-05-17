@@ -1,0 +1,4712 @@
+{
+  "task_id": "wv-045",
+  "task_description": "On Google Flights, compare nonstop flight options from Chicago to Miami for a weekend next month.",
+  "starting_url": "https://www.google.com/flights",
+  "passed": false,
+  "final_answer": "Error planning: Extra data: line 2 column 1 (char 636)",
+  "duration_s": 202.73,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://consent.google.com/m?continue=https://www.google.com/flights&gl=GB&m=0&pc=flt&cm=2&hl=en-US&src=1",
+        "title": "Before you continue",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "button",
+            "text": "EN",
+            "attributes": {
+              "aria-label": "Language: English"
+            }
+          },
+          {
+            "id": "pw-94",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://accounts.google.com/ServiceLogin?hl=en-US&continue=https://www.google.com/flights&gae=cb-",
+              "aria-label": "Sign in"
+            }
+          },
+          {
+            "id": "pw-95",
+            "role": "button",
+            "text": "EN",
+            "attributes": {
+              "aria-label": "Language: English"
+            }
+          },
+          {
+            "id": "pw-188",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://accounts.google.com/ServiceLogin?hl=en-US&continue=https://www.google.com/flights&gae=cb-",
+              "aria-label": "Sign in"
+            }
+          },
+          {
+            "id": "pw-189",
+            "role": "link",
+            "text": "cookies",
+            "attributes": {
+              "href": "https://policies.google.com/technologies/cookies?hl=en-US&utm_source=ucb"
+            }
+          },
+          {
+            "id": "pw-190",
+            "role": "button",
+            "text": "Reject all",
+            "attributes": {
+              "aria-label": "Reject all"
+            }
+          },
+          {
+            "id": "pw-203",
+            "role": "button",
+            "text": "Accept all",
+            "attributes": {
+              "aria-label": "Accept all"
+            }
+          },
+          {
+            "id": "pw-218",
+            "role": "button",
+            "text": "Accept all",
+            "attributes": {
+              "aria-label": "Accept all"
+            }
+          },
+          {
+            "id": "pw-233",
+            "role": "button",
+            "text": "Reject all",
+            "attributes": {
+              "aria-label": "Reject all"
+            }
+          },
+          {
+            "id": "pw-246",
+            "role": "link",
+            "text": "More options for personalization settings and cookies",
+            "attributes": {
+              "href": "https://consent.google.com/d?continue=https://www.google.com/flights&gl=GB&hl=en-US&cm=2&pc=flt&src=1&escs=AZ8E49CqgdWIqg97ZEwsLN_hWigwaKS3sQknxM9zQkUTipVJmdeioTEL9bN0i3RP3VJnFw7AcprxjZT13RHfCDoufKBWOI_4pwJM",
+              "aria-label": "More options for personalization settings and cookies"
+            }
+          },
+          {
+            "id": "pw-248",
+            "role": "link",
+            "text": "Privacy",
+            "attributes": {
+              "href": "https://policies.google.com/privacy?hl=en-US&utm_source=ucb",
+              "aria-label": "Privacy"
+            }
+          },
+          {
+            "id": "pw-249",
+            "role": "link",
+            "text": "Terms",
+            "attributes": {
+              "href": "https://policies.google.com/terms?hl=en-US&utm_source=ucb",
+              "aria-label": "Terms"
+            }
+          },
+          {
+            "id": "pw-250",
+            "role": "link",
+            "text": "Privacy Policy",
+            "attributes": {
+              "href": "https://policies.google.com/privacy?hl=en-US&utm_source=ucb",
+              "aria-label": "Privacy Policy"
+            }
+          },
+          {
+            "id": "pw-251",
+            "role": "link",
+            "text": "Terms of Service",
+            "attributes": {
+              "href": "https://policies.google.com/terms?hl=en-US&utm_source=ucb",
+              "aria-label": "Terms of Service"
+            }
+          },
+          {
+            "id": "pw-0",
+            "role": "main",
+            "text": "EN\nSign in\nBefore you continue to Google\n\nWe use cookies and data to\n\nDeliver and maintain Google services\nTrack outages and protect against spam, fraud, and abuse\nMeasure audience engagement and site statistics to understand how our services are used and enhance the quality of those services\n\nIf you choose to \u201cAccept all,\u201d we will also use cookies and data to\n\nDevelop and improve new services\nDeliver and measure the effectiveness of ads\nShow personalized content, depending on your settings\nShow personalized ads, depending on your settings\n\nIf you choose to \u201cReject all,\u201d we will not use cookies for these additional purposes.\n\nNon-personalized content is influenced by things like the content you\u2019re currently viewing, activity in your active Search session, and your location. Non-personalized ads are influenced by the content you\u2019re currently viewing and your general location. Personalized content and ads can also include more relevant results, recommendations, and tailored ads based on past activity from this browser, like previous Google searches. We also use cookies and data to tailor the experience to be age-appropriate, if relevant.\n\nSelect \u201cMore options\u201d to see additional information, including details about managing your privacy settings. You can also visit g.co/privacytools at any time.\n\nReject all\nAccept all\nMore options\nPrivacy Policy\nTerms of Service",
+            "attributes": {}
+          },
+          {
+            "id": "pw-2",
+            "role": "menu",
+            "text": "EnglishUnited StatesDeutschEnglishEspa\u00f1olFran\u00e7aisItaliano\u0627\u0644\u0639\u0631\u0628\u064a\u0629All languagesAfrikaansaz\u0259rbaycanbosanskicatal\u00e0\u010ce\u0161tinaCymraegDanskDeutscheestiEnglishUnited KingdomEspa\u00f1olEspa\u00f1aEspa\u00f1olLatinoam\u00e9ricaeuskaraFilipinoFran\u00e7aisCanadaFran\u00e7aisFranceGaeilgegalegoHrvatskiIndonesiaisiZulu\u00edslenskaItalianoKiswahililatvie\u0161ulietuvi\u0173magyarMelayuNederlandsnorsko\u2018zbekpolskiPortugu\u00easBrasilPortugu\u00easPortugalrom\u00e2n\u0103shqipSloven\u010dinasloven\u0161\u010dinasrpski (latinica)SuomiSvenskaTi\u1ebfng Vi\u1ec7tT\u00fcrk\u00e7e\u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac\u0431\u0435\u043b\u0430\u0440\u0443\u0441\u043a\u0430\u044f\u0431\u044a\u043b\u0433\u0430\u0440\u0441\u043a\u0438\u043a\u044b\u0440\u0433\u044b\u0437\u0447\u0430\u049b\u0430\u0437\u0430\u049b \u0442\u0456\u043b\u0456\u043c\u0430\u043a\u0435\u0434\u043e\u043d\u0441\u043a\u0438\u043c\u043e\u043d\u0433\u043e\u043b\u0420\u0443\u0441\u0441\u043a\u0438\u0439\u0441\u0440\u043f\u0441\u043a\u0438\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430\u10e5\u10d0\u10e0\u10d7\u10e3\u10da\u10d8\u0570\u0561\u0575\u0565\u0580\u0565\u0576\u05e2\u05d1\u05e8\u05d9\u05ea\u0627\u0631\u062f\u0648\u0627\u0644\u0639\u0631\u0628\u064a\u0629\u0641\u0627\u0631\u0633\u06cc\u12a0\u121b\u122d\u129b\u0928\u0947\u092a\u093e\u0932\u0940\u092e\u0930\u093e\u0920\u0940\u0939\u093f\u0928\u094d\u0926\u0940\u0985\u09b8\u09ae\u09c0\u09af\u09bc\u09be\u09ac\u09be\u0982\u09b2\u09be\u0a2a\u0a70\u0a1c\u0a3e\u0a2c\u0a40\u0a97\u0ac1\u0a9c\u0ab0\u0abe\u0aa4\u0ac0\u0b13\u0b21\u0b3c\u0b3f\u0b06\u0ba4\u0bae\u0bbf\u0bb4\u0bcd\u0c24\u0c46\u0c32\u0c41\u0c17\u0c41\u0c95\u0ca8\u0ccd\u0ca8\u0ca1\u0d2e\u0d32\u0d2f\u0d3e\u0d33\u0d02\u0dc3\u0dd2\u0d82\u0dc4\u0dbd\u0e44\u0e17\u0e22\u0ea5\u0eb2\u0ea7\u1019\u103c\u1014\u103a\u1019\u102c\u1781\u17d2\u1798\u17c2\u179a\ud55c\uad6d\uc5b4\u65e5\u672c\u8a9e\u7b80\u4f53\u4e2d\u6587\u7e41\u9ad4\u4e2d\u6587\u7e41\u9ad4\u4e2d\u6587\u9999\u6e2f",
+            "attributes": {
+              "aria-label": "All languages"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "menuitem",
+            "text": "EnglishUnited States",
+            "attributes": {}
+          },
+          {
+            "id": "pw-4",
+            "role": "separator",
+            "text": null,
+            "attributes": {}
+          },
+          {
+            "id": "pw-5",
+            "role": "menuitem",
+            "text": "Deutsch",
+            "attributes": {}
+          },
+          {
+            "id": "pw-6",
+            "role": "menuitem",
+            "text": "English",
+            "attributes": {}
+          },
+          {
+            "id": "pw-7",
+            "role": "menuitem",
+            "text": "Espa\u00f1ol",
+            "attributes": {}
+          },
+          {
+            "id": "pw-8",
+            "role": "menuitem",
+            "text": "Fran\u00e7ais",
+            "attributes": {}
+          },
+          {
+            "id": "pw-9",
+            "role": "menuitem",
+            "text": "Italiano",
+            "attributes": {}
+          },
+          {
+            "id": "pw-10",
+            "role": "menuitem",
+            "text": "\u0627\u0644\u0639\u0631\u0628\u064a\u0629",
+            "attributes": {}
+          },
+          {
+            "id": "pw-11",
+            "role": "menuitem",
+            "text": "All languages",
+            "attributes": {}
+          },
+          {
+            "id": "pw-12",
+            "role": "menuitem",
+            "text": "Afrikaans",
+            "attributes": {}
+          },
+          {
+            "id": "pw-13",
+            "role": "menuitem",
+            "text": "az\u0259rbaycan",
+            "attributes": {}
+          },
+          {
+            "id": "pw-14",
+            "role": "menuitem",
+            "text": "bosanski",
+            "attributes": {}
+          },
+          {
+            "id": "pw-15",
+            "role": "menuitem",
+            "text": "catal\u00e0",
+            "attributes": {}
+          },
+          {
+            "id": "pw-16",
+            "role": "menuitem",
+            "text": "\u010ce\u0161tina",
+            "attributes": {}
+          },
+          {
+            "id": "pw-17",
+            "role": "menuitem",
+            "text": "Cymraeg",
+            "attributes": {}
+          },
+          {
+            "id": "pw-18",
+            "role": "menuitem",
+            "text": "Dansk",
+            "attributes": {}
+          },
+          {
+            "id": "pw-19",
+            "role": "menuitem",
+            "text": "Deutsch",
+            "attributes": {}
+          },
+          {
+            "id": "pw-20",
+            "role": "menuitem",
+            "text": "eesti",
+            "attributes": {}
+          },
+          {
+            "id": "pw-21",
+            "role": "menuitem",
+            "text": "EnglishUnited Kingdom",
+            "attributes": {}
+          },
+          {
+            "id": "pw-22",
+            "role": "menuitem",
+            "text": "Espa\u00f1olEspa\u00f1a",
+            "attributes": {}
+          },
+          {
+            "id": "pw-23",
+            "role": "menuitem",
+            "text": "Espa\u00f1olLatinoam\u00e9rica",
+            "attributes": {}
+          },
+          {
+            "id": "pw-24",
+            "role": "menuitem",
+            "text": "euskara",
+            "attributes": {}
+          },
+          {
+            "id": "pw-25",
+            "role": "menuitem",
+            "text": "Filipino",
+            "attributes": {}
+          },
+          {
+            "id": "pw-26",
+            "role": "menuitem",
+            "text": "Fran\u00e7aisCanada",
+            "attributes": {}
+          },
+          {
+            "id": "pw-27",
+            "role": "menuitem",
+            "text": "Fran\u00e7aisFrance",
+            "attributes": {}
+          },
+          {
+            "id": "pw-28",
+            "role": "menuitem",
+            "text": "Gaeilge",
+            "attributes": {}
+          },
+          {
+            "id": "pw-29",
+            "role": "menuitem",
+            "text": "galego",
+            "attributes": {}
+          },
+          {
+            "id": "pw-30",
+            "role": "menuitem",
+            "text": "Hrvatski",
+            "attributes": {}
+          },
+          {
+            "id": "pw-31",
+            "role": "menuitem",
+            "text": "Indonesia",
+            "attributes": {}
+          },
+          {
+            "id": "pw-32",
+            "role": "menuitem",
+            "text": "isiZulu",
+            "attributes": {}
+          },
+          {
+            "id": "pw-33",
+            "role": "menuitem",
+            "text": "\u00edslenska",
+            "attributes": {}
+          },
+          {
+            "id": "pw-34",
+            "role": "menuitem",
+            "text": "Italiano",
+            "attributes": {}
+          },
+          {
+            "id": "pw-35",
+            "role": "menuitem",
+            "text": "Kiswahili",
+            "attributes": {}
+          },
+          {
+            "id": "pw-36",
+            "role": "menuitem",
+            "text": "latvie\u0161u",
+            "attributes": {}
+          }
+        ]
+      },
+      "action": {
+        "action": "click",
+        "args": {
+          "id": "pw-190"
+        }
+      },
+      "observation": "Clicked pw-190"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://www.google.com/travel/flights",
+        "title": "",
+        "elements": []
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://www.google.com/travel/flights"
+        }
+      },
+      "observation": "Opened https://www.google.com/travel/flights"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://www.google.com/travel/flights",
+        "title": "Find Cheap Flights Worldwide & Book Your Ticket - Google Flights",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Google",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Google"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Main menu",
+            "attributes": {
+              "aria-label": "Main menu"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Go back",
+            "attributes": {
+              "aria-label": "Go back"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "Close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Google",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Google"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Skip to main content",
+            "attributes": {}
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": "Accessibility feedback",
+            "attributes": {}
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "id": "12"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "id": "18"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Flights",
+            "attributes": {
+              "id": "7"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "id": "8"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Vacation rentals",
+            "attributes": {
+              "id": "14"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "Change appearance",
+            "attributes": {
+              "aria-label": "Change appearance"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "Google apps",
+            "attributes": {
+              "href": "https://www.google.co.uk/intl/en/about/products",
+              "aria-label": "Google apps"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://accounts.google.com/ServiceLogin?service=searchandassistant&passive=1209600&continue=https://www.google.com/travel/flights&followup=https://www.google.com/travel/flights&ec=GAZAlQM",
+              "aria-label": "Sign in"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "aria-label": "Travel"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "aria-label": "Explore"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Flights",
+            "attributes": {
+              "aria-label": "Selected Tab: Flights"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "aria-label": "Hotels"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Vacation rentals",
+            "attributes": {
+              "aria-label": "Vacation rentals"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Flight Deals",
+            "attributes": {
+              "aria-label": "Flight Deals"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Tracked flight prices",
+            "attributes": {
+              "aria-label": "Tracked flight prices"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Tracked hotel prices",
+            "attributes": {
+              "aria-label": "Tracked hotel prices"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Change language",
+            "attributes": {
+              "aria-label": "Change language"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Change currency",
+            "attributes": {
+              "aria-label": "Change currency"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Change location",
+            "attributes": {
+              "aria-label": "Change location"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Change currency",
+            "attributes": {
+              "aria-label": "Change currency"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Report Illegal Content",
+            "attributes": {
+              "aria-label": "Report Illegal Content"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Feedback",
+            "attributes": {
+              "aria-label": "Feedback"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Help",
+            "attributes": {
+              "aria-label": "Help"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "combobox",
+            "text": "Round trip",
+            "attributes": {}
+          },
+          {
+            "id": "pw-42",
+            "role": "option",
+            "text": "Round trip",
+            "attributes": {}
+          },
+          {
+            "id": "pw-43",
+            "role": "option",
+            "text": "One way",
+            "attributes": {}
+          },
+          {
+            "id": "pw-44",
+            "role": "option",
+            "text": "Multi-city",
+            "attributes": {}
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "1",
+            "attributes": {
+              "aria-label": "1 passenger, change number of passengers."
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "button",
+            "text": "Remove adult",
+            "attributes": {
+              "aria-label": "Remove adult"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "button",
+            "text": "Add adult",
+            "attributes": {
+              "aria-label": "Add adult"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "button",
+            "text": "Remove child aged 2 to 11",
+            "attributes": {
+              "aria-label": "Remove child aged 2 to 11"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "button",
+            "text": "Add child aged 2 to 11",
+            "attributes": {
+              "aria-label": "Add child aged 2 to 11"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "button",
+            "text": "Remove infant in seat",
+            "attributes": {
+              "aria-label": "Remove infant in seat"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "button",
+            "text": "Add infant in seat",
+            "attributes": {
+              "aria-label": "Add infant in seat"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "button",
+            "text": "Remove infant on lap",
+            "attributes": {
+              "aria-label": "Remove infant on lap"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "button",
+            "text": "Add infant on lap",
+            "attributes": {
+              "aria-label": "Add infant on lap"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "button",
+            "text": "Done",
+            "attributes": {}
+          },
+          {
+            "id": "pw-65",
+            "role": "button",
+            "text": "Cancel",
+            "attributes": {}
+          },
+          {
+            "id": "pw-67",
+            "role": "combobox",
+            "text": "Economy",
+            "attributes": {}
+          },
+          {
+            "id": "pw-70",
+            "role": "option",
+            "text": "Economy",
+            "attributes": {}
+          },
+          {
+            "id": "pw-71",
+            "role": "option",
+            "text": "Premium economy",
+            "attributes": {}
+          },
+          {
+            "id": "pw-72",
+            "role": "option",
+            "text": "Business",
+            "attributes": {}
+          },
+          {
+            "id": "pw-73",
+            "role": "option",
+            "text": "First",
+            "attributes": {}
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "document.body.innerText.slice(0,5000)"
+        }
+      },
+      "observation": "Eval: \"Skip to main content\\nAccessibility feedback\\nTravel\\nExplore\\nFlights\\nHotels\\nVacation rentals\\nChange appearance\\nSign in\\nFlights\\nRound trip\\n1\\nEconomy\\nSearch\\nFlexible? Discover the best flight deals with AI\\nDescribe your ideal trip, and let Google Flights find the best deals for you\\nExplore deals\\nFind and book cheap flights worldwide and track prices\\nFind cheap flights from United Kingdom to anywhere\\nLondon\\nManchester\\nEdinburgh\\nBirmingham\\nLondon\\nNew Delhi\\nJun 4 \\u2014 Jun 10"
+    },
+    {
+      "step": 4,
+      "state": {
+        "url": "https://www.google.com/travel/flights",
+        "title": "Find Cheap Flights Worldwide & Book Your Ticket - Google Flights",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Google",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Google"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Main menu",
+            "attributes": {
+              "aria-label": "Main menu"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Go back",
+            "attributes": {
+              "aria-label": "Go back"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "Close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Google",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Google"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Skip to main content",
+            "attributes": {}
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": "Accessibility feedback",
+            "attributes": {}
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "id": "12"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "id": "18"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Flights",
+            "attributes": {
+              "id": "7"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "id": "8"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Vacation rentals",
+            "attributes": {
+              "id": "14"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "Change appearance",
+            "attributes": {
+              "aria-label": "Change appearance"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "Google apps",
+            "attributes": {
+              "href": "https://www.google.co.uk/intl/en/about/products",
+              "aria-label": "Google apps"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://accounts.google.com/ServiceLogin?service=searchandassistant&passive=1209600&continue=https://www.google.com/travel/flights&followup=https://www.google.com/travel/flights&ec=GAZAlQM",
+              "aria-label": "Sign in"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "aria-label": "Travel"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "aria-label": "Explore"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Flights",
+            "attributes": {
+              "aria-label": "Selected Tab: Flights"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "aria-label": "Hotels"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Vacation rentals",
+            "attributes": {
+              "aria-label": "Vacation rentals"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Flight Deals",
+            "attributes": {
+              "aria-label": "Flight Deals"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Tracked flight prices",
+            "attributes": {
+              "aria-label": "Tracked flight prices"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Tracked hotel prices",
+            "attributes": {
+              "aria-label": "Tracked hotel prices"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Change language",
+            "attributes": {
+              "aria-label": "Change language"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Change currency",
+            "attributes": {
+              "aria-label": "Change currency"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Change location",
+            "attributes": {
+              "aria-label": "Change location"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Change currency",
+            "attributes": {
+              "aria-label": "Change currency"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Report Illegal Content",
+            "attributes": {
+              "aria-label": "Report Illegal Content"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Feedback",
+            "attributes": {
+              "aria-label": "Feedback"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Help",
+            "attributes": {
+              "aria-label": "Help"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "combobox",
+            "text": "Round trip",
+            "attributes": {}
+          },
+          {
+            "id": "pw-42",
+            "role": "option",
+            "text": "Round trip",
+            "attributes": {}
+          },
+          {
+            "id": "pw-43",
+            "role": "option",
+            "text": "One way",
+            "attributes": {}
+          },
+          {
+            "id": "pw-44",
+            "role": "option",
+            "text": "Multi-city",
+            "attributes": {}
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "1",
+            "attributes": {
+              "aria-label": "1 passenger, change number of passengers."
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "button",
+            "text": "Remove adult",
+            "attributes": {
+              "aria-label": "Remove adult"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "button",
+            "text": "Add adult",
+            "attributes": {
+              "aria-label": "Add adult"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "button",
+            "text": "Remove child aged 2 to 11",
+            "attributes": {
+              "aria-label": "Remove child aged 2 to 11"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "button",
+            "text": "Add child aged 2 to 11",
+            "attributes": {
+              "aria-label": "Add child aged 2 to 11"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "button",
+            "text": "Remove infant in seat",
+            "attributes": {
+              "aria-label": "Remove infant in seat"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "button",
+            "text": "Add infant in seat",
+            "attributes": {
+              "aria-label": "Add infant in seat"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "button",
+            "text": "Remove infant on lap",
+            "attributes": {
+              "aria-label": "Remove infant on lap"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "button",
+            "text": "Add infant on lap",
+            "attributes": {
+              "aria-label": "Add infant on lap"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "button",
+            "text": "Done",
+            "attributes": {}
+          },
+          {
+            "id": "pw-65",
+            "role": "button",
+            "text": "Cancel",
+            "attributes": {}
+          },
+          {
+            "id": "pw-67",
+            "role": "combobox",
+            "text": "Economy",
+            "attributes": {}
+          },
+          {
+            "id": "pw-70",
+            "role": "option",
+            "text": "Economy",
+            "attributes": {}
+          },
+          {
+            "id": "pw-71",
+            "role": "option",
+            "text": "Premium economy",
+            "attributes": {}
+          },
+          {
+            "id": "pw-72",
+            "role": "option",
+            "text": "Business",
+            "attributes": {}
+          },
+          {
+            "id": "pw-73",
+            "role": "option",
+            "text": "First",
+            "attributes": {}
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "document.body.innerText"
+        }
+      },
+      "observation": "Eval: \"Skip to main content\\nAccessibility feedback\\nTravel\\nExplore\\nFlights\\nHotels\\nVacation rentals\\nChange appearance\\nSign in\\nFlights\\nRound trip\\n1\\nEconomy\\nSearch\\nFlexible? Discover the best flight deals with AI\\nDescribe your ideal trip, and let Google Flights find the best deals for you\\nExplore deals\\nFind and book cheap flights worldwide and track prices\\nFind cheap flights from United Kingdom to anywhere\\nLondon\\nManchester\\nEdinburgh\\nBirmingham\\nLondon\\nNew Delhi\\nJun 4 \\u2014 Jun 10"
+    },
+    {
+      "step": 5,
+      "state": {
+        "url": "https://www.google.com/travel/flights",
+        "title": "Find Cheap Flights Worldwide & Book Your Ticket - Google Flights",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Google",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Google"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Main menu",
+            "attributes": {
+              "aria-label": "Main menu"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Go back",
+            "attributes": {
+              "aria-label": "Go back"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "Close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Google",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Google"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Skip to main content",
+            "attributes": {}
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": "Accessibility feedback",
+            "attributes": {}
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "id": "12"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "id": "18"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Flights",
+            "attributes": {
+              "id": "7"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "id": "8"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Vacation rentals",
+            "attributes": {
+              "id": "14"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "Change appearance",
+            "attributes": {
+              "aria-label": "Change appearance"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "Google apps",
+            "attributes": {
+              "href": "https://www.google.co.uk/intl/en/about/products",
+              "aria-label": "Google apps"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://accounts.google.com/ServiceLogin?service=searchandassistant&passive=1209600&continue=https://www.google.com/travel/flights&followup=https://www.google.com/travel/flights&ec=GAZAlQM",
+              "aria-label": "Sign in"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "aria-label": "Travel"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "aria-label": "Explore"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Flights",
+            "attributes": {
+              "aria-label": "Selected Tab: Flights"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "aria-label": "Hotels"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Vacation rentals",
+            "attributes": {
+              "aria-label": "Vacation rentals"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Flight Deals",
+            "attributes": {
+              "aria-label": "Flight Deals"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Tracked flight prices",
+            "attributes": {
+              "aria-label": "Tracked flight prices"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Tracked hotel prices",
+            "attributes": {
+              "aria-label": "Tracked hotel prices"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Change language",
+            "attributes": {
+              "aria-label": "Change language"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Change currency",
+            "attributes": {
+              "aria-label": "Change currency"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Change location",
+            "attributes": {
+              "aria-label": "Change location"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Change currency",
+            "attributes": {
+              "aria-label": "Change currency"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Report Illegal Content",
+            "attributes": {
+              "aria-label": "Report Illegal Content"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Feedback",
+            "attributes": {
+              "aria-label": "Feedback"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Help",
+            "attributes": {
+              "aria-label": "Help"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "combobox",
+            "text": "Round trip",
+            "attributes": {}
+          },
+          {
+            "id": "pw-42",
+            "role": "option",
+            "text": "Round trip",
+            "attributes": {}
+          },
+          {
+            "id": "pw-43",
+            "role": "option",
+            "text": "One way",
+            "attributes": {}
+          },
+          {
+            "id": "pw-44",
+            "role": "option",
+            "text": "Multi-city",
+            "attributes": {}
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "1",
+            "attributes": {
+              "aria-label": "1 passenger, change number of passengers."
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "button",
+            "text": "Remove adult",
+            "attributes": {
+              "aria-label": "Remove adult"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "button",
+            "text": "Add adult",
+            "attributes": {
+              "aria-label": "Add adult"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "button",
+            "text": "Remove child aged 2 to 11",
+            "attributes": {
+              "aria-label": "Remove child aged 2 to 11"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "button",
+            "text": "Add child aged 2 to 11",
+            "attributes": {
+              "aria-label": "Add child aged 2 to 11"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "button",
+            "text": "Remove infant in seat",
+            "attributes": {
+              "aria-label": "Remove infant in seat"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "button",
+            "text": "Add infant in seat",
+            "attributes": {
+              "aria-label": "Add infant in seat"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "button",
+            "text": "Remove infant on lap",
+            "attributes": {
+              "aria-label": "Remove infant on lap"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "button",
+            "text": "Add infant on lap",
+            "attributes": {
+              "aria-label": "Add infant on lap"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "button",
+            "text": "Done",
+            "attributes": {}
+          },
+          {
+            "id": "pw-65",
+            "role": "button",
+            "text": "Cancel",
+            "attributes": {}
+          },
+          {
+            "id": "pw-67",
+            "role": "combobox",
+            "text": "Economy",
+            "attributes": {}
+          },
+          {
+            "id": "pw-70",
+            "role": "option",
+            "text": "Economy",
+            "attributes": {}
+          },
+          {
+            "id": "pw-71",
+            "role": "option",
+            "text": "Premium economy",
+            "attributes": {}
+          },
+          {
+            "id": "pw-72",
+            "role": "option",
+            "text": "Business",
+            "attributes": {}
+          },
+          {
+            "id": "pw-73",
+            "role": "option",
+            "text": "First",
+            "attributes": {}
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => {\n  const els=[...document.querySelectorAll('input,button,[role=button],[role=textbox],[aria-label],div[jsname],span')];\n  return els.slice(0,300).map((e,i)=>({i, tag:e.tagName, role:e.getAttribute('role'), text:(e.innerText||e.value||e.getAttribute('aria-label')||'').slice(0,120), aria:e.getAttribute('aria-label'), placeholder:e.getAttribute('placeholder'), jsname:e.getAttribute('jsname'), cls:e.className})).filter(x=>x.text||x.aria||x.placeholder).slice(0,200);\n})()"
+        }
+      },
+      "observation": "Eval: [{\"i\": 1, \"tag\": \"A\", \"role\": null, \"text\": \"Google\", \"aria\": \"Google\", \"placeholder\": null, \"jsname\": null, \"cls\": \"gb_ie gb_1c gb_me\"}, {\"i\": 3, \"tag\": \"DIV\", \"role\": \"button\", \"text\": \"Main menu\", \"aria\": \"Main menu\", \"placeholder\": null, \"jsname\": null, \"cls\": \"gb_6c\"}, {\"i\": 4, \"tag\": \"DIV\", \"role\": \"button\", \"text\": \"Go back\", \"aria\": \"Go back\", \"placeholder\": null, \"jsname\": null, \"cls\": \"gb_6c gb_9c gb_V\"}, {\"i\": 5, \"tag\": \"DIV\", \"role\": \"button\", \"text\": \"Close\", \"aria\": \"Close\", \"place"
+    },
+    {
+      "step": 6,
+      "state": {
+        "url": "https://www.google.com/travel/flights",
+        "title": "Find Cheap Flights Worldwide & Book Your Ticket - Google Flights",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Google",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Google"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Main menu",
+            "attributes": {
+              "aria-label": "Main menu"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Go back",
+            "attributes": {
+              "aria-label": "Go back"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "Close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Google",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Google"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Skip to main content",
+            "attributes": {}
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": "Accessibility feedback",
+            "attributes": {}
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "id": "12"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "id": "18"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Flights",
+            "attributes": {
+              "id": "7"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "id": "8"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Vacation rentals",
+            "attributes": {
+              "id": "14"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "Change appearance",
+            "attributes": {
+              "aria-label": "Change appearance"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "Google apps",
+            "attributes": {
+              "href": "https://www.google.co.uk/intl/en/about/products",
+              "aria-label": "Google apps"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://accounts.google.com/ServiceLogin?service=searchandassistant&passive=1209600&continue=https://www.google.com/travel/flights&followup=https://www.google.com/travel/flights&ec=GAZAlQM",
+              "aria-label": "Sign in"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "aria-label": "Travel"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "aria-label": "Explore"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Flights",
+            "attributes": {
+              "aria-label": "Selected Tab: Flights"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "aria-label": "Hotels"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Vacation rentals",
+            "attributes": {
+              "aria-label": "Vacation rentals"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Flight Deals",
+            "attributes": {
+              "aria-label": "Flight Deals"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Tracked flight prices",
+            "attributes": {
+              "aria-label": "Tracked flight prices"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Tracked hotel prices",
+            "attributes": {
+              "aria-label": "Tracked hotel prices"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Change language",
+            "attributes": {
+              "aria-label": "Change language"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Change currency",
+            "attributes": {
+              "aria-label": "Change currency"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Change location",
+            "attributes": {
+              "aria-label": "Change location"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Change currency",
+            "attributes": {
+              "aria-label": "Change currency"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Report Illegal Content",
+            "attributes": {
+              "aria-label": "Report Illegal Content"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Feedback",
+            "attributes": {
+              "aria-label": "Feedback"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Help",
+            "attributes": {
+              "aria-label": "Help"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "combobox",
+            "text": "Round trip",
+            "attributes": {}
+          },
+          {
+            "id": "pw-42",
+            "role": "option",
+            "text": "Round trip",
+            "attributes": {}
+          },
+          {
+            "id": "pw-43",
+            "role": "option",
+            "text": "One way",
+            "attributes": {}
+          },
+          {
+            "id": "pw-44",
+            "role": "option",
+            "text": "Multi-city",
+            "attributes": {}
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "1",
+            "attributes": {
+              "aria-label": "1 passenger, change number of passengers."
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "button",
+            "text": "Remove adult",
+            "attributes": {
+              "aria-label": "Remove adult"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "button",
+            "text": "Add adult",
+            "attributes": {
+              "aria-label": "Add adult"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "button",
+            "text": "Remove child aged 2 to 11",
+            "attributes": {
+              "aria-label": "Remove child aged 2 to 11"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "button",
+            "text": "Add child aged 2 to 11",
+            "attributes": {
+              "aria-label": "Add child aged 2 to 11"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "button",
+            "text": "Remove infant in seat",
+            "attributes": {
+              "aria-label": "Remove infant in seat"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "button",
+            "text": "Add infant in seat",
+            "attributes": {
+              "aria-label": "Add infant in seat"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "button",
+            "text": "Remove infant on lap",
+            "attributes": {
+              "aria-label": "Remove infant on lap"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "button",
+            "text": "Add infant on lap",
+            "attributes": {
+              "aria-label": "Add infant on lap"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "button",
+            "text": "Done",
+            "attributes": {}
+          },
+          {
+            "id": "pw-65",
+            "role": "button",
+            "text": "Cancel",
+            "attributes": {}
+          },
+          {
+            "id": "pw-67",
+            "role": "combobox",
+            "text": "Economy",
+            "attributes": {}
+          },
+          {
+            "id": "pw-70",
+            "role": "option",
+            "text": "Economy",
+            "attributes": {}
+          },
+          {
+            "id": "pw-71",
+            "role": "option",
+            "text": "Premium economy",
+            "attributes": {}
+          },
+          {
+            "id": "pw-72",
+            "role": "option",
+            "text": "Business",
+            "attributes": {}
+          },
+          {
+            "id": "pw-73",
+            "role": "option",
+            "text": "First",
+            "attributes": {}
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => {\n  const candidates = [...document.querySelectorAll('input, textarea, [contenteditable=\"true\"], [role=\"textbox\"], [aria-label], button, [role=\"button\"]')];\n  return candidates.map((e,i)=>({\n    i,\n    tag:e.tagName,\n    role:e.getAttribute('role'),\n    aria:e.getAttribute('aria-label'),\n    text:(e.innerText||e.value||'').replace(/\\s+/g,' ').trim().slice(0,200),\n    placeholder:e.getAttribute('placeholder'),\n    name:e.getAttribute('name'),\n    type:e.getAttribute('type'),\n    classes:(typeof e.className==='string'?e.className:'').slice(0,80),\n    rect:(()=>{const r=e.getBoundingClientRect(); return {x:Math.round(r.x),y:Math.round(r.y),w:Math.round(r.width),h:Math.round(r.height)}})()\n  })).filter(x => (x.aria || x.text || x.placeholder || x.name) && x.rect.w>0 && x.rect.h>0).slice(0,120);\n})()"
+        }
+      },
+      "observation": "Eval: [{\"i\": 0, \"tag\": \"A\", \"role\": null, \"aria\": \"Google\", \"text\": \"\", \"placeholder\": null, \"name\": null, \"type\": null, \"classes\": \"gb_ie gb_1c gb_me\", \"rect\": {\"x\": -256, \"y\": 22, \"w\": 74, \"h\": 24}}, {\"i\": 1, \"tag\": \"DIV\", \"role\": \"button\", \"aria\": \"Main menu\", \"text\": \"\", \"placeholder\": null, \"name\": null, \"type\": null, \"classes\": \"gb_6c\", \"rect\": {\"x\": 12, \"y\": 8, \"w\": 48, \"h\": 48}}, {\"i\": 4, \"tag\": \"A\", \"role\": null, \"aria\": \"Google\", \"text\": \"\", \"placeholder\": null, \"name\": null, \"type\": null, \""
+    },
+    {
+      "step": 7,
+      "state": {
+        "url": "https://www.google.com/travel/flights",
+        "title": "Find Cheap Flights Worldwide & Book Your Ticket - Google Flights",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Google",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Google"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Main menu",
+            "attributes": {
+              "aria-label": "Main menu"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Go back",
+            "attributes": {
+              "aria-label": "Go back"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "Close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Google",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Google"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Skip to main content",
+            "attributes": {}
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": "Accessibility feedback",
+            "attributes": {}
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "id": "12"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "id": "18"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Flights",
+            "attributes": {
+              "id": "7"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "id": "8"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Vacation rentals",
+            "attributes": {
+              "id": "14"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "Change appearance",
+            "attributes": {
+              "aria-label": "Change appearance"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "Google apps",
+            "attributes": {
+              "href": "https://www.google.co.uk/intl/en/about/products",
+              "aria-label": "Google apps"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://accounts.google.com/ServiceLogin?service=searchandassistant&passive=1209600&continue=https://www.google.com/travel/flights&followup=https://www.google.com/travel/flights&ec=GAZAlQM",
+              "aria-label": "Sign in"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "aria-label": "Travel"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "aria-label": "Explore"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Flights",
+            "attributes": {
+              "aria-label": "Selected Tab: Flights"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "aria-label": "Hotels"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Vacation rentals",
+            "attributes": {
+              "aria-label": "Vacation rentals"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Flight Deals",
+            "attributes": {
+              "aria-label": "Flight Deals"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Tracked flight prices",
+            "attributes": {
+              "aria-label": "Tracked flight prices"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Tracked hotel prices",
+            "attributes": {
+              "aria-label": "Tracked hotel prices"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Change language",
+            "attributes": {
+              "aria-label": "Change language"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Change currency",
+            "attributes": {
+              "aria-label": "Change currency"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Change location",
+            "attributes": {
+              "aria-label": "Change location"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Change currency",
+            "attributes": {
+              "aria-label": "Change currency"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Report Illegal Content",
+            "attributes": {
+              "aria-label": "Report Illegal Content"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Feedback",
+            "attributes": {
+              "aria-label": "Feedback"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Help",
+            "attributes": {
+              "aria-label": "Help"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "combobox",
+            "text": "Round trip",
+            "attributes": {}
+          },
+          {
+            "id": "pw-42",
+            "role": "option",
+            "text": "Round trip",
+            "attributes": {}
+          },
+          {
+            "id": "pw-43",
+            "role": "option",
+            "text": "One way",
+            "attributes": {}
+          },
+          {
+            "id": "pw-44",
+            "role": "option",
+            "text": "Multi-city",
+            "attributes": {}
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "1",
+            "attributes": {
+              "aria-label": "1 passenger, change number of passengers."
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "button",
+            "text": "Remove adult",
+            "attributes": {
+              "aria-label": "Remove adult"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "button",
+            "text": "Add adult",
+            "attributes": {
+              "aria-label": "Add adult"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "button",
+            "text": "Remove child aged 2 to 11",
+            "attributes": {
+              "aria-label": "Remove child aged 2 to 11"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "button",
+            "text": "Add child aged 2 to 11",
+            "attributes": {
+              "aria-label": "Add child aged 2 to 11"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "button",
+            "text": "Remove infant in seat",
+            "attributes": {
+              "aria-label": "Remove infant in seat"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "button",
+            "text": "Add infant in seat",
+            "attributes": {
+              "aria-label": "Add infant in seat"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "button",
+            "text": "Remove infant on lap",
+            "attributes": {
+              "aria-label": "Remove infant on lap"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "button",
+            "text": "Add infant on lap",
+            "attributes": {
+              "aria-label": "Add infant on lap"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "button",
+            "text": "Done",
+            "attributes": {}
+          },
+          {
+            "id": "pw-65",
+            "role": "button",
+            "text": "Cancel",
+            "attributes": {}
+          },
+          {
+            "id": "pw-67",
+            "role": "combobox",
+            "text": "Economy",
+            "attributes": {}
+          },
+          {
+            "id": "pw-70",
+            "role": "option",
+            "text": "Economy",
+            "attributes": {}
+          },
+          {
+            "id": "pw-71",
+            "role": "option",
+            "text": "Premium economy",
+            "attributes": {}
+          },
+          {
+            "id": "pw-72",
+            "role": "option",
+            "text": "Business",
+            "attributes": {}
+          },
+          {
+            "id": "pw-73",
+            "role": "option",
+            "text": "First",
+            "attributes": {}
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => {\n  const els=[...document.querySelectorAll('button,[role=button],input,[role=textbox],textarea,[aria-label]')];\n  return els.map((e,i)=>{const r=e.getBoundingClientRect(); return {i,tag:e.tagName,role:e.getAttribute('role'),aria:e.getAttribute('aria-label'),text:(e.innerText||e.value||'').replace(/\\s+/g,' ').trim(),placeholder:e.getAttribute('placeholder'),rect:{x:Math.round(r.x),y:Math.round(r.y),w:Math.round(r.width),h:Math.round(r.height)}}}).filter(x=>x.rect.w>0&&x.rect.h>0&&(x.text||x.aria||x.placeholder)).slice(0,80)\n})()"
+        }
+      },
+      "observation": "Eval: [{\"i\": 0, \"tag\": \"A\", \"role\": null, \"aria\": \"Google\", \"text\": \"\", \"placeholder\": null, \"rect\": {\"x\": -256, \"y\": 22, \"w\": 74, \"h\": 24}}, {\"i\": 1, \"tag\": \"DIV\", \"role\": \"button\", \"aria\": \"Main menu\", \"text\": \"\", \"placeholder\": null, \"rect\": {\"x\": 12, \"y\": 8, \"w\": 48, \"h\": 48}}, {\"i\": 4, \"tag\": \"A\", \"role\": null, \"aria\": \"Google\", \"text\": \"\", \"placeholder\": null, \"rect\": {\"x\": 64, \"y\": 22, \"w\": 74, \"h\": 24}}, {\"i\": 5, \"tag\": \"BUTTON\", \"role\": null, \"aria\": null, \"text\": \"Skip to main content\", \"pla"
+    },
+    {
+      "step": 8,
+      "state": {
+        "url": "https://www.google.com/travel/flights",
+        "title": "Find Cheap Flights Worldwide & Book Your Ticket - Google Flights",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Google",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Google"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Main menu",
+            "attributes": {
+              "aria-label": "Main menu"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Go back",
+            "attributes": {
+              "aria-label": "Go back"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "Close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Google",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Google"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Skip to main content",
+            "attributes": {}
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": "Accessibility feedback",
+            "attributes": {}
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "id": "12"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "id": "18"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Flights",
+            "attributes": {
+              "id": "7"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "id": "8"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Vacation rentals",
+            "attributes": {
+              "id": "14"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "Change appearance",
+            "attributes": {
+              "aria-label": "Change appearance"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "Google apps",
+            "attributes": {
+              "href": "https://www.google.co.uk/intl/en/about/products",
+              "aria-label": "Google apps"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://accounts.google.com/ServiceLogin?service=searchandassistant&passive=1209600&continue=https://www.google.com/travel/flights&followup=https://www.google.com/travel/flights&ec=GAZAlQM",
+              "aria-label": "Sign in"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "aria-label": "Travel"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "aria-label": "Explore"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Flights",
+            "attributes": {
+              "aria-label": "Selected Tab: Flights"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "aria-label": "Hotels"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Vacation rentals",
+            "attributes": {
+              "aria-label": "Vacation rentals"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Flight Deals",
+            "attributes": {
+              "aria-label": "Flight Deals"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Tracked flight prices",
+            "attributes": {
+              "aria-label": "Tracked flight prices"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Tracked hotel prices",
+            "attributes": {
+              "aria-label": "Tracked hotel prices"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Change language",
+            "attributes": {
+              "aria-label": "Change language"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Change currency",
+            "attributes": {
+              "aria-label": "Change currency"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Change location",
+            "attributes": {
+              "aria-label": "Change location"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Change currency",
+            "attributes": {
+              "aria-label": "Change currency"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Report Illegal Content",
+            "attributes": {
+              "aria-label": "Report Illegal Content"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Feedback",
+            "attributes": {
+              "aria-label": "Feedback"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Help",
+            "attributes": {
+              "aria-label": "Help"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "combobox",
+            "text": "Round trip",
+            "attributes": {}
+          },
+          {
+            "id": "pw-42",
+            "role": "option",
+            "text": "Round trip",
+            "attributes": {}
+          },
+          {
+            "id": "pw-43",
+            "role": "option",
+            "text": "One way",
+            "attributes": {}
+          },
+          {
+            "id": "pw-44",
+            "role": "option",
+            "text": "Multi-city",
+            "attributes": {}
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "1",
+            "attributes": {
+              "aria-label": "1 passenger, change number of passengers."
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "button",
+            "text": "Remove adult",
+            "attributes": {
+              "aria-label": "Remove adult"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "button",
+            "text": "Add adult",
+            "attributes": {
+              "aria-label": "Add adult"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "button",
+            "text": "Remove child aged 2 to 11",
+            "attributes": {
+              "aria-label": "Remove child aged 2 to 11"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "button",
+            "text": "Add child aged 2 to 11",
+            "attributes": {
+              "aria-label": "Add child aged 2 to 11"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "button",
+            "text": "Remove infant in seat",
+            "attributes": {
+              "aria-label": "Remove infant in seat"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "button",
+            "text": "Add infant in seat",
+            "attributes": {
+              "aria-label": "Add infant in seat"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "button",
+            "text": "Remove infant on lap",
+            "attributes": {
+              "aria-label": "Remove infant on lap"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "button",
+            "text": "Add infant on lap",
+            "attributes": {
+              "aria-label": "Add infant on lap"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "button",
+            "text": "Done",
+            "attributes": {}
+          },
+          {
+            "id": "pw-65",
+            "role": "button",
+            "text": "Cancel",
+            "attributes": {}
+          },
+          {
+            "id": "pw-67",
+            "role": "combobox",
+            "text": "Economy",
+            "attributes": {}
+          },
+          {
+            "id": "pw-70",
+            "role": "option",
+            "text": "Economy",
+            "attributes": {}
+          },
+          {
+            "id": "pw-71",
+            "role": "option",
+            "text": "Premium economy",
+            "attributes": {}
+          },
+          {
+            "id": "pw-72",
+            "role": "option",
+            "text": "Business",
+            "attributes": {}
+          },
+          {
+            "id": "pw-73",
+            "role": "option",
+            "text": "First",
+            "attributes": {}
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => {\n  const els=[...document.querySelectorAll('input, textarea, [contenteditable=\"true\"], [role=\"textbox\"], button, [role=\"button\"], [role=\"combobox\"], [aria-label]')];\n  return els.map((e,i)=>{const r=e.getBoundingClientRect(); return {i,tag:e.tagName,role:e.getAttribute('role'),aria:e.getAttribute('aria-label'),text:(e.innerText||e.value||'').replace(/\\s+/g,' ').trim().slice(0,250),placeholder:e.getAttribute('placeholder'),name:e.getAttribute('name'),type:e.getAttribute('type'),rect:{x:Math.round(r.x),y:Math.round(r.y),w:Math.round(r.width),h:Math.round(r.height)}, html:e.outerHTML.slice(0,300)}}).filter(x=>x.rect.w>0&&x.rect.h>0&&(x.text||x.aria||x.placeholder||x.name)).slice(0,200);\n})()"
+        }
+      },
+      "observation": "Eval: [{\"i\": 0, \"tag\": \"A\", \"role\": null, \"aria\": \"Google\", \"text\": \"\", \"placeholder\": null, \"name\": null, \"type\": null, \"rect\": {\"x\": -256, \"y\": 22, \"w\": 74, \"h\": 24}, \"html\": \"<a class=\\\"gb_ie gb_1c gb_me\\\" aria-label=\\\"Google\\\" href=\\\"/\\\"><span class=\\\"gb_5c gb_le\\\" aria-hidden=\\\"true\\\" role=\\\"presentation\\\"></span></a>\"}, {\"i\": 1, \"tag\": \"DIV\", \"role\": \"button\", \"aria\": \"Main menu\", \"text\": \"\", \"placeholder\": null, \"name\": null, \"type\": null, \"rect\": {\"x\": 12, \"y\": 8, \"w\": 48, \"h\": 48}, \"html\": \"<"
+    },
+    {
+      "step": 9,
+      "state": {
+        "url": "https://www.google.com/travel/flights",
+        "title": "Find Cheap Flights Worldwide & Book Your Ticket - Google Flights",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Google",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Google"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Main menu",
+            "attributes": {
+              "aria-label": "Main menu"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Go back",
+            "attributes": {
+              "aria-label": "Go back"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "Close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Google",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Google"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Skip to main content",
+            "attributes": {}
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": "Accessibility feedback",
+            "attributes": {}
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "id": "12"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "id": "18"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Flights",
+            "attributes": {
+              "id": "7"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "id": "8"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Vacation rentals",
+            "attributes": {
+              "id": "14"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "Change appearance",
+            "attributes": {
+              "aria-label": "Change appearance"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "Google apps",
+            "attributes": {
+              "href": "https://www.google.co.uk/intl/en/about/products",
+              "aria-label": "Google apps"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://accounts.google.com/ServiceLogin?service=searchandassistant&passive=1209600&continue=https://www.google.com/travel/flights&followup=https://www.google.com/travel/flights&ec=GAZAlQM",
+              "aria-label": "Sign in"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "aria-label": "Travel"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "aria-label": "Explore"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Flights",
+            "attributes": {
+              "aria-label": "Selected Tab: Flights"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "aria-label": "Hotels"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Vacation rentals",
+            "attributes": {
+              "aria-label": "Vacation rentals"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Flight Deals",
+            "attributes": {
+              "aria-label": "Flight Deals"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Tracked flight prices",
+            "attributes": {
+              "aria-label": "Tracked flight prices"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Tracked hotel prices",
+            "attributes": {
+              "aria-label": "Tracked hotel prices"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Change language",
+            "attributes": {
+              "aria-label": "Change language"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Change currency",
+            "attributes": {
+              "aria-label": "Change currency"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Change location",
+            "attributes": {
+              "aria-label": "Change location"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Change currency",
+            "attributes": {
+              "aria-label": "Change currency"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Report Illegal Content",
+            "attributes": {
+              "aria-label": "Report Illegal Content"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Feedback",
+            "attributes": {
+              "aria-label": "Feedback"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Help",
+            "attributes": {
+              "aria-label": "Help"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "combobox",
+            "text": "Round trip",
+            "attributes": {}
+          },
+          {
+            "id": "pw-42",
+            "role": "option",
+            "text": "Round trip",
+            "attributes": {}
+          },
+          {
+            "id": "pw-43",
+            "role": "option",
+            "text": "One way",
+            "attributes": {}
+          },
+          {
+            "id": "pw-44",
+            "role": "option",
+            "text": "Multi-city",
+            "attributes": {}
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "1",
+            "attributes": {
+              "aria-label": "1 passenger, change number of passengers."
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "button",
+            "text": "Remove adult",
+            "attributes": {
+              "aria-label": "Remove adult"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "button",
+            "text": "Add adult",
+            "attributes": {
+              "aria-label": "Add adult"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "button",
+            "text": "Remove child aged 2 to 11",
+            "attributes": {
+              "aria-label": "Remove child aged 2 to 11"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "button",
+            "text": "Add child aged 2 to 11",
+            "attributes": {
+              "aria-label": "Add child aged 2 to 11"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "button",
+            "text": "Remove infant in seat",
+            "attributes": {
+              "aria-label": "Remove infant in seat"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "button",
+            "text": "Add infant in seat",
+            "attributes": {
+              "aria-label": "Add infant in seat"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "button",
+            "text": "Remove infant on lap",
+            "attributes": {
+              "aria-label": "Remove infant on lap"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "button",
+            "text": "Add infant on lap",
+            "attributes": {
+              "aria-label": "Add infant on lap"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "button",
+            "text": "Done",
+            "attributes": {}
+          },
+          {
+            "id": "pw-65",
+            "role": "button",
+            "text": "Cancel",
+            "attributes": {}
+          },
+          {
+            "id": "pw-67",
+            "role": "combobox",
+            "text": "Economy",
+            "attributes": {}
+          },
+          {
+            "id": "pw-70",
+            "role": "option",
+            "text": "Economy",
+            "attributes": {}
+          },
+          {
+            "id": "pw-71",
+            "role": "option",
+            "text": "Premium economy",
+            "attributes": {}
+          },
+          {
+            "id": "pw-72",
+            "role": "option",
+            "text": "Business",
+            "attributes": {}
+          },
+          {
+            "id": "pw-73",
+            "role": "option",
+            "text": "First",
+            "attributes": {}
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://www.google.com/travel/flights?q=Flights%20from%20Chicago%20to%20Miami%20June%205%20to%20June%207%202026%20nonstop"
+        }
+      },
+      "observation": "Opened https://www.google.com/travel/flights?q=Flights%20from%20Chicago%20to%20Miami%20June%205%20to%20June%207%202026%20nonstop"
+    },
+    {
+      "step": 10,
+      "state": {
+        "url": "https://www.google.com/travel/flights?q=Flights%20from%20Chicago%20to%20Miami%20June%205%20to%20June%207%202026%20nonstop",
+        "title": "Chicago to Miami | Google Flights",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Google",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Google"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Main menu",
+            "attributes": {
+              "aria-label": "Main menu"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Go back",
+            "attributes": {
+              "aria-label": "Go back"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "Close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Google",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Google"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Skip to main content",
+            "attributes": {}
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": "Accessibility feedback",
+            "attributes": {}
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "id": "12"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "id": "18"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Flights",
+            "attributes": {
+              "id": "7"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "id": "8"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Vacation rentals",
+            "attributes": {
+              "id": "14"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "Change appearance",
+            "attributes": {
+              "aria-label": "Change appearance"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "Google apps",
+            "attributes": {
+              "href": "https://www.google.co.uk/intl/en/about/products",
+              "aria-label": "Google apps"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://accounts.google.com/ServiceLogin?service=searchandassistant&passive=1209600&continue=https://www.google.com/travel/flights?q%3DFlights%2Bfrom%2BChicago%2Bto%2BMiami%2BJune%2B5%2Bto%2BJune%2B7%2B2026%2Bnonstop&followup=https://www.google.com/travel/flights?q%3DFlights%2Bfrom%2BChicago%2Bto%2BMiami%2BJune%2B5%2Bto%2BJune%2B7%2B2026%2Bnonstop&ec=GAZAlQM",
+              "aria-label": "Sign in"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "aria-label": "Travel"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "aria-label": "Explore"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Flights",
+            "attributes": {
+              "aria-label": "Selected Tab: Flights"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "aria-label": "Hotels"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Vacation rentals",
+            "attributes": {
+              "aria-label": "Vacation rentals"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Flight Deals",
+            "attributes": {
+              "aria-label": "Flight Deals"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Tracked flight prices",
+            "attributes": {
+              "aria-label": "Tracked flight prices"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Tracked hotel prices",
+            "attributes": {
+              "aria-label": "Tracked hotel prices"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Change language",
+            "attributes": {
+              "aria-label": "Change language"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Change currency",
+            "attributes": {
+              "aria-label": "Change currency"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Change location",
+            "attributes": {
+              "aria-label": "Change location"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Change currency",
+            "attributes": {
+              "aria-label": "Change currency"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Report Illegal Content",
+            "attributes": {
+              "aria-label": "Report Illegal Content"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Feedback",
+            "attributes": {
+              "aria-label": "Feedback"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Help",
+            "attributes": {
+              "aria-label": "Help"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "combobox",
+            "text": "Round trip",
+            "attributes": {}
+          },
+          {
+            "id": "pw-42",
+            "role": "option",
+            "text": "Round trip",
+            "attributes": {}
+          },
+          {
+            "id": "pw-43",
+            "role": "option",
+            "text": "One way",
+            "attributes": {}
+          },
+          {
+            "id": "pw-44",
+            "role": "option",
+            "text": "Multi-city",
+            "attributes": {}
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "1",
+            "attributes": {
+              "aria-label": "1 passenger, change number of passengers."
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "button",
+            "text": "Remove adult",
+            "attributes": {
+              "aria-label": "Remove adult"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "button",
+            "text": "Add adult",
+            "attributes": {
+              "aria-label": "Add adult"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "button",
+            "text": "Remove child aged 2 to 11",
+            "attributes": {
+              "aria-label": "Remove child aged 2 to 11"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "button",
+            "text": "Add child aged 2 to 11",
+            "attributes": {
+              "aria-label": "Add child aged 2 to 11"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "button",
+            "text": "Remove infant in seat",
+            "attributes": {
+              "aria-label": "Remove infant in seat"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "button",
+            "text": "Add infant in seat",
+            "attributes": {
+              "aria-label": "Add infant in seat"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "button",
+            "text": "Remove infant on lap",
+            "attributes": {
+              "aria-label": "Remove infant on lap"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "button",
+            "text": "Add infant on lap",
+            "attributes": {
+              "aria-label": "Add infant on lap"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "button",
+            "text": "Done",
+            "attributes": {}
+          },
+          {
+            "id": "pw-65",
+            "role": "button",
+            "text": "Cancel",
+            "attributes": {}
+          },
+          {
+            "id": "pw-67",
+            "role": "combobox",
+            "text": "Economy (include Basic)",
+            "attributes": {}
+          },
+          {
+            "id": "pw-70",
+            "role": "option",
+            "text": "Economy (include Basic)Includes cheapest but more restrictive fares",
+            "attributes": {}
+          },
+          {
+            "id": "pw-71",
+            "role": "option",
+            "text": "Economy (exclude Basic)Fares with free seat selection and carry-on bags",
+            "attributes": {}
+          },
+          {
+            "id": "pw-72",
+            "role": "option",
+            "text": "Premium economy",
+            "attributes": {}
+          },
+          {
+            "id": "pw-73",
+            "role": "option",
+            "text": "Business",
+            "attributes": {}
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => {\n  const text = document.body.innerText.replace(/\\s+/g,' ').trim();\n  const visible = [...document.querySelectorAll('button,[role=button],input,[role=textbox],[role=combobox],a,[aria-label]')].map((e,i)=>{\n    const r=e.getBoundingClientRect();\n    return {\n      i,\n      tag:e.tagName,\n      role:e.getAttribute('role'),\n      aria:e.getAttribute('aria-label'),\n      text:(e.innerText||e.value||'').replace(/\\s+/g,' ').trim().slice(0,300),\n      placeholder:e.getAttribute('placeholder'),\n      rect:{x:Math.round(r.x),y:Math.round(r.y),w:Math.round(r.width),h:Math.round(r.height)},\n      html:e.outerHTML.slice(0,250)\n    };\n  }).filter(x=>x.rect.w>0 && x.rect.h>0 && (x.text||x.aria||x.placeholder)).slice(0,200);\n  return {url: location.href, title: document.title, bodyText: text.slice(0,5000), visible};\n})()"
+        }
+      },
+      "observation": "Eval: {\"url\": \"https://www.google.com/travel/flights?q=Flights%20from%20Chicago%20to%20Miami%20June%205%20to%20June%207%202026%20nonstop\", \"title\": \"Chicago to Miami | Google Flights\", \"bodyText\": \"Skip to main content Accessibility feedback Travel Explore Flights Hotels Vacation rentals Change appearance Sign in Loading results Flight search Round trip 1 Economy (include Basic) Chicago Miami Filters All filters (1) Nonstop Airlines Bags Price Times Emissions Connecting airports Duration Search result"
+    },
+    {
+      "step": 11,
+      "state": {
+        "url": "https://www.google.com/travel/flights?q=Flights%20from%20Chicago%20to%20Miami%20June%205%20to%20June%207%202026%20nonstop",
+        "title": "Chicago to Miami | Google Flights",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Google",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Google"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Main menu",
+            "attributes": {
+              "aria-label": "Main menu"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Go back",
+            "attributes": {
+              "aria-label": "Go back"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "Close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Google",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Google"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Skip to main content",
+            "attributes": {}
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": "Accessibility feedback",
+            "attributes": {}
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "id": "12"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "id": "18"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Flights",
+            "attributes": {
+              "id": "7"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "id": "8"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Vacation rentals",
+            "attributes": {
+              "id": "14"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "Change appearance",
+            "attributes": {
+              "aria-label": "Change appearance"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "Google apps",
+            "attributes": {
+              "href": "https://www.google.co.uk/intl/en/about/products",
+              "aria-label": "Google apps"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://accounts.google.com/ServiceLogin?service=searchandassistant&passive=1209600&continue=https://www.google.com/travel/flights?q%3DFlights%2Bfrom%2BChicago%2Bto%2BMiami%2BJune%2B5%2Bto%2BJune%2B7%2B2026%2Bnonstop&followup=https://www.google.com/travel/flights?q%3DFlights%2Bfrom%2BChicago%2Bto%2BMiami%2BJune%2B5%2Bto%2BJune%2B7%2B2026%2Bnonstop&ec=GAZAlQM",
+              "aria-label": "Sign in"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "aria-label": "Travel"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "aria-label": "Explore"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Flights",
+            "attributes": {
+              "aria-label": "Selected Tab: Flights"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "aria-label": "Hotels"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Vacation rentals",
+            "attributes": {
+              "aria-label": "Vacation rentals"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Flight Deals",
+            "attributes": {
+              "aria-label": "Flight Deals"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Tracked flight prices",
+            "attributes": {
+              "aria-label": "Tracked flight prices"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Tracked hotel prices",
+            "attributes": {
+              "aria-label": "Tracked hotel prices"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Change language",
+            "attributes": {
+              "aria-label": "Change language"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Change currency",
+            "attributes": {
+              "aria-label": "Change currency"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Change location",
+            "attributes": {
+              "aria-label": "Change location"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Change currency",
+            "attributes": {
+              "aria-label": "Change currency"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Report Illegal Content",
+            "attributes": {
+              "aria-label": "Report Illegal Content"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Feedback",
+            "attributes": {
+              "aria-label": "Feedback"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Help",
+            "attributes": {
+              "aria-label": "Help"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "combobox",
+            "text": "Round trip",
+            "attributes": {}
+          },
+          {
+            "id": "pw-42",
+            "role": "option",
+            "text": "Round trip",
+            "attributes": {}
+          },
+          {
+            "id": "pw-43",
+            "role": "option",
+            "text": "One way",
+            "attributes": {}
+          },
+          {
+            "id": "pw-44",
+            "role": "option",
+            "text": "Multi-city",
+            "attributes": {}
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "1",
+            "attributes": {
+              "aria-label": "1 passenger, change number of passengers."
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "button",
+            "text": "Remove adult",
+            "attributes": {
+              "aria-label": "Remove adult"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "button",
+            "text": "Add adult",
+            "attributes": {
+              "aria-label": "Add adult"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "button",
+            "text": "Remove child aged 2 to 11",
+            "attributes": {
+              "aria-label": "Remove child aged 2 to 11"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "button",
+            "text": "Add child aged 2 to 11",
+            "attributes": {
+              "aria-label": "Add child aged 2 to 11"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "button",
+            "text": "Remove infant in seat",
+            "attributes": {
+              "aria-label": "Remove infant in seat"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "button",
+            "text": "Add infant in seat",
+            "attributes": {
+              "aria-label": "Add infant in seat"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "button",
+            "text": "Remove infant on lap",
+            "attributes": {
+              "aria-label": "Remove infant on lap"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "button",
+            "text": "Add infant on lap",
+            "attributes": {
+              "aria-label": "Add infant on lap"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "button",
+            "text": "Done",
+            "attributes": {}
+          },
+          {
+            "id": "pw-65",
+            "role": "button",
+            "text": "Cancel",
+            "attributes": {}
+          },
+          {
+            "id": "pw-67",
+            "role": "combobox",
+            "text": "Economy (include Basic)",
+            "attributes": {}
+          },
+          {
+            "id": "pw-70",
+            "role": "option",
+            "text": "Economy (include Basic)Includes cheapest but more restrictive fares",
+            "attributes": {}
+          },
+          {
+            "id": "pw-71",
+            "role": "option",
+            "text": "Economy (exclude Basic)Fares with free seat selection and carry-on bags",
+            "attributes": {}
+          },
+          {
+            "id": "pw-72",
+            "role": "option",
+            "text": "Premium economy",
+            "attributes": {}
+          },
+          {
+            "id": "pw-73",
+            "role": "option",
+            "text": "Business",
+            "attributes": {}
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "async () => {\n  await new Promise(r => setTimeout(r, 5000));\n  const text = document.body.innerText.replace(/\\s+/g,' ').trim();\n  const visible = [...document.querySelectorAll('button,[role=button],input,[role=textbox],[role=combobox],a,[aria-label]')].map((e,i)=>{\n    const r=e.getBoundingClientRect();\n    return {\n      i,\n      tag:e.tagName,\n      role:e.getAttribute('role'),\n      aria:e.getAttribute('aria-label'),\n      text:(e.innerText||e.value||'').replace(/\\s+/g,' ').trim().slice(0,500),\n      placeholder:e.getAttribute('placeholder'),\n      rect:{x:Math.round(r.x),y:Math.round(r.y),w:Math.round(r.width),h:Math.round(r.height)}\n    };\n  }).filter(x=>x.rect.w>0 && x.rect.h>0 && (x.text||x.aria||x.placeholder)).slice(0,250);\n  return {url: location.href, title: document.title, bodyText: text.slice(0,12000), visible};\n}"
+        }
+      },
+      "observation": "Eval: {\"url\": \"https://www.google.com/travel/flights?q=Flights%20from%20Chicago%20to%20Miami%20June%205%20to%20June%207%202026%20nonstop\", \"title\": \"Chicago to Miami | Google Flights\", \"bodyText\": \"Skip to main content Accessibility feedback Travel Explore Flights Hotels Vacation rentals Change appearance Sign in Loading results Flight search Round trip 1 Economy (include Basic) Chicago Miami Filters All filters (1) Nonstop Airlines Bags Price Times Emissions Connecting airports Duration Search result"
+    },
+    {
+      "step": 12,
+      "state": {
+        "url": "https://www.google.com/travel/flights?q=Flights%20from%20Chicago%20to%20Miami%20June%205%20to%20June%207%202026%20nonstop",
+        "title": "Chicago to Miami | Google Flights",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Google",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Google"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Main menu",
+            "attributes": {
+              "aria-label": "Main menu"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Go back",
+            "attributes": {
+              "aria-label": "Go back"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "Close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Google",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Google"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Skip to main content",
+            "attributes": {}
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": "Accessibility feedback",
+            "attributes": {}
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "id": "12"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "id": "18"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Flights",
+            "attributes": {
+              "id": "7"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "id": "8"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Vacation rentals",
+            "attributes": {
+              "id": "14"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "Change appearance",
+            "attributes": {
+              "aria-label": "Change appearance"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "Google apps",
+            "attributes": {
+              "href": "https://www.google.co.uk/intl/en/about/products",
+              "aria-label": "Google apps"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://accounts.google.com/ServiceLogin?service=searchandassistant&passive=1209600&continue=https://www.google.com/travel/flights?q%3DFlights%2Bfrom%2BChicago%2Bto%2BMiami%2BJune%2B5%2Bto%2BJune%2B7%2B2026%2Bnonstop&followup=https://www.google.com/travel/flights?q%3DFlights%2Bfrom%2BChicago%2Bto%2BMiami%2BJune%2B5%2Bto%2BJune%2B7%2B2026%2Bnonstop&ec=GAZAlQM",
+              "aria-label": "Sign in"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "aria-label": "Travel"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "aria-label": "Explore"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Flights",
+            "attributes": {
+              "aria-label": "Selected Tab: Flights"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "aria-label": "Hotels"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Vacation rentals",
+            "attributes": {
+              "aria-label": "Vacation rentals"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Flight Deals",
+            "attributes": {
+              "aria-label": "Flight Deals"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Tracked flight prices",
+            "attributes": {
+              "aria-label": "Tracked flight prices"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Tracked hotel prices",
+            "attributes": {
+              "aria-label": "Tracked hotel prices"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Change language",
+            "attributes": {
+              "aria-label": "Change language"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Change currency",
+            "attributes": {
+              "aria-label": "Change currency"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Change location",
+            "attributes": {
+              "aria-label": "Change location"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Change currency",
+            "attributes": {
+              "aria-label": "Change currency"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Report Illegal Content",
+            "attributes": {
+              "aria-label": "Report Illegal Content"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Feedback",
+            "attributes": {
+              "aria-label": "Feedback"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Help",
+            "attributes": {
+              "aria-label": "Help"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "combobox",
+            "text": "Round trip",
+            "attributes": {}
+          },
+          {
+            "id": "pw-42",
+            "role": "option",
+            "text": "Round trip",
+            "attributes": {}
+          },
+          {
+            "id": "pw-43",
+            "role": "option",
+            "text": "One way",
+            "attributes": {}
+          },
+          {
+            "id": "pw-44",
+            "role": "option",
+            "text": "Multi-city",
+            "attributes": {}
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "1",
+            "attributes": {
+              "aria-label": "1 passenger, change number of passengers."
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "button",
+            "text": "Remove adult",
+            "attributes": {
+              "aria-label": "Remove adult"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "button",
+            "text": "Add adult",
+            "attributes": {
+              "aria-label": "Add adult"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "button",
+            "text": "Remove child aged 2 to 11",
+            "attributes": {
+              "aria-label": "Remove child aged 2 to 11"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "button",
+            "text": "Add child aged 2 to 11",
+            "attributes": {
+              "aria-label": "Add child aged 2 to 11"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "button",
+            "text": "Remove infant in seat",
+            "attributes": {
+              "aria-label": "Remove infant in seat"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "button",
+            "text": "Add infant in seat",
+            "attributes": {
+              "aria-label": "Add infant in seat"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "button",
+            "text": "Remove infant on lap",
+            "attributes": {
+              "aria-label": "Remove infant on lap"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "button",
+            "text": "Add infant on lap",
+            "attributes": {
+              "aria-label": "Add infant on lap"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "button",
+            "text": "Done",
+            "attributes": {}
+          },
+          {
+            "id": "pw-65",
+            "role": "button",
+            "text": "Cancel",
+            "attributes": {}
+          },
+          {
+            "id": "pw-67",
+            "role": "combobox",
+            "text": "Economy (include Basic)",
+            "attributes": {}
+          },
+          {
+            "id": "pw-70",
+            "role": "option",
+            "text": "Economy (include Basic)Includes cheapest but more restrictive fares",
+            "attributes": {}
+          },
+          {
+            "id": "pw-71",
+            "role": "option",
+            "text": "Economy (exclude Basic)Fares with free seat selection and carry-on bags",
+            "attributes": {}
+          },
+          {
+            "id": "pw-72",
+            "role": "option",
+            "text": "Premium economy",
+            "attributes": {}
+          },
+          {
+            "id": "pw-73",
+            "role": "option",
+            "text": "Business",
+            "attributes": {}
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "async () => {\n  await new Promise(r => setTimeout(r, 15000));\n  window.scrollTo(0, document.body.scrollHeight);\n  await new Promise(r => setTimeout(r, 1000));\n  const text = document.body.innerText.replace(/\\s+/g,' ').trim();\n  const items = [...document.querySelectorAll('div, li, button, [role=button], [role=listitem]')].map((e,i)=>{\n    const r=e.getBoundingClientRect();\n    const t=(e.innerText||'').replace(/\\s+/g,' ').trim();\n    return {i, tag:e.tagName, role:e.getAttribute('role'), aria:e.getAttribute('aria-label'), text:t.slice(0,1000), rect:{x:Math.round(r.x),y:Math.round(r.y),w:Math.round(r.width),h:Math.round(r.height)}};\n  }).filter(x=>x.rect.w>0 && x.rect.h>0 && x.text).slice(-120);\n  return {readyState: document.readyState, url: location.href, title: document.title, bodyText: text.slice(0,20000), items};\n}"
+        }
+      },
+      "observation": "Eval: {\"readyState\": \"complete\", \"url\": \"https://www.google.com/travel/flights?q=Flights%20from%20Chicago%20to%20Miami%20June%205%20to%20June%207%202026%20nonstop\", \"title\": \"Chicago to Miami | Google Flights\", \"bodyText\": \"Skip to main content Accessibility feedback Travel Explore Flights Hotels Vacation rentals Change appearance Sign in Loading results Flight search Round trip 1 Economy (include Basic) Chicago Miami Filters All filters (1) Nonstop Airlines Bags Price Times Emissions Connecting airpo"
+    },
+    {
+      "step": 13,
+      "state": {
+        "url": "https://www.google.com/travel/flights?q=Flights%20from%20Chicago%20to%20Miami%20June%205%20to%20June%207%202026%20nonstop",
+        "title": "Chicago to Miami | Google Flights",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Google",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Google"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Main menu",
+            "attributes": {
+              "aria-label": "Main menu"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Go back",
+            "attributes": {
+              "aria-label": "Go back"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "Close",
+            "attributes": {
+              "aria-label": "Close"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Google",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Google"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Skip to main content",
+            "attributes": {}
+          },
+          {
+            "id": "pw-10",
+            "role": "button",
+            "text": "Accessibility feedback",
+            "attributes": {}
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "id": "12"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "id": "18"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Flights",
+            "attributes": {
+              "id": "7"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "id": "8"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": "Vacation rentals",
+            "attributes": {
+              "id": "14"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "button",
+            "text": "Change appearance",
+            "attributes": {
+              "aria-label": "Change appearance"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": "Google apps",
+            "attributes": {
+              "href": "https://www.google.co.uk/intl/en/about/products",
+              "aria-label": "Google apps"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://accounts.google.com/ServiceLogin?service=searchandassistant&passive=1209600&continue=https://www.google.com/travel/flights?q%3DFlights%2Bfrom%2BChicago%2Bto%2BMiami%2BJune%2B5%2Bto%2BJune%2B7%2B2026%2Bnonstop&followup=https://www.google.com/travel/flights?q%3DFlights%2Bfrom%2BChicago%2Bto%2BMiami%2BJune%2B5%2Bto%2BJune%2B7%2B2026%2Bnonstop&ec=GAZAlQM",
+              "aria-label": "Sign in"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Travel",
+            "attributes": {
+              "aria-label": "Travel"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "aria-label": "Explore"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Flights",
+            "attributes": {
+              "aria-label": "Selected Tab: Flights"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "aria-label": "Hotels"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Vacation rentals",
+            "attributes": {
+              "aria-label": "Vacation rentals"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Flight Deals",
+            "attributes": {
+              "aria-label": "Flight Deals"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Tracked flight prices",
+            "attributes": {
+              "aria-label": "Tracked flight prices"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Tracked hotel prices",
+            "attributes": {
+              "aria-label": "Tracked hotel prices"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Change language",
+            "attributes": {
+              "aria-label": "Change language"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Change currency",
+            "attributes": {
+              "aria-label": "Change currency"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Change location",
+            "attributes": {
+              "aria-label": "Change location"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Change currency",
+            "attributes": {
+              "aria-label": "Change currency"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Report Illegal Content",
+            "attributes": {
+              "aria-label": "Report Illegal Content"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Feedback",
+            "attributes": {
+              "aria-label": "Feedback"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Help",
+            "attributes": {
+              "aria-label": "Help"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "combobox",
+            "text": "Round trip",
+            "attributes": {}
+          },
+          {
+            "id": "pw-42",
+            "role": "option",
+            "text": "Round trip",
+            "attributes": {}
+          },
+          {
+            "id": "pw-43",
+            "role": "option",
+            "text": "One way",
+            "attributes": {}
+          },
+          {
+            "id": "pw-44",
+            "role": "option",
+            "text": "Multi-city",
+            "attributes": {}
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "1",
+            "attributes": {
+              "aria-label": "1 passenger, change number of passengers."
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "button",
+            "text": "Remove adult",
+            "attributes": {
+              "aria-label": "Remove adult"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "button",
+            "text": "Add adult",
+            "attributes": {
+              "aria-label": "Add adult"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "button",
+            "text": "Remove child aged 2 to 11",
+            "attributes": {
+              "aria-label": "Remove child aged 2 to 11"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "button",
+            "text": "Add child aged 2 to 11",
+            "attributes": {
+              "aria-label": "Add child aged 2 to 11"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "button",
+            "text": "Remove infant in seat",
+            "attributes": {
+              "aria-label": "Remove infant in seat"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "button",
+            "text": "Add infant in seat",
+            "attributes": {
+              "aria-label": "Add infant in seat"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "button",
+            "text": "Remove infant on lap",
+            "attributes": {
+              "aria-label": "Remove infant on lap"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "button",
+            "text": "Add infant on lap",
+            "attributes": {
+              "aria-label": "Add infant on lap"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "button",
+            "text": "Done",
+            "attributes": {}
+          },
+          {
+            "id": "pw-65",
+            "role": "button",
+            "text": "Cancel",
+            "attributes": {}
+          },
+          {
+            "id": "pw-67",
+            "role": "combobox",
+            "text": "Economy (include Basic)",
+            "attributes": {}
+          },
+          {
+            "id": "pw-70",
+            "role": "option",
+            "text": "Economy (include Basic)Includes cheapest but more restrictive fares",
+            "attributes": {}
+          },
+          {
+            "id": "pw-71",
+            "role": "option",
+            "text": "Economy (exclude Basic)Fares with free seat selection and carry-on bags",
+            "attributes": {}
+          },
+          {
+            "id": "pw-72",
+            "role": "option",
+            "text": "Premium economy",
+            "attributes": {}
+          },
+          {
+            "id": "pw-73",
+            "role": "option",
+            "text": "Business",
+            "attributes": {}
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "Error planning: Extra data: line 2 column 1 (char 636)"
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

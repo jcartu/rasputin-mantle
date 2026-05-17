@@ -1,0 +1,1292 @@
+{
+  "task_id": "wv-076",
+  "task_description": "On Netflix Tudum, find a recent article about an upcoming Netflix movie and report its release date.",
+  "starting_url": "https://www.netflix.com/tudum",
+  "passed": false,
+  "final_answer": "Error planning: Extra data: line 2 column 1 (char 220)",
+  "duration_s": 72.32,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://www.netflix.com/tudum",
+        "title": "Netflix Tudum - Go behind the streams",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "SKIP TO MAIN CONTENT",
+            "attributes": {
+              "href": "#maincontent"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Sign In",
+            "attributes": {
+              "href": "https://www.netflix.com/login?nextpage=https%3A%2F%2Fwww.netflix.com%2Fprofiles%2Fchoose%3Fnext%3Dhttps%253A%252F%252Fwww.netflix.com%252Ftudum",
+              "aria-label": "Sign In"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "BY NETFLIX",
+            "attributes": {
+              "id": "top-home-button",
+              "href": "/tudum",
+              "aria-label": "Tudum by Netflix - Home"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "HOME",
+            "attributes": {
+              "href": "/tudum"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "TOP 10",
+            "attributes": {
+              "href": "/tudum/top10"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "TRENDING",
+            "attributes": {
+              "href": "/tudum/topics/trending"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "WHAT TO WATCH",
+            "attributes": {
+              "href": "/tudum/topics/what-to-watch"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "SHOWS",
+            "attributes": {
+              "href": "/tudum/topics/tv-shows"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "MOVIES",
+            "attributes": {
+              "href": "/tudum/topics/movies"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "PUZZLED",
+            "attributes": {
+              "href": "/tudum/puzzled"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "PODCASTS",
+            "attributes": {
+              "href": "/tudum/podcasts"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "SHOP",
+            "attributes": {
+              "href": "https://netflix.shop"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "button",
+            "text": "Scroll left",
+            "attributes": {
+              "aria-label": "Scroll left"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": "Scroll right",
+            "attributes": {
+              "aria-label": "Scroll right"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "NETFLIX SHOP\nExclusive merch from your Netflix faves",
+            "attributes": {
+              "href": "https://www.netflix.shop/"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "PODCASTS\nHear more about Netflix\u2019s TV shows and films",
+            "attributes": {
+              "href": "/tudum/podcasts"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Apex",
+            "attributes": {
+              "href": "/tudum/apex"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Remarkably Bright Creatures",
+            "attributes": {
+              "href": "/tudum/remarkably-bright-creatures"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "ONE PIECE",
+            "attributes": {
+              "href": "/tudum/one-piece"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "KPop Demon Hunters",
+            "attributes": {
+              "href": "/tudum/kpop-demon-hunters"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Man on Fire",
+            "attributes": {
+              "href": "/tudum/man-on-fire"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "My Royal Nemesis",
+            "attributes": {
+              "href": "/tudum/my-royal-nemesis"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "War Machine",
+            "attributes": {
+              "href": "/tudum/war-machine"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Bridgerton",
+            "attributes": {
+              "href": "/tudum/bridgerton"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Ronda Rousey vs. Gina Carano",
+            "attributes": {
+              "href": "/tudum/ronda-rousey-vs-gina-carano"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Sold Out on You",
+            "attributes": {
+              "href": "/tudum/sold-out-on-you"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "button",
+            "text": "Scroll left",
+            "attributes": {
+              "aria-label": "Scroll left"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "button",
+            "text": "Scroll right",
+            "attributes": {
+              "aria-label": "Scroll right"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Ronda Rousey Defeats Gina Carano in 17 Seconds",
+            "attributes": {
+              "id": "title-71f758b839e34cdc8af240995ab9469f",
+              "href": "/tudum/features/rousey-vs-carano-results-netflix"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "9 Iconic 2000s Movies to Stream Now",
+            "attributes": {
+              "id": "title-2e082ec2655443d0a089c9b954f9392a",
+              "href": "/tudum/articles/iconic-2000s-movies"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Here\u2019s Where Remarkably Bright Creatures Was Filmed",
+            "attributes": {
+              "id": "title-72f680c049b44975b7d901c69d9c9ee6",
+              "href": "/tudum/articles/filming-locations-remarkably-bright-creatures-marcellus"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "From\u00a0Ronda Rousey vs. Gina Carano\u00a0to\u00a0The Boroughs: What to Watch on Netflix",
+            "attributes": {
+              "id": "title-2ba5571c56c24078b44491c98aeec4a2",
+              "href": "/tudum/articles/what-to-watch-on-netflix-may-15-2026"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "EXPLORE MORE",
+            "attributes": {
+              "href": "/tudum/topics/trending"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Sign in to Netflix",
+            "attributes": {
+              "href": "https://www.netflix.com/login?nextpage=https%3A%2F%2Fwww.netflix.com%2Fprofiles%2Fchoose%3Fnext%3Dhttps%253A%252F%252Fwww.netflix.com%252Ftudum"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Sheryl Underwood Has More to Say About The Roast of Kevin Hart",
+            "attributes": {
+              "id": "title-afe66da878ae4a8387791ab9f6d2aa8a",
+              "href": "/tudum/articles/sheryl-underwood-kevin-hart-roast-reaction"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Get Closer and Go Behind the Scenes with Netflix Stars at the Upfronts",
+            "attributes": {
+              "href": "/tudum/articles/upfronts-behind-the-scenes-photos"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Maya Hawke and Kerry Condon Will Star in The God of the Woods",
+            "attributes": {
+              "href": "/tudum/articles/the-god-of-the-woods-release-date-cast-news"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Nemesis Is a High Stakes Thrill Ride",
+            "attributes": {
+              "href": "/tudum/articles/nemesis-release-date-cast-news"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "NFL on Netflix: More Games, Holiday Matchups, and NFL Honors in 2026 and Beyond",
+            "attributes": {
+              "href": "/tudum/articles/nfl-games-on-netflix"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "MORE NEWS",
+            "attributes": {
+              "href": "/tudum/topics/news"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "Watch the Sweet Magnolias Season 5 Trailer",
+            "attributes": {
+              "id": "title-672b477b16db4bbfb2fdc534ad1edef5",
+              "href": "/tudum/videos/sweet-magnolias-season-5-watch-trailer"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "link",
+            "text": "Watch the Remarkably Bright Creatures Trailer",
+            "attributes": {
+              "id": "title-536778c603034c59897f8ae65dee3ac1",
+              "href": "/tudum/videos/remarkably-bright-creatures-trailer"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "link",
+            "text": "Watch The Four Seasons Season 2 Trailer",
+            "attributes": {
+              "id": "title-29b7b60c43b6430f87a57a7d06e5ea54",
+              "href": "/tudum/videos/watch-the-four-seasons-season-2-trailer"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "MORE VIDEOS",
+            "attributes": {
+              "href": "/tudum/topics/video"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "link",
+            "text": "Here\u2019s What Time Rousey vs. Carano Starts Tonight",
+            "attributes": {
+              "id": "title-6ve564c6UjJhcgkxjcghOl",
+              "href": "/tudum/features/ronda-rousey-gina-carano-mma-live-on-netflix"
+            }
+          },
+          {
+            "id": "pw-72",
+            "role": "link",
+            "text": "Perfect Match Season 4: Meet the 20 Singles Competing for Dating Dominance",
+            "attributes": {
+              "id": "title-61c60e39bb674db087b518616d446272",
+              "href": "/tudum/articles/perfect-match-season-4-cast-instagrams"
+            }
+          },
+          {
+            "id": "pw-75",
+            "role": "link",
+            "text": "7 Remarkably Bright Sally Field Movies and Series",
+            "attributes": {
+              "id": "title-073eaad6724946b798e9f6de3d03b027",
+              "href": "/tudum/articles/sally-field-movies-shows"
+            }
+          },
+          {
+            "id": "pw-76",
+            "role": "link",
+            "text": "MORE SHOWS",
+            "attributes": {
+              "href": "/tudum/topics/tv-shows"
+            }
+          },
+          {
+            "id": "pw-77",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/tudum/apex"
+            }
+          },
+          {
+            "id": "pw-79",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/tudum/remarkably-bright-creatures"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "click",
+        "args": {
+          "id": "pw-40"
+        }
+      },
+      "observation": "Clicked pw-40"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://www.netflix.com/tudum/articles/filming-locations-remarkably-bright-creatures-marcellus",
+        "title": "Netflix Tudum - Go behind the streams",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "SKIP TO MAIN CONTENT",
+            "attributes": {
+              "href": "#maincontent"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Sign In",
+            "attributes": {
+              "href": "https://www.netflix.com/login?nextpage=https%3A%2F%2Fwww.netflix.com%2Fprofiles%2Fchoose%3Fnext%3Dhttps%253A%252F%252Fwww.netflix.com%252Ftudum",
+              "aria-label": "Sign In"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "BY NETFLIX",
+            "attributes": {
+              "id": "top-home-button",
+              "href": "/tudum",
+              "aria-label": "Tudum by Netflix - Home"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "HOME",
+            "attributes": {
+              "href": "/tudum"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "TOP 10",
+            "attributes": {
+              "href": "/tudum/top10"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "TRENDING",
+            "attributes": {
+              "href": "/tudum/topics/trending"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "WHAT TO WATCH",
+            "attributes": {
+              "href": "/tudum/topics/what-to-watch"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "SHOWS",
+            "attributes": {
+              "href": "/tudum/topics/tv-shows"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "MOVIES",
+            "attributes": {
+              "href": "/tudum/topics/movies"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "PUZZLED",
+            "attributes": {
+              "href": "/tudum/puzzled"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "PODCASTS",
+            "attributes": {
+              "href": "/tudum/podcasts"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "SHOP",
+            "attributes": {
+              "href": "https://netflix.shop"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "button",
+            "text": "Scroll left",
+            "attributes": {
+              "aria-label": "Scroll left"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": "Scroll right",
+            "attributes": {
+              "aria-label": "Scroll right"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "NETFLIX SHOP\nExclusive merch from your Netflix faves",
+            "attributes": {
+              "href": "https://www.netflix.shop/"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "PODCASTS\nHear more about Netflix\u2019s TV shows and films",
+            "attributes": {
+              "href": "/tudum/podcasts"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Apex",
+            "attributes": {
+              "href": "/tudum/apex"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Remarkably Bright Creatures",
+            "attributes": {
+              "href": "/tudum/remarkably-bright-creatures"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "ONE PIECE",
+            "attributes": {
+              "href": "/tudum/one-piece"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "KPop Demon Hunters",
+            "attributes": {
+              "href": "/tudum/kpop-demon-hunters"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Man on Fire",
+            "attributes": {
+              "href": "/tudum/man-on-fire"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "My Royal Nemesis",
+            "attributes": {
+              "href": "/tudum/my-royal-nemesis"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "War Machine",
+            "attributes": {
+              "href": "/tudum/war-machine"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Bridgerton",
+            "attributes": {
+              "href": "/tudum/bridgerton"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Ronda Rousey vs. Gina Carano",
+            "attributes": {
+              "href": "/tudum/ronda-rousey-vs-gina-carano"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Sold Out on You",
+            "attributes": {
+              "href": "/tudum/sold-out-on-you"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "button",
+            "text": "Scroll left",
+            "attributes": {
+              "aria-label": "Scroll left"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "button",
+            "text": "Scroll right",
+            "attributes": {
+              "aria-label": "Scroll right"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Ronda Rousey Defeats Gina Carano in 17 Seconds",
+            "attributes": {
+              "id": "title-71f758b839e34cdc8af240995ab9469f",
+              "href": "/tudum/features/rousey-vs-carano-results-netflix"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "9 Iconic 2000s Movies to Stream Now",
+            "attributes": {
+              "id": "title-2e082ec2655443d0a089c9b954f9392a",
+              "href": "/tudum/articles/iconic-2000s-movies"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Here\u2019s Where Remarkably Bright Creatures Was Filmed",
+            "attributes": {
+              "id": "title-72f680c049b44975b7d901c69d9c9ee6",
+              "href": "/tudum/articles/filming-locations-remarkably-bright-creatures-marcellus"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "From\u00a0Ronda Rousey vs. Gina Carano\u00a0to\u00a0The Boroughs: What to Watch on Netflix",
+            "attributes": {
+              "id": "title-2ba5571c56c24078b44491c98aeec4a2",
+              "href": "/tudum/articles/what-to-watch-on-netflix-may-15-2026"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "EXPLORE MORE",
+            "attributes": {
+              "href": "/tudum/topics/trending"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Sign in to Netflix",
+            "attributes": {
+              "href": "https://www.netflix.com/login?nextpage=https%3A%2F%2Fwww.netflix.com%2Fprofiles%2Fchoose%3Fnext%3Dhttps%253A%252F%252Fwww.netflix.com%252Ftudum"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Sheryl Underwood Has More to Say About The Roast of Kevin Hart",
+            "attributes": {
+              "id": "title-afe66da878ae4a8387791ab9f6d2aa8a",
+              "href": "/tudum/articles/sheryl-underwood-kevin-hart-roast-reaction"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Get Closer and Go Behind the Scenes with Netflix Stars at the Upfronts",
+            "attributes": {
+              "href": "/tudum/articles/upfronts-behind-the-scenes-photos"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Maya Hawke and Kerry Condon Will Star in The God of the Woods",
+            "attributes": {
+              "href": "/tudum/articles/the-god-of-the-woods-release-date-cast-news"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Nemesis Is a High Stakes Thrill Ride",
+            "attributes": {
+              "href": "/tudum/articles/nemesis-release-date-cast-news"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "NFL on Netflix: More Games, Holiday Matchups, and NFL Honors in 2026 and Beyond",
+            "attributes": {
+              "href": "/tudum/articles/nfl-games-on-netflix"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "MORE NEWS",
+            "attributes": {
+              "href": "/tudum/topics/news"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "Watch the Sweet Magnolias Season 5 Trailer",
+            "attributes": {
+              "id": "title-672b477b16db4bbfb2fdc534ad1edef5",
+              "href": "/tudum/videos/sweet-magnolias-season-5-watch-trailer"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "link",
+            "text": "Watch the Remarkably Bright Creatures Trailer",
+            "attributes": {
+              "id": "title-536778c603034c59897f8ae65dee3ac1",
+              "href": "/tudum/videos/remarkably-bright-creatures-trailer"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "link",
+            "text": "Watch The Four Seasons Season 2 Trailer",
+            "attributes": {
+              "id": "title-29b7b60c43b6430f87a57a7d06e5ea54",
+              "href": "/tudum/videos/watch-the-four-seasons-season-2-trailer"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "MORE VIDEOS",
+            "attributes": {
+              "href": "/tudum/topics/video"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "link",
+            "text": "Here\u2019s What Time Rousey vs. Carano Starts Tonight",
+            "attributes": {
+              "id": "title-6ve564c6UjJhcgkxjcghOl",
+              "href": "/tudum/features/ronda-rousey-gina-carano-mma-live-on-netflix"
+            }
+          },
+          {
+            "id": "pw-72",
+            "role": "link",
+            "text": "Perfect Match Season 4: Meet the 20 Singles Competing for Dating Dominance",
+            "attributes": {
+              "id": "title-61c60e39bb674db087b518616d446272",
+              "href": "/tudum/articles/perfect-match-season-4-cast-instagrams"
+            }
+          },
+          {
+            "id": "pw-75",
+            "role": "link",
+            "text": "7 Remarkably Bright Sally Field Movies and Series",
+            "attributes": {
+              "id": "title-073eaad6724946b798e9f6de3d03b027",
+              "href": "/tudum/articles/sally-field-movies-shows"
+            }
+          },
+          {
+            "id": "pw-76",
+            "role": "link",
+            "text": "MORE SHOWS",
+            "attributes": {
+              "href": "/tudum/topics/tv-shows"
+            }
+          },
+          {
+            "id": "pw-77",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/tudum/apex"
+            }
+          },
+          {
+            "id": "pw-79",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/tudum/remarkably-bright-creatures"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "document.body.innerText"
+        }
+      },
+      "observation": "Eval: \"SKIP TO MAIN CONTENT\\nSign In\\nBY NETFLIX\\nHOME\\nTOP 10\\nTRENDING\\nWHAT TO WATCH\\nSHOWS\\nMOVIES\\nPUZZLED\\nPODCASTS\\nSHOP\\nNETFLIX SHOP\\nExclusive merch from your Netflix faves\\nPODCASTS\\nHear more about Netflix\\u2019s TV shows and films\\nPOPULAR\\nApex\\nRemarkably Bright Creatures\\nONE PIECE\\nKPop Demon Hunters\\nMan on Fire\\nMy Royal Nemesis\\nWar Machine\\nBridgerton\\nRonda Rousey vs. Gina Carano\\nSold Out on You\\nHere\\u2019s Where Remarkably Bright Creatures Was Filmed - Netflix Tudum\\nPHOTO BY "
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://www.netflix.com/tudum/articles/filming-locations-remarkably-bright-creatures-marcellus",
+        "title": "Here\u2019s Where Remarkably Bright Creatures Was Filmed - Netflix Tudum",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "SKIP TO MAIN CONTENT",
+            "attributes": {
+              "href": "#maincontent"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Sign In",
+            "attributes": {
+              "href": "https://www.netflix.com/login?nextpage=https%3A%2F%2Fwww.netflix.com%2Fprofiles%2Fchoose%3Fnext%3Dhttps%253A%252F%252Fwww.netflix.com%252Ftudum%252Farticles%252Ffilming-locations-remarkably-bright-creatures-marcellus",
+              "aria-label": "Sign In"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "BY NETFLIX",
+            "attributes": {
+              "id": "top-home-button",
+              "href": "/tudum",
+              "aria-label": "Tudum by Netflix - Home"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "HOME",
+            "attributes": {
+              "href": "/tudum"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "TOP 10",
+            "attributes": {
+              "href": "/tudum/top10"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "TRENDING",
+            "attributes": {
+              "href": "/tudum/topics/trending"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "WHAT TO WATCH",
+            "attributes": {
+              "href": "/tudum/topics/what-to-watch"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "SHOWS",
+            "attributes": {
+              "href": "/tudum/topics/tv-shows"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "MOVIES",
+            "attributes": {
+              "href": "/tudum/topics/movies"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "PUZZLED",
+            "attributes": {
+              "href": "/tudum/puzzled"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "PODCASTS",
+            "attributes": {
+              "href": "/tudum/podcasts"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "SHOP",
+            "attributes": {
+              "href": "https://netflix.shop"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "button",
+            "text": "Scroll left",
+            "attributes": {
+              "aria-label": "Scroll left"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": "Scroll right",
+            "attributes": {
+              "aria-label": "Scroll right"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": "NETFLIX SHOP\nExclusive merch from your Netflix faves",
+            "attributes": {
+              "href": "https://www.netflix.shop/"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": "PODCASTS\nHear more about Netflix\u2019s TV shows and films",
+            "attributes": {
+              "href": "/tudum/podcasts"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Apex",
+            "attributes": {
+              "href": "/tudum/apex"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Remarkably Bright Creatures",
+            "attributes": {
+              "href": "/tudum/remarkably-bright-creatures"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "ONE PIECE",
+            "attributes": {
+              "href": "/tudum/one-piece"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "KPop Demon Hunters",
+            "attributes": {
+              "href": "/tudum/kpop-demon-hunters"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Man on Fire",
+            "attributes": {
+              "href": "/tudum/man-on-fire"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "My Royal Nemesis",
+            "attributes": {
+              "href": "/tudum/my-royal-nemesis"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "War Machine",
+            "attributes": {
+              "href": "/tudum/war-machine"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Bridgerton",
+            "attributes": {
+              "href": "/tudum/bridgerton"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Ronda Rousey vs. Gina Carano",
+            "attributes": {
+              "href": "/tudum/ronda-rousey-vs-gina-carano"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Sold Out on You",
+            "attributes": {
+              "href": "/tudum/sold-out-on-you"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "button",
+            "text": "Scroll left",
+            "attributes": {
+              "aria-label": "Scroll left"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "button",
+            "text": "Scroll right",
+            "attributes": {
+              "aria-label": "Scroll right"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "BEHIND THE SCENES",
+            "attributes": {
+              "href": "/tudum/topics/behind-the-scenes"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "button",
+            "text": "Link Copied to Clipboard\nShare",
+            "attributes": {}
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "the cinematic adaptation",
+            "attributes": {
+              "href": "https://www.netflix.com/tudum/articles/remarkably-bright-creatures-cast-release-date-photos-news"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "a wry octopus named Marcellus",
+            "attributes": {
+              "href": "https://www.netflix.com/tudum/articles/meet-marcellus-octopus-remarkably-bright-creatures"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Alfred Molina",
+            "attributes": {
+              "href": "https://www.netflix.com/tudum/articles/remarkably-bright-creatures-marcellus-voice-alfred-molina"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "the visual inspiration for Marcellus",
+            "attributes": {
+              "href": "https://www.netflix.com/tudum/articles/meet-marcellus-octopus-remarkably-bright-creatures"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "BASED ON A BOOK",
+            "attributes": {
+              "href": "/tudum/topics/based-on-a-book"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "BEHIND THE SCENES",
+            "attributes": {
+              "href": "/tudum/topics/behind-the-scenes"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "ARTICLE",
+            "attributes": {
+              "href": "/tudum/topics/article"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.netflix.com/title/81911351?trackId=259776131&trkId=259776131&src=tudum"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "button",
+            "text": "My List",
+            "attributes": {}
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Watch",
+            "attributes": {
+              "href": "https://www.netflix.com/login?nextpage=https%3A%2F%2Fwww.netflix.com%2Fprofiles%2Fchoose%3Fnext%3Dhttps%253A%252F%252Fwww.netflix.com%252Fwatch%252F81911351%253FtrackId%253D259776131%2526trkId%253D259776131%2526src%253Dtudum"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Explore",
+            "attributes": {
+              "href": "/tudum/remarkably-bright-creatures"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "REMARKABLY BRIGHT CREATURES\n1h 54m\n12\n2026\n\nWhile working nights at a small-town aquarium, a widow bonds with a clever octopus and an adrift young man in this moving drama based on the bestseller.",
+            "attributes": {
+              "href": "https://www.netflix.com/title/81911351?trackId=259776131&trkId=259776131&src=tudum"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Meet Marcellus, the Octopus Star of Remarkably Bright Creatures",
+            "attributes": {
+              "id": "title-a282e059b40043fcbdc705e1df659676",
+              "href": "/tudum/articles/meet-marcellus-octopus-remarkably-bright-creatures"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "Watch a Sneak Peek of Remarkably Bright Creatures to Celebrate Earth Day",
+            "attributes": {
+              "id": "title-97e720c1088544918c1843bdccea7999",
+              "href": "/tudum/articles/remarkably-bright-creatures-sneak-peek-clip"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "link",
+            "text": "Who\u2019s Voicing Remarkably Bright Creatures\u2019 Octopus?",
+            "attributes": {
+              "id": "title-63wK4WPpdBlNZJTR1jMeDl",
+              "href": "/tudum/articles/remarkably-bright-creatures-marcellus-voice-alfred-molina"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "link",
+            "text": "Dive in to Remarkably Bright Creatures",
+            "attributes": {
+              "id": "title-55AVKbWYNIgnv89TcDG6Cj",
+              "href": "/tudum/articles/remarkably-bright-creatures-cast-release-date-photos-news"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "Remarkably Bright Creatures Cast: Dive Deep with Sally Field and Lewis Pullman",
+            "attributes": {
+              "id": "title-1ac9bda3f2bf4950a4418207d68ed7d1",
+              "href": "/tudum/articles/remarkably-bright-creatures-cast"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "link",
+            "text": "Remarkably Bright Creatures Ending, Explained",
+            "attributes": {
+              "id": "title-98fa10d80d184a83ad9333ba89474cf7",
+              "href": "/tudum/articles/remarkably-bright-creatures-ending-movie-book"
+            }
+          },
+          {
+            "id": "pw-72",
+            "role": "link",
+            "text": "13 Movies and Shows Like Remarkably Bright Creatures to Boost Your Mood",
+            "attributes": {
+              "id": "title-61cc8e94890d4b00b6dea70d3fe9c94b",
+              "href": "/tudum/articles/movies-shows-like-remarkably-bright-creatures"
+            }
+          },
+          {
+            "id": "pw-73",
+            "role": "button",
+            "text": "See More",
+            "attributes": {
+              "aria-label": "See More"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "Error planning: Extra data: line 2 column 1 (char 220)"
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

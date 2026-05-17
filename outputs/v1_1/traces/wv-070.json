@@ -1,0 +1,1291 @@
+{
+  "task_id": "wv-070",
+  "task_description": "On Microsoft Learn, find the C# documentation page for async and await and report one key guideline.",
+  "starting_url": "https://learn.microsoft.com/dotnet/csharp",
+  "passed": true,
+  "final_answer": "Microsoft Learn page: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/ \u2014 Key guideline: use the await operator for non-blocking waits; don\u2019t block on asynchronous work with calls like Task.Wait or Task.Result, because that can reduce responsiveness and cause deadlocks.",
+  "duration_s": 33.53,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://learn.microsoft.com/en-us/dotnet/csharp/",
+        "title": "C# Guide - .NET managed language - C# | Microsoft Learn",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#main"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Privacy Statement",
+            "attributes": {
+              "href": "https://go.microsoft.com/fwlink/?LinkId=521839"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Third-Party Cookies",
+            "attributes": {
+              "href": "https://aka.ms/3rdpartycookies"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Accept",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "Reject",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "button",
+            "text": "Manage cookies",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Learn more",
+            "attributes": {
+              "href": "https://aka.ms/MSBuild_FY26_BN_MSLearn_Hero"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "button",
+            "text": "Dismiss alert",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Download Microsoft Edge",
+            "attributes": {
+              "href": "https://go.microsoft.com/fwlink/p/?LinkID=2092881 "
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "More info about Internet Explorer and Microsoft Edge",
+            "attributes": {
+              "href": "https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button",
+              "aria-label": "Global navigation"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": "Learn",
+            "attributes": {
+              "href": "/en-us/"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.microsoft.com",
+              "aria-label": "Microsoft"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "combobox",
+            "text": "Search",
+            "attributes": {
+              "id": "site-header-search-autocomplete-input-mobile",
+              "name": "terms",
+              "type": "search",
+              "aria-label": "Search",
+              "placeholder": "Search"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "textbox",
+            "text": null,
+            "attributes": {
+              "name": "category",
+              "value": ""
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button",
+              "aria-label": "Close search"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button",
+              "aria-label": "Open search"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Profile",
+            "attributes": {
+              "href": "https://learn.microsoft.com/en-us/users/me/activity/"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Analytics",
+            "attributes": {
+              "href": "https://learn.microsoft.com/en-us/users/me/analytics/"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Settings",
+            "attributes": {
+              "href": "https://learn.microsoft.com/en-us/users/me/settings/"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Sign out",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Microsoft",
+            "attributes": {
+              "href": "https://www.microsoft.com",
+              "aria-label": "Microsoft"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Learn",
+            "attributes": {
+              "href": "/en-us/"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button",
+              "aria-label": "Previous"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "button",
+            "text": "Documentation",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "All product documentation",
+            "attributes": {
+              "href": "/en-us/docs/"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Azure documentation",
+            "attributes": {
+              "href": "/en-us/azure/?product=popular"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Dynamics 365 documentation",
+            "attributes": {
+              "href": "/en-us/dynamics365/"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Microsoft Copilot documentation",
+            "attributes": {
+              "href": "/en-us/copilot/"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Microsoft 365 documentation",
+            "attributes": {
+              "href": "/en-us/microsoft-365/"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Power Platform documentation",
+            "attributes": {
+              "href": "/en-us/power-platform/"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Code samples",
+            "attributes": {
+              "href": "/en-us/samples/"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Troubleshooting documentation",
+            "attributes": {
+              "href": "/en-us/troubleshoot/"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Microsoft Build",
+            "attributes": {
+              "href": "https://build.microsoft.com/home?wt.mc_ID=msbuild26_ciarmar_corp_np_oo_MSL_reg"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "button",
+            "text": "Training & Labs",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "All training",
+            "attributes": {
+              "href": "/en-us/training/"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Azure training",
+            "attributes": {
+              "href": "/en-us/training/browse/?products=azure"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Dynamics 365 training",
+            "attributes": {
+              "href": "/en-us/training/browse/?products=dynamics-365"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Microsoft Copilot training",
+            "attributes": {
+              "href": "/en-us/training/browse/?products=ms-copilot"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Microsoft 365 training",
+            "attributes": {
+              "href": "/en-us/training/browse/?products=m365"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Microsoft Power Platform training",
+            "attributes": {
+              "href": "/en-us/training/browse/?products=power-platform"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Labs",
+            "attributes": {
+              "href": "/en-us/labs/"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Credentials",
+            "attributes": {
+              "href": "/en-us/credentials/"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Career paths",
+            "attributes": {
+              "href": "/en-us/training/career-paths/"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Microsoft Build",
+            "attributes": {
+              "href": "https://build.microsoft.com/home?wt.mc_ID=msbuild26_ciarmar_corp_np_oo_MSL_reg"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "button",
+            "text": "Q&A",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Ask a question",
+            "attributes": {
+              "href": "/en-us/answers/questions/ask/"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Azure questions",
+            "attributes": {
+              "href": "/en-us/answers/tags/133/azure/"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-and-await"
+        }
+      },
+      "observation": "Opened https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-and-await"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-and-await",
+        "title": "404 - Content not found",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#main"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Privacy Statement",
+            "attributes": {
+              "href": "https://go.microsoft.com/fwlink/?LinkId=521839"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Third-Party Cookies",
+            "attributes": {
+              "href": "https://aka.ms/3rdpartycookies"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Accept",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "Reject",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "button",
+            "text": "Manage cookies",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Download Microsoft Edge",
+            "attributes": {
+              "href": "https://go.microsoft.com/fwlink/p/?LinkID=2092881 "
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "More info about Internet Explorer and Microsoft Edge",
+            "attributes": {
+              "href": "https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button",
+              "aria-label": "Global navigation"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Learn",
+            "attributes": {
+              "href": "/en-us/"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.microsoft.com",
+              "aria-label": "Microsoft"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "combobox",
+            "text": "Search",
+            "attributes": {
+              "id": "site-header-search-autocomplete-input-mobile",
+              "name": "terms",
+              "type": "search",
+              "aria-label": "Search",
+              "placeholder": "Search"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "textbox",
+            "text": null,
+            "attributes": {
+              "name": "category",
+              "value": ""
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button",
+              "aria-label": "Close search"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button",
+              "aria-label": "Open search"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": "Profile",
+            "attributes": {
+              "href": "https://learn.microsoft.com/en-us/users/me/activity/"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": "Analytics",
+            "attributes": {
+              "href": "https://learn.microsoft.com/en-us/users/me/analytics/"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Settings",
+            "attributes": {
+              "href": "https://learn.microsoft.com/en-us/users/me/settings/"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Sign out",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Microsoft",
+            "attributes": {
+              "href": "https://www.microsoft.com",
+              "aria-label": "Microsoft"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Learn",
+            "attributes": {
+              "href": "/en-us/"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button",
+              "aria-label": "Previous"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "button",
+            "text": "Documentation",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "All product documentation",
+            "attributes": {
+              "href": "/en-us/docs/"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": "Azure documentation",
+            "attributes": {
+              "href": "/en-us/azure/?product=popular"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": "Dynamics 365 documentation",
+            "attributes": {
+              "href": "/en-us/dynamics365/"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "Microsoft Copilot documentation",
+            "attributes": {
+              "href": "/en-us/copilot/"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Microsoft 365 documentation",
+            "attributes": {
+              "href": "/en-us/microsoft-365/"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Power Platform documentation",
+            "attributes": {
+              "href": "/en-us/power-platform/"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Code samples",
+            "attributes": {
+              "href": "/en-us/samples/"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Troubleshooting documentation",
+            "attributes": {
+              "href": "/en-us/troubleshoot/"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Microsoft Build",
+            "attributes": {
+              "href": "https://build.microsoft.com/home?wt.mc_ID=msbuild26_ciarmar_corp_np_oo_MSL_reg"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "button",
+            "text": "Training & Labs",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "All training",
+            "attributes": {
+              "href": "/en-us/training/"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Azure training",
+            "attributes": {
+              "href": "/en-us/training/browse/?products=azure"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Dynamics 365 training",
+            "attributes": {
+              "href": "/en-us/training/browse/?products=dynamics-365"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Microsoft Copilot training",
+            "attributes": {
+              "href": "/en-us/training/browse/?products=ms-copilot"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Microsoft 365 training",
+            "attributes": {
+              "href": "/en-us/training/browse/?products=m365"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Microsoft Power Platform training",
+            "attributes": {
+              "href": "/en-us/training/browse/?products=power-platform"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Labs",
+            "attributes": {
+              "href": "/en-us/labs/"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Credentials",
+            "attributes": {
+              "href": "/en-us/credentials/"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Career paths",
+            "attributes": {
+              "href": "/en-us/training/career-paths/"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Microsoft Build",
+            "attributes": {
+              "href": "https://build.microsoft.com/home?wt.mc_ID=msbuild26_ciarmar_corp_np_oo_MSL_reg"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "button",
+            "text": "Q&A",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Ask a question",
+            "attributes": {
+              "href": "/en-us/answers/questions/ask/"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Azure questions",
+            "attributes": {
+              "href": "/en-us/answers/tags/133/azure/"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "Windows questions",
+            "attributes": {
+              "href": "/en-us/answers/tags/60/windows/"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Microsoft 365 questions",
+            "attributes": {
+              "href": "/en-us/answers/tags/9/m365/"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/"
+        }
+      },
+      "observation": "Opened https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/",
+        "title": "Asynchronous programming - C# | Microsoft Learn",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#main"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Skip to Ask Learn chat experience",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "link",
+            "text": "Privacy Statement",
+            "attributes": {
+              "href": "https://go.microsoft.com/fwlink/?LinkId=521839"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "Third-Party Cookies",
+            "attributes": {
+              "href": "https://aka.ms/3rdpartycookies"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "Accept",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "button",
+            "text": "Reject",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "button",
+            "text": "Manage cookies",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Learn more",
+            "attributes": {
+              "href": "https://aka.ms/MSBuild_FY26_BN_MSLearn_Hero"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Dismiss alert",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Download Microsoft Edge",
+            "attributes": {
+              "href": "https://go.microsoft.com/fwlink/p/?LinkID=2092881 "
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": "More info about Internet Explorer and Microsoft Edge",
+            "attributes": {
+              "href": "https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button",
+              "aria-label": "Global navigation"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": "Learn",
+            "attributes": {
+              "href": "/en-us/"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.microsoft.com",
+              "aria-label": "Microsoft"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "combobox",
+            "text": "Search",
+            "attributes": {
+              "id": "site-header-search-autocomplete-input-mobile",
+              "name": "terms",
+              "type": "search",
+              "aria-label": "Search",
+              "placeholder": "Search"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "textbox",
+            "text": null,
+            "attributes": {
+              "name": "category",
+              "value": ""
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button",
+              "aria-label": "Close search"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button",
+              "aria-label": "Open search"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": "Profile",
+            "attributes": {
+              "href": "https://learn.microsoft.com/en-us/users/me/activity/"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": "Analytics",
+            "attributes": {
+              "href": "https://learn.microsoft.com/en-us/users/me/analytics/"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": "Settings",
+            "attributes": {
+              "href": "https://learn.microsoft.com/en-us/users/me/settings/"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": "Sign out",
+            "attributes": {
+              "href": "#"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": "Microsoft",
+            "attributes": {
+              "href": "https://www.microsoft.com",
+              "aria-label": "Microsoft"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Learn",
+            "attributes": {
+              "href": "/en-us/"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button",
+              "aria-label": "Previous"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "button",
+            "text": "Documentation",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": "All product documentation",
+            "attributes": {
+              "href": "/en-us/docs/"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": "Azure documentation",
+            "attributes": {
+              "href": "/en-us/azure/?product=popular"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": "Dynamics 365 documentation",
+            "attributes": {
+              "href": "/en-us/dynamics365/"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Microsoft Copilot documentation",
+            "attributes": {
+              "href": "/en-us/copilot/"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Microsoft 365 documentation",
+            "attributes": {
+              "href": "/en-us/microsoft-365/"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": "Power Platform documentation",
+            "attributes": {
+              "href": "/en-us/power-platform/"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": "Code samples",
+            "attributes": {
+              "href": "/en-us/samples/"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Troubleshooting documentation",
+            "attributes": {
+              "href": "/en-us/troubleshoot/"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Microsoft Build",
+            "attributes": {
+              "href": "https://build.microsoft.com/home?wt.mc_ID=msbuild26_ciarmar_corp_np_oo_MSL_reg"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "button",
+            "text": "Training & Labs",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "All training",
+            "attributes": {
+              "href": "/en-us/training/"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Azure training",
+            "attributes": {
+              "href": "/en-us/training/browse/?products=azure"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Dynamics 365 training",
+            "attributes": {
+              "href": "/en-us/training/browse/?products=dynamics-365"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Microsoft Copilot training",
+            "attributes": {
+              "href": "/en-us/training/browse/?products=ms-copilot"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Microsoft 365 training",
+            "attributes": {
+              "href": "/en-us/training/browse/?products=m365"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Microsoft Power Platform training",
+            "attributes": {
+              "href": "/en-us/training/browse/?products=power-platform"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Labs",
+            "attributes": {
+              "href": "/en-us/labs/"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Credentials",
+            "attributes": {
+              "href": "/en-us/credentials/"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Career paths",
+            "attributes": {
+              "href": "/en-us/training/career-paths/"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Microsoft Build",
+            "attributes": {
+              "href": "https://build.microsoft.com/home?wt.mc_ID=msbuild26_ciarmar_corp_np_oo_MSL_reg"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "button",
+            "text": "Q&A",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Ask a question",
+            "attributes": {
+              "href": "/en-us/answers/questions/ask/"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "Microsoft Learn page: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/ \u2014 Key guideline: use the await operator for non-blocking waits; don\u2019t block on asynchronous work with calls like Task.Wait or Task.Result, because that can reduce responsiveness and cause deadlocks."
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

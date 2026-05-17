@@ -1,0 +1,2563 @@
+{
+  "task_id": "wv-018",
+  "task_description": "On Apple's website, find the battery life Apple claims for the latest iPhone Pro model.",
+  "starting_url": "https://www.apple.com/iphone",
+  "passed": false,
+  "final_answer": "Error planning: Extra data: line 2 column 1 (char 953)",
+  "duration_s": 137.18,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://www.apple.com/iphone/",
+        "title": "iPhone - Apple",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "Deutschland",
+            "attributes": {
+              "id": "ac-ls-dropdown-select",
+              "type": "text"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Weiter",
+            "attributes": {
+              "id": "ac-ls-continue",
+              "href": "https://www.apple.com/de/iphone/"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "Auswahlmen\u00fc f\u00fcr Land oder Region schlie\u00dfen",
+            "attributes": {
+              "id": "ac-ls-close",
+              "aria-label": "Auswahlmen\u00fc f\u00fcr Land oder Region schlie\u00dfen"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "button",
+            "text": "Main menu",
+            "attributes": {
+              "aria-label": "Main menu"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Apple",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Apple"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Store",
+            "attributes": {
+              "href": "/us/shop/goto/store",
+              "aria-label": "Store"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Store menu",
+            "attributes": {
+              "id": "globalnav-menubutton-link-store",
+              "aria-label": "Store menu"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Shop the latest Apple products",
+            "attributes": {
+              "href": "/us/shop/goto/store",
+              "aria-label": "Shop the latest Apple products"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_mac"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_ipad"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_iphone"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_watch"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_vision"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/airpods/accessories"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_accessories"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/retail/"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/order/list"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/trade_in"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/payment_plan"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/personal_setup"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/special_deals"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/educationrouting"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/retail/business/"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/eppstore/veteransandmilitary"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/r/store/government/"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Mac",
+            "attributes": {
+              "href": "/mac/",
+              "aria-label": "Mac"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "button",
+            "text": "Mac menu",
+            "attributes": {
+              "id": "globalnav-menubutton-link-mac",
+              "aria-label": "Mac menu"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac/"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/macbook-neo/"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/macbook-air/"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/macbook-pro/"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "iMac",
+            "attributes": {
+              "href": "/imac/",
+              "aria-label": "iMac"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac-mini/"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac-studio/"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/displays/"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac/compare/"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac/mac-does-that/"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_mac"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac/best-mac/"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/mac/accessories"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/trade_in#mac"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/payment_plan"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/personal_setup"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://support.apple.com/mac?cid=gn-ols-mac-psp-prodfly"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/applecare/?filter=mac"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/os/macos/"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/apple-intelligence/"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/apps/"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/apple-creator-studio/"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/macos/continuity/"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://www.apple.com/iphone-16-pro/"
+        }
+      },
+      "observation": "Opened https://www.apple.com/iphone-16-pro/"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://www.apple.com/iphone/",
+        "title": "iPhone - Apple",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "Deutschland",
+            "attributes": {
+              "id": "ac-ls-dropdown-select",
+              "type": "text"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Weiter",
+            "attributes": {
+              "id": "ac-ls-continue",
+              "href": "https://www.apple.com/de/iphone/"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "Auswahlmen\u00fc f\u00fcr Land oder Region schlie\u00dfen",
+            "attributes": {
+              "id": "ac-ls-close",
+              "aria-label": "Auswahlmen\u00fc f\u00fcr Land oder Region schlie\u00dfen"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "button",
+            "text": "Main menu",
+            "attributes": {
+              "aria-label": "Main menu"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Apple",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Apple"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Store",
+            "attributes": {
+              "href": "/us/shop/goto/store",
+              "aria-label": "Store"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Store menu",
+            "attributes": {
+              "id": "globalnav-menubutton-link-store",
+              "aria-label": "Store menu"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Shop the latest Apple products",
+            "attributes": {
+              "href": "/us/shop/goto/store",
+              "aria-label": "Shop the latest Apple products"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_mac"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_ipad"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_iphone"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_watch"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_vision"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/airpods/accessories"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_accessories"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/retail/"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/order/list"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/trade_in"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/payment_plan"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/personal_setup"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/special_deals"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/educationrouting"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/retail/business/"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/eppstore/veteransandmilitary"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/r/store/government/"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Mac",
+            "attributes": {
+              "href": "/mac/",
+              "aria-label": "Mac"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "button",
+            "text": "Mac menu",
+            "attributes": {
+              "id": "globalnav-menubutton-link-mac",
+              "aria-label": "Mac menu"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac/"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/macbook-neo/"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/macbook-air/"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/macbook-pro/"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "iMac",
+            "attributes": {
+              "href": "/imac/",
+              "aria-label": "iMac"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac-mini/"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac-studio/"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/displays/"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac/compare/"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac/mac-does-that/"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_mac"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac/best-mac/"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/mac/accessories"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/trade_in#mac"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/payment_plan"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/personal_setup"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://support.apple.com/mac?cid=gn-ols-mac-psp-prodfly"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/applecare/?filter=mac"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/os/macos/"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/apple-intelligence/"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/apps/"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/apple-creator-studio/"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/macos/continuity/"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://www.apple.com/iphone-16-pro/specs/"
+        }
+      },
+      "observation": "Opened https://www.apple.com/iphone-16-pro/specs/"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://www.apple.com/iphone/",
+        "title": "iPhone - Apple",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "Main menu",
+            "attributes": {
+              "aria-label": "Main menu"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Apple",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Apple"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Store",
+            "attributes": {
+              "href": "/us/shop/goto/store",
+              "aria-label": "Store"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Store menu",
+            "attributes": {
+              "id": "globalnav-menubutton-link-store",
+              "aria-label": "Store menu"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "link",
+            "text": "Shop the latest Apple products",
+            "attributes": {
+              "href": "/us/shop/goto/store",
+              "aria-label": "Shop the latest Apple products"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_mac"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_ipad"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_iphone"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_watch"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_vision"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/airpods/accessories"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_accessories"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/retail/"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/order/list"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/trade_in"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/payment_plan"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/personal_setup"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/special_deals"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/educationrouting"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/retail/business/"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/eppstore/veteransandmilitary"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/r/store/government/"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": "Mac",
+            "attributes": {
+              "href": "/mac/",
+              "aria-label": "Mac"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "button",
+            "text": "Mac menu",
+            "attributes": {
+              "id": "globalnav-menubutton-link-mac",
+              "aria-label": "Mac menu"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac/"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/macbook-neo/"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/macbook-air/"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/macbook-pro/"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "iMac",
+            "attributes": {
+              "href": "/imac/",
+              "aria-label": "iMac"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac-mini/"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac-studio/"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/displays/"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac/compare/"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac/mac-does-that/"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_mac"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac/best-mac/"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/mac/accessories"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/trade_in#mac"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/payment_plan"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/personal_setup"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://support.apple.com/mac?cid=gn-ols-mac-psp-prodfly"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/applecare/?filter=mac"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/os/macos/"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/apple-intelligence/"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/apps/"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/apple-creator-studio/"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/macos/continuity/"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/icloud/"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/business/mac/"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/education/"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(async () => { const res = await fetch('https://www.apple.com/iphone-16-pro/specs/'); const text = await res.text(); const plain = text.replace(/<script[\\s\\S]*?<\\/script>/g,' ').replace(/<style[\\s\\S]*?<\\/style>/g,' ').replace(/<[^>]+>/g,' ').replace(/&nbsp;/g,' ').replace(/&mdash;/g,'\u2014').replace(/&trade;/g,'\u2122').replace(/&reg;/g,'\u00ae').replace(/&amp;/g,'&').replace(/\\s+/g,' '); const idx = plain.toLowerCase().indexOf('video playback'); return {url: res.url, status: res.status, snippet: plain.slice(Math.max(0, idx-1000), idx+1500)}; })()"
+        }
+      },
+      "observation": "Eval: {\"url\": \"https://www.apple.com/iphone/\", \"status\": 200, \"snippet\": \"om on iPhone 17 Pro \\u2014 the longest zoom ever on an iPhone. Make movies like the movies. Get pro-level videos using 4K 60 fps Dolby Vision and up to 4K 120 fps on the latest Pro models. Use Action mode to steady shaky scenes as you shoot. Boost the voices of the people in your video with Audio Mix. Quickly access camera tools with Camera Control. And with the Center Stage front camera, use Dual Capture to record on front and "
+    },
+    {
+      "step": 4,
+      "state": {
+        "url": "https://www.apple.com/iphone/",
+        "title": "iPhone - Apple",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "Deutschland",
+            "attributes": {
+              "id": "ac-ls-dropdown-select",
+              "type": "text"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Weiter",
+            "attributes": {
+              "id": "ac-ls-continue",
+              "href": "https://www.apple.com/de/iphone/"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "Auswahlmen\u00fc f\u00fcr Land oder Region schlie\u00dfen",
+            "attributes": {
+              "id": "ac-ls-close",
+              "aria-label": "Auswahlmen\u00fc f\u00fcr Land oder Region schlie\u00dfen"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "button",
+            "text": "Main menu",
+            "attributes": {
+              "aria-label": "Main menu"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Apple",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Apple"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Store",
+            "attributes": {
+              "href": "/us/shop/goto/store",
+              "aria-label": "Store"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Store menu",
+            "attributes": {
+              "id": "globalnav-menubutton-link-store",
+              "aria-label": "Store menu"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Shop the latest Apple products",
+            "attributes": {
+              "href": "/us/shop/goto/store",
+              "aria-label": "Shop the latest Apple products"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_mac"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_ipad"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_iphone"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_watch"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_vision"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/airpods/accessories"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_accessories"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/retail/"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/order/list"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/trade_in"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/payment_plan"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/personal_setup"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/special_deals"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/educationrouting"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/retail/business/"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/eppstore/veteransandmilitary"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/r/store/government/"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Mac",
+            "attributes": {
+              "href": "/mac/",
+              "aria-label": "Mac"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "button",
+            "text": "Mac menu",
+            "attributes": {
+              "id": "globalnav-menubutton-link-mac",
+              "aria-label": "Mac menu"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac/"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/macbook-neo/"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/macbook-air/"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/macbook-pro/"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "iMac",
+            "attributes": {
+              "href": "/imac/",
+              "aria-label": "iMac"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac-mini/"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac-studio/"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/displays/"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac/compare/"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac/mac-does-that/"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_mac"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac/best-mac/"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/mac/accessories"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/trade_in#mac"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/payment_plan"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/personal_setup"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://support.apple.com/mac?cid=gn-ols-mac-psp-prodfly"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/applecare/?filter=mac"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/os/macos/"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/apple-intelligence/"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/apps/"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/apple-creator-studio/"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/macos/continuity/"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(async () => { const urls = ['https://www.apple.com/iphone-17-pro/specs/','https://www.apple.com/iphone-17-pro/','https://www.apple.com/iphone/compare/']; const out={}; for (const u of urls){ try { const res=await fetch(u,{redirect:'follow'}); const text=await res.text(); const plain=text.replace(/<script[\\s\\S]*?<\\/script>/g,' ').replace(/<style[\\s\\S]*?<\\/style>/g,' ').replace(/<[^>]+>/g,' ').replace(/&nbsp;/g,' ').replace(/&mdash;/g,'\u2014').replace(/&trade;/g,'\u2122').replace(/&reg;/g,'\u00ae').replace(/&amp;/g,'&').replace(/\\s+/g,' '); const terms=['battery','video playback','hours']; let snippets=[]; for (const term of terms){ let idx=plain.toLowerCase().indexOf(term); if(idx>=0) snippets.push(term+': '+plain.slice(Math.max(0,idx-500), idx+1000)); } out[u]={finalUrl:res.url,status:res.status,title:(text.match(/<title>(.*?)<\\/title>/i)||[])[1],snippets}; } catch(e){ out[u]={error:String(e)}; } } return out; })()"
+        }
+      },
+      "observation": "Eval: {\"https://www.apple.com/iphone-17-pro/specs/\": {\"finalUrl\": \"https://www.apple.com/iphone-17-pro/specs/\", \"status\": 200, \"title\": \"iPhone 17 Pro and 17 Pro Max - Technical Specifications - Apple\", \"snippets\": [\"battery:  Vision video recording at 25 fps, 30 fps, or 60 fps Cinematic mode up to 4K Dolby Vision at 30 fps ProRes video recording up to 4K at 60 fps with external recording ProRes RAW 5 Academy Color Encoding System Apple Log 2 Slo-mo video support for 1080p at 120 fps Time\\u2011lapse v"
+    },
+    {
+      "step": 5,
+      "state": {
+        "url": "https://www.apple.com/iphone/",
+        "title": "iPhone - Apple",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "Deutschland",
+            "attributes": {
+              "id": "ac-ls-dropdown-select",
+              "type": "text"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Weiter",
+            "attributes": {
+              "id": "ac-ls-continue",
+              "href": "https://www.apple.com/de/iphone/"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "Auswahlmen\u00fc f\u00fcr Land oder Region schlie\u00dfen",
+            "attributes": {
+              "id": "ac-ls-close",
+              "aria-label": "Auswahlmen\u00fc f\u00fcr Land oder Region schlie\u00dfen"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "button",
+            "text": "Main menu",
+            "attributes": {
+              "aria-label": "Main menu"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Apple",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Apple"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Store",
+            "attributes": {
+              "href": "/us/shop/goto/store",
+              "aria-label": "Store"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Store menu",
+            "attributes": {
+              "id": "globalnav-menubutton-link-store",
+              "aria-label": "Store menu"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Shop the latest Apple products",
+            "attributes": {
+              "href": "/us/shop/goto/store",
+              "aria-label": "Shop the latest Apple products"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_mac"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_ipad"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_iphone"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_watch"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_vision"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/airpods/accessories"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_accessories"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/retail/"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/order/list"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/trade_in"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/payment_plan"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/personal_setup"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/special_deals"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/educationrouting"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/retail/business/"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/eppstore/veteransandmilitary"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/r/store/government/"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Mac",
+            "attributes": {
+              "href": "/mac/",
+              "aria-label": "Mac"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "button",
+            "text": "Mac menu",
+            "attributes": {
+              "id": "globalnav-menubutton-link-mac",
+              "aria-label": "Mac menu"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac/"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/macbook-neo/"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/macbook-air/"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/macbook-pro/"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "iMac",
+            "attributes": {
+              "href": "/imac/",
+              "aria-label": "iMac"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac-mini/"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac-studio/"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/displays/"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac/compare/"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac/mac-does-that/"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_mac"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac/best-mac/"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/mac/accessories"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/trade_in#mac"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/payment_plan"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/personal_setup"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://support.apple.com/mac?cid=gn-ols-mac-psp-prodfly"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/applecare/?filter=mac"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/os/macos/"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/apple-intelligence/"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/apps/"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/apple-creator-studio/"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/macos/continuity/"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(async () => { const res=await fetch('https://www.apple.com/iphone-17-pro/specs/'); const html=await res.text(); const plain=html.replace(/<script[\\s\\S]*?<\\/script>/g,' ').replace(/<style[\\s\\S]*?<\\/style>/g,' ').replace(/<[^>]+>/g,' ').replace(/&nbsp;/g,' ').replace(/&mdash;/g,'\u2014').replace(/&ndash;/g,'\u2013').replace(/&trade;/g,'\u2122').replace(/&reg;/g,'\u00ae').replace(/&amp;/g,'&').replace(/&#x27;/g,\"'\").replace(/\\s+/g,' '); const lower=plain.toLowerCase(); const hits=[]; for (const term of ['power and battery','video playback','up to','hours']) { let idx=0; while ((idx=lower.indexOf(term, idx)) !== -1 && hits.length<30) { hits.push({term, snippet: plain.slice(Math.max(0, idx-400), idx+1200)}); idx += term.length; } } return {url:res.url,status:res.status,title:(html.match(/<title>(.*?)<\\/title>/i)||[])[1],hits}; })()"
+        }
+      },
+      "observation": "Eval: {\"url\": \"https://www.apple.com/iphone-17-pro/specs/\", \"status\": 200, \"title\": \"iPhone 17 Pro and 17 Pro Max - Technical Specifications - Apple\", \"hits\": [{\"term\": \"power and battery\", \"snippet\": \"at 30 fps ProRes video recording up to 4K at 60 fps with external recording ProRes RAW 5 Academy Color Encoding System Apple Log 2 Slo-mo video support for 1080p at 120 fps Time\\u2011lapse video with stabilization Night mode Time-lapse QuickTake video up to 4K at 60 fps in Dolby Vision Cinematic video s"
+    },
+    {
+      "step": 6,
+      "state": {
+        "url": "https://www.apple.com/iphone/",
+        "title": "iPhone - Apple",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "button",
+            "text": "Deutschland",
+            "attributes": {
+              "id": "ac-ls-dropdown-select",
+              "type": "text"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Weiter",
+            "attributes": {
+              "id": "ac-ls-continue",
+              "href": "https://www.apple.com/de/iphone/"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "button",
+            "text": "Auswahlmen\u00fc f\u00fcr Land oder Region schlie\u00dfen",
+            "attributes": {
+              "id": "ac-ls-close",
+              "aria-label": "Auswahlmen\u00fc f\u00fcr Land oder Region schlie\u00dfen"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "button",
+            "text": "Main menu",
+            "attributes": {
+              "aria-label": "Main menu"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Apple",
+            "attributes": {
+              "href": "/",
+              "aria-label": "Apple"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Store",
+            "attributes": {
+              "href": "/us/shop/goto/store",
+              "aria-label": "Store"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "button",
+            "text": "Store menu",
+            "attributes": {
+              "id": "globalnav-menubutton-link-store",
+              "aria-label": "Store menu"
+            }
+          },
+          {
+            "id": "pw-10",
+            "role": "link",
+            "text": "Shop the latest Apple products",
+            "attributes": {
+              "href": "/us/shop/goto/store",
+              "aria-label": "Shop the latest Apple products"
+            }
+          },
+          {
+            "id": "pw-11",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_mac"
+            }
+          },
+          {
+            "id": "pw-12",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_ipad"
+            }
+          },
+          {
+            "id": "pw-13",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_iphone"
+            }
+          },
+          {
+            "id": "pw-14",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_watch"
+            }
+          },
+          {
+            "id": "pw-15",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_vision"
+            }
+          },
+          {
+            "id": "pw-16",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/airpods/accessories"
+            }
+          },
+          {
+            "id": "pw-17",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_accessories"
+            }
+          },
+          {
+            "id": "pw-18",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/retail/"
+            }
+          },
+          {
+            "id": "pw-19",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/order/list"
+            }
+          },
+          {
+            "id": "pw-20",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/trade_in"
+            }
+          },
+          {
+            "id": "pw-21",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/payment_plan"
+            }
+          },
+          {
+            "id": "pw-22",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/personal_setup"
+            }
+          },
+          {
+            "id": "pw-23",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/special_deals"
+            }
+          },
+          {
+            "id": "pw-24",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/educationrouting"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/retail/business/"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/eppstore/veteransandmilitary"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/r/store/government/"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "link",
+            "text": "Mac",
+            "attributes": {
+              "href": "/mac/",
+              "aria-label": "Mac"
+            }
+          },
+          {
+            "id": "pw-29",
+            "role": "button",
+            "text": "Mac menu",
+            "attributes": {
+              "id": "globalnav-menubutton-link-mac",
+              "aria-label": "Mac menu"
+            }
+          },
+          {
+            "id": "pw-30",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac/"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/macbook-neo/"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/macbook-air/"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/macbook-pro/"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "iMac",
+            "attributes": {
+              "href": "/imac/",
+              "aria-label": "iMac"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac-mini/"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac-studio/"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/displays/"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac/compare/"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac/mac-does-that/"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/buy_mac"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/mac/best-mac/"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/mac/accessories"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/trade_in#mac"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/payment_plan"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/us/shop/goto/personal_setup"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://support.apple.com/mac?cid=gn-ols-mac-psp-prodfly"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/applecare/?filter=mac"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/os/macos/"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/apple-intelligence/"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/apps/"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/apple-creator-studio/"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "/macos/continuity/"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "Error planning: Extra data: line 2 column 1 (char 953)"
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

@@ -1,0 +1,5019 @@
+{
+  "task_id": "wv-027",
+  "task_description": "On Booking.com, search for hotels in New York City and identify one property rated 8.0 or higher.",
+  "starting_url": "https://www.booking.com",
+  "passed": true,
+  "final_answer": "Hotel Indigo NYC Financial District by IHG in Manhattan, New York is rated 9.0 on Booking.com, which is 8.0 or higher.",
+  "duration_s": 141.19,
+  "steps": [
+    {
+      "step": 1,
+      "state": {
+        "url": "https://www.booking.com/",
+        "title": "Booking.com | Official site | The best hotels, flights, car rentals & accommodations",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#main"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Booking.com",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "aria-label": "Booking.com",
+              "data-testid": "header-booking-logo"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "USD",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Prices in U.S. Dollar",
+              "data-testid": "header-currency-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Language: English (US)",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Language: English (US)",
+              "data-testid": "header-language-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Customer support",
+            "attributes": {
+              "href": "https://secure.booking.com/help.html?source=header&src=profile_contact_cs",
+              "aria-label": "Customer support",
+              "data-testid": "header-help-center"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "List your property",
+            "attributes": {
+              "href": "https://join.booking.com/?utm_source=topbar",
+              "data-testid": "header-custom-action-button"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Register",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=index&prompt=signin&state=UrMBwUq-fhPs_KEO2azgcIOvdfs9b1NbjCLzLsamy9uZW9NzS7RTlJt8mveMkuIfBF5CV_De-G8M5oKsIJLzyqsGS5QJNCytQXCbQHfzu2mkbJuNy0T4PF4KG1u45nRTBAgc_LnCbhY7AYFWO7kww330GvDCMCZI3Edp0Omk5s-kvNVCOH_n0GD13N3D8w8vG3Yr299kvO9wfoXB-PvDRpV6JKOCpBWEOf_eX3JdOBEm7vHDkeU%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Register an account",
+              "data-testid": "header-sign-up-button"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=index&prompt=signin&state=UrMBwUq-fhPs_KEO2azgcIOvdfs9b1NbjCLzLsamy9uZW9NzS7RTlJt8mveMkuIfBF5CV_De-G8M5oKsIJLzyqsGS5QJNCytQXCbQHfzu2mkbJuNy0T4PF4KG1u45nRTBAgc_LnCbhY7AYFWO7kww330GvDCMCZI3Edp0Omk5s-kvNVCOH_n0GD13N3D8w8vG3Yr299kvO9wfoXB-PvDRpV6JKOCpBWEOf_eX3JdOBEm7vHDkeU%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Sign in",
+              "data-testid": "header-sign-in-button"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "combobox",
+            "text": "Where are you going?",
+            "attributes": {
+              "id": ":R55amr5:",
+              "name": "ss",
+              "aria-label": "Where are you going?",
+              "placeholder": "Where are you going?",
+              "value": ""
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": "Check-in date\n\u2014\nCheck-out date",
+            "attributes": {
+              "type": "button",
+              "data-testid": "searchbox-dates-container"
+            }
+          },
+          {
+            "id": "pw-27",
+            "role": "button",
+            "text": "2 adults \u00b7 0 children \u00b7 1 room",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Number of travelers and rooms. Currently selected: 2 adults \u00b7 0 children \u00b7 1 room",
+              "data-testid": "occupancy-config"
+            }
+          },
+          {
+            "id": "pw-28",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "link",
+            "text": "Learn more",
+            "attributes": {
+              "href": "https://www.booking.com/co_brand_card.en-us.html",
+              "aria-label": "Learn more",
+              "data-testid": "promotional-banner-content-cta"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "link",
+            "text": "Discover homes",
+            "attributes": {
+              "href": "https://www.booking.com/booking-home/index.html",
+              "aria-label": "Discover homes"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "link",
+            "text": "Aparthotel Stare Miasto\nOld Town, Poland, Krakow\n8.8\n8.8\nExcellent\nExcellent\n3,162 reviews\nStarting from\n$100\nPrice $100",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=260295&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=260295",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "N\u0112RO Boutique Hotel\nGreece, Imerovigli\n9.7\n9.7\nExceptional\nExceptional\n93 reviews\nStarting from\n$295\nPrice $295",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=1754883&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=1754883",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Leman Locke\nTower Hamlets, United Kingdom, London\n8.3\n8.3\nVery Good\nVery Good\n944 reviews\nStarting from\n$126\nPrice $126",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=1920592&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=1920592",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "7Seasons Apartments Budapest\n06. Ter\u00e9zv\u00e1ros, Hungary, Budapest\n8.8\n8.8\nExcellent\nExcellent\n10,011 reviews\nStarting from\n$148\nPrice $148",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=78365&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=78365",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Numa Florence Vita\nSanta Maria Novella, Italy, Florence\n8.9\n8.9\nExcellent\nExcellent\n1,022 reviews\nStarting from\n$349\nPrice $349",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=2132601&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=2132601",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "link",
+            "text": "New Sugar Loft Apartments\nSanta Teresa, Brazil, Rio de Janeiro\n7.7\n7.7\nGood\nGood\n811 reviews\nStarting from\n$61\nPrice $61",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=913677&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=913677",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "link",
+            "text": "3 Epoques Apartments by Adrez\nPrague 1, Czech Republic, Prague\n8.8\n8.8\nExcellent\nExcellent\n721 reviews\nStarting from\n$82\nPrice $82",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=381352&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=381352",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "The Apartments by The Sloane Club\nKensington and Chelsea, United Kingdom, London\n9.0\n9.0\nWonderful\nWonderful\n259 reviews\nStarting from\n$697\nPrice $697",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=1129506&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=1129506",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-70",
+            "role": "link",
+            "text": "Cheval Three Quays at The Tower of London\nCity of London, United Kingdom, London\n9.5\n9.5\nExceptional\nExceptional\n827 reviews\nStarting from\n$396\nPrice $396",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=785838&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=785838",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-72",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "link",
+            "text": "Flora Chiado Apartments\nSanta Maria Maior, Portugal, Lisbon\n9.7\n9.7\nExceptional\nExceptional\n165 reviews\nStarting from\n$329\nPrice $329",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=2031755&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=2031755",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-76",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-77",
+            "role": "button",
+            "text": "Previous",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Previous"
+            }
+          },
+          {
+            "id": "pw-78",
+            "role": "button",
+            "text": "Next",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next"
+            }
+          },
+          {
+            "id": "pw-81",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/index.en-us.html",
+              "aria-label": "Hotels",
+              "data-testid": "web-core-stacked-card"
+            }
+          },
+          {
+            "id": "pw-84",
+            "role": "link",
+            "text": "Apartments",
+            "attributes": {
+              "href": "https://www.booking.com/apartments/index.en-us.html",
+              "aria-label": "Apartments",
+              "data-testid": "web-core-stacked-card"
+            }
+          },
+          {
+            "id": "pw-87",
+            "role": "link",
+            "text": "Resorts",
+            "attributes": {
+              "href": "https://www.booking.com/resorts/index.en-us.html",
+              "aria-label": "Resorts",
+              "data-testid": "web-core-stacked-card"
+            }
+          },
+          {
+            "id": "pw-90",
+            "role": "link",
+            "text": "Villas",
+            "attributes": {
+              "href": "https://www.booking.com/villas/index.en-us.html",
+              "aria-label": "Villas",
+              "data-testid": "web-core-stacked-card"
+            }
+          },
+          {
+            "id": "pw-93",
+            "role": "link",
+            "text": "Cabins",
+            "attributes": {
+              "href": "https://www.booking.com/chalet/index.en-us.html",
+              "aria-label": "Cabins",
+              "data-testid": "web-core-stacked-card"
+            }
+          },
+          {
+            "id": "pw-96",
+            "role": "link",
+            "text": "Cottages",
+            "attributes": {
+              "href": "https://www.booking.com/cottages/index.en-us.html",
+              "aria-label": "Cottages",
+              "data-testid": "web-core-stacked-card"
+            }
+          },
+          {
+            "id": "pw-99",
+            "role": "link",
+            "text": "Glamping Sites",
+            "attributes": {
+              "href": "https://www.booking.com/glamping/index.en-us.html",
+              "aria-label": "Glamping Sites",
+              "data-testid": "web-core-stacked-card"
+            }
+          },
+          {
+            "id": "pw-102",
+            "role": "link",
+            "text": "Serviced apartments",
+            "attributes": {
+              "href": "https://www.booking.com/aparthotels/index.en-us.html",
+              "aria-label": "Serviced apartments",
+              "data-testid": "web-core-stacked-card"
+            }
+          },
+          {
+            "id": "pw-105",
+            "role": "link",
+            "text": "Vacation Homes",
+            "attributes": {
+              "href": "https://www.booking.com/holiday-homes/index.en-us.html",
+              "aria-label": "Vacation Homes",
+              "data-testid": "web-core-stacked-card"
+            }
+          },
+          {
+            "id": "pw-108",
+            "role": "link",
+            "text": "Guest Houses",
+            "attributes": {
+              "href": "https://www.booking.com/guest-house/index.en-us.html",
+              "aria-label": "Guest Houses",
+              "data-testid": "web-core-stacked-card"
+            }
+          },
+          {
+            "id": "pw-111",
+            "role": "link",
+            "text": "Hostels",
+            "attributes": {
+              "href": "https://www.booking.com/hostels/index.en-us.html",
+              "aria-label": "Hostels",
+              "data-testid": "web-core-stacked-card"
+            }
+          },
+          {
+            "id": "pw-114",
+            "role": "link",
+            "text": "Motels",
+            "attributes": {
+              "href": "https://www.booking.com/motels/index.en-us.html",
+              "aria-label": "Motels",
+              "data-testid": "web-core-stacked-card"
+            }
+          },
+          {
+            "id": "pw-117",
+            "role": "link",
+            "text": "B&Bs",
+            "attributes": {
+              "href": "https://www.booking.com/bed-and-breakfast/index.en-us.html",
+              "aria-label": "B&Bs",
+              "data-testid": "web-core-stacked-card"
+            }
+          },
+          {
+            "id": "pw-120",
+            "role": "link",
+            "text": "Ryokans",
+            "attributes": {
+              "href": "https://www.booking.com/ryokans/index.en-us.html",
+              "aria-label": "Ryokans",
+              "data-testid": "web-core-stacked-card"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "type",
+        "args": {
+          "id": "pw-25",
+          "text": "New York City"
+        }
+      },
+      "observation": "Typed into pw-25"
+    },
+    {
+      "step": 2,
+      "state": {
+        "url": "https://www.booking.com/",
+        "title": "Booking.com | Official site | The best hotels, flights, car rentals & accommodations",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#main"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Booking.com",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "aria-label": "Booking.com",
+              "data-testid": "header-booking-logo"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "USD",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Prices in U.S. Dollar",
+              "data-testid": "header-currency-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Language: English (US)",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Language: English (US)",
+              "data-testid": "header-language-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Customer support",
+            "attributes": {
+              "href": "https://secure.booking.com/help.html?source=header&src=profile_contact_cs",
+              "aria-label": "Customer support",
+              "data-testid": "header-help-center"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "List your property",
+            "attributes": {
+              "href": "https://join.booking.com/?utm_source=topbar",
+              "data-testid": "header-custom-action-button"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Register",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=index&prompt=signin&state=UrMBwUq-fhPs_KEO2azgcIOvdfs9b1NbjCLzLsamy9uZW9NzS7RTlJt8mveMkuIfBF5CV_De-G8M5oKsIJLzyqsGS5QJNCytQXCbQHfzu2mkbJuNy0T4PF4KG1u45nRTBAgc_LnCbhY7AYFWO7kww330GvDCMCZI3Edp0Omk5s-kvNVCOH_n0GD13N3D8w8vG3Yr299kvO9wfoXB-PvDRpV6JKOCpBWEOf_eX3JdOBEm7vHDkeU%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Register an account",
+              "data-testid": "header-sign-up-button"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=index&prompt=signin&state=UrMBwUq-fhPs_KEO2azgcIOvdfs9b1NbjCLzLsamy9uZW9NzS7RTlJt8mveMkuIfBF5CV_De-G8M5oKsIJLzyqsGS5QJNCytQXCbQHfzu2mkbJuNy0T4PF4KG1u45nRTBAgc_LnCbhY7AYFWO7kww330GvDCMCZI3Edp0Omk5s-kvNVCOH_n0GD13N3D8w8vG3Yr299kvO9wfoXB-PvDRpV6JKOCpBWEOf_eX3JdOBEm7vHDkeU%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Sign in",
+              "data-testid": "header-sign-in-button"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "combobox",
+            "text": "Where are you going?",
+            "attributes": {
+              "id": ":R55amr5:",
+              "name": "ss",
+              "aria-label": "Where are you going?",
+              "placeholder": "Where are you going?",
+              "value": "New York City"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "option",
+            "text": "London\nUnited Kingdom",
+            "attributes": {
+              "id": "autocomplete-result-0"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "button",
+            "text": "London\nUnited Kingdom",
+            "attributes": {}
+          },
+          {
+            "id": "pw-33",
+            "role": "option",
+            "text": "Manchester\nUnited Kingdom",
+            "attributes": {
+              "id": "autocomplete-result-1"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "Manchester\nUnited Kingdom",
+            "attributes": {}
+          },
+          {
+            "id": "pw-35",
+            "role": "option",
+            "text": "Paris\nFrance",
+            "attributes": {
+              "id": "autocomplete-result-2"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "button",
+            "text": "Paris\nFrance",
+            "attributes": {}
+          },
+          {
+            "id": "pw-37",
+            "role": "option",
+            "text": "Edinburgh\nUnited Kingdom",
+            "attributes": {
+              "id": "autocomplete-result-3"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "button",
+            "text": "Edinburgh\nUnited Kingdom",
+            "attributes": {}
+          },
+          {
+            "id": "pw-39",
+            "role": "option",
+            "text": "Liverpool\nUnited Kingdom",
+            "attributes": {
+              "id": "autocomplete-result-4"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "button",
+            "text": "Liverpool\nUnited Kingdom",
+            "attributes": {}
+          },
+          {
+            "id": "pw-41",
+            "role": "button",
+            "text": "Check-in date\n\u2014\nCheck-out date",
+            "attributes": {
+              "type": "button",
+              "data-testid": "searchbox-dates-container"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": "2 adults \u00b7 0 children \u00b7 1 room",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Number of travelers and rooms. Currently selected: 2 adults \u00b7 0 children \u00b7 1 room",
+              "data-testid": "occupancy-config"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Learn more",
+            "attributes": {
+              "href": "https://www.booking.com/co_brand_card.en-us.html",
+              "aria-label": "Learn more",
+              "data-testid": "promotional-banner-content-cta"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Discover homes",
+            "attributes": {
+              "href": "https://www.booking.com/booking-home/index.html",
+              "aria-label": "Discover homes"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "Aparthotel Stare Miasto\nOld Town, Poland, Krakow\n8.8\n8.8\nExcellent\nExcellent\n3,162 reviews\nStarting from\n$100\nPrice $100",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=260295&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=260295",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "N\u0112RO Boutique Hotel\nGreece, Imerovigli\n9.7\n9.7\nExceptional\nExceptional\n93 reviews\nStarting from\n$295\nPrice $295",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=1754883&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=1754883",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "link",
+            "text": "Leman Locke\nTower Hamlets, United Kingdom, London\n8.3\n8.3\nVery Good\nVery Good\n944 reviews\nStarting from\n$126\nPrice $126",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=1920592&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=1920592",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "link",
+            "text": "7Seasons Apartments Budapest\n06. Ter\u00e9zv\u00e1ros, Hungary, Budapest\n8.8\n8.8\nExcellent\nExcellent\n10,011 reviews\nStarting from\n$148\nPrice $148",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=78365&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=78365",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "link",
+            "text": "Numa Florence Vita\nSanta Maria Novella, Italy, Florence\n8.9\n8.9\nExcellent\nExcellent\n1,022 reviews\nStarting from\n$349\nPrice $349",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=2132601&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=2132601",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-71",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-73",
+            "role": "link",
+            "text": "New Sugar Loft Apartments\nSanta Teresa, Brazil, Rio de Janeiro\n7.7\n7.7\nGood\nGood\n811 reviews\nStarting from\n$61\nPrice $61",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=913677&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=913677",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-75",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-77",
+            "role": "link",
+            "text": "3 Epoques Apartments by Adrez\nPrague 1, Czech Republic, Prague\n8.8\n8.8\nExcellent\nExcellent\n721 reviews\nStarting from\n$82\nPrice $82",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=381352&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=381352",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-79",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-81",
+            "role": "link",
+            "text": "The Apartments by The Sloane Club\nKensington and Chelsea, United Kingdom, London\n9.0\n9.0\nWonderful\nWonderful\n259 reviews\nStarting from\n$697\nPrice $697",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=1129506&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=1129506",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-83",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-85",
+            "role": "link",
+            "text": "Cheval Three Quays at The Tower of London\nCity of London, United Kingdom, London\n9.5\n9.5\nExceptional\nExceptional\n827 reviews\nStarting from\n$396\nPrice $396",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=785838&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=785838",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-87",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-89",
+            "role": "link",
+            "text": "Flora Chiado Apartments\nSanta Maria Maior, Portugal, Lisbon\n9.7\n9.7\nExceptional\nExceptional\n165 reviews\nStarting from\n$329\nPrice $329",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=2031755&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=2031755",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-91",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-92",
+            "role": "button",
+            "text": "Previous",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Previous"
+            }
+          },
+          {
+            "id": "pw-93",
+            "role": "button",
+            "text": "Next",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next"
+            }
+          },
+          {
+            "id": "pw-96",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/index.en-us.html",
+              "aria-label": "Hotels",
+              "data-testid": "web-core-stacked-card"
+            }
+          },
+          {
+            "id": "pw-99",
+            "role": "link",
+            "text": "Apartments",
+            "attributes": {
+              "href": "https://www.booking.com/apartments/index.en-us.html",
+              "aria-label": "Apartments",
+              "data-testid": "web-core-stacked-card"
+            }
+          },
+          {
+            "id": "pw-102",
+            "role": "link",
+            "text": "Resorts",
+            "attributes": {
+              "href": "https://www.booking.com/resorts/index.en-us.html",
+              "aria-label": "Resorts",
+              "data-testid": "web-core-stacked-card"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "click",
+        "args": {
+          "id": "pw-43"
+        }
+      },
+      "observation": "Action failed: Locator.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator(\"div:nth-of-type(1) > div > div:nth-of-type(2) > div > main > div:nth-of-type(1) > div > div > div > div > div > div > div > div:nth-of-type(2) > div > div > form > div > div:nth-of-type(4) > button\").first\n    - locator resolved to <button type=\"submit\" class=\"de576f5064 b46cd7aad7 ced67027e5 dda427e6b5 f3e59d528f ca8e0b9533 cfd71fb584 a9d40b8d51\">\u2026</button>\n  - attempting click action\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"bbe73dce14\">\u2026</div> from <div class=\"dc7e768484 a37804931c\">\u2026</div> subtree intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"bbe73dce14\">\u2026</div> from <div class=\"dc7e768484 a37804931c\">\u2026</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    10 \u00d7 waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <div class=\"bbe73dce14\">\u2026</div> from <div class=\"dc7e768484 a37804931c\">\u2026</div> subtree intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n"
+    },
+    {
+      "step": 3,
+      "state": {
+        "url": "https://www.booking.com/",
+        "title": "Booking.com | Official site | The best hotels, flights, car rentals & accommodations",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#main"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Booking.com",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "aria-label": "Booking.com",
+              "data-testid": "header-booking-logo"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "USD",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Prices in U.S. Dollar",
+              "data-testid": "header-currency-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Language: English (US)",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Language: English (US)",
+              "data-testid": "header-language-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Customer support",
+            "attributes": {
+              "href": "https://secure.booking.com/help.html?source=header&src=profile_contact_cs",
+              "aria-label": "Customer support",
+              "data-testid": "header-help-center"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "List your property",
+            "attributes": {
+              "href": "https://join.booking.com/?utm_source=topbar",
+              "data-testid": "header-custom-action-button"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Register",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=index&prompt=signin&state=UrMBwUq-fhPs_KEO2azgcIOvdfs9b1NbjCLzLsamy9uZW9NzS7RTlJt8mveMkuIfBF5CV_De-G8M5oKsIJLzyqsGS5QJNCytQXCbQHfzu2mkbJuNy0T4PF4KG1u45nRTBAgc_LnCbhY7AYFWO7kww330GvDCMCZI3Edp0Omk5s-kvNVCOH_n0GD13N3D8w8vG3Yr299kvO9wfoXB-PvDRpV6JKOCpBWEOf_eX3JdOBEm7vHDkeU%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Register an account",
+              "data-testid": "header-sign-up-button"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=index&prompt=signin&state=UrMBwUq-fhPs_KEO2azgcIOvdfs9b1NbjCLzLsamy9uZW9NzS7RTlJt8mveMkuIfBF5CV_De-G8M5oKsIJLzyqsGS5QJNCytQXCbQHfzu2mkbJuNy0T4PF4KG1u45nRTBAgc_LnCbhY7AYFWO7kww330GvDCMCZI3Edp0Omk5s-kvNVCOH_n0GD13N3D8w8vG3Yr299kvO9wfoXB-PvDRpV6JKOCpBWEOf_eX3JdOBEm7vHDkeU%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Sign in",
+              "data-testid": "header-sign-in-button"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "combobox",
+            "text": "Where are you going?",
+            "attributes": {
+              "id": ":R55amr5:",
+              "name": "ss",
+              "aria-label": "Where are you going?",
+              "placeholder": "Where are you going?",
+              "value": "New York City"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "option",
+            "text": "New York (New York City)\nNew York, United States",
+            "attributes": {
+              "id": "autocomplete-result-0"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "button",
+            "text": "New York (New York City)\nNew York, United States",
+            "attributes": {}
+          },
+          {
+            "id": "pw-33",
+            "role": "option",
+            "text": "Central New York City\nNew York (New York City), New York, United States",
+            "attributes": {
+              "id": "autocomplete-result-1"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "Central New York City\nNew York (New York City), New York, United States",
+            "attributes": {}
+          },
+          {
+            "id": "pw-35",
+            "role": "option",
+            "text": "John F. Kennedy International Airport\nNew York, New York, United States of America",
+            "attributes": {
+              "id": "autocomplete-result-2"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "button",
+            "text": "John F. Kennedy International Airport\nNew York, New York, United States of America",
+            "attributes": {}
+          },
+          {
+            "id": "pw-37",
+            "role": "option",
+            "text": "New York Central Park\nNew York (New York City), New York, United States",
+            "attributes": {
+              "id": "autocomplete-result-3"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "button",
+            "text": "New York Central Park\nNew York (New York City), New York, United States",
+            "attributes": {}
+          },
+          {
+            "id": "pw-39",
+            "role": "option",
+            "text": "LaGuardia Airport\nNew York (New York City), New York, United States",
+            "attributes": {
+              "id": "autocomplete-result-4"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "button",
+            "text": "LaGuardia Airport\nNew York (New York City), New York, United States",
+            "attributes": {}
+          },
+          {
+            "id": "pw-41",
+            "role": "button",
+            "text": "Check-in date\n\u2014\nCheck-out date",
+            "attributes": {
+              "type": "button",
+              "data-testid": "searchbox-dates-container"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": "2 adults \u00b7 0 children \u00b7 1 room",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Number of travelers and rooms. Currently selected: 2 adults \u00b7 0 children \u00b7 1 room",
+              "data-testid": "occupancy-config"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Learn more",
+            "attributes": {
+              "href": "https://www.booking.com/co_brand_card.en-us.html",
+              "aria-label": "Learn more",
+              "data-testid": "promotional-banner-content-cta"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Discover homes",
+            "attributes": {
+              "href": "https://www.booking.com/booking-home/index.html",
+              "aria-label": "Discover homes"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "Aparthotel Stare Miasto\nOld Town, Poland, Krakow\n8.8\n8.8\nExcellent\nExcellent\n3,162 reviews\nStarting from\n$100\nPrice $100",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=260295&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=260295",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "N\u0112RO Boutique Hotel\nGreece, Imerovigli\n9.7\n9.7\nExceptional\nExceptional\n93 reviews\nStarting from\n$295\nPrice $295",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=1754883&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=1754883",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "link",
+            "text": "Leman Locke\nTower Hamlets, United Kingdom, London\n8.3\n8.3\nVery Good\nVery Good\n944 reviews\nStarting from\n$126\nPrice $126",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=1920592&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=1920592",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "link",
+            "text": "7Seasons Apartments Budapest\n06. Ter\u00e9zv\u00e1ros, Hungary, Budapest\n8.8\n8.8\nExcellent\nExcellent\n10,011 reviews\nStarting from\n$148\nPrice $148",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=78365&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=78365",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "link",
+            "text": "Numa Florence Vita\nSanta Maria Novella, Italy, Florence\n8.9\n8.9\nExcellent\nExcellent\n1,022 reviews\nStarting from\n$349\nPrice $349",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=2132601&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=2132601",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-71",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-73",
+            "role": "link",
+            "text": "New Sugar Loft Apartments\nSanta Teresa, Brazil, Rio de Janeiro\n7.7\n7.7\nGood\nGood\n811 reviews\nStarting from\n$61\nPrice $61",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=913677&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=913677",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-75",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-77",
+            "role": "link",
+            "text": "3 Epoques Apartments by Adrez\nPrague 1, Czech Republic, Prague\n8.8\n8.8\nExcellent\nExcellent\n721 reviews\nStarting from\n$82\nPrice $82",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=381352&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=381352",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-79",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-81",
+            "role": "link",
+            "text": "The Apartments by The Sloane Club\nKensington and Chelsea, United Kingdom, London\n9.0\n9.0\nWonderful\nWonderful\n259 reviews\nStarting from\n$697\nPrice $697",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=1129506&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=1129506",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-83",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-85",
+            "role": "link",
+            "text": "Cheval Three Quays at The Tower of London\nCity of London, United Kingdom, London\n9.5\n9.5\nExceptional\nExceptional\n827 reviews\nStarting from\n$396\nPrice $396",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=785838&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=785838",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-87",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-89",
+            "role": "link",
+            "text": "Flora Chiado Apartments\nSanta Maria Maior, Portugal, Lisbon\n9.7\n9.7\nExceptional\nExceptional\n165 reviews\nStarting from\n$329\nPrice $329",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=2031755&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=2031755",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-91",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-92",
+            "role": "button",
+            "text": "Previous",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Previous"
+            }
+          },
+          {
+            "id": "pw-93",
+            "role": "button",
+            "text": "Next",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next"
+            }
+          },
+          {
+            "id": "pw-96",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/index.en-us.html",
+              "aria-label": "Hotels",
+              "data-testid": "web-core-stacked-card"
+            }
+          },
+          {
+            "id": "pw-99",
+            "role": "link",
+            "text": "Apartments",
+            "attributes": {
+              "href": "https://www.booking.com/apartments/index.en-us.html",
+              "aria-label": "Apartments",
+              "data-testid": "web-core-stacked-card"
+            }
+          },
+          {
+            "id": "pw-102",
+            "role": "link",
+            "text": "Resorts",
+            "attributes": {
+              "href": "https://www.booking.com/resorts/index.en-us.html",
+              "aria-label": "Resorts",
+              "data-testid": "web-core-stacked-card"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "click",
+        "args": {
+          "id": "pw-32"
+        }
+      },
+      "observation": "Action failed: Locator.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator(\"div:nth-of-type(1) > div > div:nth-of-type(2) > div > main > div:nth-of-type(1) > div > div > div > div > div > div > div > div:nth-of-type(2) > div > div > form > div > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div > div > ul > li:nth-of-type(1) > div\").first\n    - locator resolved to <div role=\"button\" tabindex=\"-1\" class=\"e521bfa3f4\">\u2026</div>\n  - attempting click action\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"bbe73dce14\">\u2026</div> from <div class=\"dc7e768484 a37804931c\">\u2026</div> subtree intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"bbe73dce14\">\u2026</div> from <div class=\"dc7e768484 a37804931c\">\u2026</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    10 \u00d7 waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <div class=\"bbe73dce14\">\u2026</div> from <div class=\"dc7e768484 a37804931c\">\u2026</div> subtree intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n"
+    },
+    {
+      "step": 4,
+      "state": {
+        "url": "https://www.booking.com/",
+        "title": "Booking.com | Official site | The best hotels, flights, car rentals & accommodations",
+        "elements": [
+          {
+            "id": "pw-0",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#main"
+            }
+          },
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Booking.com",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "aria-label": "Booking.com",
+              "data-testid": "header-booking-logo"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "button",
+            "text": "USD",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Prices in U.S. Dollar",
+              "data-testid": "header-currency-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "Language: English (US)",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Language: English (US)",
+              "data-testid": "header-language-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-5",
+            "role": "link",
+            "text": "Customer support",
+            "attributes": {
+              "href": "https://secure.booking.com/help.html?source=header&src=profile_contact_cs",
+              "aria-label": "Customer support",
+              "data-testid": "header-help-center"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "List your property",
+            "attributes": {
+              "href": "https://join.booking.com/?utm_source=topbar",
+              "data-testid": "header-custom-action-button"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "Register",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=index&prompt=signin&state=UrMBwUq-fhPs_KEO2azgcIOvdfs9b1NbjCLzLsamy9uZW9NzS7RTlJt8mveMkuIfBF5CV_De-G8M5oKsIJLzyqsGS5QJNCytQXCbQHfzu2mkbJuNy0T4PF4KG1u45nRTBAgc_LnCbhY7AYFWO7kww330GvDCMCZI3Edp0Omk5s-kvNVCOH_n0GD13N3D8w8vG3Yr299kvO9wfoXB-PvDRpV6JKOCpBWEOf_eX3JdOBEm7vHDkeU%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Register an account",
+              "data-testid": "header-sign-up-button"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=index&prompt=signin&state=UrMBwUq-fhPs_KEO2azgcIOvdfs9b1NbjCLzLsamy9uZW9NzS7RTlJt8mveMkuIfBF5CV_De-G8M5oKsIJLzyqsGS5QJNCytQXCbQHfzu2mkbJuNy0T4PF4KG1u45nRTBAgc_LnCbhY7AYFWO7kww330GvDCMCZI3Edp0Omk5s-kvNVCOH_n0GD13N3D8w8vG3Yr299kvO9wfoXB-PvDRpV6JKOCpBWEOf_eX3JdOBEm7vHDkeU%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Sign in",
+              "data-testid": "header-sign-in-button"
+            }
+          },
+          {
+            "id": "pw-25",
+            "role": "combobox",
+            "text": "Where are you going?",
+            "attributes": {
+              "id": ":R55amr5:",
+              "name": "ss",
+              "aria-label": "Where are you going?",
+              "placeholder": "Where are you going?",
+              "value": "New York City"
+            }
+          },
+          {
+            "id": "pw-26",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-31",
+            "role": "option",
+            "text": "New York (New York City)\nNew York, United States",
+            "attributes": {
+              "id": "autocomplete-result-0"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "button",
+            "text": "New York (New York City)\nNew York, United States",
+            "attributes": {}
+          },
+          {
+            "id": "pw-33",
+            "role": "option",
+            "text": "Central New York City\nNew York (New York City), New York, United States",
+            "attributes": {
+              "id": "autocomplete-result-1"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "Central New York City\nNew York (New York City), New York, United States",
+            "attributes": {}
+          },
+          {
+            "id": "pw-35",
+            "role": "option",
+            "text": "John F. Kennedy International Airport\nNew York, New York, United States of America",
+            "attributes": {
+              "id": "autocomplete-result-2"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "button",
+            "text": "John F. Kennedy International Airport\nNew York, New York, United States of America",
+            "attributes": {}
+          },
+          {
+            "id": "pw-37",
+            "role": "option",
+            "text": "New York Central Park\nNew York (New York City), New York, United States",
+            "attributes": {
+              "id": "autocomplete-result-3"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "button",
+            "text": "New York Central Park\nNew York (New York City), New York, United States",
+            "attributes": {}
+          },
+          {
+            "id": "pw-39",
+            "role": "option",
+            "text": "LaGuardia Airport\nNew York (New York City), New York, United States",
+            "attributes": {
+              "id": "autocomplete-result-4"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "button",
+            "text": "LaGuardia Airport\nNew York (New York City), New York, United States",
+            "attributes": {}
+          },
+          {
+            "id": "pw-41",
+            "role": "button",
+            "text": "Check-in date\n\u2014\nCheck-out date",
+            "attributes": {
+              "type": "button",
+              "data-testid": "searchbox-dates-container"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "button",
+            "text": "2 adults \u00b7 0 children \u00b7 1 room",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Number of travelers and rooms. Currently selected: 2 adults \u00b7 0 children \u00b7 1 room",
+              "data-testid": "occupancy-config"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Learn more",
+            "attributes": {
+              "href": "https://www.booking.com/co_brand_card.en-us.html",
+              "aria-label": "Learn more",
+              "data-testid": "promotional-banner-content-cta"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Discover homes",
+            "attributes": {
+              "href": "https://www.booking.com/booking-home/index.html",
+              "aria-label": "Discover homes"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "Aparthotel Stare Miasto\nOld Town, Poland, Krakow\n8.8\n8.8\nExcellent\nExcellent\n3,162 reviews\nStarting from\n$100\nPrice $100",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=260295&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=260295",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "N\u0112RO Boutique Hotel\nGreece, Imerovigli\n9.7\n9.7\nExceptional\nExceptional\n93 reviews\nStarting from\n$295\nPrice $295",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=1754883&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=1754883",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "link",
+            "text": "Leman Locke\nTower Hamlets, United Kingdom, London\n8.3\n8.3\nVery Good\nVery Good\n944 reviews\nStarting from\n$126\nPrice $126",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=1920592&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=1920592",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "link",
+            "text": "7Seasons Apartments Budapest\n06. Ter\u00e9zv\u00e1ros, Hungary, Budapest\n8.8\n8.8\nExcellent\nExcellent\n10,011 reviews\nStarting from\n$148\nPrice $148",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=78365&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=78365",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "link",
+            "text": "Numa Florence Vita\nSanta Maria Novella, Italy, Florence\n8.9\n8.9\nExcellent\nExcellent\n1,022 reviews\nStarting from\n$349\nPrice $349",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=2132601&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=2132601",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-71",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-73",
+            "role": "link",
+            "text": "New Sugar Loft Apartments\nSanta Teresa, Brazil, Rio de Janeiro\n7.7\n7.7\nGood\nGood\n811 reviews\nStarting from\n$61\nPrice $61",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=913677&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=913677",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-75",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-77",
+            "role": "link",
+            "text": "3 Epoques Apartments by Adrez\nPrague 1, Czech Republic, Prague\n8.8\n8.8\nExcellent\nExcellent\n721 reviews\nStarting from\n$82\nPrice $82",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=381352&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=381352",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-79",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-81",
+            "role": "link",
+            "text": "The Apartments by The Sloane Club\nKensington and Chelsea, United Kingdom, London\n9.0\n9.0\nWonderful\nWonderful\n259 reviews\nStarting from\n$697\nPrice $697",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=1129506&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=1129506",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-83",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-85",
+            "role": "link",
+            "text": "Cheval Three Quays at The Tower of London\nCity of London, United Kingdom, London\n9.5\n9.5\nExceptional\nExceptional\n827 reviews\nStarting from\n$396\nPrice $396",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=785838&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=785838",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-87",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-89",
+            "role": "link",
+            "text": "Flora Chiado Apartments\nSanta Maria Maior, Portugal, Lisbon\n9.7\n9.7\nExceptional\nExceptional\n165 reviews\nStarting from\n$329\nPrice $329",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html?dest_id=2031755&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=2031755",
+              "data-testid": "web-core-property-card"
+            }
+          },
+          {
+            "id": "pw-91",
+            "role": "button",
+            "text": "Save this item to a trip list",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Save this item to a trip list",
+              "data-testid": "wishlist-button"
+            }
+          },
+          {
+            "id": "pw-92",
+            "role": "button",
+            "text": "Previous",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Previous"
+            }
+          },
+          {
+            "id": "pw-93",
+            "role": "button",
+            "text": "Next",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next"
+            }
+          },
+          {
+            "id": "pw-96",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/index.en-us.html",
+              "aria-label": "Hotels",
+              "data-testid": "web-core-stacked-card"
+            }
+          },
+          {
+            "id": "pw-99",
+            "role": "link",
+            "text": "Apartments",
+            "attributes": {
+              "href": "https://www.booking.com/apartments/index.en-us.html",
+              "aria-label": "Apartments",
+              "data-testid": "web-core-stacked-card"
+            }
+          },
+          {
+            "id": "pw-102",
+            "role": "link",
+            "text": "Resorts",
+            "attributes": {
+              "href": "https://www.booking.com/resorts/index.en-us.html",
+              "aria-label": "Resorts",
+              "data-testid": "web-core-stacked-card"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://www.booking.com/searchresults.html?ss=New%20York%20City%2C%20New%20York%20State%2C%20United%20States&group_adults=2&no_rooms=1&group_children=0"
+        }
+      },
+      "observation": "Opened https://www.booking.com/searchresults.html?ss=New%20York%20City%2C%20New%20York%20State%2C%20United%20States&group_adults=2&no_rooms=1&group_children=0"
+    },
+    {
+      "step": 5,
+      "state": {
+        "url": "https://www.booking.com/searchresults.html",
+        "title": "Booking.com: Search results. Book your hotel now!",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#basiclayout"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Booking.com",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "aria-label": "Booking.com",
+              "data-testid": "header-booking-logo"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "USD",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Prices in U.S. Dollar",
+              "data-testid": "header-currency-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Language: English (US)",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Language: English (US)",
+              "data-testid": "header-language-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Customer support",
+            "attributes": {
+              "href": "https://secure.booking.com/help.html?source=header&src=profile_contact_cs",
+              "aria-label": "Customer support",
+              "data-testid": "header-help-center"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "List your property",
+            "attributes": {
+              "href": "https://join.booking.com/?utm_source=topbar",
+              "data-testid": "header-custom-action-button"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Register",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=searchresults_irene&prompt=signin&state=UtMBwUq-fhPs_KFEDOpwwdtDXgNQyfE60_XviPfecydWm8wFx2jkjOXvYuqDvea5XYtEdFWyv2-XOltJKNPXK9u000zJMaW5mq-fbisgljm6Mub8ydbzGzPzC7hyRhXqSTlhMthtv0Eb4wnkoKF_nRCgk0SOnkFd1VVyr99ZfSdkTPe7SA-AJCN1pPisnietLH_HZ1Ax8-azr6EeZqFhT0-rCMa9EDu_J0Y2h3r4Pn_H6Sls5ksqkJ-Mu9R5wFkTGsS6v0jN5bbu440PZoQqtYypQRzGAQ%3D%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Register an account",
+              "data-testid": "header-sign-up-button"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=searchresults_irene&prompt=signin&state=UtMBwUq-fhPs_KFEDOpwwdtDXgNQyfE60_XviPfecydWm8wFx2jkjOXvYuqDvea5XYtEdFWyv2-XOltJKNPXK9u000zJMaW5mq-fbisgljm6Mub8ydbzGzPzC7hyRhXqSTlhMthtv0Eb4wnkoKF_nRCgk0SOnkFd1VVyr99ZfSdkTPe7SA-AJCN1pPisnietLH_HZ1Ax8-azr6EeZqFhT0-rCMa9EDu_J0Y2h3r4Pn_H6Sls5ksqkJ-Mu9R5wFkTGsS6v0jN5bbu440PZoQqtYypQRzGAQ%3D%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Sign in",
+              "data-testid": "header-sign-in-button"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "combobox",
+            "text": "Where are you going?",
+            "attributes": {
+              "id": ":Raakbb:",
+              "name": "ss",
+              "aria-label": "Where are you going?",
+              "placeholder": "Where are you going?",
+              "value": ""
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "button",
+            "text": "Sun, May 17\n\u2014\nMon, May 18",
+            "attributes": {
+              "type": "button",
+              "data-testid": "searchbox-dates-container"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "2 adults \u00b7 0 children \u00b7 1 room",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Number of travelers and rooms. Currently selected: 2 adults \u00b7 0 children \u00b7 1 room",
+              "data-testid": "occupancy-config"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Countries",
+            "attributes": {
+              "href": "https://www.booking.com/country.html"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Regions",
+            "attributes": {
+              "href": "https://www.booking.com/region.html"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Cities",
+            "attributes": {
+              "href": "https://www.booking.com/city.html"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Districts",
+            "attributes": {
+              "href": "https://www.booking.com/district.html"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Airports",
+            "attributes": {
+              "href": "https://www.booking.com/airport.html"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/index.html"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Places of interest",
+            "attributes": {
+              "href": "https://www.booking.com/landmark.html"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Vacation Homes",
+            "attributes": {
+              "href": "https://www.booking.com/booking-home/index.html"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Apartments",
+            "attributes": {
+              "href": "https://www.booking.com/apartments/index.html"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Resorts",
+            "attributes": {
+              "href": "https://www.booking.com/resorts/index.html"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Villas",
+            "attributes": {
+              "href": "https://www.booking.com/villas/index.html"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Hostels",
+            "attributes": {
+              "href": "https://www.booking.com/hostels/index.html"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "B&Bs",
+            "attributes": {
+              "href": "https://www.booking.com/bed-and-breakfast/index.html"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Guest Houses",
+            "attributes": {
+              "href": "https://www.booking.com/guest-house/index.html"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "Unique places to stay",
+            "attributes": {
+              "href": "https://www.booking.com/accommodations.html"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Discover monthly stays",
+            "attributes": {
+              "href": "https://www.booking.com/extended-stays/index.html"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Manage your trips",
+            "attributes": {
+              "href": "https://secure.booking.com/content/cs.html"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Contact Customer Service",
+            "attributes": {
+              "href": "https://secure.booking.com/help.html"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "Safety Resource Center",
+            "attributes": {
+              "href": "https://www.booking.com/trust_and_safety.html"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "link",
+            "text": "Genius loyalty program",
+            "attributes": {
+              "href": "https://www.booking.com/genius.html"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "link",
+            "text": "Seasonal and holiday deals",
+            "attributes": {
+              "href": "https://www.booking.com/deals/index.html"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "link",
+            "text": "Travel articles",
+            "attributes": {
+              "href": "https://www.booking.com/articles.html"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "link",
+            "text": "Booking.com for Business",
+            "attributes": {
+              "href": "https://business.booking.com/"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "link",
+            "text": "Traveller Review Awards",
+            "attributes": {
+              "href": "https://www.booking.com/traveller-awards/index.html"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "link",
+            "text": "Car rental",
+            "attributes": {
+              "href": "https://www.booking.com/cars/index.html"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "link",
+            "text": "Flight finder",
+            "attributes": {
+              "href": "https://booking.com/flights/index.html"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "link",
+            "text": "Restaurant reservations",
+            "attributes": {
+              "href": "https://www.opentable.com/"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "Booking.com for Travel Agents",
+            "attributes": {
+              "href": "https://www.booking.com/affiliate-program/v2/index.html"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "link",
+            "text": "Manage cookie settings",
+            "attributes": {
+              "href": "https://www.booking.com/content/privacy.html"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "link",
+            "text": "Privacy Notice",
+            "attributes": {
+              "href": "https://www.booking.com/content/privacy.html"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "link",
+            "text": "Terms of Service",
+            "attributes": {
+              "href": "https://www.booking.com/content/terms.html"
+            }
+          },
+          {
+            "id": "pw-70",
+            "role": "link",
+            "text": "Accessibility Statement",
+            "attributes": {
+              "href": "https://www.booking.com/content/accessibility_statement.html"
+            }
+          },
+          {
+            "id": "pw-71",
+            "role": "link",
+            "text": "Dispute resolution",
+            "attributes": {
+              "href": "https://secure.booking.com/content/complaints.html"
+            }
+          },
+          {
+            "id": "pw-72",
+            "role": "link",
+            "text": "Don't sell or share my personal information",
+            "attributes": {
+              "href": "https://www.booking.com/content/ccpa.html"
+            }
+          },
+          {
+            "id": "pw-73",
+            "role": "link",
+            "text": "Modern Slavery Statement",
+            "attributes": {
+              "href": "https://www.bookingholdings.com/modern-slavery-statement/"
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "link",
+            "text": "Human Rights Statement",
+            "attributes": {
+              "href": "https://www.bookingholdings.com/about/compliance-and-ethics/human-rights/"
+            }
+          },
+          {
+            "id": "pw-75",
+            "role": "link",
+            "text": "Extranet login",
+            "attributes": {
+              "href": "https://admin.booking.com/"
+            }
+          },
+          {
+            "id": "pw-76",
+            "role": "link",
+            "text": "Partner help",
+            "attributes": {
+              "href": "https://partner.booking.com/en-us"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => { const text = document.body.innerText; const cards = [...document.querySelectorAll('[data-testid=\"property-card\"], [data-testid=\"web-core-property-card\"], .sr_property_block, [data-testid=\"property-card-container\"]')].map((el,i)=>({i, text: el.innerText.slice(0,1000)})); return {url: location.href, title: document.title, bodyText: text.slice(0,5000), cards}; })()"
+        }
+      },
+      "observation": "Eval: {\"url\": \"https://www.booking.com/searchresults.html\", \"title\": \"Booking.com: Search results. Book your hotel now!\", \"bodyText\": \"Skip to main content\\nUSD\\nList your property\\nRegister\\nSign in\\nStays\\nFlights\\nFlight + Hotel\\nCar rental\\nCruises\\nAttractions\\nAirport taxis\\nSun, May 17\\n\\u2014\\nMon, May 18\\n2 adults \\u00b7 0 children \\u00b7 1 room\\nSearch\\nCountries\\nRegions\\nCities\\nDistricts\\nAirports\\nHotels\\nPlaces of interest\\nVacation Homes\\nApartments\\nResorts\\nVillas\\nHostels\\nB&Bs\\nGue"
+    },
+    {
+      "step": 6,
+      "state": {
+        "url": "https://www.booking.com/searchresults.html",
+        "title": "Booking.com: Search results. Book your hotel now!",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#basiclayout"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Booking.com",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "aria-label": "Booking.com",
+              "data-testid": "header-booking-logo"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "USD",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Prices in U.S. Dollar",
+              "data-testid": "header-currency-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Language: English (US)",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Language: English (US)",
+              "data-testid": "header-language-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Customer support",
+            "attributes": {
+              "href": "https://secure.booking.com/help.html?source=header&src=profile_contact_cs",
+              "aria-label": "Customer support",
+              "data-testid": "header-help-center"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "List your property",
+            "attributes": {
+              "href": "https://join.booking.com/?utm_source=topbar",
+              "data-testid": "header-custom-action-button"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Register",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=searchresults_irene&prompt=signin&state=UtMBwUq-fhPs_KFEDOpwwdtDXgNQyfE60_XviPfecydWm8wFx2jkjOXvYuqDvea5XYtEdFWyv2-XOltJKNPXK9u000zJMaW5mq-fbisgljm6Mub8ydbzGzPzC7hyRhXqSTlhMthtv0Eb4wnkoKF_nRCgk0SOnkFd1VVyr99ZfSdkTPe7SA-AJCN1pPisnietLH_HZ1Ax8-azr6EeZqFhT0-rCMa9EDu_J0Y2h3r4Pn_H6Sls5ksqkJ-Mu9R5wFkTGsS6v0jN5bbu440PZoQqtYypQRzGAQ%3D%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Register an account",
+              "data-testid": "header-sign-up-button"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=searchresults_irene&prompt=signin&state=UtMBwUq-fhPs_KFEDOpwwdtDXgNQyfE60_XviPfecydWm8wFx2jkjOXvYuqDvea5XYtEdFWyv2-XOltJKNPXK9u000zJMaW5mq-fbisgljm6Mub8ydbzGzPzC7hyRhXqSTlhMthtv0Eb4wnkoKF_nRCgk0SOnkFd1VVyr99ZfSdkTPe7SA-AJCN1pPisnietLH_HZ1Ax8-azr6EeZqFhT0-rCMa9EDu_J0Y2h3r4Pn_H6Sls5ksqkJ-Mu9R5wFkTGsS6v0jN5bbu440PZoQqtYypQRzGAQ%3D%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Sign in",
+              "data-testid": "header-sign-in-button"
+            }
+          },
+          {
+            "id": "pw-32",
+            "role": "combobox",
+            "text": "Where are you going?",
+            "attributes": {
+              "id": ":rf:",
+              "name": "ss",
+              "aria-label": "Where are you going?",
+              "placeholder": "Where are you going?",
+              "value": ""
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "button",
+            "text": "Sun, May 17\n\u2014\nMon, May 18",
+            "attributes": {
+              "type": "button",
+              "data-testid": "searchbox-dates-container"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": "2 adults \u00b7 0 children \u00b7 1 room",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Number of travelers and rooms. Currently selected: 2 adults \u00b7 0 children \u00b7 1 room",
+              "data-testid": "occupancy-config"
+            }
+          },
+          {
+            "id": "pw-35",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-39",
+            "role": "link",
+            "text": "Countries",
+            "attributes": {
+              "href": "https://www.booking.com/country.html"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "link",
+            "text": "Regions",
+            "attributes": {
+              "href": "https://www.booking.com/region.html"
+            }
+          },
+          {
+            "id": "pw-41",
+            "role": "link",
+            "text": "Cities",
+            "attributes": {
+              "href": "https://www.booking.com/city.html"
+            }
+          },
+          {
+            "id": "pw-42",
+            "role": "link",
+            "text": "Districts",
+            "attributes": {
+              "href": "https://www.booking.com/district.html"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "link",
+            "text": "Airports",
+            "attributes": {
+              "href": "https://www.booking.com/airport.html"
+            }
+          },
+          {
+            "id": "pw-44",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/index.html"
+            }
+          },
+          {
+            "id": "pw-45",
+            "role": "link",
+            "text": "Places of interest",
+            "attributes": {
+              "href": "https://www.booking.com/landmark.html"
+            }
+          },
+          {
+            "id": "pw-46",
+            "role": "link",
+            "text": "Vacation Homes",
+            "attributes": {
+              "href": "https://www.booking.com/booking-home/index.html"
+            }
+          },
+          {
+            "id": "pw-47",
+            "role": "link",
+            "text": "Apartments",
+            "attributes": {
+              "href": "https://www.booking.com/apartments/index.html"
+            }
+          },
+          {
+            "id": "pw-48",
+            "role": "link",
+            "text": "Resorts",
+            "attributes": {
+              "href": "https://www.booking.com/resorts/index.html"
+            }
+          },
+          {
+            "id": "pw-49",
+            "role": "link",
+            "text": "Villas",
+            "attributes": {
+              "href": "https://www.booking.com/villas/index.html"
+            }
+          },
+          {
+            "id": "pw-50",
+            "role": "link",
+            "text": "Hostels",
+            "attributes": {
+              "href": "https://www.booking.com/hostels/index.html"
+            }
+          },
+          {
+            "id": "pw-51",
+            "role": "link",
+            "text": "B&Bs",
+            "attributes": {
+              "href": "https://www.booking.com/bed-and-breakfast/index.html"
+            }
+          },
+          {
+            "id": "pw-52",
+            "role": "link",
+            "text": "Guest Houses",
+            "attributes": {
+              "href": "https://www.booking.com/guest-house/index.html"
+            }
+          },
+          {
+            "id": "pw-53",
+            "role": "link",
+            "text": "Unique places to stay",
+            "attributes": {
+              "href": "https://www.booking.com/accommodations.html"
+            }
+          },
+          {
+            "id": "pw-54",
+            "role": "link",
+            "text": "Discover monthly stays",
+            "attributes": {
+              "href": "https://www.booking.com/extended-stays/index.html"
+            }
+          },
+          {
+            "id": "pw-55",
+            "role": "link",
+            "text": "Manage your trips",
+            "attributes": {
+              "href": "https://secure.booking.com/content/cs.html"
+            }
+          },
+          {
+            "id": "pw-56",
+            "role": "link",
+            "text": "Contact Customer Service",
+            "attributes": {
+              "href": "https://secure.booking.com/help.html"
+            }
+          },
+          {
+            "id": "pw-57",
+            "role": "link",
+            "text": "Safety Resource Center",
+            "attributes": {
+              "href": "https://www.booking.com/trust_and_safety.html"
+            }
+          },
+          {
+            "id": "pw-58",
+            "role": "link",
+            "text": "Genius loyalty program",
+            "attributes": {
+              "href": "https://www.booking.com/genius.html"
+            }
+          },
+          {
+            "id": "pw-59",
+            "role": "link",
+            "text": "Seasonal and holiday deals",
+            "attributes": {
+              "href": "https://www.booking.com/deals/index.html"
+            }
+          },
+          {
+            "id": "pw-60",
+            "role": "link",
+            "text": "Travel articles",
+            "attributes": {
+              "href": "https://www.booking.com/articles.html"
+            }
+          },
+          {
+            "id": "pw-61",
+            "role": "link",
+            "text": "Booking.com for Business",
+            "attributes": {
+              "href": "https://business.booking.com/"
+            }
+          },
+          {
+            "id": "pw-62",
+            "role": "link",
+            "text": "Traveller Review Awards",
+            "attributes": {
+              "href": "https://www.booking.com/traveller-awards/index.html"
+            }
+          },
+          {
+            "id": "pw-63",
+            "role": "link",
+            "text": "Car rental",
+            "attributes": {
+              "href": "https://www.booking.com/cars/index.html"
+            }
+          },
+          {
+            "id": "pw-64",
+            "role": "link",
+            "text": "Flight finder",
+            "attributes": {
+              "href": "https://booking.com/flights/index.html"
+            }
+          },
+          {
+            "id": "pw-65",
+            "role": "link",
+            "text": "Restaurant reservations",
+            "attributes": {
+              "href": "https://www.opentable.com/"
+            }
+          },
+          {
+            "id": "pw-66",
+            "role": "link",
+            "text": "Booking.com for Travel Agents",
+            "attributes": {
+              "href": "https://www.booking.com/affiliate-program/v2/index.html"
+            }
+          },
+          {
+            "id": "pw-67",
+            "role": "link",
+            "text": "Manage cookie settings",
+            "attributes": {
+              "href": "https://www.booking.com/content/privacy.html"
+            }
+          },
+          {
+            "id": "pw-68",
+            "role": "link",
+            "text": "Privacy Notice",
+            "attributes": {
+              "href": "https://www.booking.com/content/privacy.html"
+            }
+          },
+          {
+            "id": "pw-69",
+            "role": "link",
+            "text": "Terms of Service",
+            "attributes": {
+              "href": "https://www.booking.com/content/terms.html"
+            }
+          },
+          {
+            "id": "pw-70",
+            "role": "link",
+            "text": "Accessibility Statement",
+            "attributes": {
+              "href": "https://www.booking.com/content/accessibility_statement.html"
+            }
+          },
+          {
+            "id": "pw-71",
+            "role": "link",
+            "text": "Dispute resolution",
+            "attributes": {
+              "href": "https://secure.booking.com/content/complaints.html"
+            }
+          },
+          {
+            "id": "pw-72",
+            "role": "link",
+            "text": "Don't sell or share my personal information",
+            "attributes": {
+              "href": "https://www.booking.com/content/ccpa.html"
+            }
+          },
+          {
+            "id": "pw-73",
+            "role": "link",
+            "text": "Modern Slavery Statement",
+            "attributes": {
+              "href": "https://www.bookingholdings.com/modern-slavery-statement/"
+            }
+          },
+          {
+            "id": "pw-74",
+            "role": "link",
+            "text": "Human Rights Statement",
+            "attributes": {
+              "href": "https://www.bookingholdings.com/about/compliance-and-ethics/human-rights/"
+            }
+          },
+          {
+            "id": "pw-75",
+            "role": "link",
+            "text": "Extranet login",
+            "attributes": {
+              "href": "https://admin.booking.com/"
+            }
+          },
+          {
+            "id": "pw-76",
+            "role": "link",
+            "text": "Partner help",
+            "attributes": {
+              "href": "https://partner.booking.com/en-us"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "open",
+        "args": {
+          "url": "https://www.booking.com/searchresults.html?ss=New%20York%20City%2C%20New%20York%2C%20United%20States&dest_id=20088325&dest_type=city&checkin=2026-05-17&checkout=2026-05-18&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD"
+        }
+      },
+      "observation": "Opened https://www.booking.com/searchresults.html?ss=New%20York%20City%2C%20New%20York%2C%20United%20States&dest_id=20088325&dest_type=city&checkin=2026-05-17&checkout=2026-05-18&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD"
+    },
+    {
+      "step": 7,
+      "state": {
+        "url": "https://www.booking.com/city/us/new-york.html",
+        "title": "10 Best New York Hotels, United States (From $109)",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#indexsearch"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Booking.com",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "aria-label": "Booking.com",
+              "data-testid": "header-booking-logo"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "USD",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Prices in U.S. Dollar",
+              "data-testid": "header-currency-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Language: English (US)",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Language: English (US)",
+              "data-testid": "header-language-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Customer support",
+            "attributes": {
+              "href": "https://secure.booking.com/help.html?source=header&src=profile_contact_cs",
+              "aria-label": "Customer support",
+              "data-testid": "header-help-center"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "List your property",
+            "attributes": {
+              "href": "https://join.booking.com/?utm_source=topbar",
+              "data-testid": "header-custom-action-button"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Register",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=city&prompt=signin&state=UscBwUq-fhPs_KHNjBRBNwKbWWx_quxXKuSudt-tdE-16mq0sIBeh9bBi6QrT0bf8lo3UBIFNaTvHD60z9cX5IMOg8L_ZZj7y9UBEkmSDjXdMSnIFDbFZHf89vLjg5CXo4YrvqCN9EKjFibUlmPlNsdbiSGCRYFqNXmUXAs8D9MF9vmwRiT3XWdPNG787a4xJv2Ncnvf2bI9Dl4Rwl16biYokSi938LfuvtzDPm8eAgPvZWQsvUXuNRPHORNVtrKW9GOYQbCJqlVPA%3D%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Register an account",
+              "data-testid": "header-sign-up-button"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=city&prompt=signin&state=UscBwUq-fhPs_KHNjBRBNwKbWWx_quxXKuSudt-tdE-16mq0sIBeh9bBi6QrT0bf8lo3UBIFNaTvHD60z9cX5IMOg8L_ZZj7y9UBEkmSDjXdMSnIFDbFZHf89vLjg5CXo4YrvqCN9EKjFibUlmPlNsdbiSGCRYFqNXmUXAs8D9MF9vmwRiT3XWdPNG787a4xJv2Ncnvf2bI9Dl4Rwl16biYokSi938LfuvtzDPm8eAgPvZWQsvUXuNRPHORNVtrKW9GOYQbCJqlVPA%3D%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Sign in",
+              "data-testid": "header-sign-in-button"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "combobox",
+            "text": "Where are you going?",
+            "attributes": {
+              "id": ":Raalqmkm:",
+              "name": "ss",
+              "aria-label": "Where are you going?",
+              "placeholder": "Where are you going?",
+              "value": "New York"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "button",
+            "text": "Check-in date\n\u2014\nCheck-out date",
+            "attributes": {
+              "type": "button",
+              "data-testid": "searchbox-dates-container"
+            }
+          },
+          {
+            "id": "pw-37",
+            "role": "button",
+            "text": "Calendar",
+            "attributes": {
+              "id": "calendar-searchboxdatepicker-tab-trigger",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-38",
+            "role": "button",
+            "text": "I'm flexible",
+            "attributes": {
+              "id": "flexible-searchboxdatepicker-tab-trigger",
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-40",
+            "role": "button",
+            "text": "Next month",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next month"
+            }
+          },
+          {
+            "id": "pw-176",
+            "role": "button",
+            "text": "Previous",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Previous"
+            }
+          },
+          {
+            "id": "pw-177",
+            "role": "button",
+            "text": "Next",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next"
+            }
+          },
+          {
+            "id": "pw-179",
+            "role": "button",
+            "text": "2 adults \u00b7 0 children \u00b7 1 room",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Number of travelers and rooms. Currently selected: 2 adults \u00b7 0 children \u00b7 1 room",
+              "data-testid": "occupancy-config"
+            }
+          },
+          {
+            "id": "pw-180",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-184",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-185",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/index.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-186",
+            "role": "link",
+            "text": "United States",
+            "attributes": {
+              "href": "https://www.booking.com/country/us.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-187",
+            "role": "link",
+            "text": "New York State (NY)",
+            "attributes": {
+              "href": "https://www.booking.com/region/us/new-york-state.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-188",
+            "role": "link",
+            "text": "Show hotels on map",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html"
+            }
+          },
+          {
+            "id": "pw-189",
+            "role": "link",
+            "text": "5 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-191",
+            "role": "link",
+            "text": "4 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-193",
+            "role": "link",
+            "text": "3 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-195",
+            "role": "link",
+            "text": "2 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-197",
+            "role": "link",
+            "text": "1 star",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-199",
+            "role": "link",
+            "text": "Wonderful: 9+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-201",
+            "role": "link",
+            "text": "Very Good: 8+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-203",
+            "role": "link",
+            "text": "Good: 7+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-205",
+            "role": "link",
+            "text": "Pleasant: 6+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-207",
+            "role": "button",
+            "text": "Our top picks",
+            "attributes": {}
+          },
+          {
+            "id": "pw-208",
+            "role": "button",
+            "text": "Lowest Price First",
+            "attributes": {}
+          },
+          {
+            "id": "pw-209",
+            "role": "button",
+            "text": "Star rating and price",
+            "attributes": {}
+          },
+          {
+            "id": "pw-210",
+            "role": "button",
+            "text": "Top reviewed",
+            "attributes": {}
+          },
+          {
+            "id": "pw-211",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-212",
+            "role": "link",
+            "text": "Hotel Indigo NYC Financial District by IHG\nHotel in Manhattan, New York",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/indigo-world-trade-center-nyc-an-ihg.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-215",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-216",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-217",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-218",
+            "role": "link",
+            "text": "The Wallace Hotel\nHotel in Upper West Side, New York",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/the-wallace-new-york.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-220",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-221",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-222",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-223",
+            "role": "link",
+            "text": "Hilton Club The Central at 5th New York\nHotel in Midtown East, New York",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/the-central-at-5th-by-hilton-club.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-226",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-227",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-228",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-229",
+            "role": "link",
+            "text": "Artezen Hotel\nHotel in Manhattan, New York",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/artezen.html",
+              "data-testid": "titleLink"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => { const selectors = ['[data-testid=\"property-card\"]','[data-testid=\"web-core-property-card\"]','.sr_property_block','[data-testid=\"property-card-container\"]']; const cards = [...document.querySelectorAll(selectors.join(','))].map((el,i)=>({i, text: el.innerText.trim().slice(0,1500), html: el.outerHTML.slice(0,2000)})); return {url: location.href, title: document.title, bodyText: document.body.innerText.slice(0,8000), cards}; })()"
+        }
+      },
+      "observation": "Eval: {\"url\": \"https://www.booking.com/city/us/new-york.html\", \"title\": \"10 Best New York Hotels, United States (From $109)\", \"bodyText\": \"Skip to main content\\nUSD\\nList your property\\nRegister\\nSign in\\nStays\\nFlights\\nFlight + Hotel\\nCar rental\\nCruises\\nAttractions\\nAirport taxis\\nSearch hotels in New York, NY\\n\\nEnter your dates to see the latest prices and deals for New York hotels\\n\\nCheck-in date\\n\\u2014\\nCheck-out date\\nCalendar\\nI'm flexible\\nMay 2026\\nSu\\n\\t\\nMo\\n\\t\\nTu\\n\\t\\nWe\\n\\t\\nTh\\n\\t\\"
+    },
+    {
+      "step": 8,
+      "state": {
+        "url": "https://www.booking.com/city/us/new-york.html",
+        "title": "10 Best New York Hotels, United States (From $109)",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#indexsearch"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Booking.com",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "aria-label": "Booking.com",
+              "data-testid": "header-booking-logo"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "USD",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Prices in U.S. Dollar",
+              "data-testid": "header-currency-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Language: English (US)",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Language: English (US)",
+              "data-testid": "header-language-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Customer support",
+            "attributes": {
+              "href": "https://secure.booking.com/help.html?source=header&src=profile_contact_cs",
+              "aria-label": "Customer support",
+              "data-testid": "header-help-center"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "List your property",
+            "attributes": {
+              "href": "https://join.booking.com/?utm_source=topbar",
+              "data-testid": "header-custom-action-button"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Register",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=city&prompt=signin&state=UscBwUq-fhPs_KHNjBRBNwKbWWx_quxXKuSudt-tdE-16mq0sIBeh9bBi6QrT0bf8lo3UBIFNaTvHD60z9cX5IMOg8L_ZZj7y9UBEkmSDjXdMSnIFDbFZHf89vLjg5CXo4YrvqCN9EKjFibUlmPlNsdbiSGCRYFqNXmUXAs8D9MF9vmwRiT3XWdPNG787a4xJv2Ncnvf2bI9Dl4Rwl16biYokSi938LfuvtzDPm8eAgPvZWQsvUXuNRPHORNVtrKW9GOYQbCJqlVPA%3D%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Register an account",
+              "data-testid": "header-sign-up-button"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=city&prompt=signin&state=UscBwUq-fhPs_KHNjBRBNwKbWWx_quxXKuSudt-tdE-16mq0sIBeh9bBi6QrT0bf8lo3UBIFNaTvHD60z9cX5IMOg8L_ZZj7y9UBEkmSDjXdMSnIFDbFZHf89vLjg5CXo4YrvqCN9EKjFibUlmPlNsdbiSGCRYFqNXmUXAs8D9MF9vmwRiT3XWdPNG787a4xJv2Ncnvf2bI9Dl4Rwl16biYokSi938LfuvtzDPm8eAgPvZWQsvUXuNRPHORNVtrKW9GOYQbCJqlVPA%3D%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Sign in",
+              "data-testid": "header-sign-in-button"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "combobox",
+            "text": "Where are you going?",
+            "attributes": {
+              "id": ":ri:",
+              "name": "ss",
+              "aria-label": "Where are you going?",
+              "placeholder": "Where are you going?",
+              "value": "New York"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "button",
+            "text": "Check-in date\n\u2014\nCheck-out date",
+            "attributes": {
+              "type": "button",
+              "data-testid": "searchbox-dates-container"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "Next month",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next month"
+            }
+          },
+          {
+            "id": "pw-179",
+            "role": "button",
+            "text": "Previous",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Previous"
+            }
+          },
+          {
+            "id": "pw-180",
+            "role": "button",
+            "text": "Next",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next"
+            }
+          },
+          {
+            "id": "pw-182",
+            "role": "button",
+            "text": "2 adults \u00b7 0 children \u00b7 1 room",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Number of travelers and rooms. Currently selected: 2 adults \u00b7 0 children \u00b7 1 room",
+              "data-testid": "occupancy-config"
+            }
+          },
+          {
+            "id": "pw-183",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-188",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-189",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/index.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-190",
+            "role": "link",
+            "text": "United States",
+            "attributes": {
+              "href": "https://www.booking.com/country/us.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-191",
+            "role": "link",
+            "text": "New York State (NY)",
+            "attributes": {
+              "href": "https://www.booking.com/region/us/new-york-state.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-192",
+            "role": "link",
+            "text": "Show hotels on map",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html"
+            }
+          },
+          {
+            "id": "pw-193",
+            "role": "link",
+            "text": "5 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-195",
+            "role": "link",
+            "text": "4 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-197",
+            "role": "link",
+            "text": "3 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-199",
+            "role": "link",
+            "text": "2 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-201",
+            "role": "link",
+            "text": "1 star",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-203",
+            "role": "link",
+            "text": "Wonderful: 9+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-205",
+            "role": "link",
+            "text": "Very Good: 8+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-207",
+            "role": "link",
+            "text": "Good: 7+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-209",
+            "role": "link",
+            "text": "Pleasant: 6+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-211",
+            "role": "button",
+            "text": "Our top picks",
+            "attributes": {}
+          },
+          {
+            "id": "pw-212",
+            "role": "button",
+            "text": "Lowest Price First",
+            "attributes": {}
+          },
+          {
+            "id": "pw-213",
+            "role": "button",
+            "text": "Star rating and price",
+            "attributes": {}
+          },
+          {
+            "id": "pw-214",
+            "role": "button",
+            "text": "Top reviewed",
+            "attributes": {}
+          },
+          {
+            "id": "pw-215",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-216",
+            "role": "link",
+            "text": "Hotel Indigo NYC Financial District by IHG\nHotel in Manhattan, New York",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/indigo-world-trade-center-nyc-an-ihg.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-219",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-220",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-221",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-222",
+            "role": "link",
+            "text": "The Wallace Hotel\nHotel in Upper West Side, New York",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/the-wallace-new-york.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-224",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-225",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-226",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-227",
+            "role": "link",
+            "text": "Hilton Club The Central at 5th New York\nHotel in Midtown East, New York",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/the-central-at-5th-by-hilton-club.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-230",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-231",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-232",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-233",
+            "role": "link",
+            "text": "Artezen Hotel\nHotel in Manhattan, New York",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/artezen.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-236",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-237",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => { const names = ['Hotel Indigo NYC Financial District by IHG','The Wallace Hotel','Hilton Club The Central at 5th New York','Artezen Hotel']; const text = document.body.innerText; return names.map(name => { const idx = text.indexOf(name); return {name, snippet: idx >= 0 ? text.slice(Math.max(0, idx-300), idx+600) : null}; }); })()"
+        }
+      },
+      "observation": "Eval: [{\"name\": \"Hotel Indigo NYC Financial District by IHG\", \"snippet\": \"ls\\nUnited States\\nNew York State (NY)\\nNew York\\nNew York \\u2013 1611 hotels and places to stay\\nShow hotels on map\\nFilter by:\\nStar Rating\\n5 stars\\n4 stars\\n3 stars\\n2 stars\\n1 star\\nReview score\\nWonderful: 9+\\nVery Good: 8+\\nGood: 7+\\nPleasant: 6+\\nOur top picks\\nLowest Price First\\nStar rating and price\\nTop reviewed\\nHotel Indigo NYC Financial District by IHG\\nHotel in Manhattan, New York\\n\\nConveniently located in the F"
+    },
+    {
+      "step": 9,
+      "state": {
+        "url": "https://www.booking.com/city/us/new-york.html",
+        "title": "10 Best New York Hotels, United States (From $109)",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#indexsearch"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Booking.com",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "aria-label": "Booking.com",
+              "data-testid": "header-booking-logo"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "USD",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Prices in U.S. Dollar",
+              "data-testid": "header-currency-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Language: English (US)",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Language: English (US)",
+              "data-testid": "header-language-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Customer support",
+            "attributes": {
+              "href": "https://secure.booking.com/help.html?source=header&src=profile_contact_cs",
+              "aria-label": "Customer support",
+              "data-testid": "header-help-center"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "List your property",
+            "attributes": {
+              "href": "https://join.booking.com/?utm_source=topbar",
+              "data-testid": "header-custom-action-button"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Register",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=city&prompt=signin&state=UscBwUq-fhPs_KHNjBRBNwKbWWx_quxXKuSudt-tdE-16mq0sIBeh9bBi6QrT0bf8lo3UBIFNaTvHD60z9cX5IMOg8L_ZZj7y9UBEkmSDjXdMSnIFDbFZHf89vLjg5CXo4YrvqCN9EKjFibUlmPlNsdbiSGCRYFqNXmUXAs8D9MF9vmwRiT3XWdPNG787a4xJv2Ncnvf2bI9Dl4Rwl16biYokSi938LfuvtzDPm8eAgPvZWQsvUXuNRPHORNVtrKW9GOYQbCJqlVPA%3D%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Register an account",
+              "data-testid": "header-sign-up-button"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=city&prompt=signin&state=UscBwUq-fhPs_KHNjBRBNwKbWWx_quxXKuSudt-tdE-16mq0sIBeh9bBi6QrT0bf8lo3UBIFNaTvHD60z9cX5IMOg8L_ZZj7y9UBEkmSDjXdMSnIFDbFZHf89vLjg5CXo4YrvqCN9EKjFibUlmPlNsdbiSGCRYFqNXmUXAs8D9MF9vmwRiT3XWdPNG787a4xJv2Ncnvf2bI9Dl4Rwl16biYokSi938LfuvtzDPm8eAgPvZWQsvUXuNRPHORNVtrKW9GOYQbCJqlVPA%3D%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Sign in",
+              "data-testid": "header-sign-in-button"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "combobox",
+            "text": "Where are you going?",
+            "attributes": {
+              "id": ":ri:",
+              "name": "ss",
+              "aria-label": "Where are you going?",
+              "placeholder": "Where are you going?",
+              "value": "New York"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "button",
+            "text": "Check-in date\n\u2014\nCheck-out date",
+            "attributes": {
+              "type": "button",
+              "data-testid": "searchbox-dates-container"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "Next month",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next month"
+            }
+          },
+          {
+            "id": "pw-179",
+            "role": "button",
+            "text": "Previous",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Previous"
+            }
+          },
+          {
+            "id": "pw-180",
+            "role": "button",
+            "text": "Next",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next"
+            }
+          },
+          {
+            "id": "pw-182",
+            "role": "button",
+            "text": "2 adults \u00b7 0 children \u00b7 1 room",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Number of travelers and rooms. Currently selected: 2 adults \u00b7 0 children \u00b7 1 room",
+              "data-testid": "occupancy-config"
+            }
+          },
+          {
+            "id": "pw-183",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-188",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-189",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/index.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-190",
+            "role": "link",
+            "text": "United States",
+            "attributes": {
+              "href": "https://www.booking.com/country/us.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-191",
+            "role": "link",
+            "text": "New York State (NY)",
+            "attributes": {
+              "href": "https://www.booking.com/region/us/new-york-state.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-192",
+            "role": "link",
+            "text": "Show hotels on map",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html"
+            }
+          },
+          {
+            "id": "pw-193",
+            "role": "link",
+            "text": "5 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-195",
+            "role": "link",
+            "text": "4 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-197",
+            "role": "link",
+            "text": "3 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-199",
+            "role": "link",
+            "text": "2 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-201",
+            "role": "link",
+            "text": "1 star",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-203",
+            "role": "link",
+            "text": "Wonderful: 9+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-205",
+            "role": "link",
+            "text": "Very Good: 8+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-207",
+            "role": "link",
+            "text": "Good: 7+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-209",
+            "role": "link",
+            "text": "Pleasant: 6+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-211",
+            "role": "button",
+            "text": "Our top picks",
+            "attributes": {}
+          },
+          {
+            "id": "pw-212",
+            "role": "button",
+            "text": "Lowest Price First",
+            "attributes": {}
+          },
+          {
+            "id": "pw-213",
+            "role": "button",
+            "text": "Star rating and price",
+            "attributes": {}
+          },
+          {
+            "id": "pw-214",
+            "role": "button",
+            "text": "Top reviewed",
+            "attributes": {}
+          },
+          {
+            "id": "pw-215",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-216",
+            "role": "link",
+            "text": "Hotel Indigo NYC Financial District by IHG\nHotel in Manhattan, New York",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/indigo-world-trade-center-nyc-an-ihg.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-219",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-220",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-221",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-222",
+            "role": "link",
+            "text": "The Wallace Hotel\nHotel in Upper West Side, New York",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/the-wallace-new-york.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-224",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-225",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-226",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-227",
+            "role": "link",
+            "text": "Hilton Club The Central at 5th New York\nHotel in Midtown East, New York",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/the-central-at-5th-by-hilton-club.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-230",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-231",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-232",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-233",
+            "role": "link",
+            "text": "Artezen Hotel\nHotel in Manhattan, New York",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/artezen.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-236",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-237",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => {\n  const links = [...document.querySelectorAll('[data-testid=\"titleLink\"]')];\n  return links.slice(0,10).map((a, i) => {\n    let el = a;\n    for (let j=0; j<8 && el; j++, el=el.parentElement) {\n      const txt = el.innerText || '';\n      if (/\\b\\d\\.\\d\\b/.test(txt) || /Scored|Rated|Very Good|Wonderful|Excellent/.test(txt)) {\n        return {i, title: a.innerText.trim(), containerLevel:j, text: txt.trim().slice(0,2000)};\n      }\n    }\n    return {i, title: a.innerText.trim(), text: a.closest('div')?.innerText?.trim().slice(0,1000)};\n  });\n})()"
+        }
+      },
+      "observation": "Eval: [{\"i\": 0, \"title\": \"Hotel Indigo NYC Financial District by IHG\\nHotel in Manhattan, New York\", \"containerLevel\": 1, \"text\": \"Hotel Indigo NYC Financial District by IHG\\nHotel in Manhattan, New York\\n\\nConveniently located in the Financial District district of New York, Hotel Indigo NYC Financial District by IHG is located a 5-minute walk from National September 11 Memorial & Museum, 0.4 miles from...\\n\\nShow more\"}, {\"i\": 1, \"title\": \"The Wallace Hotel\\nHotel in Upper West Side, New York\", \"cont"
+    },
+    {
+      "step": 10,
+      "state": {
+        "url": "https://www.booking.com/city/us/new-york.html",
+        "title": "10 Best New York Hotels, United States (From $109)",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#indexsearch"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Booking.com",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "aria-label": "Booking.com",
+              "data-testid": "header-booking-logo"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "USD",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Prices in U.S. Dollar",
+              "data-testid": "header-currency-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Language: English (US)",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Language: English (US)",
+              "data-testid": "header-language-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Customer support",
+            "attributes": {
+              "href": "https://secure.booking.com/help.html?source=header&src=profile_contact_cs",
+              "aria-label": "Customer support",
+              "data-testid": "header-help-center"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "List your property",
+            "attributes": {
+              "href": "https://join.booking.com/?utm_source=topbar",
+              "data-testid": "header-custom-action-button"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Register",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=city&prompt=signin&state=UscBwUq-fhPs_KHNjBRBNwKbWWx_quxXKuSudt-tdE-16mq0sIBeh9bBi6QrT0bf8lo3UBIFNaTvHD60z9cX5IMOg8L_ZZj7y9UBEkmSDjXdMSnIFDbFZHf89vLjg5CXo4YrvqCN9EKjFibUlmPlNsdbiSGCRYFqNXmUXAs8D9MF9vmwRiT3XWdPNG787a4xJv2Ncnvf2bI9Dl4Rwl16biYokSi938LfuvtzDPm8eAgPvZWQsvUXuNRPHORNVtrKW9GOYQbCJqlVPA%3D%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Register an account",
+              "data-testid": "header-sign-up-button"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=city&prompt=signin&state=UscBwUq-fhPs_KHNjBRBNwKbWWx_quxXKuSudt-tdE-16mq0sIBeh9bBi6QrT0bf8lo3UBIFNaTvHD60z9cX5IMOg8L_ZZj7y9UBEkmSDjXdMSnIFDbFZHf89vLjg5CXo4YrvqCN9EKjFibUlmPlNsdbiSGCRYFqNXmUXAs8D9MF9vmwRiT3XWdPNG787a4xJv2Ncnvf2bI9Dl4Rwl16biYokSi938LfuvtzDPm8eAgPvZWQsvUXuNRPHORNVtrKW9GOYQbCJqlVPA%3D%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Sign in",
+              "data-testid": "header-sign-in-button"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "combobox",
+            "text": "Where are you going?",
+            "attributes": {
+              "id": ":ri:",
+              "name": "ss",
+              "aria-label": "Where are you going?",
+              "placeholder": "Where are you going?",
+              "value": "New York"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "button",
+            "text": "Check-in date\n\u2014\nCheck-out date",
+            "attributes": {
+              "type": "button",
+              "data-testid": "searchbox-dates-container"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "Next month",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next month"
+            }
+          },
+          {
+            "id": "pw-179",
+            "role": "button",
+            "text": "Previous",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Previous"
+            }
+          },
+          {
+            "id": "pw-180",
+            "role": "button",
+            "text": "Next",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next"
+            }
+          },
+          {
+            "id": "pw-182",
+            "role": "button",
+            "text": "2 adults \u00b7 0 children \u00b7 1 room",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Number of travelers and rooms. Currently selected: 2 adults \u00b7 0 children \u00b7 1 room",
+              "data-testid": "occupancy-config"
+            }
+          },
+          {
+            "id": "pw-183",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-188",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-189",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/index.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-190",
+            "role": "link",
+            "text": "United States",
+            "attributes": {
+              "href": "https://www.booking.com/country/us.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-191",
+            "role": "link",
+            "text": "New York State (NY)",
+            "attributes": {
+              "href": "https://www.booking.com/region/us/new-york-state.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-192",
+            "role": "link",
+            "text": "Show hotels on map",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html"
+            }
+          },
+          {
+            "id": "pw-193",
+            "role": "link",
+            "text": "5 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-195",
+            "role": "link",
+            "text": "4 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-197",
+            "role": "link",
+            "text": "3 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-199",
+            "role": "link",
+            "text": "2 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-201",
+            "role": "link",
+            "text": "1 star",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-203",
+            "role": "link",
+            "text": "Wonderful: 9+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-205",
+            "role": "link",
+            "text": "Very Good: 8+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-207",
+            "role": "link",
+            "text": "Good: 7+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-209",
+            "role": "link",
+            "text": "Pleasant: 6+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-211",
+            "role": "button",
+            "text": "Our top picks",
+            "attributes": {}
+          },
+          {
+            "id": "pw-212",
+            "role": "button",
+            "text": "Lowest Price First",
+            "attributes": {}
+          },
+          {
+            "id": "pw-213",
+            "role": "button",
+            "text": "Star rating and price",
+            "attributes": {}
+          },
+          {
+            "id": "pw-214",
+            "role": "button",
+            "text": "Top reviewed",
+            "attributes": {}
+          },
+          {
+            "id": "pw-215",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-216",
+            "role": "link",
+            "text": "Hotel Indigo NYC Financial District by IHG\nHotel in Manhattan, New York",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/indigo-world-trade-center-nyc-an-ihg.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-219",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-220",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-221",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-222",
+            "role": "link",
+            "text": "The Wallace Hotel\nHotel in Upper West Side, New York",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/the-wallace-new-york.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-224",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-225",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-226",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-227",
+            "role": "link",
+            "text": "Hilton Club The Central at 5th New York\nHotel in Midtown East, New York",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/the-central-at-5th-by-hilton-club.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-230",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-231",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-232",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-233",
+            "role": "link",
+            "text": "Artezen Hotel\nHotel in Manhattan, New York",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/artezen.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-236",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-237",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "evaluate",
+        "args": {
+          "script": "(() => { const names = ['Hotel Indigo NYC Financial District by IHG','The Wallace Hotel','Hilton Club The Central at 5th New York','Artezen Hotel']; const text = document.body.innerText; return names.map(name => { const idx = text.indexOf(name); return {name, snippet: idx >= 0 ? text.slice(idx, idx + 2000) : null}; }); })()"
+        }
+      },
+      "observation": "Eval: [{\"name\": \"Hotel Indigo NYC Financial District by IHG\", \"snippet\": \"Hotel Indigo NYC Financial District by IHG\\nHotel in Manhattan, New York\\n\\nConveniently located in the Financial District district of New York, Hotel Indigo NYC Financial District by IHG is located a 5-minute walk from National September 11 Memorial & Museum, 0.4 miles from...\\n\\nShow more\\nScored out of 10, guest rating 9.0\\n9.0\\nWonderful - What previous guests thought, 2,025 reviews\\nWonderful\\n2,025 reviews\\nPrice from\\n$28"
+    },
+    {
+      "step": 11,
+      "state": {
+        "url": "https://www.booking.com/city/us/new-york.html",
+        "title": "10 Best New York Hotels, United States (From $109)",
+        "elements": [
+          {
+            "id": "pw-1",
+            "role": "link",
+            "text": "Skip to main content",
+            "attributes": {
+              "href": "#indexsearch"
+            }
+          },
+          {
+            "id": "pw-2",
+            "role": "link",
+            "text": "Booking.com",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "aria-label": "Booking.com",
+              "data-testid": "header-booking-logo"
+            }
+          },
+          {
+            "id": "pw-3",
+            "role": "button",
+            "text": "USD",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Prices in U.S. Dollar",
+              "data-testid": "header-currency-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-4",
+            "role": "button",
+            "text": "Language: English (US)",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Language: English (US)",
+              "data-testid": "header-language-picker-trigger"
+            }
+          },
+          {
+            "id": "pw-6",
+            "role": "link",
+            "text": "Customer support",
+            "attributes": {
+              "href": "https://secure.booking.com/help.html?source=header&src=profile_contact_cs",
+              "aria-label": "Customer support",
+              "data-testid": "header-help-center"
+            }
+          },
+          {
+            "id": "pw-7",
+            "role": "link",
+            "text": "List your property",
+            "attributes": {
+              "href": "https://join.booking.com/?utm_source=topbar",
+              "data-testid": "header-custom-action-button"
+            }
+          },
+          {
+            "id": "pw-8",
+            "role": "link",
+            "text": "Register",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=city&prompt=signin&state=UscBwUq-fhPs_KHNjBRBNwKbWWx_quxXKuSudt-tdE-16mq0sIBeh9bBi6QrT0bf8lo3UBIFNaTvHD60z9cX5IMOg8L_ZZj7y9UBEkmSDjXdMSnIFDbFZHf89vLjg5CXo4YrvqCN9EKjFibUlmPlNsdbiSGCRYFqNXmUXAs8D9MF9vmwRiT3XWdPNG787a4xJv2Ncnvf2bI9Dl4Rwl16biYokSi938LfuvtzDPm8eAgPvZWQsvUXuNRPHORNVtrKW9GOYQbCJqlVPA%3D%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Register an account",
+              "data-testid": "header-sign-up-button"
+            }
+          },
+          {
+            "id": "pw-9",
+            "role": "link",
+            "text": "Sign in",
+            "attributes": {
+              "href": "https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=city&prompt=signin&state=UscBwUq-fhPs_KHNjBRBNwKbWWx_quxXKuSudt-tdE-16mq0sIBeh9bBi6QrT0bf8lo3UBIFNaTvHD60z9cX5IMOg8L_ZZj7y9UBEkmSDjXdMSnIFDbFZHf89vLjg5CXo4YrvqCN9EKjFibUlmPlNsdbiSGCRYFqNXmUXAs8D9MF9vmwRiT3XWdPNG787a4xJv2Ncnvf2bI9Dl4Rwl16biYokSi938LfuvtzDPm8eAgPvZWQsvUXuNRPHORNVtrKW9GOYQbCJqlVPA%3D%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D",
+              "aria-label": "Sign in",
+              "data-testid": "header-sign-in-button"
+            }
+          },
+          {
+            "id": "pw-33",
+            "role": "combobox",
+            "text": "Where are you going?",
+            "attributes": {
+              "id": ":ri:",
+              "name": "ss",
+              "aria-label": "Where are you going?",
+              "placeholder": "Where are you going?",
+              "value": "New York"
+            }
+          },
+          {
+            "id": "pw-34",
+            "role": "button",
+            "text": null,
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-36",
+            "role": "button",
+            "text": "Check-in date\n\u2014\nCheck-out date",
+            "attributes": {
+              "type": "button",
+              "data-testid": "searchbox-dates-container"
+            }
+          },
+          {
+            "id": "pw-43",
+            "role": "button",
+            "text": "Next month",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next month"
+            }
+          },
+          {
+            "id": "pw-179",
+            "role": "button",
+            "text": "Previous",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Previous"
+            }
+          },
+          {
+            "id": "pw-180",
+            "role": "button",
+            "text": "Next",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Next"
+            }
+          },
+          {
+            "id": "pw-182",
+            "role": "button",
+            "text": "2 adults \u00b7 0 children \u00b7 1 room",
+            "attributes": {
+              "type": "button",
+              "aria-label": "Number of travelers and rooms. Currently selected: 2 adults \u00b7 0 children \u00b7 1 room",
+              "data-testid": "occupancy-config"
+            }
+          },
+          {
+            "id": "pw-183",
+            "role": "button",
+            "text": "Search",
+            "attributes": {
+              "type": "submit"
+            }
+          },
+          {
+            "id": "pw-188",
+            "role": "link",
+            "text": "Home",
+            "attributes": {
+              "href": "https://www.booking.com/index.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-189",
+            "role": "link",
+            "text": "Hotels",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/index.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-190",
+            "role": "link",
+            "text": "United States",
+            "attributes": {
+              "href": "https://www.booking.com/country/us.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-191",
+            "role": "link",
+            "text": "New York State (NY)",
+            "attributes": {
+              "href": "https://www.booking.com/region/us/new-york-state.html",
+              "data-testid": "breadcrumb-link"
+            }
+          },
+          {
+            "id": "pw-192",
+            "role": "link",
+            "text": "Show hotels on map",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html"
+            }
+          },
+          {
+            "id": "pw-193",
+            "role": "link",
+            "text": "5 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-195",
+            "role": "link",
+            "text": "4 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-197",
+            "role": "link",
+            "text": "3 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-199",
+            "role": "link",
+            "text": "2 stars",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-201",
+            "role": "link",
+            "text": "1 star",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-203",
+            "role": "link",
+            "text": "Wonderful: 9+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-205",
+            "role": "link",
+            "text": "Very Good: 8+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-207",
+            "role": "link",
+            "text": "Good: 7+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-209",
+            "role": "link",
+            "text": "Pleasant: 6+",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-211",
+            "role": "button",
+            "text": "Our top picks",
+            "attributes": {}
+          },
+          {
+            "id": "pw-212",
+            "role": "button",
+            "text": "Lowest Price First",
+            "attributes": {}
+          },
+          {
+            "id": "pw-213",
+            "role": "button",
+            "text": "Star rating and price",
+            "attributes": {}
+          },
+          {
+            "id": "pw-214",
+            "role": "button",
+            "text": "Top reviewed",
+            "attributes": {}
+          },
+          {
+            "id": "pw-215",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-216",
+            "role": "link",
+            "text": "Hotel Indigo NYC Financial District by IHG\nHotel in Manhattan, New York",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/indigo-world-trade-center-nyc-an-ihg.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-219",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-220",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-221",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-222",
+            "role": "link",
+            "text": "The Wallace Hotel\nHotel in Upper West Side, New York",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/the-wallace-new-york.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-224",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-225",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-226",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-227",
+            "role": "link",
+            "text": "Hilton Club The Central at 5th New York\nHotel in Midtown East, New York",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/the-central-at-5th-by-hilton-club.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-230",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-231",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          },
+          {
+            "id": "pw-232",
+            "role": "link",
+            "text": null,
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "imagelink"
+            }
+          },
+          {
+            "id": "pw-233",
+            "role": "link",
+            "text": "Artezen Hotel\nHotel in Manhattan, New York",
+            "attributes": {
+              "href": "https://www.booking.com/hotel/us/artezen.html",
+              "data-testid": "titleLink"
+            }
+          },
+          {
+            "id": "pw-236",
+            "role": "button",
+            "text": "Show more",
+            "attributes": {
+              "type": "button"
+            }
+          },
+          {
+            "id": "pw-237",
+            "role": "link",
+            "text": "Check availability",
+            "attributes": {
+              "href": "https://www.booking.com/searchresults.html",
+              "data-testid": "cta"
+            }
+          }
+        ]
+      },
+      "action": {
+        "action": "finish",
+        "args": {
+          "final_answer": "Hotel Indigo NYC Financial District by IHG in Manhattan, New York is rated 9.0 on Booking.com, which is 8.0 or higher."
+        }
+      },
+      "observation": "Finished"
+    }
+  ]
+}

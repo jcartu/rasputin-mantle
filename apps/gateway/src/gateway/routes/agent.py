@@ -21,7 +21,7 @@ router = APIRouter()
 AgentActionName = Literal["open", "click", "type", "evaluate", "finish"]
 EVALUATE_SCRIPT_MAX_CHARS = 4_000
 TYPE_TEXT_MAX_CHARS = 8_000
-VLLM_TIMEOUT = httpx.Timeout(timeout=60.0, connect=5.0, read=60.0, write=10.0, pool=5.0)
+VLLM_TIMEOUT = httpx.Timeout(timeout=120.0, connect=5.0, read=120.0, write=10.0, pool=5.0)
 BLOCKED_HOSTNAMES = {"localhost"}
 BLOCKED_EVALUATE_TOKENS = (
     "fetch(",
@@ -38,6 +38,8 @@ class AgentRunRequest(BaseModel):
     task: str = Field(min_length=1)
     starting_url: str = Field(min_length=1)
     max_steps: int = Field(default=10, ge=1, le=50)
+    headless: bool = False
+    planner: str | None = None  # e.g. "gpt-5.5" to use OpenAI instead of vLLM
 
 
 class AgentStep(BaseModel):
@@ -62,10 +64,10 @@ class AgentAction(BaseModel):
 
 @router.post("/run", response_model=AgentRunResponse)
 async def run_agent(request: AgentRunRequest) -> AgentRunResponse:
-    if not settings.vllm_base_url:
+    if not settings.vllm_base_url and not request.planner:
         raise HTTPException(
             status_code=500,
-            detail={"error": "vllm_not_configured", "message": "VLLM_BASE_URL is not set"},
+            detail={"error": "no_planner_configured", "message": "VLLM_BASE_URL is not set and no planner specified"},
         )
 
     starting_url = await _validated_http_url(request.starting_url)
@@ -85,7 +87,13 @@ async def run_agent(request: AgentRunRequest) -> AgentRunResponse:
                 for step_index in range(1, request.max_steps + 1):
                     state = _state_for_model(await browser._get_state())  # noqa: SLF001
                     await _validated_http_url(str(state.get("url") or ""))
-                    action = await _plan_next_action(client, task=request.task, state=state, previous_steps=steps)
+                    action = await _plan_next_action(
+                        client,
+                        task=request.task,
+                        state=state,
+                        previous_steps=steps,
+                        planner=request.planner,
+                    )
                     observation, finish_answer = await _execute_action(browser, action)
 
                     steps.append(
@@ -119,14 +127,22 @@ async def _plan_next_action(
     task: str,
     state: dict[str, Any],
     previous_steps: list[AgentStep],
+    planner: str | None = None,
 ) -> AgentAction:
     prompt = {
         "task": task,
         "state": state,
         "previous_steps": [
-            {"step": step.step, "action": step.action, "observation": step.observation} for step in previous_steps[-5:]
+            {"step": step.step, "action": step.action, "observation": step.observation}
+            for step in previous_steps[-5:]
         ],
     }
+    # Route to OpenAI when planner is specified (e.g. "gpt-5.5")
+    if planner:
+        return await _plan_openai(
+            client, task=task, state=state, previous_steps=previous_steps, planner=planner
+        )
+    # Default: vLLM
     try:
         response = await client.post(
             _chat_completions_url(settings.vllm_base_url),
@@ -161,6 +177,71 @@ async def _plan_next_action(
         raise HTTPException(
             status_code=502,
             detail={"error": "invalid_vllm_response", "message": "vLLM response did not include message content"},
+        ) from exc
+
+    return _parse_action(str(content))
+
+
+async def _plan_openai(
+    client: httpx.AsyncClient,
+    *,
+    task: str,
+    state: dict[str, Any],
+    previous_steps: list[AgentStep],
+    planner: str,
+) -> AgentAction:
+    if not settings.openai_api_key:
+        raise HTTPException(
+            status_code=500,
+            detail={"error": "openai_not_configured", "message": "OPENAI_API_KEY is not set"},
+        )
+    prompt = {
+        "task": task,
+        "state": state,
+        "previous_steps": [
+            {"step": step.step, "action": step.action, "observation": step.observation}
+            for step in previous_steps[-5:]
+        ],
+    }
+    try:
+        response = await client.post(
+            "https://api.openai.com/v1/chat/completions",
+            headers={
+                "Content-Type": "application/json",
+                "Authorization": f"Bearer {settings.openai_api_key}",
+            },
+            json={
+                "model": planner,
+                "temperature": 0,
+                "max_tokens": 4096,
+                "thinking": {"type": "enabled", "budget_tokens": 16384},
+                "messages": [
+                    {
+                        "role": "system",
+                        "content": (
+                            "You are a WebVoyager browser agent. Return exactly one JSON object with shape "
+                            '{"action":"open|click|type|evaluate|finish","args":{...}}. '
+                            "Use element ids from state.elements for click/type. "
+                            "For finish, put the answer in args.final_answer."
+                        ),
+                    },
+                    {"role": "user", "content": json.dumps(prompt, separators=(",", ":"))},
+                ],
+            },
+        )
+        response.raise_for_status()
+    except httpx.HTTPError as exc:
+        raise HTTPException(
+            status_code=502,
+            detail={"error": "openai_call_failed", "message": "OpenAI request failed"},
+        ) from exc
+
+    try:
+        content = response.json()["choices"][0]["message"]["content"]
+    except (KeyError, IndexError, TypeError) as exc:
+        raise HTTPException(
+            status_code=502,
+            detail={"error": "invalid_openai_response", "message": "OpenAI response did not include message content"},
         ) from exc
 
     return _parse_action(str(content))
@@ -232,10 +313,16 @@ def _parse_action(content: str) -> AgentAction:
     except json.JSONDecodeError as exc:
         raise HTTPException(
             status_code=502,
-            detail={"error": "invalid_action_json", "message": "vLLM did not return parseable action JSON"},
+            detail={"error": "invalid_action_json", "message": "Planner did not return parseable action JSON"},
         ) from exc
 
-    if not isinstance(action, dict) or action.get("action") not in {"open", "click", "type", "evaluate", "finish"}:
+    if not isinstance(action, dict) or action.get("action") not in {
+        "open",
+        "click",
+        "type",
+        "evaluate",
+        "finish",
+    }:
         raise HTTPException(
             status_code=502,
             detail={"error": "invalid_action", "message": "Action must be one of open, click, type, evaluate, finish"},
@@ -308,7 +395,9 @@ def _ensure_public_hostname(hostname: str, port: int | None) -> None:
             or ip.is_reserved
             or ip.is_unspecified
         ):
-            raise HTTPException(status_code=400, detail={"error": "blocked_url", "message": "URL host is not allowed"})
+            raise HTTPException(
+                status_code=400, detail={"error": "blocked_url", "message": "URL host is not allowed"}
+            )
 
 
 def _validate_evaluate_script(script: str) -> None:

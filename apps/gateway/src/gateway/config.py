@@ -21,6 +21,7 @@ class Settings:
     vllm_base_url: str = os.environ.get("VLLM_BASE_URL", "")
     vllm_model: str = os.environ.get("VLLM_MODEL", "qwen3.6-27b")
     vllm_api_key: str = os.environ.get("VLLM_API_KEY", "")
+    openai_api_key: str = os.environ.get("OPENAI_API_KEY", "")
 
 
 settings = Settings()

@@ -157,6 +157,91 @@ async def vllm_chat(
         "latency_ms": latency_ms,
     }
 
+async def openai_chat(
+    model: str,
+    messages: list[dict[str, Any]],
+    max_tokens: int,
+    *,
+    workspace_id: str | None = None,
+    api_key: str | None = None,
+    temperature: float | None = None,
+    thinking_enabled: bool = False,
+    thinking_budget_tokens: int | None = None,
+    timeout: httpx.Timeout | float | None = None,
+    transport: httpx.AsyncBaseTransport | None = None,
+) -> dict[str, Any]:
+    resolved_api_key = api_key or os.environ.get("OPENAI_API_KEY", "")
+    if not resolved_api_key:
+        raise ModelCallError("openai", "OPENAI_API_KEY is not set")
+
+    payload: dict[str, Any] = {
+        "model": model,
+        "messages": messages,
+        "max_tokens": max_tokens,
+    }
+    if temperature is not None:
+        payload["temperature"] = temperature
+    # Extended thinking (GPT-5.5+ models)
+    if thinking_enabled:
+        payload["thinking"] = {
+            "type": "enabled",
+            "budget_tokens": thinking_budget_tokens or 16384,
+        }
+
+    headers = {"content-type": "application/json"}
+    headers["Authorization"] = f"Bearer {resolved_api_key}"
+
+    started = time.perf_counter()
+    try:
+        async with httpx.AsyncClient(
+            timeout=timeout or DEFAULT_TIMEOUT,
+            transport=transport,
+        ) as client:
+            response = await client.post(
+                "https://api.openai.com/v1/chat/completions",
+                headers=headers,
+                json=payload,
+            )
+            response.raise_for_status()
+    except httpx.HTTPStatusError as exc:
+        latency_ms = _latency_ms(started)
+        _log_model_call(workspace_id, model, 0, 0, 0.0, latency_ms, "error")
+        raise ModelCallError(
+            "openai",
+            f"OpenAI request failed with HTTP {exc.response.status_code}: {_response_excerpt(exc.response)}",
+            status_code=exc.response.status_code,
+        ) from exc
+    except httpx.HTTPError as exc:
+        latency_ms = _latency_ms(started)
+        _log_model_call(workspace_id, model, 0, 0, 0.0, latency_ms, "error")
+        raise ModelCallError("openai", f"OpenAI request failed: {exc}") from exc
+
+    latency_ms = _latency_ms(started)
+    try:
+        data = response.json()
+        content = str(data["choices"][0]["message"]["content"])
+        usage = data.get("usage") or {}
+        input_tokens = int(usage.get("prompt_tokens") or usage.get("input_tokens") or 0)
+        output_tokens = int(usage.get("completion_tokens") or usage.get("output_tokens") or 0)
+    except (KeyError, IndexError, TypeError, ValueError) as exc:
+        _log_model_call(workspace_id, model, 0, 0, 0.0, latency_ms, "error")
+        raise ModelCallError(
+            "openai", "OpenAI response did not contain usable content and usage"
+        ) from exc
+
+    actual_model = str(data.get("model") or model)
+    cost_usd = _compute_cost(actual_model, input_tokens, output_tokens)
+    _log_model_call(workspace_id, actual_model, input_tokens, output_tokens, cost_usd, latency_ms, "ok")
+    return {
+        "model": actual_model,
+        "content": content,
+        "input_tokens": input_tokens,
+        "output_tokens": output_tokens,
+        "cost_usd": cost_usd,
+        "latency_ms": latency_ms,
+    }
+
+
 
 def _anthropic_content(data: dict[str, Any]) -> str:
     parts = data["content"]

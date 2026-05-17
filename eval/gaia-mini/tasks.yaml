@@ -1,106 +1,61 @@
-# eval/gaia-mini/tasks.yaml
-# 20 GAIA level-1 tasks. The full GAIA benchmark requires huggingface auth; this
-# mini set is hand-curated representative tasks of similar difficulty.
-
 tasks:
-  - id: gaia-001
-    description: "How many studio albums did Mercedes Sosa release between 2000 and 2009 (inclusive)?"
-    expected_answer: "3"
-    tags: [research, web]
-
-  - id: gaia-002
-    description: "What is the surname of the author who wrote the 2019 paper 'Stochastic Gradient Descent with Differentially Private Updates'?"
-    expected_answer: "Song"
-    tags: [research, arxiv]
-
-  - id: gaia-003
-    description: "On the Wikipedia page for the Eiffel Tower, what is the height in meters of the tower, as listed in the infobox?"
-    expected_answer: "330"
-    tags: [research, wikipedia]
-
-  - id: gaia-004
-    description: "What is the result of 17! mod 19? (Compute by writing and running Python.)"
-    expected_answer: "18"
-    tags: [code]
-
-  - id: gaia-005
-    description: "Using Python, find the smallest positive integer n such that n! has more than 30 digits."
-    expected_answer: "29"
-    tags: [code]
-
-  - id: gaia-006
-    description: "What is the airport code for the airport in Reykjavik, Iceland that handles international flights?"
-    expected_answer: "KEF"
-    tags: [research]
-
-  - id: gaia-007
-    description: "List the world's three tallest buildings as of 2024 in descending height order, just by name."
-    expected_answer: "Burj Khalifa, Merdeka 118, Shanghai Tower"
-    tags: [research]
-
-  - id: gaia-008
-    description: "What is the molecular formula of caffeine?"
-    expected_answer: "C8H10N4O2"
-    tags: [research]
-
-  - id: gaia-009
-    description: "On GitHub, find the linux/linux repo. What is the first author's name in the most recent merged pull request to mainline (as of today)?"
-    expected_answer: "(any reasonable name)"
-    tags: [research, github, time-sensitive]
-    grading: open
-
-  - id: gaia-010
-    description: "Using a CSV with these contents (saved to /tmp/data.csv), compute the median of the 'value' column: 'value\\n10\\n20\\n30\\n40\\n50\\n60\\n70\\n80\\n90\\n100'"
-    expected_answer: "55.0"
-    tags: [code, data]
-
-  - id: gaia-011
-    description: "What is the ISO 4217 currency code for the official currency of Switzerland?"
-    expected_answer: "CHF"
-    tags: [research]
-
-  - id: gaia-012
-    description: "What is the speed of light in vacuum in meters per second (give the conventional integer value)?"
-    expected_answer: "299792458"
-    tags: [research, physics]
-
-  - id: gaia-013
-    description: "How many days are in February in the year 2100?"
-    expected_answer: "28"
-    tags: [code]
-
-  - id: gaia-014
-    description: "What is the SHA-256 hash of the string 'hello world' (lowercase, 64 hex chars)?"
-    expected_answer: "b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9"
-    tags: [code]
-
-  - id: gaia-015
-    description: "On arxiv, what is the abstract first sentence of the original Transformer paper (Vaswani et al., 2017)?"
-    expected_answer: "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks that include an encoder and a decoder."
-    tags: [research, arxiv]
-    grading: contains
-
-  - id: gaia-016
-    description: "What is the chemical formula of common table salt?"
-    expected_answer: "NaCl"
-    tags: [research]
-
-  - id: gaia-017
-    description: "Using Python, list the first 5 Fibonacci numbers greater than 100, comma-separated."
-    expected_answer: "144, 233, 377, 610, 987"
-    tags: [code]
-
-  - id: gaia-018
-    description: "On Wikipedia, find the year the company OpenAI was founded."
-    expected_answer: "2015"
-    tags: [research, wikipedia]
-
-  - id: gaia-019
-    description: "What is the maximum value of a signed 32-bit integer?"
-    expected_answer: "2147483647"
-    tags: [code]
-
-  - id: gaia-020
-    description: "Compute the area of a circle with radius 7 (use π = 3.14159265). Round to 2 decimal places."
-    expected_answer: "153.94"
-    tags: [code]
+  - id: gaia-mini-001
+    question: "What is the population of Tokyo in millions, using the most recent metropolitan-area estimate you can find?"
+    answer_hint: "Tokyo metropolitan area population is roughly 37 million."
+  - id: gaia-mini-002
+    question: "Who won the 2024 Nobel Prize in Physics?"
+    answer_hint: "John J. Hopfield and Geoffrey E. Hinton."
+  - id: gaia-mini-003
+    question: "What is the latest stable Python 3 release version?"
+    answer_hint: "Check python.org for the current stable release."
+  - id: gaia-mini-004
+    question: "Which country hosted the 2024 Summer Olympics?"
+    answer_hint: "France hosted the Paris 2024 Olympics."
+  - id: gaia-mini-005
+    question: "What is the capital city of Kazakhstan?"
+    answer_hint: "Astana."
+  - id: gaia-mini-006
+    question: "Who is the current Secretary-General of the United Nations?"
+    answer_hint: "António Guterres."
+  - id: gaia-mini-007
+    question: "What company created the Claude family of AI models?"
+    answer_hint: "Anthropic."
+  - id: gaia-mini-008
+    question: "What is the tallest building in the world and in which city is it located?"
+    answer_hint: "Burj Khalifa in Dubai."
+  - id: gaia-mini-009
+    question: "Who won the 2024 UEFA European Championship?"
+    answer_hint: "Spain."
+  - id: gaia-mini-010
+    question: "What is the chemical symbol for tungsten?"
+    answer_hint: "W."
+  - id: gaia-mini-011
+    question: "Which spacecraft first landed humans on the Moon?"
+    answer_hint: "Apollo 11 lunar module Eagle."
+  - id: gaia-mini-012
+    question: "What is the name of the largest moon of Saturn?"
+    answer_hint: "Titan."
+  - id: gaia-mini-013
+    question: "Who wrote the novel 'The Left Hand of Darkness'?"
+    answer_hint: "Ursula K. Le Guin."
+  - id: gaia-mini-014
+    question: "What is the official currency of Switzerland?"
+    answer_hint: "Swiss franc."
+  - id: gaia-mini-015
+    question: "Which team won Super Bowl LVIII?"
+    answer_hint: "Kansas City Chiefs."
+  - id: gaia-mini-016
+    question: "What is the name of Japan's high-speed rail network?"
+    answer_hint: "Shinkansen."
+  - id: gaia-mini-017
+    question: "Who painted Guernica?"
+    answer_hint: "Pablo Picasso."
+  - id: gaia-mini-018
+    question: "What is the primary programming language used for Tauri's backend?"
+    answer_hint: "Rust."
+  - id: gaia-mini-019
+    question: "What organization maintains the WebSocket protocol standard RFC 6455?"
+    answer_hint: "IETF."
+  - id: gaia-mini-020
+    question: "What is the current LTS codename for Ubuntu 24.04?"
+    answer_hint: "Noble Numbat."

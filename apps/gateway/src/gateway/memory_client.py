@@ -17,8 +17,6 @@ class MemoryClient:
         self.memory_url = memory_url if memory_url is not None else os.environ.get("RASPUTIN_MEMORY_URL", "").strip()
         self.token = token if token is not None else os.environ.get("RASPUTIN_TOKEN", "").strip()
         self.timeout = timeout
-        self.memory_url = memory_url if memory_url is not None else os.environ.get("RASPUTIN_MEMORY_URL", "").strip()
-        self.timeout = timeout
 
     def _fallback(self, reason: str) -> None:
         if not MemoryClient._logged_fallback:
@@ -94,7 +92,6 @@ class MemoryClient:
             self._fallback("RASPUTIN_MEMORY_URL is not set")
 
         return {"backend": "local_stub", "count": len(MemoryClient._stub_store)}
-        return {"backend": "local_stub", "count": len(MemoryClient._stub_store)}
 
     async def reflect(self, query: str, k: int = 5) -> dict[str, Any]:
         if self.memory_url:
@@ -112,7 +109,5 @@ class MemoryClient:
         else:
             self._fallback("RASPUTIN_MEMORY_URL is not set")
 
-        results = await self.query(query, k=k)
-        return {"reflection": results.get("results", []), "backend": results.get("backend", "local_stub")}
         results = await self.query(query, k=k)
         return {"reflection": results.get("results", []), "backend": results.get("backend", "local_stub")}

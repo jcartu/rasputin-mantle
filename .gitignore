@@ -40,3 +40,4 @@ promptfoo/
 # Docker
 .docker/
 promptfoo-errors.log
+src-tauri/target/

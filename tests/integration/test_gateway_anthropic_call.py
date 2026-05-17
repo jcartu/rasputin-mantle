@@ -12,7 +12,7 @@ async def test_real_anthropic_call_returns_usage() -> None:
         pytest.skip("ANTHROPIC_API_KEY is not set")
 
     result = await anthropic_chat(
-        os.environ.get("ANTHROPIC_MODEL", "claude-3-5-sonnet"),
+        os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-4-5"),
         [{"role": "user", "content": "Reply with exactly: mantle-ok"}],
         16,
         workspace_id="integration-anthropic",

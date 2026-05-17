@@ -1,9 +1,0 @@
-[Desktop Entry]
-Categories=Office;
-Comment=Rasputin Mantle desktop shell
-Exec=rasputin-mantle-desktop
-StartupWMClass=rasputin-mantle-desktop
-Icon=rasputin-mantle-desktop
-Name=Rasputin Mantle
-Terminal=false
-Type=Application

@@ -1,0 +1,167 @@
+────────────────────────────────────────────────────────────────────────────────
+ RASPUTIN MANTLE v1.1 — BUILD KICKOFF
+ Paste this entire message into your OpenCode chat (Sisyphus default agent).
+ Same loop, same agents, same audit discipline — six new phases.
+────────────────────────────────────────────────────────────────────────────────
+
+ultrawork: Ship Rasputin Mantle v1.1.
+
+The audit of v1.0 found:
+  - SSE stream is heartbeat-only with malformed newlines (apps/gateway/.../routes/sessions.py:100). The May 2026 audit flagged this exact bug at the exact same location; v1.0 never fixed it. This blocks the Live Computer View from showing anything.
+  - Voice "verified live" claim has no CI test — only a mocked round-trip and a one-off latency benchmark.
+  - audit-log/ never got created; planning/ only has R0/iter-0; state.json is stale legacy v2 format. Process drift.
+  - WebVoyager-100 = 63% with GPT-5.5. Manus claims ~67%. We want significantly better.
+
+v1.1 fixes the audit findings, then drives WebVoyager performance to ≥ 75% (stretch: 80%) on a tripled task set with rigorous failure categorization. No cheating: no memoized answers, no hardcoded patterns, no lowered grading, no easier task set. We expand the benchmark, not contract it.
+
+You drive the same audit loop as v1.0: plan → execute in parallel → make verify-phase → @mantle-auditor → PERFECT or PUNCH_LIST → loop. Six new phases S1 through S6. Same four subagents (mantle-planner, mantle-executor, mantle-frontend, mantle-auditor) — already installed in .opencode/agents/. The auditor prompt has been sharpened with the specific patterns v1.0 missed (literal-\n in SSE, heartbeat-only event streams, MockTransport in integration tests, backfilled metrics).
+
+Before anything else, read in order:
+
+  docs/V1_1_BUILD_PLAN.md             ← strategy, goals, anti-cheating policy
+  docs/FAILURE_CATEGORIES.md          ← taxonomy for the 37 WebVoyager failures
+  protocol/phases/phase-S1.yaml       ← first phase rubric
+  .opencode/skills/mantle-build/SKILL.md   ← the loop contract (unchanged)
+  protocol/prompts/auditor-strict.md  ← UPDATED — read the new patterns at the top
+
+Then tell me:
+  - Whether the existing four agents need any prompt updates for v1.1 (probably not, but check)
+  - How many tickets you expect for S1, and your ETA
+  - Confirm the WebVoyager-100 baseline (re-read outputs/multi-model/gpt-5-5.json — 63/100 should be the number to beat)
+
+Then start S1.
+
+═══════════════════════════════════════════════════════════════════════════════
+PHASES IN ORDER
+═══════════════════════════════════════════════════════════════════════════════
+
+  S1 — Fix v1.0 audit findings (~4h)
+       SSE real newlines + real event source. Live-path voice CI test.
+       Retrofit audit-log/. Clean state.json. Gate: existing tests + new ones green.
+
+  S2 — Diagnose WebVoyager failures (~1 day)
+       Re-run the 100 with GPT-5.5. For every failure, classify into one of:
+         DOM_FLAKY, LOGIN_WALL, CAPTCHA, TIME_SENSITIVE, VLM_NEEDED,
+         MULTI_HOP_LOST, ANSWER_MALFORMED, TOOL_BROKEN, JUDGE_HARSH
+       Write outputs/v1_1/failure-taxonomy.json + a per-category report.
+       This phase ships ZERO eval delta — it's the diagnostic that drives S3-S5.
+
+  S3 — Browser tool hardening (~1-2 days)
+       Address DOM_FLAKY + TOOL_BROKEN + MULTI_HOP_LOST.
+       Real waitForLoadState. Multi-strategy element selectors (text → role → aria → xpath).
+       Auto-retry on element-not-found with backoff. Screenshot on every step.
+       Stable session persistence across navigation.
+       Gate: WebVoyager-100 retest ≥ 70% (≥ 7 point gain over baseline).
+
+  S4 — Vision fallback (~1-2 days)
+       Address VLM_NEEDED. When DOM extraction returns empty or low-confidence,
+       capture screenshot and route to Claude Sonnet 4.6 vision for element finding.
+       Hybrid mode: DOM first (cheap), vision fallback (expensive but reliable).
+       Gate: WebVoyager-100 retest ≥ 73%.
+
+  S5 — Self-correction loop (~1 day)
+       Address MULTI_HOP_LOST + ANSWER_MALFORMED.
+       After every 3 tool calls, agent self-evaluates: "am I closer to the goal?"
+       On 'no' twice in a row: rethink approach, try different path.
+       Better answer-extraction prompts that match WebVoyager's grading style.
+       Gate: WebVoyager-100 retest ≥ 75%.
+
+  S6 — Final eval + release (~1 day)
+       Run the FULL WebVoyager-300 (100 original + 100 from official test set + 100
+       in-house validation across the failure categories from S2). Compute per-category
+       pass rates. Per-planner pass rates (GPT-5.5, Opus 4.7, Sonnet 4.6, Kimi K2.6).
+       Write MANTLE_V1_1_RELEASED.md with honest gaps and reproduction recipe.
+       Gate: WebVoyager-300 ≥ 75% with the best planner.
+       Stretch: ≥ 80%.
+
+═══════════════════════════════════════════════════════════════════════════════
+ANTI-CHEATING POLICY (READ THIS, IT MATTERS)
+═══════════════════════════════════════════════════════════════════════════════
+
+The point of v1.1 is REAL improvement. The auditor will reject any of the following:
+
+  - Memoizing answers from previous runs and replaying them
+  - Hardcoding patterns that match WebVoyager-specific expected_answer formats
+  - Skipping tasks because they're "hard" (mark them attempted-failed, don't remove)
+  - Lowering the success criterion or grading threshold to ease passing
+  - Pre-fetching answers from any external answer key
+  - Using a different/easier task set and calling it WebVoyager-100
+  - Using a more lenient judge model (e.g., switching from Sonnet to Haiku for grading)
+  - Hand-tuning the agent's responses to known WebVoyager tasks
+  - Running tasks multiple times and reporting only the best run
+  - Inflating pass rate by mass-classifying borderline answers as PASS
+
+ALLOWED (and encouraged):
+  - Better browser primitives (waits, retries, multi-strategy selectors)
+  - Vision-language model fallback when DOM is opaque
+  - Self-correction loops where the agent re-evaluates its strategy
+  - Better prompting for the planner (general — not task-specific)
+  - Multiple parallel attempts where the final answer is voted (not best-of-N)
+  - Expanding the test set with more tasks (not contracting)
+  - Using stronger general-purpose models as they become available
+
+The auditor checks for these patterns at S6 audit time. If any are found, S6 fails and we re-do whatever phase introduced them.
+
+═══════════════════════════════════════════════════════════════════════════════
+THE AUDITOR HAS BEEN SHARPENED
+═══════════════════════════════════════════════════════════════════════════════
+
+protocol/prompts/auditor-strict.md now flags these patterns the v1.0 auditor missed:
+
+  17. Literal \n in f-strings yielding SSE — yield f"event: ...\\ndata: ..." (will
+      output literal backslash-n, not real newlines, breaking SSE clients).
+  18. Heartbeat-only event generators — while True: yield {static}; sleep(N) with
+      no connection to a real event source.
+  19. MockTransport in integration tests — httpx.MockTransport under tests/integration/
+      means the test isn't testing integration.
+  20. Backfilled metrics — eval output file mtime > the phase's git tag commit time.
+  21. Stale state files — state.json or similar that hasn't been written since boot.
+  22. "Verified live" prose without live-path CI coverage — release docs claim a
+      service works but no automated test exercises the live path.
+
+Pattern 17 specifically is the v1.0 SSE bug. The auditor will catch it in S1.
+
+═══════════════════════════════════════════════════════════════════════════════
+COMMIT MESSAGE FORMAT (same as v1.0, just bump the prefix)
+═══════════════════════════════════════════════════════════════════════════════
+
+  s1.iter1: gateway/routes/sessions.py — replace heartbeat-only SSE with real broker
+
+  Goal: replace event_generator with a real asyncio.Queue subscription per session.
+        Fix the literal-\n in the yield to use real newlines. Test verifies SSE
+        client receives at least 2 distinct event types within 5s of an action.
+  Ticket: planning/phase-S1/iter-1/001-sse-real-broker.md
+  Verify: PYTHONPATH=... pytest apps/gateway/tests/test_sse_stream_real.py -q  ✓
+  Audit:  pending
+
+  🤖 mantle-executor via Sisyphus
+
+═══════════════════════════════════════════════════════════════════════════════
+STATUS LINE FORMAT (same as v1.0, with WebVoyager% when applicable)
+═══════════════════════════════════════════════════════════════════════════════
+
+After every ticket:
+  [N/M] <slug> — <green|red|cancelled> · avg <Xm>/ticket · phase ETA <YYhZm> · spend $<Z.ZZ>/$<budget>
+
+After every WebVoyager re-run (S3, S4, S5, S6):
+  📊 WebVoyager-100 (<planner>): <P>/100 = <P>% · Δ from baseline (63%): <+/-N> points
+  📊 Per-category: DOM_FLAKY x/y, VLM_NEEDED x/y, MULTI_HOP_LOST x/y, ... 
+
+═══════════════════════════════════════════════════════════════════════════════
+HARD RULES (unchanged from v1.0 + one new)
+═══════════════════════════════════════════════════════════════════════════════
+
+1. Never edit the verifier (Makefile, protocol/phases/*.yaml, verify-phase.sh, banned-phrases.txt) to make red green.
+2. Never add --no-sandbox to any browser invocation.
+3. Never import anthropic or openai outside apps/gateway/src/gateway/model_client.py.
+4. Never write tests asserting status_code == 503 for services this phase makes live.
+5. Never use asyncio.sleep + static yield in an event generator.
+6. Never raise MAX_AUDIT_ITERATIONS to skip past BLOCKED.
+7. NEW: Never make WebVoyager improvements that match the anti-cheating list above.
+   If you're not sure whether something counts as cheating, ask before implementing.
+
+═══════════════════════════════════════════════════════════════════════════════
+START NOW
+═══════════════════════════════════════════════════════════════════════════════
+
+Read the docs in the order above, then begin S1. Talk to me throughout. Push commits to GitHub every 3 commits and after each phase audit-PERFECT. Show me every TodoWrite update, every delegate_task, every audit verdict. Aim for 80% on WebVoyager-300 — but without cheating, ever. If 75% is the honest ceiling, that's the answer.

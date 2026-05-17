@@ -1,0 +1,10 @@
+{
+  "phase": "R6",
+  "iteration": 0,
+  "tag": "phase-R6-shipped",
+  "commit": "72481ba",
+  "timestamp": "2026-05-17T09:42:41+03:00",
+  "verdict": "PERFECT",
+  "summary": "R6 shipped Voice + MCP + Desktop + Release. Note: v1.0 post-release audit found SSE bug (literal \\n) and MockTransport in integration tests — these are retrofitted in S1.",
+  "items": []
+}

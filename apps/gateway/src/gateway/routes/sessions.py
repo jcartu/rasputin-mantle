@@ -11,7 +11,7 @@ from sandbox.backend import create_backend
 from shared.schemas import ExecRequestSchema, ExecResultSchema, SessionInfoSchema, StreamEventSchema
 from shared.types import ExecResult, SessionInfo, SessionStatus
 
-from gateway.sessions import SessionStore
+from gateway.sessions import SessionStore, broker
 
 router = APIRouter()
 store = SessionStore()
@@ -60,6 +60,14 @@ async def exec_code_route(session_id: str, request: ExecRequestSchema) -> ExecRe
     try:
         backend = create_backend()
         result = backend.exec_code(session.sandbox_id, request.code)
+        broker.publish(
+            session_id,
+            StreamEventSchema(
+                event_type='token',
+                data={'stdout': result.stdout[:1024], 'exit_code': result.exit_code},
+                timestamp=time.time(),
+            ),
+        )
     except TimeoutError as exc:
         store.update_status(session_id, SessionStatus.ERROR)
         raise HTTPException(
@@ -94,11 +102,19 @@ async def stream_session(session_id: str) -> StreamingResponse:
     if store.get(session_id) is None:
         raise HTTPException(status_code=404, detail={'error': 'session_not_found', 'message': 'Session not found'})
 
+    queue = broker.get_queue(session_id)
+
     async def event_generator():  # type: ignore[no-untyped-def]
-        while True:
-            event = StreamEventSchema(event_type='heartbeat', data={'type': 'heartbeat'}, timestamp=time.time())
-            yield f"event: {event.event_type}\\ndata: {json.dumps(event.model_dump(), separators=(',', ':'))}\\n\\n"
-            await asyncio.sleep(30)
+        try:
+            while True:
+                try:
+                    event = await asyncio.wait_for(queue.get(), timeout=30.0)
+                    line = f"event: {event.event_type}\ndata: {json.dumps(event.model_dump(), separators=(',', ':'))}\n\n"
+                    yield line
+                except asyncio.TimeoutError:
+                    yield f"event: heartbeat\ndata: {{}}\n\n"
+        except asyncio.CancelledError:
+            pass
 
     return StreamingResponse(
         event_generator(),

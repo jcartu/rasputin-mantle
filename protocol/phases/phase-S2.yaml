@@ -1,0 +1,63 @@
+name: "S2 — Classify WebVoyager failures"
+phase: S2
+description: |
+  Run WebVoyager-100 once more with GPT-5.5 to capture full traces (DOM snapshots,
+  screenshots, step logs) for every task. Then classify each of the 37 failures
+  using the taxonomy in docs/FAILURE_CATEGORIES.md.
+
+  This phase ships ZERO eval delta. Its only product is a categorized failure list
+  that drives S3-S5's fix priorities. If we skip this and start fixing things by
+  intuition, we end up fixing the wrong things.
+
+  Steps the planner should produce as tickets:
+
+  1. Add tracing instrumentation to eval/webvoyager-100/runner.py. For each step the
+     agent takes, capture: tool called, args, return value, step duration, page URL,
+     screenshot (PNG), DOM snapshot (truncated to 50KB). Write per-task traces to
+     outputs/v1_1/traces/wv-<id>.json.
+
+  2. Re-run WebVoyager-100 with GPT-5.5 planner, traces ON. Confirm pass_rate is
+     within ±3 points of the v1.0 baseline (63%). If it's lower, the trace overhead
+     is breaking things — fix that before continuing.
+
+  3. Build scripts/categorize-failures.py. For each failed task, send Sonnet 4.6
+     the task description, expected answer, agent answer, and the trace summary
+     (last 5 steps + the final answer). Sonnet returns one of the categories from
+     FAILURE_CATEGORIES.md plus a one-sentence evidence string.
+
+  4. Run the categorizer on all 37 failures. Write outputs/v1_1/failure-taxonomy.json
+     in the shape specified in FAILURE_CATEGORIES.md.
+
+  5. Generate docs/V1_1_FAILURE_REPORT.md from the taxonomy: counts per category,
+     5 representative examples per category, recommendations for which S phases
+     address which failures.
+
+packages_required:
+  - eval/webvoyager-100
+  - scripts
+
+artifacts:
+  - PHASE_S2_DONE.md
+  - outputs/v1_1/traces/                                 # directory with per-task traces
+  - outputs/v1_1/failure-taxonomy.json                   # the categorized failure list
+  - docs/V1_1_FAILURE_REPORT.md                          # human-readable summary
+  - scripts/categorize-failures.py
+
+integration_tests:
+  - tests/integration/test_webvoyager_trace_format.py    # confirms trace files have the expected shape
+
+eval_suites:
+  - name: webvoyager-100-gpt5-5-retrace
+    command: "MANTLE_GATEWAY_URL=$MANTLE_GATEWAY_URL uv run python eval/webvoyager-100/runner.py --planner gpt-5.5 --traces --output outputs/v1_1/webvoyager-100-baseline.json"
+    output_file: outputs/v1_1/webvoyager-100-baseline.json
+    minimum_pass_rate: 0.60                              # within range of v1.0 baseline; if traces break things, this catches it
+
+forbidden_patterns:
+  - "MockTransport"                                      # the trace must come from real runs
+  - "expected_answer.*hardcode"                          # no shortcuts on the categorization
+
+ship_criteria_human_readable: |
+  - Re-run pass_rate within ±3 points of v1.0 baseline (60-66% acceptable).
+  - All 37 failures classified into the taxonomy categories (or UNCLASSIFIED if a new category is needed).
+  - Each failure has a one-sentence evidence string pointing at trace data.
+  - failure-taxonomy.json is committed; report doc written.

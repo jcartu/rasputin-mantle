@@ -1,0 +1,66 @@
+name: "S1 — Fix v1.0 audit findings"
+phase: S1
+description: |
+  Fix every blocker and warning from the v1.0 audit. Establish process discipline
+  (audit-log/ retrofit, planning/ convention going forward) that v1.0 dropped.
+
+  Concrete blockers (each becomes a ticket):
+
+  1. SSE stream at apps/gateway/src/gateway/routes/sessions.py:100 is heartbeat-only
+     with literal `\n` characters. Replace with a real asyncio.Queue-backed event
+     broker per session, and use single-backslash `\n` so SSE clients parse correctly.
+     Test: pytest verifies that after creating a session and posting an action, the
+     SSE stream emits at least one event of type != "heartbeat" within 5 seconds.
+
+  2. Voice routes (/api/voice/transcribe, /api/voice/synthesize) only have
+     _when_unavailable (503) tests. Add _when_available tests that hit the live
+     Faster-Whisper and Kokoro services via docker compose. Use pytest.mark.skipif
+     keyed on WHISPER_URL/KOKORO_URL env vars being set AND the services responding
+     to /health. CI doesn't have to run them; manual runs and the integration env do.
+
+  3. Retrofit audit-log/. Walk git log from phase-R0-shipped to mantle-v1-released.
+     For each phase tag, extract the commit message body (which contains the
+     PERFECT/PUNCH_LIST verdict). Write outputs to audit-log/phase-RN-iter-N.json
+     in the standard verdict shape. Commit the directory.
+
+  4. Clean state.json. The current state.json is in the legacy Python orchestrator
+     format from R0 boot and hasn't been touched since. Either remove it (boulder.json
+     is the real state) or restructure to the current shape with mtime=now.
+
+  5. Update protocol/prompts/auditor-strict.md to the v1.1 version that includes
+     patterns 17-23 (SSE \\n, heartbeat-only, MockTransport, backfilled, stale state,
+     verified-live-without-CI, anti-cheating). Add docs/NO_CHEATING_POLICY.md.
+
+packages_required:
+  - apps/gateway
+  - packages/voice
+
+artifacts:
+  - PHASE_S1_DONE.md
+  - audit-log/  # directory must exist and contain at least 7 verdict files (R0-R6)
+  - docs/NO_CHEATING_POLICY.md
+  - docs/V1_1_BUILD_PLAN.md
+  - docs/FAILURE_CATEGORIES.md
+
+integration_tests:
+  - tests/integration/test_sse_real_events.py            # confirms SSE delivers real events
+  - tests/integration/test_voice_live_path.py            # confirms voice works against running services
+
+eval_suites:
+  - name: codeact-contract
+    command: "make eval-codeact"
+    output_file: outputs/codeact-eval.json
+    minimum_pass_rate: 0.80
+
+forbidden_patterns:
+  - "\\\\\\\\n.*event:"                                  # literal \n in SSE yields
+  - "while True:.*yield.*sleep"                          # heartbeat-only event loops
+  - "MockTransport"                                      # any path under tests/integration/
+
+ship_criteria_human_readable: |
+  - SSE stream emits real events from a real broker; no literal `\n` in yield strings.
+  - Live-path voice tests added; gated on services being up.
+  - audit-log/ contains R0-R6 retrofitted verdicts.
+  - state.json removed or fresh.
+  - Auditor prompt updated; NO_CHEATING_POLICY.md committed.
+  - All existing tests still green; new tests for SSE and voice live-path green.

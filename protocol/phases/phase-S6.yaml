@@ -1,0 +1,98 @@
+name: "S6 — Final eval and v1.1 release"
+phase: S6
+description: |
+  Run the full WebVoyager-300 across multiple planners. Generate the v1.1 release
+  report. Tag mantle-v1.1-released.
+
+  WebVoyager-300 composition (NO contraction allowed; we only expand):
+    - 100 tasks: the original tasks.yaml unchanged from R6-shipped
+    - 100 tasks: the official WebVoyager test set's next 100 (sourced from the
+      WebVoyager benchmark repo; specific commit pinned in tasks-300.yaml)
+    - 100 tasks: in-house validation set built to stress the failure categories
+      from S2 (heavy SPAs, multi-hop, formatted answers, etc.) — these are
+      explicitly LABELED as in-house in the published results so anyone can audit
+
+  Concrete tickets:
+
+  1. Build eval/webvoyager-300/tasks.yaml. Source: original 100 from
+     eval/webvoyager-100/tasks.yaml (frozen — no edits), 100 from the official
+     WebVoyager test set (commit hash pinned), 100 in-house validation across
+     categories. Each task labeled by source.
+
+  2. Build eval/webvoyager-300/runner.py. Same harness as WebVoyager-100 but
+     runs the 300-task set, with --planner option for multi-planner runs.
+
+  3. Run WebVoyager-300 with GPT-5.5, Opus 4.7, Sonnet 4.6, Kimi K2.6. Each
+     gets its own outputs file. Per-planner pass rates published side-by-side.
+
+  4. Compute per-category pass rates from the S2 taxonomy categories. Each task
+     in the 100-original gets its category from the S2 taxonomy. New tasks get
+     categorized at first run (sonnet judge labels the failure category if any).
+
+  5. Anti-cheating audit. S6 auditor specifically runs the checks from
+     NO_CHEATING_POLICY.md:
+       - grep for task_id==wv- in agent code
+       - confirm eval/webvoyager-100/tasks.yaml unchanged from R6-shipped
+       - confirm judge model is Sonnet 4.6 or stronger (not downgraded)
+       - confirm no best-of-N reporting in runner.py
+       - confirm no memoization in any cache layer
+     If any violation, S6 fails.
+
+  6. Write MANTLE_V1_1_RELEASED.md. Sections:
+       - Headline pass rates (per planner, per task set, per category)
+       - Cost summary (Anthropic + vision, broken down by phase)
+       - What changed since v1.0 (S1-S5 summary)
+       - Honest failure analysis (which categories couldn't be reached, why)
+       - Reproduction recipe
+       - Dependency delta vs v1.0
+       - Known limitations and v1.2 candidates
+
+  7. Tag mantle-v1.1-released. Push tag.
+
+packages_required:
+  - eval/webvoyager-300                                  # the new harness
+  - eval/webvoyager-100                                  # the original, untouched
+
+artifacts:
+  - PHASE_S6_DONE.md
+  - MANTLE_V1_1_RELEASED.md
+  - eval/webvoyager-300/tasks.yaml
+  - eval/webvoyager-300/runner.py
+  - outputs/v1_1/webvoyager-300-gpt-5-5.json
+  - outputs/v1_1/webvoyager-300-opus-4-7.json
+  - outputs/v1_1/webvoyager-300-sonnet-4-6.json
+  - outputs/v1_1/webvoyager-300-kimi-k2-6.json
+  - outputs/v1_1/per-category-final.json
+  - outputs/v1_1/per-task-set-final.json
+
+integration_tests:
+  - tests/integration/test_webvoyager_300_runner.py      # smoke test of the harness
+  - tests/integration/test_no_cheating_audit.py          # runs the grep checks programmatically
+
+eval_suites:
+  - name: webvoyager-300-best
+    # We publish per-planner; "best" is the highest single-planner pass rate.
+    # This must be ≥ 0.75 — NOT a per-task oracle aggregation.
+    command: "uv run python eval/webvoyager-300/runner.py --best-of-published --output outputs/v1_1/webvoyager-300-best.json"
+    output_file: outputs/v1_1/webvoyager-300-best.json
+    minimum_pass_rate: 0.75
+
+forbidden_patterns:
+  - "task_id\\s*==\\s*[\"']wv-"                          # hardcoding
+  - "memo"                                                # memoization (broad)
+  - "best_of_n\\|best.*per_task"                         # per-task oracle aggregation
+
+ship_criteria_human_readable: |
+  - WebVoyager-300 (best single planner, no per-task oracle aggregation) ≥ 75%.
+  - All four planners run; results published side by side.
+  - Per-category breakdown matches the taxonomy from S2.
+  - Anti-cheating audit passes — no violations found.
+  - Original WebVoyager-100 (subset of the 300) ≥ 75% with the best planner.
+  - In-house validation set (subset of the 300) ≥ 70% with the best planner —
+    this confirms the gains generalize, not just overfit to the original 100.
+  - MANTLE_V1_1_RELEASED.md exists, references real eval files, no fabrication.
+  - mantle-v1.1-released tag created and pushed.
+
+stretch_goals:
+  - WebVoyager-300 (best single planner) ≥ 80%.
+  - All four planners ≥ 65% (showing the improvements are model-family-agnostic).

@@ -1,0 +1,81 @@
+name: "S5 — Self-correction loop"
+phase: S5
+description: |
+  Address MULTI_HOP_LOST and ANSWER_MALFORMED.
+
+  Add a progress-checking step to the agent loop that runs every 3 tool calls.
+  The check is a Sonnet 4.6 call with the original task, the last 3 steps, and
+  this question: "Is the agent making progress toward the goal? Respond PROGRESS,
+  STUCK, or REGRESSING with one sentence of evidence."
+
+  When STUCK or REGRESSING returns twice in a row, the agent rethinks: it must
+  either (a) backtrack to a known-good earlier state, (b) try a different starting
+  point (new search query, different result), or (c) declare the task ungradable
+  with a reason.
+
+  Concrete additions:
+
+  1. ProgressEvaluator class in packages/codeact/codeact/progress.py. After every
+     3 tool calls, calls Sonnet 4.6 with the trace summary. Returns a
+     ProgressVerdict (PROGRESS | STUCK | REGRESSING + evidence).
+
+  2. Strategy switcher in the agent loop. State machine:
+       executing -> [3 steps] -> check_progress -> if STUCK x2 -> rethink_strategy
+       rethink_strategy: pick from (backtrack, restart_with_new_query, escalate_to_vision)
+     Each strategy switch increments a counter; max 2 strategy switches per task.
+
+  3. Better final-answer extraction. Add a finalize_answer step at the end of
+     every task: Sonnet 4.6 reads the full trace and outputs ONLY the literal
+     answer in the format the task asks for. No prose, no formatting, no
+     parenthetical context. Unicode normalized.
+
+  4. Answer normalization in the judge prompt. The judge now strips Unicode
+     subscripts/superscripts, trims surrounding prose patterns ("the answer is X" → "X"),
+     and accepts numerically-equivalent forms ("2.7 million" ≈ "2,700,000"). The judge
+     prompt update applies to ALL tasks uniformly; the prompt itself doesn't mention
+     WebVoyager.
+
+  5. Re-run WebVoyager-100. Verify pass_rate ≥ 75%. MULTI_HOP_LOST and
+     ANSWER_MALFORMED categories should drop by ≥ 50% each.
+
+  Anti-cheating note: the progress evaluator and strategy switcher are general
+  reasoning features. They are not WebVoyager-aware. Test on a holdout task set
+  to confirm they help generally, not just on WebVoyager.
+
+packages_required:
+  - packages/codeact
+  - apps/gateway
+  - eval/webvoyager-100
+
+artifacts:
+  - PHASE_S5_DONE.md
+  - packages/codeact/codeact/progress.py
+  - outputs/v1_1/webvoyager-100-after-s5.json
+  - outputs/v1_1/judge-ablation.json                     # judge prompt change tested on a holdout set
+
+integration_tests:
+  - tests/integration/test_progress_evaluator.py
+  - tests/integration/test_strategy_switcher.py
+  - tests/integration/test_final_answer_extraction.py
+  - tests/integration/test_judge_normalization.py
+
+eval_suites:
+  - name: webvoyager-100-after-s5
+    command: "uv run python eval/webvoyager-100/runner.py --planner gpt-5.5 --traces --vision --self-correct --output outputs/v1_1/webvoyager-100-after-s5.json"
+    output_file: outputs/v1_1/webvoyager-100-after-s5.json
+    minimum_pass_rate: 0.75
+
+forbidden_patterns:
+  - "task_id\\s*==\\s*[\"']wv-"
+  - "if.*WebVoyager"                                     # any WebVoyager-aware branching
+  - "judge_prompt.*lenient"                              # leniency hacks
+  - "best_of"                                            # best-of-N reporting
+
+ship_criteria_human_readable: |
+  - WebVoyager-100 ≥ 75% with full pipeline (browser hardening + vision + self-correction).
+  - MULTI_HOP_LOST failures ≥ 50% reduced.
+  - ANSWER_MALFORMED failures ≥ 50% reduced.
+  - Judge-prompt ablation shows the prompt change is task-agnostic (≥ 90% of judge
+    decisions on a holdout set are unchanged; the changes that occurred are obviously
+    legitimate normalizations).
+  - No anti-cheating violations in the diff.

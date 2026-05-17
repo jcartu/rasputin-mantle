@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import pytest
+
 from pathlib import Path
 
 from fastapi.testclient import TestClient
@@ -155,6 +157,15 @@ def test_voice_status_returns_services() -> None:
 
 
 def test_voice_transcribe_returns_503_when_unavailable() -> None:
+    import os
+    whisper_url = os.environ.get("WHISPER_URL", "http://127.0.0.1:8803")
+    try:
+        import httpx as _httpx
+        r = _httpx.get(f"{whisper_url}/health", timeout=2.0)
+        if r.status_code == 200:
+            pytest.skip("Faster-Whisper service is running — skipping unavailable test")
+    except _httpx.RequestError:
+        pass
     client = TestClient(app)
     resp = client.post('/api/voice/transcribe', files={'file': ('test.wav', b'fake audio', 'audio/wav')})
     assert resp.status_code == 503
@@ -163,6 +174,15 @@ def test_voice_transcribe_returns_503_when_unavailable() -> None:
 
 
 def test_voice_synthesize_returns_503_when_unavailable() -> None:
+    import os
+    kokoro_url = os.environ.get("KOKORO_URL", "http://127.0.0.1:8804")
+    try:
+        import httpx as _httpx
+        r = _httpx.get(f"{kokoro_url}/health", timeout=2.0)
+        if r.status_code == 200:
+            pytest.skip("Kokoro TTS service is running — skipping unavailable test")
+    except _httpx.RequestError:
+        pass
     client = TestClient(app)
     resp = client.post('/api/voice/synthesize', json={'text': 'hello world'})
     assert resp.status_code == 503

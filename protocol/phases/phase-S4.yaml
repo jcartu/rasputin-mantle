@@ -1,0 +1,73 @@
+name: "S4 — Vision-language fallback"
+phase: S4
+description: |
+  Address VLM_NEEDED — pages where the DOM is opaque (canvas-rendered, lazy-loaded
+  shadow DOMs, charts, custom data viz). When DOM extraction returns empty or low
+  confidence, fall back to screenshot + Claude Sonnet 4.6 vision.
+
+  Concrete additions:
+
+  1. Add packages/browser/browser/vision.py. A VisionAssist class with methods:
+     - find_element_bbox(screenshot_png: bytes, description: str) -> {x, y, w, h} | None
+     - extract_text_from_region(screenshot_png: bytes, bbox: dict) -> str
+     - answer_question_about_page(screenshot_png: bytes, question: str) -> str
+     Each method calls anthropic with claude-sonnet-4-6 and the image, with a
+     focused vision-extraction prompt.
+
+  2. Hybrid extraction. Modify browser tools (extract_text, find_element) to:
+       a. Try DOM-based extraction first (cheap).
+       b. If result is empty / nav-only / clearly insufficient, capture screenshot.
+       c. Route screenshot + the agent's intent to VisionAssist.
+       d. If VLM finds a bbox, click() converts bbox to {x: cx, y: cy} pixel click.
+
+  3. Per-task vision call budget. Cap at 3 vision calls per task. Track in the
+     trace. If a task exceeds 3 vision calls, mark as VISION_BUDGET_EXCEEDED and
+     fail with that reason (better than infinite expensive loops).
+
+  4. Vision cache. Within a single task, cache vision results by
+     hash(screenshot + question). Subsequent tools that re-query the same page
+     don't re-burn the budget.
+
+  5. Cost telemetry. Every vision call logs cost estimate (input image tokens
+     based on dimensions + output tokens). Phase-end report sums total vision
+     spend.
+
+  6. Re-run WebVoyager-100 with vision-fallback enabled. Verify pass_rate ≥ 73%
+     (≥ 3 point additional gain over S3). VLM_NEEDED category should drop by ≥ 60%.
+
+  Anti-cheating note: the vision prompt must be generic ("Where is X in this
+  screenshot? Return only the bounding box as JSON.") — never WebVoyager-specific.
+
+packages_required:
+  - packages/browser
+  - eval/webvoyager-100
+
+artifacts:
+  - PHASE_S4_DONE.md
+  - packages/browser/browser/vision.py
+  - outputs/v1_1/webvoyager-100-after-s4.json
+  - outputs/v1_1/vision-cost-report.json                 # total vision spend for this phase
+
+integration_tests:
+  - tests/integration/test_vision_find_element.py        # using a known fixture screenshot
+  - tests/integration/test_vision_fallback_in_extract.py # DOM-fails-vision-succeeds path
+  - tests/integration/test_vision_budget_cap.py          # 4th call within a task gets rejected
+  - tests/integration/test_vision_cache_hit.py
+
+eval_suites:
+  - name: webvoyager-100-after-s4
+    command: "uv run python eval/webvoyager-100/runner.py --planner gpt-5.5 --traces --vision --output outputs/v1_1/webvoyager-100-after-s4.json"
+    output_file: outputs/v1_1/webvoyager-100-after-s4.json
+    minimum_pass_rate: 0.73
+
+forbidden_patterns:
+  - "WebVoyager.*vision_prompt"                          # vision prompt mentions WebVoyager
+  - "task_id.*vision"                                    # vision branches on task ID
+  - "MockTransport"
+
+ship_criteria_human_readable: |
+  - WebVoyager-100 ≥ 73% with vision fallback.
+  - VLM_NEEDED category failures reduced by ≥ 60%.
+  - Vision call budget enforced (max 3 per task, cache hits don't count).
+  - Vision spend reported and reasonable (under $30 for the phase's WebVoyager-100 run).
+  - Vision prompts are generic, not WebVoyager-specific.

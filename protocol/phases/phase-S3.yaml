@@ -1,0 +1,72 @@
+name: "S3 — Browser tool hardening"
+phase: S3
+description: |
+  Address DOM_FLAKY, TOOL_BROKEN, and parts of MULTI_HOP_LOST. These are pure
+  engineering fixes to the browser primitives in packages/browser.
+
+  Concrete improvements (planner emits one ticket per item):
+
+  1. Wait strategy upgrade. After every navigate(), automatically call
+     page.wait_for_load_state("networkidle", timeout=10000). Expose
+     wait_for_selector(selector, state="visible", timeout=5000) as a primitive
+     the planner can use. Replace ad-hoc sleeps with proper waits.
+
+  2. Multi-strategy element selectors. The click() and extract_text() primitives
+     accept a "natural description" of what to click ("the Sign Up button") and
+     try selectors in order:
+       a. role=button[name="<text>"]    (Playwright's accessible-name match)
+       b. text="<text>"                  (visible text)
+       c. [aria-label="<text>"]          (aria label)
+       d. <fallback> XPath via Sonnet 4.6: "given this DOM and this description, return XPath"
+     Each strategy logs which one matched.
+
+  3. Auto-retry with backoff. If a tool returns element-not-found, retry 3 times
+     with 500ms / 1s / 2s waits. Each retry re-reads the page state.
+
+  4. Screenshot on every step. Save to outputs/v1_1/screenshots/wv-<id>/step-<n>.png.
+     This makes failure diagnosis tractable.
+
+  5. Session/cookie persistence. After login or any cookie-setting page, persist
+     storage_state across page.goto() calls within the same task. This fixes
+     tasks that lose state on navigation.
+
+  6. Stable scrolling. scroll_to(selector) primitive that uses
+     element.scroll_into_view_if_needed() instead of arbitrary page.evaluate.
+
+  7. Re-run WebVoyager-100 with GPT-5.5 + hardened browser. Verify pass_rate
+     ≥ 70% (≥ 7 point gain). Per-category breakdown shows DOM_FLAKY count dropped
+     by at least 70%.
+
+packages_required:
+  - packages/browser
+  - eval/webvoyager-100
+
+artifacts:
+  - PHASE_S3_DONE.md
+  - outputs/v1_1/webvoyager-100-after-s3.json
+  - outputs/v1_1/screenshots/                            # screenshot capture directory (gitignored, but exists)
+
+integration_tests:
+  - tests/integration/test_browser_wait_strategies.py
+  - tests/integration/test_browser_multi_strategy_click.py
+  - tests/integration/test_browser_retry_on_not_found.py
+  - tests/integration/test_browser_screenshot_capture.py
+  - tests/integration/test_browser_session_persistence.py
+
+eval_suites:
+  - name: webvoyager-100-after-s3
+    command: "uv run python eval/webvoyager-100/runner.py --planner gpt-5.5 --traces --output outputs/v1_1/webvoyager-100-after-s3.json"
+    output_file: outputs/v1_1/webvoyager-100-after-s3.json
+    minimum_pass_rate: 0.70                              # 7 point gain on baseline
+
+forbidden_patterns:
+  - "task_id\\s*==\\s*[\"']wv-"                          # no hardcoding
+  - "\\-\\-no-sandbox"                                   # no shortcut on sandbox
+  - "MockTransport"
+
+ship_criteria_human_readable: |
+  - WebVoyager-100 ≥ 70% with GPT-5.5 planner.
+  - Per-category report shows DOM_FLAKY failures reduced by ≥ 70%.
+  - No regressions on tasks that passed in baseline (≤ 2 regressions acceptable, more triggers re-plan).
+  - All new browser primitives have integration tests.
+  - No task-specific hardcoding anywhere in the diff.

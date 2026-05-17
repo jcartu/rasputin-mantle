@@ -25,7 +25,7 @@ export function SessionStream({ sessionId }: SessionStreamProps) {
 
     const connect = () => {
       setStatus("connecting");
-      eventSource = new EventSource(`/api/sessions/${sessionId}/events`);
+      eventSource = new EventSource(`/api/sessions/${sessionId}/stream`);
 
       eventSource.onopen = () => {
         setStatus("connected");

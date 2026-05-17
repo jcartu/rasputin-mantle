@@ -42,7 +42,7 @@ class AgentRunRequest(BaseModel):
     starting_url: str = Field(min_length=1)
     max_steps: int = Field(default=10, ge=1, le=50)
     headless: bool = False
-    planner: str | None = None  # e.g. "gpt-5.5" to use OpenAI instead of vLLM
+    planner: str | None = None  # e.g. "gpt-5.5" (OpenAI) or "sonnet-4.6" (Anthropic)
 
 
 class AgentStep(BaseModel):
@@ -150,6 +150,8 @@ async def _plan_next_action(
         {"role": "user", "content": json.dumps(prompt, separators=(",", ":"))},
     ]
     if planner:
+        if planner.startswith("claude") or planner.startswith("sonnet"):
+            return await _plan_anthropic(messages=messages, planner=planner)
         return await _plan_openai(messages=messages, planner=planner)
     return await _plan_vllm(messages=messages)
 
@@ -196,6 +198,33 @@ async def _plan_openai(
         raise HTTPException(
             status_code=502,
             detail={"error": "openai_call_failed", "message": str(exc)},
+        ) from exc
+    await _enforce_cost(result)
+    return _parse_action(result["content"])
+
+
+async def _plan_anthropic(
+    *,
+    messages: list[dict[str, Any]],
+    planner: str,
+) -> AgentAction:
+    if not settings.anthropic_api_key:
+        raise HTTPException(
+            status_code=500,
+            detail={"error": "anthropic_not_configured", "message": "ANTHROPIC_API_KEY is not set"},
+        )
+    try:
+        result = await model_client.anthropic_chat(
+            model=planner,
+            messages=messages,
+            max_tokens=8192,
+            workspace_id="default",
+            temperature=0,
+        )
+    except ModelCallError as exc:
+        raise HTTPException(
+            status_code=502,
+            detail={"error": "anthropic_call_failed", "message": str(exc)},
         ) from exc
     await _enforce_cost(result)
     return _parse_action(result["content"])

@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
 test.describe("Computer View", () => {
-  test("renders iframe with correct Neko URL", async ({ page }) => {
+  test("shows empty state when Neko is unavailable", async ({ page }) => {
     // Mock the session creation API
     await page.route("**/api/sessions", async (route) => {
       if (route.request().method() === "POST") {
@@ -28,16 +28,25 @@ test.describe("Computer View", () => {
       });
     });
 
+    // Mock the health probe to fail (Neko not running)
+    await page.route("**/health", async (route) => {
+      await route.fulfill({
+        status: 503,
+        contentType: "text/plain",
+        body: "Service Unavailable",
+      });
+    });
+
     // Navigate to a session page
     await page.goto("/session/test-session-123");
 
-    // Check if iframe exists
-    const iframe = page.locator("iframe");
-    await expect(iframe).toBeVisible();
+    // Check that the empty state is shown (not an iframe)
+    await expect(page.locator("text=Live Computer View")).toBeVisible();
+    await expect(page.locator("text=Neko desktop instance is not available")).toBeVisible();
+    await expect(page.locator("text=Retry")).toBeVisible();
 
-    // Check if iframe src contains the expected Neko URL parameters
-    const src = await iframe.getAttribute("src");
-    expect(src).toContain("user=mantle");
-    expect(src).toContain("pass=mantle-dev");
+    // Verify no iframe is present when Neko is down
+    const iframe = page.locator("iframe");
+    await expect(iframe).not.toBeVisible();
   });
 });

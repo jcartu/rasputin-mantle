@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 export function ComputerView() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isAvailable, setIsAvailable] = useState(false);
   const [hasError, setHasError] = useState(false);
   const [key, setKey] = useState(0);
 
@@ -11,53 +11,58 @@ export function ComputerView() {
   const iframeSrc = `${nekoUrl}/?user=mantle&pass=mantle-dev`;
 
   useEffect(() => {
-    setIsLoading(true);
-    setHasError(false);
-  }, [key]);
-
-  const handleLoad = () => {
-    setIsLoading(false);
-  };
-
-  const handleError = () => {
-    setIsLoading(false);
-    setHasError(true);
-  };
+    // Probe Neko availability before showing iframe
+    fetch(`${nekoUrl}/health`, { method: "HEAD" })
+      .then((res) => {
+        if (res.ok) setIsAvailable(true);
+        else setHasError(true);
+      })
+      .catch(() => setHasError(true));
+  }, [key, nekoUrl]);
 
   const handleReconnect = () => {
+    setHasError(false);
+    setIsAvailable(false);
     setKey((prev) => prev + 1);
   };
 
-  return (
-    <div className="w-full h-full bg-zinc-950 flex items-center justify-center relative overflow-hidden">
-      {isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-zinc-900 z-10">
-          <div className="w-full max-w-4xl aspect-video bg-zinc-800 animate-pulse rounded-lg shadow-lg border border-zinc-700 flex items-center justify-center">
-            <div className="w-12 h-12 border-4 border-zinc-600 border-t-zinc-300 rounded-full animate-spin"></div>
-          </div>
-        </div>
-      )}
+  const handleIframeError = () => {
+    setHasError(true);
+    setIsAvailable(false);
+  };
 
-      {hasError && (
-        <div className="absolute inset-0 flex flex-col items-center justify-center bg-zinc-900 z-20 text-zinc-300">
-          <div className="mb-4 text-lg">Connection lost</div>
+  // Neko is not running — show honest empty state
+  if (hasError || !isAvailable) {
+    return (
+      <div className="w-full h-full bg-zinc-950 flex items-center justify-center">
+        <div className="flex flex-col items-center gap-4 text-zinc-400 max-w-md text-center">
+          <div className="text-4xl opacity-30">⏻</div>
+          <div className="text-lg font-medium text-zinc-300">Live Computer View</div>
+          <div className="text-sm text-zinc-500">
+            Neko desktop instance is not available. Deploy Neko to{" "}
+            <code className="bg-zinc-800 px-1.5 py-0.5 rounded text-zinc-300">{nekoUrl}</code> to enable
+            real-time screen sharing.
+          </div>
           <button
             onClick={handleReconnect}
-            className="px-4 py-2 bg-zinc-100 text-zinc-900 rounded hover:bg-zinc-200 transition-colors font-medium"
+            className="mt-2 px-4 py-2 bg-zinc-800 text-zinc-300 rounded hover:bg-zinc-700 transition-colors text-sm font-medium border border-zinc-700"
           >
-            Reconnect
+            Retry
           </button>
         </div>
-      )}
+      </div>
+    );
+  }
 
+  return (
+    <div className="w-full h-full bg-zinc-950 flex items-center justify-center overflow-hidden">
       <div className="w-full h-full max-h-full flex items-center justify-center p-4">
         <div className="w-full aspect-video max-h-full relative shadow-2xl ring-1 ring-zinc-800 rounded overflow-hidden bg-black">
           <iframe
             key={key}
             src={iframeSrc}
             className="w-full h-full border-0"
-            onLoad={handleLoad}
-            onError={handleError}
+            onError={handleIframeError}
             allow="clipboard-read; clipboard-write; display-capture"
           />
         </div>

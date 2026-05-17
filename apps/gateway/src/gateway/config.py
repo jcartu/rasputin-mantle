@@ -22,6 +22,7 @@ class Settings:
     vllm_model: str = os.environ.get("VLLM_MODEL", "qwen3.6-27b")
     vllm_api_key: str = os.environ.get("VLLM_API_KEY", "")
     openai_api_key: str = os.environ.get("OPENAI_API_KEY", "")
+    anthropic_api_key: str = os.environ.get("ANTHROPIC_API_KEY", "")
 
 
 settings = Settings()

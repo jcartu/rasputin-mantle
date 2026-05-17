@@ -210,11 +210,21 @@ class PlaywrightBackend(BrowserBackend):
                 element_lookup[element_id] = element
             self._element_selectors = selectors
             self._elements = element_lookup
-            screenshot = await page.screenshot(full_page=True)
-            await self._save_step_screenshot(screenshot)
-            screenshot_b64 = base64.b64encode(screenshot).decode("ascii")
+            # Take screenshot with short timeout — don't block on fonts
+            screenshot_b64: str | None = None
+            screenshot: bytes | None = None
+            try:
+                screenshot = await asyncio.wait_for(
+                    page.screenshot(full_page=True),
+                    timeout=5.0,
+                )
+                await self._save_step_screenshot(screenshot)
+                screenshot_b64 = base64.b64encode(screenshot).decode("ascii")
+            except (asyncio.TimeoutError, Exception):
+                pass  # screenshot optional, continue without it
+
             # Hybrid fallback: if DOM extraction returned nothing, try vision
-            if not elements and self._vision is not None:
+            if not elements and self._vision is not None and screenshot is not None:
                 try:
                     vision_elements = await self._vision_fallback(screenshot)
                     elements.extend(vision_elements)
@@ -222,6 +232,7 @@ class PlaywrightBackend(BrowserBackend):
                     pass  # budget exhausted, return empty state
                 except Exception:
                     pass  # vision fallback failed, return empty state
+
             # Detect auth walls
             auth_wall = self._detect_auth_wall(page.url, await page.title(), elements)
             return BrowserState(

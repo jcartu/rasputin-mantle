@@ -5,7 +5,10 @@ endpoint, ask the agent to complete the task, judge the response against
 success_criterion (LLM-as-judge with Sonnet).
 
 Outputs JSON with shape:
-  {"total": N, "passed": K, "pass_rate": K/N, "results": [...]}
+  {"total": N, "passed": K, "pass_rate": K/N, "results": [...]}.
+
+With --traces: also writes per-task trace files to traces_dir/wv-<id>.json
+containing full step-level data (tool calls, state, observations, URLs).
 """
 from __future__ import annotations
 
@@ -27,24 +30,29 @@ JUDGE_MODEL = os.environ.get("JUDGE_MODEL", "claude-sonnet-4-6")
 ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 
 
-async def run_task(client: httpx.AsyncClient, task: dict) -> dict:
-    """Run one WebVoyager task. Returns result dict."""
+async def run_task(client: httpx.AsyncClient, task: dict, planner: str | None = None) -> dict:
+    """Run one WebVoyager task. Returns result dict with steps if available."""
     t0 = time.perf_counter()
     try:
+        body: dict[str, Any] = {
+            "starting_url": task["starting_url"],
+            "task": task["description"],
+            "max_steps": 25,
+            "headless": True,
+        }
+        if planner:
+            body["planner"] = planner
         r = await client.post(
             f"{GATEWAY}/api/agent/run",
-            json={
-                "starting_url": task["starting_url"],
-                "task": task["description"],
-                "max_steps": 25,
-                "headless": True,
-            },
+            json=body,
             timeout=300,
         )
         if r.status_code != 200:
             return {"id": task["id"], "passed": False, "error": f"gateway {r.status_code}",
                     "duration_s": time.perf_counter() - t0}
-        agent_response = r.json().get("final_answer", "")
+        data = r.json()
+        agent_response = data.get("final_answer", "")
+        steps = data.get("steps", [])
     except Exception as e:
         return {"id": task["id"], "passed": False, "error": f"{type(e).__name__}: {e}",
                 "duration_s": time.perf_counter() - t0}
@@ -54,7 +62,8 @@ async def run_task(client: httpx.AsyncClient, task: dict) -> dict:
     return {
         "id": task["id"],
         "passed": passed,
-        "agent_response": agent_response[:1000],
+        "final_answer": agent_response[:1000],
+        "steps": steps,
         "duration_s": round(time.perf_counter() - t0, 2),
     }
 
@@ -96,6 +105,9 @@ async def main():
     ap.add_argument("--tasks", default="eval/webvoyager-100/tasks.yaml")
     ap.add_argument("--output", default="outputs/webvoyager-100.json")
     ap.add_argument("--concurrency", type=int, default=4)
+    ap.add_argument("--traces", action="store_true", help="Write per-task trace files")
+    ap.add_argument("--traces-dir", default=None, help="Trace output dir (default: sibling of --output)")
+    ap.add_argument("--planner", default=None, help="Planner model to pass to gateway")
     args = ap.parse_args()
 
     with open(args.tasks) as f:
@@ -104,9 +116,35 @@ async def main():
 
     sem = asyncio.Semaphore(args.concurrency)
 
-    async def run_with_sem(client, task):
+    traces_dir: Path | None = None
+    if args.traces:
+        if args.traces_dir:
+            traces_dir = Path(args.traces_dir)
+        else:
+            traces_dir = Path(args.output).parent / "traces"
+        traces_dir.mkdir(parents=True, exist_ok=True)
+        print(f"Traces enabled → {traces_dir}")
+
+    tasks_by_id = {t["id"]: t for t in tasks}
+
+    async def run_with_sem(client: httpx.AsyncClient, task: dict) -> dict:
         async with sem:
-            return await run_task(client, task)
+            result = await run_task(client, task, planner=args.planner)
+            # Write trace immediately so partial runs survive interruption
+            if traces_dir is not None:
+                trace = {
+                    "task_id": result["id"],
+                    "task_description": tasks_by_id.get(result["id"], {}).get("description", ""),
+                    "starting_url": tasks_by_id.get(result["id"], {}).get("starting_url", ""),
+                    "passed": result["passed"],
+                    "final_answer": result.get("final_answer", ""),
+                    "duration_s": result.get("duration_s", 0),
+                    "steps": result.get("steps", []),
+                }
+                trace_path = traces_dir / f"{result['id']}.json"
+                trace_path.write_text(json.dumps(trace, indent=2))
+                print(f"  trace: {result['id']} ({result.get('duration_s', 0):.0f}s)")
+            return result
 
     async with httpx.AsyncClient() as client:
         results = await asyncio.gather(*[run_with_sem(client, t) for t in tasks])

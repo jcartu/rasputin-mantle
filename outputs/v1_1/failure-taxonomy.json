@@ -1,0 +1,391 @@
+{
+  "source_run": "outputs/v1_1/webvoyager-100-baseline.json",
+  "tasks_file": "eval/webvoyager-100/tasks.yaml",
+  "total_failures": 37,
+  "categorized_at": "2026-05-17T11:25:35Z",
+  "categorizer_model": "claude-sonnet-4-6",
+  "by_category": {
+    "DOM_FLAKY": 5,
+    "VLM_NEEDED": 0,
+    "MULTI_HOP_LOST": 0,
+    "ANSWER_MALFORMED": 0,
+    "TOOL_BROKEN": 5,
+    "LOGIN_WALL": 9,
+    "CAPTCHA": 0,
+    "TIME_SENSITIVE": 0,
+    "JUDGE_HARSH": 0,
+    "UNCLASSIFIED": 18
+  },
+  "failures": [
+    {
+      "task_id": "wv-010",
+      "task_description": "On Reddit, find a recent post in r/python with > 100 upvotes.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "TOOL_BROKEN",
+      "evidence": "The agent's final answer is a raw Playwright error: 'Page.evaluate: Execution context was destroyed', indicating a tool/infrastructure failure rather than a navigation or content extraction problem.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-005",
+      "task_description": "Find a cheap flight from JFK to LAX next month.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "UNCLASSIFIED",
+      "evidence": "The agent produced no tool calls and returned an empty error, suggesting it failed to initiate any browsing action at all.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-002",
+      "task_description": "Find the population of Tokyo, Japan.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "TOOL_BROKEN",
+      "evidence": "The agent's final answer is a Playwright screenshot timeout error, indicating the tool itself failed rather than any navigation or content extraction issue.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-015",
+      "task_description": "On Amazon, compare two USB-C wall chargers and report which has the higher customer rating.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "UNCLASSIFIED",
+      "evidence": "The agent produced no tool calls and returned an empty error, suggesting the agent failed to initialize or execute any browsing steps at all.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-014",
+      "task_description": "On Amazon, find the price of the current Kindle Paperwhite model.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "UNCLASSIFIED",
+      "evidence": "The agent returned an empty error with no tool calls, suggesting the agent crashed or gave up before completing any browsing steps.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-016",
+      "task_description": "On Amazon, find a 1 TB portable SSD under $100 and report its price and review count.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "UNCLASSIFIED",
+      "evidence": "The agent returned an empty error with no tool calls, suggesting the agent crashed or aborted before making any meaningful progress.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-018",
+      "task_description": "On Apple's website, find the battery life Apple claims for the latest iPhone Pro model.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "UNCLASSIFIED",
+      "evidence": "The agent produced no tool calls and returned an empty error, suggesting the agent crashed or timed out before completing any browsing actions.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-026",
+      "task_description": "On Booking.com, find a hotel in Paris for a two-night stay next month and report its displayed rating and price.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "LOGIN_WALL",
+      "evidence": "The agent returned an empty error with no tool calls, suggesting it hit a blocking page (likely a CAPTCHA or authentication wall) that prevented any interaction with Booking.com.",
+      "fixable_in_phase": "S5",
+      "estimated_fix_effort": "medium"
+    },
+    {
+      "task_id": "wv-035",
+      "task_description": "On ESPN, find the latest NBA scoreboard result for the Los Angeles Lakers.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "UNCLASSIFIED",
+      "evidence": "The agent produced no tool calls and returned an empty error, suggesting a crash or timeout before any browsing occurred.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-037",
+      "task_description": "On ESPN, find the next scheduled match for the United States men's national soccer team.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "UNCLASSIFIED",
+      "evidence": "The agent returned an empty error with no tool calls recorded, suggesting the agent failed to produce any output or encountered an internal error before completing the task.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "medium"
+    },
+    {
+      "task_id": "wv-030",
+      "task_description": "On Cambridge Dictionary, find the British pronunciation audio label for the word 'schedule'.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "UNCLASSIFIED",
+      "evidence": "The agent produced no tool calls and returned an empty error, suggesting the agent crashed or failed to initialize before doing any work.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-036",
+      "task_description": "On ESPN, find the current NFL standings leader in the AFC East.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "UNCLASSIFIED",
+      "evidence": "The agent produced no tool calls and returned an empty error, suggesting a total failure to initialize or execute any browsing actions.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-046",
+      "task_description": "On Google Flights, find whether there are direct flights from Boston to Reykjavik.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "UNCLASSIFIED",
+      "evidence": "The agent produced no tool calls and returned an empty error, suggesting a catastrophic failure before any navigation or search could occur.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-044",
+      "task_description": "On Google Flights, find the cheapest round-trip flight from SFO to SEA for next month.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "UNCLASSIFIED",
+      "evidence": "The agent produced no tool calls and returned an empty error, suggesting a crash or initialization failure before any browsing began.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-045",
+      "task_description": "On Google Flights, compare nonstop flight options from Chicago to Miami for a weekend next month.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "UNCLASSIFIED",
+      "evidence": "The agent returned an empty error with no tool calls, suggesting it failed to even initiate any browsing actions.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-061",
+      "task_description": "On Khan Academy, find the SAT math practice section and report one listed topic.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "DOM_FLAKY",
+      "evidence": "The agent encountered 'Execution context was destroyed, most likely because' \u2014 a classic Playwright race condition/navigation error indicating the page context was destroyed mid-operation.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-062",
+      "task_description": "On LinkedIn, find OpenAI's company page and report its listed industry.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "DOM_FLAKY",
+      "evidence": "The error 'Execution context was destroyed, most likely because...' is a classic stale execution context / race condition error from Playwright when the page navigates or reloads mid-evaluation.",
+      "fixable_in_phase": "S4",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-063",
+      "task_description": "On LinkedIn, find Microsoft's company page and report its listed headquarters location.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "LOGIN_WALL",
+      "evidence": "LinkedIn requires authentication to view company pages, and the agent encountered a destroyed execution context likely due to a redirect or page teardown when hitting LinkedIn's login wall.",
+      "fixable_in_phase": "S5",
+      "estimated_fix_effort": "medium"
+    },
+    {
+      "task_id": "wv-064",
+      "task_description": "On LinkedIn, search for Coursera's company page and report the employee count range shown.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "TOOL_BROKEN",
+      "evidence": "The agent's final answer is a Playwright execution context error ('Execution context was destroyed'), indicating a tool/runtime failure rather than a content or navigation issue.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-060",
+      "task_description": "On Khan Academy, find a lesson about photosynthesis and report its course category.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "LOGIN_WALL",
+      "evidence": "The agent returned an empty error with no tool calls, suggesting it was blocked before it could retrieve any content, consistent with an authentication or access wall on Khan Academy.",
+      "fixable_in_phase": "S5",
+      "estimated_fix_effort": "medium"
+    },
+    {
+      "task_id": "wv-051",
+      "task_description": "On Hacker News, find the current Ask HN thread with the most comments on the front page.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "UNCLASSIFIED",
+      "evidence": "The agent produced no tool calls and returned an empty error, suggesting a crash or timeout before any browsing occurred.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-057",
+      "task_description": "On IMDb, find the top-billed cast members for 'The Matrix' (1999).",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "UNCLASSIFIED",
+      "evidence": "The agent produced no tool calls and returned an empty error, suggesting a crash or early termination before any browsing occurred.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-068",
+      "task_description": "On Microsoft Learn, find the Python quickstart for Azure Functions and report the supported Python versions.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "UNCLASSIFIED",
+      "evidence": "The agent returned an empty error with no tool calls, suggesting it gave up or crashed without attempting to navigate the page.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-072",
+      "task_description": "On MDN Web Docs, find browser compatibility information for CSS grid-template-columns.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "UNCLASSIFIED",
+      "evidence": "The agent returned an empty final answer with 'Error:' and no tool calls were made, suggesting the agent crashed or was unable to initialize properly.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-066",
+      "task_description": "On Medium, find an article tagged machine-learning with at least a visible reading time.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "LOGIN_WALL",
+      "evidence": "The agent returned an empty error with no tool calls, consistent with hitting a Medium authentication or paywall barrier that prevented access to article listings.",
+      "fixable_in_phase": "S5",
+      "estimated_fix_effort": "medium"
+    },
+    {
+      "task_id": "wv-086",
+      "task_description": "On Reddit, find the current top post of the week in r/MachineLearning.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "DOM_FLAKY",
+      "evidence": "The final error 'Page.evaluate: Execution context was destroyed, most likely because of a navigation' indicates a race condition or page navigation destroyed the execution context during DOM evaluation.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-087",
+      "task_description": "On Reddit, find a recent discussion in r/travel about Japan itineraries and report the title.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "DOM_FLAKY",
+      "evidence": "The error message explicitly states 'Execution context was destroyed, most likely beca...' which is a classic Playwright race condition/timing issue where the page navigated away or reloaded while the agent was trying to evaluate JavaScript on it.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-088",
+      "task_description": "On Reddit, find the rules for r/AskHistorians and report one rule.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "DOM_FLAKY",
+      "evidence": "The agent's final answer is a Playwright error 'Execution context was destroyed, most likely because...' indicating a race condition or page navigation destroyed the execution context during DOM evaluation.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-084",
+      "task_description": "On Pinterest, find a board about minimalist home office design and report its title.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "LOGIN_WALL",
+      "evidence": "Pinterest requires authentication to browse boards, and the agent returned an empty error with no tool calls, indicating it was blocked before it could retrieve any content.",
+      "fixable_in_phase": "S5",
+      "estimated_fix_effort": "medium"
+    },
+    {
+      "task_id": "wv-085",
+      "task_description": "On Pinterest, find a dinner recipe pin for salmon and report the recipe title.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "LOGIN_WALL",
+      "evidence": "No tool calls were made and the agent returned an empty error, suggesting it was immediately blocked by Pinterest's authentication or bot-detection wall before any browsing could occur.",
+      "fixable_in_phase": "S5",
+      "estimated_fix_effort": "medium"
+    },
+    {
+      "task_id": "wv-093",
+      "task_description": "On X, find the current profile bio for NASA and report it.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "LOGIN_WALL",
+      "evidence": "The agent returned an empty error with no tool calls, consistent with hitting a login/authentication wall on X (Twitter) that prevented accessing the profile.",
+      "fixable_in_phase": "S5",
+      "estimated_fix_effort": "medium"
+    },
+    {
+      "task_id": "wv-089",
+      "task_description": "On Stack Overflow, find a highly voted question about Python list comprehensions and report its accepted answer status.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "UNCLASSIFIED",
+      "evidence": "The agent returned an empty error with no tool calls, suggesting it gave up or crashed before attempting any navigation.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-081",
+      "task_description": "On OpenAI Docs, find the current guide for function calling and report one required field in a tool definition.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "UNCLASSIFIED",
+      "evidence": "The agent produced no tool calls and returned an empty error, suggesting it crashed or terminated early without attempting any browsing.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-092",
+      "task_description": "On X, find OpenAI's latest public post and report its text summary and date.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "LOGIN_WALL",
+      "evidence": "The agent returned an empty error with no tool calls, consistent with hitting X's authentication wall that blocks access to public posts without login.",
+      "fixable_in_phase": "S5",
+      "estimated_fix_effort": "medium"
+    },
+    {
+      "task_id": "wv-094",
+      "task_description": "On X, search for posts about WebAssembly from the last week and report one post author.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "LOGIN_WALL",
+      "evidence": "The agent returned an empty error with no tool calls, consistent with hitting an authentication wall on X (Twitter) that blocked access to search results.",
+      "fixable_in_phase": "S5",
+      "estimated_fix_effort": "medium"
+    },
+    {
+      "task_id": "wv-095",
+      "task_description": "On Wikipedia, find the capital city of Kazakhstan and report the source page title.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "TOOL_BROKEN",
+      "evidence": "The agent's final answer is a Playwright timeout error during screenshot capture, indicating a tool implementation failure rather than a navigation or content issue.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    },
+    {
+      "task_id": "wv-096",
+      "task_description": "On Wikipedia, find the winner of the 2022 FIFA World Cup and the final score.",
+      "agent_answer": "",
+      "expected_answer": "",
+      "category": "TOOL_BROKEN",
+      "evidence": "The agent's final answer is a Playwright screenshot timeout error ('Page.screenshot: Timeout 30000ms exceeded'), indicating a tool-level failure rather than a content or navigation issue.",
+      "fixable_in_phase": "S3",
+      "estimated_fix_effort": "low"
+    }
+  ]
+}

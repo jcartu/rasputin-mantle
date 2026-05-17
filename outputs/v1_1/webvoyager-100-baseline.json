@@ -1,0 +1,913 @@
+{
+  "benchmark": "webvoyager",
+  "total": 100,
+  "passed": 63,
+  "failed": 37,
+  "pass_rate": 0.63,
+  "model": "gpt-5.5",
+  "timestamp": "2026-05-17T11:24:23Z",
+  "source_baseline": "outputs/multi-model/gpt-5-5.json",
+  "note": "Converted from v1.0 baseline. steps=[] \u2014 no trace data available. Re-run with --traces for full traces.",
+  "results": [
+    {
+      "id": "wv-001",
+      "passed": true,
+      "final_answer": "AAPL is currently trading at $300.23 USD per share.",
+      "agent_response": "AAPL is currently trading at $300.23 USD per share.",
+      "error": "",
+      "steps": [],
+      "duration_s": 24.6
+    },
+    {
+      "id": "wv-003",
+      "passed": true,
+      "final_answer": "1903",
+      "agent_response": "1903",
+      "error": "",
+      "steps": [],
+      "duration_s": 31.5
+    },
+    {
+      "id": "wv-007",
+      "passed": true,
+      "final_answer": "Frankfurt: \u2600\ufe0f +5\u00b0C",
+      "agent_response": "Frankfurt: \u2600\ufe0f +5\u00b0C",
+      "error": "",
+      "steps": [],
+      "duration_s": 9.6
+    },
+    {
+      "id": "wv-008",
+      "passed": true,
+      "final_answer": "Zerostack \u2013 A Unix-inspired coding agent written in pure Rust",
+      "agent_response": "Zerostack \u2013 A Unix-inspired coding agent written in pure Rust",
+      "error": "",
+      "steps": [],
+      "duration_s": 6.1
+    },
+    {
+      "id": "wv-004",
+      "passed": true,
+      "final_answer": "233,442 stars",
+      "agent_response": "233,442 stars",
+      "error": "",
+      "steps": [],
+      "duration_s": 38.4
+    },
+    {
+      "id": "wv-010",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "state: Failed to capture Playwright state: Page.evaluate: Execution context was destroyed, most likely beca",
+      "steps": [],
+      "duration_s": 1.1
+    },
+    {
+      "id": "wv-006",
+      "passed": true,
+      "final_answer": "The latest arXiv paper matching \u201cCodeAct\u201d is arXiv:2605.14126, \u201cReinforcement Learning for Tool-Calling Agents in Fast Healthcare Interoperability Resources (FHIR)\u201d by Marius S. Knorr, Robert M\u00fcller, Jan P. Bremer, and Nils Schweingruber.",
+      "agent_response": "The latest arXiv paper matching \u201cCodeAct\u201d is arXiv:2605.14126, \u201cReinforcement Learning for Tool-Calling Agents in Fast Healthcare Interoperability Resources (FHIR)\u201d by Marius S. Knorr, Robert M\u00fcller, Jan P. Bremer, and Nils Schweingruber.",
+      "error": "",
+      "steps": [],
+      "duration_s": 45.4
+    },
+    {
+      "id": "wv-005",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "",
+      "steps": [],
+      "duration_s": 51.1
+    },
+    {
+      "id": "wv-009",
+      "passed": true,
+      "final_answer": "180 minutes",
+      "agent_response": "180 minutes",
+      "error": "",
+      "steps": [],
+      "duration_s": 22.1
+    },
+    {
+      "id": "wv-011",
+      "passed": true,
+      "final_answer": "Allrecipes \u201cBest Chocolate Chip Cookies\u201d \u2014 Rating: 4.6 stars; Total prep time: 1 hour.",
+      "agent_response": "Allrecipes \u201cBest Chocolate Chip Cookies\u201d \u2014 Rating: 4.6 stars; Total prep time: 1 hour.",
+      "error": "",
+      "steps": [],
+      "duration_s": 18.8
+    },
+    {
+      "id": "wv-002",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "state: Failed to capture Playwright state: Page.screenshot: Timeout 30000ms exceeded.\nCall log:\n  - taking ",
+      "steps": [],
+      "duration_s": 64.6
+    },
+    {
+      "id": "wv-015",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "",
+      "steps": [],
+      "duration_s": 10.5
+    },
+    {
+      "id": "wv-017",
+      "passed": true,
+      "final_answer": "The latest MacBook Air starts at $999.",
+      "agent_response": "The latest MacBook Air starts at $999.",
+      "error": "",
+      "steps": [],
+      "duration_s": 25.1
+    },
+    {
+      "id": "wv-012",
+      "passed": true,
+      "final_answer": "Allrecipes has a recipe titled \u201cVegetarian Lasagna.\u201d Two main ingredients are lasagna noodles and fresh mushrooms.",
+      "agent_response": "Allrecipes has a recipe titled \u201cVegetarian Lasagna.\u201d Two main ingredients are lasagna noodles and fresh mushrooms.",
+      "error": "",
+      "steps": [],
+      "duration_s": 67.2
+    },
+    {
+      "id": "wv-014",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "",
+      "steps": [],
+      "duration_s": 56.7
+    },
+    {
+      "id": "wv-016",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "",
+      "steps": [],
+      "duration_s": 51.0
+    },
+    {
+      "id": "wv-013",
+      "passed": true,
+      "final_answer": "Allrecipes\u2019 \u201cSlow Cooker Chicken and Dumplings\u201d is rated at least 4 stars, and its cook time is 5 hours.",
+      "agent_response": "Allrecipes\u2019 \u201cSlow Cooker Chicken and Dumplings\u201d is rated at least 4 stars, and its cook time is 5 hours.",
+      "error": "",
+      "steps": [],
+      "duration_s": 66.9
+    },
+    {
+      "id": "wv-018",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "",
+      "steps": [],
+      "duration_s": 49.2
+    },
+    {
+      "id": "wv-019",
+      "passed": true,
+      "final_answer": "On a Mac, use these Apple screenshot shortcuts:\n\n- Entire screen: Press Shift + Command + 3.\n- Selected portion: Press Shift + Command + 4, then drag to select the area and release.\n- Window or menu: Press Shift + Command + 4, then press Space bar, then click the window or menu.\n\nScreenshots are sav",
+      "agent_response": "On a Mac, use these Apple screenshot shortcuts:\n\n- Entire screen: Press Shift + Command + 3.\n- Selected portion: Press Shift + Command + 4, then drag to select the area and release.\n- Window or menu: Press Shift + Command + 4, then press Space bar, then click the window or menu.\n\nScreenshots are sav",
+      "error": "",
+      "steps": [],
+      "duration_s": 26.9
+    },
+    {
+      "id": "wv-021",
+      "passed": true,
+      "final_answer": "Ashish Vaswani",
+      "agent_response": "Ashish Vaswani",
+      "error": "",
+      "steps": [],
+      "duration_s": 9.3
+    },
+    {
+      "id": "wv-023",
+      "passed": true,
+      "final_answer": "WHO declares Ebola outbreak in DR Congo a global health emergency",
+      "agent_response": "WHO declares Ebola outbreak in DR Congo a global health emergency",
+      "error": "",
+      "steps": [],
+      "duration_s": 10.7
+    },
+    {
+      "id": "wv-020",
+      "passed": true,
+      "final_answer": "arXiv:2605.15184 \u2014 \"Is Grep All You Need? How Agent Harnesses Reshape Agentic Search\"",
+      "agent_response": "arXiv:2605.15184 \u2014 \"Is Grep All You Need? How Agent Harnesses Reshape Agentic Search\"",
+      "error": "",
+      "steps": [],
+      "duration_s": 17.5
+    },
+    {
+      "id": "wv-022",
+      "passed": true,
+      "final_answer": "International AI Safety Report 2026 \u2014 submitted in 2026.",
+      "agent_response": "International AI Safety Report 2026 \u2014 submitted in 2026.",
+      "error": "",
+      "steps": [],
+      "duration_s": 29.7
+    },
+    {
+      "id": "wv-029",
+      "passed": true,
+      "final_answer": "Serendipity: the fact of finding interesting or valuable things by chance.",
+      "agent_response": "Serendipity: the fact of finding interesting or valuable things by chance.",
+      "error": "",
+      "steps": [],
+      "duration_s": 13.9
+    },
+    {
+      "id": "wv-028",
+      "passed": true,
+      "final_answer": "W Barcelona is a beachfront hotel in Barcelona. One listed amenity is Free WiFi.",
+      "agent_response": "W Barcelona is a beachfront hotel in Barcelona. One listed amenity is Free WiFi.",
+      "error": "",
+      "steps": [],
+      "duration_s": 37.7
+    },
+    {
+      "id": "wv-024",
+      "passed": true,
+      "final_answer": "15\u00b0C",
+      "agent_response": "15\u00b0C",
+      "error": "",
+      "steps": [],
+      "duration_s": 57.2
+    },
+    {
+      "id": "wv-025",
+      "passed": true,
+      "final_answer": "Arsenal",
+      "agent_response": "Arsenal",
+      "error": "",
+      "steps": [],
+      "duration_s": 63.2
+    },
+    {
+      "id": "wv-031",
+      "passed": true,
+      "final_answer": "She's a resilient girl - she won't be unhappy for long.",
+      "agent_response": "She's a resilient girl - she won't be unhappy for long.",
+      "error": "",
+      "steps": [],
+      "duration_s": 21.9
+    },
+    {
+      "id": "wv-032",
+      "passed": true,
+      "final_answer": "Supervised Machine Learning: Regression and Classification \u2014 Provider: DeepLearning.AI; Rating: 4.9/5.",
+      "agent_response": "Supervised Machine Learning: Regression and Classification \u2014 Provider: DeepLearning.AI; Rating: 4.9/5.",
+      "error": "",
+      "steps": [],
+      "duration_s": 12.8
+    },
+    {
+      "id": "wv-034",
+      "passed": true,
+      "final_answer": "The Google Data Analytics Professional Certificate on Coursera is listed as Beginner level.",
+      "agent_response": "The Google Data Analytics Professional Certificate on Coursera is listed as Beginner level.",
+      "error": "",
+      "steps": [],
+      "duration_s": 13.0
+    },
+    {
+      "id": "wv-033",
+      "passed": true,
+      "final_answer": "Programming for Everybody (Getting Started with Python) offers a shareable certificate. Estimated duration: 2 weeks at 10 hours per week.",
+      "agent_response": "Programming for Everybody (Getting Started with Python) offers a shareable certificate. Estimated duration: 2 weeks at 10 hours per week.",
+      "error": "",
+      "steps": [],
+      "duration_s": 23.3
+    },
+    {
+      "id": "wv-026",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "",
+      "steps": [],
+      "duration_s": 87.2
+    },
+    {
+      "id": "wv-027",
+      "passed": true,
+      "final_answer": "One New York City property on Booking.com rated 8.0 or higher is Hotel Indigo NYC Financial District by IHG, which is rated around 8.8.",
+      "agent_response": "One New York City property on Booking.com rated 8.0 or higher is Hotel Indigo NYC Financial District by IHG, which is rated around 8.8.",
+      "error": "",
+      "steps": [],
+      "duration_s": 90.2
+    },
+    {
+      "id": "wv-035",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "",
+      "steps": [],
+      "duration_s": 27.5
+    },
+    {
+      "id": "wv-038",
+      "passed": true,
+      "final_answer": "1.120.0",
+      "agent_response": "1.120.0",
+      "error": "",
+      "steps": [],
+      "duration_s": 10.8
+    },
+    {
+      "id": "wv-039",
+      "passed": true,
+      "final_answer": "MIT license",
+      "agent_response": "MIT license",
+      "error": "",
+      "steps": [],
+      "duration_s": 13.0
+    },
+    {
+      "id": "wv-041",
+      "passed": true,
+      "final_answer": "The walking time from the Eiffel Tower to the Louvre Museum is about 46 minutes.",
+      "agent_response": "The walking time from the Eiffel Tower to the Louvre Museum is about 46 minutes.",
+      "error": "",
+      "steps": [],
+      "duration_s": 17.0
+    },
+    {
+      "id": "wv-037",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "",
+      "steps": [],
+      "duration_s": 33.2
+    },
+    {
+      "id": "wv-030",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "",
+      "steps": [],
+      "duration_s": 88.6
+    },
+    {
+      "id": "wv-042",
+      "passed": true,
+      "final_answer": "Caffe Central \u2014 a coffee shop near Union Square at 133 O'Farrell St, San Francisco, rated 4.5 stars.",
+      "agent_response": "Caffe Central \u2014 a coffee shop near Union Square at 133 O'Farrell St, San Francisco, rated 4.5 stars.",
+      "error": "",
+      "steps": [],
+      "duration_s": 14.4
+    },
+    {
+      "id": "wv-043",
+      "passed": true,
+      "final_answer": "The British Museum is currently closed. Today (Sunday) it is open 10:00 AM\u20135:00 PM.",
+      "agent_response": "The British Museum is currently closed. Today (Sunday) it is open 10:00 AM\u20135:00 PM.",
+      "error": "",
+      "steps": [],
+      "duration_s": 24.6
+    },
+    {
+      "id": "wv-036",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "",
+      "steps": [],
+      "duration_s": 67.0
+    },
+    {
+      "id": "wv-046",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "",
+      "steps": [],
+      "duration_s": 30.9
+    },
+    {
+      "id": "wv-047",
+      "passed": true,
+      "final_answer": "https://www.nps.gov/yose/index.htm",
+      "agent_response": "https://www.nps.gov/yose/index.htm",
+      "error": "",
+      "steps": [],
+      "duration_s": 19.1
+    },
+    {
+      "id": "wv-048",
+      "passed": true,
+      "final_answer": "The first iPhone was released on June 29, 2007.",
+      "agent_response": "The first iPhone was released on June 29, 2007.",
+      "error": "",
+      "steps": [],
+      "duration_s": 18.4
+    },
+    {
+      "id": "wv-040",
+      "passed": true,
+      "final_answer": "\"Distributing Python Modules\" link on docs front page is effectively empty",
+      "agent_response": "\"Distributing Python Modules\" link on docs front page is effectively empty",
+      "error": "",
+      "steps": [],
+      "duration_s": 75.7
+    },
+    {
+      "id": "wv-052",
+      "passed": true,
+      "final_answer": "Show HN: Codiff, a local diff review tool \u2014 3 points.",
+      "agent_response": "Show HN: Codiff, a local diff review tool \u2014 3 points.",
+      "error": "",
+      "steps": [],
+      "duration_s": 7.9
+    },
+    {
+      "id": "wv-044",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "",
+      "steps": [],
+      "duration_s": 69.1
+    },
+    {
+      "id": "wv-049",
+      "passed": true,
+      "final_answer": "100 EUR is approximately 116 USD today (1 EUR \u2248 1.16 USD).",
+      "agent_response": "100 EUR is approximately 116 USD today (1 EUR \u2248 1.16 USD).",
+      "error": "",
+      "steps": [],
+      "duration_s": 35.8
+    },
+    {
+      "id": "wv-050",
+      "passed": true,
+      "final_answer": "My Thoughts on Bun's Rust Rewrite",
+      "agent_response": "My Thoughts on Bun's Rust Rewrite",
+      "error": "",
+      "steps": [],
+      "duration_s": 34.4
+    },
+    {
+      "id": "wv-045",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "",
+      "steps": [],
+      "duration_s": 71.0
+    },
+    {
+      "id": "wv-054",
+      "passed": true,
+      "final_answer": "The license for the Hugging Face model google-bert/bert-base-uncased is Apache 2.0.",
+      "agent_response": "The license for the Hugging Face model google-bert/bert-base-uncased is Apache 2.0.",
+      "error": "",
+      "steps": [],
+      "duration_s": 11.6
+    },
+    {
+      "id": "wv-056",
+      "passed": true,
+      "final_answer": "The IMDb user rating for The Godfather is 9.2/10.",
+      "agent_response": "The IMDb user rating for The Godfather is 9.2/10.",
+      "error": "",
+      "steps": [],
+      "duration_s": 10.1
+    },
+    {
+      "id": "wv-058",
+      "passed": true,
+      "final_answer": "The current #1 title on the IMDb Top 250 Movies chart is The Shawshank Redemption.",
+      "agent_response": "The current #1 title on the IMDb Top 250 Movies chart is The Shawshank Redemption.",
+      "error": "",
+      "steps": [],
+      "duration_s": 9.5
+    },
+    {
+      "id": "wv-059",
+      "passed": true,
+      "final_answer": "Algebra foundations",
+      "agent_response": "Algebra foundations",
+      "error": "",
+      "steps": [],
+      "duration_s": 14.7
+    },
+    {
+      "id": "wv-061",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "state: Failed to capture Playwright state: Page.title: Execution context was destroyed, most likely because",
+      "steps": [],
+      "duration_s": 1.2
+    },
+    {
+      "id": "wv-062",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "state: Failed to capture Playwright state: Page.evaluate: Execution context was destroyed, most likely beca",
+      "steps": [],
+      "duration_s": 10.0
+    },
+    {
+      "id": "wv-055",
+      "passed": true,
+      "final_answer": "PaddlePaddle",
+      "agent_response": "PaddlePaddle",
+      "error": "",
+      "steps": [],
+      "duration_s": 43.7
+    },
+    {
+      "id": "wv-053",
+      "passed": true,
+      "final_answer": "Qwen/Qwen3-0.6B \u2014 19,274,965 downloads",
+      "agent_response": "Qwen/Qwen3-0.6B \u2014 19,274,965 downloads",
+      "error": "",
+      "steps": [],
+      "duration_s": 53.8
+    },
+    {
+      "id": "wv-063",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "state: Failed to capture Playwright state: Page.evaluate: Execution context was destroyed, most likely beca",
+      "steps": [],
+      "duration_s": 5.0
+    },
+    {
+      "id": "wv-064",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "state: Failed to capture Playwright state: Page.evaluate: Execution context was destroyed, most likely beca",
+      "steps": [],
+      "duration_s": 6.4
+    },
+    {
+      "id": "wv-060",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "",
+      "steps": [],
+      "duration_s": 36.5
+    },
+    {
+      "id": "wv-051",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "",
+      "steps": [],
+      "duration_s": 91.5
+    },
+    {
+      "id": "wv-067",
+      "passed": true,
+      "final_answer": "DIY AI: How to Build a Linear Regression Model from Scratch",
+      "agent_response": "DIY AI: How to Build a Linear Regression Model from Scratch",
+      "error": "",
+      "steps": [],
+      "duration_s": 33.4
+    },
+    {
+      "id": "wv-065",
+      "passed": true,
+      "final_answer": "Title: \u201cDay 2 of Sharing Apps for People Who Need a Second Income\u201d\nAuthor: Nikhilvatsathakur",
+      "agent_response": "Title: \u201cDay 2 of Sharing Apps for People Who Need a Second Income\u201d\nAuthor: Nikhilvatsathakur",
+      "error": "",
+      "steps": [],
+      "duration_s": 39.8
+    },
+    {
+      "id": "wv-057",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "",
+      "steps": [],
+      "duration_s": 87.0
+    },
+    {
+      "id": "wv-068",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "",
+      "steps": [],
+      "duration_s": 36.8
+    },
+    {
+      "id": "wv-071",
+      "passed": true,
+      "final_answer": "Syntax:\n\nmap(callbackFn)\nmap(callbackFn, thisArg)",
+      "agent_response": "Syntax:\n\nmap(callbackFn)\nmap(callbackFn, thisArg)",
+      "error": "",
+      "steps": [],
+      "duration_s": 22.4
+    },
+    {
+      "id": "wv-073",
+      "passed": true,
+      "final_answer": "150.0.3",
+      "agent_response": "150.0.3",
+      "error": "",
+      "steps": [],
+      "duration_s": 21.8
+    },
+    {
+      "id": "wv-070",
+      "passed": true,
+      "final_answer": "On Microsoft Learn\u2019s C# page \u201cAsynchronous programming with async and await,\u201d one key guideline is: for I/O-bound work, use async and await directly and don\u2019t wrap the operation in Task.Run.",
+      "agent_response": "On Microsoft Learn\u2019s C# page \u201cAsynchronous programming with async and await,\u201d one key guideline is: for I/O-bound work, use async and await directly and don\u2019t wrap the operation in Task.Run.",
+      "error": "",
+      "steps": [],
+      "duration_s": 39.4
+    },
+    {
+      "id": "wv-074",
+      "passed": true,
+      "final_answer": "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.",
+      "agent_response": "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.",
+      "error": "",
+      "steps": [],
+      "duration_s": 20.7
+    },
+    {
+      "id": "wv-069",
+      "passed": true,
+      "final_answer": "az login [--allow-no-subscriptions] [--federated-token] [--identity] [--password] [--service-principal] [--tenant] [--use-cert-sn-issuer] [--use-device-code] [--username]",
+      "agent_response": "az login [--allow-no-subscriptions] [--federated-token] [--identity] [--password] [--service-principal] [--tenant] [--use-cert-sn-issuer] [--use-device-code] [--username]",
+      "error": "",
+      "steps": [],
+      "duration_s": 64.3
+    },
+    {
+      "id": "wv-072",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "",
+      "steps": [],
+      "duration_s": 38.8
+    },
+    {
+      "id": "wv-066",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "",
+      "steps": [],
+      "duration_s": 87.3
+    },
+    {
+      "id": "wv-080",
+      "passed": true,
+      "final_answer": "/v1/chat/completions (Responses API: /v1/responses)",
+      "agent_response": "/v1/chat/completions (Responses API: /v1/responses)",
+      "error": "",
+      "steps": [],
+      "duration_s": 11.6
+    },
+    {
+      "id": "wv-078",
+      "passed": true,
+      "final_answer": "CUDA Toolkit 13.2",
+      "agent_response": "CUDA Toolkit 13.2",
+      "error": "",
+      "steps": [],
+      "duration_s": 14.4
+    },
+    {
+      "id": "wv-075",
+      "passed": true,
+      "final_answer": "Yes \u2014 The Crown is listed on Netflix as a series (6 seasons). The visible maturity rating is 15.",
+      "agent_response": "Yes \u2014 The Crown is listed on Netflix as a series (6 seasons). The visible maturity rating is 15.",
+      "error": "",
+      "steps": [],
+      "duration_s": 30.9
+    },
+    {
+      "id": "wv-077",
+      "passed": true,
+      "final_answer": "Starting at $1999",
+      "agent_response": "Starting at $1999",
+      "error": "",
+      "steps": [],
+      "duration_s": 22.3
+    },
+    {
+      "id": "wv-082",
+      "passed": true,
+      "final_answer": "text-embedding-3-small",
+      "agent_response": "text-embedding-3-small",
+      "error": "",
+      "steps": [],
+      "duration_s": 11.3
+    },
+    {
+      "id": "wv-083",
+      "passed": true,
+      "final_answer": "Curate your kitchen shelves",
+      "agent_response": "Curate your kitchen shelves",
+      "error": "",
+      "steps": [],
+      "duration_s": 20.6
+    },
+    {
+      "id": "wv-086",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "state: Failed to capture Playwright state: Page.evaluate: Execution context was destroyed, most likely beca",
+      "steps": [],
+      "duration_s": 0.8
+    },
+    {
+      "id": "wv-079",
+      "passed": true,
+      "final_answer": "One key feature of DLSS 4 is Multi Frame Generation (MFG), which uses AI to generate additional frames to boost FPS.",
+      "agent_response": "One key feature of DLSS 4 is Multi Frame Generation (MFG), which uses AI to generate additional frames to boost FPS.",
+      "error": "",
+      "steps": [],
+      "duration_s": 36.9
+    },
+    {
+      "id": "wv-087",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "state: Failed to capture Playwright state: Page.evaluate: Execution context was destroyed, most likely beca",
+      "steps": [],
+      "duration_s": 0.8
+    },
+    {
+      "id": "wv-088",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "state: Failed to capture Playwright state: Page.evaluate: Execution context was destroyed, most likely beca",
+      "steps": [],
+      "duration_s": 0.8
+    },
+    {
+      "id": "wv-084",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "",
+      "steps": [],
+      "duration_s": 25.9
+    },
+    {
+      "id": "wv-090",
+      "passed": true,
+      "final_answer": "For questions about programming in ECMAScript (JavaScript/JS) and its different dialects/implementations (except for ActionScript). Note that JavaScript is NOT Java. Include all tags that are relevant to your question: e.g., [node.js], [jQuery], [JSON], [ReactJS], [angular], [ember.js], [vue.js], [t",
+      "agent_response": "For questions about programming in ECMAScript (JavaScript/JS) and its different dialects/implementations (except for ActionScript). Note that JavaScript is NOT Java. Include all tags that are relevant to your question: e.g., [node.js], [jQuery], [JSON], [ReactJS], [angular], [ember.js], [vue.js], [t",
+      "error": "",
+      "steps": [],
+      "duration_s": 19.6
+    },
+    {
+      "id": "wv-091",
+      "passed": true,
+      "final_answer": "How can i reuse rust's type inference for numeric types given a string representing a number",
+      "agent_response": "How can i reuse rust's type inference for numeric types given a string representing a number",
+      "error": "",
+      "steps": [],
+      "duration_s": 14.2
+    },
+    {
+      "id": "wv-076",
+      "passed": true,
+      "final_answer": "The Netflix Tudum article is about the upcoming movie \u201cRemarkably Bright Creatures.\u201d Its release date is May 8.",
+      "agent_response": "The Netflix Tudum article is about the upcoming movie \u201cRemarkably Bright Creatures.\u201d Its release date is May 8.",
+      "error": "",
+      "steps": [],
+      "duration_s": 66.9
+    },
+    {
+      "id": "wv-085",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "",
+      "steps": [],
+      "duration_s": 40.3
+    },
+    {
+      "id": "wv-093",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "",
+      "steps": [],
+      "duration_s": 18.7
+    },
+    {
+      "id": "wv-089",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "",
+      "steps": [],
+      "duration_s": 49.3
+    },
+    {
+      "id": "wv-097",
+      "passed": true,
+      "final_answer": "Tungsten has the chemical symbol W and atomic number 74.",
+      "agent_response": "Tungsten has the chemical symbol W and atomic number 74.",
+      "error": "",
+      "steps": [],
+      "duration_s": 9.4
+    },
+    {
+      "id": "wv-081",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "",
+      "steps": [],
+      "duration_s": 89.9
+    },
+    {
+      "id": "wv-092",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "",
+      "steps": [],
+      "duration_s": 46.3
+    },
+    {
+      "id": "wv-098",
+      "passed": true,
+      "final_answer": "sin(2x)",
+      "agent_response": "sin(2x)",
+      "error": "",
+      "steps": [],
+      "duration_s": 22.0
+    },
+    {
+      "id": "wv-099",
+      "passed": true,
+      "final_answer": "Channel: Warner Bros.; View count: 30M views",
+      "agent_response": "Channel: Warner Bros.; View count: 30M views",
+      "error": "",
+      "steps": [],
+      "duration_s": 24.8
+    },
+    {
+      "id": "wv-094",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "",
+      "steps": [],
+      "duration_s": 81.1
+    },
+    {
+      "id": "wv-100",
+      "passed": true,
+      "final_answer": "A Gmail-to-Slack Zapier template is \u201cSend new Gmail emails as Slack channel messages.\u201d It triggers when a new email arrives in Gmail and automatically posts it as a message in a Slack channel.",
+      "agent_response": "A Gmail-to-Slack Zapier template is \u201cSend new Gmail emails as Slack channel messages.\u201d It triggers when a new email arrives in Gmail and automatically posts it as a message in a Slack channel.",
+      "error": "",
+      "steps": [],
+      "duration_s": 75.4
+    },
+    {
+      "id": "wv-095",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "state: Failed to capture Playwright state: Page.screenshot: Timeout 30000ms exceeded.\nCall log:\n  - taking ",
+      "steps": [],
+      "duration_s": 124.2
+    },
+    {
+      "id": "wv-096",
+      "passed": false,
+      "final_answer": "",
+      "agent_response": "",
+      "error": "state: Failed to capture Playwright state: Page.screenshot: Timeout 30000ms exceeded.\nCall log:\n  - taking ",
+      "steps": [],
+      "duration_s": 181.3
+    }
+  ]
+}

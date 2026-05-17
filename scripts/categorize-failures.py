@@ -82,6 +82,7 @@ async def categorize_one(client: httpx.AsyncClient, task: dict, result: dict) ->
     user_msg = f"""Task: {task['description']}
 Expected answer: {task.get('expected_answer', task.get('success_criterion', ''))}
 Agent's final answer: {result.get('answer', result.get('final_answer', ''))[:500]}
+Error: {result.get('error', 'none')}
 
 Last tool calls:
 {json.dumps(last_5_steps, indent=2)[:2000]}

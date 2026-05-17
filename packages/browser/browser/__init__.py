@@ -6,6 +6,7 @@ from browser.errors import BrowserActionError, BrowserNotAvailable
 from browser.factory import create_browser_backend
 from browser.playwright_backend import PlaywrightBackend
 from browser.types import BrowserBackend, BrowserElement, BrowserState
+from browser.vision import VisionAssist, VisionBudgetExceeded
 
 __version__ = "0.1.0"
 
@@ -18,5 +19,7 @@ __all__ = [
     "BrowserState",
     "BrowserUseBackend",
     "PlaywrightBackend",
+    "VisionAssist",
+    "VisionBudgetExceeded",
     "create_browser_backend",
 ]

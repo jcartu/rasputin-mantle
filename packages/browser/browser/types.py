@@ -17,6 +17,8 @@ class BrowserElement:
 class BrowserState:
     url: str
     elements: list[BrowserElement]
+    title: str = ""
+    screenshot_b64: str | None = None
 
 
 class BrowserBackend(ABC):

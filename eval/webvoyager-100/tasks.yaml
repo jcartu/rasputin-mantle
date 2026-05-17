@@ -1,6 +1,5 @@
 # eval/webvoyager-100/tasks.yaml
-# 10 seed tasks. R2 ticket 006 is expected to expand this to 100, drawing from
-# the original WebVoyager benchmark task set.
+# 100 WebVoyager-style browsing tasks.
 
 tasks:
   - id: wv-001
@@ -52,3 +51,453 @@ tasks:
     description: "On Reddit, find a recent post in r/python with > 100 upvotes."
     starting_url: "https://www.reddit.com/r/python"
     success_criterion: "Response gives a post title and an upvote count > 100."
+
+  - id: wv-011
+    description: "On Allrecipes, find a highly rated chocolate chip cookie recipe and report its rating and total prep time."
+    starting_url: "https://www.allrecipes.com"
+    success_criterion: "Response includes a cookie recipe title, star rating, and prep or total time."
+
+  - id: wv-012
+    description: "On Allrecipes, find a vegetarian lasagna recipe and list two main ingredients."
+    starting_url: "https://www.allrecipes.com"
+    success_criterion: "Response includes a vegetarian lasagna recipe title and at least two ingredients."
+
+  - id: wv-013
+    description: "On Allrecipes, find a slow cooker chicken recipe with at least 4 stars and report the cook time."
+    starting_url: "https://www.allrecipes.com"
+    success_criterion: "Response includes a recipe title, rating of 4 stars or higher, and cook time."
+
+  - id: wv-014
+    description: "On Amazon, find the price of the current Kindle Paperwhite model."
+    starting_url: "https://www.amazon.com"
+    success_criterion: "Response includes a Kindle Paperwhite product name and a USD price."
+
+  - id: wv-015
+    description: "On Amazon, compare two USB-C wall chargers and report which has the higher customer rating."
+    starting_url: "https://www.amazon.com"
+    success_criterion: "Response includes two charger names, their ratings, and identifies the higher-rated one."
+
+  - id: wv-016
+    description: "On Amazon, find a 1 TB portable SSD under $100 and report its price and review count."
+    starting_url: "https://www.amazon.com"
+    success_criterion: "Response includes a 1 TB portable SSD name, price under $100, and review count."
+
+  - id: wv-017
+    description: "On Apple's website, find the starting price of the latest MacBook Air."
+    starting_url: "https://www.apple.com"
+    success_criterion: "Response includes the MacBook Air model and starting USD price."
+
+  - id: wv-018
+    description: "On Apple's website, find the battery life Apple claims for the latest iPhone Pro model."
+    starting_url: "https://www.apple.com/iphone"
+    success_criterion: "Response includes an iPhone Pro model and a battery life figure in hours."
+
+  - id: wv-019
+    description: "On Apple's support site, find how to take a screenshot on a Mac."
+    starting_url: "https://support.apple.com"
+    success_criterion: "Response includes the keyboard shortcut Shift-Command-3 or Shift-Command-4."
+
+  - id: wv-020
+    description: "On arXiv, find a recent paper about retrieval augmented generation and report its arXiv ID and title."
+    starting_url: "https://arxiv.org"
+    success_criterion: "Response includes a paper title and an arXiv ID for a RAG-related paper."
+
+  - id: wv-021
+    description: "On arXiv, find the abstract for the paper 'Attention Is All You Need' and report the first author."
+    starting_url: "https://arxiv.org"
+    success_criterion: "Response includes the first author Ashish Vaswani and mentions the abstract or paper page."
+
+  - id: wv-022
+    description: "On arXiv, search for papers by Geoffrey Hinton and report one title and submission year."
+    starting_url: "https://arxiv.org"
+    success_criterion: "Response includes a Geoffrey Hinton paper title and a year."
+
+  - id: wv-023
+    description: "On BBC News, find the current top headline in the World section."
+    starting_url: "https://www.bbc.com/news"
+    success_criterion: "Response includes a BBC World headline and indicates it is from the World section."
+
+  - id: wv-024
+    description: "On BBC Weather, find tomorrow's forecast high temperature for London."
+    starting_url: "https://www.bbc.com/weather"
+    success_criterion: "Response includes London, tomorrow, and a forecast high temperature."
+
+  - id: wv-025
+    description: "On BBC Sport, find the latest Premier League table leader."
+    starting_url: "https://www.bbc.com/sport/football/premier-league/table"
+    success_criterion: "Response includes the team currently listed first in the Premier League table."
+
+  - id: wv-026
+    description: "On Booking.com, find a hotel in Paris for a two-night stay next month and report its displayed rating and price."
+    starting_url: "https://www.booking.com"
+    success_criterion: "Response includes a Paris hotel name, guest rating, and displayed price."
+
+  - id: wv-027
+    description: "On Booking.com, search for hotels in New York City and identify one property rated 8.0 or higher."
+    starting_url: "https://www.booking.com"
+    success_criterion: "Response includes a New York City property name and rating of at least 8.0."
+
+  - id: wv-028
+    description: "On Booking.com, find a beachfront hotel in Barcelona and report one listed amenity."
+    starting_url: "https://www.booking.com"
+    success_criterion: "Response includes a Barcelona hotel name and at least one amenity."
+
+  - id: wv-029
+    description: "On Cambridge Dictionary, look up 'serendipity' and report its definition."
+    starting_url: "https://dictionary.cambridge.org"
+    success_criterion: "Response includes a definition of serendipity matching accidental discovery of good things."
+
+  - id: wv-030
+    description: "On Cambridge Dictionary, find the British pronunciation audio label for the word 'schedule'."
+    starting_url: "https://dictionary.cambridge.org"
+    success_criterion: "Response mentions the UK/British pronunciation entry for schedule."
+
+  - id: wv-031
+    description: "On Cambridge Dictionary, find an example sentence for the word 'resilient'."
+    starting_url: "https://dictionary.cambridge.org"
+    success_criterion: "Response includes an example sentence using resilient."
+
+  - id: wv-032
+    description: "On Coursera, find a beginner machine learning course and report its provider and rating."
+    starting_url: "https://www.coursera.org"
+    success_criterion: "Response includes a course title, provider, and rating."
+
+  - id: wv-033
+    description: "On Coursera, find a Python course that offers a certificate and report the estimated duration."
+    starting_url: "https://www.coursera.org"
+    success_criterion: "Response includes a Python course title, certificate availability, and duration estimate."
+
+  - id: wv-034
+    description: "On Coursera, find a data analysis course from Google and report its skill level."
+    starting_url: "https://www.coursera.org"
+    success_criterion: "Response includes a Google data analysis course title and skill level."
+
+  - id: wv-035
+    description: "On ESPN, find the latest NBA scoreboard result for the Los Angeles Lakers."
+    starting_url: "https://www.espn.com"
+    success_criterion: "Response includes the Lakers opponent and final or current score."
+
+  - id: wv-036
+    description: "On ESPN, find the current NFL standings leader in the AFC East."
+    starting_url: "https://www.espn.com/nfl/standings"
+    success_criterion: "Response includes the team listed first in the AFC East standings."
+
+  - id: wv-037
+    description: "On ESPN, find the next scheduled match for the United States men's national soccer team."
+    starting_url: "https://www.espn.com/soccer"
+    success_criterion: "Response includes an opponent and date for the next USMNT match."
+
+  - id: wv-038
+    description: "On GitHub, find the latest release version of the microsoft/vscode repository."
+    starting_url: "https://github.com"
+    success_criterion: "Response includes microsoft/vscode and a release version tag."
+
+  - id: wv-039
+    description: "On GitHub, find the license of the facebook/react repository."
+    starting_url: "https://github.com"
+    success_criterion: "Response states that facebook/react uses the MIT license."
+
+  - id: wv-040
+    description: "On GitHub, find one open issue in python/cpython labeled documentation and report its title."
+    starting_url: "https://github.com"
+    success_criterion: "Response includes an open issue title from python/cpython with a documentation label."
+
+  - id: wv-041
+    description: "On Google Maps, find the walking time from the Eiffel Tower to the Louvre Museum."
+    starting_url: "https://www.google.com/maps"
+    success_criterion: "Response includes a walking duration between the Eiffel Tower and the Louvre."
+
+  - id: wv-042
+    description: "On Google Maps, find a coffee shop near Union Square in San Francisco with at least 4 stars."
+    starting_url: "https://www.google.com/maps"
+    success_criterion: "Response includes a coffee shop name near Union Square and rating of at least 4 stars."
+
+  - id: wv-043
+    description: "On Google Maps, find the current opening hours for the British Museum."
+    starting_url: "https://www.google.com/maps"
+    success_criterion: "Response includes the British Museum and opening hours or indicates if it is currently closed."
+
+  - id: wv-044
+    description: "On Google Flights, find the cheapest round-trip flight from SFO to SEA for next month."
+    starting_url: "https://www.google.com/flights"
+    success_criterion: "Response includes a round-trip price, airline, and SFO to SEA route."
+
+  - id: wv-045
+    description: "On Google Flights, compare nonstop flight options from Chicago to Miami for a weekend next month."
+    starting_url: "https://www.google.com/flights"
+    success_criterion: "Response includes at least one nonstop airline option and a price for Chicago to Miami."
+
+  - id: wv-046
+    description: "On Google Flights, find whether there are direct flights from Boston to Reykjavik."
+    starting_url: "https://www.google.com/flights"
+    success_criterion: "Response states whether direct Boston to Reykjavik flights are available and names an airline if found."
+
+  - id: wv-047
+    description: "Using Google Search, find the official website for the National Park Service page about Yosemite."
+    starting_url: "https://www.google.com"
+    success_criterion: "Response includes the official nps.gov Yosemite URL or page title."
+
+  - id: wv-048
+    description: "Using Google Search, find the release date of the first iPhone."
+    starting_url: "https://www.google.com"
+    success_criterion: "Response includes June 29, 2007 as the first iPhone release date."
+
+  - id: wv-049
+    description: "Using Google Search, find the exchange rate from 100 EUR to USD today."
+    starting_url: "https://www.google.com"
+    success_criterion: "Response includes a USD amount for 100 EUR and indicates it is an exchange rate."
+
+  - id: wv-050
+    description: "On Hacker News, find the newest story mentioning Rust and report its title."
+    starting_url: "https://news.ycombinator.com/newest"
+    success_criterion: "Response includes a Hacker News story title mentioning or related to Rust."
+
+  - id: wv-051
+    description: "On Hacker News, find the current Ask HN thread with the most comments on the front page."
+    starting_url: "https://news.ycombinator.com"
+    success_criterion: "Response includes an Ask HN title and its comment count."
+
+  - id: wv-052
+    description: "On Hacker News, find a Show HN post from today and report its points."
+    starting_url: "https://news.ycombinator.com/show"
+    success_criterion: "Response includes a Show HN title and points count."
+
+  - id: wv-053
+    description: "On Hugging Face, find the most downloaded text-generation model this week and report its downloads."
+    starting_url: "https://huggingface.co/models"
+    success_criterion: "Response includes a model name and download count."
+
+  - id: wv-054
+    description: "On Hugging Face, find the license for the bert-base-uncased model."
+    starting_url: "https://huggingface.co"
+    success_criterion: "Response includes bert-base-uncased and its listed license."
+
+  - id: wv-055
+    description: "On Hugging Face Spaces, find a running image-to-text demo and report its creator."
+    starting_url: "https://huggingface.co/spaces"
+    success_criterion: "Response includes a Space name and creator or organization."
+
+  - id: wv-056
+    description: "On IMDb, find the user rating for the movie 'The Godfather'."
+    starting_url: "https://www.imdb.com"
+    success_criterion: "Response includes The Godfather and an IMDb user rating."
+
+  - id: wv-057
+    description: "On IMDb, find the top-billed cast members for 'The Matrix' (1999)."
+    starting_url: "https://www.imdb.com"
+    success_criterion: "Response includes at least two principal cast members from The Matrix."
+
+  - id: wv-058
+    description: "On IMDb, find the current number one title on the IMDb Top 250 Movies chart."
+    starting_url: "https://www.imdb.com/chart/top"
+    success_criterion: "Response includes the title ranked number one on IMDb Top 250."
+
+  - id: wv-059
+    description: "On Khan Academy, find the first unit in the Algebra 1 course."
+    starting_url: "https://www.khanacademy.org"
+    success_criterion: "Response includes the Algebra 1 course and the first listed unit name."
+
+  - id: wv-060
+    description: "On Khan Academy, find a lesson about photosynthesis and report its course category."
+    starting_url: "https://www.khanacademy.org"
+    success_criterion: "Response includes a photosynthesis lesson title and course or subject category."
+
+  - id: wv-061
+    description: "On Khan Academy, find the SAT math practice section and report one listed topic."
+    starting_url: "https://www.khanacademy.org/test-prep/sat"
+    success_criterion: "Response includes SAT math practice and one topic name."
+
+  - id: wv-062
+    description: "On LinkedIn, find OpenAI's company page and report its listed industry."
+    starting_url: "https://www.linkedin.com"
+    success_criterion: "Response includes OpenAI and a listed industry from LinkedIn."
+
+  - id: wv-063
+    description: "On LinkedIn, find Microsoft's company page and report its listed headquarters location."
+    starting_url: "https://www.linkedin.com"
+    success_criterion: "Response includes Microsoft and a headquarters location."
+
+  - id: wv-064
+    description: "On LinkedIn, search for Coursera's company page and report the employee count range shown."
+    starting_url: "https://www.linkedin.com"
+    success_criterion: "Response includes Coursera and an employee count or employee range."
+
+  - id: wv-065
+    description: "On Medium, find a recent article about remote work and report its title and author."
+    starting_url: "https://medium.com"
+    success_criterion: "Response includes a Medium article title about remote work and the author name."
+
+  - id: wv-066
+    description: "On Medium, find an article tagged machine-learning with at least a visible reading time."
+    starting_url: "https://medium.com/tag/machine-learning"
+    success_criterion: "Response includes an article title and reading time."
+
+  - id: wv-067
+    description: "On Medium, find a publication article from Towards Data Science and report its title."
+    starting_url: "https://medium.com/towards-data-science"
+    success_criterion: "Response includes a Towards Data Science article title."
+
+  - id: wv-068
+    description: "On Microsoft Learn, find the Python quickstart for Azure Functions and report the supported Python versions."
+    starting_url: "https://learn.microsoft.com"
+    success_criterion: "Response includes Azure Functions Python quickstart and supported Python version information."
+
+  - id: wv-069
+    description: "On Microsoft Learn, find documentation for the Azure CLI login command and report the command syntax."
+    starting_url: "https://learn.microsoft.com"
+    success_criterion: "Response includes the command az login and describes its purpose or syntax."
+
+  - id: wv-070
+    description: "On Microsoft Learn, find the C# documentation page for async and await and report one key guideline."
+    starting_url: "https://learn.microsoft.com/dotnet/csharp"
+    success_criterion: "Response includes async/await and one guideline from the Microsoft documentation."
+
+  - id: wv-071
+    description: "On MDN Web Docs, find the syntax for Array.prototype.map in JavaScript."
+    starting_url: "https://developer.mozilla.org"
+    success_criterion: "Response includes Array.prototype.map syntax or callback parameters."
+
+  - id: wv-072
+    description: "On MDN Web Docs, find browser compatibility information for CSS grid-template-columns."
+    starting_url: "https://developer.mozilla.org"
+    success_criterion: "Response includes grid-template-columns and mentions browser compatibility or baseline support."
+
+  - id: wv-073
+    description: "On Mozilla's website, find the latest stable Firefox release version."
+    starting_url: "https://www.mozilla.org/firefox"
+    success_criterion: "Response includes a Firefox release version number."
+
+  - id: wv-074
+    description: "On Netflix, find the description for the show 'Stranger Things'."
+    starting_url: "https://www.netflix.com"
+    success_criterion: "Response includes Stranger Things and a plot or show description."
+
+  - id: wv-075
+    description: "On Netflix, find whether 'The Crown' is listed as a Netflix series and report its maturity rating if visible."
+    starting_url: "https://www.netflix.com"
+    success_criterion: "Response includes The Crown and either its Netflix listing status or maturity rating."
+
+  - id: wv-076
+    description: "On Netflix Tudum, find a recent article about an upcoming Netflix movie and report its release date."
+    starting_url: "https://www.netflix.com/tudum"
+    success_criterion: "Response includes a Netflix movie title and release date from Tudum."
+
+  - id: wv-077
+    description: "On NVIDIA's website, find the starting price of the GeForce RTX 5090 or newest listed RTX 50-series GPU."
+    starting_url: "https://www.nvidia.com"
+    success_criterion: "Response includes an RTX 50-series GPU name and listed starting price."
+
+  - id: wv-078
+    description: "On NVIDIA Developer, find the latest CUDA Toolkit version."
+    starting_url: "https://developer.nvidia.com/cuda-toolkit"
+    success_criterion: "Response includes a CUDA Toolkit version number."
+
+  - id: wv-079
+    description: "On NVIDIA's website, find one key feature of DLSS 4 and report it."
+    starting_url: "https://www.nvidia.com"
+    success_criterion: "Response includes DLSS 4 and one named feature or capability."
+
+  - id: wv-080
+    description: "On OpenAI Docs, find the endpoint used for chat completions or responses and report the path."
+    starting_url: "https://platform.openai.com/docs"
+    success_criterion: "Response includes an OpenAI API endpoint path such as /v1/responses or /v1/chat/completions."
+
+  - id: wv-081
+    description: "On OpenAI Docs, find the current guide for function calling and report one required field in a tool definition."
+    starting_url: "https://platform.openai.com/docs"
+    success_criterion: "Response includes function calling and one field such as name, description, or parameters."
+
+  - id: wv-082
+    description: "On OpenAI Docs, find documentation for text embeddings and report one embedding model name."
+    starting_url: "https://platform.openai.com/docs"
+    success_criterion: "Response includes an embedding model name from OpenAI documentation."
+
+  - id: wv-083
+    description: "On Pinterest, search for small kitchen organization ideas and report one board or pin title."
+    starting_url: "https://www.pinterest.com"
+    success_criterion: "Response includes a small kitchen organization pin or board title."
+
+  - id: wv-084
+    description: "On Pinterest, find a board about minimalist home office design and report its title."
+    starting_url: "https://www.pinterest.com"
+    success_criterion: "Response includes a board or pin title about minimalist home office design."
+
+  - id: wv-085
+    description: "On Pinterest, find a dinner recipe pin for salmon and report the recipe title."
+    starting_url: "https://www.pinterest.com"
+    success_criterion: "Response includes a salmon dinner recipe pin title."
+
+  - id: wv-086
+    description: "On Reddit, find the current top post of the week in r/MachineLearning."
+    starting_url: "https://www.reddit.com/r/MachineLearning/top/?t=week"
+    success_criterion: "Response includes the post title and score or upvote count."
+
+  - id: wv-087
+    description: "On Reddit, find a recent discussion in r/travel about Japan itineraries and report the title."
+    starting_url: "https://www.reddit.com/r/travel"
+    success_criterion: "Response includes a Reddit post title related to a Japan itinerary."
+
+  - id: wv-088
+    description: "On Reddit, find the rules for r/AskHistorians and report one rule."
+    starting_url: "https://www.reddit.com/r/AskHistorians"
+    success_criterion: "Response includes one subreddit rule from r/AskHistorians."
+
+  - id: wv-089
+    description: "On Stack Overflow, find a highly voted question about Python list comprehensions and report its accepted answer status."
+    starting_url: "https://stackoverflow.com"
+    success_criterion: "Response includes a question title and whether it has an accepted answer."
+
+  - id: wv-090
+    description: "On Stack Overflow, find the tag wiki excerpt for the javascript tag."
+    starting_url: "https://stackoverflow.com/tags/javascript/info"
+    success_criterion: "Response includes a summary of the javascript tag wiki excerpt."
+
+  - id: wv-091
+    description: "On Stack Overflow, find a recent unanswered question tagged rust and report its title."
+    starting_url: "https://stackoverflow.com/questions/tagged/rust?tab=Unanswered"
+    success_criterion: "Response includes a Rust-tagged unanswered question title."
+
+  - id: wv-092
+    description: "On X, find OpenAI's latest public post and report its text summary and date."
+    starting_url: "https://x.com/OpenAI"
+    success_criterion: "Response includes a summary of a recent OpenAI post and a date or timestamp."
+
+  - id: wv-093
+    description: "On X, find the current profile bio for NASA and report it."
+    starting_url: "https://x.com/NASA"
+    success_criterion: "Response includes NASA's X profile bio or a close summary."
+
+  - id: wv-094
+    description: "On X, search for posts about WebAssembly from the last week and report one post author."
+    starting_url: "https://x.com/search"
+    success_criterion: "Response includes a WebAssembly-related post and its author handle."
+
+  - id: wv-095
+    description: "On Wikipedia, find the capital city of Kazakhstan and report the source page title."
+    starting_url: "https://en.wikipedia.org"
+    success_criterion: "Response includes Astana and the relevant Wikipedia page title."
+
+  - id: wv-096
+    description: "On Wikipedia, find the winner of the 2022 FIFA World Cup and the final score."
+    starting_url: "https://en.wikipedia.org"
+    success_criterion: "Response includes Argentina and the final score or penalty result."
+
+  - id: wv-097
+    description: "On Wikipedia, find the chemical symbol and atomic number for tungsten."
+    starting_url: "https://en.wikipedia.org"
+    success_criterion: "Response includes W and atomic number 74."
+
+  - id: wv-098
+    description: "On Wolfram Alpha, compute the derivative of sin(x) squared and report the simplified result."
+    starting_url: "https://www.wolframalpha.com"
+    success_criterion: "Response includes the derivative 2 sin(x) cos(x) or equivalent sin(2x)."
+
+  - id: wv-099
+    description: "On YouTube, find the official trailer for 'Dune: Part Two' and report the channel name and view count."
+    starting_url: "https://www.youtube.com"
+    success_criterion: "Response includes an official trailer title, channel name, and view count."
+
+  - id: wv-100
+    description: "On Zapier, find an automation template connecting Gmail to Slack and report what the Zap does."
+    starting_url: "https://zapier.com/apps"
+    success_criterion: "Response includes Gmail, Slack, and a concrete description of the automation template."

@@ -10,6 +10,7 @@ from starlette.requests import Request
 from starlette.responses import JSONResponse, Response
 
 from gateway.config import settings
+from gateway.cost_wall import CostCeilingExceeded, CostWall, default_cost_wall
 
 logger = logging.getLogger(__name__)
 
@@ -76,9 +77,10 @@ def _extract_usage_from_response(response_body: bytes | None) -> tuple[str, int,
 
 
 class CostCeilingMiddleware(BaseHTTPMiddleware):
-    def __init__(self, app) -> None:  # type: ignore[no-untyped-def]
+    def __init__(self, app, cost_wall: CostWall | None = None) -> None:  # type: ignore[no-untyped-def]
         super().__init__(app)
         self._costs: dict[str, CostIncrement] = {}
+        self._cost_wall = cost_wall or default_cost_wall
 
     async def dispatch(self, request: Request, call_next: RequestResponseEndpoint) -> Response:
         session_id = _session_id_from_request(request)
@@ -93,29 +95,33 @@ class CostCeilingMiddleware(BaseHTTPMiddleware):
             return response
 
         # Compute cost server-side from response body
-        body = response.body if hasattr(response, "body") else b""
+        body = await _response_body(response)
         usage = _extract_usage_from_response(body)
         if not usage:
-            return response
+            return _clone_response(response, body)
 
         model, input_tokens, output_tokens = usage
         dollars = _compute_cost(model, input_tokens, output_tokens)
         total_tokens = input_tokens + output_tokens
 
-        # Check cost ceiling server-side
         current = self._costs.get(session_id, CostIncrement())
-        updated = CostIncrement(
-            tokens=current.tokens + total_tokens,
-            dollars=current.dollars + dollars,
-        )
+        updated_tokens = current.tokens + total_tokens
 
-        if updated.tokens > settings.max_cost_tokens or updated.dollars > settings.max_cost_dollars:
+        try:
+            record = await self._cost_wall.check_and_record(
+                session_id,
+                model,
+                input_tokens,
+                output_tokens,
+                dollars,
+            )
+        except CostCeilingExceeded as exc:
             logger.warning(
                 "Cost ceiling exceeded for session %s: %.2f/%.2f dollars, %d/%d tokens",
                 session_id,
-                updated.dollars,
+                exc.attempted_total_usd,
                 settings.max_cost_dollars,
-                updated.tokens,
+                updated_tokens,
                 settings.max_cost_tokens,
             )
             return JSONResponse(
@@ -123,16 +129,16 @@ class CostCeilingMiddleware(BaseHTTPMiddleware):
                     "error": "cost_ceiling_exceeded",
                     "message": "Session cost ceiling exceeded",
                     "session_id": session_id,
-                    "cost_tokens": updated.tokens,
-                    "cost_dollars": round(updated.dollars, 4),
+                    "cost_tokens": updated_tokens,
+                    "cost_dollars": round(exc.attempted_total_usd, 4),
                     "max_cost_tokens": settings.max_cost_tokens,
                     "max_cost_dollars": settings.max_cost_dollars,
                 },
-                status_code=402,
+                status_code=429,
             )
 
-        self._costs[session_id] = updated
-        return response
+        self._costs[session_id] = CostIncrement(tokens=updated_tokens, dollars=record.daily_total_usd)
+        return _clone_response(response, body)
 
 
 def _session_id_from_request(request: Request) -> str | None:
@@ -143,6 +149,25 @@ def _session_id_from_request(request: Request) -> str | None:
     if match:
         return match.group(1)
     return None
+
+
+async def _response_body(response: Response) -> bytes:
+    body = getattr(response, "body", None)
+    if isinstance(body, bytes):
+        return body
+    body_parts = []
+    async for chunk in response.body_iterator:  # type: ignore[attr-defined]
+        body_parts.append(chunk)
+    return b"".join(body_parts)
+
+
+def _clone_response(response: Response, body: bytes) -> Response:
+    return Response(
+        content=body,
+        status_code=response.status_code,
+        headers=dict(response.headers),
+        media_type=response.media_type,
+    )
 
 
 cost_ceiling_middleware = CostCeilingMiddleware

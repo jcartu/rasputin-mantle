@@ -18,6 +18,9 @@ class Settings:
     debug: bool = os.environ.get("MANTLE_DEBUG", "false").lower() == "true"
     rasputin_url: str = os.environ.get("RASPUTIN_URL", "http://127.0.0.1:7777")
     rasputin_token: str = os.environ.get("RASPUTIN_TOKEN", "")
+    vllm_base_url: str = os.environ.get("VLLM_BASE_URL", "")
+    vllm_model: str = os.environ.get("VLLM_MODEL", "qwen3.6-27b")
+    vllm_api_key: str = os.environ.get("VLLM_API_KEY", "")
 
 
 settings = Settings()

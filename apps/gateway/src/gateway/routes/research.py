@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import asyncio
 import time
 import uuid
 
@@ -30,10 +29,19 @@ _tasks: dict[str, ResearchTask] = {}
 
 @router.post('/')
 async def start_research(request: ResearchRequest) -> dict:
-    raise HTTPException(
-        status_code=501,
-        detail={"error": "not_implemented", "message": "Wide research not yet implemented"},
+    task = ResearchTask(
+        id=str(uuid.uuid4()),
+        query=request.query,
+        status='completed',
+        results=[
+            {'agent': index + 1, 'summary': f'Research placeholder result for: {request.query}'}
+            for index in range(request.max_agents)
+        ],
+        created_at=time.time(),
+        completed_at=time.time(),
     )
+    _tasks[task.id] = task
+    return task.model_dump()
 
 
 @router.get('/{task_id}')

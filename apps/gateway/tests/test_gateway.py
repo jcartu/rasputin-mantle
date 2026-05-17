@@ -67,14 +67,14 @@ def test_skills_listing(tmp_path: Path) -> None:
     assert body['skills'][0]['trust_level'] == 'bundled'
 
 
-def test_cost_ceiling_middleware_returns_402_on_exceeded() -> None:
+def test_cost_ceiling_middleware_ignores_client_cost_headers() -> None:
     client = TestClient(app)
     response = client.get(
         '/api/health',
         headers={'X-Session-Id': 'session-cost-test', 'X-Session-Cost': '{"tokens": 0, "dollars": 41.0}'},
     )
-    assert response.status_code == 402
-    assert response.json()['error'] == 'cost_ceiling_exceeded'
+    assert response.status_code == 200
+    assert response.json()['status'] == 'ok'
 
 
 def test_research_start_and_get() -> None:

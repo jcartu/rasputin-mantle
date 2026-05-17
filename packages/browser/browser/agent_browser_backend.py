@@ -126,3 +126,15 @@ class AgentBrowserBackend(BrowserBackend):
 
     def close(self) -> None:
         _run_agent_browser(["close"])
+
+    def wait_for_selector(self, selector: str, state: str = "visible", timeout: int = 5000) -> bool:
+        raise BrowserActionError("wait_for_selector not supported by agent-browser")
+
+    def capture_screenshot(self, path: str | None = None) -> bytes:
+        raise BrowserActionError("capture_screenshot not supported by agent-browser")
+
+    def save_storage_state(self, path: str) -> None:
+        raise BrowserActionError("save_storage_state not supported by agent-browser")
+
+    def scroll_to(self, element_id: str) -> None:
+        raise BrowserActionError("scroll_to not supported by agent-browser")

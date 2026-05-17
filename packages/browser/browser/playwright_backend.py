@@ -2,11 +2,14 @@ from __future__ import annotations
 
 import asyncio
 import base64
+import json
+from pathlib import Path
 from typing import Any
 
 from playwright.async_api import Browser, Page, Playwright, async_playwright
+from playwright.async_api import TimeoutError as PlaywrightTimeoutError
 
-from browser.errors import BrowserActionError, BrowserNotAvailable
+from browser.errors import BrowserActionError, BrowserNotAvailable, ElementNotFoundError
 from browser.types import BrowserBackend, BrowserElement, BrowserState
 
 ELEMENT_SNAPSHOT_SCRIPT = r"""
@@ -91,12 +94,16 @@ ELEMENT_SNAPSHOT_SCRIPT = r"""
 
 
 class PlaywrightBackend(BrowserBackend):
-    def __init__(self) -> None:
+    def __init__(self, screenshot_dir: str | None = None, storage_state_path: str | None = None) -> None:
         self._playwright_cm: Any | None = None
         self._playwright: Playwright | None = None
         self._browser: Browser | None = None
         self._page: Page | None = None
         self._element_selectors: dict[str, str] = {}
+        self._elements: dict[str, BrowserElement] = {}
+        self.screenshot_dir = screenshot_dir
+        self.storage_state_path = storage_state_path
+        self.step_counter = 0
 
     def open(self, url: str) -> None:
         self._run(self._open(url))
@@ -119,6 +126,18 @@ class PlaywrightBackend(BrowserBackend):
     def close(self) -> None:
         self._run(self._close())
 
+    def wait_for_selector_sync(self, selector: str, state: str = "visible", timeout: int = 5000) -> bool:
+        return self._run(self.wait_for_selector(selector, state, timeout))
+
+    def capture_screenshot_sync(self, path: str | None = None) -> bytes:
+        return self._run(self.capture_screenshot(path))
+
+    def save_storage_state_sync(self, path: str) -> None:
+        self._run(self.save_storage_state(path))
+
+    def scroll_to_sync(self, element_id: str) -> None:
+        self._run(self.scroll_to(element_id))
+
     def _run(self, awaitable: Any) -> Any:
         try:
             asyncio.get_running_loop()
@@ -128,6 +147,9 @@ class PlaywrightBackend(BrowserBackend):
         raise BrowserActionError("PlaywrightBackend sync API cannot be called from a running event loop")
 
     async def _ensure_page(self) -> Page:
+        return await self._ensure_page_with_state(self.storage_state_path)
+
+    async def _ensure_page_with_state(self, storage_state_path: str | None = None) -> Page:
         if self._page is not None:
             return self._page
 
@@ -135,7 +157,10 @@ class PlaywrightBackend(BrowserBackend):
             self._playwright_cm = async_playwright()
             self._playwright = await self._playwright_cm.__aenter__()
             self._browser = await self._playwright.chromium.launch(headless=True)
-            self._page = await self._browser.new_page()
+            if storage_state_path is not None and Path(storage_state_path).exists():
+                self._page = await self._browser.new_page(storage_state=storage_state_path)
+            else:
+                self._page = await self._browser.new_page()
         except ImportError as exc:
             raise BrowserNotAvailable("playwright is not installed") from exc
         except Exception as exc:
@@ -147,6 +172,7 @@ class PlaywrightBackend(BrowserBackend):
         page = await self._ensure_page()
         try:
             await page.goto(url, wait_until="domcontentloaded")
+            await page.wait_for_load_state("networkidle", timeout=10000)
         except Exception as exc:
             raise BrowserActionError(f"Failed to open {url}: {exc}") from exc
 
@@ -156,6 +182,7 @@ class PlaywrightBackend(BrowserBackend):
             raw_elements = await page.evaluate(ELEMENT_SNAPSHOT_SCRIPT)
             elements: list[BrowserElement] = []
             selectors: dict[str, str] = {}
+            element_lookup: dict[str, BrowserElement] = {}
             for raw in raw_elements:
                 if not isinstance(raw, dict):
                     continue
@@ -165,16 +192,19 @@ class PlaywrightBackend(BrowserBackend):
                     continue
                 selectors[element_id] = selector
                 attrs = raw.get("attributes") if isinstance(raw.get("attributes"), dict) else {}
-                elements.append(
-                    BrowserElement(
-                        id=element_id,
-                        role=str(raw.get("role") or "unknown"),
-                        text=raw.get("text") if isinstance(raw.get("text"), str) else None,
-                        attributes={str(key): str(value) for key, value in attrs.items()},
-                    )
+                element = BrowserElement(
+                    id=element_id,
+                    role=str(raw.get("role") or "unknown"),
+                    text=raw.get("text") if isinstance(raw.get("text"), str) else None,
+                    attributes={str(key): str(value) for key, value in attrs.items()},
                 )
+                elements.append(element)
+                element_lookup[element_id] = element
             self._element_selectors = selectors
-            screenshot_b64 = base64.b64encode(await page.screenshot(full_page=True)).decode("ascii")
+            self._elements = element_lookup
+            screenshot = await page.screenshot(full_page=True)
+            await self._save_step_screenshot(screenshot)
+            screenshot_b64 = base64.b64encode(screenshot).decode("ascii")
             return BrowserState(
                 url=page.url,
                 elements=elements,
@@ -184,21 +214,52 @@ class PlaywrightBackend(BrowserBackend):
         except Exception as exc:
             raise BrowserActionError(f"Failed to capture Playwright state: {exc}") from exc
 
-    async def _click(self, element_id: str) -> None:
-        page = await self._ensure_page()
-        selector = self._selector_for(element_id)
-        try:
-            await page.locator(selector).first.click()
-        except Exception as exc:
-            raise BrowserActionError(f"Failed to click element {element_id}: {exc}") from exc
+    async def _click(self, element_id: str) -> str:
+        return await self._retry_element_action(element_id, "click", None)
 
-    async def _type_text(self, element_id: str, text: str) -> None:
+    async def _type_text(self, element_id: str, text: str) -> str:
+        return await self._retry_element_action(element_id, "type", text)
+
+    async def wait_for_selector(self, selector: str, state: str = "visible", timeout: int = 5000) -> bool:
+        page = await self._ensure_page()
+        try:
+            await page.wait_for_selector(selector, state=state, timeout=timeout)
+            return True
+        except PlaywrightTimeoutError:
+            return False
+        except Exception as exc:
+            raise BrowserActionError(f"Failed to wait for selector {selector}: {exc}") from exc
+
+    async def capture_screenshot(self, path: str | None = None) -> bytes:
+        page = await self._ensure_page()
+        try:
+            screenshot = await page.screenshot(full_page=True)
+            if path is not None:
+                target = Path(path)
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_bytes(screenshot)
+            return screenshot
+        except Exception as exc:
+            raise BrowserActionError(f"Failed to capture screenshot: {exc}") from exc
+
+    async def save_storage_state(self, path: str) -> None:
+        page = await self._ensure_page()
+        try:
+            target = Path(path)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            await page.context.storage_state(path=path)
+        except Exception as exc:
+            raise BrowserActionError(f"Failed to save storage state: {exc}") from exc
+
+    async def scroll_to(self, element_id: str) -> None:
         page = await self._ensure_page()
         selector = self._selector_for(element_id)
         try:
-            await page.locator(selector).first.fill(text)
+            await page.locator(selector).first.scroll_into_view_if_needed()
+        except ElementNotFoundError:
+            raise
         except Exception as exc:
-            raise BrowserActionError(f"Failed to type into element {element_id}: {exc}") from exc
+            raise BrowserActionError(f"Failed to scroll to element {element_id}: {exc}") from exc
 
     async def _evaluate(self, script: str) -> Any:
         page = await self._ensure_page()
@@ -219,9 +280,70 @@ class PlaywrightBackend(BrowserBackend):
             self._playwright = None
             self._playwright_cm = None
             self._element_selectors = {}
+            self._elements = {}
 
     def _selector_for(self, element_id: str) -> str:
         selector = self._element_selectors.get(element_id)
         if selector is None:
-            raise BrowserActionError(f"Unknown element id: {element_id}; call get_state() before interacting")
+            raise ElementNotFoundError(f"Unknown element id: {element_id}; call get_state() before interacting")
         return selector
+
+    async def _retry_element_action(self, element_id: str, action: str, text: str | None) -> str:
+        last_error: BrowserActionError | None = None
+        delays = (0.5, 1.0, 2.0)
+        for attempt in range(3):
+            try:
+                return await self._try_element_action(element_id, action, text)
+            except BrowserActionError as exc:
+                last_error = exc
+                try:
+                    await self._get_state()
+                except BrowserActionError:
+                    pass
+                if attempt < 2:
+                    await asyncio.sleep(delays[attempt])
+        if last_error is not None:
+            raise last_error
+        raise BrowserActionError(f"Failed to {action} element {element_id}")
+
+    async def _try_element_action(self, element_id: str, action: str, text: str | None) -> str:
+        page = await self._ensure_page()
+        strategy_errors: list[str] = []
+        for strategy, locator in self._locators_for(element_id, page):
+            try:
+                if action == "click":
+                    await locator.click()
+                elif action == "type" and text is not None:
+                    await locator.fill(text)
+                else:
+                    raise BrowserActionError(f"Unsupported element action: {action}")
+                return strategy
+            except Exception as exc:
+                strategy_errors.append(f"{strategy}: {exc}")
+        if not strategy_errors:
+            raise ElementNotFoundError(f"No selector strategies available for element {element_id}")
+        raise BrowserActionError(f"Failed to {action} element {element_id}: {'; '.join(strategy_errors)}")
+
+    def _locators_for(self, element_id: str, page: Page) -> list[tuple[str, Any]]:
+        selector = self._selector_for(element_id)
+        element = self._elements.get(element_id)
+        strategies: list[tuple[str, Any]] = [("primary", page.locator(selector).first)]
+        if element is None:
+            return strategies
+        if element.role and element.text:
+            strategies.append(("role", page.get_by_role(element.role, name=element.text).first))
+        if element.text:
+            strategies.append(("text", page.locator(f"text={json.dumps(element.text)}").first))
+        aria_label = element.attributes.get("aria-label")
+        if aria_label:
+            strategies.append(("label", page.get_by_label(aria_label).first))
+        return strategies
+
+    async def _save_step_screenshot(self, screenshot: bytes) -> None:
+        if self.screenshot_dir is None:
+            return
+        target_dir = Path(self.screenshot_dir)
+        target_dir.mkdir(parents=True, exist_ok=True)
+        target = target_dir / f"step-{self.step_counter}.png"
+        target.write_bytes(screenshot)
+        self.step_counter += 1

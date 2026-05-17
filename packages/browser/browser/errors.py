@@ -7,3 +7,7 @@ class BrowserNotAvailable(Exception):
 
 class BrowserActionError(Exception):
     pass
+
+
+class ElementNotFoundError(BrowserActionError):
+    pass

@@ -179,8 +179,8 @@ async def _execute_action(browser: PlaywrightBackend, action: AgentAction) -> tu
             element_id = str(args.get("element_id") or args.get("id") or "")
             if not element_id:
                 raise ValueError("click requires args.element_id")
-            await browser._click(element_id)  # noqa: SLF001
-            return f"Clicked {element_id}", None
+            strategy = await browser._click(element_id)  # noqa: SLF001
+            return f"Clicked {element_id} (strategy: {strategy})", None
         if name == "type":
             element_id = str(args.get("element_id") or args.get("id") or "")
             text = str(args.get("text") or "")
@@ -188,8 +188,8 @@ async def _execute_action(browser: PlaywrightBackend, action: AgentAction) -> tu
                 raise ValueError("type requires args.element_id")
             if len(text) > TYPE_TEXT_MAX_CHARS:
                 raise ValueError(f"type text exceeds {TYPE_TEXT_MAX_CHARS} characters")
-            await browser._type_text(element_id, text)  # noqa: SLF001
-            return f"Typed into {element_id}", None
+            strategy = await browser._type_text(element_id, text)  # noqa: SLF001
+            return f"Typed into {element_id} (strategy: {strategy})", None
         if name == "evaluate":
             script = _required_arg(args, "script")
             _validate_evaluate_script(script)

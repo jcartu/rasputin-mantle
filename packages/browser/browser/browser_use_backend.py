@@ -77,3 +77,15 @@ class BrowserUseBackend(BrowserBackend):
 
     def close(self) -> None:
         _run_browser_use(["close"])
+
+    def wait_for_selector(self, selector: str, state: str = "visible", timeout: int = 5000) -> bool:
+        raise BrowserActionError("wait_for_selector not supported by browser-use")
+
+    def capture_screenshot(self, path: str | None = None) -> bytes:
+        raise BrowserActionError("capture_screenshot not supported by browser-use")
+
+    def save_storage_state(self, path: str) -> None:
+        raise BrowserActionError("save_storage_state not supported by browser-use")
+
+    def scroll_to(self, element_id: str) -> None:
+        raise BrowserActionError("scroll_to not supported by browser-use")

@@ -12,12 +12,16 @@ from browser.types import BrowserBackend
 BrowserBackendName = Literal["agent-browser", "browser-use", "playwright"]
 
 
-def create_browser_backend(backend: BrowserBackendName | None = None) -> BrowserBackend:
+def create_browser_backend(
+    backend: BrowserBackendName | None = None,
+    vision_api_key: str | None = None,
+) -> BrowserBackend:
     selected = backend or os.environ.get("MANTLE_BROWSER_BACKEND", "agent-browser")
+    vision_key = vision_api_key or os.environ.get("ANTHROPIC_API_KEY")
     if selected == "agent-browser":
         return AgentBrowserBackend()
     if selected == "browser-use":
         return BrowserUseBackend()
     if selected == "playwright":
-        return PlaywrightBackend()
+        return PlaywrightBackend(vision_api_key=vision_key)
     raise BrowserActionError(f"Unsupported browser backend: {selected}")

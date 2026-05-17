@@ -11,7 +11,8 @@ class BrowserElement:
     role: str
     text: str | None = None
     attributes: dict[str, str] = field(default_factory=dict)
-
+    bbox: dict[str, int] | None = None  # {x, y, w, h} from vision fallback
+    source: str = "dom"  # "dom" | "vision"
 
 @dataclass
 class BrowserState:

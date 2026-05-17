@@ -11,6 +11,7 @@ from playwright.async_api import TimeoutError as PlaywrightTimeoutError
 
 from browser.errors import BrowserActionError, BrowserNotAvailable, ElementNotFoundError
 from browser.types import BrowserBackend, BrowserElement, BrowserState
+from browser.vision import VisionAssist, VisionBudgetExceeded
 
 ELEMENT_SNAPSHOT_SCRIPT = r"""
 () => {
@@ -94,7 +95,12 @@ ELEMENT_SNAPSHOT_SCRIPT = r"""
 
 
 class PlaywrightBackend(BrowserBackend):
-    def __init__(self, screenshot_dir: str | None = None, storage_state_path: str | None = None) -> None:
+    def __init__(
+        self,
+        screenshot_dir: str | None = None,
+        storage_state_path: str | None = None,
+        vision_api_key: str | None = None,
+    ) -> None:
         self._playwright_cm: Any | None = None
         self._playwright: Playwright | None = None
         self._browser: Browser | None = None
@@ -104,6 +110,7 @@ class PlaywrightBackend(BrowserBackend):
         self.screenshot_dir = screenshot_dir
         self.storage_state_path = storage_state_path
         self.step_counter = 0
+        self._vision: VisionAssist | None = VisionAssist(vision_api_key) if vision_api_key else None
 
     def open(self, url: str) -> None:
         self._run(self._open(url))
@@ -205,6 +212,15 @@ class PlaywrightBackend(BrowserBackend):
             screenshot = await page.screenshot(full_page=True)
             await self._save_step_screenshot(screenshot)
             screenshot_b64 = base64.b64encode(screenshot).decode("ascii")
+            # Hybrid fallback: if DOM extraction returned nothing, try vision
+            if not elements and self._vision is not None:
+                try:
+                    vision_elements = await self._vision_fallback(screenshot)
+                    elements.extend(vision_elements)
+                except VisionBudgetExceeded:
+                    pass  # budget exhausted, return empty state
+                except Exception:
+                    pass  # vision fallback failed, return empty state
             return BrowserState(
                 url=page.url,
                 elements=elements,
@@ -347,3 +363,50 @@ class PlaywrightBackend(BrowserBackend):
         target = target_dir / f"step-{self.step_counter}.png"
         target.write_bytes(screenshot)
         self.step_counter += 1
+
+    async def _vision_fallback(self, screenshot: bytes) -> list[BrowserElement]:
+        """Fallback: use vision to find interactive elements when DOM is empty."""
+        prompt = (
+            "Find all interactive elements on this page (buttons, links, inputs, textareas, selects). "
+            "Return a JSON array of objects with keys: role, text, x, y, w, h. "
+            "If no interactive elements are visible, return an empty array."
+        )
+        result = await self._vision._call_vision(screenshot, prompt, "find_all_elements")
+        if not isinstance(result, list):
+            # Handle raw_text fallback or single object
+            if isinstance(result, dict) and "raw_text" in result:
+                return []
+            return []
+        elements: list[BrowserElement] = []
+        for i, item in enumerate(result):
+            if not isinstance(item, dict):
+                continue
+            role = item.get("role", "unknown")
+            text = item.get("text")
+            bbox = {
+                "x": int(item.get("x", 0)),
+                "y": int(item.get("y", 0)),
+                "w": int(item.get("w", 0)),
+                "h": int(item.get("h", 0)),
+            }
+            elements.append(
+                BrowserElement(
+                    id=f"vision-{i}",
+                    role=str(role),
+                    text=text if isinstance(text, str) else None,
+                    bbox=bbox,
+                    source="vision",
+                )
+            )
+        return elements
+
+    def reset_vision_task(self) -> None:
+        """Reset vision budget for a new task."""
+        if self._vision is not None:
+            self._vision.reset_task()
+
+    def get_vision_cost_report(self) -> dict:
+        """Return vision cost telemetry."""
+        if self._vision is None:
+            return {"enabled": False}
+        return {"enabled": True, **self._vision.get_cost_report()}

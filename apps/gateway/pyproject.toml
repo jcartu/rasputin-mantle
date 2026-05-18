@@ -16,6 +16,8 @@ dependencies = [
 "mantle-skills",
 "mantle-browser",
 "mantle-shared",
+"mantle-slack-integration",
+"mantle-email-integration",
 ]
 
 [tool.ruff]

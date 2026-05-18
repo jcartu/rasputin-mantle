@@ -1,3 +1,5 @@
+"use client";
+
 import { Textarea } from '@/components/ui/textarea';
 
 export default function TextareaVisualTest() {

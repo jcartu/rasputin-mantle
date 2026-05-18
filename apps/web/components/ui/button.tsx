@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'ghost' | 'destructive' | 'link';
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'destructive' | 'link';
   size?: 'xs' | 'sm' | 'md' | 'lg';
   iconLeft?: React.ReactNode;
   iconRight?: React.ReactNode;
@@ -58,6 +58,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             border: 'none',
           };
         case 'secondary':
+        case 'outline':
           return {
             backgroundColor: 'var(--color-background-subtle)',
             color: 'var(--color-foreground)',

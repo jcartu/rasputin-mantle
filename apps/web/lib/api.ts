@@ -26,6 +26,7 @@ export interface SessionInfo {
   status: string;
   created_at: number;
   sandbox_id: string | null;
+  cost_dollars?: number;
 }
 
 export interface ExecRequest {

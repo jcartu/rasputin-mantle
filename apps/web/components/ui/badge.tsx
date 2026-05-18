@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
-  variant?: 'default' | 'success' | 'warn' | 'error' | 'outline';
+  variant?: 'default' | 'secondary' | 'success' | 'warn' | 'error' | 'outline';
   size?: 'sm' | 'md';
 }
 
@@ -29,6 +29,7 @@ export const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(
         color = 'var(--color-foreground-muted)';
         border = '1px solid var(--color-border-strong)';
         break;
+      case 'secondary':
       case 'default':
       default:
         backgroundColor = 'var(--color-muted)';

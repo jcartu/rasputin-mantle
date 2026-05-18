@@ -124,7 +124,7 @@ export default function AppHomePage() {
                   <CardContent>
                     <div className="flex items-center justify-between text-sm text-muted-foreground">
                       <span>Status: {session.status}</span>
-                      <span>${session.cost_dollars.toFixed(4)}</span>
+                      <span>${(session.cost_dollars ?? 0).toFixed(4)}</span>
                     </div>
                   </CardContent>
                 </Card>

@@ -10,10 +10,7 @@
 <br/>
 
 <p align="center">
-  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect width="48" height="48" rx="10" fill="#0C1217"/>
-    <path d="M14 34V14h4v16h-4zm10 0V14h4v16h-4zm10 0V14h4v16h-4z" fill="#14B8A6"/>
-  </svg>
+  <img src="assets/brand/logo.jpg" alt="Rasputin Mantle logo" width="64" height="64" />
 </p>
 
 <h1 align="center">Rasputin Mantle</h1>
@@ -61,6 +58,11 @@ One line. The installer clones the repo, configures your API keys, brings up the
 
 ---
 
+
+<p align="center">
+  <img src="assets/brand/comparison.jpg" alt="Manus vs Rasputin Mantle: proprietary closed system vs open-source self-hosted" width="100%" />
+</p>
+
 ## What this is
 
 Rasputin Mantle is a self-hosted, MIT-licensed agent platform. The orchestration runs on your machine. The model spend lives in your account. No SaaS dependency, no billing layer, no opaque backend.
@@ -81,90 +83,15 @@ Underneath, the engine remains:
 - **MCP host** — JSON-RPC 2.0, stdio + WebSocket
 - **Tauri 2 desktop** — Mac DMG, Linux DEB/RPM, Windows MSI
 
+<p align="center">
+  <img src="assets/brand/stack.jpg" alt="Technology stack: Next.js, FastAPI, Playwright, Docker, Qdrant, Postgres" width="100%" />
+</p>
 ---
 
 ## Architecture
 
 <p align="center">
-  <svg width="100%" viewBox="0 0 800 420" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width:800px;">
-    <style>
-      .mantle-box { fill: #111820; stroke: #1E2833; stroke-width: 1; rx: 6; }
-      .mantle-label { fill: #E8EDF2; font-family: IBM Plex Mono, monospace; font-size: 11px; }
-      .mantle-sublabel { fill: #8B95A2; font-family: IBM Plex Mono, monospace; font-size: 9px; }
-      .mantle-accent { stroke: #14B8A6; stroke-width: 1.5; }
-      .mantle-line { stroke: #2A3644; stroke-width: 1; }
-      .mantle-arrow { fill: #2A3644; }
-    </style>
-
-    <!-- Interface Layer -->
-    <rect x="200" y="20" width="400" height="60" class="mantle-box"/>
-    <text x="400" y="42" class="mantle-label" text-anchor="middle">Interface</text>
-    <text x="400" y="58" class="mantle-sublabel" text-anchor="middle">Next.js 15 · React 19 · Tauri 2 · Tailwind v4</text>
-
-    <!-- Gateway Layer -->
-    <rect x="200" y="110" width="400" height="60" class="mantle-box mantle-accent"/>
-    <text x="400" y="132" class="mantle-label" text-anchor="middle">Gateway</text>
-    <text x="400" y="148" class="mantle-sublabel" text-anchor="middle">FastAPI · sessions · cost wall · SSE · routes</text>
-
-    <!-- Agent Layer -->
-    <rect x="40" y="200" width="160" height="50" class="mantle-box"/>
-    <text x="120" y="222" class="mantle-label" text-anchor="middle">Browser</text>
-    <text x="120" y="236" class="mantle-sublabel" text-anchor="middle">Playwright + Chromium</text>
-
-    <rect x="220" y="200" width="160" height="50" class="mantle-box"/>
-    <text x="300" y="222" class="mantle-label" text-anchor="middle">CodeAct</text>
-    <text x="300" y="236" class="mantle-sublabel" text-anchor="middle">Python action loop</text>
-
-    <rect x="400" y="200" width="160" height="50" class="mantle-box"/>
-    <text x="480" y="222" class="mantle-label" text-anchor="middle">Wide Research</text>
-    <text x="480" y="236" class="mantle-sublabel" text-anchor="middle">10-way parallel dispatch</text>
-
-    <rect x="580" y="200" width="160" height="50" class="mantle-box"/>
-    <text x="660" y="222" class="mantle-label" text-anchor="middle">Skills</text>
-    <text x="660" y="236" class="mantle-sublabel" text-anchor="middle">SKILL.md registry</text>
-
-    <!-- Runtime Layer -->
-    <rect x="100" y="290" width="180" height="50" class="mantle-box"/>
-    <text x="190" y="312" class="mantle-label" text-anchor="middle">Sandbox</text>
-    <text x="190" y="326" class="mantle-sublabel" text-anchor="middle">Docker · non-root · 512 MB</text>
-
-    <rect x="310" y="290" width="180" height="50" class="mantle-box"/>
-    <text x="400" y="312" class="mantle-label" text-anchor="middle">Voice</text>
-    <text x="400" y="326" class="mantle-sublabel" text-anchor="middle">Whisper + Kokoro</text>
-
-    <rect x="520" y="290" width="180" height="50" class="mantle-box"/>
-    <text x="610" y="312" class="mantle-label" text-anchor="middle">MCP Host</text>
-    <text x="610" y="326" class="mantle-sublabel" text-anchor="middle">JSON-RPC 2.0</text>
-
-    <!-- Foundation Layer -->
-    <rect x="200" y="370" width="400" height="40" class="mantle-box"/>
-    <text x="400" y="395" class="mantle-label" text-anchor="middle">postgres · redis · qdrant · falkordb · rasputin-memory</text>
-
-    <!-- Arrows -->
-    <line x1="400" y1="80" x2="400" y2="110" class="mantle-line"/>
-    <polygon points="396,108 404,108 400,116" class="mantle-arrow"/>
-
-    <line x1="400" y1="170" x2="120" y2="200" class="mantle-line"/>
-    <polygon points="117,197 120,205 123,197" class="mantle-arrow"/>
-
-    <line x1="400" y1="170" x2="300" y2="200" class="mantle-line"/>
-    <polygon points="297,197 300,205 303,197" class="mantle-arrow"/>
-
-    <line x1="400" y1="170" x2="480" y2="200" class="mantle-line"/>
-    <polygon points="477,197 480,205 483,197" class="mantle-arrow"/>
-
-    <line x1="400" y1="170" x2="660" y2="200" class="mantle-line"/>
-    <polygon points="657,197 660,205 663,197" class="mantle-arrow"/>
-
-    <line x1="120" y1="250" x2="190" y2="290" class="mantle-line"/>
-    <polygon points="187,287 190,295 193,287" class="mantle-arrow"/>
-
-    <line x1="300" y1="250" x2="190" y2="290" class="mantle-line"/>
-    <polygon points="187,287 190,295 193,287" class="mantle-arrow"/>
-
-    <line x1="400" y1="340" x2="400" y2="370" class="mantle-line"/>
-    <polygon points="396,367 400,373 404,367" class="mantle-arrow"/>
-  </svg>
+  <img src="assets/brand/architecture.jpg" alt="Five-layer architecture: Interface, Gateway, Agent Loop, Runtime, Foundation" width="100%" />
 </p>
 
 Five layers. Interface → Gateway → Agent Loop → Sandboxes → Foundation. Every layer is self-hostable. Cloud APIs are swappable backends, not requirements.
@@ -176,48 +103,7 @@ Five layers. Interface → Gateway → Agent Loop → Sandboxes → Foundation. 
 ### WebVoyager-300 — measured, reproducible
 
 <p align="center">
-  <svg width="100%" viewBox="0 0 600 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width:600px;">
-    <style>
-      .bar-bg { fill: #111820; rx: 4; }
-      .bar-fill { fill: #14B8A6; rx: 4; transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
-      .bar-label { fill: #8B95A2; font-family: IBM Plex Mono, monospace; font-size: 10px; }
-      .bar-value { fill: #E8EDF2; font-family: IBM Plex Mono, monospace; font-size: 11px; font-weight: 600; }
-      .bar-line { stroke: #2A3644; stroke-width: 0.5; stroke-dasharray: 2 2; }
-    </style>
-
-    <!-- Grid lines -->
-    <line x1="180" y1="20" x2="180" y2="180" class="bar-line"/>
-    <text x="175" y="15" class="bar-label" text-anchor="end">25%</text>
-
-    <line x1="260" y1="20" x2="260" y2="180" class="bar-line"/>
-    <text x="255" y="15" class="bar-label" text-anchor="end">50%</text>
-
-    <line x1="340" y1="20" x2="340" y2="180" class="bar-line"/>
-    <text x="335" y="15" class="bar-label" text-anchor="end">75%</text>
-
-    <line x1="420" y1="20" x2="420" y2="180" class="bar-line"/>
-    <text x="415" y="15" class="bar-label" text-anchor="end">100%</text>
-
-    <!-- Opus 4.6: 78% -->
-    <text x="170" y="48" class="bar-label" text-anchor="end">Opus 4.6</text>
-    <rect x="180" y="36" width="273" height="20" class="bar-fill"/>
-    <text x="460" y="51" class="bar-value">78.00%</text>
-
-    <!-- Sonnet 4.6: 74.33% -->
-    <text x="170" y="83" class="bar-label" text-anchor="end">Sonnet 4.6</text>
-    <rect x="180" y="71" width="260" height="20" class="bar-fill" style="fill: #0D9488;"/>
-    <text x="446" y="86" class="bar-value">74.33%</text>
-
-    <!-- GPT-5.5: 70% -->
-    <text x="170" y="118" class="bar-label" text-anchor="end">GPT-5.5</text>
-    <rect x="180" y="106" width="246" height="20" class="bar-fill" style="fill: #0F766E;"/>
-    <text x="432" y="121" class="bar-value">70.00%</text>
-
-    <!-- Kimi K2.6: 69.33% -->
-    <text x="170" y="153" class="bar-label" text-anchor="end">Kimi K2.6</text>
-    <rect x="180" y="141" width="243" height="20" class="bar-fill" style="fill: #115E59;"/>
-    <text x="429" y="156" class="bar-value">69.33%</text>
-  </svg>
+  <img src="assets/brand/benchmark.jpg" alt="WebVoyager-300 pass rate by planner model: Opus 4.6 leads at 78%" width="100%" />
 </p>
 
 Same agent loop, same browser, same sandbox. The only variable is the planning model.
@@ -309,6 +195,10 @@ Ten sandboxed subagents fan out in parallel via `asyncio.gather`. A merger colla
 
 ## Engineering invariants
 
+<p align="center">
+  <img src="assets/brand/invariants.jpg" alt="Eight engineering invariants: self-hostable, license-clean, sandboxed, chromium sandbox, cost ceiling, reversible, localhost bind, atomic state" width="100%" />
+</p>
+
 These rules the codebase will not violate. Enforced by pre-commit hooks, the auditor, or both.
 
 1. **Everything is self-hostable.** No required SaaS.
@@ -334,6 +224,10 @@ exec_timeout = 120
 ---
 
 ## Honest gaps
+
+<p align="center">
+  <img src="assets/brand/gaps.jpg" alt="Honest gaps: WebVoyager-300 at 78%, voice p95 latency, CPU STT, Tauri AppImage skipped" width="100%" />
+</p>
 
 - **WebVoyager-300** — Best result is 78% with Opus 4.6. The benchmark is hard. Cheaper planners fall short (Qwen3-235B at 12% is the floor).
 - **Voice latency p95** — 2153 ms, elevated by Kokoro's first-iteration cold start. p50 of 365 ms is the steady-state number.
@@ -396,7 +290,20 @@ pnpm --filter web dev   # http://127.0.0.1:3000
 
 [MIT](LICENSE). Every dependency is OSI-approved. The `license-review` CI gate refuses non-compatible licenses.
 
+
+<p align="center">
+  <img src="assets/brand/phase-journey.jpg" alt="Development phases R0 through R6: Bootstrap, Audit, Browser, Gateway, Frontend, Memory, Voice" width="100%" />
+</p>
+
 ---
+
+<p align="center">
+  <img src="assets/brand/logo.jpg" alt="Rasputin Mantle logo" width="64" height="64" />
+  <br/><br/>
+  <sub>Hand it a goal. Watch it work. Keep the keys.</sub>
+  <br/>
+  <sub>Brand imagery generated with <a href="https://ai.google.dev/gemini">Gemini</a>.</sub>
+</p>
 
 <br/>
 

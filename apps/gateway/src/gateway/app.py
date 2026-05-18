@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+# ruff: noqa: E402,I001
+
 import os
 from dotenv import load_dotenv
 from fastapi import FastAPI
@@ -15,7 +17,10 @@ from gateway.routes.agent import router as agent_router
 from gateway.routes.files import router as files_router
 from gateway.routes.mcp import router as mcp_router
 from gateway.routes.memory import router as memory_router
+from gateway.routes.neko_session import router as neko_session_router
 from gateway.routes.research import router as research_router
+from gateway.routes.sandbox_files import router as sandbox_files_router
+from gateway.routes.sandbox_watch import router as sandbox_watch_router
 from gateway.routes.scheduler import router as scheduler_router
 from gateway.routes.sessions import router as sessions_router
 from gateway.routes.skills import router as skills_router
@@ -33,6 +38,9 @@ app.include_router(voice_router, prefix="/api/voice")
 app.include_router(mcp_router, prefix="/api/mcp")
 app.include_router(absorb_router, prefix="/api/absorb")
 app.include_router(agent_router, prefix="/api/agent")
+app.include_router(sandbox_files_router)
+app.include_router(sandbox_watch_router)
+app.include_router(neko_session_router)
 
 
 @app.get("/api/health")

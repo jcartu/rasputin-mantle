@@ -26,10 +26,10 @@
 <br/>
 
 <p align="center">
-  <a href="#quick-start">Quick Start</a> ·
+  <a href="#quick-start">Quick start</a> ·
   <a href="#architecture">Architecture</a> ·
   <a href="#performance">Performance</a> ·
-  <a href="#what-ships-in-v1.2">v1.2 Release</a> ·
+  <a href="#what-ships-in-v12">v1.2</a> ·
   <a href="#engineering-invariants">Invariants</a> ·
   <a href="#honest-gaps">Gaps</a>
 </p>
@@ -116,7 +116,7 @@ Same agent loop, same browser, same sandbox. The only variable is the planning m
 | **Memory (LoCoMo)** | **72.40%** | — |
 | **Lighthouse (landing)** | **97** | 95 |
 
-Full eval artifacts in [`MANTLE_V1_1_RELEASED.md`](MANTLE_V1_1_RELEASED.md) and [`MANTLE_V1_2_RELEASED.md`](MANTLE_V1_2_RELEASED.md).
+Full eval artifacts in [`MANTLE_V1_1_RELEASED.md`](MANTLE_V1_1_RELEASED.md). Lighthouse scores and cost summary in [`MANTLE_V1_2_RELEASED.md`](MANTLE_V1_2_RELEASED.md).
 
 ---
 
@@ -229,7 +229,7 @@ exec_timeout = 120
   <img src="assets/brand/gaps.jpg" alt="Honest gaps: WebVoyager-300 at 78%, voice p95 latency, CPU STT, Tauri AppImage skipped" width="100%" />
 </p>
 
-- **WebVoyager-300** — Best result is 78% with Opus 4.6. The benchmark is hard. Cheaper planners fall short (Qwen3-235B at 12% is the floor).
+- **WebVoyager-300** — Best result is 78% with Opus 4.6. The benchmark is hard. Kimi K2.6 at 69.33% is the floor on the -300 suite. (On the older WebVoyager-100, local Qwen3-235B bottomed out at 12%.)
 - **Voice latency p95** — 2153 ms, elevated by Kokoro's first-iteration cold start. p50 of 365 ms is the steady-state number.
 - **STT on CPU** — Faster-Whisper at `int8` runs roughly real-time. Sub-100 ms STT requires a GPU.
 - **Tauri AppImage** — DEB and RPM compile. AppImage bundling fails on icon manifest and is skipped.
@@ -305,8 +305,3 @@ pnpm --filter web dev   # http://127.0.0.1:3000
   <sub>Brand imagery generated with <a href="https://ai.google.dev/gemini">Gemini</a>.</sub>
 </p>
 
-<br/>
-
-<p align="center">
-  <sub>Hand it a goal. Watch it work. Keep the keys.</sub>
-</p>

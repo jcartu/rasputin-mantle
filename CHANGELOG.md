@@ -2,10 +2,10 @@
 
 All notable changes to Rasputin Mantle are documented here. The format is adapted from [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.2.0] — 2026-05-18
 
 ### Added
-- Brand identity and visual asset set (`assets/brand/`) generated with Nano Banana 2 (`gemini-3.1-flash-image-preview`).
+- Brand identity and visual asset set (`assets/brand/`) regenerated with Nano Banana 2 (`gemini-3.1-flash-image-preview`) — teal-sage palette.
 - Comprehensive `README.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, `CHANGELOG.md`.
 - `.github/ISSUE_TEMPLATE/` and `.github/PULL_REQUEST_TEMPLATE.md`.
 

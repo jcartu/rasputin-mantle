@@ -17,6 +17,7 @@ import httpx
 import yaml
 from playwright.async_api import async_playwright
 
+PLANNER_BACKEND = os.environ.get("PLANNER_BACKEND", "openai")  # openai or anthropic
 GPT_MODEL = os.environ.get("PLANNER_MODEL", "gpt-5.5")
 OPENAI_KEY = os.environ.get("OPENAI_API_KEY", "")
 ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
@@ -55,36 +56,59 @@ async def plan_next_action(
         "state": state,
         "previous_steps": previous_steps[-5:],
     }
-    resp = await client.post(
-        "https://api.openai.com/v1/chat/completions",
-        headers={
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {OPENAI_KEY}",
-        },
-        json={
-            "model": GPT_MODEL,
-            "max_completion_tokens": 8192,
-            "reasoning_effort": "high",
-            "messages": [
-                {"role": "system", "content": SYSTEM_PROMPT},
-                {"role": "user", "content": json.dumps(prompt, separators=(",", ":"))},
-            ],
-        },
-        timeout=120,
-    )
-    resp.raise_for_status()
-    content = resp.json()["choices"][0]["message"]["content"]
-    # Parse JSON from response - handle GPT-5.5 multi-line/thinking output
+
+    if PLANNER_BACKEND == "anthropic":
+        # Anthropic planner
+        resp = await client.post(
+            "https://api.anthropic.com/v1/messages",
+            headers={
+                "x-api-key": ANTHROPIC_KEY,
+                "anthropic-version": "2023-06-01",
+                "content-type": "application/json",
+            },
+            json={
+                "model": GPT_MODEL,  # e.g. claude-sonnet-4-6
+                "max_tokens": 8192,
+                "messages": [
+                    {"role": "user", "content": SYSTEM_PROMPT + "\n\n" + json.dumps(prompt, separators=(",", ":"))},
+                ],
+            },
+            timeout=120,
+        )
+        resp.raise_for_status()
+        content = resp.json()["content"][0]["text"]
+    else:
+        # OpenAI planner (default)
+        resp = await client.post(
+            "https://api.openai.com/v1/chat/completions",
+            headers={
+                "Content-Type": "application/json",
+                "Authorization": f"Bearer {OPENAI_KEY}",
+            },
+            json={
+                "model": GPT_MODEL,
+                "max_completion_tokens": 8192,
+                "reasoning_effort": "high",
+                "messages": [
+                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {"role": "user", "content": json.dumps(prompt, separators=(",", ":"))},
+                ],
+            },
+            timeout=120,
+        )
+        resp.raise_for_status()
+        content = resp.json()["choices"][0]["message"]["content"]
+
+    # Parse JSON from response - handle multi-line/thinking output
     candidate = content.strip()
     # Strip thinking tags if present
     import re
     candidate = re.sub(r'<thinking>.*?</thinking>', '', candidate, flags=re.DOTALL)
-    candidate = re.sub(r'<think>.*?</think>', '', candidate, flags=re.DOTALL)
+    candidate = re.sub(r'\x08.*?\x0e', '', candidate, flags=re.DOTALL)
     candidate = candidate.strip()
     # Extract code block
     if candidate.startswith("```"):
         lines = candidate.splitlines()
-        # Find first line that's not ```
         start_idx = 1
         end_idx = len(lines) - 1 if lines[-1].strip() == "```" else len(lines)
         candidate = "\n".join(lines[start_idx:end_idx]).strip()
@@ -108,6 +132,7 @@ async def plan_next_action(
 
 async def judge(task_desc: str, criterion: str, response: str) -> bool:
     if not ANTHROPIC_KEY:
+        print("  [JUDGE] No ANTHROPIC_API_KEY — returning False")
         return False
     prompt = f"""Judge whether the response satisfies the success criterion.
 
@@ -116,25 +141,42 @@ Success criterion: {criterion}
 Agent response: {response}
 
 Respond with exactly one word: PASS or FAIL."""
-
-    async with httpx.AsyncClient(timeout=30) as client:
-        r = await client.post(
-            "https://api.anthropic.com/v1/messages",
-            headers={
-                "x-api-key": ANTHROPIC_KEY,
-                "anthropic-version": "2023-06-01",
-                "content-type": "application/json",
-            },
-            json={
-                "model": JUDGE_MODEL,
-                "max_tokens": 10,
-                "messages": [{"role": "user", "content": prompt}],
-            },
-        )
-        if r.status_code != 200:
-            return False
-        text = r.json()["content"][0]["text"].strip().upper()
-        return text.startswith("PASS")
+    max_retries = 4
+    for attempt in range(max_retries):
+        try:
+            async with httpx.AsyncClient(timeout=30) as client:
+                r = await client.post(
+                    "https://api.anthropic.com/v1/messages",
+                    headers={
+                        "x-api-key": ANTHROPIC_KEY,
+                        "anthropic-version": "2023-06-01",
+                        "content-type": "application/json",
+                    },
+                    json={
+                        "model": JUDGE_MODEL,
+                        "max_tokens": 10,
+                        "messages": [{"role": "user", "content": prompt}],
+                    },
+                )
+                if r.status_code == 429:
+                    retry_after = int(r.headers.get("retry-after", 10))
+                    print(f"  [JUDGE] Rate limited (attempt {attempt+1}/{max_retries}), waiting {retry_after}s")
+                    await asyncio.sleep(retry_after)
+                    continue
+                if r.status_code != 200:
+                    print(f"  [JUDGE] HTTP {r.status_code} on attempt {attempt+1}: {r.text[:120]}")
+                    await asyncio.sleep(2 ** attempt)
+                    continue
+                text = r.json()["content"][0]["text"].strip().upper()
+                result = text.startswith("PASS")
+                print(f"  [JUDGE] {'PASS' if result else 'FAIL'}")
+                return result
+        except Exception as exc:
+            print(f"  [JUDGE] Exception (attempt {attempt+1}/{max_retries}): {exc}")
+            if attempt < max_retries - 1:
+                await asyncio.sleep(2 ** attempt)
+    print("  [JUDGE] All retries exhausted — returning False")
+    return False
 
 
 ELEMENT_SNAPSHOT_SCRIPT = r"""
@@ -201,13 +243,15 @@ ELEMENT_SNAPSHOT_SCRIPT = r"""
 async def run_task(task: dict, traces_dir: Path | None) -> dict:
     t0 = time.perf_counter()
     try:
-        # Per-task timeout: 180s max
-        return await asyncio.wait_for(_run_task_inner(task, traces_dir, t0), timeout=180)
+        # Per-task timeout: 600s max (many WV tasks need >300s for multi-page navigation)
+        return await asyncio.wait_for(_run_task_inner(task, traces_dir, t0), timeout=600)
     except asyncio.TimeoutError:
         return {
             "id": task["id"],
             "passed": False,
-            "error": "Task timed out (180s)",
+            "error": "Task timed out (600s)",
+            "final_answer": "",
+            "steps": [],
             "duration_s": round(time.perf_counter() - t0, 2),
         }
     except Exception as e:
@@ -384,14 +428,17 @@ async def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--tasks", default="eval/webvoyager-100/tasks.yaml")
     ap.add_argument("--output", default="outputs/v1_1/webvoyager-gpt55-direct.json")
-    ap.add_argument("--concurrency", type=int, default=3)
+    ap.add_argument("--concurrency", type=int, default=10, help="Parallel browser tasks (default 10)")
+    ap.add_argument("--max-retries", type=int, default=2, help="Retry failed tasks up to N times (default 2)")
+    ap.add_argument("--retry-failed", type=str, default=None, help="Load prior JSON results and retry only failed tasks")
     ap.add_argument("--traces", action="store_true")
     ap.add_argument("--traces-dir", default=None)
+    ap.add_argument("--skip-done", action="store_true", help="Skip tasks with existing trace files")
     args = ap.parse_args()
 
     with open(args.tasks) as f:
         config = yaml.safe_load(f)
-    tasks = config["tasks"]
+    all_tasks = config["tasks"]
 
     traces_dir: Path | None = None
     if args.traces:
@@ -406,10 +453,62 @@ async def main():
             print(f"  {result['id']}: {'PASS' if result['passed'] else 'FAIL'} ({result.get('duration_s', 0):.0f}s)")
             return result
 
-    results = await asyncio.gather(*[run_with_sem(t) for t in tasks])
+    # Load prior results if retrying
+    prior_results: dict[str, dict] = {}
+    if args.retry_failed and Path(args.retry_failed).exists():
+        prior = json.loads(Path(args.retry_failed).read_text())
+        prior_results = {r["id"]: r for r in prior.get("results", [])}
+        print(f"Loaded {len(prior_results)} prior results from {args.retry_failed}")
 
-    passed = sum(1 for r in results if r["passed"])
-    total = len(results)
+    # Determine tasks to run
+    tasks_to_run = []
+    for t in all_tasks:
+        tid = t["id"]
+        # Skip if already passed in prior run
+        if tid in prior_results and prior_results[tid].get("passed"):
+            continue
+        # Skip if trace exists and --skip-done (load trace result)
+        if args.skip_done and traces_dir and (traces_dir / f"{tid}.json").exists():
+            if tid not in prior_results:
+                prior_results[tid] = json.loads((traces_dir / f"{tid}.json").read_text())
+            continue
+        tasks_to_run.append(t)
+
+    skipped = len(all_tasks) - len(tasks_to_run)
+    if skipped:
+        print(f"Skipping {skipped} already-passed/done tasks, running {len(tasks_to_run)}")
+
+    # Run with retries
+    remaining = list(tasks_to_run)
+    all_results: dict[str, dict] = dict(prior_results)
+
+    for attempt in range(1 + args.max_retries):
+        if not remaining:
+            break
+        if attempt > 0:
+            print(f"\n=== RETRY ATTEMPT {attempt}/{args.max_retries} ({len(remaining)} tasks) ===")
+
+        results = await asyncio.gather(*[run_with_sem(t) for t in remaining])
+
+        still_failing = []
+        for r in results:
+            if r["passed"]:
+                all_results[r["id"]] = r
+            else:
+                still_failing.append(next(t for t in remaining if t["id"] == r["id"]))
+                all_results[r["id"]] = r  # keep best effort
+
+        remaining = still_failing
+
+    # Merge with prior passed results
+    final_results = [all_results[t["id"]] for t in all_tasks if t["id"] in all_results]
+    # Any tasks never run (shouldn't happen) get a FAIL stub
+    for t in all_tasks:
+        if t["id"] not in all_results:
+            final_results.append({"id": t["id"], "passed": False, "final_answer": "", "steps": [], "error": "never run"})
+
+    passed = sum(1 for r in final_results if r["passed"])
+    total = len(final_results)
     out = {
         "benchmark": "webvoyager",
         "total": total,
@@ -417,7 +516,7 @@ async def main():
         "failed": total - passed,
         "pass_rate": passed / total if total else 0,
         "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-        "results": results,
+        "results": final_results,
     }
     Path(args.output).parent.mkdir(parents=True, exist_ok=True)
     Path(args.output).write_text(json.dumps(out, indent=2))

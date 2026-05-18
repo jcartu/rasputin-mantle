@@ -3,7 +3,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { ChevronDown, ChevronRight, Folder, Plus, User } from 'lucide-react';
+import { CalendarClock, ChevronDown, ChevronRight, Folder, Plug, Plus, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/components/ui/toast';
 import { createProject, listProjects, listSessions, type ProjectInfo, type SessionInfo } from '@/lib/api';
@@ -57,6 +57,8 @@ export function ProjectSidebar() {
         <Button size="xs" variant="ghost" onClick={addProject} aria-label="New project"><Plus size={14} /></Button>
       </div>
       <div style={{ overflow: 'auto', display: 'grid', gap: 'var(--spacing-2)' }}>
+        <Link href="/scheduled" style={projectLinkStyle}><CalendarClock size={14} /><span>Scheduled tasks</span></Link>
+        <Link href="/settings/integrations" style={projectLinkStyle}><Plug size={14} /><span>Integrations</span></Link>
         <ProjectGroup id="personal" name="Personal" icon={<User size={14} />} expanded={expanded.has('personal')} onToggle={toggle} sessions={sessionsByProject.personal ?? []} href="/" />
         {projects.map((project) => (
           <ProjectGroup

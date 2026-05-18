@@ -243,3 +243,82 @@ export async function uploadProjectKb(id: string, file: File): Promise<KBFileInf
 export async function deleteProjectKbFile(projectId: string, fileId: number): Promise<void> {
   await request(`/projects/${projectId}/kb/${fileId}`, { method: 'DELETE' });
 }
+
+// --- Scheduled Tasks ---
+
+export interface ScheduledRun {
+  session_id: string;
+  status: string;
+  ran_at: string;
+}
+
+export interface ScheduledTaskInfo {
+  id: string;
+  name: string;
+  task_prompt: string;
+  cron: string;
+  start_date: string | null;
+  end_date: string | null;
+  max_runs: number | null;
+  runs_count: number;
+  last_run_at: string | null;
+  next_run_at: string | null;
+  paused: boolean;
+  created_at: string;
+  updated_at: string;
+  run_history: ScheduledRun[];
+}
+
+export interface ScheduledTaskInput {
+  name: string;
+  task_prompt: string;
+  cron: string;
+  start_date?: string | null;
+  end_date?: string | null;
+  max_runs?: number | null;
+}
+
+export async function listScheduledTasks(): Promise<ScheduledTaskInfo[]> {
+  return request('/scheduled');
+}
+
+export async function createScheduledTask(data: ScheduledTaskInput): Promise<ScheduledTaskInfo> {
+  return request('/scheduled', { method: 'POST', body: JSON.stringify(data) });
+}
+
+export async function updateScheduledTask(
+  id: string,
+  data: Partial<ScheduledTaskInput> & { paused?: boolean },
+): Promise<ScheduledTaskInfo> {
+  return request(`/scheduled/${id}`, { method: 'PATCH', body: JSON.stringify(data) });
+}
+
+export async function deleteScheduledTask(id: string): Promise<{ deleted: string }> {
+  return request(`/scheduled/${id}`, { method: 'DELETE' });
+}
+
+// --- Integrations ---
+
+export interface SlackIntegrationStatus {
+  configured: boolean;
+  connected: boolean;
+  team_name: string | null;
+}
+
+export interface MailIntegrationStatus {
+  inbound_configured: boolean;
+  outbound_configured: boolean;
+  allowed_senders: string[];
+}
+
+export async function getSlackIntegrationStatus(): Promise<SlackIntegrationStatus> {
+  return request('/slack/status');
+}
+
+export async function disconnectSlackIntegration(): Promise<{ disconnected: boolean }> {
+  return request('/slack/disconnect', { method: 'DELETE' });
+}
+
+export async function getMailIntegrationStatus(): Promise<MailIntegrationStatus> {
+  return request('/mail/status');
+}

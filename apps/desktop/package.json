@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1 --port 1420",
     "build": "vite build",
-    "tauri": "tauri"
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev --config tauri.conf.json",
+    "tauri:build": "tauri build --config tauri.conf.json"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",

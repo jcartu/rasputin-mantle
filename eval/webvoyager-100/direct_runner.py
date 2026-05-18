@@ -17,10 +17,11 @@ import httpx
 import yaml
 from playwright.async_api import async_playwright
 
-PLANNER_BACKEND = os.environ.get("PLANNER_BACKEND", "openai")  # openai or anthropic
+PLANNER_BACKEND = os.environ.get("PLANNER_BACKEND", "openai")  # openai, anthropic, or kimi
 GPT_MODEL = os.environ.get("PLANNER_MODEL", "gpt-5.5")
 OPENAI_KEY = os.environ.get("OPENAI_API_KEY", "")
 ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
+KIMI_KEY = os.environ.get("KIMI_API_KEY", "")
 JUDGE_MODEL = os.environ.get("JUDGE_MODEL", "claude-sonnet-4-6")
 
 SYSTEM_PROMPT = (
@@ -67,7 +68,7 @@ async def plan_next_action(
                 "content-type": "application/json",
             },
             json={
-                "model": GPT_MODEL,  # e.g. claude-sonnet-4-6
+                "model": GPT_MODEL,
                 "max_tokens": 8192,
                 "messages": [
                     {"role": "user", "content": SYSTEM_PROMPT + "\n\n" + json.dumps(prompt, separators=(",", ":"))},
@@ -77,6 +78,26 @@ async def plan_next_action(
         )
         resp.raise_for_status()
         content = resp.json()["content"][0]["text"]
+    elif PLANNER_BACKEND == "kimi":
+        # Kimi/Moonshot planner (OpenAI-compatible)
+        resp = await client.post(
+            "https://api.moonshot.ai/v1/chat/completions",
+            headers={
+                "Content-Type": "application/json",
+                "Authorization": f"Bearer {KIMI_KEY}",
+            },
+            json={
+                "model": GPT_MODEL,  # e.g. kimi-k2-turbo-preview
+                "max_tokens": 8192,
+                "messages": [
+                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {"role": "user", "content": json.dumps(prompt, separators=(",", ":"))},
+                ],
+            },
+            timeout=120,
+        )
+        resp.raise_for_status()
+        content = resp.json()["choices"][0]["message"]["content"]
     else:
         # OpenAI planner (default)
         resp = await client.post(

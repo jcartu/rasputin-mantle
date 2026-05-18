@@ -2,7 +2,7 @@
 name = "mantle-codeact"
 version = "0.1.0"
 requires-python = ">=3.11"
-dependencies = ["sandbox"]
+dependencies = ["sandbox", "pyyaml>=6.0,<7"]
 
 [tool.ruff]
 target-version = "py311"

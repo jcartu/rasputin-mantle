@@ -1,125 +1,80 @@
 /* responsive.css — Rasputin Mantle v1.2 shell breakpoints */
-/* Breakpoints follow design-system/SPEC.md Layout Grid. */
+/* Breakpoints follow design-system/SPEC.md Layout Grid exactly. */
 /* Uses CSS custom properties from design-system/tokens.css — no hardcoded hex. */
 
-/* ── Default (mobile-first stack) ─────────────────────────── */
-.mantle-shell {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: 100vh;
-  background: var(--color-background);
-  color: var(--color-foreground);
-}
+/* ── Default (desktop three-pane) ─────────────────────────── */
+/* Mobile-first overrides come below. */
 
-.mantle-shell__panes {
-  display: flex;
-  flex: 1;
-  min-height: 0;
-  width: 100%;
-}
-
-.mantle-pane {
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  background: var(--color-background);
-  border-right: 1px solid var(--color-border);
-}
-
-.mantle-pane:last-child {
-  border-right: none;
-}
-
-.mantle-pane--chat,
-.mantle-pane--computer,
-.mantle-pane--files {
-  flex: 1;
-  min-width: 0;
-}
-
-/* Hidden by default; shown on mobile. */
+/* Hidden on desktop; shown on mobile via media query. */
 .mantle-mobile-tabs {
   display: none;
 }
 
-/* ── Mobile (< 769px) ─────────────────────────────────────── */
+/* ── Mobile (< 768px) ─────────────────────────────────────── */
+/* Single-pane stack. Bottom tab bar. One pane visible at a time. */
 @media (max-width: 768px) {
-  .mantle-shell__panes {
-    flex-direction: column;
-    padding-bottom: 48px; /* reserve room for fixed mobile tab bar */
+  /* Hide desktop grid, show single active pane */
+  [data-slot="body"] {
+    display: block !important;
   }
 
-  .mantle-pane {
-    display: none;
-    width: 100%;
-    height: calc(100vh - 48px);
-    border-right: none;
-    border-bottom: 1px solid var(--color-border);
+  [data-slot="chat"],
+  [data-slot="computer"],
+  [data-slot="files"] {
+    display: none !important;
+    width: 100% !important;
+    height: calc(100vh - 60px - 40px - 48px) !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-bottom: 1px solid var(--color-border) !important;
   }
 
-  .mantle-pane[data-active='true'] {
-    display: flex;
+  [data-slot="chat"][data-mobile-active="true"],
+  [data-slot="computer"][data-mobile-active="true"],
+  [data-slot="files"][data-mobile-active="true"] {
+    display: block !important;
   }
 
+  /* Show mobile tab bar */
   .mantle-mobile-tabs {
-    display: flex;
+    display: flex !important;
   }
 
-  /* Hide desktop-only shell chrome (sidebars, resize handles, etc.). */
-  .mantle-shell__desktop-only {
+  /* Hide resize handles on mobile */
+  [role="separator"][aria-orientation="vertical"] {
     display: none !important;
   }
 }
 
 /* ── Tablet (769px – 1024px) ──────────────────────────────── */
+/* Two-pane (chat + computer). Files collapses to drawer. */
 @media (min-width: 769px) and (max-width: 1024px) {
-  .mantle-pane--chat {
-    flex: 0 0 340px;
-  }
-
-  .mantle-pane--computer {
-    flex: 1;
-  }
-
-  /* Files collapses to drawer at tablet width. */
-  .mantle-pane--files {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: min(320px, 80vw);
-    border-left: 1px solid var(--color-border);
-    background: var(--color-background-elevated);
-    box-shadow: var(--shadow-lg);
+  /* Files pane becomes a right-side drawer (max 240px per SPEC). */
+  [data-slot="files"] {
+    position: fixed !important;
+    top: 60px !important;
+    right: 0 !important;
+    bottom: 40px !important;
+    width: min(240px, 80vw) !important;
+    border-left: 1px solid var(--color-border) !important;
+    background: var(--color-background-elevated) !important;
+    box-shadow: var(--shadow-lg) !important;
     transform: translateX(100%);
     transition: transform var(--duration-default) var(--ease-default);
     z-index: 30;
   }
 
-  .mantle-pane--files[data-open='true'] {
-    transform: translateX(0);
+  [data-slot="files"][data-drawer-open="true"] {
+    transform: translateX(0) !important;
   }
 }
 
 /* ── Desktop (≥ 1025px) ───────────────────────────────────── */
-@media (min-width: 1025px) {
-  .mantle-pane--chat {
-    flex: 0 0 340px;
-  }
-
-  .mantle-pane--computer {
-    flex: 1;
-  }
-
-  .mantle-pane--files {
-    flex: 0 0 320px;
-  }
-}
+/* Full three-pane. All panes visible. */
 
 /* ── Large desktop (≥ 1536px) — max content width ─────────── */
 @media (min-width: 1536px) {
-  .mantle-shell__panes {
+  [data-app-shell] {
     max-width: 1536px;
     margin-left: auto;
     margin-right: auto;

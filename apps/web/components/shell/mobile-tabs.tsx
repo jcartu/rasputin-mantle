@@ -56,7 +56,7 @@ export function MobileTabs({ active, onChange }: MobileTabsProps): React.ReactEl
               flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
-              gap: '2px',
+              gap: 'var(--spacing-1)',
               background: 'transparent',
               border: 'none',
               padding: 0,
@@ -72,9 +72,8 @@ export function MobileTabs({ active, onChange }: MobileTabsProps): React.ReactEl
                 style={{
                   position: 'absolute',
                   top: 0,
-                  left: '25%',
-                  right: '25%',
-                  height: '2px',
+                  left: 'var(--spacing-4)',
+                  right: 'var(--spacing-4)',
                   background: 'var(--color-accent)',
                   borderRadius: 'var(--radius-full)',
                 }}

@@ -17,18 +17,30 @@ export interface AppShellProps {
   chatCollapsed?: boolean;
   /** When true, collapses the files (right) pane to 0px. */
   filesCollapsed?: boolean;
+  /** Chat pane width (px). Clamped 280–480. */
+  chatWidth?: number;
+  /** Files pane width (px). Clamped 240–480. */
+  filesWidth?: number;
   /** Optional toggle handler for the chat pane (⌘\). */
   onToggleChat?: () => void;
   /** Optional toggle handler for the files pane (⌘B). */
   onToggleFiles?: () => void;
+  /** Optional resize handler for chat pane. */
+  onResizeChat?: (width: number) => void;
+  /** Optional resize handler for files pane. */
+  onResizeFiles?: (width: number) => void;
   /** Optional className for the outer grid. */
   className?: string;
 }
 
 const TOP_BAR_HEIGHT = 60;
 const BOTTOM_BAR_HEIGHT = 40;
-const CHAT_PANE_WIDTH = 340;
-const FILES_PANE_WIDTH = 320;
+const DEFAULT_CHAT_WIDTH = 340;
+const DEFAULT_FILES_WIDTH = 320;
+const CHAT_MIN = 280;
+const CHAT_MAX = 480;
+const FILES_MIN = 240;
+const FILES_MAX = 480;
 
 /**
  * Three-pane application shell using CSS grid.
@@ -43,8 +55,8 @@ const FILES_PANE_WIDTH = 320;
  *   │                  BottomBar (40px)                      │
  *   └────────────────────────────────────────────────────────┘
  *
- * Collapsing a pane sets its grid column width to 0px (no framer-motion
- * here — Group C wires the motion / keyboard shortcuts).
+ * Resizable panes: 4px drag handles between panes.
+ * Handles show --color-border default, --color-accent on hover.
  */
 export function AppShell({
   topBar,
@@ -54,15 +66,21 @@ export function AppShell({
   files,
   chatCollapsed = false,
   filesCollapsed = false,
+  chatWidth = DEFAULT_CHAT_WIDTH,
+  filesWidth = DEFAULT_FILES_WIDTH,
   onToggleChat,
   onToggleFiles,
+  onResizeChat,
+  onResizeFiles,
   className,
 }: AppShellProps): React.ReactElement {
-  const gridTemplateColumns = [
-    chatCollapsed ? '0px' : `${CHAT_PANE_WIDTH}px`,
-    '1fr',
-    filesCollapsed ? '0px' : `${FILES_PANE_WIDTH}px`,
-  ].join(' ');
+  const clampedChat = Math.min(Math.max(chatWidth, CHAT_MIN), CHAT_MAX);
+  const clampedFiles = Math.min(Math.max(filesWidth, FILES_MIN), FILES_MAX);
+
+  const chatCol = chatCollapsed ? '0px' : `${clampedChat}px`;
+  const filesCol = filesCollapsed ? '0px' : `${clampedFiles}px`;
+
+  const gridTemplateColumns = `${chatCol} 1fr ${filesCol}`;
 
   const shellStyle: React.CSSProperties = {
     display: 'grid',
@@ -72,7 +90,9 @@ export function AppShell({
     backgroundColor: 'var(--color-background)',
     color: 'var(--color-foreground)',
     overflow: 'hidden',
-  };
+    '--chat-pane-width': `${clampedChat}px`,
+    '--files-pane-width': `${clampedFiles}px`,
+  } as React.CSSProperties;
 
   const topBarStyle: React.CSSProperties = {
     gridRow: '1',
@@ -123,6 +143,16 @@ export function AppShell({
     alignItems: 'center',
   };
 
+  // ── Resize handle ──────────────────────────────────────────
+  const handleStyle: React.CSSProperties = {
+    width: '4px',
+    cursor: 'col-resize',
+    backgroundColor: 'var(--color-border)',
+    transition: 'background-color var(--duration-default) var(--ease-default)',
+    gridRow: '2',
+    zIndex: 10,
+  };
+
   return (
     <div
       className={className}
@@ -144,9 +174,33 @@ export function AppShell({
         >
           {chat}
         </section>
+
+        {/* Chat resize handle */}
+        {!chatCollapsed && onResizeChat && (
+          <ResizeHandle
+            style={{ ...handleStyle, gridColumn: '2' }}
+            onResize={onResizeChat}
+            min={CHAT_MIN}
+            max={CHAT_MAX}
+            defaultWidth={clampedChat}
+          />
+        )}
+
         <section style={computerPaneStyle} data-slot="computer">
           {computer}
         </section>
+
+        {/* Files resize handle */}
+        {!filesCollapsed && onResizeFiles && (
+          <ResizeHandle
+            style={{ ...handleStyle, gridColumn: '3' }}
+            onResize={onResizeFiles}
+            min={FILES_MIN}
+            max={FILES_MAX}
+            defaultWidth={clampedFiles}
+          />
+        )}
+
         <section
           style={filesPaneStyle}
           data-slot="files"
@@ -165,3 +219,69 @@ export function AppShell({
 }
 
 export default AppShell;
+
+// ── Resize Handle Component ──────────────────────────────────
+
+interface ResizeHandleProps {
+  style: React.CSSProperties;
+  onResize: (width: number) => void;
+  min: number;
+  max: number;
+  defaultWidth: number;
+}
+
+function ResizeHandle({ style, onResize, min, max, defaultWidth }: ResizeHandleProps) {
+  const isDragging = React.useRef(false);
+  const startX = React.useRef(0);
+  const startWidth = React.useRef(0);
+
+  const handleMouseDown = React.useCallback(
+    (e: React.MouseEvent) => {
+      isDragging.current = true;
+      startX.current = e.clientX;
+      startWidth.current = defaultWidth;
+      document.body.style.cursor = 'col-resize';
+      document.body.style.userSelect = 'none';
+      window.addEventListener('mousemove', handleMouseMove);
+      window.addEventListener('mouseup', handleMouseUp);
+      e.preventDefault();
+    },
+    [defaultWidth],
+  );
+
+  const handleMouseMove = React.useCallback(
+    (e: MouseEvent) => {
+      if (!isDragging.current) return;
+      const delta = e.clientX - startX.current;
+      const newWidth = Math.min(Math.max(startWidth.current + delta, min), max);
+      onResize(newWidth);
+    },
+    [onResize, min, max],
+  );
+
+  const handleMouseUp = React.useCallback(() => {
+    isDragging.current = false;
+    document.body.style.cursor = '';
+    document.body.style.userSelect = '';
+    window.removeEventListener('mousemove', handleMouseMove);
+    window.removeEventListener('mouseup', handleMouseUp);
+  }, [handleMouseMove]);
+
+  return (
+    <div
+      role="separator"
+      aria-orientation="vertical"
+      tabIndex={0}
+      onMouseDown={handleMouseDown}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.backgroundColor = 'var(--color-accent)';
+      }}
+      onMouseLeave={(e) => {
+        if (!isDragging.current) {
+          e.currentTarget.style.backgroundColor = 'var(--color-border)';
+        }
+      }}
+      style={style}
+    />
+  );
+}

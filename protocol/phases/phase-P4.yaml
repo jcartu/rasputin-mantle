@@ -1,0 +1,138 @@
+name: "P4 — Onboarding & Task Creation"
+phase: P4
+description: |
+  First-impression flow. Landing page → onboarding → first task. Optimized
+  for time-to-first-task ≤ 60 seconds for someone who has just heard of us.
+
+  No API key wall on landing. We offer a "try it free" mode that uses our
+  hosted demo's preset (capped at 5 tasks per IP per day). Users who like
+  it then plug in their own keys to get unlimited.
+
+  Tickets:
+
+  ── LANDING (mantle-frontend / Sonnet) ──
+
+  1. apps/web/app/page.tsx — landing page. Sections:
+       - Hero: tagline + sub + "Try a task" primary CTA + "View on GitHub"
+         secondary. NO oversize hero type. NO gradient. NO 3D mesh.
+         (Reference: Linear's homepage 2024-2025 era; Vercel's restraint.)
+       - Three live agent clips (autoplay-mute looping ~10s each): "research
+         a topic", "build a thing", "summarize this". Real session replays.
+       - The headline number: 78% WebVoyager-300, with per-planner sparkline.
+         Link to MANTLE_V1_1_RELEASED.md.
+       - "Who it's for" / "Who it's not for" two-column section. Be honest.
+       - Three-pane session view screenshot. Inset on desktop, full-width
+         on mobile. With caption.
+       - The honest gaps section reprised from README. No marketing copy.
+       - Footer: GitHub, Discord/Slack link, docs, X/Twitter.
+
+  2. apps/web/app/(marketing)/layout.tsx — marketing-specific layout (no
+     three-pane shell). Shared header + footer.
+
+  3. apps/web/components/marketing/agent-clip.tsx — autoplay video
+     component. Lazy-loads (Intersection Observer). Reduced-motion
+     fallback shows a static screenshot.
+
+  4. apps/web/components/marketing/headline-number.tsx — the WebVoyager
+     stat with per-planner breakdown.
+
+  ── ONBOARDING (mantle-frontend) ──
+
+  5. apps/web/app/(app)/onboarding/page.tsx — multi-step onboarding:
+       Step 1: "What kind of work do you do?" — 4 options as cards
+              (Research / Build / Analyze / Schedule). Each card has an
+              illustration (Lucide-based, no stock).
+       Step 2: Curated starter prompts for the chosen track, 6 per track.
+              Click a prompt to skip to step 4 pre-filled.
+       Step 3: "Bring your own keys or try free?" — two options, with
+              cost expectations for each.
+       Step 4: Task creation pre-filled with prompt + sandbox preset.
+              "Start" → redirects to /session/{id}.
+
+  6. apps/web/lib/onboarding-state.ts — Zustand store persisting
+     onboarding progress to localStorage. Resumable.
+
+  ── TASK CREATION (mantle-frontend) ──
+
+  7. apps/web/components/task-create/composer.tsx — the prompt textarea
+     with: skill picker (from /api/catalog/skills), sandbox preset
+     selector (browser-only / browser+code / browser+code+memory), starter
+     template dropdown, voice-to-task button (calls existing /api/voice/
+     transcribe).
+
+  8. apps/web/components/task-create/templates.tsx — curated template
+     library grouped by intent. Templates are markdown files at
+     apps/web/lib/templates/*.md with frontmatter (id, name, category,
+     prompt, recommended_sandbox).
+
+  9. apps/web/lib/templates/ — at least 20 template files across 4
+     categories.
+
+  ── RECENT TASKS (mantle-frontend) ──
+
+  10. apps/web/app/(app)/recent/page.tsx — recent tasks list. Per-task:
+      thumbnail (first screenshot from session), title, status pill,
+      timestamp, cost, "Replay" button. Pagination at 20.
+
+  11. apps/web/components/recent/task-card.tsx — the card primitive for
+      the recent list.
+
+  ── BACKEND (mantle-executor / 27B) ──
+
+  12. apps/gateway/src/gateway/routes/templates.py — GET /api/templates
+      returns the curated template library as JSON.
+
+  13. apps/gateway/src/gateway/routes/recent.py — GET /api/sessions/recent
+      returns the user's recent sessions with thumbnails (first-screenshot
+      URL from each session's /sandbox/<id>/screenshots/step-1.png).
+
+  ── COPY (mantle-frontend, but specifically copy work) ──
+
+  14. apps/web/lib/copy/landing.ts — all landing page copy as exported
+      strings. Reviewed against design-system/COPY.md.
+
+  15. apps/web/lib/copy/onboarding.ts — all onboarding copy. Same review.
+
+  Final step: mantle-designer audits landing page + onboarding flow
+  + task composer for visual consistency with design system. Verdict
+  must be PASS.
+
+packages_required:
+  - apps/web
+  - apps/gateway
+
+artifacts:
+  - PHASE_P4_DONE.md
+  - apps/web/app/page.tsx
+  - apps/web/app/(app)/onboarding/page.tsx
+  - apps/web/app/(app)/recent/page.tsx
+  - apps/web/lib/templates/                    # ≥ 20 template files
+  - apps/web/lib/copy/
+
+integration_tests:
+  - apps/web/tests/e2e/landing-to-first-task.spec.ts    # the 60s flow
+  - apps/web/tests/e2e/onboarding-resumable.spec.ts
+  - apps/web/tests/e2e/template-picker.spec.ts
+  - tests/integration/test_templates_endpoint.py
+  - tests/integration/test_recent_sessions_endpoint.py
+
+eval_suites: []
+
+forbidden_patterns:
+  - "Lorem ipsum"
+  - "Coming Soon"
+  - "Magical|magical|magical-AI|next-gen|revolutionary|supercharge"  # AI-slop copy
+  - "stock-photo"                              # any stock photo references
+  - "linear-gradient\\(.*,.*,.*\\)"            # multi-color gradients
+
+ship_criteria_human_readable: |
+  - Time-to-first-task on a fresh browser ≤ 60s (Playwright timed)
+  - Landing page Lighthouse ≥ 95 across all four categories
+  - Onboarding resumable (close tab mid-flow, return, picks up at same step)
+  - 20+ task templates spanning 4 categories
+  - Voice-to-task button records audio and transcribes (uses existing
+    Whisper service from v1.0)
+  - Recent tasks page shows real thumbnails for past sessions
+  - mantle-designer audit returns PASS with originality ≥ 8 (the landing
+    page is where the brand has to land — no slop)
+  - No marketing-speak copy in any user-facing text

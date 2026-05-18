@@ -1,0 +1,77 @@
+name: "P0 — Visual Design System"
+phase: P0
+description: |
+  Opus 4.7 (mantle-designer) produces the canonical design system from scratch.
+  This phase ships ZERO production UI code. It produces specs, tokens, a
+  reference page, and the AI-slop checklist that every subsequent phase audits
+  against.
+
+  Sisyphus's job in P0 is to call mantle-designer 3-5 times — one delegation
+  per section — and stitch the results into the six deliverable files. Do NOT
+  call mantle-frontend (Sonnet) in P0. The reference page at /_design is the
+  only TSX file P0 produces and it's mostly mechanical token rendering, which
+  mantle-frontend writes from the canonical SPEC.md after P0 is shipped.
+
+  Delegation sequence (each delegation is ONE Opus call):
+
+  1. delegate_task(subagent_type="mantle-designer", prompt="""
+     Read docs/DESIGN_BRIEF.md. Produce the Identity & Brand + Color sections
+     of design-system/SPEC.md. Be specific. Pick a palette and defend it.
+     """) → output is the SPEC sections, Sisyphus appends to SPEC.md.
+
+  2. delegate_task → Typography + Spacing + Borders/Radii + Elevation sections.
+
+  3. delegate_task → Motion + Iconography + Layout Grid sections + COPY.md.
+
+  4. delegate_task → Component Variants section (Button, Input, Select, Dialog,
+     Sheet, Toast, Tooltip, Skeleton, Spinner, Tab — visual description + states
+     + tokens used for each).
+
+  5. delegate_task → AI_SLOP_CHECKLIST.md content + MOTION.md content.
+
+  Sisyphus then writes tokens.css mechanically from the Color/Typography/Spacing
+  sections (27B handles this — it's just transcribing the spec to CSS vars).
+
+  Sisyphus then writes apps/web/app/_design/page.tsx — a navigable reference page
+  rendering every primitive in every state in both modes. mantle-frontend writes
+  this from the SPEC.
+
+  Final step: delegate_task(subagent_type="mantle-designer", prompt="""
+  Audit the shipped design system. Read SPEC.md, tokens.css, /_design page.
+  Score for coherence and originality. Verdict.
+  """) — must return PASS before P0 ships.
+
+packages_required:
+  - design-system
+  - apps/web
+
+artifacts:
+  - PHASE_P0_DONE.md
+  - design-system/SPEC.md
+  - design-system/tokens.css
+  - design-system/MOTION.md
+  - design-system/COPY.md
+  - design-system/AI_SLOP_CHECKLIST.md
+  - apps/web/app/_design/page.tsx
+  - apps/web/styles/tokens.css                 # symlink or copy of design-system/tokens.css
+
+integration_tests:
+  - apps/web/tests/e2e/design-reference-page.spec.ts  # /_design renders without errors in both modes
+
+eval_suites: []                                # no eval re-runs in product phases
+
+forbidden_patterns:
+  - "shadcn.*default"                          # any reference to shipping shadcn defaults
+  - "Lorem ipsum"                              # placeholder text
+  - "Coming Soon"                              # placeholder UI
+  - "TODO.*design"                             # design decisions deferred
+
+ship_criteria_human_readable: |
+  - design-system/SPEC.md exists, ≥ 1500 lines, all 11 sections present
+  - design-system/tokens.css has both :root (light) and .dark blocks, with
+    @theme Tailwind 4 mappings
+  - /_design page renders in both light and dark modes without errors
+  - mantle-designer final audit returns PASS with fidelity ≥ 8 originality ≥ 8
+  - No shadcn-default styling anywhere in /_design page (every primitive
+    obviously customized)
+  - At least 8 component variants specified in detail

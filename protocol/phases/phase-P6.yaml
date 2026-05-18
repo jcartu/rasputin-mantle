@@ -1,0 +1,118 @@
+name: "P6 — Mobile & Accessibility"
+phase: P6
+description: |
+  The thing every AI-generated UI fails. Real mobile responsive (not just
+  "doesn't crash on narrow screens"). Real accessibility (not just "we added
+  aria-labels to buttons"). The phase that takes Mantle from "looks great on
+  the demo MacBook" to "I can actually use this on my phone."
+
+  Tickets:
+
+  ── MOBILE LAYOUTS (mantle-frontend) ──
+
+  Sweep every primary screen for mobile fitness. Each ticket is one screen.
+
+  1. apps/web/app/page.tsx mobile pass — landing on mobile. Sticky CTA at
+     bottom. Agent clips become a horizontal carousel. Honest-gaps section
+     reflows.
+
+  2. apps/web/app/(app)/onboarding/page.tsx mobile pass — single-column
+     onboarding, larger tap targets (≥ 44x44px), keyboard handling for
+     iOS Safari (input zoom prevention).
+
+  3. apps/web/app/(app)/session/[id]/page.tsx mobile pass — switches to
+     the three-tab stack (Chat / Computer / Files) at ≤768px. Tab bar at
+     bottom (thumb reach). Pull-to-refresh on the chat pane. Computer
+     pane handles portrait Neko aspect ratio gracefully (letterbox).
+
+  4. apps/web/app/(app)/replay/[id]/page.tsx mobile pass — replay scrubber
+     becomes a vertical timeline on the left edge with swipe-to-scrub.
+     Playback controls in a bottom sheet.
+
+  5. apps/web/app/share/[hash]/page.tsx mobile pass — share view mobile.
+     Sign-up CTA at top doesn't cover content.
+
+  6. apps/web/app/(app)/recent/page.tsx mobile pass — recent list on
+     mobile. Cards stack full-width. Pull-to-refresh.
+
+  7. apps/web/components/shell/mobile-tabs.tsx polish — already exists
+     from P2 but needs swipe gestures (use-gesture lib), haptic feedback
+     on tab switch (where supported), badge indicators on inactive tabs
+     showing new content count.
+
+  ── ACCESSIBILITY (mantle-frontend) ──
+
+  Every screen + primitive sweep for WCAG AA minimum.
+
+  8. apps/web/lib/a11y/audit.ts — automated axe-core checks integrated
+     into Playwright tests. Runs on every primary screen, fails the
+     build on any AA violation.
+
+  9. apps/web/components/shell/* a11y pass — keyboard navigation through
+     the entire shell (Tab order, focus traps in modals/sheets, focus
+     visible rings, skip-to-content link at top).
+
+  10. apps/web/components/session/* a11y pass — chat stream announces
+      new messages to screen readers (aria-live="polite" on the chat
+      pane), file tree is keyboard navigable (arrow keys, Enter to open,
+      Space to expand), artifact viewers expose document outline.
+
+  11. apps/web/components/ui/* a11y pass on all 15 primitives — focus
+      states visible, role/aria-label correct, keyboard interaction
+      complete (Esc on Dialog, Tab nav in Select, arrow keys on Tab).
+
+  12. apps/web/lib/a11y/reduced-motion.ts — global hook that disables
+      framer-motion animations when prefers-reduced-motion: reduce.
+      Applied to every animated component.
+
+  13. apps/web/lib/a11y/contrast.ts — runtime check (dev mode only) that
+      validates token color combinations meet AA. Logs violations to
+      console.
+
+  ── COLOR + FONT ADAPTATION ──
+
+  14. apps/web/lib/a11y/font-size.ts — respects user's browser font size
+      setting (rem-based throughout, no px for text). Tested at 200%
+      zoom on Firefox.
+
+  15. apps/web/styles/high-contrast.css — system high-contrast mode
+      handling for Windows users.
+
+  Final step: mantle-designer audits mobile screens + WAVE accessibility
+  scan. Both must pass.
+
+packages_required:
+  - apps/web
+
+artifacts:
+  - PHASE_P6_DONE.md
+  - apps/web/lib/a11y/                         # ≥ 4 files
+  - apps/web/tests/e2e/a11y-axe-violations.spec.ts
+  - apps/web/tests/e2e/mobile-full-flow.spec.ts
+
+integration_tests:
+  - apps/web/tests/e2e/mobile-session-tab-switch.spec.ts
+  - apps/web/tests/e2e/keyboard-nav-shell.spec.ts
+  - apps/web/tests/e2e/reduced-motion-respected.spec.ts
+  - apps/web/tests/e2e/high-contrast-mode.spec.ts
+
+eval_suites: []
+
+forbidden_patterns:
+  - "px;.*font-size"                           # use rem for type
+  - "px;.*line-height"                         # use unitless or rem
+  - "outline:\\s*none"                         # never strip focus rings (visible focus required)
+  - "tabindex=\"-1\""                          # check usage carefully; flagged for review
+  - "Lorem ipsum"
+
+ship_criteria_human_readable: |
+  - Playwright mobile-Chrome (375x667) and mobile-Safari emulator complete
+    full task flow: onboarding → first task → session view → replay
+  - axe-core check on every primary screen: zero AA violations
+  - WAVE manual check: passes on landing, session, replay, share
+  - Lighthouse mobile score ≥ 90 on landing, ≥ 85 on session view
+  - Reduced-motion test: zero animations triggered when preference set
+  - High-contrast mode test: all chrome visible, no invisible icons
+  - 200% browser zoom test: no horizontal scroll, no clipped content
+  - Keyboard-only navigation: complete task flow without touching mouse
+  - mantle-designer audit on 3 mobile screens returns PASS

@@ -1,0 +1,94 @@
+name: "P2 — Layout System & Navigation Shell"
+phase: P2
+description: |
+  The three-pane application shell. Every page that comes later lives inside
+  this shell. Get it right once.
+
+  Layout shape (desktop default):
+
+  ┌─────────────────────────────────────────────────────────────────┐
+  │  TopBar (60px): logo · task title · status pill · share · user  │
+  ├──────────┬──────────────────────────────────────────┬───────────┤
+  │  Chat    │  Computer (Neko WebRTC fills, dark bg)   │  Files    │
+  │  340px   │  flex                                    │  320px    │
+  │          │                                          │           │
+  │  ⌘\      │  ⌘/                                      │  ⌘B       │
+  │  hides   │  takes-control toggle, fullscreen        │  hides    │
+  │          │                                          │           │
+  └──────────┴──────────────────────────────────────────┴───────────┘
+                          BottomBar (40px): step counter, cost, ETA
+
+  Tablet (≤1280px): right pane collapses to drawer (⌘B opens).
+  Mobile (≤768px): three-tab stack (Chat / Computer / Files), bottom tab bar.
+
+  Tickets to dispatch in P2:
+
+  1. apps/web/app/layout.tsx — root layout with font loading, theme provider,
+     toast container, dark/light mode persistence (cookie + system preference).
+  2. apps/web/components/shell/top-bar.tsx — logo + title + status pill + share
+     button + user menu. Status pill animates between "idle / running /
+     waiting / done / error" with motion from MOTION.md.
+  3. apps/web/components/shell/chat-pane.tsx — left pane shell. Scrollable.
+     Collapsible to 0 with ⌘\. Width animates from 340px to 0 with
+     framer-motion. Persists collapsed state to localStorage.
+  4. apps/web/components/shell/computer-pane.tsx — center pane shell. The
+     Neko iframe lives here in P3; this phase just lays out the chrome
+     (top-of-pane control row, full-height container, loading state).
+  5. apps/web/components/shell/files-pane.tsx — right pane shell. Same
+     collapse mechanics as chat-pane but with ⌘B.
+  6. apps/web/components/shell/bottom-bar.tsx — step counter, running cost,
+     ETA. Uses tabular-nums for the numbers.
+  7. apps/web/components/shell/command-palette.tsx — ⌘K palette using shadcn
+     command primitive but restyled per design system. Common commands:
+     "New task", "Open recent", "Toggle theme", "Open docs", "Sign out".
+  8. apps/web/hooks/use-keyboard.ts — shortcut registration (⌘\, ⌘B, ⌘/,
+     ⌘K). Works across all primary screens.
+  9. apps/web/app/(app)/layout.tsx — the three-pane wrapper layout that
+     pages opt into.
+  10. apps/web/app/(app)/page.tsx — empty/onboarding placeholder for now.
+      P4 turns this into the real landing-after-signin page.
+  11. apps/web/styles/responsive.css — explicit breakpoints (sm 640, md 768,
+      lg 1024, xl 1280, 2xl 1536). Mobile tab bar styles.
+  12. apps/web/components/shell/mobile-tabs.tsx — mobile-only tab bar
+      switching between chat/computer/files panes.
+
+  Layout shifts are forbidden. Use CSS grid for the three-pane shell, not
+  flexbox with width transitions (which cause shift). framer-motion's layout
+  prop is acceptable on the pane elements.
+
+  Final step: mantle-designer audits the shell layout on desktop + tablet +
+  mobile. Verdict must be PASS.
+
+packages_required:
+  - apps/web
+
+artifacts:
+  - PHASE_P2_DONE.md
+  - apps/web/app/layout.tsx
+  - apps/web/components/shell/                 # directory, ≥ 7 files
+  - apps/web/hooks/use-keyboard.ts
+
+integration_tests:
+  - apps/web/tests/e2e/shell-collapses-panes.spec.ts
+  - apps/web/tests/e2e/keyboard-shortcuts.spec.ts
+  - apps/web/tests/e2e/mobile-tab-switch.spec.ts
+  - apps/web/tests/e2e/no-layout-shift-on-resize.spec.ts
+
+eval_suites: []
+
+forbidden_patterns:
+  - "Coming Soon"
+  - "Lorem ipsum"
+  - "px-\\[\\d+px\\]"                          # arbitrary pixel values; use spacing scale
+  - "text-\\[#"                                # hex colors in className; use tokens
+
+ship_criteria_human_readable: |
+  - Three-pane shell renders correctly at 1920x1080, 1366x768, 768x1024,
+    and 375x667
+  - ⌘\, ⌘B, ⌘/, ⌘K all wired and functional
+  - Pane collapse animations smooth (no layout shift, motion respects
+    reduced-motion)
+  - Mobile breakpoint switches to tab stack at ≤768px
+  - Theme toggle (light/dark) persists across reload
+  - mantle-designer audit returns PASS
+  - Playwright CLS (cumulative layout shift) test: ≤ 0.01 on every page load

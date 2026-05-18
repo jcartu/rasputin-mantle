@@ -1,0 +1,129 @@
+name: "P5 — Artifact Viewer & Replay Mode"
+phase: P5
+description: |
+  The virality engine. Replay any past session at any moment, share the
+  replay via a public link.
+
+  Replay mode is the "look what my agent did" feature that drove Manus's
+  word-of-mouth growth. Public share links + OG images are how those replays
+  spread.
+
+  Tickets:
+
+  ── REPLAY UI (mantle-frontend / Sonnet) ──
+
+  1. apps/web/app/(app)/replay/[id]/page.tsx — replay view. Same three-pane
+     layout as session view, but with a timeline scrubber on the bottom.
+
+  2. apps/web/components/replay/timeline.tsx — scrubbable timeline showing
+     all steps as ticks. Hover any tick → preview the step's screenshot
+     + first line of narration in a popover. Click → jump replay to that
+     step. Keyboard ← → arrow keys for step-by-step.
+
+  3. apps/web/components/replay/playback-controls.tsx — Play / Pause / 1x /
+     2x / 4x speed controls. Play button advances through steps in
+     real-time-equivalent timing (or 4x compressed at user's choice).
+
+  4. apps/web/components/replay/state-reconstructor.ts — given a session
+     ID + step index, reconstructs the state at that moment: chat-up-to-
+     step, file-tree-as-of-step, page-screenshot-of-step. Pulls from the
+     per-task trace data in outputs/v1_1/traces/<id>.json (extended in
+     this phase to include incremental file snapshots).
+
+  ── ARTIFACT VIEWER ENHANCEMENTS (mantle-frontend) ──
+
+  P3 shipped the basic per-MIME renderers. P5 enhances:
+
+  5. apps/web/components/artifacts/code-viewer.tsx — full CodeMirror 6
+     experience: syntax highlighting via Shiki, line numbers, fold gutter,
+     copy-to-clipboard, "open in editor" button (deep-link to VS Code /
+     Cursor / Zed if scheme registered).
+
+  6. apps/web/components/artifacts/markdown-viewer.tsx — full reading
+     experience: TOC sidebar, copy-link-to-section anchors, dark/light
+     code block themes, syntax-highlight via Shiki.
+
+  7. apps/web/components/artifacts/image-viewer.tsx — pan + zoom (use
+     react-zoom-pan-pinch), download, copy image data.
+
+  8. apps/web/components/artifacts/json-viewer.tsx — collapsible tree
+     with type indicators (string/number/bool/null/array/object), search
+     within JSON, copy-as-path on any leaf.
+
+  9. apps/web/components/artifacts/csv-viewer.tsx — virtual-scroll table
+     for large CSVs (use @tanstack/react-table with row virtualization),
+     column sort, search.
+
+  10. apps/web/components/artifacts/pdf-viewer.tsx — embedded PDF.js
+      viewer with page nav, search, download.
+
+  ── SHARE LINKS (mantle-frontend + mantle-executor) ──
+
+  11. apps/web/app/share/[hash]/page.tsx — public replay page. No auth.
+      Renders the replay view in read-only mode (no take-control, no
+      action buttons, "Sign up to run your own" CTA at top).
+
+  12. apps/web/app/api/og/[hash]/route.ts — OG image generator using
+      Next.js's ImageResponse. Renders task title + first screenshot +
+      Mantle logo into a 1200x630 PNG. Cached.
+
+  13. apps/web/app/api/share/route.ts — POST creates a short-hash share
+      record (random 10-char alphanum) keyed to a session ID, stored in
+      Postgres. Records have a `public: bool` flag and a `created_by`.
+      GET returns metadata for hash → session.
+
+  14. apps/gateway/src/gateway/routes/share.py (mantle-executor) — backend
+      for the share endpoints; deduplicates by session+user; lifecycle
+      mgmt (delete share, list shares).
+
+  15. apps/gateway/src/gateway/db/migrations/v1_2_share_links.sql — DB
+      migration adding the share_links table.
+
+  ── SOCIAL META (mantle-frontend) ──
+
+  16. apps/web/app/share/[hash]/opengraph-image.tsx — Next.js metadata
+      for share pages, includes og:image (route above), og:title (task
+      title), og:description ("Agent task replay · N steps · M minutes ·
+      from Mantle"). Twitter card markup.
+
+  Final step: mantle-designer audits replay view + share view + 3 artifact
+  renderers. Verdict must be PASS.
+
+packages_required:
+  - apps/web
+  - apps/gateway
+
+artifacts:
+  - PHASE_P5_DONE.md
+  - apps/web/app/(app)/replay/[id]/page.tsx
+  - apps/web/app/share/[hash]/page.tsx
+  - apps/web/app/api/og/[hash]/route.ts
+  - apps/web/components/replay/                # ≥ 4 files
+  - apps/web/components/artifacts/             # ≥ 6 enhanced viewers
+  - apps/gateway/src/gateway/routes/share.py
+  - apps/gateway/src/gateway/db/migrations/v1_2_share_links.sql
+
+integration_tests:
+  - apps/web/tests/e2e/replay-scrub-timeline.spec.ts
+  - apps/web/tests/e2e/share-link-public-no-auth.spec.ts
+  - apps/web/tests/e2e/og-image-renders.spec.ts
+  - tests/integration/test_share_endpoint.py
+  - tests/integration/test_artifact_mime_detection.py
+
+eval_suites: []
+
+forbidden_patterns:
+  - "Lorem ipsum"
+  - "Coming Soon"
+  - "console\\.log"
+
+ship_criteria_human_readable: |
+  - Replay timeline scrubs all 100-300 task traces without errors
+  - 6 artifact viewers tested with real files (markdown, code, image,
+    JSON, CSV, PDF)
+  - Share link cold load ≤ 2s (Playwright timed)
+  - OG image renders correctly for 3 random share links (test in social
+    preview validator)
+  - Public share view works without auth
+  - mantle-designer audit returns PASS
+  - Lighthouse on share page ≥ 90 across categories

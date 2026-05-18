@@ -1,0 +1,143 @@
+name: "P3 — Session View (the killer feature)"
+phase: P3
+description: |
+  THE phase. The page that someone screenshots and posts. Three panes wired
+  to real data: chat narration from SSE, live computer from Neko, files from
+  sandbox.
+
+  This phase touches backend (Sonnet not enough — needs 27B for SSE broker
+  expansion, file watch endpoints, MIME detection). Backend work is the
+  cost-saver; route those tickets to mantle-executor (free).
+
+  Tickets:
+
+  ── FRONTEND (Sonnet 4.6 via mantle-frontend) ──
+
+  1. apps/web/app/(app)/session/[id]/page.tsx — session view shell wiring
+     all three panes for a specific task ID.
+
+  2. apps/web/components/session/chat-stream.tsx — SSE subscription via
+     EventSource to /api/sessions/{id}/stream (the v1.1-fixed broker).
+     Renders incoming events as structured cards (NOT plain text):
+       - Tool call card: small icon (Lucide), tool name (mono), target
+         description, "show details" expander revealing args + result
+       - Reasoning card: agent's internal monologue, italic, muted color
+       - File-touch card: filename + diff stat ("+5 -2 lines")
+       - Screenshot card: inline thumbnail, click-to-zoom
+       - Error card: red accent, error message + stack trace expander
+       - Completion card: green, final answer + cost summary
+     Auto-scroll to bottom unless user has scrolled up (sticky-scroll
+     pattern). Step counter and cost-per-step in margin.
+
+  3. apps/web/components/session/computer-view.tsx — Neko iframe with overlay:
+       - Top-right: take-control toggle (gives keyboard/mouse to user
+         instead of agent)
+       - Top-right: fullscreen button (browser fullscreen API)
+       - Top-right: screenshot button (calls Neko's screenshot endpoint)
+       - Bottom-center on hover: tab strip if multiple browser sessions
+         (the multi-tab feature from KICKOFF)
+       - Disconnect overlay with reconnect button on WS drop
+       - Empty state when no Neko URL yet ("Sandbox initializing…")
+     Uses NEXT_PUBLIC_NEKO_URL env, falls back to error state if missing.
+
+  4. apps/web/components/session/file-tree.tsx — sandbox file tree at
+     /api/sandbox/{id}/files. Lazy-load directory contents on expand.
+     Icons per file type (Lucide). Right-click context menu (open in
+     viewer, download, copy path). File-icon thumbnails for images.
+
+  5. apps/web/components/session/artifact-viewer.tsx — opens when a file
+     is clicked. Per-MIME renderer:
+       - Markdown → react-markdown + remark-gfm + syntax-highlighter for
+         code blocks (use rehype-highlight with one-dark theme)
+       - Code → CodeMirror 6 (read-only) with language detection
+       - Image → zoomable img with pan
+       - JSON → react-json-view-lite with collapsible nodes
+       - CSV → simple table renderer with sticky header
+       - PDF → embedded <object> with fallback link
+       - Binary/unknown → file metadata + download button
+
+  6. apps/web/components/session/cost-gutter.tsx — left margin of chat
+     showing per-step cost in muted tabular-nums. Hover for breakdown
+     (input tokens · output tokens · model used).
+
+  7. apps/web/components/session/tool-call-card.tsx — used by chat-stream.
+     The visual atom of the chat. Define this as its own component so it
+     can evolve.
+
+  ── BACKEND (27B via mantle-executor) ──
+
+  8. apps/gateway/src/gateway/routes/sandbox_files.py — new route
+     /api/sandbox/{session_id}/files for listing files, and
+     /api/sandbox/{session_id}/files/{path:path} for content. MIME
+     detection via python-magic. Path traversal protection.
+
+  9. apps/gateway/src/gateway/routes/sandbox_watch.py — SSE stream
+     /api/sandbox/{session_id}/watch that emits file-change events using
+     inotify (watchdog library). Subscribes to the sandbox volume mount.
+
+  10. apps/gateway/src/gateway/event_broker.py — expand v1.1's broker to
+      include structured tool-call events from the CodeAct executor.
+      Each event has: event_type (tool_call / reasoning / file_touch /
+      screenshot / error / completion), data (typed payload), timestamp.
+
+  11. apps/gateway/src/gateway/routes/neko_session.py — POST
+      /api/sessions/{id}/neko spawns or returns the existing Neko URL
+      for this session. Lazy startup if Neko isn't already up for this
+      session.
+
+  ── INTEGRATION ──
+
+  12. apps/web/lib/api.ts — typed client for all the gateway endpoints
+      (session create, stream, files, watch, neko). Uses Zod for response
+      validation.
+
+  13. End-to-end test: apps/web/tests/e2e/session-full-flow.spec.ts —
+      creates a task, opens session view, confirms chat events stream in,
+      confirms file tree updates as sandbox writes files, confirms
+      computer view loads Neko, takes screenshots at 4 key moments
+      (initial, mid-task, file-write, completion).
+
+  Final step: mantle-designer audits the rendered session view against a
+  real running task. Score must be ≥ 8/10 on both fidelity and originality.
+
+packages_required:
+  - apps/web
+  - apps/gateway
+
+artifacts:
+  - PHASE_P3_DONE.md
+  - apps/web/components/session/              # directory, 7+ files
+  - apps/web/app/(app)/session/[id]/page.tsx
+  - apps/gateway/src/gateway/routes/sandbox_files.py
+  - apps/gateway/src/gateway/routes/sandbox_watch.py
+  - apps/web/tests/e2e/session-full-flow.spec.ts
+  - apps/web/tests/visual/session-view.spec.ts   # visual regression baselines
+
+integration_tests:
+  - tests/integration/test_sandbox_files_endpoint.py
+  - tests/integration/test_sandbox_watch_sse.py
+  - tests/integration/test_neko_session_lifecycle.py
+
+eval_suites: []
+
+forbidden_patterns:
+  - "Placeholder"
+  - "Coming Soon"
+  - "Lorem ipsum"
+  - "MockTransport"
+  - "asyncio\\.sleep\\([0-9.]+\\)\\s*$"        # no fake event loops
+  - "\\\\\\\\n.*event:"                        # the v1.0 SSE bug (caught in v1.1 but worth re-checking)
+
+ship_criteria_human_readable: |
+  - Session view renders correctly for a real running task end-to-end
+  - All three panes update live (chat streams, files appear, Neko shows)
+  - Cost gutter shows real per-step costs from the model_client logs
+  - Take-control toggle actually transfers input to the user
+  - Multi-tab browser support functional (open second tab, switch, both
+    visible in computer pane)
+  - File click opens artifact viewer, all 7 MIME renderers tested with
+    real files
+  - Playwright e2e ships with at least 4 screenshot artifacts
+  - mantle-designer audit returns PASS
+  - SSE smoke test from v1.1 still passes (regression check on the
+    sessions.py:100 fix)

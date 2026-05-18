@@ -1,0 +1,162 @@
+name: "P7 — Distribution & Launch"
+phase: P7
+description: |
+  Ship the artifacts that turn "code on GitHub" into "product people install."
+  Tauri builds for Mac/Linux/Windows. One-line install. Hosted demo. Docs
+  site. Release notes. Launch.
+
+  Heavy 27B usage here — most tickets are build scripts, docker config, CI,
+  release automation. Sonnet for the docs site and release notes copy where
+  taste matters.
+
+  Tickets:
+
+  ── TAURI BUILDS (mantle-executor / 27B) ──
+
+  1. apps/desktop/src-tauri/tauri.conf.json refresh — bump bundle IDs,
+     icons (from design-system), updater config, signing setup.
+
+  2. apps/desktop/build-mac.sh — Mac DMG build script. Notarization
+     handled via env vars (APPLE_ID, APPLE_PASSWORD, TEAM_ID). Falls
+     back to unsigned with warning if creds absent.
+
+  3. apps/desktop/build-linux.sh — Linux DEB + RPM + AppImage. AppImage
+     was deferred in v1.0 due to icon manifest; fix and ship now.
+
+  4. apps/desktop/build-windows.ps1 — Windows MSI. Code signing optional.
+
+  5. .github/workflows/release.yml — GitHub Actions: on tag push matching
+     mantle-v*-released, builds all three platforms, uploads to GitHub
+     Releases. Cross-platform matrix.
+
+  6. apps/desktop/src-tauri/updater.json — Tauri auto-updater manifest
+     hosted at https://updater.mantle.dev/<version> (or our domain).
+
+  ── ONE-LINE INSTALL (mantle-executor) ──
+
+  7. install.sh — `curl -sSL https://mantle.dev/install | sh` flow:
+       - Detect OS + arch
+       - Check docker + git + curl present (fail clearly if missing)
+       - Clone the repo (or pull if exists)
+       - Walk user through .env wizard (prompt for ANTHROPIC_API_KEY,
+         VLLM_BASE_URL, VLLM_API_KEY)
+       - Bring up docker compose support services
+       - Verify health-check passes
+       - Print "open http://localhost:3000 to start"
+     Idempotent — safe to re-run.
+
+  8. install.ps1 — Windows PowerShell equivalent.
+
+  ── HOSTED DEMO (mantle-executor + DevOps) ──
+
+  9. deploy/fly.toml — Fly.io app config. Three machines: web (Next.js),
+     gateway (FastAPI), shared Postgres + Neko stack.
+
+  10. deploy/Dockerfile.web — production web build (multi-stage).
+
+  11. deploy/Dockerfile.gateway — production gateway build.
+
+  12. deploy/setup-demo.sh — script that brings up a fresh demo
+      environment with capped quotas (5 tasks/IP/day enforced at gateway
+      middleware, demo-mode preset).
+
+  13. apps/gateway/src/gateway/middleware/demo_quota.py — IP-based
+      quota for demo mode. Headers indicate demo-mode active.
+
+  ── DOCS SITE (mantle-frontend / Sonnet) ──
+
+  14. apps/docs/ — separate Next.js app for the documentation site at
+      docs.mantle.dev (or chosen domain). Uses the v1.2 design system.
+      Nextra or similar.
+
+  15. apps/docs/pages/index.mdx — docs landing.
+
+  16. apps/docs/pages/quickstart.mdx — install in 5 minutes from clone.
+
+  17. apps/docs/pages/architecture.mdx — system architecture from
+      docs/ARCHITECTURE.md, with v1.2 diagrams.
+
+  18. apps/docs/pages/skills.mdx — how to author a SKILL.md.
+
+  19. apps/docs/pages/api.mdx — gateway HTTP API reference.
+
+  20. apps/docs/pages/self-hosting.mdx — production deployment guide.
+
+  21. apps/docs/pages/security.mdx — security model + threat model from
+      docs/SECURITY.md.
+
+  ── RELEASE PACKAGE (Sonnet + 27B) ──
+
+  22. MANTLE_V1_2_RELEASED.md — release report:
+        - Section: What ships in v1.2 (the full product surface)
+        - Section: Screenshots (12-15 PNGs of every primary screen,
+          captured by automated Playwright run)
+        - Section: Demo video links (60-90s walkthrough, hosted on
+          Loom or self-hosted)
+        - Section: WebVoyager-300 numbers from v1.1 (unchanged — we
+          don't re-run)
+        - Section: Lighthouse scores per page
+        - Section: Cost summary (Anthropic spend across P0-P7,
+          breakdown by phase, breakdown by agent)
+        - Section: Reproduction recipe (curl install → first task →
+          replay)
+        - Section: Dependency delta vs v1.1
+        - Section: What's next (v1.3 candidates, briefly)
+
+  23. .github/workflows/screenshots.yml — runs Playwright against the
+      hosted demo, captures screenshots of every primary screen in both
+      modes, commits to assets/screenshots/. Runs on v1.2 release.
+
+  24. README.md update — replace v1.1 brand art with v1.2 screenshots,
+      add demo video embed, update "What this is" section.
+
+  25. Tag mantle-v1.2-released. Push tag.
+
+  Final step: mantle-designer audits the public surface (landing, docs
+  landing, release page). Must return PASS.
+
+packages_required:
+  - apps/desktop
+  - apps/docs
+  - deploy
+
+artifacts:
+  - PHASE_P7_DONE.md
+  - MANTLE_V1_2_RELEASED.md
+  - install.sh
+  - install.ps1
+  - apps/desktop/build-mac.sh
+  - apps/desktop/build-linux.sh
+  - apps/desktop/build-windows.ps1
+  - deploy/fly.toml
+  - apps/docs/                                 # docs site
+  - assets/screenshots/                        # ≥ 12 PNG screenshots
+  - .github/workflows/release.yml
+
+integration_tests:
+  - tests/integration/test_install_sh_idempotent.py
+  - tests/integration/test_demo_quota_enforced.py
+  - tests/integration/test_release_workflow_dry_run.py
+  - apps/docs/tests/all-pages-render.spec.ts
+
+eval_suites: []
+
+forbidden_patterns:
+  - "Lorem ipsum"
+  - "Coming Soon"
+  - "TODO.*before launch"
+  - "asyncio\\.sleep\\([0-9.]+\\)\\s*$"
+
+ship_criteria_human_readable: |
+  - One-line install on fresh Ubuntu 24 succeeds and runs first task
+  - Mac DMG installs and launches without warnings (signed if creds set)
+  - Linux DEB + RPM + AppImage all install + run
+  - Windows MSI installs + runs (signed if creds set)
+  - Hosted demo URL responds in <3s, allows 5 tasks before rate-limit
+  - Docs site at docs.mantle.dev (or chosen) renders all 8 pages
+  - MANTLE_V1_2_RELEASED.md contains real screenshots and a demo video link
+  - README updated with v1.2 screenshots (old brand art moved to
+    assets/brand/ as archive)
+  - mantle-v1.2-released tag pushed
+  - GitHub Release created with all platform artifacts attached
+  - mantle-designer final audit returns PASS

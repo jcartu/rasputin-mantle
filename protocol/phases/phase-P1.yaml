@@ -1,0 +1,82 @@
+name: "P1 — Component Primitives"
+phase: P1
+description: |
+  Implement the primitive component library against the P0 design system spec.
+  Sonnet 4.6 (mantle-frontend) writes every component. Sisyphus dispatches
+  parallel tickets, one component per ticket, with the relevant SPEC.md section
+  + tokens.css as context.
+
+  Components to build (one ticket each):
+
+  1. Button — 5 variants (primary, secondary, ghost, destructive, link), 4 sizes
+     (xs, sm, md, lg), loading state, icon-left/icon-right/icon-only modes.
+  2. Input — text, email, password, number, search variants. Error state. Hint
+     text. Trailing/leading icon support. Disabled state.
+  3. Textarea — auto-grow, character count, max-height with scroll, same states
+     as Input.
+  4. Select — native + custom. Search-in-dropdown. Multi-select variant.
+     Empty state.
+  5. Dialog — modal pattern. Sizes (sm, md, lg, full). Focus trap. Esc to close.
+     Backdrop click handling. Animations from MOTION.md.
+  6. Sheet — slide-in panel from left/right/top/bottom. Same focus management
+     as Dialog.
+  7. Toast — bottom-right stack. Variants (info, success, warn, error).
+     Auto-dismiss. Action button slot. Animations.
+  8. Tooltip — text + optional shortcut keys. Smart positioning (top/bottom/
+     left/right with collision detection). 250ms hover delay.
+  9. Skeleton — block, circle, text-line variants. Shimmer animation
+     respecting reduced-motion.
+  10. Spinner — sizes (xs through xl). Determinate (progress) and
+      indeterminate variants.
+  11. Tab — horizontal and vertical layouts. Animated indicator. Keyboard nav.
+  12. Badge — variants (default, success, warn, error, outline). Sizes (sm, md).
+  13. Card — base card primitive. Header/body/footer slots. Hover state.
+  14. Avatar — image + fallback initials. Sizes (xs through xl). Status dot
+      overlay.
+  15. Switch — controlled toggle. Disabled state. Sizes (sm, md).
+
+  Each ticket:
+    - Reads design-system/SPEC.md (relevant section)
+    - Implements in apps/web/components/ui/<name>.tsx
+    - Adds Storybook-style preview at apps/web/app/_design/page.tsx (already
+      scaffolded in P0 — each component adds its preview block)
+    - Ships unit tests at apps/web/components/ui/<name>.test.tsx
+    - Ships visual regression spec at apps/web/tests/visual/<name>.spec.ts
+
+  Visual regression uses Playwright snapshot tests. First run produces the
+  baseline; subsequent runs catch drift. The baselines are the canonical
+  appearance.
+
+  Final step: mantle-designer audits 3 random primitives against the spec and
+  returns PASS before P1 ships.
+
+packages_required:
+  - apps/web
+
+artifacts:
+  - PHASE_P1_DONE.md
+  - apps/web/components/ui/                    # directory, ≥ 15 .tsx files
+  - apps/web/tests/visual/                     # directory with visual regression specs
+
+integration_tests:
+  - apps/web/tests/e2e/all-primitives-render.spec.ts
+  - apps/web/tests/e2e/dark-light-mode-toggle.spec.ts
+
+eval_suites: []
+
+forbidden_patterns:
+  - "bg-primary text-primary-foreground"       # shadcn default Button
+  - "Lorem ipsum"
+  - "Coming Soon"
+  - "console\\.log"                            # no debug logs
+  - "any"                                      # no `: any` types in shipped components (TS strict)
+
+ship_criteria_human_readable: |
+  - 15 component primitives shipped, each with matching test + visual spec
+  - Each primitive renders correctly in both light and dark modes
+  - mantle-designer audit on 3 random primitives returns PASS with
+    fidelity ≥ 8, originality ≥ 7
+  - Visual regression baselines committed
+  - /_design page renders all primitives in all states
+  - No shadcn default styling visible
+  - Lighthouse on /_design page ≥ 95 for performance + accessibility

@@ -20,12 +20,14 @@ from gateway.routes.files import router as files_router
 from gateway.routes.mcp import router as mcp_router
 from gateway.routes.memory import router as memory_router
 from gateway.routes.neko_session import router as neko_session_router
+from gateway.routes.playbooks import router as playbooks_router
 from gateway.routes.research import router as research_router
 from gateway.routes.sandbox_files import router as sandbox_files_router
 from gateway.routes.sandbox_watch import router as sandbox_watch_router
 from gateway.routes.scheduler import router as scheduler_router
 from gateway.routes.sessions import router as sessions_router
 from gateway.routes.session_events import router as session_events_router, set_writer
+from gateway.routes.share import router as share_router, set_writer as set_share_writer
 from gateway.routes.skills import router as skills_router
 from gateway.routes.voice import router as voice_router
 
@@ -40,8 +42,10 @@ _event_writer = SessionEventWriter(settings.database_url)
 async def startup_event_writer() -> None:
     await _event_writer.initialize()
     set_writer(_event_writer)
+    set_share_writer(_event_writer)
 app.include_router(sessions_router, prefix="/api/sessions")
 app.include_router(session_events_router, prefix="/api/sessions")
+app.include_router(share_router, prefix="/api/share")
 app.include_router(skills_router, prefix="/api/skills")
 app.include_router(files_router, prefix="/api/files")
 app.include_router(memory_router, prefix="/api/memory")
@@ -54,6 +58,7 @@ app.include_router(agent_router, prefix="/api/agent")
 app.include_router(sandbox_files_router)
 app.include_router(sandbox_watch_router)
 app.include_router(neko_session_router)
+app.include_router(playbooks_router, prefix="/api/playbooks")
 
 
 @app.get("/api/health")

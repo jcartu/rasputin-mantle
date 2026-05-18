@@ -16,6 +16,11 @@ class SessionInfoSchema(BaseModel):
     cost_tokens: int = 0
     cost_dollars: float = 0.0
     sandbox_id: str | None = None
+    project_id: str | None = None
+    default_planner: str | None = None
+    system_prompt_addendum: str | None = None
+    allowed_tools: list[str] | None = None
+    kb_index: list[str] | None = None
 
     @classmethod
     def from_type(cls, info: SessionInfo) -> SessionInfoSchema:
@@ -26,6 +31,11 @@ class SessionInfoSchema(BaseModel):
             cost_tokens=info.cost_tokens,
             cost_dollars=info.cost_dollars,
             sandbox_id=info.sandbox_id,
+            project_id=info.project_id,
+            default_planner=info.default_planner,
+            system_prompt_addendum=info.system_prompt_addendum,
+            allowed_tools=info.allowed_tools,
+            kb_index=info.kb_index,
         )
 
     def to_type(self) -> SessionInfo:
@@ -36,6 +46,11 @@ class SessionInfoSchema(BaseModel):
             cost_tokens=self.cost_tokens,
             cost_dollars=self.cost_dollars,
             sandbox_id=self.sandbox_id,
+            project_id=self.project_id,
+            default_planner=self.default_planner,
+            system_prompt_addendum=self.system_prompt_addendum,
+            allowed_tools=self.allowed_tools,
+            kb_index=self.kb_index,
         )
 
 

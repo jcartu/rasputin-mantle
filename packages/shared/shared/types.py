@@ -20,6 +20,11 @@ class SessionInfo:
     cost_tokens: int = 0
     cost_dollars: float = 0.0
     sandbox_id: str | None = None
+    project_id: str | None = None
+    default_planner: str | None = None
+    system_prompt_addendum: str | None = None
+    allowed_tools: list[str] | None = None
+    kb_index: list[str] | None = None
 
 
 @dataclass(frozen=True)

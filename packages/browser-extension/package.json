@@ -1,0 +1,15 @@
+{
+  "name": "@rasputin-mantle/browser-extension",
+  "version": "1.3.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc --project tsconfig.json && node scripts/build.mjs",
+    "typecheck": "tsc --project tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.268",
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Rasputin Mantle",
+  "version": "1.3.0",
+  "description": "Create Mantle sessions from browser pages, selections, and omnibox tasks.",
+  "permissions": ["contextMenus", "omnibox", "sidePanel", "activeTab", "storage"],
+  "host_permissions": ["http://localhost:8000/"],
+  "omnibox": {
+    "keyword": "mantle"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Rasputin Mantle",
+    "default_icon": {
+      "16": "assets/icons/gray-16.png",
+      "32": "assets/icons/gray-32.png",
+      "48": "assets/icons/gray-48.png",
+      "128": "assets/icons/gray-128.png"
+    }
+  },
+  "icons": {
+    "16": "assets/icons/teal-16.png",
+    "32": "assets/icons/teal-32.png",
+    "48": "assets/icons/teal-48.png",
+    "128": "assets/icons/teal-128.png"
+  },
+  "options_page": "options.html",
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  }
+}

@@ -12,9 +12,7 @@ from pathlib import Path, PurePosixPath
 from sandbox.errors import SandboxBackendUnavailable, SandboxExecError
 
 EXEC_TIMEOUT_SECONDS = 120
-E2B_STUB_MESSAGE = (
-    "E2B backend is stubbed for Phase 0/1. Set E2B_API_KEY and MANTLE_SANDBOX_BACKEND=e2b for Phase 2+."
-)
+E2B_STUB_MESSAGE = "E2B backend is stubbed for Phase 0/1. Set E2B_API_KEY and MANTLE_SANDBOX_BACKEND=e2b for Phase 2+."
 
 
 @dataclass
@@ -39,6 +37,10 @@ class SandboxBackend(ABC):
 
     @abstractmethod
     def write(self, session_id: str, path: str, data: str) -> None:
+        raise NotImplementedError
+
+    @abstractmethod
+    def write_bytes(self, session_id: str, path: str, data: bytes, *, read_only: bool = False) -> None:
         raise NotImplementedError
 
     @abstractmethod
@@ -100,7 +102,10 @@ class LocalDockerBackend(SandboxBackend):
         temp_file = temp_dir / ".codeact_tmp.py"
         try:
             temp_file.write_text(code, encoding="utf-8")
-            _run(["docker", "cp", str(temp_file), f"{_container_name(session_id)}:/workspace/.codeact_tmp.py"], check=True)
+            _run(
+                ["docker", "cp", str(temp_file), f"{_container_name(session_id)}:/workspace/.codeact_tmp.py"],
+                check=True,
+            )
             result = _run(["docker", "exec", _container_name(session_id), "python3", "/workspace/.codeact_tmp.py"])
             return SandboxExecResult(stdout=result.stdout, stderr=result.stderr, exit_code=result.returncode)
         finally:
@@ -115,11 +120,19 @@ class LocalDockerBackend(SandboxBackend):
             shutil.rmtree(temp_dir, ignore_errors=True)
 
     def write(self, session_id: str, path: str, data: str) -> None:
+        self.write_bytes(session_id, path, data.encode("utf-8"))
+
+    def write_bytes(self, session_id: str, path: str, data: bytes, *, read_only: bool = False) -> None:
         temp_dir = Path(tempfile.mkdtemp(prefix="mantle-write-"))
         temp_file = temp_dir / PurePosixPath(path).name
         try:
-            temp_file.write_text(data, encoding="utf-8")
-            _run(["docker", "exec", _container_name(session_id), "mkdir", "-p", str(PurePosixPath(path).parent)], check=True)
+            temp_file.write_bytes(data)
+            if read_only:
+                temp_file.chmod(0o444)
+            _run(
+                ["docker", "exec", _container_name(session_id), "mkdir", "-p", str(PurePosixPath(path).parent)],
+                check=True,
+            )
             _run(["docker", "cp", str(temp_file), f"{_container_name(session_id)}:{path}"], check=True)
         finally:
             shutil.rmtree(temp_dir, ignore_errors=True)
@@ -146,6 +159,9 @@ class E2BBackend(SandboxBackend):
         raise SandboxBackendUnavailable(E2B_STUB_MESSAGE)
 
     def write(self, session_id: str, path: str, data: str) -> None:
+        raise SandboxBackendUnavailable(E2B_STUB_MESSAGE)
+
+    def write_bytes(self, session_id: str, path: str, data: bytes, *, read_only: bool = False) -> None:
         raise SandboxBackendUnavailable(E2B_STUB_MESSAGE)
 
     def list_files(self, session_id: str, path: str) -> list[str]:

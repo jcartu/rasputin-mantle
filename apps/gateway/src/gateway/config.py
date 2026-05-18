@@ -13,6 +13,7 @@ class Settings:
     skills_dir: str = os.environ.get("MANTLE_SKILLS_DIR", "skills")
     sandbox_backend: str = os.environ.get("MANTLE_SANDBOX_BACKEND", "docker")
     files_root: str = os.environ.get("MANTLE_FILES_ROOT", "/workspace")
+    kb_root: str = os.environ.get("MANTLE_KB_ROOT", "/workspace/projects")
     max_cost_dollars: float = float(os.environ.get("MANTLE_MAX_COST", "40.0"))
     max_cost_tokens: int = int(os.environ.get("MANTLE_MAX_TOKENS", "1000000"))
     debug: bool = os.environ.get("MANTLE_DEBUG", "false").lower() == "true"
@@ -23,9 +24,7 @@ class Settings:
     vllm_api_key: str = os.environ.get("VLLM_API_KEY", "")
     openai_api_key: str = os.environ.get("OPENAI_API_KEY", "")
     anthropic_api_key: str = os.environ.get("ANTHROPIC_API_KEY", "")
-    database_url: str = os.environ.get(
-        "DATABASE_URL", "postgresql://mantle:mantle-dev@postgres:5432/mantle"
-    )
+    database_url: str = os.environ.get("DATABASE_URL", "postgresql://mantle:mantle-dev@postgres:5432/mantle")
 
 
 settings = Settings()

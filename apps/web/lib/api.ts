@@ -27,6 +27,51 @@ export interface SessionInfo {
   created_at: number;
   sandbox_id: string | null;
   cost_dollars?: number;
+  project_id?: string | null;
+  default_planner?: string | null;
+  system_prompt_addendum?: string | null;
+  allowed_tools?: string[] | null;
+  kb_index?: string[] | null;
+}
+
+export interface ProjectInfo {
+  id: string;
+  name: string;
+  slug: string;
+  created_at: string;
+  updated_at: string;
+  owner_id: string;
+  visibility: 'private' | 'team' | 'public';
+  default_planner: string | null;
+  system_prompt_addendum: string | null;
+  allowed_tools: string[];
+}
+
+export interface ProjectMember {
+  project_id: string;
+  user_id: string;
+  role: 'owner' | 'editor' | 'viewer';
+  added_at: string;
+}
+
+export interface KBFileInfo {
+  id: number;
+  project_id: string;
+  filename: string;
+  mime_type: string | null;
+  size_bytes: number;
+  sha256: string;
+  uploaded_at: string;
+  storage_path: string;
+}
+
+export interface ProjectInput {
+  name: string;
+  slug: string;
+  visibility?: 'private' | 'team' | 'public';
+  default_planner?: string | null;
+  system_prompt_addendum?: string | null;
+  allowed_tools?: string[];
 }
 
 export interface ExecRequest {
@@ -86,17 +131,24 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
     const body = await res.json().catch(() => ({}));
     throw new Error(body.detail?.message ?? `HTTP ${res.status}`);
   }
+  if (res.status === 204) {
+    return undefined as T;
+  }
   return res.json();
 }
 
 // --- Sessions ---
 
-export async function listSessions(): Promise<SessionInfo[]> {
-  return request('/sessions');
+export async function listSessions(projectId?: string): Promise<SessionInfo[]> {
+  const params = projectId ? `?project_id=${encodeURIComponent(projectId)}` : '';
+  return request(`/sessions${params}`);
 }
 
-export async function createSession(): Promise<SessionInfo> {
-  return request('/sessions', { method: 'POST' });
+export async function createSession(projectId?: string): Promise<SessionInfo> {
+  return request('/sessions', {
+    method: 'POST',
+    body: projectId ? JSON.stringify({ project_id: projectId }) : undefined,
+  });
 }
 
 export async function getSession(id: string): Promise<SessionInfo> {
@@ -145,4 +197,49 @@ export function watchFiles(sessionId: string): EventSource {
 
 export async function getNekoSession(sessionId: string): Promise<NekoSession> {
   return request(`/sessions/${sessionId}/neko`, { method: 'POST' });
+}
+
+// --- Projects ---
+
+export async function listProjects(): Promise<ProjectInfo[]> {
+  return request('/projects');
+}
+
+export async function createProject(data: ProjectInput): Promise<ProjectInfo> {
+  return request('/projects', { method: 'POST', body: JSON.stringify(data) });
+}
+
+export async function getProject(id: string): Promise<ProjectInfo> {
+  return request(`/projects/${id}`);
+}
+
+export async function updateProject(id: string, data: Partial<ProjectInput>): Promise<ProjectInfo> {
+  return request(`/projects/${id}`, { method: 'PATCH', body: JSON.stringify(data) });
+}
+
+export async function deleteProject(id: string): Promise<void> {
+  await request(`/projects/${id}`, { method: 'DELETE' });
+}
+
+export async function listProjectMembers(id: string): Promise<ProjectMember[]> {
+  return request(`/projects/${id}/members`);
+}
+
+export async function listProjectKb(id: string): Promise<KBFileInfo[]> {
+  return request(`/projects/${id}/kb`);
+}
+
+export async function uploadProjectKb(id: string, file: File): Promise<KBFileInfo> {
+  const form = new FormData();
+  form.append('file', file);
+  const res = await fetch(`${BASE}/projects/${id}/kb`, { method: 'POST', body: form });
+  if (!res.ok) {
+    const body = await res.json().catch(() => ({}));
+    throw new Error(body.detail?.message ?? `HTTP ${res.status}`);
+  }
+  return res.json();
+}
+
+export async function deleteProjectKbFile(projectId: string, fileId: number): Promise<void> {
+  await request(`/projects/${projectId}/kb/${fileId}`, { method: 'DELETE' });
 }

@@ -1,6 +1,7 @@
 'use client';
 
 import * as React from 'react';
+import { ProjectSidebar } from '@/components/projects/project-sidebar';
 import { AppShell } from '@/components/shell/app-shell';
 import { MobileTabs, type MobileTab } from '@/components/shell/mobile-tabs';
 import { useTheme } from '@/context/theme-context';
@@ -107,6 +108,7 @@ export default function AppLayout({
         onToggleFiles={toggleFiles}
         onResizeChat={setChatWidth}
         onResizeFiles={setFilesWidth}
+        chat={<ProjectSidebar />}
         computer={children}
       />
       <MobileTabs active={mobileTab} onChange={setMobileTab} />

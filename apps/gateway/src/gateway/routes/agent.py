@@ -18,7 +18,6 @@ from gateway.config import settings
 from gateway.cost_wall import CostCeilingExceeded, default_cost_wall
 from gateway import model_client
 from gateway.model_client import ModelCallError
-from gateway.sessions import broker
 router = APIRouter()
 
 AgentActionName = Literal["open", "click", "type", "evaluate", "finish"]

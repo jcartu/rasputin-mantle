@@ -3,35 +3,12 @@ from __future__ import annotations
 from dataclasses import replace
 from typing import Any, Optional
 
-import asyncio
-
 from shared.types import SessionInfo, SessionStatus
-from shared.schemas import StreamEventSchema
 
+# Re-export broker from event_broker (single source of truth)
+from gateway.event_broker import broker  # noqa: F401
 
-class EventBroker:
-    """Per-session asyncio.Queue broker for SSE events."""
-
-    def __init__(self) -> None:
-        self._queues: dict[str, asyncio.Queue] = {}
-
-    def get_queue(self, session_id: str) -> asyncio.Queue:
-        q = self._queues.get(session_id)
-        if q is None:
-            q = asyncio.Queue(maxsize=256)
-            self._queues[session_id] = q
-        return q
-
-    def publish(self, session_id: str, event: StreamEventSchema) -> None:
-        q = self.get_queue(session_id)
-        if not q.full():
-            q.put_nowait(event)
-
-    def remove(self, session_id: str) -> None:
-        self._queues.pop(session_id, None)
-
-
-broker = EventBroker()
+__all__ = ["SessionStore", "broker"]
 
 
 class SessionStore:

@@ -23,6 +23,9 @@ class Settings:
     vllm_api_key: str = os.environ.get("VLLM_API_KEY", "")
     openai_api_key: str = os.environ.get("OPENAI_API_KEY", "")
     anthropic_api_key: str = os.environ.get("ANTHROPIC_API_KEY", "")
+    database_url: str = os.environ.get(
+        "DATABASE_URL", "postgresql://mantle:mantle-dev@postgres:5432/mantle"
+    )
 
 
 settings = Settings()

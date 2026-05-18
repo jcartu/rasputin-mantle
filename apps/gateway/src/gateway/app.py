@@ -28,7 +28,7 @@ from gateway.routes.scheduler import router as scheduler_router
 from gateway.routes.sessions import router as sessions_router
 from gateway.routes.session_events import router as session_events_router, set_writer
 from gateway.routes.share import router as share_router, set_writer as set_share_writer
-from gateway.routes.skills import router as skills_router
+from gateway.routes.skills import router as skills_router, session_router as session_skills_router
 from gateway.routes.voice import router as voice_router
 
 app = FastAPI(title="Rasputin Mantle Gateway", version="0.1.0")
@@ -44,6 +44,7 @@ async def startup_event_writer() -> None:
     set_writer(_event_writer)
     set_share_writer(_event_writer)
 app.include_router(sessions_router, prefix="/api/sessions")
+app.include_router(session_skills_router, prefix="/api/sessions")
 app.include_router(session_events_router, prefix="/api/sessions")
 app.include_router(share_router, prefix="/api/share")
 app.include_router(skills_router, prefix="/api/skills")

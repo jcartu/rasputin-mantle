@@ -3,7 +3,7 @@ import * as React from 'react';
 import { createPortal } from 'react-dom';
 import { Info, CheckCircle2, AlertTriangle, AlertCircle, X } from 'lucide-react';
 
-export type ToastVariant = 'info' | 'success' | 'warn' | 'error';
+export type ToastVariant = 'info' | 'success' | 'warn' | 'error' | 'destructive';
 
 export interface ToastData {
   id: string;
@@ -20,6 +20,7 @@ export interface ToastData {
 interface ToastContextValue {
   toasts: ToastData[];
   addToast: (toast: Omit<ToastData, 'id'>) => string;
+  toast: (toast: Omit<ToastData, 'id'>) => string;
   removeToast: (id: string) => void;
 }
 
@@ -41,6 +42,7 @@ const variantConfig: Record<
   success: { color: 'var(--color-success)', Icon: CheckCircle2 },
   warn: { color: 'var(--color-warning)', Icon: AlertTriangle },
   error: { color: 'var(--color-destructive)', Icon: AlertCircle },
+  destructive: { color: 'var(--color-destructive)', Icon: AlertCircle },
 };
 
 interface ToastItemProps {
@@ -252,7 +254,7 @@ export const ToastProvider: React.FC<ToastProviderProps> = ({ children }) => {
   }, []);
 
   const value = React.useMemo(
-    () => ({ toasts, addToast, removeToast }),
+    () => ({ toasts, addToast, toast: addToast, removeToast }),
     [toasts, addToast, removeToast]
   );
 

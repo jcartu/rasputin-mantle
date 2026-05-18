@@ -73,6 +73,28 @@ export const CardBody = React.forwardRef<HTMLDivElement, CardBodyProps>(
 );
 CardBody.displayName = 'CardBody';
 
+export const CardContent = CardBody;
+
+export interface CardTitleProps extends React.HTMLAttributes<HTMLHeadingElement> {}
+
+export const CardTitle = React.forwardRef<HTMLHeadingElement, CardTitleProps>(
+  ({ className, style, ...props }, ref) => (
+    <h3
+      ref={ref}
+      style={{
+        margin: 0,
+        fontSize: 'var(--text-lg)',
+        fontWeight: 'var(--font-weight-semibold)',
+        color: 'var(--color-foreground)',
+        ...style,
+      }}
+      className={className}
+      {...props}
+    />
+  )
+);
+CardTitle.displayName = 'CardTitle';
+
 export interface CardFooterProps extends React.HTMLAttributes<HTMLDivElement> {
   withBorder?: boolean;
 }

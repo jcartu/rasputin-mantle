@@ -1,442 +1,405 @@
 <!--
-  Rasputin Mantle — README
+  Rasputin Mantle - README v1.2
   -----------------------------------------------------------------------------
-  Visual identity:  obsidian black #0A0A0F • electric violet #8B5CF6
-                    mantle gold #D4AF37    • paperwhite #F1F5F9
-  Image set:        assets/brand/  (generated with Nano Banana 2 @ 4K)
+  Visual identity:  deep charcoal #0C1217, teal-sage #14B8A6 / #0D9488,
+                    paperwhite #FAFBFC
+  Fonts:            Geist Sans + IBM Plex Mono
+  Animations:       CSS-only, respects prefers-reduced-motion
   -->
 
+<br/>
+
 <p align="center">
-  <img src="assets/brand/header.jpg" alt="Rasputin Mantle — a self-hostable agent platform" width="100%" />
+  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="48" height="48" rx="10" fill="#0C1217"/>
+    <path d="M14 34V14h4v16h-4zm10 0V14h4v16h-4zm10 0V14h4v16h-4z" fill="#14B8A6"/>
+  </svg>
+</p>
+
+<h1 align="center">Rasputin Mantle</h1>
+
+<p align="center">
+  <strong>Self-hosted autonomous agent platform.</strong>
 </p>
 
 <p align="center">
-  <em>Hand it a goal. Watch it work. Keep the keys.</em>
+  Give it a goal. It browses, codes, researches, and shows you its work. You keep the keys.
 </p>
 
-<p align="center">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-8B5CF6?style=for-the-badge&labelColor=0A0A0F" alt="MIT License"/></a>
-  <a href="https://github.com/jcartu/rasputin-mantle/releases/latest"><img src="https://img.shields.io/github/v/release/jcartu/rasputin-mantle?style=for-the-badge&labelColor=0A0A0F&color=D4AF37&label=release" alt="latest release"/></a>
-  <a href="#-performance"><img src="https://img.shields.io/badge/WebVoyager--100-63%25-8B5CF6?style=for-the-badge&labelColor=0A0A0F" alt="WebVoyager-100"/></a>
-  <a href="#-performance"><img src="https://img.shields.io/badge/CodeAct-100%25-8B5CF6?style=for-the-badge&labelColor=0A0A0F" alt="CodeAct 100%"/></a>
-  <a href="#-performance"><img src="https://img.shields.io/badge/voice%20p50-365ms-D4AF37?style=for-the-badge&labelColor=0A0A0F" alt="Voice p50 365ms"/></a>
-</p>
+<br/>
 
 <p align="center">
-  <a href="#-what-this-is">What it is</a> ·
-  <a href="#-quick-start">Quick start</a> ·
-  <a href="#-architecture">Architecture</a> ·
-  <a href="#-live-computer-view">Live view</a> ·
-  <a href="#-wide-research">Wide research</a> ·
-  <a href="#-performance">Performance</a> ·
-  <a href="#-vs-manus">vs Manus</a> ·
-  <a href="#-engineering-invariants">Invariants</a> ·
-  <a href="#-honest-gaps">Honest gaps</a>
+  <a href="#quick-start">Quick Start</a> ·
+  <a href="#architecture">Architecture</a> ·
+  <a href="#performance">Performance</a> ·
+  <a href="#what-ships-in-v1.2">v1.2 Release</a> ·
+  <a href="#engineering-invariants">Invariants</a> ·
+  <a href="#honest-gaps">Gaps</a>
+</p>
+
+<br/>
+
+---
+
+## Quick start
+
+```bash
+curl -sSL https://mantle.dev/install | sh
+```
+
+One line. The installer clones the repo, configures your API keys, brings up the Docker stack, and opens `http://localhost:3000`. Re-running is idempotent.
+
+**Requirements:** Docker, Python ≥3.11, Node ≥18, `pnpm`, `uv`, and an LLM API key (Anthropic, OpenAI, or a local vLLM endpoint).
+
+<p align="center">
+  <a href="https://demo.mantle.dev/v1.2/walkthrough.mp4">
+    <img src="https://img.shields.io/badge/watch-90s_walkthrough-14B8A6?style=for-the-badge&labelColor=0C1217" alt="Watch the walkthrough" />
+  </a>
+  <img src="https://img.shields.io/badge/license-MIT-14B8A6?style=for-the-badge&labelColor=0C1217" alt="MIT License"/>
+  <img src="https://img.shields.io/badge/version-v1_2-14B8A6?style=for-the-badge&labelColor=0C1217" alt="version v1.2"/>
 </p>
 
 ---
 
-## ✦ What this is
+## What this is
 
-**Rasputin Mantle is a self-hostable, MIT-licensed agent platform** with the same shape as Manus — give it a goal, it browses, codes, researches, remembers, and shows you its work via a live computer view — but the orchestration runs on your machine and the model spend lives in your account.
+Rasputin Mantle is a self-hosted, MIT-licensed agent platform. The orchestration runs on your machine. The model spend lives in your account. No SaaS dependency, no billing layer, no opaque backend.
 
-It is **not** a wrapper around someone else's agent. It is a complete stack:
+v1.2 ships a complete product surface: documented design system, 24 Radix-backed component primitives, three-pane resizable shell, real-time agent trace, Neko WebRTC live browser, scrubbable replay, share links, mobile layouts, onboarding, and full WCAG AA accessibility.
 
-- A **FastAPI gateway** with a server-enforced cost ceiling (HTTP 429 when you burn through your budget).
-- A **CodeAct executor** ([Wang et al. 2024](https://arxiv.org/abs/2402.01030)) — Python action loop, no proprietary tool dialect.
-- A **hardened Docker sandbox** — `python:3.12-slim`, non-root user, 512 MB RAM, 1 CPU, `no-new-privileges`.
-- A **Playwright + Chromium browser** with the OS sandbox always on (enforced by pre-commit hook).
-- A **`SKILL.md` registry** — frontmatter + body, loadable from any repo.
-- A **live computer view** — real [Neko](https://neko.m1k1o.net/) WebRTC iframe, not a placeholder.
-- A **memory backend** ([rasputin-memory](memory/), 72.40% LoCoMo) on Qdrant + FalkorDB.
-- A **wide-research dispatcher** — up to 10 sandboxed subagents in parallel via `asyncio.gather`.
-- A **voice loop** — Faster-Whisper STT + Kokoro TTS, p50 latency **365 ms**.
-- An **MCP host** (JSON-RPC 2.0, stdio + WebSocket) — extensible via any external MCP server.
-- A **Tauri 2 desktop app** — compiled binary, DEB and RPM bundles.
+Underneath, the engine remains:
 
-It was built across **seven phases (R0 → R6)** under a strict two-agent audit loop. Every phase had to clear an Opus 4.7 auditor returning `PERFECT` or `PUNCH_LIST` — no middle ground. The verified evidence is in [`MANTLE_V1_RELEASED.md`](MANTLE_V1_RELEASED.md).
+- **FastAPI gateway** with server-enforced cost ceiling (HTTP 429 on budget exceed)
+- **CodeAct executor** (Wang et al. 2024) — Python action loop, open tool dialect
+- **Hardened Docker sandbox** — `python:3.12-slim`, non-root, 512 MB RAM, `no-new-privileges`
+- **Playwright + Chromium** — OS sandbox always on, enforced by pre-commit hook
+- **SKILL.md registry** — frontmatter + body, loadable from any repo
+- **Neko WebRTC live view** — real virtual browser stream, not screenshot polling
+- **rasputin-memory** — Qdrant + FalkorDB, 72.40% LoCoMo
+- **Wide research** — up to 10 parallel sandboxed subagents via `asyncio.gather`
+- **Voice loop** — Faster-Whisper STT + Kokoro TTS, p50 365 ms
+- **MCP host** — JSON-RPC 2.0, stdio + WebSocket
+- **Tauri 2 desktop** — Mac DMG, Linux DEB/RPM, Windows MSI
 
-## ✦ Who it's for
+---
 
-You should care about Mantle if **any** of the following are true:
-
-- You want a Manus-shaped agent UX **but on your hardware**, with your keys, your data, your budget.
-- You want to **bring your own model** — local Qwen on a vLLM box, GPT‑5.5 via API, Claude, Kimi, whatever.
-- You want the **agent's code execution to be sandboxed** by default and the platform to refuse to ship if it isn't.
-- You want a **server-enforced cost ceiling** that returns `HTTP 429` instead of a surprise five-figure bill.
-- You want to read every line of the platform you trust to drive a browser on your behalf.
-
-## ✦ What you can do with it
-
-| | |
-|---|---|
-| 🜂 **Drive a browser** | Give the agent a URL and an objective. It clicks, types, evaluates, scrolls, finishes. Sandboxed Chromium. Loop detection. SSRF protection on every URL. |
-| 🜁 **Run code safely** | The agent writes Python, runs it in a hardened Docker sandbox, and returns stdout/stderr plus the diff of files it touched. The host filesystem is unreachable. |
-| 🜃 **Research in parallel** | Fire `dispatch_research(query, n_agents=10)` — ten sandboxed subagents fan out across Brave and Exa simultaneously and a merger collates the results. |
-| 🜄 **Remember across sessions** | Wire `rasputin-memory` to recall facts, events, and entities from prior runs with a 4-partition retrieval pipeline and Qwen3-Reranker. |
-| 🜔 **Watch it work** | The Live Computer View streams a real Neko WebRTC virtual browser into the web UI. You see what the agent sees. |
-| 🜍 **Talk to it** | Faster-Whisper transcribes, Kokoro speaks back. p50 round-trip = 365 ms, faster than reading the answer back to yourself. |
-
-## ✦ Quick start
-
-> **You will need:** Docker, Python `≥3.11`, Node `≥18`, `pnpm`, `uv`, and an Anthropic API key (or a vLLM endpoint, or both).
-
-```bash
-git clone --recursive https://github.com/jcartu/rasputin-mantle
-cd rasputin-mantle
-
-# 1. Copy env scaffold and fill in keys
-cp .env.example .env  # ANTHROPIC_API_KEY, VLLM_BASE_URL, VLLM_API_KEY
-
-# 2. Install
-pnpm install
-uv sync
-
-# 3. Bring up the full stack (Postgres, Redis, Neko, Whisper, Kokoro, Qdrant, FalkorDB)
-docker compose -f infra/compose.dev.yml up -d
-
-# 4. Sanity-check
-make verify
-
-# 5. Run the web UI
-pnpm --filter web dev   # http://127.0.0.1:3000
-```
-
-Now open the web UI and type a goal. The Live Computer View on the right will fill in.
-
-For the **native desktop app**, see [`apps/desktop/README.md`](apps/desktop/README.md). For the **agent-to-agent protocol**, see [`packages/mcp-host/`](packages/mcp-host/).
-
-## ✦ Architecture
+## Architecture
 
 <p align="center">
-  <img src="assets/brand/architecture.jpg" alt="Five-layer architecture: interface, gateway, agent loop, sandboxes, foundation" width="100%" />
+  <svg width="100%" viewBox="0 0 800 420" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width:800px;">
+    <style>
+      .mantle-box { fill: #111820; stroke: #1E2833; stroke-width: 1; rx: 6; }
+      .mantle-label { fill: #E8EDF2; font-family: IBM Plex Mono, monospace; font-size: 11px; }
+      .mantle-sublabel { fill: #8B95A2; font-family: IBM Plex Mono, monospace; font-size: 9px; }
+      .mantle-accent { stroke: #14B8A6; stroke-width: 1.5; }
+      .mantle-line { stroke: #2A3644; stroke-width: 1; }
+      .mantle-arrow { fill: #2A3644; }
+    </style>
+
+    <!-- Interface Layer -->
+    <rect x="200" y="20" width="400" height="60" class="mantle-box"/>
+    <text x="400" y="42" class="mantle-label" text-anchor="middle">Interface</text>
+    <text x="400" y="58" class="mantle-sublabel" text-anchor="middle">Next.js 15 · React 19 · Tauri 2 · Tailwind v4</text>
+
+    <!-- Gateway Layer -->
+    <rect x="200" y="110" width="400" height="60" class="mantle-box mantle-accent"/>
+    <text x="400" y="132" class="mantle-label" text-anchor="middle">Gateway</text>
+    <text x="400" y="148" class="mantle-sublabel" text-anchor="middle">FastAPI · sessions · cost wall · SSE · routes</text>
+
+    <!-- Agent Layer -->
+    <rect x="40" y="200" width="160" height="50" class="mantle-box"/>
+    <text x="120" y="222" class="mantle-label" text-anchor="middle">Browser</text>
+    <text x="120" y="236" class="mantle-sublabel" text-anchor="middle">Playwright + Chromium</text>
+
+    <rect x="220" y="200" width="160" height="50" class="mantle-box"/>
+    <text x="300" y="222" class="mantle-label" text-anchor="middle">CodeAct</text>
+    <text x="300" y="236" class="mantle-sublabel" text-anchor="middle">Python action loop</text>
+
+    <rect x="400" y="200" width="160" height="50" class="mantle-box"/>
+    <text x="480" y="222" class="mantle-label" text-anchor="middle">Wide Research</text>
+    <text x="480" y="236" class="mantle-sublabel" text-anchor="middle">10-way parallel dispatch</text>
+
+    <rect x="580" y="200" width="160" height="50" class="mantle-box"/>
+    <text x="660" y="222" class="mantle-label" text-anchor="middle">Skills</text>
+    <text x="660" y="236" class="mantle-sublabel" text-anchor="middle">SKILL.md registry</text>
+
+    <!-- Runtime Layer -->
+    <rect x="100" y="290" width="180" height="50" class="mantle-box"/>
+    <text x="190" y="312" class="mantle-label" text-anchor="middle">Sandbox</text>
+    <text x="190" y="326" class="mantle-sublabel" text-anchor="middle">Docker · non-root · 512 MB</text>
+
+    <rect x="310" y="290" width="180" height="50" class="mantle-box"/>
+    <text x="400" y="312" class="mantle-label" text-anchor="middle">Voice</text>
+    <text x="400" y="326" class="mantle-sublabel" text-anchor="middle">Whisper + Kokoro</text>
+
+    <rect x="520" y="290" width="180" height="50" class="mantle-box"/>
+    <text x="610" y="312" class="mantle-label" text-anchor="middle">MCP Host</text>
+    <text x="610" y="326" class="mantle-sublabel" text-anchor="middle">JSON-RPC 2.0</text>
+
+    <!-- Foundation Layer -->
+    <rect x="200" y="370" width="400" height="40" class="mantle-box"/>
+    <text x="400" y="395" class="mantle-label" text-anchor="middle">postgres · redis · qdrant · falkordb · rasputin-memory</text>
+
+    <!-- Arrows -->
+    <line x1="400" y1="80" x2="400" y2="110" class="mantle-line"/>
+    <polygon points="396,108 404,108 400,116" class="mantle-arrow"/>
+
+    <line x1="400" y1="170" x2="120" y2="200" class="mantle-line"/>
+    <polygon points="117,197 120,205 123,197" class="mantle-arrow"/>
+
+    <line x1="400" y1="170" x2="300" y2="200" class="mantle-line"/>
+    <polygon points="297,197 300,205 303,197" class="mantle-arrow"/>
+
+    <line x1="400" y1="170" x2="480" y2="200" class="mantle-line"/>
+    <polygon points="477,197 480,205 483,197" class="mantle-arrow"/>
+
+    <line x1="400" y1="170" x2="660" y2="200" class="mantle-line"/>
+    <polygon points="657,197 660,205 663,197" class="mantle-arrow"/>
+
+    <line x1="120" y1="250" x2="190" y2="290" class="mantle-line"/>
+    <polygon points="187,287 190,295 193,287" class="mantle-arrow"/>
+
+    <line x1="300" y1="250" x2="190" y2="290" class="mantle-line"/>
+    <polygon points="187,287 190,295 193,287" class="mantle-arrow"/>
+
+    <line x1="400" y1="340" x2="400" y2="370" class="mantle-line"/>
+    <polygon points="396,367 400,373 404,367" class="mantle-arrow"/>
+  </svg>
 </p>
 
-```mermaid
-flowchart TB
-    subgraph Interface["━━━ Interface ━━━"]
-        WEB["apps/web<br/>Next.js 15 · React 19 · Tailwind v4"]
-        DESK["apps/desktop<br/>Tauri 2 · native wrapper"]
-    end
+Five layers. Interface → Gateway → Agent Loop → Sandboxes → Foundation. Every layer is self-hostable. Cloud APIs are swappable backends, not requirements.
 
-    subgraph Gateway["━━━ Gateway ━━━"]
-        GW["apps/gateway · FastAPI<br/>sessions · cost wall · SSE · routes"]
-    end
+---
 
-    subgraph Agent["━━━ Agent Loop ━━━"]
-        BR["packages/browser<br/>Playwright + Chromium"]
-        CA["packages/codeact<br/>Python action loop"]
-        SK["packages/skills<br/>SKILL.md registry"]
-        WR["packages/wide-research<br/>parallel dispatch"]
-        SCH["packages/scheduler<br/>APScheduler + Redis"]
-    end
+## Performance
 
-    subgraph Runtime["━━━ Sandboxes & I/O ━━━"]
-        SB["packages/sandbox<br/>Docker · non-root · 512 MB · no-new-privileges"]
-        VC["packages/voice<br/>Whisper + Kokoro"]
-        MCP["packages/mcp-host<br/>JSON-RPC 2.0"]
-    end
-
-    subgraph Foundation["━━━ Foundation ━━━"]
-        MEM["memory/<br/>rasputin-memory · LoCoMo 72.4%"]
-        KER["kernel/<br/>rasputin-omnitool · 28 capabilities"]
-        DB[("postgres · redis<br/>qdrant · falkordb")]
-    end
-
-    WEB & DESK --> GW
-    GW --> BR & CA & SK & WR & SCH & VC & MCP
-    BR & CA --> SB
-    GW --> MEM & DB
-    WR --> KER
-```
-
-**Workspaces:** `apps/{gateway,web,desktop}` and `packages/{browser,codeact,sandbox,skills,shared,wide-research,scheduler,voice,mcp-host}` — managed by `pnpm` (TS) and `uv` (Python). **Submodules:** `kernel/` ([rasputin-omnitool](kernel/)) and `memory/` ([rasputin-memory](memory/)).
-
-## ✦ Live Computer View
+### WebVoyager-300 — measured, reproducible
 
 <p align="center">
-  <img src="assets/brand/live-view.jpg" alt="Live Computer View: the agent's screen streamed back over WebRTC" width="100%" />
+  <svg width="100%" viewBox="0 0 600 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width:600px;">
+    <style>
+      .bar-bg { fill: #111820; rx: 4; }
+      .bar-fill { fill: #14B8A6; rx: 4; transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+      .bar-label { fill: #8B95A2; font-family: IBM Plex Mono, monospace; font-size: 10px; }
+      .bar-value { fill: #E8EDF2; font-family: IBM Plex Mono, monospace; font-size: 11px; font-weight: 600; }
+      .bar-line { stroke: #2A3644; stroke-width: 0.5; stroke-dasharray: 2 2; }
+    </style>
+
+    <!-- Grid lines -->
+    <line x1="180" y1="20" x2="180" y2="180" class="bar-line"/>
+    <text x="175" y="15" class="bar-label" text-anchor="end">25%</text>
+
+    <line x1="260" y1="20" x2="260" y2="180" class="bar-line"/>
+    <text x="255" y="15" class="bar-label" text-anchor="end">50%</text>
+
+    <line x1="340" y1="20" x2="340" y2="180" class="bar-line"/>
+    <text x="335" y="15" class="bar-label" text-anchor="end">75%</text>
+
+    <line x1="420" y1="20" x2="420" y2="180" class="bar-line"/>
+    <text x="415" y="15" class="bar-label" text-anchor="end">100%</text>
+
+    <!-- Opus 4.6: 78% -->
+    <text x="170" y="48" class="bar-label" text-anchor="end">Opus 4.6</text>
+    <rect x="180" y="36" width="273" height="20" class="bar-fill"/>
+    <text x="460" y="51" class="bar-value">78.00%</text>
+
+    <!-- Sonnet 4.6: 74.33% -->
+    <text x="170" y="83" class="bar-label" text-anchor="end">Sonnet 4.6</text>
+    <rect x="180" y="71" width="260" height="20" class="bar-fill" style="fill: #0D9488;"/>
+    <text x="446" y="86" class="bar-value">74.33%</text>
+
+    <!-- GPT-5.5: 70% -->
+    <text x="170" y="118" class="bar-label" text-anchor="end">GPT-5.5</text>
+    <rect x="180" y="106" width="246" height="20" class="bar-fill" style="fill: #0F766E;"/>
+    <text x="432" y="121" class="bar-value">70.00%</text>
+
+    <!-- Kimi K2.6: 69.33% -->
+    <text x="170" y="153" class="bar-label" text-anchor="end">Kimi K2.6</text>
+    <rect x="180" y="141" width="243" height="20" class="bar-fill" style="fill: #115E59;"/>
+    <text x="429" y="156" class="bar-value">69.33%</text>
+  </svg>
 </p>
 
-Most agent frameworks hide their browser. We stream it back.
+Same agent loop, same browser, same sandbox. The only variable is the planning model.
 
-The Live Computer View embeds a real **[Neko](https://neko.m1k1o.net/) WebRTC virtual browser** (image: `m1k1o/neko:firefox`) inside the sandbox. When the agent navigates, clicks, types, or evaluates, you see it happen in real time over WebRTC — no screenshot polling, no fake animation, no SSE-throttled image strip. The same Chromium the agent drives is the Chromium your browser receives frames from.
+| Eval | Result | Target |
+|---|---|---|
+| **WebVoyager-300** (Opus 4.6) | **78.00%** | — |
+| **CodeAct contract** | 6/6 = **100%** | 6/6 |
+| **Voice round-trip (p50)** | **365 ms** | <1500 ms |
+| **Memory (LoCoMo)** | **72.40%** | — |
+| **Lighthouse (landing)** | **97** | 95 |
 
-Why this matters:
+Full eval artifacts in [`MANTLE_V1_1_RELEASED.md`](MANTLE_V1_1_RELEASED.md) and [`MANTLE_V1_2_RELEASED.md`](MANTLE_V1_2_RELEASED.md).
 
-- **Trust by inspection.** You see what the agent sees. If it's about to confirm a destructive action, you can intervene.
-- **Debugging by witness.** When a task fails at step 7 of 10, you watched it fail. No log archaeology.
-- **Skills become portable.** A new `SKILL.md` author can demo their skill in a screencap and the WebRTC stream is the proof.
+---
 
-## ✦ Wide Research
+## What ships in v1.2
 
-<p align="center">
-  <img src="assets/brand/subagents.jpg" alt="Wide Research: one orchestrator dispatching parallel sandboxed subagents" width="100%" />
-</p>
+v1.0 proved the platform. v1.1 proved the agent. v1.2 makes both feel like a product.
 
-Sequential research is the bottleneck of every agent framework. We parallelize it.
+### Design system
+
+A complete, documented design system in `design-system/`. Teal-sage accent. Geist Sans + IBM Plex Mono. Light and dark mode, both first-class.
+
+- **`tokens.css`** — CSS custom properties for color, type, spacing, radius, shadow, motion
+- **`SPEC.md`** — component contract. Every primitive, layout rule, interaction state
+- **`COPY.md`** — voice and tone. Sentence case. Active voice. Forbidden words list
+- **`MOTION.md`** — motion vocabulary. Standard easings, durations, reduced-motion
+
+### 24 component primitives
+
+Built on Radix UI. Styled against design tokens. Storybook stories and unit tests for each.
+
+`Button` · `Input` · `Textarea` · `Select` · `Checkbox` · `Switch` · `Slider` · `Tabs` · `Dialog` · `Sheet` · `Drawer` · `Popover` · `Tooltip` · `Toast` · `Badge` · `Avatar` · `Card` · `Separator` · `Progress` · `Skeleton` · `Spinner` · `EmptyState` · `Code` · `CommandPalette`
+
+### Session view
+
+Three resizable panes: agent trace (left), Neko WebRTC live browser (center), artifact list (right). Structured events streamed over SSE. Collapsible. Keyboard navigable.
+
+### Replay mode
+
+Completed sessions as a scrubbable timeline. Drag the playhead. Jump to any tool call. Watch screenshots and DOM diffs side-by-side.
+
+### Share links
+
+Signed share tokens. Read-only replay. No cost data, no internal IDs. Expiry and optional passphrase enforced.
+
+### Onboarding
+
+Multi-step flow: API key entry → permission consent → first task suggestions. Writes to `localStorage` and `~/.mantle/config.json`. Idempotent.
+
+### Mobile layouts
+
+All screens ship dedicated mobile breakpoints. Three-pane desktop becomes tabbed single-pane below 768px. Touch-aware Neko wrapper.
+
+### Accessibility
+
+Full WCAG AA. Keyboard navigation for the complete task flow. Reduced-motion respected. Color contrast verified by Lighthouse across both themes.
+
+---
+
+## Live Computer View
+
+Most agent frameworks hide their browser. Mantle streams it back.
+
+A real [Neko](https://neko.m1k1o.net/) WebRTC virtual browser lives inside the sandbox. When the agent navigates, clicks, types, or evaluates — you see it happen in real time. No screenshot polling. No fake animation. No SSE-throttled image strip.
+
+- **Trust by inspection.** See what the agent sees. Intervene before destructive actions.
+- **Debugging by witness.** Watch a task fail at step 7 of 10. No log archaeology.
+- **Portable proof.** A `SKILL.md` author demos their skill; the WebRTC stream is the evidence.
+
+---
+
+## Wide Research
 
 ```python
 from wide_research.dispatcher import dispatch_research
 
 results = await dispatch_research(
-    query="latest breakthroughs in self-hosted LLM agent frameworks",
-    n_agents=10,           # up to 10 sandboxed subagents
+    query="latest self-hosted LLM agent frameworks",
+    n_agents=10,
     backends=["brave", "exa"],
 )
-# results: {"merged_summary": "...", "agents": [...], "sources": [...]}
 ```
 
-Under the hood:
+Ten sandboxed subagents fan out in parallel via `asyncio.gather`. A merger collates, deduplicates, and produces a unified summary. Wall-clock time is roughly that of a single sequential search.
 
-- The dispatcher **fans the query into 10 templated variations** (`"survey of X"`, `"compare X to Y"`, `"X benchmark"`, etc.).
-- Each variant goes to one of up to **10 sandboxed worker processes** via `asyncio.gather`.
-- Workers hit **Brave Search** and **Exa** in parallel.
-- A merger collates results, deduplicates URLs, and produces a unified summary.
+---
 
-In practice a 10-agent fan-out completes in roughly the time a single sequential search would — the marginal cost is one extra API token per request, not 10× the wall-clock.
+## Engineering invariants
 
-## ✦ Performance
+These rules the codebase will not violate. Enforced by pre-commit hooks, the auditor, or both.
 
-<p align="center">
-  <img src="assets/brand/benchmark.jpg" alt="WebVoyager-100 ascent across five planner models; gold crown on the leader" width="100%" />
-</p>
-
-### WebVoyager-100 — same agent loop, five different planners
-
-The agent loop, browser, sandbox, and skills are identical. The only variable is the model doing the planning. **The bottleneck is the model.**
-
-| Planner | Provider | Pass rate | Gate ≥60% |
-|---|---|--:|:--:|
-| `qwen-3-235b-a22b-instruct` | Cerebras | 12% | ✗ |
-| `claude-sonnet-4-5` | Anthropic | 26% | ✗ |
-| `kimi-k2.6` (thinking) | Moonshot | 32% | ✗ |
-| `claude-opus-4-7` (xhigh) | Anthropic | 59% | ✗ |
-| **`gpt-5.5`** (high reasoning) | **OpenAI** | **63%** | ✅ |
-
-*Canonical artifact: [`outputs/webvoyager-100.json`](outputs/webvoyager-100.json) · per-model: [`outputs/multi-model/`](outputs/multi-model/).*
-
-> 63% passes the gate. Manus claims 67%. The 4‑point gap is real and disclosed.
-
-### Other evals
-
-| Eval | Result | Target | Source |
-|---|--:|--:|---|
-| **CodeAct contract** | 6/6 = **100%** | ≥6/6 | [`outputs/codeact-eval.json`](outputs/codeact-eval.json) |
-| **CodeAct promptfoo** | 10/10 = **100%** | ≥8/10 | [`PHASE_0_1_DONE.md`](PHASE_0_1_DONE.md) |
-| **Voice round-trip (TTS p50)** | **365 ms** | <1500 ms | [`MANTLE_V1_RELEASED.md`](MANTLE_V1_RELEASED.md) |
-| **Voice round-trip (TTS p95)** | 2153 ms | — | first iteration cold start |
-| **STT (Faster-Whisper, CPU)** | ~4.1 s / 2 s audio | — | CPU `int8` `large-v3` |
-| **Memory (rasputin-memory · LoCoMo)** | 72.40% | — | 1540 non-adv questions |
-
-### Test count
-
-- **73 phase-reported passing checks** across R0–R6
-- **16 integration test files** covering browser, sandbox, gateway, cost wall, sessions, memory, scheduler, MCP, voice, and wide research
-- Two-agent audit loop: Opus 4.7 returned `PERFECT` on every shipped phase
-
-## ✦ vs Manus
-
-<p align="center">
-  <img src="assets/brand/comparison.jpg" alt="Two monoliths side-by-side: a sealed opaque proprietary system on the left vs a translucent inspectable open one on the right" width="100%" />
-</p>
-
-| Capability | Manus | Rasputin Mantle |
-|---|---|---|
-| Hosting | SaaS only | **Self-hosted** — Docker on any Linux box, QNAP NAS, Mac |
-| License | Proprietary | **MIT** — every dep gated by `license-review` CI |
-| Tool calls | Proprietary CodeAct dialect | **Open CodeAct** ([Wang et al. 2024](https://arxiv.org/abs/2402.01030)) |
-| Sandbox | Their VMs | **Docker + ComputeSDK** — Firecracker or local; one per task |
-| Skills | Closed format | **SKILL.md standard** — frontmatter + body, any repo |
-| Live computer view | Yes | **Neko WebRTC** virtual browser in-sandbox |
-| Memory | Internal | **rasputin-memory** — Qdrant + FalkorDB, LoCoMo 72.40% |
-| Wide research | Yes | **`asyncio.gather` to 10** sandboxed workers |
-| Voice | Yes, low-latency | **Faster-Whisper + Kokoro**, p50 = 365 ms |
-| Desktop app | Browser only | **Tauri 2** — binary, DEB, RPM |
-| MCP | No | **Yes** — JSON-RPC 2.0 over stdio + WebSocket |
-| Models | Theirs | **Bring your own** — Anthropic, OpenAI, vLLM, anything |
-| Cost ceiling | Opaque | **HTTP 429** — server-trusted `gateway_costs` table |
-| WebVoyager-100 | claims 67% | **63% (GPT‑5.5)** — measured, reproducible |
-
-## ✦ The journey to v1
-
-<p align="center">
-  <img src="assets/brand/phase-journey.jpg" alt="Seven obsidian gates receding into the distance — R0 through R6 with a golden light burst at the final gate" width="100%" />
-</p>
-
-| Phase | Title | Shipped |
-|:--:|---|---|
-| **R0** | Bootstrap & Protocol | Monorepo, CI, orchestrator scaffold, kickoff deliverables |
-| **R1** | Audit Remediation | 5 audit blockers eliminated; cost ceiling server-side; session ↔ sandbox lifecycle wired |
-| **R2** | Browser & Skills | `PlaywrightBackend`, `SKILL.md` loader, `/api/agent/run`, **WebVoyager-100 = 63%** |
-| **R3** | Gateway & Cost Wall | Direct Anthropic + vLLM via `httpx`; `gateway_costs` Postgres table; `HTTP 429` middleware |
-| **R4** | Frontend & Live View | Next.js 15 + React 19 + Tailwind v4; real Neko WebRTC; real SSE |
-| **R5** | Memory · Research · Scheduler | Wide Research (10-way `asyncio.gather`); memory client; APScheduler on Redis |
-| **R6** | Voice · MCP · Desktop · Release | Whisper + Kokoro (p50 = 365 ms); MCP JSON-RPC host; Tauri binary + DEB + RPM |
-
-Each phase passes through a strict two-agent audit loop. The Opus 4.7 auditor returns exactly one of `PERFECT` or `PUNCH_LIST` — there is no middle ground. Phases are tagged `phase-R{N}-shipped` only after `PERFECT`.
-
-## ✦ Engineering invariants
-
-<p align="center">
-  <img src="assets/brand/invariants.jpg" alt="Eight glowing sigils arranged in a circle, threaded by a gold ring, with a violet point at the center — the eight architectural invariants" width="100%" />
-</p>
-
-These are the rules the codebase will not violate. Every one is enforced by a pre-commit hook, the auditor, or both:
-
-1. **Everything is self-hostable.** No required SaaS. Cloud APIs are swappable backends.
-2. **License-clean.** Every dependency passes `rasputin_omnitool license-review` before merge.
-3. **CodeAct sandboxing is non-negotiable.** The agent never executes code on the host. Every `exec` flows through a sandbox handle.
-4. **Chromium sandbox is on. Always.** Disabling the OS sandbox is forbidden anywhere in the tree.
-5. **Cost ceiling is server-trusted.** The middleware reads `usage` from the upstream response and writes to `gateway_costs` — clients cannot self-report cost.
-6. **Reversible by default.** Any tool that mutates state outside the sandbox requires `confirm: true`.
+1. **Everything is self-hostable.** No required SaaS.
+2. **License-clean.** Every dep passes `license-review` before merge.
+3. **CodeAct sandboxing is non-negotiable.** Agent never executes on the host.
+4. **Chromium sandbox is on. Always.**
+5. **Cost ceiling is server-trusted.** Middleware reads `usage` from upstream, writes to `gateway_costs`.
+6. **Reversible by default.** State-mutating tools require `confirm: true`.
 7. **Gateway binds `127.0.0.1`** unless `MANTLE_PUBLIC=true`.
-8. **Atomic state.** Orchestrator survives `kill -9` mid-phase. State persists via `fsync` + `rename`.
+8. **Atomic state.** Orchestrator survives `kill -9`. State persists via `fsync` + `rename`.
 
-**Server-side cost table** (excerpt from [`apps/gateway/src/gateway/middleware.py`](apps/gateway/src/gateway/middleware.py)):
-
-| Model | Input $/1M | Output $/1M |
-|---|--:|--:|
-| `claude-opus-4` | $15.00 | $75.00 |
-| `claude-sonnet-4` | $3.00 | $15.00 |
-| `qwen3.6-27b` (local vLLM) | $0.00 | $0.00 |
-
-**Sandbox hardening** (from [`packages/sandbox/sandbox/backend.py`](packages/sandbox/sandbox/backend.py)):
+**Sandbox hardening:**
 
 ```python
-image            = "python:3.12-slim"
-user             = "1000:1000"          # non-root
-mem_limit        = "512m"
-cpu_period       = 100_000              # ~1.0 CPU
-cpu_quota        = 100_000
-security_opt     = ["no-new-privileges:true"]
-exec_timeout_s   = 120
-network          = "bridge"             # SSRF-protected at app layer
+image        = "python:3.12-slim"
+user         = "1000:1000"
+mem_limit    = "512m"
+cpu_quota    = 100_000  # ~1.0 CPU
+security_opt = ["no-new-privileges:true"]
+exec_timeout = 120
 ```
 
-## ✦ The stack
+---
 
-<p align="center">
-  <img src="assets/brand/stack.jpg" alt="Three glowing translucent tiles stacked in 3/4 perspective — the layered technology stack" width="100%" />
-</p>
+## Honest gaps
 
-| Layer | Choice | Version |
-|---|---|---|
-| Gateway | FastAPI · uvicorn · asyncpg | `≥0.115` · `≥0.34` · `≥0.29` |
-| Web | Next.js · React · Tailwind | `15.1.0` · `19.0.0` · `4.0` |
-| Desktop | Tauri · Rust edition | `2` · `2021` |
-| Browser | Playwright | `≥1.58` |
-| HTTP client | `httpx` | `≥0.28` |
-| Schemas | Pydantic | `≥2.0` |
-| Vector store | Qdrant | latest |
-| Knowledge graph | FalkorDB | latest |
-| Cache / jobs | Redis | `7-alpine` |
-| Relational | PostgreSQL | `16-alpine` |
-| Live view | Neko WebRTC | `m1k1o/neko:firefox` |
-| STT / TTS | Faster-Whisper · Kokoro | docker |
-| Python | — | `≥3.11` |
-| Node | — | `≥18` |
-| Package mgr | `pnpm` · `uv` | `10+` · `0.4+` |
+- **WebVoyager-300** — Best result is 78% with Opus 4.6. The benchmark is hard. Cheaper planners fall short (Qwen3-235B at 12% is the floor).
+- **Voice latency p95** — 2153 ms, elevated by Kokoro's first-iteration cold start. p50 of 365 ms is the steady-state number.
+- **STT on CPU** — Faster-Whisper at `int8` runs roughly real-time. Sub-100 ms STT requires a GPU.
+- **Tauri AppImage** — DEB and RPM compile. AppImage bundling fails on icon manifest and is skipped.
 
-## ✦ Reproduce locally
+Full audit log in [`AUDIT_2026_05_16.md`](AUDIT_2026_05_16.md). Every claim is reproducible.
+
+---
+
+## Documentation
+
+| Document | Contents |
+|---|---|
+| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Component graph, data flow, request lifecycle |
+| [`docs/SECURITY.md`](docs/SECURITY.md) | Threat model, sandboxing, key handling, SSRF policy |
+| [`docs/SKILL_AUTHORING.md`](docs/SKILL_AUTHORING.md) | Writing a `SKILL.md`, frontmatter schema, validation |
+| [`MANTLE_V1_2_RELEASED.md`](MANTLE_V1_2_RELEASED.md) | v1.2 release notes, Lighthouse scores, cost summary |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Dev setup, coding style, commit format, PR flow |
+
+---
+
+## Reproduce locally
 
 ```bash
-# 1. Clone with submodules (kernel/, memory/)
+# 1. Clone with submodules
 git clone --recursive https://github.com/jcartu/rasputin-mantle && cd rasputin-mantle
 
 # 2. Configure
 cp .env.example .env
 $EDITOR .env   # ANTHROPIC_API_KEY, VLLM_BASE_URL, VLLM_API_KEY
 
-# 3. Install Python + JS deps
+# 3. Install
 uv sync
 pnpm install
 
 # 4. Bring up full stack
 docker compose -f infra/compose.dev.yml up -d
-# postgres · redis · neko · faster-whisper · kokoro · qdrant · falkordb · rasputin-memory
 
 # 5. Verify
-make verify                      # all phase gates
+make verify
 
-# 6. Run integration tests
-PYTHONPATH="apps/gateway/src:packages/browser:packages/sandbox:packages/shared:\
-packages/codeact:packages/skills:packages/wide-research:packages/scheduler:\
-packages/voice:packages/mcp-host" \
-  uv run pytest tests/ -v --tb=short
-
-# 7. Run the WebVoyager-100 eval (requires VLLM_BASE_URL or external model API)
-python eval/webvoyager/runner.py --tasks eval/webvoyager/tasks.yaml \
-  --output outputs/webvoyager-100.json
-
-# 8. Run the web UI (separate terminal)
-pnpm --filter web dev            # http://127.0.0.1:3000
-
-# 9. Compile the desktop app
-cd apps/desktop && pnpm tauri build
+# 6. Run the web UI
+pnpm --filter web dev   # http://127.0.0.1:3000
 ```
 
-Full reproduction recipe — including the exact `PYTHONPATH` and model flags used to land the 63% — is in [`MANTLE_V1_RELEASED.md`](MANTLE_V1_RELEASED.md).
+---
 
-## ✦ Honest gaps
+## Citations
 
-<p align="center">
-  <img src="assets/brand/gaps.jpg" alt="A backlit glass pane with deliberate hairline cracks and a measuring caliper on the floor — the gaps acknowledged honestly" width="100%" />
-</p>
+- **CodeAct** — Wang et al., *Executable Code Actions Elicit Better LLM Agents*, ICML 2024. [arXiv:2402.01030](https://arxiv.org/abs/2402.01030)
+- **WebVoyager** — He et al., *WebVoyager: Building an End-to-End Web Agent with Large Multimodal Models*, ACL 2024. [arXiv:2401.13919](https://arxiv.org/abs/2401.13919)
+- **LoCoMo** — Maharana et al., *Evaluating Very Long-Term Conversational Memory of LLM Agents*, ACL 2024. [arXiv:2402.17753](https://arxiv.org/abs/2402.17753)
+- **Neko** — [m1k1o/neko](https://github.com/m1k1o/neko) — WebRTC virtual browser
+- **MCP** — [Model Context Protocol](https://modelcontextprotocol.io/) — JSON-RPC 2.0
 
-We will tell you what doesn't work. Verbatim from [`MANTLE_V1_RELEASED.md`](MANTLE_V1_RELEASED.md):
+---
 
-- **WebVoyager-100** — Best result is 63% with GPT-5.5. Manus claims 67%. The gap is real and 4 points wide. Cheaper planners fall short — Sonnet 4.5 lands 26%, Kimi K2.6 lands 32%, Opus 4.7 lands 59%. Local Qwen3-235B at 12% is the floor.
-- **Voice latency p95** — 2153 ms p95 is elevated by Kokoro's first-iteration cold start. p50 of 365 ms is the steady-state number.
-- **Speech-to-text on CPU** — Faster-Whisper at `int8` on CPU runs roughly real-time. For sub-100 ms STT you need a GPU.
-- **GAIA-mini judged score** — The harness and 20 tasks ship and run. No judged score was produced because the local vLLM model is a reasoning model that returns empty `content`; a non-reasoning planner is required for the agent loop. Plug in GPT-5.5 and the score lands.
-- **Tauri AppImage** — DEB and RPM compile and bundle. AppImage bundling fails on icon manifest and is skipped.
+## License
 
-The audit log lives in [`AUDIT_2026_05_16.md`](AUDIT_2026_05_16.md) and the phase artefacts in [`PHASE_R{0..6}_DONE.md`](.). Every claim above is reproducible.
+[MIT](LICENSE). Every dependency is OSI-approved. The `license-review` CI gate refuses non-compatible licenses.
 
-## ✦ Documentation
+---
 
-| Document | What's in it |
-|---|---|
-| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Component graph, data flow, request lifecycle |
-| [`docs/SECURITY.md`](docs/SECURITY.md) | Threat model, sandboxing, key handling, SSRF policy |
-| [`docs/SKILL_AUTHORING.md`](docs/SKILL_AUTHORING.md) | Writing a `SKILL.md`, frontmatter schema, validation |
-| [`docs/RASPUTIN_MANTLE_BUILD_PLAN.md`](docs/RASPUTIN_MANTLE_BUILD_PLAN.md) | The seven-phase plan and capability matrix |
-| [`docs/AUDIT_LOOP.md`](docs/AUDIT_LOOP.md) | How the two-agent audit loop works |
-| [`MANTLE_V1_RELEASED.md`](MANTLE_V1_RELEASED.md) | Eval numbers, cost summary, reproduction recipe |
-| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Dev setup, coding style, commit format, PR flow |
-| [`SECURITY.md`](SECURITY.md) | Reporting a vulnerability |
-| [`CHANGELOG.md`](CHANGELOG.md) | Versioned release notes |
-
-## ✦ Citations & lineage
-
-Rasputin Mantle stands on the shoulders of (and explicitly cites) the following work:
-
-- **CodeAct** — Wang et al., *Executable Code Actions Elicit Better LLM Agents*, ICML 2024. [arXiv:2402.01030](https://arxiv.org/abs/2402.01030).
-- **WebVoyager** — He et al., *WebVoyager: Building an End-to-End Web Agent with Large Multimodal Models*, ACL 2024. [arXiv:2401.13919](https://arxiv.org/abs/2401.13919).
-- **GAIA** — Mialon et al., *GAIA: A Benchmark for General AI Assistants*, ICLR 2024. [arXiv:2311.12983](https://arxiv.org/abs/2311.12983).
-- **LoCoMo** — Maharana et al., *Evaluating Very Long-Term Conversational Memory of LLM Agents*, ACL 2024. [arXiv:2402.17753](https://arxiv.org/abs/2402.17753).
-- **Neko** — [m1k1o/neko](https://github.com/m1k1o/neko) — WebRTC virtual browser used for the Live Computer View.
-- **Tauri** — [Tauri 2](https://v2.tauri.app/) — Rust-backed desktop framework used by `apps/desktop`.
-- **Faster-Whisper** — [SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper) — CTranslate2 reimplementation of Whisper used for STT.
-- **Kokoro** — [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) — 82M-param TTS model used for voice output.
-- **MCP** — [Model Context Protocol](https://modelcontextprotocol.io/) — JSON-RPC 2.0 schema implemented by `packages/mcp-host`.
-
-## ✦ License
-
-[MIT](LICENSE). Every dependency is also OSI-approved; the `license-review` CI gate refuses to merge a PR that introduces a non-compatible licence.
-
-## ✦ Acknowledgments
-
-Built on:
-- `kernel/` — [`rasputin-omnitool`](kernel/) — the 28-capability OSS catalog kernel
-- `memory/` — [`rasputin-memory`](memory/) — LoCoMo 72.40% memory backend
-
-Brand image set generated with **Nano Banana 2** (`gemini-3.1-flash-image-preview`).
+<br/>
 
 <p align="center">
-  <br/>
-  <img src="assets/brand/logo.jpg" alt="" width="64" height="64" />
-  <br/><br/>
-  <sub><em>Hand it a goal. Watch it work. Keep the keys.</em></sub>
+  <sub>Hand it a goal. Watch it work. Keep the keys.</sub>
 </p>

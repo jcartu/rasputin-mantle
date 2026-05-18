@@ -1,0 +1,105 @@
+name: "W8 — Final eval and v1.3 release"
+phase: W8
+description: |
+  QA pass + launch. Gates on W0-W7, runs regressions, writes the release
+  report, applies the tag.
+
+  WEBVOYAGER-300 REGRESSION:
+    - Re-run with Opus 4.6 (v1.1 champion)
+    - Confirm ≥ 75% pass rate (v1.1 baseline 78%; ≤ 3-point drop tolerated)
+    - eval/webvoyager-300/tasks.yaml MUST be byte-identical to mantle-v1.1-released
+    - Anti-cheating: no task_id hardcoding, no memoization, judge unchanged
+    - This catches regressions from W4 sandbox changes (project KB mounting),
+      W5 skill loader changes (skill discovery overhead), W6 background work
+      (APScheduler resource contention)
+
+  PRODUCTIVITY BENCHMARK CONFIRMATION:
+    - Re-run W7's productivity-bench (cold; no caching)
+    - Confirm aggregate ≥ 0.80 AND per-format ≥ 0.80
+
+  END-TO-END SMOKE TESTS:
+    - Tauri: launch each platform's binary
+    - Extension: install in fresh Chrome, "Send to Mantle" round-trip
+    - Onboarding: first-visit flow completes in < 60s
+    - Playbook: save → list → load → run
+    - Replay: scrub a v1.1 trace; share link works without auth
+    - Projects: create project, upload KB file, create session, KB visible
+    - Skills: install seed skill, agent invokes it
+    - Slack: mock OAuth + slash command end-to-end
+    - Email: MailHog round-trip
+    - Scheduled: create + APScheduler fires + survives restart
+
+  README VERIFICATION:
+    - scripts/verify-readme-claims.py exits 0
+    - Every "## What ships in v1.3" bullet matches grep
+    - "## On the roadmap" explicitly lists deferred Manus features
+      (mobile dev, Design View, music, video, meeting minutes, Collab,
+      Cloud Computer 24/7, SSO, OneDrive, full-stack deploy, unlimited context)
+
+  RELEASE REPORT:
+    - MANTLE_V1_3_RELEASED.md in repo root, sections matching v1.1 template:
+      - Headline summary
+      - What shipped (verbatim match to README "What ships in v1.3")
+      - What deferred (verbatim match to README "On the roadmap")
+      - Phase commits table (W0-W8)
+      - Engineering invariants held (WV-300 78% → ≥75%, no regressions)
+      - Cost summary (auditor + vision + judge breakdown)
+      - Known limitations (honest gaps)
+      - Reproduce locally
+      - Comparison with Manus 1.6 (honest where we lag, honest where we lead)
+      - Acknowledgment: 27B orchestrator drift count + fallback count
+
+  TAG + PUSH:
+    - git tag mantle-v1.3-released ONLY after MANTLE_V1_3_RELEASED.md committed
+    - git push origin main --tags
+
+packages_required:
+  - all                                                   # gates on full build
+
+artifacts:
+  - PHASE_W8_DONE.md
+  - MANTLE_V1_3_RELEASED.md
+  - outputs/v1_3/webvoyager-300-regression.json
+  - outputs/v1_3/productivity-bench-final.json
+  - outputs/v1_3/e2e-smoke-results.json
+  - outputs/v1_3/cost-summary.json
+  - outputs/v1_3/27b-orchestrator-metrics.json            # drift count, fallback fires, audit iter avg
+
+integration_tests:
+  - tests/integration/test_e2e_full_session.py            # creates, runs, replays, shares
+  - tests/integration/test_e2e_project_workflow.py        # project + KB + session + skill
+  - tests/integration/test_anti_cheating_audit.py
+  - tests/integration/test_no_cheating_audit.py           # carried from v1.1
+
+eval_suites:
+  - name: webvoyager-300-regression
+    command: "uv run python eval/webvoyager-300/runner.py --planner opus-4-6 --output outputs/v1_3/webvoyager-300-regression.json"
+    output_file: outputs/v1_3/webvoyager-300-regression.json
+    minimum_pass_rate: 0.75
+  - name: productivity-bench-final
+    command: "uv run python eval/productivity/runner.py --output outputs/v1_3/productivity-bench-final.json"
+    output_file: outputs/v1_3/productivity-bench-final.json
+    minimum_pass_rate: 0.80
+
+forbidden_patterns:
+  - "task_id\\s*==\\s*[\"']wv-"
+  - "task_id\\s*==\\s*[\"']prod-"
+  - "memo\\|cache.*answer\\|cache.*output"
+  - "best_of"
+  - "JUDGE_MODEL.*haiku"
+  - "MockTransport"
+
+ship_criteria_human_readable: |
+  - WV-300 with Opus 4.6 ≥ 75% (regression check; baseline 78%)
+  - Productivity bench ≥ 0.80 aggregate AND per format
+  - All e2e smoke tests pass (including new projects + skills workflows)
+  - scripts/verify-readme-claims.py exits 0
+  - scripts/sisyphus-state-check.py reports drift=0
+  - "## On the roadmap" lists ALL deferred features explicitly with rationale
+  - MANTLE_V1_3_RELEASED.md exists; numbers match JSON files
+  - Anti-cheating audit passes
+  - eval/webvoyager-300/tasks.yaml byte-identical to mantle-v1.1-released
+  - Judge model = claude-sonnet-4-6 across all runners
+  - 27B-orchestrator metrics published: drift events, fallback fires, audit iter avg
+  - mantle-v1.3-released tag created AFTER MANTLE_V1_3_RELEASED.md committed
+  - Tag pushed to origin/main

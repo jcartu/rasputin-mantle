@@ -1,8 +1,9 @@
-# Rasputin Mantle v1.2 Released
+# Rasputin Mantle v1.2 — Product Surface Complete
+
+v1.2 ships a complete product surface on top of the v1.1 agent engine: documented design system, 15 Radix-backed component primitives, three-pane resizable session view, Neko WebRTC live browser, mobile layouts, and full WCAG AA accessibility. Built entirely on local 27B (zero cloud spend for implementation).
 
 **Date**: 2026-05-18
 **Tag**: `mantle-v1.2-released`
-
 ## Summary
 
 Rasputin Mantle v1.2 ships a complete product surface: documented design system, 15 Radix-backed component primitives, three-pane resizable session view, Neko WebRTC live browser, mobile layouts, and full WCAG AA accessibility. The engine remains unchanged from v1.1 (78.00% WebVoyager-300 with Opus 4.6).
@@ -88,6 +89,32 @@ Rasputin Mantle v1.2 ships a complete product surface: documented design system,
 - **Replay mode** — Not yet shipped. On roadmap for v1.3.
 - **Share links** — Not yet shipped. On roadmap for v1.3.
 - **Onboarding** — Not yet shipped. On roadmap for v1.3.
+
+## What Deferred to v1.3
+
+The following features were announced in v1.2 planning but deferred to v1.3:
+
+- **Replay mode** — Scrubbable session timeline with playhead, tool-call jumps, and side-by-side screenshot/DOM diffs
+- **Share links** — Signed share tokens for read-only replay, no cost data, expiry and optional passphrase
+- **Onboarding** — Multi-step flow: API key entry → permission consent → first task suggestions, idempotent config writes
+
+These are listed under `## On the roadmap (v1.3+)` in README.md and are the primary targets of W1–W3.
+
+## Phase Commits
+
+| Phase | Commit | Description |
+|---|---|---|
+| P0 | `4ebf578` | Complete visual design system |
+| P1 | `0461a18` | 15 component primitives |
+| P2 | `ff69d61` | Layout system & navigation shell |
+| P3 | `4192c01` | Session view (killer feature) |
+| P2 audit | `b556959` | Resize handles, mobile wiring, responsive breakpoints |
+| Docs | `78d3bee` | README redesign with inline SVGs |
+| Brand | `5158339` | Nano Banana 2 brand images |
+| Audit | `3d1d7af` | README audit fixes |
+| Voice/Vision | `b536ed2` | Configurable URLs, vision assist |
+| W0 | `e4fb239` | v1.2 audit cleanup — dead route, README, release report, scripts |
+
 
 ## Reproduce Locally
 

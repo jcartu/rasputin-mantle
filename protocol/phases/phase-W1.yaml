@@ -1,0 +1,79 @@
+name: "W1 — Tauri desktop builds + Chrome/Edge extension"
+phase: W1
+description: |
+  Finish two v1.2 README promises moved to roadmap.
+
+  TAURI DESKTOP:
+    - Tauri 2 with updater plugin
+    - Builds: Mac (dmg + .app), Win (msi + nsis), Linux (deb + rpm + AppImage)
+    - Auto-update against $TAURI_UPDATE_URL (default: https://updates.mantle.dev)
+    - Window opens at MANTLE_WEB_URL when running, bundled web app when packaged
+    - App icon: scaled assets/brand/logo.jpg per platform requirements
+    - Native menu bar (File/Edit/View/Window/Help)
+    - Single-instance lock (launching twice focuses existing window)
+    - macOS notarization config (codesigning + notarization stubbed for CI)
+
+  BROWSER EXTENSION:
+    - Chrome + Edge (Manifest V3, single codebase)
+    - Right-click context menu on any page: "Send to Mantle"
+      → captures page URL + current selection, creates session via POST /api/sessions
+    - Omnibox keyword: type `mantle <task>` in address bar → task creation
+    - Side panel showing current session running in the gateway (live event stream)
+    - Options page: MANTLE_GATEWAY_URL + optional bearer token for self-hosted
+    - Icon states: gray (no session), teal (session running), green (session done)
+    - Permissions: contextMenus, omnibox, sidePanel, activeTab, storage
+    - No host_permissions wildcards — only the configured gateway URL
+
+  Both work against a local gateway at MANTLE_GATEWAY_URL (default http://localhost:8000).
+
+packages_required:
+  - apps/desktop                                          # Tauri Rust + Tauri config
+  - packages/browser-extension                            # MV3 extension source
+
+artifacts:
+  - PHASE_W1_DONE.md
+  - apps/desktop/tauri.conf.json
+  - apps/desktop/src/main.rs
+  - apps/desktop/src/menu.rs
+  - apps/desktop/src/single_instance.rs
+  - apps/desktop/dist/                                    # build outputs (gitignored)
+  - packages/browser-extension/manifest.json              # MV3
+  - packages/browser-extension/src/background.ts
+  - packages/browser-extension/src/options.html
+  - packages/browser-extension/src/sidepanel.html
+  - packages/browser-extension/src/sidepanel.ts
+  - packages/browser-extension/dist/extension-chrome.zip
+  - packages/browser-extension/dist/extension-edge.zip
+
+integration_tests:
+  - tests/integration/test_tauri_launch.py                # binary launches, window renders
+  - tests/integration/test_tauri_single_instance.py
+  - tests/integration/test_tauri_updater_config.py
+  - tests/integration/test_extension_manifest_mv3.py      # asserts manifest_version: 3
+  - tests/integration/test_extension_send_to_mantle.spec.ts
+  - tests/integration/test_extension_omnibox.spec.ts
+  - tests/integration/test_extension_options_persist.spec.ts
+
+eval_suites:
+  - name: w1-smoke
+    command: "make smoke-tauri && make smoke-extension"
+    output_file: outputs/v1_3/w1-smoke.json
+    minimum_pass_rate: 1.0
+
+forbidden_patterns:
+  - "\\-\\-no-sandbox"
+  - "manifest_version\":\\s*2"                            # MV2 deprecated
+  - "host_permissions.*\\*"                               # no wildcard host perms
+  - "MockTransport"
+
+ship_criteria_human_readable: |
+  - Tauri binaries exist for Mac arm64+x64, Linux x64, Windows x64; all launch in smoke
+  - Single-instance lock works (second launch focuses existing window)
+  - Updater config points at $TAURI_UPDATE_URL (no localhost)
+  - Browser extension .zip for Chrome + Edge produced; both pass Playwright smoke
+  - Right-click "Send to Mantle" creates a real session (verify via gateway log)
+  - Omnibox keyword "mantle" registered; typing "mantle X" creates session
+  - Extension icon state machine works (gray/teal/green)
+  - No --no-sandbox, no MV2, no wildcard host permissions
+  - README "What ships in v1.3" adds bullets for Tauri + extension
+  - scripts/verify-readme-claims.py exits 0

@@ -1,0 +1,130 @@
+name: "W7 — Productivity skills: Slides + Spreadsheets + Documents"
+phase: W7
+description: |
+  Three first-class skills producing real downloadable files. Closes the
+  Manus 1.6 "AI Slides + Enhanced Spreadsheets + Documents" gaps.
+
+  All three run inside the existing sandbox (ComputeSDK from R3) and use the
+  Anthropic Agent Skills format from W5. Files land in /workspace/<task>/ and
+  appear in the existing file-tree right-pane.
+
+  SLIDES SKILL:
+    - packages/skills/slides/SKILL.md + scripts/slides.py
+    - Uses python-pptx in sandbox
+    - Input: outline (title, sections, bullets, optional images)
+    - Output: real .pptx in /workspace/<task>/slides.pptx
+    - Template support: 4 starter templates (minimal/corporate/pitch/research)
+    - Speaker notes per slide
+    - Image embedding from URL or sandbox file
+    - Chart support via matplotlib → embedded image
+
+  SPREADSHEET SKILL:
+    - packages/skills/spreadsheet/SKILL.md + scripts/spreadsheet.py
+    - Uses pandas + openpyxl in sandbox
+    - Input: column schema + rows OR query plan over input data
+    - Output: real .xlsx in /workspace/<task>/data.xlsx
+    - Sub-skills:
+      - financial-model: P&L + balance sheet + cash flow with FORMULAS (not values)
+      - comparison-matrix: multi-dim feature comparison (the Manus 1.6 headline)
+      - data-cleaning: dedupe, normalize, type-coerce
+    - Charts via matplotlib → embedded in workbook
+
+  DOCUMENT SKILL:
+    - packages/skills/document/SKILL.md + scripts/document.py
+    - Uses python-docx for .docx; reportlab for .pdf
+    - Input: structured markdown-like outline (headings, paragraphs, tables, images)
+    - Output: real .docx and/or .pdf
+    - Stylesheet support: minimal / academic / business
+    - Table of contents auto-generated for documents > 5 sections
+    - Image embedding
+
+  ARTIFACT VIEWER UPGRADES:
+    - apps/web/components/session/artifact-viewer.tsx (existing) gains:
+      - .pptx preview: rendered first-slide thumbnail + download link
+      - .xlsx preview: first-sheet table preview (first 20 rows × 10 cols)
+      - .docx preview: first-page text rendering
+      - .pdf preview: embedded PDF.js viewer
+    - All previews lazy-loaded; full file downloadable via existing file-tree
+
+  COST TRACKING:
+    - Each skill invocation logs cost via existing cost-wall (R3)
+    - Slides typical cost: $0.01-0.05 (light planner work)
+    - Spreadsheet typical cost: $0.02-0.10 (more reasoning on financial models)
+    - Document typical cost: $0.05-0.15 (longer outputs)
+    - Phase-end report sums total skill cost
+
+  PRODUCTIVITY BENCHMARK:
+    - eval/productivity/tasks.yaml — 30 NEW tasks authored for this benchmark
+    - 10 per format (slides / sheets / docs)
+    - Each task: prompt + expected output structure
+    - Judge: Sonnet 4.6 (same family as v1.1 WV judge)
+    - Pass criteria:
+      - File produced (binary exists)
+      - File opens cleanly via producing library
+      - Structural match against expectation (judged by Sonnet 4.6)
+    - Single attempt per task; no best-of-N
+    - Minimum aggregate pass rate: 0.80
+    - Minimum per-format pass rate: 0.80
+
+packages_required:
+  - packages/skills/slides
+  - packages/skills/spreadsheet
+  - packages/skills/document
+  - packages/codeact                                      # skill registration
+  - eval/productivity                                     # new benchmark
+  - apps/web                                              # artifact viewer upgrades
+
+artifacts:
+  - PHASE_W7_DONE.md
+  - packages/skills/slides/SKILL.md
+  - packages/skills/slides/scripts/slides.py
+  - packages/skills/slides/templates/minimal.pptx
+  - packages/skills/slides/templates/corporate.pptx
+  - packages/skills/slides/templates/pitch.pptx
+  - packages/skills/slides/templates/research.pptx
+  - packages/skills/spreadsheet/SKILL.md
+  - packages/skills/spreadsheet/scripts/spreadsheet.py
+  - packages/skills/spreadsheet/subskills/financial_model.py
+  - packages/skills/spreadsheet/subskills/comparison_matrix.py
+  - packages/skills/spreadsheet/subskills/data_cleaning.py
+  - packages/skills/document/SKILL.md
+  - packages/skills/document/scripts/document.py
+  - packages/skills/document/styles/minimal.css
+  - packages/skills/document/styles/academic.css
+  - packages/skills/document/styles/business.css
+  - eval/productivity/tasks.yaml
+  - eval/productivity/runner.py
+  - eval/productivity/judge.py
+  - outputs/v1_3/productivity-bench.json
+
+integration_tests:
+  - tests/integration/test_slides_skill_round_trip.py     # produces .pptx, opens cleanly
+  - tests/integration/test_spreadsheet_skill_round_trip.py
+  - tests/integration/test_spreadsheet_financial_model_has_formulas.py
+  - tests/integration/test_document_skill_round_trip.py
+  - tests/integration/test_skill_cost_tracking.py
+  - tests/integration/test_artifact_viewer_pptx_preview.spec.ts
+  - tests/integration/test_artifact_viewer_xlsx_preview.spec.ts
+  - tests/integration/test_artifact_viewer_pdf_preview.spec.ts
+
+eval_suites:
+  - name: productivity-bench
+    command: "uv run python eval/productivity/runner.py --output outputs/v1_3/productivity-bench.json"
+    output_file: outputs/v1_3/productivity-bench.json
+    minimum_pass_rate: 0.80
+
+forbidden_patterns:
+  - "task_id\\s*==\\s*[\"']prod-"                         # no per-task branching
+  - "memo\\|cache.*output"
+  - "best_of"
+  - "MockTransport"
+
+ship_criteria_human_readable: |
+  - Three skills registered in W5's skill loader; /api/skills lists them
+  - Each skill round-trips: agent calls → sandbox produces → file opens via producing library
+  - Financial model spreadsheets have actual FORMULAS (not hardcoded values) — auditor checks
+  - Cost-wall tracks skill invocations
+  - Artifact viewer previews .pptx/.xlsx/.docx/.pdf inline
+  - Productivity benchmark: 30 tasks, aggregate ≥ 0.80, per format ≥ 0.80
+  - No task-ID hardcoding, no best-of-N, judge is Sonnet 4.6 same as v1.1
+  - README adds bullets; verify-readme-claims.py exits 0

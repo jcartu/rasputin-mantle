@@ -1,0 +1,95 @@
+name: "W2 — Onboarding + Playbook gallery"
+phase: W2
+description: |
+  Replace the empty home page with a real onboarding flow + playbook gallery.
+
+  ONBOARDING FLOW:
+    - First-visit detection (localStorage key: mantle:onboarding:complete)
+    - Three steps:
+      Step 1: "What do you want to do today?" — 4 intent cards
+        Research / Build / Summarize / Schedule
+      Step 2: "Pick a starting template" — 8 curated playbooks (2/intent)
+      Step 3: "First task" — text input pre-filled with template prompt, Run button
+    - Skip link in corner of every step ("I know what I'm doing →")
+    - First-task creation goes through normal POST /api/sessions
+
+  PLAYBOOK GALLERY:
+    - Route: /(app)/playbooks
+    - Grid of cards: title, description, intent tag, "Run" button
+    - 8 seed playbooks shipped from data/seed-playbooks.yaml:
+      Research: competitor-analysis, literature-review
+      Build:    landing-page, internal-dashboard
+      Summarize: meeting-recap, weekly-news-digest
+      Schedule: daily-standup, weekly-report
+    - "Save as playbook" button on finished sessions:
+      POST /api/playbooks {session_id, title, description}
+      Backend extracts agent's plan + first prompt from session trace
+      Saved playbooks appear in gallery with "by you" badge
+    - Schema: packages/shared/schemas/playbook.py
+
+  HOME PAGE REBUILD:
+    - /(app)/page.tsx replaces empty state with:
+      - "Try this" templates section (3 random playbooks)
+      - "Recent sessions" section (last 5)
+      - "Start blank" button at the bottom
+    - First-visit users see redirect to /(app)/onboarding instead
+
+  EMPTY STATE COMPONENT:
+    - New component: components/ui/empty-state.tsx
+    - Used by: home page, playbooks gallery, future scheduled-tasks list (W6),
+      future projects list (W4), future skills list (W5)
+    - Standardized pattern: icon + heading + description + single CTA button
+
+packages_required:
+  - apps/web
+  - apps/gateway                                          # /api/playbooks routes
+  - packages/shared                                       # playbook schema
+  - data                                                  # seed-playbooks.yaml
+
+artifacts:
+  - PHASE_W2_DONE.md
+  - apps/web/app/(app)/onboarding/page.tsx
+  - apps/web/app/(app)/playbooks/page.tsx
+  - apps/web/components/onboarding/intent-card.tsx
+  - apps/web/components/onboarding/template-card.tsx
+  - apps/web/components/onboarding/first-task.tsx
+  - apps/web/components/playbook/playbook-card.tsx
+  - apps/web/components/playbook/playbook-grid.tsx
+  - apps/web/components/playbook/save-as-playbook-button.tsx
+  - apps/web/components/ui/empty-state.tsx
+  - apps/web/components/ui/empty-state.test.tsx
+  - apps/web/lib/playbooks.ts
+  - apps/gateway/src/gateway/routes/playbooks.py
+  - packages/shared/schemas/playbook.py
+  - data/seed-playbooks.yaml
+
+integration_tests:
+  - tests/integration/test_onboarding_flow.spec.ts        # Playwright walkthrough
+  - tests/integration/test_playbook_save_load.py
+  - tests/integration/test_playbook_list_includes_seeds.py
+  - tests/integration/test_home_page_redirects_first_visit.spec.ts
+  - apps/web/components/onboarding/*.test.tsx
+  - apps/web/components/playbook/*.test.tsx
+  - apps/web/components/ui/empty-state.test.tsx
+
+eval_suites:
+  - name: w2-component-tests
+    command: "cd apps/web && pnpm test -- components/onboarding components/playbook components/ui/empty-state"
+    output_file: outputs/v1_3/w2-vitest.json
+    minimum_pass_rate: 1.0
+
+forbidden_patterns:
+  - "hardcoded.*playbook"                                 # seeds come from yaml only
+  - "task_id\\s*==\\s*[\"']"
+  - "MockTransport"
+
+ship_criteria_human_readable: |
+  - /(app)/onboarding renders three-step flow; skip link works
+  - First-visit users get redirected to onboarding; localStorage gates re-show
+  - /(app)/playbooks renders 8 seed playbooks
+  - Save-as-playbook round-trip works (POST → list → retrieve → run)
+  - Home page no longer empty: Try-this + Recent + Start-blank
+  - Empty-state component is reusable across pages
+  - All vitest tests green (15 primitives + 8 shell + 6 session + 5 new W2 = 34 components total claimed in README)
+  - README "What ships in v1.3" adds bullets for onboarding + playbooks + empty-state
+  - scripts/verify-readme-claims.py exits 0

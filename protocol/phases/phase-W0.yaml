@@ -1,0 +1,70 @@
+name: "W0 — v1.2 audit cleanup (pre-flight)"
+phase: W0
+description: |
+  The v1.2 post-release cleanup paste-in was applied to Sisyphus but the work
+  never landed on origin/main. As of May 19, 2026 audit:
+
+  - `apps/web/app/session/[id]/page.tsx` still exists (the OLD 38-line route
+    with broken react-resizable-panels imports). It should be deleted.
+  - `README.md` line 133 still claims "24 component primitives" when actual
+    count is 15 UI + 8 shell + 6 session = 29 components.
+  - `MANTLE_V1_2_RELEASED.md` doesn't exist. v1.0 and v1.1 both have one.
+  - `scripts/verify-readme-claims.py` doesn't exist yet (this phase installs it).
+
+  W0 fixes all four. Must complete before W1 starts.
+
+  Concrete tickets:
+
+  1. Install `scripts/verify-readme-claims.py` (from this bootstrap; chmod +x).
+  2. Install `scripts/sisyphus-state-check.py` (for 27B drift detection).
+  3. Delete `apps/web/app/session/[id]/page.tsx`. Find any components only
+     imported by it (likely `@/components/sidebar`, `@/components/computer-view`,
+     `@/components/chat-panel`, `@/components/session-stream`) and delete those
+     too if they have zero other importers. Keep anything with other importers.
+  4. Update README.md "What ships in v1.2": replace "24 component primitives"
+     with accurate breakdown. Ensure every bullet in "What ships" has a
+     codebase match or `<!-- verify: pattern -->` annotation. Move Replay/Share/
+     Onboarding to "On the roadmap" section (which already exists, ensure
+     they're listed under it).
+  5. Write `MANTLE_V1_2_RELEASED.md` in repo root using v1.1's template.
+
+  After all five tickets ship, run:
+    python3 scripts/verify-readme-claims.py README.md   # must exit 0
+
+  Then re-tag `mantle-v1.2-released` at HEAD with --force-with-lease.
+
+packages_required:
+  - .                                                     # touches root README + scripts
+  - apps/web                                              # deletes dead route + components
+  - docs                                                  # (no docs change in W0)
+
+artifacts:
+  - PHASE_W0_DONE.md
+  - MANTLE_V1_2_RELEASED.md                               # the missing release report
+  - scripts/verify-readme-claims.py                       # the programmatic README auditor
+  - scripts/sisyphus-state-check.py                       # 27B drift detector
+
+integration_tests:
+  - tests/integration/test_dead_route_removed.py          # asserts old session/[id]/ does NOT exist
+  - tests/integration/test_readme_verifier_smoke.py       # script runs and exits 0 on current README
+
+eval_suites:
+  - name: w0-readme-verify
+    command: "python3 scripts/verify-readme-claims.py README.md"
+    output_file: outputs/v1_3/w0-readme-verify.txt        # capture script stdout
+    minimum_pass_rate: 1.0                                # script must exit 0
+
+forbidden_patterns:
+  - "24 component primitives"                             # the exact bad string
+  - "page.tsx.*react-resizable-panels"                    # dead route imports
+
+ship_criteria_human_readable: |
+  - apps/web/app/session/[id]/page.tsx does NOT exist
+  - apps/web/app/(app)/session/[id]/page.tsx STILL exists (canonical route)
+  - No README claim of "24 component primitives" anywhere in *.md
+  - Every "## What ships in v1.2" bullet has a codebase match or annotation
+  - Replay/Share/Onboarding listed under "## On the roadmap" (or "## Coming in v1.3")
+  - MANTLE_V1_2_RELEASED.md exists in repo root with required sections
+  - scripts/verify-readme-claims.py installed, executable, exits 0 on current README
+  - scripts/sisyphus-state-check.py installed, executable, returns drift=0
+  - mantle-v1.2-released tag re-applied at HEAD post-cleanup

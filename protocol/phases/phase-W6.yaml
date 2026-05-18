@@ -1,0 +1,101 @@
+name: "W6 — Slack + Email + Scheduled tasks UI"
+phase: W6
+description: |
+  Three integrations closing real Manus 1.6 gaps. All three layer cleanly on
+  existing v1.0/v1.1 infra (APScheduler from R5, OAuth scaffolding from R3,
+  gateway route pattern from R1).
+
+  SLACK INTEGRATION:
+    - Slash command: /mantle <task description>
+      Creates session, posts "Working on it…" with gateway link, posts result
+      when done.
+    - OAuth 2.0: /api/slack/install → /api/slack/callback → stores team token
+      in slack_installations table
+    - Channel updates: agent posts step summaries (config: every step, every
+      N steps, done only)
+    - @mention handler: @mantle in any channel triggers /mantle flow
+    - Secrets via env: SLACK_CLIENT_ID, SLACK_CLIENT_SECRET, SLACK_SIGNING_SECRET
+    - Signing-secret verification on every webhook
+
+  EMAIL INTEGRATION:
+    - Inbound: MAIL_INBOX_ADDRESS env; IMAP IDLE watches new messages
+      Subject → task title; body → prompt
+    - Outbound: agent replies on same thread with summary + session link
+    - SMTP for sending: MAIL_SMTP_HOST/PORT/USER/PASSWORD env
+    - Allowlist: MAIL_ALLOWED_SENDERS (comma-separated emails or domains);
+      non-allowlisted senders get polite reject reply
+    - Spam filter: skip messages flagged by Spamassassin headers
+
+  SCHEDULED TASKS UI:
+    - Route: /(app)/scheduled
+    - Form: name + task prompt + cron expression + start/end date + max runs
+    - Backend stores in scheduled_tasks table
+    - APScheduler (from R5) picks up via existing Redis jobstore
+    - List page: next-run time, last-run status, run history
+    - Each run creates a normal session; click through to results
+    - Edit / delete / pause / resume buttons
+
+  INTEGRATIONS SETTINGS PAGE:
+    - Route: /(app)/settings/integrations
+    - Cards for Slack, Mail, (future: GitHub, Discord)
+    - Each card: status badge (Connected/Disconnected), config form, disconnect button
+
+packages_required:
+  - packages/integrations/slack
+  - packages/integrations/email
+  - apps/gateway
+  - apps/web
+
+artifacts:
+  - PHASE_W6_DONE.md
+  - packages/integrations/slack/__init__.py
+  - packages/integrations/slack/oauth.py
+  - packages/integrations/slack/events.py
+  - packages/integrations/email/__init__.py
+  - packages/integrations/email/imap_watcher.py
+  - packages/integrations/email/smtp_sender.py
+  - apps/gateway/src/gateway/routes/slack.py
+  - apps/gateway/src/gateway/routes/mail.py
+  - apps/gateway/src/gateway/routes/scheduled.py
+  - apps/web/app/(app)/scheduled/page.tsx
+  - apps/web/app/(app)/settings/integrations/page.tsx
+  - apps/web/components/scheduled/scheduled-task-form.tsx
+  - apps/web/components/scheduled/scheduled-task-list.tsx
+  - apps/web/components/settings/integration-card.tsx
+  - migrations/0XX_slack_installations.sql
+  - migrations/0XX_scheduled_tasks.sql
+
+integration_tests:
+  - tests/integration/test_slack_oauth_callback.py        # mocked Slack response
+  - tests/integration/test_slack_slash_command.py         # signing-secret verified, session created
+  - tests/integration/test_slack_mention.py
+  - tests/integration/test_mail_inbound_via_mailhog.py    # real MailHog container
+  - tests/integration/test_mail_outbound_reply.py
+  - tests/integration/test_mail_allowlist_enforcement.py
+  - tests/integration/test_scheduled_task_persistence.py  # survives compose down/up
+  - tests/integration/test_scheduled_task_runs.py         # APScheduler fires it
+
+eval_suites:
+  - name: w6-smoke
+    command: "make smoke-integrations"
+    output_file: outputs/v1_3/w6-smoke.json
+    minimum_pass_rate: 1.0
+
+forbidden_patterns:
+  - "SLACK_CLIENT_SECRET\\s*=\\s*[\"']"                   # secrets via env only
+  - "MAIL_SMTP_PASSWORD\\s*=\\s*[\"']"
+  - "subprocess.*shell\\s*=\\s*True"
+  - "MockTransport"
+
+ship_criteria_human_readable: |
+  - Slack OAuth round-trip works (against Slack API mock); no real workspace needed
+  - Slash command creates a session; signing-secret verified
+  - Email inbound creates session from MailHog message
+  - Email outbound replies on same thread
+  - Allowlist enforces sender restriction
+  - Scheduled tasks persist across docker compose down/up
+  - APScheduler fires scheduled task; verified by session-creation count in 60s window
+  - /(app)/scheduled renders with create/list/edit/delete/pause/resume
+  - /(app)/settings/integrations shows Slack/Mail status cards
+  - All secrets via env; no literals (auditor greps)
+  - README adds bullets; verify-readme-claims.py exits 0

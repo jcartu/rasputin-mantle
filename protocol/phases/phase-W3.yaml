@@ -1,0 +1,101 @@
+name: "W3 — Replay scrubber + Public share links + OG previews"
+phase: W3
+description: |
+  Two v1.2 deferred features about making sessions shareable. The share-link
+  mechanic is how Manus actually grew organically post-launch.
+
+  REPLAY SCRUBBER:
+    - Component: components/session/timeline-scrubber.tsx
+    - Renders below chat-stream in any finished session
+    - Reads session.steps[] (same trace data SSE broker emits live in v1.1)
+    - Horizontal track with drag handle; scrubbing updates:
+      - chat-stream: shows messages up to that step
+      - computer-view: shows screenshot captured at that step
+      - file-tree: shows files that existed at that step
+    - Keyboard: ←/→ step ±1, Shift+←/→ step ±10, Home/End jump to ends
+    - Play button auto-advances at 2 steps/sec
+    - Loading skeleton while session trace fetches
+
+  PUBLIC SHARE LINKS:
+    - Route: /replay/[id]
+    - NO auth required (this is the magic)
+    - Renders the same session view as /(app)/session/[id] but read-only
+    - Scrubber visible by default
+    - Backend route: GET /api/share/<session_id>
+      Returns: session metadata + steps[] + final_answer
+      Excludes: API keys, sandbox credentials, auth tokens (auditor greps for this)
+    - Sessions table column: share_public BOOLEAN DEFAULT false
+    - "Share" button (top-right of finished sessions) opens modal:
+      - Toggle public/private
+      - Show URL with copy-to-clipboard
+      - Optional: expires_at field (24h, 7d, 30d, never)
+    - Query param ?t=<step> jumps to specific step
+
+  OG IMAGE GENERATION:
+    - Script: scripts/generate-og-image.py
+    - Input: session_id, output path
+    - Reads final screenshot from session.steps[-1].screenshot
+    - Calls Claude Sonnet 4.6 vision with prompt:
+        "Generate a one-line caption (≤80 chars) describing what this agent
+        accomplished. No quotes, no markdown, no trailing punctuation."
+    - Composites with Pillow: screenshot (1200x630) + Mantle logo overlay
+      (bottom-right) + caption text (bottom-left, white text on dark gradient)
+    - Pre-generated on first /replay/<id> view
+    - Cached in outputs/v1_3/og-images/<session_id>.png
+    - <meta property="og:image" /> tag on /replay/<id>
+
+  PUBLIC SHARE BADGE:
+    - Banner at top of shared sessions in the (app) view too:
+      "This session is shared publicly · [view public link] · [unshare]"
+    - Color: subtle accent-100 background, accent-700 text
+    - Visible only to the owner
+
+packages_required:
+  - apps/web                                              # scrubber + replay route + share button
+  - apps/gateway                                          # /api/share, /api/share/<id>/og.png
+  - scripts                                               # generate-og-image.py
+  - migrations                                            # add share_public column
+
+artifacts:
+  - PHASE_W3_DONE.md
+  - apps/web/components/session/timeline-scrubber.tsx
+  - apps/web/components/session/timeline-scrubber.test.tsx
+  - apps/web/components/session/share-modal.tsx
+  - apps/web/components/session/share-badge.tsx
+  - apps/web/app/replay/[id]/page.tsx                     # public, no auth
+  - apps/web/app/replay/[id]/opengraph-image.tsx          # Next.js OG image route
+  - apps/gateway/src/gateway/routes/share.py
+  - scripts/generate-og-image.py
+  - migrations/0XX_add_share_public.sql
+
+integration_tests:
+  - tests/integration/test_replay_timeline_scrub.spec.ts
+  - tests/integration/test_share_link_no_auth.py          # /replay/<id> works without cookies
+  - tests/integration/test_share_link_private_returns_404.py
+  - tests/integration/test_share_toggle.spec.ts
+  - tests/integration/test_og_image_generation.py         # Sonnet vision mocked, PNG verified
+  - tests/integration/test_no_secrets_in_share_response.py  # asserts API keys not leaked
+
+eval_suites:
+  - name: w3-smoke
+    command: "make smoke-replay"
+    output_file: outputs/v1_3/w3-smoke.json
+    minimum_pass_rate: 1.0
+
+forbidden_patterns:
+  - "api_key.*session"                                    # no API key leakage
+  - "credential.*session"
+  - "MockTransport"
+
+ship_criteria_human_readable: |
+  - Timeline scrubber renders on finished session; dragging updates all three panes
+  - Play button auto-advances at 2 steps/sec; Pause stops
+  - Keyboard nav works (←/→, Shift+arrows, Home/End)
+  - /replay/<id> renders without auth when share_public=true
+  - /replay/<id> returns 404 when share_public=false
+  - Share modal works: toggle, URL copy, optional expiration
+  - OG image generates within 5s on first /replay view; cached subsequently
+  - <meta property="og:image" /> on /replay/<id> resolves to the PNG
+  - No secrets in share endpoint response (auditor greps for leakage)
+  - Owner sees "This session is shared" badge in (app) view
+  - README adds bullets; verify-readme-claims.py exits 0

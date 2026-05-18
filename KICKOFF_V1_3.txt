@@ -1,0 +1,246 @@
+────────────────────────────────────────────────────────────────────────────────
+ RASPUTIN MANTLE v1.3 — FEATURES SPRINT KICKOFF (27B-DRIVEN SISYPHUS)
+ Paste this entire message into your OpenCode chat (Sisyphus = default agent).
+ Nine phases, four parallel waves, maximum 27B utilization, Opus on audit only.
+────────────────────────────────────────────────────────────────────────────────
+
+ultrawork: Ship Rasputin Mantle v1.3.
+
+You are running on local-vllm/qwen3.5-27b. Opus 4.7 is reserved exclusively for
+@mantle-auditor calls; you (Sisyphus) and all executors run on 27B. Save the
+Anthropic spend for the audit pass and for vision/judge work that genuinely
+needs frontier reasoning.
+
+═══════════════════════════════════════════════════════════════════════════════
+WHAT THIS SPRINT IS
+═══════════════════════════════════════════════════════════════════════════════
+
+Three goals, in priority order:
+
+  1. **Land the v1.2 cleanup that didn't ship** (W0). The dead /session/[id]/
+     route is still there, README still claims 24 components when there are 15,
+     MANTLE_V1_2_RELEASED.md still doesn't exist. Fix before features.
+
+  2. **Close the real Manus 1.6 + post-Meta-acquisition gaps**. After a fresh
+     May 19 2026 survey (see docs/MANUS_FEATURE_DELTA.md), seven new features
+     made the must-have list, four made stretch, six explicitly skipped.
+
+  3. **Ship the v1.2 deferred roadmap items** (replay, share, onboarding,
+     Tauri, extension) that are publicly named on our README.
+
+═══════════════════════════════════════════════════════════════════════════════
+READ FIRST (IN ORDER) — DO NOT SKIP, ESPECIALLY THE 27B GUIDE
+═══════════════════════════════════════════════════════════════════════════════
+
+  docs/27B_ORCHESTRATOR_GUIDE.md           ← how YOU run as orchestrator on 27B
+  docs/V1_3_BUILD_PLAN.md                  ← strategy, scope, parallel waves
+  docs/MANUS_FEATURE_DELTA.md              ← May 19 2026 Manus survey + gap matrix
+  docs/VISUAL_GAP_ANALYSIS.md              ← UI we're missing; per-component
+  docs/README_AUDIT_POLICY.md              ← programmatic README verification
+  protocol/prompts/auditor-strict.md       ← UPDATED — patterns #24-28 at top
+  protocol/phases/phase-W0.yaml            ← FIRST PHASE — must complete before W1+
+  scripts/verify-readme-claims.py          ← the new auditor script
+  scripts/sisyphus-state-check.py          ← drift detector — runs every 5 tickets
+  config/oh-my-opencode.json               ← OMO config example (you may already have it)
+
+Then tell me before W0 starts:
+
+  - Confirm the 27B vLLM endpoint is reachable (curl $VLLM_URL/v1/models | head)
+  - Confirm Opus 4.7 is mapped to @mantle-auditor only (cat .opencode/agents/mantle-auditor.md | grep model)
+  - Confirm the parallel-dispatch plan: W0 sequential then W1/W2/W3 in parallel,
+    W4/W5/W6 in parallel, W7 alone, W8 alone (last)
+  - Estimated tickets for W0 (small — ~5)
+
+Then start W0.
+
+═══════════════════════════════════════════════════════════════════════════════
+THE NINE PHASES, FOUR WAVES
+═══════════════════════════════════════════════════════════════════════════════
+
+  WAVE 0 (sequential, must complete first):
+    W0  v1.2 cleanup (~2h)                — dead route, README, release report
+
+  WAVE 1 (parallel, 3 concurrent phases):
+    W1  Tauri desktop + Browser ext (~1d) — finish v1.2 roadmap
+    W2  Onboarding + Playbooks (~1d)      — empty home page becomes templates
+    W3  Replay + Share + OG previews (~1d)— public share links + scrubber
+
+  WAVE 2 (parallel, 3 concurrent phases):
+    W4  Manus Projects (~1-2d)            — NEW from May 19 survey — persistent
+                                            project workspaces with knowledge base
+                                            + config inheritance (their enterprise wedge)
+    W5  Skills standard (~1d)             — NEW from May 19 — Anthropic Agent Skills
+                                            format + marketplace + one-click save-as-skill
+    W6  Integrations (~1-2d)              — Slack + Email + Scheduled tasks UI
+
+  WAVE 3 (sequential):
+    W7  Productivity skills (~1-2d)       — Slides .pptx + Spreadsheets .xlsx
+                                            + Documents .docx/.pdf
+
+  WAVE 4 (sequential, final gate):
+    W8  Final eval + release (~1d)        — WV-300 regression, productivity bench,
+                                            release report, mantle-v1.3-released tag
+
+═══════════════════════════════════════════════════════════════════════════════
+27B ORCHESTRATOR RULES (READ docs/27B_ORCHESTRATOR_GUIDE.md FOR FULL VERSION)
+═══════════════════════════════════════════════════════════════════════════════
+
+Short version of what's different from Opus-driven runs:
+
+  1. **Smaller phase scope.** Each W phase has 4-6 tickets MAX. If a phase needs
+     more, split into sub-phases (W4a, W4b). This keeps state in YAML, not in
+     your head.
+
+  2. **MAX_AUDIT_ITERATIONS = 3.** Hard cap. Drift on 27B compounds across
+     iterations; fail fast and surface to user.
+
+  3. **Default concurrency = 4** for executor dispatch. NOT the OMO default of 5.
+     One less thing to track.
+
+  4. **Self-check ritual every 5 tickets:**
+        $ python3 scripts/sisyphus-state-check.py
+     This reads boulder.json + git tags + recent commits and reports any drift
+     between what you THINK has happened and what actually has. If drift > 0,
+     stop and reconcile before continuing.
+
+  5. **Fallback chain enabled.** oh-my-opencode.json should have:
+        sisyphus.fallback_models: ["anthropic/claude-opus-4-7"]
+     If 27B rate-limits or returns gibberish, OMO automatically bounces this
+     specific turn to Opus. You won't see it; the build continues.
+
+  6. **Explicit state, no inferred state.** When you write a ticket file, the
+     ticket file is the source of truth. Don't say "I already updated this" in
+     chat without writing it to disk. 27B's "I remember" is unreliable.
+
+  7. **Push every 3 commits.** Same as Opus runs, but tighter — your git state
+     should always be < 3 commits ahead of origin.
+
+═══════════════════════════════════════════════════════════════════════════════
+THE NEW PROGRAMMATIC AUDITOR (NON-NEGOTIABLE)
+═══════════════════════════════════════════════════════════════════════════════
+
+scripts/verify-readme-claims.py runs as part of EVERY phase's verify step.
+It reads README.md's "## What ships" section, extracts each bullet's keyword,
+and greps the codebase. Zero matches on any bullet = phase fails.
+
+The auditor independently re-runs it before issuing PERFECT. Patterns #24-28
+in auditor-strict.md enforce this programmatically.
+
+This closes the v1.2 audit gap where the README claimed Replay/Share/Onboarding
+that didn't exist in code. v1.3 cannot ship overclaims — the script catches them
+in seconds.
+
+═══════════════════════════════════════════════════════════════════════════════
+NEW AUDITOR PATTERNS #24-28 (added 2026-05-19 from v1.2 lessons + 27B drift risk)
+═══════════════════════════════════════════════════════════════════════════════
+
+  24. README "What ships" claims must be grep-verifiable. Run
+      `scripts/verify-readme-claims.py README.md` before issuing verdict.
+      Non-zero exit = blocker. (v1.2 audit miss)
+
+  25. Component count claims must match actual file count.
+      v1.2 claimed 24 primitives; actual was 15. (v1.2 audit miss)
+
+  26. Multiple route files at the same Next.js path = dead code blocker.
+      `app/session/[id]/page.tsx` AND `app/(app)/session/[id]/page.tsx`
+      both existing = pick one, delete the other. (v1.2 audit miss)
+
+  27. Phase ship without release report = process violation.
+      Every `mantle-vX.Y-released` tag MUST have `MANTLE_VX_Y_RELEASED.md`
+      committed before or with the tag. (v1.2 audit miss)
+
+  28. NEW for 27B runs: orchestrator state drift.
+      If `scripts/sisyphus-state-check.py` reports drift > 0, the phase
+      cannot ship until reconciled. Drift = boulder.json claims something
+      that git tags / commits / files contradict.
+
+═══════════════════════════════════════════════════════════════════════════════
+ANTI-CHEATING POLICY (CARRIED FORWARD FROM v1.1, APPLIES TO W7 + W8)
+═══════════════════════════════════════════════════════════════════════════════
+
+For W8's WebVoyager-300 regression: no memoization, no hardcoded task IDs,
+no judge-model downgrade, no test set substitution, no best-of-N reporting.
+`eval/webvoyager-300/tasks.yaml` must be byte-identical to mantle-v1.1-released.
+
+For W7's productivity benchmark: 30 NEW tasks (10 per format) authored for this
+benchmark. Sonnet 4.6 judge. Single attempt per task. Tasks in
+`eval/productivity/tasks.yaml`.
+
+═══════════════════════════════════════════════════════════════════════════════
+COMMIT MESSAGE FORMAT (UNCHANGED, BUMP PREFIX)
+═══════════════════════════════════════════════════════════════════════════════
+
+  w0.iter1: README.md — remove "24 component primitives" claim
+
+  Goal: replace "24 component primitives" with "15 UI primitives + 8 shell +
+        6 session = 29 components". scripts/verify-readme-claims.py greps for
+        "components/ui" and "components/shell" to confirm.
+  Ticket: planning/phase-W0/iter-1/001-fix-component-count.md
+  Verify: python3 scripts/verify-readme-claims.py README.md  ✓
+  Audit:  pending
+
+  🤖 mantle-executor via Sisyphus (local-vllm/qwen3.5-27b)
+
+═══════════════════════════════════════════════════════════════════════════════
+STATUS LINE FORMAT
+═══════════════════════════════════════════════════════════════════════════════
+
+After every ticket:
+  [N/M] <slug> — <green|red|cancelled> · avg <Xm>/ticket · phase ETA <YYhZm> · spend $<Z.ZZ>/$<budget>
+
+After every README change:
+  📋 README claims verified: <PASS|FAIL>  ← scripts/verify-readme-claims.py output
+
+Every 5 tickets:
+  🧭 State check: drift=<N> · git ahead=<N> · phase=W<N>·iter<N>  ← sisyphus-state-check.py
+
+After WV-300 / productivity re-runs (W8 only):
+  📊 WebVoyager-300: <P>/300 = <P>% · Δ from v1.1 baseline (78% Opus): <+/-N> points
+  📊 Productivity: slides <S>/10 · sheets <Sh>/10 · docs <D>/10 · aggregate <A>%
+
+═══════════════════════════════════════════════════════════════════════════════
+HARD RULES
+═══════════════════════════════════════════════════════════════════════════════
+
+1. Never edit Makefile / phase YAMLs / verify scripts to make red green.
+2. Never add --no-sandbox to any browser invocation.
+3. Never import anthropic/openai outside apps/gateway/src/gateway/model_client.py.
+4. Never write tests asserting status_code == 503 for services this phase makes live.
+5. Never use asyncio.sleep + static yield in an event generator.
+6. Never raise MAX_AUDIT_ITERATIONS above 3 for v1.3 (tighter than v1.1's 5).
+7. Never let README claim a feature whose name grep cannot find. The script enforces this.
+8. Never tag mantle-vX.Y-released without MANTLE_VX_Y_RELEASED.md committed first.
+9. Never skip the sisyphus-state-check every 5 tickets. 27B drift compounds silently.
+10. Never use Opus for anything other than @mantle-auditor calls. Sisyphus is 27B.
+    Executors are 27B. Frontend is 27B (NOT Sonnet — Sonnet stays for vision tasks only).
+    The only Anthropic spend on v1.3 should be: auditor passes, vision-fallback retries
+    in the browser tool, productivity benchmark judging.
+
+═══════════════════════════════════════════════════════════════════════════════
+TARGET COST (27B-HEAVY = MUCH CHEAPER THAN v1.1)
+═══════════════════════════════════════════════════════════════════════════════
+
+  W0      $0-1     (cleanup; Opus auditor only)
+  W1      $1-3     (Tauri + extension; mostly 27B work)
+  W2      $1-2     (UI components in 27B)
+  W3      $5-10    (OG image gen uses Sonnet vision)
+  W4      $2-5     (Projects schema + UI in 27B)
+  W5      $2-5     (Skills loader in 27B)
+  W6      $3-6     (integrations in 27B, auditor on Opus)
+  W7      $15-30   (productivity bench judging)
+  W8      $30-50   (WV-300 regression run + audit + release)
+  ──
+  TOTAL   $59-112  (about 1/2 of the cloud-heavy v1.3 plan from yesterday)
+
+If costs exceed $150 by W6 audit-PERFECT, stop and check in.
+
+═══════════════════════════════════════════════════════════════════════════════
+START NOW
+═══════════════════════════════════════════════════════════════════════════════
+
+Read the four docs in order, then begin W0. Push commits every 3, and after
+every audit-PERFECT. Run scripts/sisyphus-state-check.py every 5 tickets and
+include the output in chat.
+
+Anything ambiguous — surface it. Don't quietly defer features. Don't quietly
+expand scope. Don't quietly skip the state check.

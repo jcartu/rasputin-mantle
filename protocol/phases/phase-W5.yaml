@@ -1,0 +1,127 @@
+name: "W5 — Agent Skills standard + marketplace"
+phase: W5
+description: |
+  NEW priority added after May 19, 2026 Manus survey. Manus integrated
+  Anthropic's Agent Skills open standard in January 2026. By adopting the same
+  format, our skills become cross-platform — anything written for Manus also
+  works on Mantle, and vice versa.
+
+  Plus a marketplace: skills can be browsed, installed, shared within a team,
+  or published publicly. And "save successful workflow as Skill" — one-click
+  capture of a finished session into a reusable Skill.
+
+  AGENT SKILLS FORMAT:
+    - Spec: docs/AGENT_SKILLS_SPEC.md (pinned to Anthropic standard, 2026-05-19)
+    - A Skill is a directory containing:
+      - SKILL.md — markdown spec with frontmatter (name, description, when_to_use)
+      - scripts/ — optional Python/shell scripts the skill executes
+      - templates/ — optional template files (e.g. .pptx, .docx skeletons)
+      - examples/ — optional example inputs/outputs
+    - Skills live in:
+      - packages/skills/<skill_name>/ for project-bundled skills
+      - /workspace/<session>/_skills/ for session-scoped skills
+      - $HOME/.mantle/skills/<skill_name>/ for user-installed skills
+    - Skill discovery: agent reads frontmatter, decides when to invoke based on
+      when_to_use field
+    - Skill invocation: agent emits special tool_use block with skill name +
+      arguments; runtime dispatches
+
+  SKILL LOADER:
+    - packages/codeact/codeact/skills_loader.py (replaces our v1.0 loader)
+    - Reads SKILL.md frontmatter, validates against spec, registers
+    - Lists discovered skills via /api/skills endpoint
+    - Discovery cached per-session; invalidated on /workspace/<session>/_skills/
+      changes
+
+  MARKETPLACE UI:
+    - Route: /(app)/skills
+    - Grid of skill cards: name, description, intent tags, author, install button
+    - "Browse public" vs "My skills" vs "Team skills" tabs (last two stubbed
+      for now; populated by W4's project members system if Team plan ships
+      in v1.4)
+    - Click into skill card → detail page with:
+      - Full SKILL.md rendered as markdown
+      - Usage examples
+      - "Install for this account" button (copies to ~/.mantle/skills/)
+      - "Use in this session" button (copies to current session's _skills/)
+
+  SAVE AS SKILL:
+    - Button on finished sessions: "Save as Skill"
+    - Modal asks: name, description, intent tags, whether to publish publicly
+    - Backend extracts:
+      - Agent's plan (from session trace's planner output)
+      - Tools used (from session trace's tool calls)
+      - Final answer template (from session.final_answer)
+    - Generates SKILL.md + scripts/ from extracted info
+    - Saves to packages/skills/<name>/ (if Team plan: project-bundled)
+    - Or to ~/.mantle/skills/<name>/ (personal)
+
+  SEED SKILLS:
+    - 8 seed skills shipped, mapping to W2's seed playbooks:
+      - research-competitor-analysis
+      - research-literature-review
+      - build-landing-page
+      - build-internal-dashboard
+      - summarize-meeting-recap
+      - summarize-weekly-news-digest
+      - schedule-daily-standup
+      - schedule-weekly-report
+    - Each seed has a complete SKILL.md + at least one script
+
+packages_required:
+  - apps/web                                              # marketplace UI
+  - apps/gateway                                          # /api/skills routes
+  - packages/codeact                                      # skill loader
+  - packages/skills                                       # 8 seed skills
+
+artifacts:
+  - PHASE_W5_DONE.md
+  - docs/AGENT_SKILLS_SPEC.md                             # pinned standard spec
+  - apps/web/app/(app)/skills/page.tsx                    # marketplace
+  - apps/web/app/(app)/skills/[name]/page.tsx             # detail
+  - apps/web/components/skills/skill-card.tsx
+  - apps/web/components/skills/skill-detail.tsx
+  - apps/web/components/skills/save-as-skill-button.tsx
+  - apps/web/components/skills/save-as-skill-modal.tsx
+  - apps/gateway/src/gateway/routes/skills.py
+  - packages/codeact/codeact/skills_loader.py
+  - packages/skills/research-competitor-analysis/SKILL.md
+  - packages/skills/research-literature-review/SKILL.md
+  - packages/skills/build-landing-page/SKILL.md
+  - packages/skills/build-internal-dashboard/SKILL.md
+  - packages/skills/summarize-meeting-recap/SKILL.md
+  - packages/skills/summarize-weekly-news-digest/SKILL.md
+  - packages/skills/schedule-daily-standup/SKILL.md
+  - packages/skills/schedule-weekly-report/SKILL.md
+
+integration_tests:
+  - tests/integration/test_skill_discovery.py             # loader finds all 8 seeds
+  - tests/integration/test_skill_validates_against_spec.py
+  - tests/integration/test_skill_invocation_round_trip.py # agent calls skill, gets result
+  - tests/integration/test_save_as_skill.py               # session → skill round-trip
+  - tests/integration/test_skill_marketplace.spec.ts
+  - apps/web/components/skills/*.test.tsx
+
+eval_suites:
+  - name: w5-skills-discovery
+    command: "uv run python packages/codeact/codeact/skills_loader.py --list"
+    output_file: outputs/v1_3/w5-skills-list.json
+    minimum_pass_rate: 1.0                                # all 8 seeds discovered
+
+forbidden_patterns:
+  - "hardcoded.*skill"                                    # skills must be discovered, not listed
+  - "MockTransport"
+  - "skill_id\\s*==\\s*[\"']"                             # no per-skill code branching
+
+ship_criteria_human_readable: |
+  - docs/AGENT_SKILLS_SPEC.md documents the Anthropic Agent Skills format
+    (frontmatter fields, scripts, templates, examples)
+  - 8 seed skills exist, each with valid SKILL.md and at least one script
+  - skills_loader.py discovers all 8 seeds
+  - /api/skills lists discovered skills
+  - Agent can invoke a skill end-to-end (test_skill_invocation_round_trip)
+  - "Save as skill" round-trips a finished session into a new skill
+  - /(app)/skills marketplace renders all 8 seeds + user-saved skills
+  - Skill detail page renders the SKILL.md markdown
+  - All vitest tests green
+  - README adds bullets for skills + marketplace; verify-readme-claims.py exits 0

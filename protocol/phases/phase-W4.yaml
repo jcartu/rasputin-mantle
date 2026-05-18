@@ -1,0 +1,120 @@
+name: "W4 — Projects: persistent workspaces with knowledge base"
+phase: W4
+description: |
+  NEW priority added after May 19, 2026 Manus survey. This is Manus's
+  enterprise wedge — persistent project workspaces with knowledge bases,
+  configuration inheritance, and team sharing.
+
+  Without this, every Mantle session starts from zero. With it, a marketing
+  team's "Campaign Development" project has the brand book pre-loaded, and
+  every new session is on-brand from token one.
+
+  DATA MODEL:
+    - projects table:
+      - id, name, slug, created_at, updated_at
+      - owner_id, visibility (private/team/public)
+      - default_planner (gpt-5.5 | opus-4-6 | sonnet-4-6 | kimi-k2-6)
+      - system_prompt_addendum (text, prepended to agent's system prompt)
+      - allowed_tools (jsonb array of skill names)
+    - project_kb_files table:
+      - id, project_id, filename, mime_type, size_bytes, sha256, uploaded_at
+      - storage_path (relative to per-project KB dir)
+    - project_members table (for team sharing):
+      - project_id, user_id, role (owner|editor|viewer), added_at
+    - sessions table: ADD project_id column (nullable; null = personal scratch)
+
+  KNOWLEDGE BASE:
+    - Upload up to 50 files per project (PDF, MD, TXT, DOCX, code files)
+    - Files stored in /workspace/projects/<project_id>/kb/
+    - Total per-project KB size cap: 100MB
+    - On session create within a project, KB files are mounted read-only at
+      /workspace/<session_id>/_kb/ in the sandbox
+    - Agent's system prompt is augmented:
+      "You have access to project knowledge at /workspace/<session>/_kb/.
+       Reference these files when relevant. KB index: <list of filenames>."
+
+  PROJECT SIDEBAR (UI):
+    - Replaces the current flat session list in left pane
+    - Top-level: list of user's projects (collapsible)
+    - Each project expands to show its recent sessions
+    - "Personal" pseudo-project at the top for non-project sessions
+    - "+ New project" button at bottom
+
+  PROJECT PAGE:
+    - Route: /(app)/projects/[id]
+    - Tabs: Sessions / Knowledge base / Settings
+    - Sessions tab: grid of recent sessions in this project
+    - KB tab: drag-drop uploader + file list with size/type/uploaded-at columns
+    - Settings tab: name, slug, default planner, system prompt addendum,
+      allowed tools
+
+  NEW SESSION IN PROJECT:
+    - Route: /(app)/projects/[id]/new
+    - Inherits: default_planner, system_prompt_addendum, allowed_tools
+    - KB auto-mounted into sandbox at session start
+    - Session creation API accepts project_id parameter
+
+  PROJECT SETTINGS PAGE:
+    - Name + slug
+    - Default planner dropdown
+    - System prompt addendum (textarea, monospace)
+    - Allowed tools (multi-select from registered skills)
+    - Members section (W4b — Team plan only, stub for now)
+
+packages_required:
+  - apps/web                                              # sidebar + project pages
+  - apps/gateway                                          # /api/projects routes
+  - packages/shared                                       # project schema
+  - migrations                                            # 3 new tables + sessions.project_id
+
+artifacts:
+  - PHASE_W4_DONE.md
+  - apps/web/app/(app)/projects/[id]/page.tsx
+  - apps/web/app/(app)/projects/[id]/sessions/page.tsx
+  - apps/web/app/(app)/projects/[id]/knowledge/page.tsx
+  - apps/web/app/(app)/projects/[id]/settings/page.tsx
+  - apps/web/app/(app)/projects/[id]/new/page.tsx
+  - apps/web/components/projects/project-sidebar.tsx
+  - apps/web/components/projects/project-switcher.tsx
+  - apps/web/components/projects/kb-uploader.tsx
+  - apps/web/components/projects/kb-file-list.tsx
+  - apps/web/components/projects/project-settings-form.tsx
+  - apps/gateway/src/gateway/routes/projects.py
+  - apps/gateway/src/gateway/routes/project_kb.py
+  - packages/shared/schemas/project.py
+  - migrations/0XX_create_projects.sql
+  - migrations/0XX_create_project_kb_files.sql
+  - migrations/0XX_create_project_members.sql
+  - migrations/0XX_add_sessions_project_id.sql
+
+integration_tests:
+  - tests/integration/test_project_crud.py
+  - tests/integration/test_project_kb_upload_and_mount.py  # uploads file, creates session in project, verifies sandbox has the file
+  - tests/integration/test_project_system_prompt_inheritance.py  # session inherits addendum
+  - tests/integration/test_project_default_planner.py
+  - tests/integration/test_project_sidebar.spec.ts
+  - tests/integration/test_kb_file_size_cap.py             # rejects > 100MB total
+  - apps/web/components/projects/*.test.tsx
+
+eval_suites:
+  - name: w4-component-tests
+    command: "cd apps/web && pnpm test -- components/projects"
+    output_file: outputs/v1_3/w4-vitest.json
+    minimum_pass_rate: 1.0
+
+forbidden_patterns:
+  - "project_id\\s*=\\s*[\"']hardcoded"
+  - "MockTransport"
+  - "subprocess.*shell\\s*=\\s*True"
+
+ship_criteria_human_readable: |
+  - Three new tables exist + sessions.project_id column added (migrations applied)
+  - Project CRUD works via /api/projects
+  - KB file upload works; files visible in sandbox at /workspace/<session>/_kb/
+  - Session in a project inherits system prompt addendum (verified by reading
+    the actual gateway request log for the project's first session)
+  - Session in a project inherits default planner (verified same way)
+  - Per-project KB size cap enforced (100MB; rejects with 413)
+  - Project sidebar replaces flat session list
+  - All vitest tests green
+  - README adds bullets for Projects + KB; verify-readme-claims.py exits 0

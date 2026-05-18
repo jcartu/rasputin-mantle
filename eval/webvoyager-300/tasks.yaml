@@ -1,0 +1,1990 @@
+tasks:
+- id: wv-001
+  description: Find the current price of one Apple stock (AAPL) and report it.
+  starting_url: https://www.google.com
+  success_criterion: Response includes a USD price for AAPL.
+  source: original
+  category_hint: ''
+- id: wv-002
+  description: Find the population of Tokyo, Japan.
+  starting_url: https://www.google.com
+  success_criterion: Response mentions a population figure for Tokyo (millions).
+  source: original
+  category_hint: ''
+- id: wv-003
+  description: On Wikipedia, find the year Marie Curie won her first Nobel Prize.
+  starting_url: https://en.wikipedia.org
+  success_criterion: Response mentions 1903.
+  source: original
+  category_hint: ''
+- id: wv-004
+  description: On GitHub, find the number of stars on the linux/linux repo.
+  starting_url: https://github.com
+  success_criterion: Response gives a star count (number, likely > 100k).
+  source: original
+  category_hint: ''
+- id: wv-005
+  description: Find a cheap flight from JFK to LAX next month.
+  starting_url: https://www.google.com/flights
+  success_criterion: Response includes a price in USD and airline name.
+  source: original
+  category_hint: ''
+- id: wv-006
+  description: On arxiv.org, find the latest paper about CodeAct.
+  starting_url: https://arxiv.org
+  success_criterion: Response includes an arxiv ID matching CodeAct.
+  source: original
+  category_hint: ''
+- id: wv-007
+  description: Find the current weather in Frankfurt, Germany.
+  starting_url: https://www.google.com
+  success_criterion: Response includes a temperature in Celsius or Fahrenheit.
+  source: original
+  category_hint: ''
+- id: wv-008
+  description: On Hacker News, find the top story right now.
+  starting_url: https://news.ycombinator.com
+  success_criterion: Response gives a title and a points/comments count.
+  source: original
+  category_hint: ''
+- id: wv-009
+  description: Find the runtime of the movie 'Oppenheimer' (2023).
+  starting_url: https://www.google.com
+  success_criterion: Response gives a duration (e.g. '180 minutes' or '3 hours').
+  source: original
+  category_hint: ''
+- id: wv-010
+  description: On Reddit, find a recent post in r/python with > 100 upvotes.
+  starting_url: https://www.reddit.com/r/python
+  success_criterion: Response gives a post title and an upvote count > 100.
+  source: original
+  category_hint: ''
+- id: wv-011
+  description: On Allrecipes, find a highly rated chocolate chip cookie recipe and
+    report its rating and total prep time.
+  starting_url: https://www.allrecipes.com
+  success_criterion: Response includes a cookie recipe title, star rating, and prep
+    or total time.
+  source: original
+  category_hint: ''
+- id: wv-012
+  description: On Allrecipes, find a vegetarian lasagna recipe and list two main ingredients.
+  starting_url: https://www.allrecipes.com
+  success_criterion: Response includes a vegetarian lasagna recipe title and at least
+    two ingredients.
+  source: original
+  category_hint: ''
+- id: wv-013
+  description: On Allrecipes, find a slow cooker chicken recipe with at least 4 stars
+    and report the cook time.
+  starting_url: https://www.allrecipes.com
+  success_criterion: Response includes a recipe title, rating of 4 stars or higher,
+    and cook time.
+  source: original
+  category_hint: ''
+- id: wv-014
+  description: On Amazon, find the price of the current Kindle Paperwhite model.
+  starting_url: https://www.amazon.com
+  success_criterion: Response includes a Kindle Paperwhite product name and a USD
+    price.
+  source: original
+  category_hint: ''
+- id: wv-015
+  description: On Amazon, compare two USB-C wall chargers and report which has the
+    higher customer rating.
+  starting_url: https://www.amazon.com
+  success_criterion: Response includes two charger names, their ratings, and identifies
+    the higher-rated one.
+  source: original
+  category_hint: ''
+- id: wv-016
+  description: On Amazon, find a 1 TB portable SSD under $100 and report its price
+    and review count.
+  starting_url: https://www.amazon.com
+  success_criterion: Response includes a 1 TB portable SSD name, price under $100,
+    and review count.
+  source: original
+  category_hint: ''
+- id: wv-017
+  description: On Apple's website, find the starting price of the latest MacBook Air.
+  starting_url: https://www.apple.com
+  success_criterion: Response includes the MacBook Air model and starting USD price.
+  source: original
+  category_hint: ''
+- id: wv-018
+  description: On Apple's website, find the battery life Apple claims for the latest
+    iPhone Pro model.
+  starting_url: https://www.apple.com/iphone
+  success_criterion: Response includes an iPhone Pro model and a battery life figure
+    in hours.
+  source: original
+  category_hint: ''
+- id: wv-019
+  description: On Apple's support site, find how to take a screenshot on a Mac.
+  starting_url: https://support.apple.com
+  success_criterion: Response includes the keyboard shortcut Shift-Command-3 or Shift-Command-4.
+  source: original
+  category_hint: ''
+- id: wv-020
+  description: On arXiv, find a recent paper about retrieval augmented generation
+    and report its arXiv ID and title.
+  starting_url: https://arxiv.org
+  success_criterion: Response includes a paper title and an arXiv ID for a RAG-related
+    paper.
+  source: original
+  category_hint: ''
+- id: wv-021
+  description: On arXiv, find the abstract for the paper 'Attention Is All You Need'
+    and report the first author.
+  starting_url: https://arxiv.org
+  success_criterion: Response includes the first author Ashish Vaswani and mentions
+    the abstract or paper page.
+  source: original
+  category_hint: ''
+- id: wv-022
+  description: On arXiv, search for papers by Geoffrey Hinton and report one title
+    and submission year.
+  starting_url: https://arxiv.org
+  success_criterion: Response includes a Geoffrey Hinton paper title and a year.
+  source: original
+  category_hint: ''
+- id: wv-023
+  description: On BBC News, find the current top headline in the World section.
+  starting_url: https://www.bbc.com/news
+  success_criterion: Response includes a BBC World headline and indicates it is from
+    the World section.
+  source: original
+  category_hint: ''
+- id: wv-024
+  description: On BBC Weather, find tomorrow's forecast high temperature for London.
+  starting_url: https://www.bbc.com/weather
+  success_criterion: Response includes London, tomorrow, and a forecast high temperature.
+  source: original
+  category_hint: ''
+- id: wv-025
+  description: On BBC Sport, find the latest Premier League table leader.
+  starting_url: https://www.bbc.com/sport/football/premier-league/table
+  success_criterion: Response includes the team currently listed first in the Premier
+    League table.
+  source: original
+  category_hint: ''
+- id: wv-026
+  description: On Booking.com, find a hotel in Paris for a two-night stay next month
+    and report its displayed rating and price.
+  starting_url: https://www.booking.com
+  success_criterion: Response includes a Paris hotel name, guest rating, and displayed
+    price.
+  source: original
+  category_hint: ''
+- id: wv-027
+  description: On Booking.com, search for hotels in New York City and identify one
+    property rated 8.0 or higher.
+  starting_url: https://www.booking.com
+  success_criterion: Response includes a New York City property name and rating of
+    at least 8.0.
+  source: original
+  category_hint: ''
+- id: wv-028
+  description: On Booking.com, find a beachfront hotel in Barcelona and report one
+    listed amenity.
+  starting_url: https://www.booking.com
+  success_criterion: Response includes a Barcelona hotel name and at least one amenity.
+  source: original
+  category_hint: ''
+- id: wv-029
+  description: On Cambridge Dictionary, look up 'serendipity' and report its definition.
+  starting_url: https://dictionary.cambridge.org
+  success_criterion: Response includes a definition of serendipity matching accidental
+    discovery of good things.
+  source: original
+  category_hint: ''
+- id: wv-030
+  description: On Cambridge Dictionary, find the British pronunciation audio label
+    for the word 'schedule'.
+  starting_url: https://dictionary.cambridge.org
+  success_criterion: Response mentions the UK/British pronunciation entry for schedule.
+  source: original
+  category_hint: ''
+- id: wv-031
+  description: On Cambridge Dictionary, find an example sentence for the word 'resilient'.
+  starting_url: https://dictionary.cambridge.org
+  success_criterion: Response includes an example sentence using resilient.
+  source: original
+  category_hint: ''
+- id: wv-032
+  description: On Coursera, find a beginner machine learning course and report its
+    provider and rating.
+  starting_url: https://www.coursera.org
+  success_criterion: Response includes a course title, provider, and rating.
+  source: original
+  category_hint: ''
+- id: wv-033
+  description: On Coursera, find a Python course that offers a certificate and report
+    the estimated duration.
+  starting_url: https://www.coursera.org
+  success_criterion: Response includes a Python course title, certificate availability,
+    and duration estimate.
+  source: original
+  category_hint: ''
+- id: wv-034
+  description: On Coursera, find a data analysis course from Google and report its
+    skill level.
+  starting_url: https://www.coursera.org
+  success_criterion: Response includes a Google data analysis course title and skill
+    level.
+  source: original
+  category_hint: ''
+- id: wv-035
+  description: On ESPN, find the latest NBA scoreboard result for the Los Angeles
+    Lakers.
+  starting_url: https://www.espn.com
+  success_criterion: Response includes the Lakers opponent and final or current score.
+  source: original
+  category_hint: ''
+- id: wv-036
+  description: On ESPN, find the current NFL standings leader in the AFC East.
+  starting_url: https://www.espn.com/nfl/standings
+  success_criterion: Response includes the team listed first in the AFC East standings.
+  source: original
+  category_hint: ''
+- id: wv-037
+  description: On ESPN, find the next scheduled match for the United States men's
+    national soccer team.
+  starting_url: https://www.espn.com/soccer
+  success_criterion: Response includes an opponent and date for the next USMNT match.
+  source: original
+  category_hint: ''
+- id: wv-038
+  description: On GitHub, find the latest release version of the microsoft/vscode
+    repository.
+  starting_url: https://github.com
+  success_criterion: Response includes microsoft/vscode and a release version tag.
+  source: original
+  category_hint: ''
+- id: wv-039
+  description: On GitHub, find the license of the facebook/react repository.
+  starting_url: https://github.com
+  success_criterion: Response states that facebook/react uses the MIT license.
+  source: original
+  category_hint: ''
+- id: wv-040
+  description: On GitHub, find one open issue in python/cpython labeled documentation
+    and report its title.
+  starting_url: https://github.com
+  success_criterion: Response includes an open issue title from python/cpython with
+    a documentation label.
+  source: original
+  category_hint: ''
+- id: wv-041
+  description: On Google Maps, find the walking time from the Eiffel Tower to the
+    Louvre Museum.
+  starting_url: https://www.google.com/maps
+  success_criterion: Response includes a walking duration between the Eiffel Tower
+    and the Louvre.
+  source: original
+  category_hint: ''
+- id: wv-042
+  description: On Google Maps, find a coffee shop near Union Square in San Francisco
+    with at least 4 stars.
+  starting_url: https://www.google.com/maps
+  success_criterion: Response includes a coffee shop name near Union Square and rating
+    of at least 4 stars.
+  source: original
+  category_hint: ''
+- id: wv-043
+  description: On Google Maps, find the current opening hours for the British Museum.
+  starting_url: https://www.google.com/maps
+  success_criterion: Response includes the British Museum and opening hours or indicates
+    if it is currently closed.
+  source: original
+  category_hint: ''
+- id: wv-044
+  description: On Google Flights, find the cheapest round-trip flight from SFO to
+    SEA for next month.
+  starting_url: https://www.google.com/flights
+  success_criterion: Response includes a round-trip price, airline, and SFO to SEA
+    route.
+  source: original
+  category_hint: ''
+- id: wv-045
+  description: On Google Flights, compare nonstop flight options from Chicago to Miami
+    for a weekend next month.
+  starting_url: https://www.google.com/flights
+  success_criterion: Response includes at least one nonstop airline option and a price
+    for Chicago to Miami.
+  source: original
+  category_hint: ''
+- id: wv-046
+  description: On Google Flights, find whether there are direct flights from Boston
+    to Reykjavik.
+  starting_url: https://www.google.com/flights
+  success_criterion: Response states whether direct Boston to Reykjavik flights are
+    available and names an airline if found.
+  source: original
+  category_hint: ''
+- id: wv-047
+  description: Using Google Search, find the official website for the National Park
+    Service page about Yosemite.
+  starting_url: https://www.google.com
+  success_criterion: Response includes the official nps.gov Yosemite URL or page title.
+  source: original
+  category_hint: ''
+- id: wv-048
+  description: Using Google Search, find the release date of the first iPhone.
+  starting_url: https://www.google.com
+  success_criterion: Response includes June 29, 2007 as the first iPhone release date.
+  source: original
+  category_hint: ''
+- id: wv-049
+  description: Using Google Search, find the exchange rate from 100 EUR to USD today.
+  starting_url: https://www.google.com
+  success_criterion: Response includes a USD amount for 100 EUR and indicates it is
+    an exchange rate.
+  source: original
+  category_hint: ''
+- id: wv-050
+  description: On Hacker News, find the newest story mentioning Rust and report its
+    title.
+  starting_url: https://news.ycombinator.com/newest
+  success_criterion: Response includes a Hacker News story title mentioning or related
+    to Rust.
+  source: original
+  category_hint: ''
+- id: wv-051
+  description: On Hacker News, find the current Ask HN thread with the most comments
+    on the front page.
+  starting_url: https://news.ycombinator.com
+  success_criterion: Response includes an Ask HN title and its comment count.
+  source: original
+  category_hint: ''
+- id: wv-052
+  description: On Hacker News, find a Show HN post from today and report its points.
+  starting_url: https://news.ycombinator.com/show
+  success_criterion: Response includes a Show HN title and points count.
+  source: original
+  category_hint: ''
+- id: wv-053
+  description: On Hugging Face, find the most downloaded text-generation model this
+    week and report its downloads.
+  starting_url: https://huggingface.co/models
+  success_criterion: Response includes a model name and download count.
+  source: original
+  category_hint: ''
+- id: wv-054
+  description: On Hugging Face, find the license for the bert-base-uncased model.
+  starting_url: https://huggingface.co
+  success_criterion: Response includes bert-base-uncased and its listed license.
+  source: original
+  category_hint: ''
+- id: wv-055
+  description: On Hugging Face Spaces, find a running image-to-text demo and report
+    its creator.
+  starting_url: https://huggingface.co/spaces
+  success_criterion: Response includes a Space name and creator or organization.
+  source: original
+  category_hint: ''
+- id: wv-056
+  description: On IMDb, find the user rating for the movie 'The Godfather'.
+  starting_url: https://www.imdb.com
+  success_criterion: Response includes The Godfather and an IMDb user rating.
+  source: original
+  category_hint: ''
+- id: wv-057
+  description: On IMDb, find the top-billed cast members for 'The Matrix' (1999).
+  starting_url: https://www.imdb.com
+  success_criterion: Response includes at least two principal cast members from The
+    Matrix.
+  source: original
+  category_hint: ''
+- id: wv-058
+  description: On IMDb, find the current number one title on the IMDb Top 250 Movies
+    chart.
+  starting_url: https://www.imdb.com/chart/top
+  success_criterion: Response includes the title ranked number one on IMDb Top 250.
+  source: original
+  category_hint: ''
+- id: wv-059
+  description: On Khan Academy, find the first unit in the Algebra 1 course.
+  starting_url: https://www.khanacademy.org
+  success_criterion: Response includes the Algebra 1 course and the first listed unit
+    name.
+  source: original
+  category_hint: ''
+- id: wv-060
+  description: On Khan Academy, find a lesson about photosynthesis and report its
+    course category.
+  starting_url: https://www.khanacademy.org
+  success_criterion: Response includes a photosynthesis lesson title and course or
+    subject category.
+  source: original
+  category_hint: ''
+- id: wv-061
+  description: On Khan Academy, find the SAT math practice section and report one
+    listed topic.
+  starting_url: https://www.khanacademy.org/test-prep/sat
+  success_criterion: Response includes SAT math practice and one topic name.
+  source: original
+  category_hint: ''
+- id: wv-062
+  description: On LinkedIn, find OpenAI's company page and report its listed industry.
+  starting_url: https://www.linkedin.com
+  success_criterion: Response includes OpenAI and a listed industry from LinkedIn.
+  source: original
+  category_hint: ''
+- id: wv-063
+  description: On LinkedIn, find Microsoft's company page and report its listed headquarters
+    location.
+  starting_url: https://www.linkedin.com
+  success_criterion: Response includes Microsoft and a headquarters location.
+  source: original
+  category_hint: ''
+- id: wv-064
+  description: On LinkedIn, search for Coursera's company page and report the employee
+    count range shown.
+  starting_url: https://www.linkedin.com
+  success_criterion: Response includes Coursera and an employee count or employee
+    range.
+  source: original
+  category_hint: ''
+- id: wv-065
+  description: On Medium, find a recent article about remote work and report its title
+    and author.
+  starting_url: https://medium.com
+  success_criterion: Response includes a Medium article title about remote work and
+    the author name.
+  source: original
+  category_hint: ''
+- id: wv-066
+  description: On Medium, find an article tagged machine-learning with at least a
+    visible reading time.
+  starting_url: https://medium.com/tag/machine-learning
+  success_criterion: Response includes an article title and reading time.
+  source: original
+  category_hint: ''
+- id: wv-067
+  description: On Medium, find a publication article from Towards Data Science and
+    report its title.
+  starting_url: https://medium.com/towards-data-science
+  success_criterion: Response includes a Towards Data Science article title.
+  source: original
+  category_hint: ''
+- id: wv-068
+  description: On Microsoft Learn, find the Python quickstart for Azure Functions
+    and report the supported Python versions.
+  starting_url: https://learn.microsoft.com
+  success_criterion: Response includes Azure Functions Python quickstart and supported
+    Python version information.
+  source: original
+  category_hint: ''
+- id: wv-069
+  description: On Microsoft Learn, find documentation for the Azure CLI login command
+    and report the command syntax.
+  starting_url: https://learn.microsoft.com
+  success_criterion: Response includes the command az login and describes its purpose
+    or syntax.
+  source: original
+  category_hint: ''
+- id: wv-070
+  description: On Microsoft Learn, find the C# documentation page for async and await
+    and report one key guideline.
+  starting_url: https://learn.microsoft.com/dotnet/csharp
+  success_criterion: Response includes async/await and one guideline from the Microsoft
+    documentation.
+  source: original
+  category_hint: ''
+- id: wv-071
+  description: On MDN Web Docs, find the syntax for Array.prototype.map in JavaScript.
+  starting_url: https://developer.mozilla.org
+  success_criterion: Response includes Array.prototype.map syntax or callback parameters.
+  source: original
+  category_hint: ''
+- id: wv-072
+  description: On MDN Web Docs, find browser compatibility information for CSS grid-template-columns.
+  starting_url: https://developer.mozilla.org
+  success_criterion: Response includes grid-template-columns and mentions browser
+    compatibility or baseline support.
+  source: original
+  category_hint: ''
+- id: wv-073
+  description: On Mozilla's website, find the latest stable Firefox release version.
+  starting_url: https://www.mozilla.org/firefox
+  success_criterion: Response includes a Firefox release version number.
+  source: original
+  category_hint: ''
+- id: wv-074
+  description: On Netflix, find the description for the show 'Stranger Things'.
+  starting_url: https://www.netflix.com
+  success_criterion: Response includes Stranger Things and a plot or show description.
+  source: original
+  category_hint: ''
+- id: wv-075
+  description: On Netflix, find whether 'The Crown' is listed as a Netflix series
+    and report its maturity rating if visible.
+  starting_url: https://www.netflix.com
+  success_criterion: Response includes The Crown and either its Netflix listing status
+    or maturity rating.
+  source: original
+  category_hint: ''
+- id: wv-076
+  description: On Netflix Tudum, find a recent article about an upcoming Netflix movie
+    and report its release date.
+  starting_url: https://www.netflix.com/tudum
+  success_criterion: Response includes a Netflix movie title and release date from
+    Tudum.
+  source: original
+  category_hint: ''
+- id: wv-077
+  description: On NVIDIA's website, find the starting price of the GeForce RTX 5090
+    or newest listed RTX 50-series GPU.
+  starting_url: https://www.nvidia.com
+  success_criterion: Response includes an RTX 50-series GPU name and listed starting
+    price.
+  source: original
+  category_hint: ''
+- id: wv-078
+  description: On NVIDIA Developer, find the latest CUDA Toolkit version.
+  starting_url: https://developer.nvidia.com/cuda-toolkit
+  success_criterion: Response includes a CUDA Toolkit version number.
+  source: original
+  category_hint: ''
+- id: wv-079
+  description: On NVIDIA's website, find one key feature of DLSS 4 and report it.
+  starting_url: https://www.nvidia.com
+  success_criterion: Response includes DLSS 4 and one named feature or capability.
+  source: original
+  category_hint: ''
+- id: wv-080
+  description: On OpenAI Docs, find the endpoint used for chat completions or responses
+    and report the path.
+  starting_url: https://platform.openai.com/docs
+  success_criterion: Response includes an OpenAI API endpoint path such as /v1/responses
+    or /v1/chat/completions.
+  source: original
+  category_hint: ''
+- id: wv-081
+  description: On OpenAI Docs, find the current guide for function calling and report
+    one required field in a tool definition.
+  starting_url: https://platform.openai.com/docs
+  success_criterion: Response includes function calling and one field such as name,
+    description, or parameters.
+  source: original
+  category_hint: ''
+- id: wv-082
+  description: On OpenAI Docs, find documentation for text embeddings and report one
+    embedding model name.
+  starting_url: https://platform.openai.com/docs
+  success_criterion: Response includes an embedding model name from OpenAI documentation.
+  source: original
+  category_hint: ''
+- id: wv-083
+  description: On Pinterest, search for small kitchen organization ideas and report
+    one board or pin title.
+  starting_url: https://www.pinterest.com
+  success_criterion: Response includes a small kitchen organization pin or board title.
+  source: original
+  category_hint: ''
+- id: wv-084
+  description: On Pinterest, find a board about minimalist home office design and
+    report its title.
+  starting_url: https://www.pinterest.com
+  success_criterion: Response includes a board or pin title about minimalist home
+    office design.
+  source: original
+  category_hint: ''
+- id: wv-085
+  description: On Pinterest, find a dinner recipe pin for salmon and report the recipe
+    title.
+  starting_url: https://www.pinterest.com
+  success_criterion: Response includes a salmon dinner recipe pin title.
+  source: original
+  category_hint: ''
+- id: wv-086
+  description: On Reddit, find the current top post of the week in r/MachineLearning.
+  starting_url: https://www.reddit.com/r/MachineLearning/top/?t=week
+  success_criterion: Response includes the post title and score or upvote count.
+  source: original
+  category_hint: ''
+- id: wv-087
+  description: On Reddit, find a recent discussion in r/travel about Japan itineraries
+    and report the title.
+  starting_url: https://www.reddit.com/r/travel
+  success_criterion: Response includes a Reddit post title related to a Japan itinerary.
+  source: original
+  category_hint: ''
+- id: wv-088
+  description: On Reddit, find the rules for r/AskHistorians and report one rule.
+  starting_url: https://www.reddit.com/r/AskHistorians
+  success_criterion: Response includes one subreddit rule from r/AskHistorians.
+  source: original
+  category_hint: ''
+- id: wv-089
+  description: On Stack Overflow, find a highly voted question about Python list comprehensions
+    and report its accepted answer status.
+  starting_url: https://stackoverflow.com
+  success_criterion: Response includes a question title and whether it has an accepted
+    answer.
+  source: original
+  category_hint: ''
+- id: wv-090
+  description: On Stack Overflow, find the tag wiki excerpt for the javascript tag.
+  starting_url: https://stackoverflow.com/tags/javascript/info
+  success_criterion: Response includes a summary of the javascript tag wiki excerpt.
+  source: original
+  category_hint: ''
+- id: wv-091
+  description: On Stack Overflow, find a recent unanswered question tagged rust and
+    report its title.
+  starting_url: https://stackoverflow.com/questions/tagged/rust?tab=Unanswered
+  success_criterion: Response includes a Rust-tagged unanswered question title.
+  source: original
+  category_hint: ''
+- id: wv-092
+  description: On X, find OpenAI's latest public post and report its text summary
+    and date.
+  starting_url: https://x.com/OpenAI
+  success_criterion: Response includes a summary of a recent OpenAI post and a date
+    or timestamp.
+  source: original
+  category_hint: ''
+- id: wv-093
+  description: On X, find the current profile bio for NASA and report it.
+  starting_url: https://x.com/NASA
+  success_criterion: Response includes NASA's X profile bio or a close summary.
+  source: original
+  category_hint: ''
+- id: wv-094
+  description: On X, search for posts about WebAssembly from the last week and report
+    one post author.
+  starting_url: https://x.com/search
+  success_criterion: Response includes a WebAssembly-related post and its author handle.
+  source: original
+  category_hint: ''
+- id: wv-095
+  description: On Wikipedia, find the capital city of Kazakhstan and report the source
+    page title.
+  starting_url: https://en.wikipedia.org
+  success_criterion: Response includes Astana and the relevant Wikipedia page title.
+  source: original
+  category_hint: ''
+- id: wv-096
+  description: On Wikipedia, find the winner of the 2022 FIFA World Cup and the final
+    score.
+  starting_url: https://en.wikipedia.org
+  success_criterion: Response includes Argentina and the final score or penalty result.
+  source: original
+  category_hint: ''
+- id: wv-097
+  description: On Wikipedia, find the chemical symbol and atomic number for tungsten.
+  starting_url: https://en.wikipedia.org
+  success_criterion: Response includes W and atomic number 74.
+  source: original
+  category_hint: ''
+- id: wv-098
+  description: On Wolfram Alpha, compute the derivative of sin(x) squared and report
+    the simplified result.
+  starting_url: https://www.wolframalpha.com
+  success_criterion: Response includes the derivative 2 sin(x) cos(x) or equivalent
+    sin(2x).
+  source: original
+  category_hint: ''
+- id: wv-099
+  description: 'On YouTube, find the official trailer for ''Dune: Part Two'' and report
+    the channel name and view count.'
+  starting_url: https://www.youtube.com
+  success_criterion: Response includes an official trailer title, channel name, and
+    view count.
+  source: original
+  category_hint: ''
+- id: wv-100
+  description: On Zapier, find an automation template connecting Gmail to Slack and
+    report what the Zap does.
+  starting_url: https://zapier.com/apps
+  success_criterion: Response includes Gmail, Slack, and a concrete description of
+    the automation template.
+  source: original
+  category_hint: ''
+- id: wv-101
+  description: On Wikipedia, find the year the Eiffel Tower was completed.
+  starting_url: https://en.wikipedia.org/wiki/Eiffel_Tower
+  success_criterion: Answer is 1889.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-102
+  description: On Wikipedia, find the birth year of Marie Curie.
+  starting_url: https://en.wikipedia.org/wiki/Marie_Curie
+  success_criterion: Answer is 1867.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-103
+  description: Search Wikipedia for 'Mariana Trench' and report its maximum known
+    depth in meters.
+  starting_url: https://en.wikipedia.org/wiki/Main_Page
+  success_criterion: Answer mentions approximately 10,984 to 11,034 meters.
+  source: official
+  category_hint: MULTI_HOP
+- id: wv-104
+  description: On Wikipedia, find who composed the opera 'The Magic Flute'.
+  starting_url: https://en.wikipedia.org/wiki/The_Magic_Flute
+  success_criterion: Answer is Wolfgang Amadeus Mozart.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-105
+  description: Use Google to find the speed of light in vacuum and report the value.
+  starting_url: https://www.google.com
+  success_criterion: Answer is 299,792,458 m/s or equivalent.
+  source: official
+  category_hint: ANSWER_MALFORMED
+- id: wv-106
+  description: Search Google for 'tallest mountain in Africa' and report its name
+    and elevation.
+  starting_url: https://www.google.com
+  success_criterion: Answer is Mount Kilimanjaro at approximately 5,895 meters.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-107
+  description: On Google, find the date of the next solar eclipse visible from North
+    America.
+  starting_url: https://www.google.com
+  success_criterion: Answer provides a verifiable upcoming solar eclipse date.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-108
+  description: On GitHub, find the primary programming language of 'microsoft/vscode'.
+  starting_url: https://github.com/microsoft/vscode
+  success_criterion: Answer is TypeScript.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-109
+  description: On GitHub, find the license type of the 'nodejs/node' repository.
+  starting_url: https://github.com/nodejs/node
+  success_criterion: Answer mentions MIT license.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-110
+  description: On GitHub, locate the README of 'huggingface/transformers' and report
+    the latest stable version mentioned.
+  starting_url: https://github.com/huggingface/transformers
+  success_criterion: Answer cites a version number from the README or releases.
+  source: official
+  category_hint: MULTI_HOP
+- id: wv-111
+  description: On Reddit, navigate to r/programming and report the title of the top
+    post of the week.
+  starting_url: https://www.reddit.com/r/programming/top/?t=week
+  success_criterion: Answer provides the title of a current top weekly post.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-112
+  description: On Reddit, find the number of subscribers to r/MachineLearning.
+  starting_url: https://www.reddit.com/r/MachineLearning
+  success_criterion: Answer reports the subscriber count.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-113
+  description: On Stack Overflow, find a highly voted question tagged 'python' on
+    the front page and report its title.
+  starting_url: https://stackoverflow.com/questions?tab=Votes
+  success_criterion: Answer references a high-vote python question with its title.
+  source: official
+  category_hint: MULTI_HOP
+- id: wv-114
+  description: On Stack Overflow, find the user with the highest reputation on the
+    users page.
+  starting_url: https://stackoverflow.com/users
+  success_criterion: Answer identifies the top-ranked user by reputation.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-115
+  description: On Amazon, find the average customer rating for 'Echo Dot (5th Gen)'.
+  starting_url: https://www.amazon.com/s?k=echo+dot+5th+gen
+  success_criterion: Answer reports an average star rating.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-116
+  description: On Amazon, locate a best-selling book in 'Science Fiction' and report
+    its title.
+  starting_url: https://www.amazon.com/Best-Sellers-Books-Science-Fiction/zgbs/books/16272
+  success_criterion: Answer reports a current best-selling science fiction book title.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-117
+  description: On IMDb, find the director of the film 'Inception'.
+  starting_url: https://www.imdb.com/title/tt1375666/
+  success_criterion: Answer is Christopher Nolan.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-118
+  description: On IMDb, find the release year of the original 'Blade Runner' film.
+  starting_url: https://www.imdb.com/title/tt0083658/
+  success_criterion: Answer is 1982.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-119
+  description: On YouTube, search for 'lofi hip hop' and report the channel name of
+    the top result.
+  starting_url: https://www.youtube.com
+  success_criterion: Answer identifies a real channel from results.
+  source: official
+  category_hint: VLM_NEEDED
+- id: wv-120
+  description: On YouTube, find the view count of the 'Gangnam Style' official music
+    video.
+  starting_url: https://www.youtube.com/watch?v=9bZkp7q19f0
+  success_criterion: Answer reports a billion-plus view count.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-121
+  description: On arXiv, find the title of the most recent paper in cs.CL.
+  starting_url: https://arxiv.org/list/cs.CL/recent
+  success_criterion: Answer provides the title of a recently listed cs.CL paper.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-122
+  description: On arXiv, find the abstract of paper '1706.03762' (Attention Is All
+    You Need).
+  starting_url: https://arxiv.org/abs/1706.03762
+  success_criterion: Answer summarizes the Transformer paper's contributions.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-123
+  description: On Hacker News, find the number of points on the top story.
+  starting_url: https://news.ycombinator.com
+  success_criterion: Answer reports a numeric point count.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-124
+  description: On Hacker News, navigate to 'Ask HN' and report a current top Ask HN
+    question.
+  starting_url: https://news.ycombinator.com/ask
+  success_criterion: Answer provides a current Ask HN post title.
+  source: official
+  category_hint: MULTI_HOP
+- id: wv-125
+  description: On MDN, find the default value of the CSS 'display' property.
+  starting_url: https://developer.mozilla.org/en-US/docs/Web/CSS/display
+  success_criterion: Answer is inline.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-126
+  description: On MDN, find the HTTP status code for 'Not Found'.
+  starting_url: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+  success_criterion: Answer is 404.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-127
+  description: On BBC News, find the headline of the top World News story.
+  starting_url: https://www.bbc.com/news/world
+  success_criterion: Answer provides a current top World News headline.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-128
+  description: On BBC Weather, find the current temperature for London.
+  starting_url: https://www.bbc.com/weather/2643743
+  success_criterion: Answer reports current temperature for London.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-129
+  description: On ESPN, find the current NBA standings leader in the Eastern Conference.
+  starting_url: https://www.espn.com/nba/standings
+  success_criterion: Answer identifies the current top Eastern Conference team.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-130
+  description: On ESPN, find a current top NBA scorer (PPG leader) this season.
+  starting_url: https://www.espn.com/nba/stats
+  success_criterion: Answer names the current PPG leader.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-131
+  description: On CNN, find a current top story headline on the homepage.
+  starting_url: https://www.cnn.com
+  success_criterion: Answer provides a current top CNN headline.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-132
+  description: On Reuters, find the headline of a current top business story.
+  starting_url: https://www.reuters.com/business/
+  success_criterion: Answer provides a current Reuters business headline.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-133
+  description: On The Guardian, find a current top Technology section headline.
+  starting_url: https://www.theguardian.com/technology
+  success_criterion: Answer provides a current Guardian technology headline.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-134
+  description: On Bloomberg, find the current value of the S&P 500 index.
+  starting_url: https://www.bloomberg.com/markets
+  success_criterion: Answer reports a current numeric S&P 500 value.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-135
+  description: On Yahoo Finance, find the current price of Apple (AAPL) stock.
+  starting_url: https://finance.yahoo.com/quote/AAPL
+  success_criterion: Answer reports a current AAPL price in USD.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-136
+  description: On Yahoo Finance, find the market cap of Microsoft (MSFT).
+  starting_url: https://finance.yahoo.com/quote/MSFT
+  success_criterion: Answer reports a trillion-dollar market cap value.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-137
+  description: On CoinMarketCap, find the current price of Bitcoin (BTC) in USD.
+  starting_url: https://coinmarketcap.com/currencies/bitcoin/
+  success_criterion: Answer reports a current USD price for BTC.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-138
+  description: On CoinMarketCap, find the current market cap rank of Ethereum (ETH).
+  starting_url: https://coinmarketcap.com/currencies/ethereum/
+  success_criterion: Answer reports a current rank.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-139
+  description: On Weather.com, find the current temperature in New York City.
+  starting_url: https://weather.com/weather/today/l/USNY0996:1:US
+  success_criterion: Answer reports a current NYC temperature.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-140
+  description: On AccuWeather, find tomorrow's forecast high for Los Angeles.
+  starting_url: https://www.accuweather.com/en/us/los-angeles/90012/weather-forecast/347625
+  success_criterion: Answer reports tomorrow's high temperature for LA.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-141
+  description: On Airbnb, find a stay in Tokyo for two guests and report its nightly
+    price.
+  starting_url: https://www.airbnb.com/s/Tokyo/homes
+  success_criterion: Answer names a listing with a nightly price.
+  source: official
+  category_hint: MULTI_HOP
+- id: wv-142
+  description: On Expedia, search for a flight from Chicago (ORD) to Miami (MIA) and
+    report a price.
+  starting_url: https://www.expedia.com/Flights
+  success_criterion: Answer reports a price for ORD to MIA.
+  source: official
+  category_hint: MULTI_HOP
+- id: wv-143
+  description: On Wikipedia, find the chemical symbol for tungsten.
+  starting_url: https://en.wikipedia.org/wiki/Tungsten
+  success_criterion: Answer is W.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-144
+  description: On Wikipedia, find the year the Berlin Wall fell.
+  starting_url: https://en.wikipedia.org/wiki/Berlin_Wall
+  success_criterion: Answer is 1989.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-145
+  description: On Wikipedia, find the author of 'One Hundred Years of Solitude'.
+  starting_url: https://en.wikipedia.org/wiki/One_Hundred_Years_of_Solitude
+  success_criterion: Answer is Gabriel García Márquez.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-146
+  description: On Britannica, find the founding year of Harvard University.
+  starting_url: https://www.britannica.com/topic/Harvard-University
+  success_criterion: Answer is 1636.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-147
+  description: On Tesla's website, find the starting price of the Model 3.
+  starting_url: https://www.tesla.com/model3
+  success_criterion: Answer reports a current Model 3 starting price.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-148
+  description: On Best Buy, find the price of Sony WH-1000XM5 headphones.
+  starting_url: https://www.bestbuy.com/site/searchpage.jsp?st=sony+wh-1000xm5
+  success_criterion: Answer reports a current Best Buy price.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-149
+  description: On Walmart, find the price of a gallon of whole milk.
+  starting_url: https://www.walmart.com/search?q=whole+milk+gallon
+  success_criterion: Answer reports a price for a gallon of whole milk.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-150
+  description: On Target, find the price of a LEGO Star Wars Millennium Falcon set.
+  starting_url: https://www.target.com/s?searchTerm=lego+star+wars+millennium+falcon
+  success_criterion: Answer reports a price for a Millennium Falcon LEGO set.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-151
+  description: On Etsy, find the price of a handmade leather wallet by a top-rated
+    seller.
+  starting_url: https://www.etsy.com/search?q=handmade+leather+wallet
+  success_criterion: Answer reports a specific listing price and shop name.
+  source: official
+  category_hint: MULTI_HOP
+- id: wv-152
+  description: On eBay, find a listing for 'vintage Rolex watch' and report its current
+    price.
+  starting_url: https://www.ebay.com/sch/i.html?_nkw=vintage+rolex+watch
+  success_criterion: Answer reports a price and listing title.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-153
+  description: On Goodreads, find the average rating of 'Project Hail Mary' by Andy
+    Weir.
+  starting_url: https://www.goodreads.com/book/show/54493401-project-hail-mary
+  success_criterion: Answer reports a star rating around 4.5.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-154
+  description: On Goodreads, find the most popular quote from 'The Great Gatsby'.
+  starting_url: https://www.goodreads.com/work/quotes/245494-the-great-gatsby
+  success_criterion: Answer provides a verifiable Gatsby quote.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-155
+  description: On Rotten Tomatoes, find the Tomatometer score for 'Oppenheimer' (2023).
+  starting_url: https://www.rottentomatoes.com/m/oppenheimer_2023
+  success_criterion: Answer reports a Tomatometer percentage.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-156
+  description: On Metacritic, find the Metascore for 'Elden Ring' (PC).
+  starting_url: https://www.metacritic.com/game/elden-ring/
+  success_criterion: Answer reports a Metascore value.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-157
+  description: On Steam, find the user review rating for 'Hades'.
+  starting_url: https://store.steampowered.com/app/1145360/Hades/
+  success_criterion: Answer reports the review summary text.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-158
+  description: On Twitch, find the most-watched current live stream on the directory
+    page.
+  starting_url: https://www.twitch.tv/directory
+  success_criterion: Answer names a current top live channel and viewer count.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-159
+  description: On SoundCloud, find a trending track in the Hip-hop genre.
+  starting_url: https://soundcloud.com/discover
+  success_criterion: Answer names a current trending hip-hop track and artist.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-160
+  description: On Bandcamp, find the price of a featured album on the homepage.
+  starting_url: https://bandcamp.com
+  success_criterion: Answer reports a current featured album name and price.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-161
+  description: On WolframAlpha, compute the integral of sin(x) from 0 to pi.
+  starting_url: https://www.wolframalpha.com/input?i=integrate+sin%28x%29+from+0+to+pi
+  success_criterion: Answer is 2.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-162
+  description: On Khan Academy, find the title of an Algebra 1 unit on linear equations.
+  starting_url: https://www.khanacademy.org/math/algebra
+  success_criterion: Answer cites a linear equations unit title.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-163
+  description: On Coursera, find a free course on machine learning offered by Stanford.
+  starting_url: https://www.coursera.org/search?query=machine+learning+stanford
+  success_criterion: Answer names a Stanford ML course.
+  source: official
+  category_hint: MULTI_HOP
+- id: wv-164
+  description: On edX, find a current course offered by MIT in computer science.
+  starting_url: https://www.edx.org/school/mitx
+  success_criterion: Answer names a current MIT CS course on edX.
+  source: official
+  category_hint: MULTI_HOP
+- id: wv-165
+  description: On Medium, find a popular article tagged 'Artificial Intelligence'
+    from this week.
+  starting_url: https://medium.com/tag/artificial-intelligence
+  success_criterion: Answer names a current AI-tagged Medium article and author.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-166
+  description: On Substack, find a popular newsletter in the Technology category.
+  starting_url: https://substack.com/browse/technology
+  success_criterion: Answer names a current top tech Substack newsletter.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-167
+  description: 'On Product Hunt, find today''s #1 product.'
+  starting_url: https://www.producthunt.com
+  success_criterion: Answer names today's top Product Hunt launch.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-168
+  description: On Indeed, find a current 'Software Engineer' job listing in San Francisco.
+  starting_url: https://www.indeed.com/jobs?q=software+engineer&l=San+Francisco%2C+CA
+  success_criterion: Answer reports a job title, company, and salary if shown.
+  source: official
+  category_hint: MULTI_HOP
+- id: wv-169
+  description: On NIH PubMed, find the most recent paper about CRISPR gene editing.
+  starting_url: https://pubmed.ncbi.nlm.nih.gov/?term=CRISPR+gene+editing
+  success_criterion: Answer reports a recent CRISPR paper title and year.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-170
+  description: On NASA's website, find the date of the next scheduled Artemis mission.
+  starting_url: https://www.nasa.gov/humans-in-space/artemis/
+  success_criterion: Answer reports the next Artemis mission and target date.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-171
+  description: On the WHO website, find the latest global measles vaccination coverage
+    rate.
+  starting_url: https://www.who.int/news-room/fact-sheets/detail/measles
+  success_criterion: Answer reports a global measles vaccination coverage percentage.
+  source: official
+  category_hint: MULTI_HOP
+- id: wv-172
+  description: On the World Bank data portal, find the GDP of India for the most recent
+    year.
+  starting_url: https://data.worldbank.org/country/india
+  success_criterion: Answer reports a USD GDP figure and year.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-173
+  description: On DuckDuckGo, search for 'capital of Australia' and report the answer.
+  starting_url: https://duckduckgo.com
+  success_criterion: Answer is Canberra.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-174
+  description: On DuckDuckGo, find the current population of Germany.
+  starting_url: https://duckduckgo.com
+  success_criterion: Answer reports a population figure for Germany.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-175
+  description: On Brave Search, find the latest news about SpaceX Starship.
+  starting_url: https://search.brave.com
+  success_criterion: Answer provides a recent SpaceX Starship news headline.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-176
+  description: On the Wayback Machine, find how many snapshots exist for google.com.
+  starting_url: https://web.archive.org/web/*/google.com
+  success_criterion: Answer reports the number of snapshots or a calendar view.
+  source: official
+  category_hint: MULTI_HOP
+- id: wv-177
+  description: On Wikipedia, find the capital city of Mongolia.
+  starting_url: https://en.wikipedia.org/wiki/Mongolia
+  success_criterion: Answer is Ulaanbaatar.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-178
+  description: On Wikipedia, find the number of planets in the Solar System.
+  starting_url: https://en.wikipedia.org/wiki/Solar_System
+  success_criterion: Answer is 8.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-179
+  description: On Wikipedia, find the language family that Japanese belongs to.
+  starting_url: https://en.wikipedia.org/wiki/Japanese_language
+  success_criterion: Answer mentions Japonic language family.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-180
+  description: On Wikipedia, find the highest mountain in the Solar System.
+  starting_url: https://en.wikipedia.org/wiki/Olympus_Mons
+  success_criterion: Answer is Olympus Mons on Mars.
+  source: official
+  category_hint: MULTI_HOP
+- id: wv-181
+  description: On GitHub, find the number of contributors to the 'torvalds/linux'
+    repository.
+  starting_url: https://github.com/torvalds/linux
+  success_criterion: Answer reports a contributor count.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-182
+  description: On GitHub, find the latest release version of 'golang/go'.
+  starting_url: https://github.com/golang/go/releases
+  success_criterion: Answer reports a Go release version.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-183
+  description: On GitHub, find the most starred Rust repository on the trending page.
+  starting_url: https://github.com/trending/?since=weekly
+  success_criterion: Answer names a trending Rust repository.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-184
+  description: On Hugging Face, find the most downloaded text-generation model and
+    report its downloads.
+  starting_url: https://huggingface.co/models
+  success_criterion: Answer includes a model name and download count.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-185
+  description: On Hugging Face, find a running image-to-text demo Space and report
+    its creator.
+  starting_url: https://huggingface.co/spaces
+  success_criterion: Answer includes a Space name and creator.
+  source: official
+  category_hint: MULTI_HOP
+- id: wv-186
+  description: On npm, find the weekly download count for the 'express' package.
+  starting_url: https://www.npmjs.com/package/express
+  success_criterion: Answer reports weekly download count for express.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-187
+  description: On PyPI, find the latest version of the 'requests' package.
+  starting_url: https://pypi.org/project/requests/
+  success_criterion: Answer reports the latest version number.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-188
+  description: On crates.io, find the most downloaded Rust crate this week.
+  starting_url: https://crates.io
+  success_criterion: Answer names a popular Rust crate.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-189
+  description: On Docker Hub, find the number of pulls for the 'nginx' official image.
+  starting_url: https://hub.docker.com/_/nginx
+  success_criterion: Answer reports pull count for nginx.
+  source: official
+  category_hint: TIME_SENSITIVE
+- id: wv-190
+  description: On the Internet Archive Books, find the number of digitized copies
+    of '1984' by George Orwell.
+  starting_url: https://archive.org/details/?and%5B%5D=creator_sort%3A%22Orwell%2C+George%22
+  success_criterion: Answer reports the number of available copies.
+  source: official
+  category_hint: MULTI_HOP
+- id: wv-191
+  description: On OpenStreetMap, find the coordinates of the Eiffel Tower.
+  starting_url: https://www.openstreetmap.org/search?query=Eiffel+Tower
+  success_criterion: Answer reports approximate coordinates of the Eiffel Tower.
+  source: official
+  category_hint: VLM_NEEDED
+- id: wv-192
+  description: On Wikipedia, find the longest river in the world and its length.
+  starting_url: https://en.wikipedia.org/wiki/List_of_rivers_by_length
+  success_criterion: Answer names the longest river and its approximate length.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-193
+  description: On Wikipedia, find the largest country by land area.
+  starting_url: https://en.wikipedia.org/wiki/List_of_countries_by_area
+  success_criterion: Answer is Russia.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-194
+  description: On Wikipedia, find the most spoken language in the world by total speakers.
+  starting_url: https://en.wikipedia.org/wiki/List_of_languages_by_total_number_of_speakers
+  success_criterion: Answer is English or Mandarin with speaker count.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-195
+  description: On Wikipedia, find the year the first Moon landing occurred.
+  starting_url: https://en.wikipedia.org/wiki/Apollo_11
+  success_criterion: Answer is 1969.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-196
+  description: On Wikipedia, find the director of the 2020 film 'Tenet'.
+  starting_url: https://en.wikipedia.org/wiki/Tenet_(film)
+  success_criterion: Answer is Christopher Nolan.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-197
+  description: On Wikipedia, find the atomic number of gold.
+  starting_url: https://en.wikipedia.org/wiki/Gold
+  success_criterion: Answer is 79.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-198
+  description: On Wikipedia, find the name of the largest ocean on Earth.
+  starting_url: https://en.wikipedia.org/wiki/Pacific_Ocean
+  success_criterion: Answer is Pacific Ocean.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-199
+  description: On Wikipedia, find the year the Treaty of Versailles was signed.
+  starting_url: https://en.wikipedia.org/wiki/Treaty_of_Versailles
+  success_criterion: Answer is 1919.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-200
+  description: On Wikipedia, find the chemical formula for water.
+  starting_url: https://en.wikipedia.org/wiki/Water
+  success_criterion: Answer is H2O.
+  source: official
+  category_hint: DOM_FLAKY
+- id: wv-201
+  description: On Notion's public template gallery, find a project tracker template
+    and report its title.
+  starting_url: https://www.notion.so/templates/category/project-management
+  success_criterion: Answer names a project tracker template.
+  source: in-house
+  category_hint: DOM_FLAKY
+- id: wv-202
+  description: On Figma Community, find the top-rated free UI kit and report its title.
+  starting_url: https://www.figma.com/community/free/ui-kits
+  success_criterion: Answer names a current top-rated free UI kit.
+  source: in-house
+  category_hint: DOM_FLAKY
+- id: wv-203
+  description: On Vercel's template page, find the title of a Next.js starter template.
+  starting_url: https://vercel.com/templates/next.js
+  success_criterion: Answer names a Next.js template.
+  source: in-house
+  category_hint: DOM_FLAKY
+- id: wv-204
+  description: On the Linear changelog, find the most recent release entry's title.
+  starting_url: https://linear.app/changelog
+  success_criterion: Answer reports the latest Linear changelog title.
+  source: in-house
+  category_hint: DOM_FLAKY
+- id: wv-205
+  description: On the Stripe documentation site, find the title of the 'Accept a payment'
+    guide.
+  starting_url: https://docs.stripe.com
+  success_criterion: Answer mentions 'Accept a payment'.
+  source: in-house
+  category_hint: DOM_FLAKY
+- id: wv-206
+  description: On the Tailwind CSS docs, find the default value of the 'gap' utility
+    class.
+  starting_url: https://tailwindcss.com/docs/gap
+  success_criterion: Answer cites the default behavior or values shown.
+  source: in-house
+  category_hint: DOM_FLAKY
+- id: wv-207
+  description: On the React docs (react.dev), find the page title of the 'useEffect'
+    hook reference.
+  starting_url: https://react.dev/reference/react/useEffect
+  success_criterion: Answer reports the useEffect page title.
+  source: in-house
+  category_hint: DOM_FLAKY
+- id: wv-208
+  description: On Discord's homepage, find the call-to-action button text in the hero
+    section.
+  starting_url: https://discord.com
+  success_criterion: Answer cites the primary CTA button text.
+  source: in-house
+  category_hint: DOM_FLAKY
+- id: wv-209
+  description: On Slack's pricing page, find the price per user per month for the
+    Pro tier.
+  starting_url: https://slack.com/pricing
+  success_criterion: Answer reports the Pro plan per-user monthly price.
+  source: in-house
+  category_hint: DOM_FLAKY
+- id: wv-210
+  description: On Trello's public templates, find a Kanban template title.
+  starting_url: https://trello.com/templates
+  success_criterion: Answer names a Kanban template.
+  source: in-house
+  category_hint: DOM_FLAKY
+- id: wv-211
+  description: On Pinterest, search 'minimalist living room' and report the title
+    of one pin.
+  starting_url: https://www.pinterest.com/search/pins/?q=minimalist%20living%20room
+  success_criterion: Answer cites a specific pin title or description.
+  source: in-house
+  category_hint: DOM_FLAKY
+- id: wv-212
+  description: On Twitter/X's explore page, find a current trending topic.
+  starting_url: https://twitter.com/explore
+  success_criterion: Answer names a current trend on Twitter/X.
+  source: in-house
+  category_hint: DOM_FLAKY
+- id: wv-213
+  description: On Webflow's showcase page, find a featured website title.
+  starting_url: https://webflow.com/discover/popular
+  success_criterion: Answer names a featured Webflow site.
+  source: in-house
+  category_hint: DOM_FLAKY
+- id: wv-214
+  description: On Framer's templates page, find a portfolio template title.
+  starting_url: https://www.framer.com/templates/category/portfolio
+  success_criterion: Answer names a portfolio template.
+  source: in-house
+  category_hint: DOM_FLAKY
+- id: wv-215
+  description: On Replit's homepage, find a featured 'Trending' template name.
+  starting_url: https://replit.com
+  success_criterion: Answer names a trending Replit template.
+  source: in-house
+  category_hint: DOM_FLAKY
+- id: wv-216
+  description: On CodeSandbox's templates page, find a Vite + React template.
+  starting_url: https://codesandbox.io/templates
+  success_criterion: Answer names a Vite+React template card title.
+  source: in-house
+  category_hint: DOM_FLAKY
+- id: wv-217
+  description: On the Apollo GraphQL docs, find the heading of the 'Get started' page.
+  starting_url: https://www.apollographql.com/docs/
+  success_criterion: Answer reports the page heading text.
+  source: in-house
+  category_hint: DOM_FLAKY
+- id: wv-218
+  description: On Postman's API Network, find a public collection in the 'Featured'
+    section.
+  starting_url: https://www.postman.com/explore
+  success_criterion: Answer names a featured public collection.
+  source: in-house
+  category_hint: DOM_FLAKY
+- id: wv-219
+  description: On Sentry's homepage, find a customer logo or quote in the social proof
+    section.
+  starting_url: https://sentry.io
+  success_criterion: Answer cites a specific customer name or testimonial.
+  source: in-house
+  category_hint: DOM_FLAKY
+- id: wv-220
+  description: On the Next.js docs, find the title of the 'App Router' documentation
+    page.
+  starting_url: https://nextjs.org/docs/app
+  success_criterion: Answer reports the App Router page title.
+  source: in-house
+  category_hint: DOM_FLAKY
+- id: wv-221
+  description: On Google Maps, find the address of the Empire State Building.
+  starting_url: https://www.google.com/maps/place/Empire+State+Building
+  success_criterion: Answer reports '350 5th Ave, New York, NY' or similar.
+  source: in-house
+  category_hint: VLM_NEEDED
+- id: wv-222
+  description: On Google Maps, find the driving time from Times Square to Central
+    Park.
+  starting_url: https://www.google.com/maps/dir/Times+Square,+New+York,+NY/Central+Park,+New+York,+NY
+  success_criterion: Answer reports a driving time in minutes.
+  source: in-house
+  category_hint: VLM_NEEDED
+- id: wv-223
+  description: On TradingView Bitcoin chart, identify whether the current 1-hour candle
+    is green or red.
+  starting_url: https://www.tradingview.com/symbols/BTCUSD/
+  success_criterion: Answer identifies candle color from chart.
+  source: in-house
+  category_hint: VLM_NEEDED
+- id: wv-224
+  description: On Three.js examples page, identify the title of the first 3D demo.
+  starting_url: https://threejs.org/examples/
+  success_criterion: Answer names a Three.js example title.
+  source: in-house
+  category_hint: VLM_NEEDED
+- id: wv-225
+  description: On Unsplash homepage, identify the dominant color of the featured hero
+    image.
+  starting_url: https://unsplash.com
+  success_criterion: Answer reports a perceived dominant color.
+  source: in-house
+  category_hint: VLM_NEEDED
+- id: wv-226
+  description: On Behance, find a featured graphic design project on the homepage
+    and report its title.
+  starting_url: https://www.behance.net
+  success_criterion: Answer names a featured Behance project.
+  source: in-house
+  category_hint: VLM_NEEDED
+- id: wv-227
+  description: On Dribbble, find the title of a popular shot on the homepage.
+  starting_url: https://dribbble.com/shots/popular
+  success_criterion: Answer names a popular Dribbble shot.
+  source: in-house
+  category_hint: VLM_NEEDED
+- id: wv-228
+  description: On Windy.com, report current wind direction over the UK.
+  starting_url: https://www.windy.com/?51.509,-0.118,5
+  success_criterion: Answer identifies wind direction from the visualization.
+  source: in-house
+  category_hint: VLM_NEEDED
+- id: wv-229
+  description: On flightradar24.com, identify an aircraft currently flying over the
+    Atlantic.
+  starting_url: https://www.flightradar24.com
+  success_criterion: Answer names a flight number visible on the map.
+  source: in-house
+  category_hint: VLM_NEEDED
+- id: wv-230
+  description: On the NASA Earth Observatory image of the day, describe what the satellite
+    image depicts.
+  starting_url: https://earthobservatory.nasa.gov/topic/image-of-the-day
+  success_criterion: Answer describes the subject of the featured image.
+  source: in-house
+  category_hint: VLM_NEEDED
+- id: wv-231
+  description: On the xkcd homepage, read today's comic and report its title.
+  starting_url: https://xkcd.com
+  success_criterion: Answer reports the current xkcd comic title.
+  source: in-house
+  category_hint: VLM_NEEDED
+- id: wv-232
+  description: On Observable HQ D3 gallery, identify the type of chart displayed first.
+  starting_url: https://observablehq.com/@d3/gallery
+  success_criterion: Answer identifies a chart type from the gallery.
+  source: in-house
+  category_hint: VLM_NEEDED
+- id: wv-233
+  description: On Google Earth Web, identify a country visible when viewing centered
+    on Europe.
+  starting_url: https://earth.google.com/web/
+  success_criterion: Answer identifies a European country from the rendered globe.
+  source: in-house
+  category_hint: VLM_NEEDED
+- id: wv-234
+  description: On the Observable notebook 'Bar chart' by Mike Bostock, identify the
+    data values shown.
+  starting_url: https://observablehq.com/@d3/bar-chart
+  success_criterion: Answer identifies data values from the rendered chart.
+  source: in-house
+  category_hint: VLM_NEEDED
+- id: wv-235
+  description: On itch.io, find a featured game in the simulation genre and report
+    its title.
+  starting_url: https://itch.io/games/genre-simulation
+  success_criterion: Answer names a featured simulation game.
+  source: in-house
+  category_hint: VLM_NEEDED
+- id: wv-236
+  description: Starting from Wikipedia 'Albert Einstein', navigate to the article
+    for his doctoral advisor and report that person's birth year.
+  starting_url: https://en.wikipedia.org/wiki/Albert_Einstein
+  success_criterion: Answer is 1854 (Alfred Kleiner).
+  source: in-house
+  category_hint: MULTI_HOP
+- id: wv-237
+  description: From Hacker News front page, open the top story's comments, then click
+    the user profile of the top commenter and report their karma.
+  starting_url: https://news.ycombinator.com
+  success_criterion: Answer reports the karma value.
+  source: in-house
+  category_hint: MULTI_HOP
+- id: wv-238
+  description: 'Starting at github.com, navigate to the trending Python repos page
+    and report the #1 trending repo''s description.'
+  starting_url: https://github.com
+  success_criterion: Answer reports the description of the top trending Python repo.
+  source: in-house
+  category_hint: MULTI_HOP
+- id: wv-239
+  description: From the IMDb homepage, find Christopher Nolan's filmography page and
+    report his earliest directed film.
+  starting_url: https://www.imdb.com
+  success_criterion: Answer is 'Following' (1998) or earliest listed.
+  source: in-house
+  category_hint: MULTI_HOP
+- id: wv-240
+  description: From the arXiv homepage, navigate to cs.LG recent, open the first paper,
+    and report the institution of the first author.
+  starting_url: https://arxiv.org
+  success_criterion: Answer reports an institution from the paper.
+  source: in-house
+  category_hint: MULTI_HOP
+- id: wv-241
+  description: From Reddit's homepage, navigate to r/science, open the top weekly
+    post, and report the journal cited.
+  starting_url: https://www.reddit.com
+  success_criterion: Answer names the journal source.
+  source: in-house
+  category_hint: MULTI_HOP
+- id: wv-242
+  description: From Wikipedia 'Linux', click through to Linus Torvalds and report
+    his birthplace.
+  starting_url: https://en.wikipedia.org/wiki/Linux
+  success_criterion: Answer is Helsinki, Finland.
+  source: in-house
+  category_hint: MULTI_HOP
+- id: wv-243
+  description: From Goodreads search, find 'Dune' by Frank Herbert, navigate to the
+    author page, and report his year of death.
+  starting_url: https://www.goodreads.com/search?q=Dune+Frank+Herbert
+  success_criterion: Answer is 1986.
+  source: in-house
+  category_hint: MULTI_HOP
+- id: wv-244
+  description: From the BBC homepage, navigate to Sport then Tennis and report the
+    top tennis story headline.
+  starting_url: https://www.bbc.com
+  success_criterion: Answer reports the current top tennis headline.
+  source: in-house
+  category_hint: MULTI_HOP
+- id: wv-245
+  description: From the Stack Overflow homepage, navigate to Tags then 'rust', open
+    the highest-voted question, and report its score.
+  starting_url: https://stackoverflow.com
+  success_criterion: Answer reports the vote score.
+  source: in-house
+  category_hint: MULTI_HOP
+- id: wv-246
+  description: From the New York Times homepage, navigate to Technology section, open
+    the top article, and report the author.
+  starting_url: https://www.nytimes.com
+  success_criterion: Answer reports the byline of the top article.
+  source: in-house
+  category_hint: MULTI_HOP
+- id: wv-247
+  description: From the Smithsonian homepage, navigate to the National Air and Space
+    Museum and name one current exhibit.
+  starting_url: https://www.si.edu
+  success_criterion: Answer names a current NASM exhibit.
+  source: in-house
+  category_hint: MULTI_HOP
+- id: wv-248
+  description: From the MET Museum homepage, navigate to Collection, search for 'Van
+    Gogh', and name one piece.
+  starting_url: https://www.metmuseum.org
+  success_criterion: Answer names a Van Gogh work in the MET collection.
+  source: in-house
+  category_hint: MULTI_HOP
+- id: wv-249
+  description: From the Olympics.com homepage, navigate to the next Olympic Games
+    page and report its host city and year.
+  starting_url: https://olympics.com
+  success_criterion: Answer correctly names the next Olympics host and year.
+  source: in-house
+  category_hint: MULTI_HOP
+- id: wv-250
+  description: 'From the FIFA.com homepage, navigate to the men''s world ranking and
+    report the current #1 nation.'
+  starting_url: https://www.fifa.com
+  success_criterion: 'Answer names the current men''s #1 FIFA-ranked nation.'
+  source: in-house
+  category_hint: MULTI_HOP
+- id: wv-251
+  description: Compute the area of a circle with radius 7 using WolframAlpha and report
+    the result rounded to exactly 2 decimal places.
+  starting_url: https://www.wolframalpha.com/input?i=area+of+circle+radius+7
+  success_criterion: Answer is exactly 153.94.
+  source: in-house
+  category_hint: ANSWER_MALFORMED
+- id: wv-252
+  description: On xe.com, find the exchange rate of 1 USD to EUR and report it as
+    a decimal with exactly 4 places.
+  starting_url: https://www.xe.com/currencyconverter/convert/?Amount=1&From=USD&To=EUR
+  success_criterion: Answer is formatted like '0.9234'.
+  source: in-house
+  category_hint: ANSWER_MALFORMED
+- id: wv-253
+  description: On time.is, find the current UTC time and report it in exactly HH:MM:SS
+    24-hour format.
+  starting_url: https://time.is/UTC
+  success_criterion: Answer is formatted exactly as HH:MM:SS.
+  source: in-house
+  category_hint: ANSWER_MALFORMED
+- id: wv-254
+  description: On Wikipedia 'Pi', report the value of pi to exactly 6 decimal places.
+  starting_url: https://en.wikipedia.org/wiki/Pi
+  success_criterion: Answer is exactly '3.141593'.
+  source: in-house
+  category_hint: ANSWER_MALFORMED
+- id: wv-255
+  description: On NASA's website, find the launch date of the James Webb Space Telescope
+    and report it as YYYY-MM-DD.
+  starting_url: https://www.nasa.gov/mission/webb/
+  success_criterion: Answer is exactly '2021-12-25'.
+  source: in-house
+  category_hint: ANSWER_MALFORMED
+- id: wv-256
+  description: On Wikipedia 'Mount Everest', report the height in meters as an integer
+    only (no units).
+  starting_url: https://en.wikipedia.org/wiki/Mount_Everest
+  success_criterion: Answer is exactly '8849' or '8848'.
+  source: in-house
+  category_hint: ANSWER_MALFORMED
+- id: wv-257
+  description: On Wikipedia 'Speed of light', report the value in scientific notation
+    with 3 significant figures.
+  starting_url: https://en.wikipedia.org/wiki/Speed_of_light
+  success_criterion: Answer is '3.00e8' or equivalent.
+  source: in-house
+  category_hint: ANSWER_MALFORMED
+- id: wv-258
+  description: On the U.S. Census Bureau, find the current U.S. population and report
+    rounded to nearest million in the format 'XXX million'.
+  starting_url: https://www.census.gov/popclock/
+  success_criterion: Answer is in form 'XXX million'.
+  source: in-house
+  category_hint: ANSWER_MALFORMED
+- id: wv-259
+  description: On NIST, find Avogadro's constant and report it as an exact integer
+    (no scientific notation).
+  starting_url: https://physics.nist.gov/cgi-bin/cuu/Value?na
+  success_criterion: Answer is '602214076000000000000000' or equivalent.
+  source: in-house
+  category_hint: ANSWER_MALFORMED
+- id: wv-260
+  description: On Wikipedia 'Planck constant', report its value in SI units using
+    exactly 3 significant figures.
+  starting_url: https://en.wikipedia.org/wiki/Planck_constant
+  success_criterion: Answer is '6.63e-34' or equivalent.
+  source: in-house
+  category_hint: ANSWER_MALFORMED
+- id: wv-261
+  description: On ESPN, find the rebounds count for LeBron James in the most recent
+    Lakers game box score.
+  starting_url: https://www.espn.com/nba/team/schedule/_/name/lal
+  success_criterion: Answer reports rebound count from box score.
+  source: in-house
+  category_hint: TOOL_BROKEN
+- id: wv-262
+  description: On Zillow, search 'Austin, TX' and report the price of the third listing
+    in the results grid.
+  starting_url: https://www.zillow.com/austin-tx/
+  success_criterion: Answer reports the third listing's price.
+  source: in-house
+  category_hint: TOOL_BROKEN
+- id: wv-263
+  description: On Realtor.com, find a 3-bedroom home in Denver, CO and report its
+    address.
+  starting_url: https://www.realtor.com/realestateandhomes-search/Denver_CO/beds-3
+  success_criterion: Answer reports a 3BR Denver listing address.
+  source: in-house
+  category_hint: TOOL_BROKEN
+- id: wv-264
+  description: On Amtrak's website, find a train from NYC to Boston and report its
+    arrival time.
+  starting_url: https://www.amtrak.com
+  success_criterion: Answer reports a real Amtrak arrival time.
+  source: in-house
+  category_hint: TOOL_BROKEN
+- id: wv-265
+  description: On Kayak, search a round-trip flight LAX to NRT and report a fare.
+  starting_url: https://www.kayak.com/flights
+  success_criterion: Answer reports a LAX to NRT fare with airline.
+  source: in-house
+  category_hint: TOOL_BROKEN
+- id: wv-266
+  description: On Wikipedia, find the population density of Singapore from the infobox.
+  starting_url: https://en.wikipedia.org/wiki/Singapore
+  success_criterion: Answer reports a per-km² population density figure.
+  source: in-house
+  category_hint: TOOL_BROKEN
+- id: wv-267
+  description: On the SEC EDGAR site, find Apple Inc.'s most recent 10-K filing date.
+  starting_url: https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000320193&type=10-K
+  success_criterion: Answer reports the most recent 10-K filing date.
+  source: in-house
+  category_hint: TOOL_BROKEN
+- id: wv-268
+  description: On the FAA NAS status site, find the current delay status for JFK airport.
+  starting_url: https://nasstatus.faa.gov
+  success_criterion: Answer reports JFK current delay status.
+  source: in-house
+  category_hint: TOOL_BROKEN
+- id: wv-269
+  description: On NYTimes Crossword Mini, identify the first 'across' clue text.
+  starting_url: https://www.nytimes.com/crosswords/game/mini
+  success_criterion: Answer reports the text of the 1-Across clue.
+  source: in-house
+  category_hint: TOOL_BROKEN
+- id: wv-270
+  description: On a deeply nested GitHub pull request page, find the number of reviews
+    on the latest PR for 'vercel/next.js'.
+  starting_url: https://github.com/vercel/next.js/pulls
+  success_criterion: Answer reports the review count on the latest PR.
+  source: in-house
+  category_hint: TOOL_BROKEN
+- id: wv-271
+  description: On Reuters, find the current price of Brent crude oil.
+  starting_url: https://www.reuters.com/markets/commodities/
+  success_criterion: Answer reports a current Brent crude USD price.
+  source: in-house
+  category_hint: TIME_SENSITIVE
+- id: wv-272
+  description: On Bloomberg, find the current EUR/USD exchange rate.
+  starting_url: https://www.bloomberg.com/quote/EURUSD:CUR
+  success_criterion: Answer reports a current EUR/USD rate.
+  source: in-house
+  category_hint: TIME_SENSITIVE
+- id: wv-273
+  description: On NOAA's Storm Prediction Center, find today's convective outlook
+    category.
+  starting_url: https://www.spc.noaa.gov/products/outlook/day1otlk.html
+  success_criterion: Answer reports today's SPC outlook category.
+  source: in-house
+  category_hint: TIME_SENSITIVE
+- id: wv-274
+  description: On USGS Earthquakes, find the most recent M5.0+ earthquake worldwide.
+  starting_url: https://earthquake.usgs.gov/earthquakes/map/
+  success_criterion: Answer reports magnitude and location.
+  source: in-house
+  category_hint: TIME_SENSITIVE
+- id: wv-275
+  description: On the ISS tracker, find the current latitude and longitude of the
+    International Space Station.
+  starting_url: https://www.findtheiss.com
+  success_criterion: Answer reports approximate current coordinates.
+  source: in-house
+  category_hint: TIME_SENSITIVE
+- id: wv-276
+  description: On the Federal Reserve website, find the current federal funds rate.
+  starting_url: https://www.federalreserve.gov/
+  success_criterion: Answer reports the current federal funds rate.
+  source: in-house
+  category_hint: TIME_SENSITIVE
+- id: wv-277
+  description: On the current Bitcoin dominance chart on CoinMarketCap, report the
+    percentage.
+  starting_url: https://coinmarketcap.com/view/ethereum/
+  success_criterion: Answer reports a current ETH/BTC dominance figure.
+  source: in-house
+  category_hint: TIME_SENSITIVE
+- id: wv-278
+  description: On the current gold price page on Kitco, find the spot price per troy
+    ounce.
+  starting_url: https://www.kitco.com/gold-price-today-usa/
+  success_criterion: Answer reports a current gold price in USD.
+  source: in-house
+  category_hint: TIME_SENSITIVE
+- id: wv-279
+  description: On the current Dow Jones page on MarketWatch, find the index value.
+  starting_url: https://www.marketwatch.com/investing/index/djia
+  success_criterion: Answer reports a current DJIA value.
+  source: in-house
+  category_hint: TIME_SENSITIVE
+- id: wv-280
+  description: On the current NASDAQ composite page on Yahoo Finance, find the index
+    value.
+  starting_url: https://finance.yahoo.com/quote/%5EIXIC/
+  success_criterion: Answer reports a current NASDAQ value.
+  source: in-house
+  category_hint: TIME_SENSITIVE
+- id: wv-281
+  description: On Spotify Web Player, find the top track on the 'Today's Top Hits'
+    playlist.
+  starting_url: https://open.spotify.com/playlist/37i9dQZF1DXcBWIGoYBM5M
+  success_criterion: 'Answer names the current #1 track.'
+  source: in-house
+  category_hint: LOGIN_WALL
+- id: wv-282
+  description: On Quora, find a popular answer to 'What is the best programming language
+    to learn'.
+  starting_url: https://www.quora.com/search?q=best+programming+language+to+learn
+  success_criterion: Answer cites a Quora answer with recommendation.
+  source: in-house
+  category_hint: LOGIN_WALL
+- id: wv-283
+  description: On LinkedIn Jobs, find a recent 'Data Scientist' position in New York.
+  starting_url: https://www.linkedin.com/jobs/search/?keywords=data+scientist&location=New+York
+  success_criterion: Answer names a current job with company.
+  source: in-house
+  category_hint: LOGIN_WALL
+- id: wv-284
+  description: On Glassdoor, find the average salary for 'Software Engineer' at Google.
+  starting_url: https://www.glassdoor.com/Salary/Google-Software-Engineer-Salaries-E9079_D_KO7,24.htm
+  success_criterion: Answer reports an average base salary range.
+  source: in-house
+  category_hint: LOGIN_WALL
+- id: wv-285
+  description: On Netflix, find the description for the show 'Stranger Things'.
+  starting_url: https://www.netflix.com/title/80057281
+  success_criterion: Answer includes a plot description.
+  source: in-house
+  category_hint: LOGIN_WALL
+- id: wv-286
+  description: On Instagram, find the follower count of the @nasa account.
+  starting_url: https://www.instagram.com/nasa/
+  success_criterion: Answer reports the follower count.
+  source: in-house
+  category_hint: LOGIN_WALL
+- id: wv-287
+  description: On Twitter/X, find the current follower count of the @OpenAI account.
+  starting_url: https://x.com/OpenAI
+  success_criterion: Answer reports the follower count.
+  source: in-house
+  category_hint: LOGIN_WALL
+- id: wv-288
+  description: On Medium, find your reading history or a locked article's preview
+    text.
+  starting_url: https://medium.com
+  success_criterion: Answer reports visible preview text of a paywalled article.
+  source: in-house
+  category_hint: LOGIN_WALL
+- id: wv-289
+  description: On Notion, try to access a public workspace page and report its title.
+  starting_url: https://www.notion.so
+  success_criterion: Answer reports a public page title or landing page content.
+  source: in-house
+  category_hint: LOGIN_WALL
+- id: wv-290
+  description: On Discord, find the member count of the 'Reactiflux' server if visible
+    without login.
+  starting_url: https://discord.com/invite/reactiflux
+  success_criterion: Answer reports the server member count or invite info.
+  source: in-house
+  category_hint: LOGIN_WALL
+- id: wv-291
+  description: On Cloudflare's challenge page demo, identify the type of challenge
+    presented.
+  starting_url: https://cloudflare.com
+  success_criterion: Answer describes the Cloudflare homepage content.
+  source: in-house
+  category_hint: CAPTCHA
+- id: wv-292
+  description: On a Cloudflare-protected site (e.g., some news sites), report whether
+    a challenge page appears.
+  starting_url: https://www.dailymail.co.uk
+  success_criterion: Answer reports whether a challenge page is shown.
+  source: in-house
+  category_hint: CAPTCHA
+- id: wv-293
+  description: On the recaptcha demo page, identify the type of CAPTCHA shown.
+  starting_url: https://www.google.com/recaptcha/about2/
+  success_criterion: Answer describes the reCAPTCHA type shown.
+  source: in-house
+  category_hint: CAPTCHA
+- id: wv-294
+  description: On hCaptcha's demo page, identify the challenge type presented.
+  starting_url: https://www.hcaptcha.com
+  success_criterion: Answer describes the hCaptcha product page.
+  source: in-house
+  category_hint: CAPTCHA
+- id: wv-295
+  description: On a site with Cloudflare Turnstile, report whether the challenge is
+    visible.
+  starting_url: https://www.cloudflare.com/turnstile/
+  success_criterion: Answer describes the Turnstile product page.
+  source: in-house
+  category_hint: CAPTCHA
+- id: wv-296
+  description: On Britannica, find the name of the largest desert in the world.
+  starting_url: https://www.britannica.com/place/Antarctic-Desert
+  success_criterion: Answer identifies Antarctic Desert or Sahara.
+  source: in-house
+  category_hint: JUDGE_HARSH
+- id: wv-297
+  description: On Wikipedia, find the most populous city in the United States.
+  starting_url: https://en.wikipedia.org/wiki/List_of_United_States_cities_by_population
+  success_criterion: Answer is New York City.
+  source: in-house
+  category_hint: JUDGE_HARSH
+- id: wv-298
+  description: On Wikipedia, find the currency used in Japan.
+  starting_url: https://en.wikipedia.org/wiki/Japanese_yen
+  success_criterion: Answer is Japanese Yen.
+  source: in-house
+  category_hint: JUDGE_HARSH
+- id: wv-299
+  description: On Wikipedia, find the number of continents on Earth.
+  starting_url: https://en.wikipedia.org/wiki/Continent
+  success_criterion: Answer is 5, 6, or 7 depending on model used.
+  source: in-house
+  category_hint: JUDGE_HARSH
+- id: wv-300
+  description: On Wikipedia, find the official language of Brazil.
+  starting_url: https://en.wikipedia.org/wiki/Brazil
+  success_criterion: Answer is Portuguese.
+  source: in-house
+  category_hint: JUDGE_HARSH

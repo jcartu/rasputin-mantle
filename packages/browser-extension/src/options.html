@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rasputin Mantle Options</title>
+    <style>
+      :root { color-scheme: dark; font-family: Inter, system-ui, sans-serif; background: #09090b; color: #f4f4f5; }
+      body { margin: 0; padding: 28px; }
+      main { max-width: 720px; margin: 0 auto; }
+      label { display: grid; gap: 8px; margin: 18px 0; font-weight: 700; }
+      input { border: 1px solid #3f3f46; border-radius: 10px; padding: 12px; background: #18181b; color: #f4f4f5; }
+      button { border: 0; border-radius: 10px; padding: 12px 16px; font-weight: 800; background: #14b8a6; color: #042f2e; }
+      .status { min-height: 24px; color: #86efac; }
+      .hint { color: #a1a1aa; line-height: 1.5; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Rasputin Mantle</h1>
+      <p class="hint">Configure the gateway used by context menu, omnibox, and side panel sessions.</p>
+      <form id="options-form">
+        <label>
+          MANTLE_GATEWAY_URL
+          <input id="gateway-url" name="gatewayUrl" type="url" placeholder="http://localhost:8000" required />
+        </label>
+        <label>
+          Optional bearer token
+          <input id="bearer-token" name="bearerToken" type="password" autocomplete="off" />
+        </label>
+        <button type="submit">Save settings</button>
+      </form>
+      <p id="status" class="status" role="status"></p>
+    </main>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

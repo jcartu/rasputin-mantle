@@ -7,6 +7,9 @@ import { Button } from '@/components/ui/button';
 import { ComputerView, type BrowserTab } from '@/components/session/computer-view';
 import { FileTree, type SandboxFileEntry } from '@/components/session/file-tree';
 import { ArtifactViewer } from '@/components/session/artifact-viewer';
+import { TimelineScrubber, type ReplayStep } from '@/components/session/timeline-scrubber';
+import { ShareModal } from '@/components/session/share-modal';
+import { ShareBadge } from '@/components/session/share-badge';
 
 interface PageParams {
   id: string;
@@ -27,6 +30,8 @@ const FILES_PANE_WIDTH = 320;
  */
 interface ChatStreamProps {
   sessionId: string;
+  replaySteps?: ReplayStep[];
+  replayStep?: number;
 }
 
 function ChatStreamFallback({ sessionId }: ChatStreamProps): React.ReactElement {
@@ -76,6 +81,56 @@ const ChatStream = React.lazy(async () => {
   return { default: ChatStreamFallback };
 });
 
+interface EventsResponse {
+  events?: Array<{
+    seq: number;
+    ts: string | null;
+    event_type: string;
+    payload: Record<string, unknown>;
+  }>;
+}
+
+function payloadData(step: ReplayStep): Record<string, unknown> {
+  const data = step.payload.data;
+  return typeof data === 'object' && data !== null ? data as Record<string, unknown> : {};
+}
+
+function currentScreenshot(steps: ReplayStep[], currentStep: number | null): string | null {
+  if (currentStep === null) return null;
+  for (let index = currentStep; index >= 0; index -= 1) {
+    const data = payloadData(steps[index]);
+    for (const key of ['src', 'screenshot', 'screenshot_url', 'url']) {
+      const value = data[key];
+      if (typeof value === 'string' && value.length > 0) return value;
+    }
+  }
+  return null;
+}
+
+function toFileEntry(value: unknown): SandboxFileEntry | null {
+  if (typeof value !== 'object' || value === null) return null;
+  const record = value as Record<string, unknown>;
+  const path = typeof record.path === 'string' ? record.path : null;
+  if (!path) return null;
+  return {
+    path,
+    name: typeof record.name === 'string' ? record.name : path.split('/').filter(Boolean).at(-1) ?? path,
+    kind: record.kind === 'dir' || record.type === 'directory' ? 'dir' : 'file',
+    size: typeof record.size === 'number' ? record.size : undefined,
+    mime: typeof record.mime === 'string' ? record.mime : undefined,
+    thumbnail: typeof record.thumbnail === 'string' ? record.thumbnail : undefined,
+  };
+}
+
+function currentFiles(steps: ReplayStep[], currentStep: number | null): SandboxFileEntry[] | undefined {
+  if (currentStep === null) return undefined;
+  for (let index = currentStep; index >= 0; index -= 1) {
+    const files = payloadData(steps[index]).files;
+    if (Array.isArray(files)) return files.map(toFileEntry).filter((entry): entry is SandboxFileEntry => entry !== null);
+  }
+  return [];
+}
+
 export default function SessionPage({ params }: SessionPageProps): React.ReactElement {
   const { id: sessionId } = use(params);
 
@@ -85,6 +140,11 @@ export default function SessionPage({ params }: SessionPageProps): React.ReactEl
   const [isControlTaken, setIsControlTaken] = React.useState(false);
   const [tabs, setTabs] = React.useState<BrowserTab[]>([]);
   const [activeTabId, setActiveTabId] = React.useState<string | undefined>(undefined);
+  const [steps, setSteps] = React.useState<ReplayStep[]>([]);
+  const [traceLoading, setTraceLoading] = React.useState(true);
+  const [currentReplayStep, setCurrentReplayStep] = React.useState<number | null>(null);
+  const [shareModalOpen, setShareModalOpen] = React.useState(false);
+  const [sharePublic, setSharePublic] = React.useState(false);
 
   // Restore collapse state from localStorage (session-scoped).
   React.useEffect(() => {
@@ -112,6 +172,47 @@ export default function SessionPage({ params }: SessionPageProps): React.ReactEl
       /* storage quota — ignore */
     }
   }, [chatCollapsed, filesCollapsed, sessionId]);
+
+  React.useEffect(() => {
+    let cancelled = false;
+    setTraceLoading(true);
+    fetch(`/api/sessions/${encodeURIComponent(sessionId)}/events?limit=1000`, { headers: { accept: 'application/json' } })
+      .then((response) => response.ok ? response.json() as Promise<EventsResponse> : { events: [] })
+      .then((body) => {
+        if (cancelled) return;
+        const replaySteps = (body.events ?? []).map((event, index) => ({
+          index,
+          seq: event.seq,
+          timestamp: event.ts,
+          event_type: event.event_type,
+          payload: event.payload,
+        }));
+        setSteps(replaySteps);
+        if (replaySteps.some((step) => step.event_type === 'completion')) {
+          setCurrentReplayStep(Math.max(replaySteps.length - 1, 0));
+        }
+      })
+      .finally(() => {
+        if (!cancelled) setTraceLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [sessionId]);
+
+  React.useEffect(() => {
+    let cancelled = false;
+    fetch(`/api/share/${encodeURIComponent(sessionId)}`, { headers: { accept: 'application/json' } })
+      .then((response) => {
+        if (!cancelled) setSharePublic(response.ok);
+      })
+      .catch(() => {
+        if (!cancelled) setSharePublic(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [sessionId]);
 
   // Keyboard shortcuts: ⌘\ chat, ⌘B files, Esc closes artifact.
   React.useEffect(() => {
@@ -179,8 +280,13 @@ export default function SessionPage({ params }: SessionPageProps): React.ReactEl
     '1fr',
     filesCollapsed ? '0px' : `${FILES_PANE_WIDTH}px`,
   ].join(' ');
+  const replayActive = currentReplayStep !== null;
+  const screenshotUrl = currentScreenshot(steps, currentReplayStep);
+  const replayFiles = currentFiles(steps, currentReplayStep);
 
   return (
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100%', width: '100%', overflow: 'hidden' }}>
+    <ShareBadge sessionId={sessionId} visible={sharePublic} onUnshare={() => setSharePublic(false)} />
     <div
       style={{
         display: 'grid',
@@ -194,6 +300,9 @@ export default function SessionPage({ params }: SessionPageProps): React.ReactEl
       }}
       data-session-id={sessionId}
     >
+      <div style={{ position: 'fixed', top: 'var(--spacing-3)', right: 'var(--spacing-3)', zIndex: 20 }}>
+        <Button variant="secondary" size="sm" onClick={() => setShareModalOpen(true)}>Share</Button>
+      </div>
       {/* Left: Chat */}
       <section
         aria-label="Chat"
@@ -254,7 +363,7 @@ export default function SessionPage({ params }: SessionPageProps): React.ReactEl
                   </div>
                 }
               >
-                <ChatStream sessionId={sessionId} />
+                <ChatStream sessionId={sessionId} replaySteps={replayActive ? steps : undefined} replayStep={currentReplayStep ?? undefined} />
               </React.Suspense>
             </div>
           </div>
@@ -310,6 +419,8 @@ export default function SessionPage({ params }: SessionPageProps): React.ReactEl
         ) : null}
         <ComputerView
           sessionId={sessionId}
+          screenshotUrl={screenshotUrl}
+          readOnly={replayActive}
           isControlTaken={isControlTaken}
           onTakeControl={handleTakeControl}
           onScreenshot={handleScreenshot}
@@ -361,7 +472,7 @@ export default function SessionPage({ params }: SessionPageProps): React.ReactEl
                 onClick={() => setFilesCollapsed(true)}
               />
             </div>
-            <FileTree sessionId={sessionId} onFileOpen={handleFileOpen} />
+            <FileTree sessionId={sessionId} onFileOpen={handleFileOpen} entries={replayFiles} />
           </div>
         ) : null}
       </section>
@@ -371,6 +482,22 @@ export default function SessionPage({ params }: SessionPageProps): React.ReactEl
         filePath={activeFile}
         onClose={handleArtifactClose}
       />
+    </div>
+    {traceLoading || steps.length > 0 ? (
+      <TimelineScrubber
+        steps={steps}
+        currentStep={currentReplayStep ?? Math.max(steps.length - 1, 0)}
+        onStepChange={setCurrentReplayStep}
+        loading={traceLoading}
+      />
+    ) : null}
+    <ShareModal
+      sessionId={sessionId}
+      isOpen={shareModalOpen}
+      sharePublic={sharePublic}
+      onClose={() => setShareModalOpen(false)}
+      onShareChange={(value) => setSharePublic(value)}
+    />
     </div>
   );
 }

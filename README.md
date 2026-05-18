@@ -120,6 +120,12 @@ Full eval artifacts in [`MANTLE_V1_1_RELEASED.md`](MANTLE_V1_1_RELEASED.md). Lig
 
 ---
 
+## What ships in v1.3
+
+- **Onboarding flow** — Three-step onboarding with intent selection and templates
+- **Playbooks gallery** — Curated templates and user-saved workflows
+- **Empty state component** — Reusable empty state pattern across the app
+
 ## What ships in v1.2
 
 v1.0 proved the platform. v1.1 proved the agent. v1.2 makes both feel like a product.

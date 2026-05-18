@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST="{\"app/(app)/session/[id]/page.tsx -> @/components/session/chat-stream\":{\"id\":\"app/(app)/session/[id]/page.tsx -> @/components/session/chat-stream\",\"files\":[\"static/chunks/_app-pages-browser_components_session_chat-stream_tsx.js\"]}}"

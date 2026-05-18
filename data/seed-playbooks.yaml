@@ -1,0 +1,63 @@
+- id: competitor-analysis
+  title: Competitor Analysis
+  description: Deep dive into a competitor's product, pricing, and positioning.
+  intent: Research
+  prompt_template: "Analyze the competitor {competitor_name}. Focus on their product features, pricing model, and target audience."
+  created_by: system
+  created_at: "2026-05-19T00:00:00Z"
+
+- id: literature-review
+  title: Literature Review
+  description: Summarize recent academic papers or articles on a specific topic.
+  intent: Research
+  prompt_template: "Find and summarize the top 5 recent papers on {topic}. Highlight key findings and methodologies."
+  created_by: system
+  created_at: "2026-05-19T00:00:00Z"
+
+- id: landing-page
+  title: Landing Page
+  description: Build a high-converting landing page for a new product or feature.
+  intent: Build
+  prompt_template: "Create a landing page for {product_name}. Include a hero section, features, testimonials, and a call to action."
+  created_by: system
+  created_at: "2026-05-19T00:00:00Z"
+
+- id: internal-dashboard
+  title: Internal Dashboard
+  description: Create an admin dashboard to monitor key metrics and user activity.
+  intent: Build
+  prompt_template: "Build an internal dashboard for {team_name}. Include charts for daily active users, revenue, and recent signups."
+  created_by: system
+  created_at: "2026-05-19T00:00:00Z"
+
+- id: meeting-recap
+  title: Meeting Recap
+  description: Generate a concise summary and action items from meeting notes.
+  intent: Summarize
+  prompt_template: "Summarize the following meeting notes and extract action items: {meeting_notes}"
+  created_by: system
+  created_at: "2026-05-19T00:00:00Z"
+
+- id: weekly-news-digest
+  title: Weekly News Digest
+  description: Compile the most important news articles in your industry from the past week.
+  intent: Summarize
+  prompt_template: "Create a weekly news digest for the {industry} industry. Include the top 5 stories with brief summaries."
+  created_by: system
+  created_at: "2026-05-19T00:00:00Z"
+
+- id: daily-standup
+  title: Daily Standup
+  description: Prepare your daily standup update based on yesterday's commits and tasks.
+  intent: Schedule
+  prompt_template: "Generate a daily standup update. What I did yesterday: {yesterday_tasks}. What I will do today: {today_tasks}. Blockers: {blockers}."
+  created_by: system
+  created_at: "2026-05-19T00:00:00Z"
+
+- id: weekly-report
+  title: Weekly Report
+  description: Generate a comprehensive weekly progress report for your team or manager.
+  intent: Schedule
+  prompt_template: "Create a weekly report for the week of {week_date}. Include key accomplishments, metrics, and goals for next week."
+  created_by: system
+  created_at: "2026-05-19T00:00:00Z"

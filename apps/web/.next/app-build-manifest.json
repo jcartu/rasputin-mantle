@@ -11,10 +11,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
-    "/session/[id]/page": [
+    "/(app)/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/session/[id]/page.js"
+      "static/chunks/app/(app)/layout.js"
+    ],
+    "/(app)/session/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(app)/session/[id]/page.js"
     ],
     "/_not-found/page": [
       "static/chunks/webpack.js",

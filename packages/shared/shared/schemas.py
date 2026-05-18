@@ -101,3 +101,13 @@ class StreamEventSchema(BaseModel):
 
     def to_type(self) -> StreamEvent:
         return StreamEvent(event_type=self.event_type, data=self.data, timestamp=self.timestamp)
+
+
+class Playbook(BaseModel):
+    id: str
+    title: str
+    description: str
+    intent: str
+    prompt_template: str
+    created_by: str
+    created_at: str

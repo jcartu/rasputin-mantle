@@ -1,11 +1,27 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Check, AlertTriangle, AlertCircle, Info, ChevronDown, X,
   Search, Settings, Moon, Sun, Loader2
 } from "lucide-react";
 import "../../../../design-system/tokens.css";
+
+import { Avatar } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardHeader, CardBody, CardFooter } from "@/components/ui/card";
+import Dialog from "@/components/ui/dialog";
+import Input from "@/components/ui/input";
+import Select from "@/components/ui/select";
+import Sheet from "@/components/ui/sheet";
+import Skeleton from "@/components/ui/skeleton";
+import Spinner from "@/components/ui/spinner";
+import { Switch } from "@/components/ui/switch";
+import { Tabs, TabList, TabTrigger, TabContent } from "@/components/ui/tab";
+import Textarea from "@/components/ui/textarea";
+import ToastProvider, { useToast } from "@/components/ui/toast";
+import Tooltip from "@/components/ui/tooltip";
 
 /* ─────────────────────────────────────────────
    MAIN PAGE
@@ -25,93 +41,98 @@ export default function DesignSystemPage() {
 
   const sections = [
     "Color", "Typography", "Spacing", "Borders & Radii", "Elevation",
-    "Motion", "Iconography", "Button", "Input", "Textarea",
-    "Badge", "Card", "Avatar", "Switch", "Spinner", "Skeleton", "Tab", "Toast", "Tooltip"
+    "Motion", "Iconography", "Button", "Input", "Textarea", "Select",
+    "Badge", "Card", "Avatar", "Switch", "Spinner", "Skeleton", "Tab", "Dialog", "Sheet", "Toast", "Tooltip"
   ];
 
   return (
-    <div className={isLight ? "light" : ""} style={{
-      backgroundColor: 'var(--color-background)',
-      color: 'var(--color-foreground)',
-      minHeight: '100vh',
-      display: 'flex',
-      fontFamily: 'var(--font-sans)',
-    }}>
-      {/* Sidebar */}
-      <aside style={{
-        width: '240px', flexShrink: 0,
-        borderRight: '1px solid var(--color-border)',
-        backgroundColor: 'var(--color-background-elevated)',
-        height: '100vh', position: 'sticky', top: 0,
-        overflowY: 'auto', display: 'flex', flexDirection: 'column',
+    <ToastProvider>
+      <div className={isLight ? "light" : ""} style={{
+        backgroundColor: 'var(--color-background)',
+        color: 'var(--color-foreground)',
+        minHeight: '100vh',
+        display: 'flex',
+        fontFamily: 'var(--font-sans)',
       }}>
-        <div style={{
-          padding: 'var(--spacing-6)',
-          borderBottom: '1px solid var(--color-border)',
-          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+        {/* Sidebar */}
+        <aside style={{
+          width: '240px', flexShrink: 0,
+          borderRight: '1px solid var(--color-border)',
+          backgroundColor: 'var(--color-background-elevated)',
+          height: '100vh', position: 'sticky', top: 0,
+          overflowY: 'auto', display: 'flex', flexDirection: 'column',
         }}>
-          <h1 style={{ fontSize: 'var(--text-lg)', fontWeight: 'var(--font-weight-semibold)', margin: 0 }}>
-            Mantle v1.2
-          </h1>
-          <button onClick={() => setIsLight(!isLight)} aria-label="Toggle theme" style={{
-            background: 'transparent', border: 'none',
-            color: 'var(--color-foreground-muted)', cursor: 'pointer',
-            display: 'flex', padding: 'var(--spacing-1)', borderRadius: 'var(--radius-sm)',
+          <div style={{
+            padding: 'var(--spacing-6)',
+            borderBottom: '1px solid var(--color-border)',
+            display: 'flex', alignItems: 'center', justifyContent: 'space-between',
           }}>
-            {isLight ? <Moon size={16} /> : <Sun size={16} />}
-          </button>
-        </div>
-        <nav style={{ padding: 'var(--spacing-4)', display: 'flex', flexDirection: 'column', gap: 'var(--spacing-1)' }}>
-          {sections.map(s => (
-            <a key={s} href={`#${s.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} style={{
-              color: 'var(--color-foreground-muted)', textDecoration: 'none',
-              fontSize: 'var(--text-sm)', padding: 'var(--spacing-2) var(--spacing-3)',
-              borderRadius: 'var(--radius-sm)', display: 'block',
-              transition: 'all 0.2s ease',
-            }}
-              onMouseEnter={e => { e.currentTarget.style.backgroundColor = 'var(--color-background-subtle)'; e.currentTarget.style.color = 'var(--color-foreground)'; }}
-              onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = 'var(--color-foreground-muted)'; }}
-            >{s}</a>
-          ))}
-        </nav>
-      </aside>
+            <h1 style={{ fontSize: 'var(--text-lg)', fontWeight: 'var(--font-weight-semibold)', margin: 0 }}>
+              Mantle v1.2
+            </h1>
+            <button onClick={() => setIsLight(!isLight)} aria-label="Toggle theme" style={{
+              background: 'transparent', border: 'none',
+              color: 'var(--color-foreground-muted)', cursor: 'pointer',
+              display: 'flex', padding: 'var(--spacing-1)', borderRadius: 'var(--radius-sm)',
+            }}>
+              {isLight ? <Moon size={16} /> : <Sun size={16} />}
+            </button>
+          </div>
+          <nav style={{ padding: 'var(--spacing-4)', display: 'flex', flexDirection: 'column', gap: 'var(--spacing-1)' }}>
+            {sections.map(s => (
+              <a key={s} href={`#${s.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} style={{
+                color: 'var(--color-foreground-muted)', textDecoration: 'none',
+                fontSize: 'var(--text-sm)', padding: 'var(--spacing-2) var(--spacing-3)',
+                borderRadius: 'var(--radius-sm)', display: 'block',
+                transition: 'all 0.2s ease',
+              }}
+                onMouseEnter={e => { e.currentTarget.style.backgroundColor = 'var(--color-background-subtle)'; e.currentTarget.style.color = 'var(--color-foreground)'; }}
+                onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = 'var(--color-foreground-muted)'; }}
+              >{s}</a>
+            ))}
+          </nav>
+        </aside>
 
-      {/* Main */}
-      <main style={{
-        flex: 1, padding: 'var(--spacing-12) var(--spacing-16)',
-        overflowY: 'auto', display: 'flex', flexDirection: 'column',
-        gap: 'var(--spacing-16)', maxWidth: '1200px',
-      }}>
-        <header style={{ marginBottom: 'var(--spacing-8)' }}>
-          <h1 style={{ fontSize: 'var(--text-4xl)', fontWeight: 'var(--font-weight-semibold)', marginBottom: 'var(--spacing-4)', marginTop: 0 }}>
-            Design System Reference
-          </h1>
-          <p style={{ fontSize: 'var(--text-lg)', color: 'var(--color-foreground-muted)', margin: 0, maxWidth: '600px', lineHeight: 1.5 }}>
-            Canonical reference for Rasputin Mantle v1.2. Every primitive in every state, rendered live.
-          </p>
-        </header>
+        {/* Main */}
+        <main style={{
+          flex: 1, padding: 'var(--spacing-12) var(--spacing-16)',
+          overflowY: 'auto', display: 'flex', flexDirection: 'column',
+          gap: 'var(--spacing-16)', maxWidth: '1200px',
+        }}>
+          <header style={{ marginBottom: 'var(--spacing-8)' }}>
+            <h1 style={{ fontSize: 'var(--text-4xl)', fontWeight: 'var(--font-weight-semibold)', marginBottom: 'var(--spacing-4)', marginTop: 0 }}>
+              Design System Reference
+            </h1>
+            <p style={{ fontSize: 'var(--text-lg)', color: 'var(--color-foreground-muted)', margin: 0, maxWidth: '600px', lineHeight: 1.5 }}>
+              Canonical reference for Rasputin Mantle v1.2. Every primitive in every state, rendered live.
+            </p>
+          </header>
 
-        <ColorSection />
-        <TypographySection />
-        <SpacingSection />
-        <BordersRadiiSection />
-        <ElevationSection />
-        <MotionSection />
-        <IconographySection />
-        <ButtonSection />
-        <InputSection />
-        <TextareaSection />
-        <BadgeSection />
-        <CardSection />
-        <AvatarSection />
-        <SwitchSection />
-        <SpinnerSection />
-        <SkeletonSection />
-        <TabSection />
-        <ToastSection />
-        <TooltipSection />
-      </main>
-    </div>
+          <ColorSection />
+          <TypographySection />
+          <SpacingSection />
+          <BordersRadiiSection />
+          <ElevationSection />
+          <MotionSection />
+          <IconographySection />
+          <ButtonSection />
+          <InputSection />
+          <TextareaSection />
+          <SelectSection />
+          <BadgeSection />
+          <CardSection />
+          <AvatarSection />
+          <SwitchSection />
+          <SpinnerSection />
+          <SkeletonSection />
+          <TabSection />
+          <DialogSection />
+          <SheetSection />
+          <ToastSection />
+          <TooltipSection />
+        </main>
+      </div>
+    </ToastProvider>
   );
 }
 
@@ -346,8 +367,100 @@ function TextareaSection() {
     <section id="textarea">
       <SectionHeader title="Textarea" description="Multi-line text input. Auto-grow from 80px to 240px." />
       <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-4)', maxWidth: '480px' }}>
-        <TextArea label="Default" placeholder="Enter a longer message..." />
-        <TextArea label="With character count" placeholder="Start typing..." charCount={42} maxChars={200} />
+        <Textarea label="Default" placeholder="Enter a longer message..." />
+        <Textarea label="With character count" placeholder="Start typing..." characterCount={42} maxLength={200} />
+      </div>
+    </section>
+  );
+}
+
+function SelectSection() {
+  const options = [
+    { label: "Apple", value: "apple" },
+    { label: "Banana", value: "banana" },
+    { label: "Cherry", value: "cherry" },
+  ];
+  return (
+    <section id="select">
+      <SectionHeader title="Select" description="Dropdown selection. Default, multi-select, searchable." />
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--spacing-4)' }}>
+        <div style={{ width: '200px' }}>
+          <Select options={options} placeholder="Select fruit" />
+        </div>
+        <div style={{ width: '200px' }}>
+          <Select options={options} placeholder="Multi-select" multiple />
+        </div>
+        <div style={{ width: '200px' }}>
+          <Select options={options} placeholder="Searchable" searchable />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function DialogSection() {
+  const [openSm, setOpenSm] = useState(false);
+  const [openMd, setOpenMd] = useState(false);
+  const [openLg, setOpenLg] = useState(false);
+  const [openFull, setOpenFull] = useState(false);
+
+  return (
+    <section id="dialog">
+      <SectionHeader title="Dialog" description="Modal window. Sizes: sm, md, lg, full." />
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--spacing-4)' }}>
+        <Button onClick={() => setOpenSm(true)}>Open SM</Button>
+        <Dialog isOpen={openSm} onClose={() => setOpenSm(false)} title="Small Dialog" size="sm">
+          <p>This is a small dialog.</p>
+        </Dialog>
+
+        <Button onClick={() => setOpenMd(true)}>Open MD</Button>
+        <Dialog isOpen={openMd} onClose={() => setOpenMd(false)} title="Medium Dialog" size="md">
+          <p>This is a medium dialog.</p>
+        </Dialog>
+
+        <Button onClick={() => setOpenLg(true)}>Open LG</Button>
+        <Dialog isOpen={openLg} onClose={() => setOpenLg(false)} title="Large Dialog" size="lg">
+          <p>This is a large dialog.</p>
+        </Dialog>
+
+        <Button onClick={() => setOpenFull(true)}>Open Full</Button>
+        <Dialog isOpen={openFull} onClose={() => setOpenFull(false)} title="Full Dialog" size="full">
+          <p>This is a full screen dialog.</p>
+        </Dialog>
+      </div>
+    </section>
+  );
+}
+
+function SheetSection() {
+  const [openLeft, setOpenLeft] = useState(false);
+  const [openRight, setOpenRight] = useState(false);
+  const [openTop, setOpenTop] = useState(false);
+  const [openBottom, setOpenBottom] = useState(false);
+
+  return (
+    <section id="sheet">
+      <SectionHeader title="Sheet" description="Slide-out panel. Sides: left, right, top, bottom." />
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--spacing-4)' }}>
+        <Button onClick={() => setOpenLeft(true)}>Left Sheet</Button>
+        <Sheet isOpen={openLeft} onClose={() => setOpenLeft(false)} side="left">
+          <div style={{ padding: 'var(--spacing-4)' }}>Left Sheet Content</div>
+        </Sheet>
+
+        <Button onClick={() => setOpenRight(true)}>Right Sheet</Button>
+        <Sheet isOpen={openRight} onClose={() => setOpenRight(false)} side="right">
+          <div style={{ padding: 'var(--spacing-4)' }}>Right Sheet Content</div>
+        </Sheet>
+
+        <Button onClick={() => setOpenTop(true)}>Top Sheet</Button>
+        <Sheet isOpen={openTop} onClose={() => setOpenTop(false)} side="top">
+          <div style={{ padding: 'var(--spacing-4)' }}>Top Sheet Content</div>
+        </Sheet>
+
+        <Button onClick={() => setOpenBottom(true)}>Bottom Sheet</Button>
+        <Sheet isOpen={openBottom} onClose={() => setOpenBottom(false)} side="bottom">
+          <div style={{ padding: 'var(--spacing-4)' }}>Bottom Sheet Content</div>
+        </Sheet>
       </div>
     </section>
   );
@@ -363,6 +476,10 @@ function BadgeSection() {
         <Badge variant="warn">Warning</Badge>
         <Badge variant="error">Error</Badge>
         <Badge variant="outline">Outline</Badge>
+      </div>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--spacing-3)', marginTop: 'var(--spacing-4)' }}>
+        <Badge size="sm">Small</Badge>
+        <Badge size="md">Medium</Badge>
       </div>
     </section>
   );
@@ -414,13 +531,18 @@ function SwitchSection() {
       <SectionHeader title="Switch" description="Controlled toggle. Sizes: sm, md." />
       <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-6)' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-4)' }}>
-          <Switch size="md" label="Medium (off)" defaultChecked={false} />
-          <Switch size="md" label="Medium (on)" defaultChecked={true} />
+          <Switch size="md" defaultChecked={false} />
+          <span style={{ font: 'var(--font-weight-regular) var(--text-sm) var(--font-sans)', color: 'var(--color-foreground-muted)' }}>Medium (off)</span>
+          <Switch size="md" defaultChecked={true} />
+          <span style={{ font: 'var(--font-weight-regular) var(--text-sm) var(--font-sans)', color: 'var(--color-foreground-muted)' }}>Medium (on)</span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-4)' }}>
-          <Switch size="sm" label="Small (off)" defaultChecked={false} />
-          <Switch size="sm" label="Small (on)" defaultChecked={true} />
-          <Switch size="sm" label="Disabled" defaultChecked={false} disabled />
+          <Switch size="sm" defaultChecked={false} />
+          <span style={{ font: 'var(--font-weight-regular) var(--text-sm) var(--font-sans)', color: 'var(--color-foreground-muted)' }}>Small (off)</span>
+          <Switch size="sm" defaultChecked={true} />
+          <span style={{ font: 'var(--font-weight-regular) var(--text-sm) var(--font-sans)', color: 'var(--color-foreground-muted)' }}>Small (on)</span>
+          <Switch size="sm" defaultChecked={false} disabled />
+          <span style={{ font: 'var(--font-weight-regular) var(--text-sm) var(--font-sans)', color: 'var(--color-foreground-muted)' }}>Disabled</span>
         </div>
       </div>
     </section>
@@ -435,13 +557,13 @@ function SpinnerSection() {
         <div>
           <h3 style={{ font: 'var(--font-weight-medium) var(--text-sm) var(--font-sans)', marginBottom: 'var(--spacing-3)' }}>Indeterminate</h3>
           <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-4)' }}>
-            {(['xs', 'sm', 'md', 'lg', 'xl'] as const).map(s => <Spinner key={s} size={s} />)}
+            {(['xs', 'sm', 'md', 'lg', 'xl'] as const).map(s => <Spinner key={s} size={s} variant="indeterminate" />)}
           </div>
         </div>
         <div>
           <h3 style={{ font: 'var(--font-weight-medium) var(--text-sm) var(--font-sans)', marginBottom: 'var(--spacing-3)' }}>Determinate</h3>
           <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-6)' }}>
-            {[25, 50, 75, 100].map(p => <Spinner key={p} size="md" determinate={p} />)}
+            {[25, 50, 75, 100].map(p => <Spinner key={p} size="md" variant="determinate" progress={p} />)}
           </div>
         </div>
       </div>
@@ -457,21 +579,19 @@ function SkeletonSection() {
         <div>
           <h3 style={{ font: 'var(--font-weight-medium) var(--text-sm) var(--font-sans)', marginBottom: 'var(--spacing-3)' }}>Text lines</h3>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-2)', maxWidth: '400px' }}>
-            <Skeleton variant="text" width="100%" />
-            <Skeleton variant="text" width="80%" />
-            <Skeleton variant="text" width="60%" />
+            <Skeleton variant="text" lines={3} />
           </div>
         </div>
         <div>
           <h3 style={{ font: 'var(--font-weight-medium) var(--text-sm) var(--font-sans)', marginBottom: 'var(--spacing-3)' }}>Block</h3>
-          <Skeleton variant="block" width="300px" height="120px" />
+          <Skeleton variant="block" style={{ width: '300px', height: '120px' }} />
         </div>
         <div>
           <h3 style={{ font: 'var(--font-weight-medium) var(--text-sm) var(--font-sans)', marginBottom: 'var(--spacing-3)' }}>Circle</h3>
           <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-4)' }}>
-            <Skeleton variant="circle" size="32px" />
-            <Skeleton variant="circle" size="40px" />
-            <Skeleton variant="circle" size="48px" />
+            <Skeleton variant="circle" size={32} />
+            <Skeleton variant="circle" size={40} />
+            <Skeleton variant="circle" size={48} />
           </div>
         </div>
       </div>
@@ -482,21 +602,50 @@ function SkeletonSection() {
 function TabSection() {
   return (
     <section id="tab">
-      <SectionHeader title="Tab" description="Horizontal tab navigation with animated indicator." />
-      <TabGroup items={["Overview", "Settings", "Activity", "Members", "Advanced"]} />
+      <SectionHeader title="Tab" description="Horizontal and vertical tab navigation." />
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-8)' }}>
+        <div>
+          <h3 style={{ font: 'var(--font-weight-medium) var(--text-sm) var(--font-sans)', marginBottom: 'var(--spacing-3)' }}>Horizontal</h3>
+          <Tabs defaultValue="overview" orientation="horizontal">
+            <TabList>
+              <TabTrigger value="overview">Overview</TabTrigger>
+              <TabTrigger value="settings">Settings</TabTrigger>
+              <TabTrigger value="activity">Activity</TabTrigger>
+            </TabList>
+            <TabContent value="overview" style={{ padding: 'var(--spacing-4)' }}>Overview Content</TabContent>
+            <TabContent value="settings" style={{ padding: 'var(--spacing-4)' }}>Settings Content</TabContent>
+            <TabContent value="activity" style={{ padding: 'var(--spacing-4)' }}>Activity Content</TabContent>
+          </Tabs>
+        </div>
+        <div>
+          <h3 style={{ font: 'var(--font-weight-medium) var(--text-sm) var(--font-sans)', marginBottom: 'var(--spacing-3)' }}>Vertical</h3>
+          <Tabs defaultValue="overview" orientation="vertical">
+            <TabList>
+              <TabTrigger value="overview">Overview</TabTrigger>
+              <TabTrigger value="settings">Settings</TabTrigger>
+              <TabTrigger value="activity">Activity</TabTrigger>
+            </TabList>
+            <TabContent value="overview" style={{ padding: 'var(--spacing-4)' }}>Overview Content</TabContent>
+            <TabContent value="settings" style={{ padding: 'var(--spacing-4)' }}>Settings Content</TabContent>
+            <TabContent value="activity" style={{ padding: 'var(--spacing-4)' }}>Activity Content</TabContent>
+          </Tabs>
+        </div>
+      </div>
     </section>
   );
 }
 
 function ToastSection() {
+  const { addToast } = useToast();
+
   return (
     <section id="toast">
       <SectionHeader title="Toast" description="Notification variants: info, success, warn, error." />
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-4)', maxWidth: '420px' }}>
-        <ToastPreview variant="info" title="Task started" description="Your agent is now working on the task." />
-        <ToastPreview variant="success" title="Task complete" description="Report saved to report.md." />
-        <ToastPreview variant="warn" title="Rate limit approaching" description="You have 2 tasks remaining today." />
-        <ToastPreview variant="error" title="Connection lost" description="Failed to connect to sandbox." />
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--spacing-4)' }}>
+        <Button onClick={() => addToast({ title: 'Task started', description: 'Your agent is now working on the task.', variant: 'info' })}>Info Toast</Button>
+        <Button onClick={() => addToast({ title: 'Task complete', description: 'Report saved to report.md.', variant: 'success' })}>Success Toast</Button>
+        <Button onClick={() => addToast({ title: 'Rate limit approaching', description: 'You have 2 tasks remaining today.', variant: 'warn' })}>Warn Toast</Button>
+        <Button onClick={() => addToast({ title: 'Connection lost', description: 'Failed to connect to sandbox.', variant: 'error' })}>Error Toast</Button>
       </div>
     </section>
   );
@@ -507,9 +656,15 @@ function TooltipSection() {
     <section id="tooltip">
       <SectionHeader title="Tooltip" description="Text with optional shortcut keys. Smart positioning." />
       <div style={{ display: 'flex', gap: 'var(--spacing-6)', alignItems: 'center' }}>
-        <TooltipContent text="Toggle theme" shortcut="Cmd+T" />
-        <TooltipContent text="Open command palette" shortcut="Cmd+K" />
-        <TooltipContent text="This is a longer tooltip that wraps to multiple lines when needed" />
+        <Tooltip content="Toggle theme" shortcuts={['Cmd', 'T']}>
+          <Button variant="secondary">Hover me</Button>
+        </Tooltip>
+        <Tooltip content="Open command palette" shortcuts={['Cmd', 'K']}>
+          <Button variant="secondary">Hover me</Button>
+        </Tooltip>
+        <Tooltip content="This is a longer tooltip that wraps to multiple lines when needed">
+          <Button variant="secondary">Hover me</Button>
+        </Tooltip>
       </div>
     </section>
   );
@@ -566,246 +721,6 @@ function SpacingBar({ token, value }: { token: string; value: string }) {
   );
 }
 
-/* ── Button ── */
-type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-  variant?: 'primary' | 'secondary' | 'ghost' | 'destructive' | 'link';
-  size?: 'xs' | 'sm' | 'md' | 'lg';
-  iconLeft?: React.ReactNode; iconRight?: React.ReactNode; iconOnly?: React.ReactNode;
-  loading?: boolean;
-};
-
-function Button({ variant = 'primary', size = 'md', iconLeft, iconRight, iconOnly, loading, children, disabled, ...props }: ButtonProps) {
-  const [hovered, setHovered] = useState(false);
-  const [active, setActive] = useState(false);
-  const [focused, setFocused] = useState(false);
-
-  const sizes: Record<string, React.CSSProperties> = {
-    xs: { height: '24px', padding: iconOnly ? '0' : '0 8px', fontSize: 'var(--text-xs)', width: iconOnly ? '24px' : 'auto' },
-    sm: { height: '28px', padding: iconOnly ? '0' : '0 10px', fontSize: 'var(--text-sm)', width: iconOnly ? '28px' : 'auto' },
-    md: { height: '32px', padding: iconOnly ? '0' : '0 14px', fontSize: 'var(--text-sm)', width: iconOnly ? '32px' : 'auto' },
-    lg: { height: '40px', padding: iconOnly ? '0' : '0 20px', fontSize: 'var(--text-base)', width: iconOnly ? '40px' : 'auto' },
-  };
-
-  const variants: Record<string, () => React.CSSProperties> = {
-    primary: () => ({ backgroundColor: hovered ? 'var(--color-accent-hover)' : 'var(--color-accent)', color: 'var(--color-background)' }),
-    secondary: () => ({ backgroundColor: hovered ? 'var(--color-muted)' : 'var(--color-background-subtle)', color: 'var(--color-foreground)', border: hovered ? '1px solid var(--color-border-strong)' : '1px solid var(--color-border)' }),
-    ghost: () => ({ backgroundColor: hovered ? 'var(--color-background-subtle)' : 'transparent', color: hovered ? 'var(--color-foreground)' : 'var(--color-foreground-muted)' }),
-    destructive: () => ({ backgroundColor: hovered ? 'var(--color-destructive-subtle)' : 'var(--color-destructive)', color: '#FFFFFF' }),
-    link: () => ({ backgroundColor: 'transparent', color: hovered ? 'var(--color-accent-hover)' : 'var(--color-accent)', textDecoration: hovered ? 'underline' : 'none' }),
-  };
-
-  return (
-    <button style={{
-      display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 'var(--spacing-1)',
-      borderRadius: 'var(--radius-md)', fontFamily: 'var(--font-sans)', fontWeight: 'var(--font-weight-semibold)',
-      transition: 'all var(--duration-default) var(--ease-default)',
-      cursor: disabled || loading ? 'not-allowed' : 'pointer',
-      opacity: disabled || loading ? 0.5 : 1, pointerEvents: disabled || loading ? 'none' : 'auto',
-      transform: active && !disabled && !loading ? 'scale(0.98)' : 'scale(1)',
-      outline: 'none',
-      boxShadow: focused ? '0 0 0 2px var(--color-background), 0 0 0 4px var(--color-accent)' : 'none',
-      border: 'none', textDecoration: 'none',
-      ...sizes[size], ...variants[variant](),
-    }}
-      onMouseEnter={() => setHovered(true)} onMouseLeave={() => { setHovered(false); setActive(false); }}
-      onMouseDown={() => setActive(true)} onMouseUp={() => setActive(false)}
-      onFocus={() => setFocused(true)} onBlur={() => setFocused(false)}
-      disabled={disabled || loading} {...props}
-    >
-      {loading ? <Loader2 size={size === 'xs' || size === 'sm' ? 14 : 16} style={{ animation: 'spin 1s linear infinite' }} /> :
-        iconOnly ? iconOnly : <>{iconLeft}{children}{iconRight}</>}
-    </button>
-  );
-}
-
-/* ── Input ── */
-function Input({ label, placeholder, error, hint, disabled, leadingIcon, trailingIcon }: { label?: string; placeholder?: string; error?: string; hint?: string; disabled?: boolean; leadingIcon?: React.ReactNode; trailingIcon?: React.ReactNode }) {
-  const [hovered, setHovered] = useState(false);
-  const [focused, setFocused] = useState(false);
-  const borderColor = error ? 'var(--color-destructive)' : focused ? 'var(--color-accent)' : hovered ? 'var(--color-border-strong)' : 'var(--color-border)';
-  return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-1)', minWidth: '200px', flex: '1 1 200px' }}>
-      {label && <label style={{ font: 'var(--font-weight-regular) var(--text-sm) var(--font-sans)', color: 'var(--color-foreground-muted)' }}>{label}</label>}
-      <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-2)', height: '32px', padding: '0 var(--spacing-2)', borderRadius: 'var(--radius-md)', border: `${focused ? '2px' : '1px'} solid ${borderColor}`, backgroundColor: disabled ? 'var(--color-muted)' : 'var(--color-background)', transition: 'all var(--duration-default) var(--ease-default)' }}>
-        {leadingIcon && <span style={{ color: 'var(--color-foreground-muted)', display: 'flex' }}>{leadingIcon}</span>}
-        <input placeholder={placeholder} disabled={disabled} onFocus={() => setFocused(true)} onBlur={() => setFocused(false)}
-          onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}
-          style={{ flex: 1, border: 'none', outline: 'none', backgroundColor: 'transparent', color: disabled ? 'var(--color-foreground-faint)' : 'var(--color-foreground)', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', cursor: disabled ? 'not-allowed' : 'text' }} />
-        {trailingIcon && <span style={{ color: 'var(--color-foreground-muted)', display: 'flex' }}>{trailingIcon}</span>}
-      </div>
-      {error && <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-1)', font: 'var(--font-weight-regular) var(--text-xs) var(--font-sans)', color: 'var(--color-destructive)' }}><AlertCircle size={14} /> {error}</div>}
-      {hint && !error && <div style={{ font: 'var(--font-weight-regular) var(--text-xs) var(--font-sans)', color: 'var(--color-foreground-faint)' }}>{hint}</div>}
-    </div>
-  );
-}
-
-/* ── TextArea ── */
-function TextArea({ label, placeholder, charCount, maxChars }: { label?: string; placeholder?: string; charCount?: number; maxChars?: number }) {
-  const [focused, setFocused] = useState(false);
-  const [hovered, setHovered] = useState(false);
-  const borderColor = focused ? 'var(--color-accent)' : hovered ? 'var(--color-border-strong)' : 'var(--color-border)';
-  return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-1)' }}>
-      {label && <label style={{ font: 'var(--font-weight-regular) var(--text-sm) var(--font-sans)', color: 'var(--color-foreground-muted)' }}>{label}</label>}
-      <div style={{ position: 'relative' }}>
-        <textarea placeholder={placeholder} onFocus={() => setFocused(true)} onBlur={() => setFocused(false)}
-          onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}
-          style={{ width: '100%', minHeight: '80px', maxHeight: '240px', padding: 'var(--spacing-2)', borderRadius: 'var(--radius-md)', border: `1px solid ${borderColor}`, backgroundColor: 'var(--color-background)', color: 'var(--color-foreground)', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', outline: 'none', resize: 'vertical', transition: 'all var(--duration-default) var(--ease-default)', boxSizing: 'border-box' }} />
-        {maxChars && <div style={{ position: 'absolute', bottom: 'var(--spacing-2)', right: 'var(--spacing-2)', font: 'var(--font-weight-regular) var(--text-xs) var(--font-mono)', color: 'var(--color-foreground-faint)' }}>{charCount || 0}/{maxChars}</div>}
-      </div>
-    </div>
-  );
-}
-
-/* ── Badge ── */
-function Badge({ variant = 'default', children }: { variant?: 'default' | 'success' | 'warn' | 'error' | 'outline'; children: React.ReactNode }) {
-  const c: Record<string, { bg: string; text: string; border: string }> = {
-    default: { bg: 'var(--color-muted)', text: 'var(--color-foreground-muted)', border: 'transparent' },
-    success: { bg: 'var(--color-success-subtle)', text: 'var(--color-success)', border: 'transparent' },
-    warn: { bg: 'var(--color-warning-subtle)', text: 'var(--color-warning)', border: 'transparent' },
-    error: { bg: 'var(--color-destructive-subtle)', text: 'var(--color-destructive)', border: 'transparent' },
-    outline: { bg: 'transparent', text: 'var(--color-accent)', border: 'var(--color-accent)' },
-  };
-  const v = c[variant];
-  return (
-    <span style={{ display: 'inline-flex', alignItems: 'center', height: '22px', padding: '2px 8px', borderRadius: 'var(--radius-full)', backgroundColor: v.bg, color: v.text, border: variant === 'outline' ? '1px solid ' + v.border : 'none', font: 'var(--font-weight-semibold) var(--text-xs) var(--font-sans)' }}>{children}</span>
-  );
-}
-
-/* ── Card ── */
-function Card({ children }: { children: React.ReactNode }) {
-  const [hovered, setHovered] = useState(false);
-  return (
-    <div
-      style={{ backgroundColor: 'var(--color-background-elevated)', border: `1px solid ${hovered ? 'var(--color-border-strong)' : 'var(--color-border)'}`, borderRadius: 'var(--radius-md)', overflow: 'hidden', transition: 'border-color var(--duration-default) var(--ease-default)' }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-    >{children}</div>
-  );
-}
-function CardHeader({ children }: { children: React.ReactNode }) {
-  return <div style={{ padding: 'var(--spacing-4)', borderBottom: '1px solid var(--color-border)', font: 'var(--font-weight-semibold) var(--text-base) var(--font-sans)' }}>{children}</div>;
-}
-function CardBody({ children }: { children: React.ReactNode }) {
-  return <div style={{ padding: 'var(--spacing-4)', font: 'var(--font-weight-regular) var(--text-sm) var(--font-sans)', color: 'var(--color-foreground-muted)', lineHeight: 1.6 }}>{children}</div>;
-}
-function CardFooter({ children }: { children: React.ReactNode }) {
-  return <div style={{ padding: 'var(--spacing-4)', borderTop: '1px solid var(--color-border)', display: 'flex', justifyContent: 'flex-end' }}>{children}</div>;
-}
-
-/* ── Avatar ── */
-function Avatar({ initials = '?', size = 'md', status }: { initials?: string; size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'; status?: 'online' | 'away' | 'busy' | 'offline' }) {
-  const s: Record<string, { d: string; fs: string }> = { xs: { d: '20px', fs: '8px' }, sm: { d: '24px', fs: '10px' }, md: { d: '32px', fs: '12px' }, lg: { d: '40px', fs: '14px' }, xl: { d: '48px', fs: '16px' } };
-  const sc: Record<string, string> = { online: 'var(--color-success)', away: 'var(--color-warning)', busy: 'var(--color-destructive)', offline: 'var(--color-foreground-faint)' };
-  return (
-    <div style={{ position: 'relative', display: 'inline-flex' }}>
-      <div style={{ width: s[size].d, height: s[size].d, borderRadius: 'var(--radius-full)', backgroundColor: 'var(--color-muted)', display: 'flex', alignItems: 'center', justifyContent: 'center', font: `var(--font-weight-semibold) ${s[size].fs} var(--font-sans)`, color: 'var(--color-foreground-muted)', overflow: 'hidden', flexShrink: 0 }}>{initials.slice(0, 2).toUpperCase()}</div>
-      {status && <div style={{ position: 'absolute', bottom: '-2px', right: '-2px', width: '8px', height: '8px', borderRadius: 'var(--radius-full)', backgroundColor: sc[status], border: '2px solid var(--color-background)' }} />}
-    </div>
-  );
-}
-
-/* ── Switch ── */
-function Switch({ size = 'md', label, defaultChecked = false, disabled }: { size?: 'sm' | 'md'; label?: string; defaultChecked?: boolean; disabled?: boolean }) {
-  const [checked, setChecked] = useState(defaultChecked);
-  const d = size === 'md' ? { tw: '40px', th: '22px', tb: '16px' } : { tw: '32px', th: '18px', tb: '12px' };
-  const tx = checked ? `calc(${d.tw} - ${d.tb} - 4px)` : '4px';
-  return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-2)' }}>
-      <div role="switch" aria-checked={checked} tabIndex={disabled ? -1 : 0}
-        onClick={() => !disabled && setChecked(!checked)}
-        onKeyDown={e => { if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); !disabled && setChecked(!checked); } }}
-        style={{ width: d.tw, height: d.th, borderRadius: 'var(--radius-full)', backgroundColor: checked ? 'var(--color-accent)' : 'var(--color-muted)', cursor: disabled ? 'not-allowed' : 'pointer', opacity: disabled ? 0.5 : 1, transition: 'background-color var(--duration-default) var(--ease-default)', position: 'relative', flexShrink: 0 }}>
-        <div style={{ width: d.tb, height: d.tb, borderRadius: 'var(--radius-full)', backgroundColor: '#FFFFFF', position: 'absolute', top: `calc((${d.th} - ${d.tb}) / 2)`, left: tx, transition: 'left var(--duration-default) var(--ease-default)' }} />
-      </div>
-      {label && <span style={{ font: 'var(--font-weight-regular) var(--text-sm) var(--font-sans)', color: 'var(--color-foreground-muted)' }}>{label}</span>}
-    </div>
-  );
-}
-
-/* ── Spinner ── */
-function Spinner({ size = 'md', determinate }: { size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'; determinate?: number }) {
-  const dim = ({ xs: 16, sm: 20, md: 24, lg: 32, xl: 40 } as const)[size];
-  const r = (dim - 2) / 2;
-  const c = 2 * Math.PI * r;
-  const off = determinate !== undefined ? c * (1 - determinate / 100) : undefined;
-  return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 'var(--spacing-1)' }}>
-      <svg width={dim} height={dim} viewBox={`0 0 ${dim} ${dim}`}>
-        <circle cx={dim / 2} cy={dim / 2} r={r} fill="none" stroke="var(--color-muted)" strokeWidth={2} />
-        <circle cx={dim / 2} cy={dim / 2} r={r} fill="none" stroke="var(--color-accent)" strokeWidth={2}
-          strokeDasharray={determinate ? c : `${c * 0.75} ${c * 0.25}`} strokeDashoffset={off} strokeLinecap="round"
-          style={{ transformOrigin: 'center', transform: 'rotate(-90deg)', animation: determinate ? 'none' : 'spin 0.8s linear infinite', transition: determinate !== undefined ? 'stroke-dashoffset 0.3s ease' : 'none' }} />
-      </svg>
-      {determinate !== undefined && <span style={{ font: 'var(--font-weight-regular) var(--text-xs) var(--font-mono)', color: 'var(--color-foreground-muted)' }}>{determinate}%</span>}
-    </div>
-  );
-}
-
-/* ── Skeleton ── */
-function Skeleton({ variant = 'text', width, height, size }: { variant?: 'text' | 'block' | 'circle'; width?: string; height?: string; size?: string }) {
-  return <div style={{ backgroundColor: 'var(--color-muted)', borderRadius: variant === 'circle' ? 'var(--radius-full)' : 'var(--radius-sm)', width: variant === 'circle' ? size : width, height: variant === 'circle' ? size : height, animation: 'shimmer 1.5s linear infinite' }} />;
-}
-
-/* ── TabGroup ── */
-function TabGroup({ items }: { items: string[] }) {
-  const [active, setActive] = useState(0);
-  const [ind, setInd] = useState({ left: 0, width: 0 });
-  const refs = useRef<HTMLDivElement[]>([]);
-  useEffect(() => { if (refs.current[active]) { const el = refs.current[active]; setInd({ left: el.offsetLeft, width: el.offsetWidth }); } }, [active]);
-  return (
-    <div style={{ display: 'flex', borderBottom: '1px solid var(--color-border)', position: 'relative', overflowX: 'auto' }}>
-      {items.map((item, i) => (
-        <div key={item} ref={el => { if (el) refs.current[i] = el; }} onClick={() => setActive(i)}
-          style={{ padding: 'var(--spacing-3) var(--spacing-4)', minWidth: '80px', textAlign: 'center', cursor: 'pointer',
-            font: `${i === active ? 'var(--font-weight-semibold)' : 'var(--font-weight-medium)'} var(--text-sm) var(--font-sans)`,
-            color: i === active ? 'var(--color-foreground)' : 'var(--color-foreground-muted)',
-            transition: 'color var(--duration-default) var(--ease-default)', userSelect: 'none', }}
-          onMouseEnter={e => { if (i !== active) e.currentTarget.style.color = 'var(--color-foreground)'; }}
-          onMouseLeave={e => { if (i !== active) e.currentTarget.style.color = 'var(--color-foreground-muted)'; }}
-        >{item}</div>
-      ))}
-      <div style={{ position: 'absolute', bottom: 0, left: ind.left, width: ind.width, height: '2px', backgroundColor: 'var(--color-accent)', transition: 'left 0.2s var(--ease-default), width 0.2s var(--ease-default)' }} />
-    </div>
-  );
-}
-
-/* ── ToastPreview ── */
-function ToastPreview({ variant, title, description }: { variant: 'info' | 'success' | 'warn' | 'error'; title: string; description: string }) {
-  const icons: Record<string, React.ReactNode> = { info: <Info size={16} />, success: <Check size={16} />, warn: <AlertTriangle size={16} />, error: <AlertCircle size={16} /> };
-  const bc: Record<string, string> = { info: 'var(--color-accent)', success: 'var(--color-success)', warn: 'var(--color-warning)', error: 'var(--color-destructive)' };
-  return (
-    <div style={{ maxWidth: '420px', backgroundColor: 'var(--color-background-elevated)', border: '1px solid var(--color-border)', borderLeft: `3px solid ${bc[variant]}`, borderRadius: 'var(--radius-md)', padding: 'var(--spacing-3) var(--spacing-4)', display: 'flex', gap: 'var(--spacing-3)', alignItems: 'flex-start', boxShadow: 'var(--shadow-xl)' }}>
-      <span style={{ color: bc[variant], display: 'flex', marginTop: '2px', flexShrink: 0 }}>{icons[variant]}</span>
-      <div style={{ flex: 1 }}>
-        <div style={{ font: 'var(--font-weight-semibold) var(--text-sm) var(--font-sans)', marginBottom: '2px' }}>{title}</div>
-        <div style={{ font: 'var(--font-weight-regular) var(--text-sm) var(--font-sans)', color: 'var(--color-foreground-muted)', lineHeight: 1.4 }}>{description}</div>
-      </div>
-      <X size={14} style={{ color: 'var(--color-foreground-faint)', cursor: 'pointer', flexShrink: 0 }} />
-    </div>
-  );
-}
-
-/* ── TooltipContent ── */
-function TooltipContent({ text, shortcut }: { text: string; shortcut?: string }) {
-  const [show, setShow] = useState(false);
-  return (
-    <div style={{ position: 'relative', display: 'inline-flex' }}>
-      <div onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)}
-        style={{ padding: 'var(--spacing-2) var(--spacing-3)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-sm)', cursor: 'pointer', font: 'var(--font-weight-regular) var(--text-sm) var(--font-sans)', color: 'var(--color-foreground-muted)' }}>
-        Hover me
-      </div>
-      {show && (
-        <div style={{ position: 'absolute', bottom: 'calc(100% + 8px)', left: '50%', transform: 'translateX(-50%)', backgroundColor: 'var(--color-foreground)', color: 'var(--color-background)', padding: '6px 10px', borderRadius: 'var(--radius-sm)', whiteSpace: 'nowrap', zIndex: 10, display: 'flex', alignItems: 'center', gap: 'var(--spacing-2)' }}>
-          <span style={{ font: 'var(--font-weight-regular) var(--text-xs) var(--font-sans)' }}>{text}</span>
-          {shortcut && <kbd style={{ font: 'var(--font-weight-regular) var(--text-xs) var(--font-mono)', padding: '1px 4px', borderRadius: '3px', backgroundColor: 'var(--color-muted)', color: 'var(--color-foreground-muted)' }}>{shortcut}</kbd>}
-        </div>
-      )}
-    </div>
-  );
-}
-
-/* ── MotionBar ── */
 function MotionBar({ label, duration = '200ms', easing = 'var(--ease-default)' }: { label: string; duration?: string; easing?: string }) {
   const [key, setKey] = useState(0);
   useEffect(() => { const iv = setInterval(() => setKey(k => k + 1), parseInt(duration) + 300); return () => clearInterval(iv); }, [duration]);

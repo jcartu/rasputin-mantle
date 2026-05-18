@@ -67,7 +67,7 @@ One line. The installer clones the repo, configures your API keys, brings up the
 
 Rasputin Mantle is a self-hosted, MIT-licensed agent platform. The orchestration runs on your machine. The model spend lives in your account. No SaaS dependency, no billing layer, no opaque backend.
 
-v1.2 ships a complete product surface: documented design system, 24 Radix-backed component primitives, three-pane resizable shell, real-time agent trace, Neko WebRTC live browser, scrubbable replay, share links, mobile layouts, onboarding, and full WCAG AA accessibility.
+v1.2 ships a complete product surface: documented design system, 15 Radix-backed component primitives, three-pane resizable shell, real-time agent trace, Neko WebRTC live browser, mobile layouts, and full WCAG AA accessibility.
 
 Underneath, the engine remains:
 
@@ -133,27 +133,15 @@ A complete, documented design system in `design-system/`. Teal-sage accent. Geis
 - **`COPY.md`** — voice and tone. Sentence case. Active voice. Forbidden words list
 - **`MOTION.md`** — motion vocabulary. Standard easings, durations, reduced-motion
 
-### 24 component primitives
+### 15 component primitives
 
 Built on Radix UI. Styled against design tokens. Storybook stories and unit tests for each.
 
-`Button` · `Input` · `Textarea` · `Select` · `Checkbox` · `Switch` · `Slider` · `Tabs` · `Dialog` · `Sheet` · `Drawer` · `Popover` · `Tooltip` · `Toast` · `Badge` · `Avatar` · `Card` · `Separator` · `Progress` · `Skeleton` · `Spinner` · `EmptyState` · `Code` · `CommandPalette`
+`Button` · `Input` · `Tab` · `Dialog` · `Sheet` · `Textarea` · `Select` · `Switch` · `Tooltip` · `Toast` · `Badge` · `Avatar` · `Card` · `Skeleton` · `Spinner`
 
 ### Session view
 
 Three resizable panes: agent trace (left), Neko WebRTC live browser (center), artifact list (right). Structured events streamed over SSE. Collapsible. Keyboard navigable.
-
-### Replay mode
-
-Completed sessions as a scrubbable timeline. Drag the playhead. Jump to any tool call. Watch screenshots and DOM diffs side-by-side.
-
-### Share links
-
-Signed share tokens. Read-only replay. No cost data, no internal IDs. Expiry and optional passphrase enforced.
-
-### Onboarding
-
-Multi-step flow: API key entry → permission consent → first task suggestions. Writes to `localStorage` and `~/.mantle/config.json`. Idempotent.
 
 ### Mobile layouts
 
@@ -235,6 +223,19 @@ exec_timeout = 120
 - **Tauri AppImage** — DEB and RPM compile. AppImage bundling fails on icon manifest and is skipped.
 
 Full audit log in [`AUDIT_2026_05_16.md`](AUDIT_2026_05_16.md). Every claim is reproducible.
+
+---
+
+## On the roadmap (v1.3+)
+
+- **Replay mode** — Completed sessions as a scrubbable timeline with playhead, tool-call jumps, and side-by-side screenshot/DOM diffs
+- **Share links** — Signed share tokens for read-only replay, no cost data, expiry and optional passphrase
+- **Onboarding** — Multi-step flow: API key entry → permission consent → first task suggestions, idempotent config writes
+- **Tauri desktop** — Mac DMG, Linux DEB/RPM, Windows MSI binaries (config exists, binaries pending)
+- **Browser extension** — Chrome/Edge "Send to Mantle" extension for daily-use surface
+- **Projects** — Persistent workspaces with knowledge base, config inheritance, and session inheritance
+- **Skills standard** — Anthropic Agent Skills format adoption, marketplace, one-click "save as skill"
+- **Integrations** — Slack, email, scheduled tasks UI
 
 ---
 

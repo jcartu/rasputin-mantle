@@ -40,6 +40,8 @@ export interface FileTreeProps {
   onFileOpen?: (file: SandboxFileEntry) => void;
   /** Override fetcher — defaults to `/api/sandbox/{sessionId}/files`. */
   fetchEntries?: (sessionId: string, path: string) => Promise<SandboxFileEntry[]>;
+  /** Replay snapshot entries; when provided no sandbox fetches are made. */
+  entries?: SandboxFileEntry[];
 }
 
 interface NodeState {
@@ -298,6 +300,7 @@ export function FileTree({
   sessionId,
   onFileOpen,
   fetchEntries,
+  entries,
 }: FileTreeProps): React.ReactElement {
   const fetcher = fetchEntries ?? defaultFetcher;
   const [nodes, setNodes] = React.useState<Record<string, NodeState>>({});
@@ -347,6 +350,12 @@ export function FileTree({
 
   // Load root on mount.
   React.useEffect(() => {
+    if (entries) {
+      setRootEntries(entries);
+      setRootLoading(false);
+      setRootError(null);
+      return;
+    }
     let cancelled = false;
     setRootLoading(true);
     setRootError(null);
@@ -366,7 +375,7 @@ export function FileTree({
     return () => {
       cancelled = true;
     };
-  }, [fetcher, sessionId]);
+  }, [entries, fetcher, sessionId]);
 
   const handleToggle = React.useCallback(
     (entry: SandboxFileEntry) => {

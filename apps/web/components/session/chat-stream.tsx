@@ -16,6 +16,7 @@ import {
   CostGutter,
   type CostGutterEvent,
 } from '@/components/session/cost-gutter';
+import type { ReplayStep } from '@/components/session/timeline-scrubber';
 
 export interface StreamEvent extends ToolCallEvent {
   id?: string;
@@ -24,6 +25,8 @@ export interface StreamEvent extends ToolCallEvent {
 
 export interface ChatStreamProps {
   sessionId: string;
+  replaySteps?: ReplayStep[];
+  replayStep?: number;
 }
 
 type ConnectionStatus = 'connecting' | 'connected' | 'error';
@@ -74,6 +77,38 @@ const parseStreamEvent = (raw: string): StreamEvent | null => {
   }
 };
 
+const stepToStreamEvent = (step: ReplayStep): StreamEvent | null => {
+  const payload = step.payload;
+  const eventType = typeof payload.event_type === 'string' ? payload.event_type : step.event_type;
+  const dataRecord = typeof payload.data === 'object' && payload.data !== null
+    ? payload.data as Record<string, unknown>
+    : {};
+  const data = dataRecord as ToolCallEventData;
+  const timestamp = step.timestamp ?? (typeof payload.timestamp === 'number'
+    ? new Date(payload.timestamp * 1000).toISOString()
+    : new Date().toISOString());
+  const cost = typeof payload.cost === 'number' ? payload.cost : undefined;
+  const tokensRaw = typeof payload.tokens === 'object' && payload.tokens !== null
+    ? (payload.tokens as Record<string, unknown>)
+    : null;
+  const tokens: ToolCallEventTokens | undefined = tokensRaw &&
+    typeof tokensRaw.input === 'number' &&
+    typeof tokensRaw.output === 'number'
+    ? { input: tokensRaw.input, output: tokensRaw.output }
+    : undefined;
+
+  if (isToolCallEventType(eventType)) {
+    return { type: eventType, data, timestamp, cost, tokens, id: `replay-${step.seq}` };
+  }
+  if (eventType === 'token') {
+    const text = [dataRecord.text, dataRecord.stdout, dataRecord.content].find(
+      (value): value is string => typeof value === 'string',
+    );
+    return { type: 'reasoning', data: { text: text ?? 'Token event' }, timestamp, cost, tokens, id: `replay-${step.seq}` };
+  }
+  return null;
+};
+
 const entranceVariants = {
   hidden: { opacity: 0, y: 8 },
   visible: {
@@ -85,14 +120,16 @@ const entranceVariants = {
 
 const SCROLL_THRESHOLD_PX = 64;
 
-export function ChatStream({ sessionId }: ChatStreamProps) {
+export function ChatStream({ sessionId, replaySteps, replayStep }: ChatStreamProps) {
   const [events, setEvents] = React.useState<StreamEvent[]>([]);
-  const [status, setStatus] = React.useState<ConnectionStatus>('connecting');
+  const isReplay = replaySteps !== undefined;
+  const [status, setStatus] = React.useState<ConnectionStatus>(isReplay ? 'connected' : 'connecting');
   const [retryNonce, setRetryNonce] = React.useState(0);
   const scrollRef = React.useRef<HTMLDivElement>(null);
   const stickToBottomRef = React.useRef(true);
 
   React.useEffect(() => {
+    if (isReplay) return;
     if (typeof window === 'undefined') return;
     setStatus('connecting');
 
@@ -117,7 +154,14 @@ export function ChatStream({ sessionId }: ChatStreamProps) {
     return () => {
       source.close();
     };
-  }, [sessionId, retryNonce]);
+  }, [isReplay, sessionId, retryNonce]);
+
+  React.useEffect(() => {
+    if (!isReplay) return;
+    const end = Math.min(replayStep ?? 0, Math.max(replaySteps.length - 1, 0));
+    setEvents(replaySteps.slice(0, end + 1).map(stepToStreamEvent).filter((event): event is StreamEvent => event !== null));
+    setStatus('connected');
+  }, [isReplay, replayStep, replaySteps]);
 
   const handleScroll = React.useCallback(() => {
     const el = scrollRef.current;

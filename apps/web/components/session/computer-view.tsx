@@ -15,6 +15,8 @@ export interface BrowserTab {
 export interface ComputerViewProps {
   sessionId: string;
   nekoUrl?: string;
+  screenshotUrl?: string | null;
+  readOnly?: boolean;
   onTakeControl?: (taken: boolean) => void;
   isControlTaken: boolean;
   tabs?: BrowserTab[];
@@ -30,6 +32,8 @@ const HOVER_REVEAL_MS = 120;
 export function ComputerView({
   sessionId,
   nekoUrl,
+  screenshotUrl,
+  readOnly = false,
   onTakeControl,
   isControlTaken,
   tabs,
@@ -203,7 +207,21 @@ export function ComputerView({
         overflow: 'hidden',
       }}
     >
-      {resolvedUrl ? (
+      {screenshotUrl ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={screenshotUrl}
+          alt="Replay screenshot"
+          style={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'contain',
+            backgroundColor: 'var(--color-background)',
+          }}
+        />
+      ) : resolvedUrl ? (
         <iframe
           key={iframeKey}
           ref={iframeRef}
@@ -224,7 +242,7 @@ export function ComputerView({
       )}
 
       {/* Top-right chrome */}
-      {resolvedUrl ? (
+      {resolvedUrl && !readOnly && !screenshotUrl ? (
         <div
           style={{
             ...overlayBaseStyle,

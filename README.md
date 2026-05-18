@@ -125,6 +125,10 @@ Full eval artifacts in [`MANTLE_V1_1_RELEASED.md`](MANTLE_V1_1_RELEASED.md). Lig
 - **Onboarding flow** — Three-step onboarding with intent selection and templates
 - **Playbooks gallery** — Curated templates and user-saved workflows
 - **Empty state component** — Reusable empty state pattern across the app
+- **Agent Skills standard** — Anthropic-compatible `SKILL.md` directories with scripts, templates, examples, and discovery frontmatter
+- **Skills marketplace** — Browse public, personal, and team skill tabs with install/use affordances plus save-session-as-skill support
+- **Projects** — Persistent workspaces with project sidebar navigation, default planner/tool settings, and project-scoped sessions
+- **Knowledge base** — Per-project file uploads capped at 50 files/100MB and mounted read-only into new project sessions
 
 ## What ships in v1.2
 
@@ -251,6 +255,7 @@ Full audit log in [`AUDIT_2026_05_16.md`](AUDIT_2026_05_16.md). Every claim is r
 |---|---|
 | [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Component graph, data flow, request lifecycle |
 | [`docs/SECURITY.md`](docs/SECURITY.md) | Threat model, sandboxing, key handling, SSRF policy |
+| [`docs/AGENT_SKILLS_SPEC.md`](docs/AGENT_SKILLS_SPEC.md) | Anthropic Agent Skills-compatible directory format, frontmatter, discovery, and invocation |
 | [`docs/SKILL_AUTHORING.md`](docs/SKILL_AUTHORING.md) | Writing a `SKILL.md`, frontmatter schema, validation |
 | [`MANTLE_V1_2_RELEASED.md`](MANTLE_V1_2_RELEASED.md) | v1.2 release notes, Lighthouse scores, cost summary |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | Dev setup, coding style, commit format, PR flow |
@@ -311,4 +316,3 @@ pnpm --filter web dev   # http://127.0.0.1:3000
   <br/>
   <sub>Brand imagery generated with <a href="https://ai.google.dev/gemini">Gemini</a>.</sub>
 </p>
-

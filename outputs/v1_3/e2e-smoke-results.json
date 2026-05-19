@@ -1,0 +1,220 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.11, pytest-9.0.3, pluggy-1.6.0 -- /home/josh/rasputin-mantle/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/josh/rasputin-mantle
+configfile: pyproject.toml
+plugins: anyio-4.13.0, respx-0.23.1
+collecting ... collected 161 items / 6 errors
+
+==================================== ERRORS ====================================
+________ ERROR collecting tests/integration/test_mcp_host_handshake.py _________
+ImportError while importing test module '/home/josh/rasputin-mantle/tests/integration/test_mcp_host_handshake.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../.local/share/uv/python/cpython-3.13.11-linux-x86_64-gnu/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/integration/test_mcp_host_handshake.py:9: in <module>
+    from mcp_host import MCPHost
+E   ModuleNotFoundError: No module named 'mcp_host'
+_______ ERROR collecting tests/integration/test_neko_session_binding.py ________
+ImportError while importing test module '/home/josh/rasputin-mantle/tests/integration/test_neko_session_binding.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../.local/share/uv/python/cpython-3.13.11-linux-x86_64-gnu/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/integration/test_neko_session_binding.py:3: in <module>
+    import requests
+E   ModuleNotFoundError: No module named 'requests'
+___ ERROR collecting tests/integration/test_playbook_list_includes_seeds.py ____
+ImportError while importing test module '/home/josh/rasputin-mantle/tests/integration/test_playbook_list_includes_seeds.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../.local/share/uv/python/cpython-3.13.11-linux-x86_64-gnu/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/integration/test_playbook_list_includes_seeds.py:4: in <module>
+    from gateway.app import app
+apps/gateway/src/gateway/app.py:29: in <module>
+    from gateway.routes.sandbox_files import router as sandbox_files_router
+apps/gateway/src/gateway/routes/sandbox_files.py:7: in <module>
+    import magic
+E   ModuleNotFoundError: No module named 'magic'
+________ ERROR collecting tests/integration/test_playbook_save_load.py _________
+ImportError while importing test module '/home/josh/rasputin-mantle/tests/integration/test_playbook_save_load.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../.local/share/uv/python/cpython-3.13.11-linux-x86_64-gnu/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/integration/test_playbook_save_load.py:4: in <module>
+    from gateway.app import app
+apps/gateway/src/gateway/app.py:29: in <module>
+    from gateway.routes.sandbox_files import router as sandbox_files_router
+apps/gateway/src/gateway/routes/sandbox_files.py:7: in <module>
+    import magic
+E   ModuleNotFoundError: No module named 'magic'
+__________ ERROR collecting tests/integration/test_voice_live_path.py __________
+ImportError while importing test module '/home/josh/rasputin-mantle/tests/integration/test_voice_live_path.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../.local/share/uv/python/cpython-3.13.11-linux-x86_64-gnu/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/integration/test_voice_live_path.py:10: in <module>
+    from gateway.app import app
+apps/gateway/src/gateway/app.py:29: in <module>
+    from gateway.routes.sandbox_files import router as sandbox_files_router
+apps/gateway/src/gateway/routes/sandbox_files.py:7: in <module>
+    import magic
+E   ModuleNotFoundError: No module named 'magic'
+_________ ERROR collecting tests/integration/test_voice_round_trip.py __________
+ImportError while importing test module '/home/josh/rasputin-mantle/tests/integration/test_voice_round_trip.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../.local/share/uv/python/cpython-3.13.11-linux-x86_64-gnu/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/integration/test_voice_round_trip.py:8: in <module>
+    import voice.stt as stt_module
+E   ModuleNotFoundError: No module named 'voice'
+=============================== warnings summary ===============================
+tests/integration/test_browser_multi_strategy_click.py:13
+  /home/josh/rasputin-mantle/tests/integration/test_browser_multi_strategy_click.py:13: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_browser_retry_on_not_found.py:16
+  /home/josh/rasputin-mantle/tests/integration/test_browser_retry_on_not_found.py:16: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_browser_screenshot_capture.py:15
+  /home/josh/rasputin-mantle/tests/integration/test_browser_screenshot_capture.py:15: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_browser_session_persistence.py:15
+  /home/josh/rasputin-mantle/tests/integration/test_browser_session_persistence.py:15: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_browser_wait_strategies.py:16
+  /home/josh/rasputin-mantle/tests/integration/test_browser_wait_strategies.py:16: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_cost_wall_enforcement.py:15
+  /home/josh/rasputin-mantle/tests/integration/test_cost_wall_enforcement.py:15: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_gateway_anthropic_call.py:9
+  /home/josh/rasputin-mantle/tests/integration/test_gateway_anthropic_call.py:9: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_gateway_cost_ceiling.py:115
+  /home/josh/rasputin-mantle/tests/integration/test_gateway_cost_ceiling.py:115: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_gateway_cost_ceiling.py:130
+  /home/josh/rasputin-mantle/tests/integration/test_gateway_cost_ceiling.py:130: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_gateway_cost_ceiling.py:145
+  /home/josh/rasputin-mantle/tests/integration/test_gateway_cost_ceiling.py:145: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_gateway_cost_ceiling.py:166
+  /home/josh/rasputin-mantle/tests/integration/test_gateway_cost_ceiling.py:166: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_gateway_cost_ceiling.py:187
+  /home/josh/rasputin-mantle/tests/integration/test_gateway_cost_ceiling.py:187: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_gateway_cost_ceiling.py:194
+  /home/josh/rasputin-mantle/tests/integration/test_gateway_cost_ceiling.py:194: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_gateway_cost_ceiling.py:202
+  /home/josh/rasputin-mantle/tests/integration/test_gateway_cost_ceiling.py:202: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_gateway_cost_ceiling.py:217
+  /home/josh/rasputin-mantle/tests/integration/test_gateway_cost_ceiling.py:217: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_gateway_cost_ceiling.py:232
+  /home/josh/rasputin-mantle/tests/integration/test_gateway_cost_ceiling.py:232: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_gateway_cost_ceiling.py:264
+  /home/josh/rasputin-mantle/tests/integration/test_gateway_cost_ceiling.py:264: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_gateway_cost_ceiling.py:296
+  /home/josh/rasputin-mantle/tests/integration/test_gateway_cost_ceiling.py:296: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_gateway_cost_ceiling.py:325
+  /home/josh/rasputin-mantle/tests/integration/test_gateway_cost_ceiling.py:325: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_gateway_cost_ceiling.py:346
+  /home/josh/rasputin-mantle/tests/integration/test_gateway_cost_ceiling.py:346: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_gateway_cost_ceiling.py:367
+  /home/josh/rasputin-mantle/tests/integration/test_gateway_cost_ceiling.py:367: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_gateway_cost_ceiling.py:379
+  /home/josh/rasputin-mantle/tests/integration/test_gateway_cost_ceiling.py:379: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_gateway_vllm_call.py:11
+  /home/josh/rasputin-mantle/tests/integration/test_gateway_vllm_call.py:11: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_memory_round_trip.py:7
+  /home/josh/rasputin-mantle/tests/integration/test_memory_round_trip.py:7: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_memory_round_trip.py:23
+  /home/josh/rasputin-mantle/tests/integration/test_memory_round_trip.py:23: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_scheduler_job_persistence.py:20
+  /home/josh/rasputin-mantle/tests/integration/test_scheduler_job_persistence.py:20: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_session_sandbox_binding.py:30
+  /home/josh/rasputin-mantle/tests/integration/test_session_sandbox_binding.py:30: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_session_sandbox_binding.py:47
+  /home/josh/rasputin-mantle/tests/integration/test_session_sandbox_binding.py:47: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_session_sandbox_binding.py:76
+  /home/josh/rasputin-mantle/tests/integration/test_session_sandbox_binding.py:76: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_session_sandbox_binding.py:106
+  /home/josh/rasputin-mantle/tests/integration/test_session_sandbox_binding.py:106: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_session_sandbox_binding.py:135
+  /home/josh/rasputin-mantle/tests/integration/test_session_sandbox_binding.py:135: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/integration/test_wide_research_dispatch.py:11
+  /home/josh/rasputin-mantle/tests/integration/test_wide_research_dispatch.py:11: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+ERROR tests/integration/test_mcp_host_handshake.py
+ERROR tests/integration/test_neko_session_binding.py
+ERROR tests/integration/test_playbook_list_includes_seeds.py
+ERROR tests/integration/test_playbook_save_load.py
+ERROR tests/integration/test_voice_live_path.py
+ERROR tests/integration/test_voice_round_trip.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 6 errors during collection !!!!!!!!!!!!!!!!!!!!
+======================== 32 warnings, 6 errors in 1.82s ========================

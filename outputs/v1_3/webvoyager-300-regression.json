@@ -1,0 +1,23 @@
+{
+  "suite": "webvoyager-300-regression",
+  "planner": "opus-4-6",
+  "command": "uv run python eval/webvoyager-300/runner.py --planner opus-4-6 --output outputs/v1_3/webvoyager-300-regression.json",
+  "status": "attempted_timeout",
+  "minimum_pass_rate": 0.75,
+  "baseline": {
+    "tag": "mantle-v1.1-released",
+    "published_output": "outputs/v1_1/webvoyager-300-opus46.json",
+    "published_pass_rate": 0.78,
+    "published_passed": 234,
+    "published_total": 300
+  },
+  "attempt": {
+    "anthropic_api_key_available": true,
+    "timeout_seconds": 3600,
+    "result_file_completed": false,
+    "error_excerpt": "playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed; shell tool terminated command after exceeding timeout 3600000 ms"
+  },
+  "tasks_yaml_byte_identical_to_mantle_v1_1_released": false,
+  "tasks_yaml_note": "mantle-v1.1-released does not contain eval/webvoyager-300/tasks.yaml, so a byte comparison against that tag could not be performed. Current v1.3 runner tasks remain in eval/webvoyager-300/tasks.yaml.",
+  "known_limitation": "Regression remains pending; the cold run was started with Anthropic credentials but did not complete within the one-hour execution window."
+}

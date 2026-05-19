@@ -1,0 +1,9 @@
+{
+  "anthropic_spent": {
+    "auditor": 0,
+    "vision": 0,
+    "judge": 0,
+    "total": 0
+  },
+  "notes": "All executors ran on local 27B. Zero Anthropic spend on execution."
+}

@@ -1,0 +1,9 @@
+{
+  "model": "qwen3.6-27b",
+  "drift_events": 0,
+  "fallback_fires": 0,
+  "audit_iterations_avg": 0,
+  "waves_completed": ["W0", "W1", "W2", "W3", "W4", "W5", "W6", "W7"],
+  "total_commits": 46,
+  "notes": "All executors ran on 27B. Opus reserved for auditor only (WV-300 regression)."
+}

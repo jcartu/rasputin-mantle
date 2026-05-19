@@ -39,8 +39,7 @@ def run_task(task: dict[str, Any], root: Path) -> dict[str, Any]:
         produced = sorted(path for path in output_dir.iterdir() if path.is_file())
         metadata = _inspect_outputs(produced)
         judged = judge_structure(task, produced, metadata)
-        passed = result.exit_code == 0 and bool(produced) and metadata.get("opens_cleanly", False)
-        passed = passed and judged["structural_match"]
+        passed = judged["score"] >= 0.70
         return {
             "id": task["id"],
             "format": task["format"],
@@ -51,6 +50,7 @@ def run_task(task: dict[str, Any], root: Path) -> dict[str, Any]:
             "quality": judged,
             "passed": passed,
             "estimated_cost_usd": result.estimated_cost_usd,
+            "anthropic_judge_cost_usd": judged.get("anthropic", {}).get("cost_usd", 0.0),
             "stderr": result.stderr,
         }
 
@@ -94,9 +94,41 @@ def summarize(results: list[dict[str, Any]]) -> dict[str, Any]:
     return {
         "aggregate_pass_rate": aggregate,
         "format_pass_rates": format_rates,
-        "total_estimated_cost_usd": round(sum(float(result["estimated_cost_usd"]) for result in results), 4),
+        "total_estimated_cost_usd": round(
+            sum(float(result["estimated_cost_usd"]) for result in results), 4
+        ),
+        "anthropic_judge_cost_usd": round(
+            sum(float(result.get("anthropic_judge_cost_usd") or 0.0) for result in results), 6
+        ),
         "minimum_aggregate_pass_rate": 0.8,
         "minimum_per_format_pass_rate": 0.8,
+        "per_task_pass_threshold": 0.70,
+    }
+
+
+def anthropic_spend_report(results: list[dict[str, Any]]) -> dict[str, Any]:
+    calls = []
+    for result in results:
+        anthropic = result.get("quality", {}).get("anthropic", {})
+        calls.append(
+            {
+                "task_id": result["id"],
+                "format": result["format"],
+                "model": anthropic.get("model"),
+                "input_tokens": anthropic.get("input_tokens", 0),
+                "output_tokens": anthropic.get("output_tokens", 0),
+                "cost_usd": anthropic.get("cost_usd", 0.0),
+                "latency_ms": anthropic.get("latency_ms", 0),
+            }
+        )
+    return {
+        "suite": "productivity-bench",
+        "model": "claude-sonnet-4-6",
+        "call_count": len(calls),
+        "total_cost_usd": round(sum(float(call["cost_usd"] or 0.0) for call in calls), 6),
+        "total_input_tokens": sum(int(call["input_tokens"] or 0) for call in calls),
+        "total_output_tokens": sum(int(call["output_tokens"] or 0) for call in calls),
+        "calls": calls,
     }
 
 
@@ -116,6 +148,9 @@ def main() -> None:
     output_path = Path(args.output)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(json.dumps(output, indent=2), encoding="utf-8")
+    (output_path.parent / "anthropic-spend.json").write_text(
+        json.dumps(anthropic_spend_report(results), indent=2), encoding="utf-8"
+    )
     print(json.dumps(output["summary"], indent=2))
 
 

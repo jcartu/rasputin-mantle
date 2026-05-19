@@ -56,6 +56,8 @@ class SkillInvocationResult:
     stderr: str
     exit_code: int
     duration_ms: int
+    estimated_cost_usd: float = 0.0
+    cost_metadata: dict[str, Any] = field(default_factory=dict)
 
 
 @dataclass
@@ -117,7 +119,8 @@ def invoke_skill(name: str, args: dict[str, Any] | None = None, session_id: str 
     skill_dir = Path(skill.path).parent
     script_path = _select_script(skill_dir, requested_script)
     if script_path is None:
-        return SkillInvocationResult(name, None, skill.readme, "", 0, 0)
+        cost = _estimated_skill_cost(skill, 0)
+        return SkillInvocationResult(name, None, skill.readme, "", 0, 0, cost, _cost_metadata(skill, cost))
 
     started = time.perf_counter()
     command = _command_for_script(script_path)
@@ -131,6 +134,7 @@ def invoke_skill(name: str, args: dict[str, Any] | None = None, session_id: str 
         check=False,
     )
     duration_ms = int((time.perf_counter() - started) * 1000)
+    cost = _estimated_skill_cost(skill, duration_ms)
     return SkillInvocationResult(
         skill=name,
         script=str(script_path.relative_to(skill_dir)),
@@ -138,6 +142,8 @@ def invoke_skill(name: str, args: dict[str, Any] | None = None, session_id: str 
         stderr=completed.stderr,
         exit_code=completed.returncode,
         duration_ms=duration_ms,
+        estimated_cost_usd=cost,
+        cost_metadata=_cost_metadata(skill, cost),
     )
 
 
@@ -277,6 +283,26 @@ def _command_for_script(script_path: Path) -> list[str]:
     if script_path.suffix in {".sh", ".bash"}:
         return ["bash", str(script_path)]
     return [str(script_path)]
+
+
+def _estimated_skill_cost(skill: DiscoveredSkill, duration_ms: int) -> float:
+    floor_by_capability = {
+        "presentation": 0.01,
+        "spreadsheet": 0.02,
+        "document": 0.05,
+    }
+    floor = floor_by_capability.get(skill.capability, 0.001)
+    runtime_component = min(duration_ms / 1_000_000, 0.01)
+    return round(floor + runtime_component, 4)
+
+
+def _cost_metadata(skill: DiscoveredSkill, estimated_cost_usd: float) -> dict[str, Any]:
+    return {
+        "meter": "skill-invocation",
+        "skill": skill.name,
+        "capability": skill.capability,
+        "estimated_cost_usd": estimated_cost_usd,
+    }
 
 
 def _signature(paths: list[Path], session_id: str | None) -> str:

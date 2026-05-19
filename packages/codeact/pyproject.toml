@@ -2,7 +2,17 @@
 name = "mantle-codeact"
 version = "0.1.0"
 requires-python = ">=3.11"
-dependencies = ["sandbox", "pyyaml>=6.0,<7"]
+dependencies = [
+    "matplotlib>=3.8,<4",
+    "openpyxl>=3.1,<4",
+    "pandas>=2.2,<3",
+    "python-docx>=1.1,<2",
+    "python-pptx>=1.0,<2",
+    "pytest>=8,<10",
+    "pyyaml>=6.0,<7",
+    "reportlab>=4.2,<5",
+    "sandbox",
+]
 
 [tool.ruff]
 target-version = "py311"

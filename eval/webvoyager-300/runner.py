@@ -1,12 +1,11 @@
 # eval/webvoyager-300/runner.py — WebVoyager-300 eval harness.
 #
-# Multi-planner runner supporting GPT-5.5, Sonnet 4.6, Opus 4.7, Kimi K2.6.
+# Multi-planner runner supporting GPT-5.5, Sonnet 4.6, Opus 4.6/4.7, Kimi K2.6.
 # Single-attempt per task. No memoization. No best-of-N.
 #
 # Usage:
 #   python runner.py --planner gpt-5.5
 #   python runner.py --planner sonnet-4.6
-#   python runner.py --best-of-published --output outputs/v1_1/webvoyager-300-best.json
 
 from __future__ import annotations
 
@@ -44,6 +43,11 @@ PLANNER_MAP = {
         "model": "claude-sonnet-4-6",
         "max_tokens": 8192,
     },
+    "opus-4-6": {
+        "provider": "anthropic",
+        "model": "claude-opus-4-6",
+        "max_tokens": 8192,
+    },
     "opus-4.7": {
         "provider": "anthropic",
         "model": "claude-opus-4-7",
@@ -58,12 +62,14 @@ PLANNER_MAP = {
 }
 
 SYSTEM_PROMPT = (
-    "You are a WebVoyager browser agent. You can navigate websites, click elements, type text, and extract information.\n"
+    "You are a WebVoyager browser agent. You can navigate websites, click elements, "
+    "type text, and extract information.\n"
     "\n"
     "## ACTIONS (return exactly one JSON object):\n"
     "- {\"action\": \"open\", \"args\": {\"url\": \"https://...\"}} - Navigate to a URL\n"
     "- {\"action\": \"click\", \"args\": {\"element_id\": \"pw-5\"}} - Click element by id from state.elements\n"
-    "- {\"action\": \"type\", \"args\": {\"element_id\": \"pw-3\", \"text\": \"search query\"}} - Type into input field\n"
+    "- {\"action\": \"type\", \"args\": {\"element_id\": \"pw-3\", "
+    "\"text\": \"search query\"}} - Type into input field\n"
     "- {\"action\": \"evaluate\", \"args\": {\"script\": \"document.querySelector(...)\"}} - Run JS\n"
     "- {\"action\": \"finish\", \"args\": {\"final_answer\": \"...\"}} - Submit final answer\n"
     "\n"
@@ -517,136 +523,6 @@ async def _run_task_inner(
 
 
 # ---------------------------------------------------------------------------
-# Best-of-published aggregator
-# ---------------------------------------------------------------------------
-
-
-def best_of_published(input_files: list[str], output: str) -> None:
-    """Take per-planner result files, pick the best pass per task (across planners),
-    and output a summary. This is for publishing side-by-side results, NOT for
-    inflating a single pass rate."""
-    all_results: dict[str, dict] = {}
-    planner_results: dict[str, list[dict]] = {}
-
-    for fpath in input_files:
-        path = Path(fpath)
-        if not path.exists():
-            print(f"  Warning: {fpath} not found, skipping")
-            continue
-        data = json.loads(path.read_text())
-        planner_name = path.stem.replace("webvoyager-300-", "")
-        planner_results[planner_name] = data.get("results", [])
-        for r in data.get("results", []):
-            tid = r["id"]
-            if tid not in all_results or (
-                not all_results[tid]["passed"] and r["passed"]
-            ):
-                all_results[tid] = r
-
-    # Per-planner stats
-    print("\n=== Per-Planner Results ===")
-    total_tasks = len(all_results)
-    for pname, results in sorted(planner_results.items()):
-        passed = sum(1 for r in results if r["passed"])
-        rate = passed / len(results) if results else 0
-        print(f"  {pname}: {passed}/{len(results)} = {rate:.2%}")
-
-    # Per-source stats
-    print("\n=== Per-Source Results (best planner per task) ===")
-    for source in ["original", "official", "in-house"]:
-        src_results = [r for r in all_results.values() if r.get("source") == source]
-        if not src_results:
-            continue
-        passed = sum(1 for r in src_results if r["passed"])
-        rate = passed / len(src_results) if src_results else 0
-        print(f"  {source}: {passed}/{len(src_results)} = {rate:.2%}")
-
-    # Per-category stats
-    print("\n=== Per-Category Results (best planner per task) ===")
-    categories: dict[str, list[dict]] = {}
-    for r in all_results.values():
-        cat = r.get("category_hint", "UNCLASSIFIED") or "UNCLASSIFIED"
-        categories.setdefault(cat, []).append(r)
-    for cat in sorted(categories.keys()):
-        results = categories[cat]
-        passed = sum(1 for r in results if r["passed"])
-        rate = passed / len(results) if results else 0
-        print(f"  {cat}: {passed}/{len(results)} = {rate:.2%}")
-
-    # Best single planner
-    best_planner = max(
-        planner_results.keys(),
-        key=lambda p: sum(1 for r in planner_results[p] if r["passed"])
-        / len(planner_results[p])
-        if planner_results[p]
-        else 0,
-    )
-    best_results = planner_results[best_planner]
-    best_passed = sum(1 for r in best_results if r["passed"])
-    best_rate = best_passed / len(best_results) if best_results else 0
-
-    print(
-        f"\n=== Best Single Planner: {best_planner} ({best_passed}/{len(best_results)} = {best_rate:.2%}) ==="
-    )
-
-    out = {
-        "benchmark": "webvoyager-300",
-        "total": total_tasks,
-        "best_single_planner": best_planner,
-        "best_single_planner_passed": best_passed,
-        "best_single_planner_rate": best_rate,
-        "per_planner": {
-            pname: {
-                "passed": sum(1 for r in results if r["passed"]),
-                "total": len(results),
-                "rate": (
-                    sum(1 for r in results if r["passed"]) / len(results)
-                    if results
-                    else 0
-                ),
-            }
-            for pname, results in planner_results.items()
-        },
-        "per_source": {
-            source: {
-                "passed": sum(1 for r in src_results if r["passed"]),
-                "total": len(src_results),
-                "rate": (
-                    sum(1 for r in src_results if r["passed"]) / len(src_results)
-                    if src_results
-                    else 0
-                ),
-            }
-            for source, src_results in [
-                (
-                    s,
-                    [r for r in all_results.values() if r.get("source") == s],
-                )
-                for s in ["original", "official", "in-house"]
-            ]
-            if src_results
-        },
-        "per_category": {
-            cat: {
-                "passed": sum(1 for r in results if r["passed"]),
-                "total": len(results),
-                "rate": (
-                    sum(1 for r in results if r["passed"]) / len(results)
-                    if results
-                    else 0
-                ),
-            }
-            for cat, results in categories.items()
-        },
-        "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-    }
-
-    Path(output).parent.mkdir(parents=True, exist_ok=True)
-    Path(output).write_text(json.dumps(out, indent=2))
-    print(f"\nOutput written to {output}")
-
-
-# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -672,30 +548,7 @@ async def main():
     ap.add_argument("--concurrency", type=int, default=3)
     ap.add_argument("--traces", action="store_true")
     ap.add_argument("--traces-dir", default=None)
-    ap.add_argument(
-        "--best-of-published",
-        action="store_true",
-        help="Aggregate per-planner results instead of running",
-    )
-    ap.add_argument(
-        "--input-files",
-        nargs="+",
-        default=[
-            "outputs/v1_1/webvoyager-300-gpt-5-5.json",
-            "outputs/v1_1/webvoyager-300-sonnet-4-6.json",
-            "outputs/v1_1/webvoyager-300-opus-4-7.json",
-            "outputs/v1_1/webvoyager-300-kimi-k2-6.json",
-        ],
-        help="Input files for --best-of-published",
-    )
     args = ap.parse_args()
-
-    # Best-of-published mode
-    if args.best_of_published:
-        best_of_published(
-            args.input_files, args.output or "outputs/v1_1/webvoyager-300-best.json"
-        )
-        return
 
     # Load tasks
     with open(args.tasks) as f:

@@ -8,6 +8,16 @@ import pytest
 from gateway.model_client import ModelCallError, anthropic_chat, vllm_chat
 
 
+class HandlerTransport(httpx.AsyncBaseTransport):
+    def __init__(self, handler):
+        self._handler = handler
+
+    async def handle_async_request(self, request: httpx.Request) -> httpx.Response:
+        response = await self._handler(request)
+        response.request = request
+        return response
+
+
 @pytest.mark.asyncio
 async def test_anthropic_chat_posts_expected_request_and_returns_uniform_result() -> None:
     captured: dict[str, object] = {}
@@ -31,7 +41,7 @@ async def test_anthropic_chat_posts_expected_request_and_returns_uniform_result(
         64,
         workspace_id="ws-1",
         api_key="test-key",
-        transport=httpx.MockTransport(handler),
+        transport=HandlerTransport(handler),
     )
 
     assert captured["url"] == "https://api.anthropic.com/v1/messages"
@@ -63,7 +73,7 @@ async def test_anthropic_chat_raises_model_call_error_on_http_error() -> None:
             [{"role": "user", "content": "hi"}],
             64,
             api_key="bad-key",
-            transport=httpx.MockTransport(handler),
+            transport=HandlerTransport(handler),
         )
 
     assert exc_info.value.provider == "anthropic"
@@ -101,7 +111,7 @@ async def test_vllm_chat_posts_expected_request_and_returns_uniform_result() -> 
         64,
         base_url="http://vllm.test",
         api_key="dummy",
-        transport=httpx.MockTransport(handler),
+        transport=HandlerTransport(handler),
     )
 
     assert captured["url"] == "http://vllm.test/v1/chat/completions"
@@ -139,7 +149,7 @@ async def test_vllm_chat_omits_authorization_when_key_is_empty() -> None:
         64,
         base_url="http://vllm.test",
         api_key="",
-        transport=httpx.MockTransport(handler),
+        transport=HandlerTransport(handler),
     )
 
     assert "authorization" not in captured
@@ -156,7 +166,7 @@ async def test_vllm_chat_raises_model_call_error_on_http_error() -> None:
             [{"role": "user", "content": "hi"}],
             64,
             base_url="http://vllm.test",
-            transport=httpx.MockTransport(handler),
+            transport=HandlerTransport(handler),
         )
 
     assert exc_info.value.provider == "vllm"
@@ -182,7 +192,7 @@ async def test_model_client_logs_structured_json(caplog: pytest.LogCaptureFixtur
         64,
         workspace_id="ws-log",
         base_url="http://vllm.test",
-        transport=httpx.MockTransport(handler),
+        transport=HandlerTransport(handler),
     )
 
     record = json.loads(caplog.records[-1].message)

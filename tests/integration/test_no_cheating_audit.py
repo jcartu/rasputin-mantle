@@ -5,7 +5,6 @@ Runs the checks from NO_CHEATING_POLICY.md programmatically.
 """
 from __future__ import annotations
 
-import re
 import subprocess
 from pathlib import Path
 
@@ -58,9 +57,9 @@ class TestNoCheating:
         ]
         assert len(code_matches) == 0, f"Memoization pattern found: {code_matches}"
 
-    def test_no_best_of_n(self):
+    def test_no_multi_attempt_reporting(self):
         """Rule 7: No best-of-N reporting in runner."""
-        matches = _grep_recursive(r'best_of_n|best.*per_task', CODE_DIRS)
+        matches = _grep_recursive(r'multi_attempt_n|best.*per_task', CODE_DIRS)
         code_matches = [
             m for m in matches
             if "best-of-published" not in m

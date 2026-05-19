@@ -28,6 +28,7 @@ STYLE_FONTS = {
     "academic": {"font": "Times New Roman", "accent": colors.HexColor("#4B5563")},
     "business": {"font": "Aptos", "accent": colors.HexColor("#1F4E79")},
 }
+TEMPLATE_DIR = Path(__file__).resolve().parents[1] / "templates"
 
 DOCUMENT_PLANS = [
     (
@@ -240,8 +241,11 @@ def _review_plan(payload: dict[str, Any]) -> dict[str, Any]:
 
 
 def _create_docx(path: Path, outline: dict[str, Any], style_name: str, tmp_dir: Path) -> Path:
-    doc = Document()
+    template_path = TEMPLATE_DIR / f"{style_name}.docx"
+    doc = Document(str(template_path)) if template_path.exists() else Document()
     _apply_docx_style(doc, style_name)
+    if template_path.exists():
+        doc.add_page_break()
     doc.add_heading(str(outline.get("title") or "Document"), 0)
     sections = list(outline.get("sections") or [])
     if len(sections) > 5:
@@ -268,7 +272,7 @@ def _apply_docx_style(doc: Document, style_name: str) -> None:
     normal = doc.styles["Normal"]
     normal.font.name = str(font_name)
     normal.font.size = Pt(11)
-    for name in ("Heading 1", "Heading 2"):
+    for name in ("Heading 1", "Heading 2", "Heading 3"):
         style = doc.styles[name]
         style.font.name = str(font_name)
         style.font.bold = True

@@ -11,6 +11,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
+TEMPLATE_DIR = ROOT / "templates"
 SKILLS_ROOT = Path(__file__).resolve().parents[2]
 if str(SKILLS_ROOT) not in sys.path:
     sys.path.insert(0, str(SKILLS_ROOT))
@@ -147,9 +148,24 @@ def create_workbook(payload: dict[str, Any]) -> Path:
     output = workspace_path(payload, "data.xlsx")
     mode = str(payload.get("mode") or "table")
     if mode == "financial_model":
+        template = TEMPLATE_DIR / "financial-model.xlsx"
+        if template.exists():
+            wb = load_workbook(template)
+            wb.save(output)
+            return output
         return build_financial_model(output, dict(payload.get("assumptions") or {}))
     if mode == "budget":
         return _create_budget_workbook(output)
+
+    workbook_templates = {
+        "comparison_matrix": "comparison-matrix.xlsx",
+        "data_cleaning": "data-cleaning.xlsx",
+    }
+    template_name = workbook_templates.get(mode)
+    if template_name and (TEMPLATE_DIR / template_name).exists():
+        wb = load_workbook(TEMPLATE_DIR / template_name)
+        wb.save(output)
+        return output
 
     wb = Workbook()
     if mode == "comparison_matrix":

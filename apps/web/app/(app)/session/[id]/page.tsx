@@ -480,7 +480,7 @@ export default function SessionPage({ params }: SessionPageProps): React.ReactEl
       <ArtifactViewer
         sessionId={sessionId}
         filePath={activeFile}
-        onClose={handleArtifactClose}
+        closeAction={handleArtifactClose}
       />
     </div>
     {traceLoading || steps.length > 0 ? (

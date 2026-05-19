@@ -15,7 +15,7 @@ import { Button } from '@/components/ui/button';
 export interface ArtifactViewerProps {
   sessionId: string;
   filePath: string | null;
-  onClose: () => void;
+  closeAction: () => void;
 }
 
 interface FileMeta {
@@ -39,6 +39,9 @@ type ArtifactBody =
   | { type: 'csv'; rows: string[][] }
   | { type: 'image'; url: string }
   | { type: 'pdf'; url: string }
+  | { type: 'pptx'; title: string; text: string[] }
+  | { type: 'xlsx'; sheetName: string; rows: string[][] }
+  | { type: 'docx'; text: string }
   | { type: 'binary' };
 
 const MAX_TEXT_BYTES = 1_000_000; // 1 MiB safety cap
@@ -63,6 +66,15 @@ function inferKind(mime: string, name: string): ArtifactBody['type'] | 'unknown'
   }
   if (mime === 'application/pdf' || ext === 'pdf') {
     return 'pdf';
+  }
+  if (ext === 'pptx' || mime === 'application/vnd.openxmlformats-officedocument.presentationml.presentation') {
+    return 'pptx';
+  }
+  if (ext === 'xlsx' || mime === 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {
+    return 'xlsx';
+  }
+  if (ext === 'docx' || mime === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') {
+    return 'docx';
   }
   if (mime.includes('json') || ext === 'json') {
     return 'json';
@@ -235,6 +247,48 @@ function parseCsv(src: string, delimiter = ','): string[][] {
     rows.push(row);
   }
   return rows;
+}
+
+/* ─── Lazy Office preview parsers ────────────────────────────────────── */
+
+function decodeXmlText(xml: string): string {
+  return xml
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+async function parsePptxPreview(buffer: ArrayBuffer): Promise<{ title: string; text: string[] }> {
+  const { default: JSZip } = await import('jszip');
+  const zip = await JSZip.loadAsync(buffer);
+  const slideXml = await zip.file('ppt/slides/slide1.xml')?.async('string');
+  if (!slideXml) return { title: 'First slide', text: ['No slide XML found.'] };
+  const matches = Array.from(slideXml.matchAll(/<a:t>(.*?)<\/a:t>/g), (match) => decodeXmlText(match[1]));
+  const text = matches.filter(Boolean).slice(0, 12);
+  return { title: text[0] || 'First slide', text: text.slice(1) };
+}
+
+async function parseDocxPreview(buffer: ArrayBuffer): Promise<string> {
+  const { default: JSZip } = await import('jszip');
+  const zip = await JSZip.loadAsync(buffer);
+  const documentXml = await zip.file('word/document.xml')?.async('string');
+  if (!documentXml) return 'No document text found.';
+  return decodeXmlText(documentXml).slice(0, 2400);
+}
+
+async function parseXlsxPreview(buffer: ArrayBuffer): Promise<{ sheetName: string; rows: string[][] }> {
+  const XLSX = await import('xlsx');
+  const workbook = XLSX.read(buffer, { type: 'array' });
+  const sheetName = workbook.SheetNames[0] || 'Sheet1';
+  const sheet = workbook.Sheets[sheetName];
+  if (!sheet) return { sheetName, rows: [] };
+  const rows = XLSX.utils.sheet_to_json<string[]>(sheet, { header: 1, blankrows: false }).slice(0, 20);
+  return { sheetName, rows: rows.map((row) => row.slice(0, 10).map((cell) => String(cell ?? ''))) };
 }
 
 /* ─── Image zoom/pan ─────────────────────────────────────────────────── */
@@ -472,7 +526,7 @@ function JsonNode({ value, name, depth }: JsonNodeProps): React.ReactElement {
 export function ArtifactViewer({
   sessionId,
   filePath,
-  onClose,
+  closeAction,
 }: ArtifactViewerProps): React.ReactElement | null {
   const [state, setState] = React.useState<ViewerState>({ kind: 'idle' });
 
@@ -502,6 +556,25 @@ export function ArtifactViewer({
         }
         if (kind === 'pdf') {
           setState({ kind: 'ready', meta, body: { type: 'pdf', url } });
+          return;
+        }
+        if (kind === 'pptx' || kind === 'xlsx' || kind === 'docx') {
+          const rawRes = await fetch(url);
+          if (!rawRes.ok) throw new Error(`Content failed (${rawRes.status})`);
+          const buffer = await rawRes.arrayBuffer();
+          if (cancelled) return;
+          if (kind === 'pptx') {
+            const preview = await parsePptxPreview(buffer);
+            if (!cancelled) setState({ kind: 'ready', meta, body: { type: 'pptx', ...preview } });
+            return;
+          }
+          if (kind === 'xlsx') {
+            const preview = await parseXlsxPreview(buffer);
+            if (!cancelled) setState({ kind: 'ready', meta, body: { type: 'xlsx', ...preview } });
+            return;
+          }
+          const text = await parseDocxPreview(buffer);
+          if (!cancelled) setState({ kind: 'ready', meta, body: { type: 'docx', text } });
           return;
         }
         if (kind === 'unknown' || meta.size > MAX_TEXT_BYTES) {
@@ -555,11 +628,11 @@ export function ArtifactViewer({
   React.useEffect(() => {
     if (!filePath) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
+      if (e.key === 'Escape') closeAction();
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [filePath, onClose]);
+  }, [filePath, closeAction]);
 
   if (!filePath) return null;
 
@@ -582,7 +655,7 @@ export function ArtifactViewer({
         backgroundColor: 'rgb(0 0 0 / 0.5)',
       }}
       onClick={(e) => {
-        if (e.target === e.currentTarget) onClose();
+        if (e.target === e.currentTarget) closeAction();
       }}
     >
       <div
@@ -657,7 +730,7 @@ export function ArtifactViewer({
             size="sm"
             iconOnly={<X size={16} strokeWidth={1.5} />}
             aria-label="Close artifact viewer"
-            onClick={onClose}
+            onClick={closeAction}
           />
         </header>
 
@@ -804,11 +877,13 @@ function ArtifactBody({
     return <ImageViewer url={body.url} alt={meta.name} />;
   }
   if (body.type === 'pdf') {
+    const viewerUrl = `/pdfjs/web/viewer.html?file=${encodeURIComponent(body.url)}`;
     return (
-      <object
-        data={body.url}
-        type="application/pdf"
-        style={{ flex: 1, width: '100%', minHeight: 0, backgroundColor: 'var(--color-background)' }}
+      <iframe
+        title={`PDF.js preview for ${meta.name}`}
+        src={viewerUrl}
+        loading="lazy"
+        style={{ flex: 1, width: '100%', minHeight: 0, border: 0, backgroundColor: 'var(--color-background)' }}
       >
         <div
           style={{
@@ -832,7 +907,80 @@ function ArtifactBody({
             Download PDF
           </a>
         </div>
-      </object>
+      </iframe>
+    );
+  }
+  if (body.type === 'pptx') {
+    return (
+      <div
+        data-testid="pptx-preview"
+        style={{ flex: 1, overflow: 'auto', padding: 'var(--spacing-8)', backgroundColor: 'var(--color-background)' }}
+      >
+        <div
+          style={{
+            aspectRatio: '16 / 9',
+            maxWidth: 760,
+            margin: '0 auto var(--spacing-4)',
+            padding: 'var(--spacing-8)',
+            border: '1px solid var(--color-border)',
+            borderRadius: 'var(--radius-lg)',
+            background: 'linear-gradient(135deg, var(--color-background-elevated), var(--color-background-subtle))',
+            boxShadow: 'var(--shadow-sm)',
+          }}
+        >
+          <div style={{ fontSize: 'var(--text-2xl)', fontWeight: 'var(--font-weight-semibold)', marginBottom: 'var(--spacing-4)' }}>
+            {body.title}
+          </div>
+          <ul style={{ margin: 0, paddingLeft: 'var(--spacing-6)', color: 'var(--color-foreground-muted)' }}>
+            {body.text.map((line, index) => (
+              <li key={`${line}-${index}`} style={{ marginBottom: 'var(--spacing-2)' }}>{line}</li>
+            ))}
+          </ul>
+        </div>
+        <a href={downloadUrl} download={meta.name} style={{ color: 'var(--color-accent)' }}>Download full PowerPoint</a>
+      </div>
+    );
+  }
+  if (body.type === 'xlsx') {
+    const [header, ...rows] = body.rows;
+    return (
+      <div data-testid="xlsx-preview" style={{ flex: 1, overflow: 'auto', backgroundColor: 'var(--color-background)' }}>
+        <div style={{ padding: 'var(--spacing-3) var(--spacing-4)', color: 'var(--color-foreground-muted)', fontSize: 'var(--text-xs)' }}>
+          First sheet: {body.sheetName} (20 rows × 10 cols max)
+        </div>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 'var(--text-sm)', fontFamily: 'var(--font-mono)' }}>
+          <thead style={{ position: 'sticky', top: 0, backgroundColor: 'var(--color-background-elevated)' }}>
+            <tr>{(header ?? []).map((cell, index) => <th key={index} style={{ textAlign: 'left', padding: 'var(--spacing-2)', borderBottom: '1px solid var(--color-border)' }}>{cell}</th>)}</tr>
+          </thead>
+          <tbody>
+            {rows.map((row, rowIndex) => (
+              <tr key={rowIndex}>{row.map((cell, cellIndex) => <td key={cellIndex} style={{ padding: 'var(--spacing-1) var(--spacing-2)', borderBottom: '1px solid var(--color-border)' }}>{cell}</td>)}</tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );
+  }
+  if (body.type === 'docx') {
+    return (
+      <div
+        data-testid="docx-preview"
+        style={{ flex: 1, overflow: 'auto', padding: 'var(--spacing-8)', backgroundColor: 'var(--color-background)' }}
+      >
+        <article
+          style={{
+            maxWidth: 760,
+            margin: '0 auto',
+            padding: 'var(--spacing-8)',
+            border: '1px solid var(--color-border)',
+            backgroundColor: 'var(--color-background-elevated)',
+            lineHeight: 1.7,
+            whiteSpace: 'pre-wrap',
+          }}
+        >
+          {body.text || 'No preview text found.'}
+        </article>
+      </div>
     );
   }
   if (body.type === 'markdown') {

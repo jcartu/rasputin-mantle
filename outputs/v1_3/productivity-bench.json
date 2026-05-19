@@ -1,0 +1,590 @@
+{
+  "suite": "productivity-bench",
+  "task_count": 30,
+  "summary": {
+    "aggregate_pass_rate": 1.0,
+    "format_pass_rates": {
+      "document": 1.0,
+      "slides": 1.0,
+      "spreadsheet": 1.0
+    },
+    "total_estimated_cost_usd": 0.8142,
+    "minimum_aggregate_pass_rate": 0.8,
+    "minimum_per_format_pass_rate": 0.8
+  },
+  "results": [
+    {
+      "id": "slides-01",
+      "format": "slides",
+      "exit_code": 0,
+      "files": [
+        "slides.pptx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0105,
+      "stderr": ""
+    },
+    {
+      "id": "slides-02",
+      "format": "slides",
+      "exit_code": 0,
+      "files": [
+        "slides.pptx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0105,
+      "stderr": ""
+    },
+    {
+      "id": "slides-03",
+      "format": "slides",
+      "exit_code": 0,
+      "files": [
+        "slides.pptx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0105,
+      "stderr": ""
+    },
+    {
+      "id": "slides-04",
+      "format": "slides",
+      "exit_code": 0,
+      "files": [
+        "slides.pptx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0106,
+      "stderr": ""
+    },
+    {
+      "id": "slides-05",
+      "format": "slides",
+      "exit_code": 0,
+      "files": [
+        "slides.pptx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0105,
+      "stderr": ""
+    },
+    {
+      "id": "slides-06",
+      "format": "slides",
+      "exit_code": 0,
+      "files": [
+        "slides.pptx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0105,
+      "stderr": ""
+    },
+    {
+      "id": "slides-07",
+      "format": "slides",
+      "exit_code": 0,
+      "files": [
+        "slides.pptx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0105,
+      "stderr": ""
+    },
+    {
+      "id": "slides-08",
+      "format": "slides",
+      "exit_code": 0,
+      "files": [
+        "slides.pptx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0105,
+      "stderr": ""
+    },
+    {
+      "id": "slides-09",
+      "format": "slides",
+      "exit_code": 0,
+      "files": [
+        "slides.pptx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0105,
+      "stderr": ""
+    },
+    {
+      "id": "slides-10",
+      "format": "slides",
+      "exit_code": 0,
+      "files": [
+        "slides.pptx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0105,
+      "stderr": ""
+    },
+    {
+      "id": "sheet-01",
+      "format": "spreadsheet",
+      "exit_code": 0,
+      "files": [
+        "data.xlsx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0208,
+      "stderr": ""
+    },
+    {
+      "id": "sheet-02",
+      "format": "spreadsheet",
+      "exit_code": 0,
+      "files": [
+        "data.xlsx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0207,
+      "stderr": ""
+    },
+    {
+      "id": "sheet-03",
+      "format": "spreadsheet",
+      "exit_code": 0,
+      "files": [
+        "data.xlsx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0207,
+      "stderr": ""
+    },
+    {
+      "id": "sheet-04",
+      "format": "spreadsheet",
+      "exit_code": 0,
+      "files": [
+        "data.xlsx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0207,
+      "stderr": ""
+    },
+    {
+      "id": "sheet-05",
+      "format": "spreadsheet",
+      "exit_code": 0,
+      "files": [
+        "data.xlsx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0207,
+      "stderr": ""
+    },
+    {
+      "id": "sheet-06",
+      "format": "spreadsheet",
+      "exit_code": 0,
+      "files": [
+        "data.xlsx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0207,
+      "stderr": ""
+    },
+    {
+      "id": "sheet-07",
+      "format": "spreadsheet",
+      "exit_code": 0,
+      "files": [
+        "data.xlsx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0207,
+      "stderr": ""
+    },
+    {
+      "id": "sheet-08",
+      "format": "spreadsheet",
+      "exit_code": 0,
+      "files": [
+        "data.xlsx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0207,
+      "stderr": ""
+    },
+    {
+      "id": "sheet-09",
+      "format": "spreadsheet",
+      "exit_code": 0,
+      "files": [
+        "data.xlsx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0207,
+      "stderr": ""
+    },
+    {
+      "id": "sheet-10",
+      "format": "spreadsheet",
+      "exit_code": 0,
+      "files": [
+        "data.xlsx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0207,
+      "stderr": ""
+    },
+    {
+      "id": "doc-01",
+      "format": "document",
+      "exit_code": 0,
+      "files": [
+        "document.docx",
+        "document.pdf"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0502,
+      "stderr": ""
+    },
+    {
+      "id": "doc-02",
+      "format": "document",
+      "exit_code": 0,
+      "files": [
+        "document.docx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0502,
+      "stderr": ""
+    },
+    {
+      "id": "doc-03",
+      "format": "document",
+      "exit_code": 0,
+      "files": [
+        "document.pdf"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0502,
+      "stderr": ""
+    },
+    {
+      "id": "doc-04",
+      "format": "document",
+      "exit_code": 0,
+      "files": [
+        "document.docx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0502,
+      "stderr": ""
+    },
+    {
+      "id": "doc-05",
+      "format": "document",
+      "exit_code": 0,
+      "files": [
+        "document.docx",
+        "document.pdf"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0502,
+      "stderr": ""
+    },
+    {
+      "id": "doc-06",
+      "format": "document",
+      "exit_code": 0,
+      "files": [
+        "document.docx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0502,
+      "stderr": ""
+    },
+    {
+      "id": "doc-07",
+      "format": "document",
+      "exit_code": 0,
+      "files": [
+        "document.pdf"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0502,
+      "stderr": ""
+    },
+    {
+      "id": "doc-08",
+      "format": "document",
+      "exit_code": 0,
+      "files": [
+        "document.docx",
+        "document.pdf"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0502,
+      "stderr": ""
+    },
+    {
+      "id": "doc-09",
+      "format": "document",
+      "exit_code": 0,
+      "files": [
+        "document.docx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0502,
+      "stderr": ""
+    },
+    {
+      "id": "doc-10",
+      "format": "document",
+      "exit_code": 0,
+      "files": [
+        "document.pdf"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "score": 1.0
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0502,
+      "stderr": ""
+    }
+  ]
+}

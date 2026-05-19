@@ -129,6 +129,9 @@ Full eval artifacts in [`MANTLE_V1_1_RELEASED.md`](MANTLE_V1_1_RELEASED.md). Lig
 - **Skills marketplace** — Browse public, personal, and team skill tabs with install/use affordances plus save-session-as-skill support
 - **Projects** — Persistent workspaces with project sidebar navigation, default planner/tool settings, and project-scoped sessions
 - **Knowledge base** — Per-project file uploads capped at 50 files/100MB and mounted read-only into new project sessions
+- **Productivity skills** — Bundled Slides, Spreadsheet, and Document skills produce real `.pptx`, `.xlsx`, `.docx`, and `.pdf` artifacts from structured outlines
+- **Artifact previews** — Session artifacts lazy-preview PowerPoint first slides, Excel sheet samples, Word text, and PDF.js documents with downloads intact
+- **Productivity benchmark** — 30 single-attempt tasks cover presentations, spreadsheets, and documents with structural judging and pass-rate reporting
 
 ## What ships in v1.2
 

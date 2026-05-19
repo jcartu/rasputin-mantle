@@ -24,6 +24,8 @@ import httpx
 import yaml
 from playwright.async_api import async_playwright
 
+os.environ["MANTLE_EVAL_MODE"] = "1"
+
 # ---------------------------------------------------------------------------
 # Config
 # ---------------------------------------------------------------------------

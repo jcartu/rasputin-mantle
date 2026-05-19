@@ -33,7 +33,8 @@ def run_task(task: dict[str, Any], root: Path) -> dict[str, Any]:
     skill = {"slides": "slides", "spreadsheet": "spreadsheet", "document": "document"}[str(task["format"])]
     with tempfile.TemporaryDirectory(prefix="mantle-productivity-") as tmp:
         output_dir = Path(tmp)
-        args = dict(task.get("input") or {})
+        args: dict[str, Any] = {}
+        args["prompt"] = str(task.get("prompt") or "")
         args["output_dir"] = str(output_dir)
         result = invoke_skill(skill, args)
         produced = sorted(path for path in output_dir.iterdir() if path.is_file())

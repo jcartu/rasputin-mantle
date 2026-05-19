@@ -1,0 +1,179 @@
+tasks:
+  - id: slides-01
+    format: slides
+    prompt: Create a minimal project kickoff deck with goals, timeline, and risks.
+    input:
+      template: minimal
+      outline:
+        title: Project Kickoff
+        sections:
+          - title: Goals
+            bullets: [Align scope, Confirm owners, Start delivery]
+          - title: Timeline
+            bullets: [Discovery, Build, Launch]
+          - title: Risks
+            bullets: [Dependencies, Budget, Adoption]
+    expected: {file: slides.pptx, min_slides: 4, sections: [Goals, Timeline, Risks]}
+  - id: slides-02
+    format: slides
+    prompt: Create a corporate quarterly business review deck.
+    input:
+      template: corporate
+      outline: {title: QBR, sections: [{title: Revenue, bullets: [ARR grew, Retention stable]}, {title: Pipeline, bullets: [Enterprise demand, Partner channel]}, {title: Next Steps, bullets: [Invest, Hire]}]}
+    expected: {file: slides.pptx, min_slides: 4, sections: [Revenue, Pipeline, Next Steps]}
+  - id: slides-03
+    format: slides
+    prompt: Create a pitch deck with problem, solution, traction, and ask.
+    input:
+      template: pitch
+      outline: {title: Investor Pitch, sections: [{title: Problem, bullets: [Manual workflows, Fragmented data]}, {title: Solution, bullets: [AI operator, Secure sandbox]}, {title: Traction, bullets: [Pilots, Revenue]}, {title: Ask, bullets: [Seed round, Hiring]}]}
+    expected: {file: slides.pptx, min_slides: 5, sections: [Problem, Solution, Traction, Ask]}
+  - id: slides-04
+    format: slides
+    prompt: Create a research deck with method, findings, and chart.
+    input:
+      template: research
+      outline: {title: Research Findings, sections: [{title: Method, bullets: [Survey, Interviews]}, {title: Findings, bullets: [Preference A, Barrier B], chart: {type: bar, labels: [A, B], values: [70, 30]}}, {title: Implications, bullets: [Prioritize A]}]}
+    expected: {file: slides.pptx, min_slides: 4, sections: [Method, Findings, Implications]}
+  - id: slides-05
+    format: slides
+    prompt: Create a board update deck.
+    input:
+      template: corporate
+      outline: {title: Board Update, sections: [{title: Highlights, bullets: [Launch complete, Costs down]}, {title: Metrics, bullets: [Usage up, Churn down]}, {title: Decisions, bullets: [Approve plan]}]}
+    expected: {file: slides.pptx, min_slides: 4, sections: [Highlights, Metrics, Decisions]}
+  - id: slides-06
+    format: slides
+    prompt: Create a training deck for onboarding.
+    input:
+      template: minimal
+      outline: {title: Onboarding Training, sections: [{title: Roles, bullets: [Owner, Reviewer]}, {title: Workflow, bullets: [Plan, Execute, Verify]}, {title: Quiz, bullets: [Scenario review]}]}
+    expected: {file: slides.pptx, min_slides: 4, sections: [Roles, Workflow, Quiz]}
+  - id: slides-07
+    format: slides
+    prompt: Create a sales enablement deck.
+    input:
+      template: pitch
+      outline: {title: Sales Enablement, sections: [{title: ICP, bullets: [Ops teams, Data teams]}, {title: Messaging, bullets: [Outcomes, Proof]}, {title: Objections, bullets: [Security, Cost]}]}
+    expected: {file: slides.pptx, min_slides: 4, sections: [ICP, Messaging, Objections]}
+  - id: slides-08
+    format: slides
+    prompt: Create a technical architecture deck.
+    input:
+      template: research
+      outline: {title: Architecture Review, sections: [{title: Components, bullets: [Gateway, Sandbox]}, {title: Data Flow, bullets: [Events, Artifacts]}, {title: Controls, bullets: [Budgets, Audit]}]}
+    expected: {file: slides.pptx, min_slides: 4, sections: [Components, Data Flow, Controls]}
+  - id: slides-09
+    format: slides
+    prompt: Create a launch plan presentation.
+    input:
+      template: corporate
+      outline: {title: Launch Plan, sections: [{title: Audience, bullets: [Admins, Operators]}, {title: Channels, bullets: [Email, Webinar]}, {title: Milestones, bullets: [Beta, GA]}]}
+    expected: {file: slides.pptx, min_slides: 4, sections: [Audience, Channels, Milestones]}
+  - id: slides-10
+    format: slides
+    prompt: Create an executive strategy deck.
+    input:
+      template: minimal
+      outline: {title: Strategy, sections: [{title: Context, bullets: [Market shift]}, {title: Bets, bullets: [Automation, Trust]}, {title: Operating Model, bullets: [Teams, Cadence]}]}
+    expected: {file: slides.pptx, min_slides: 4, sections: [Context, Bets, Operating Model]}
+  - id: sheet-01
+    format: spreadsheet
+    prompt: Create a sales pipeline workbook.
+    input: {mode: table, schema: [{name: Stage}, {name: Deals, type: number}], rows: [{Stage: Prospect, Deals: 12}, {Stage: Qualified, Deals: 7}], charts: [{type: bar, x: Stage, y: Deals}]}
+    expected: {file: data.xlsx, min_sheets: 2, required_headers: [Stage, Deals]}
+  - id: sheet-02
+    format: spreadsheet
+    prompt: Create a financial model workbook.
+    input: {mode: financial_model, assumptions: {starting_revenue: 500000, revenue_growth: 0.25}}
+    expected: {file: data.xlsx, sheets: [Assumptions, P&L, Balance Sheet, Cash Flow], formulas: true}
+  - id: sheet-03
+    format: spreadsheet
+    prompt: Create a feature comparison matrix.
+    input: {mode: comparison_matrix, criteria: [Price, Security, UX], items: [{name: A, scores: {Price: 3, Security: 5, UX: 4}}, {name: B, scores: {Price: 5, Security: 3, UX: 4}}]}
+    expected: {file: data.xlsx, required_headers: [Option, Price, Security, UX, Total Score]}
+  - id: sheet-04
+    format: spreadsheet
+    prompt: Clean duplicate customer data.
+    input: {mode: data_cleaning, schema: [{name: Name}, {name: Spend, type: number}], rows: [{Name: Ada, Spend: "$1,200"}, {Name: Ada, Spend: "$1,200"}, {Name: Lin, Spend: "900"}]}
+    expected: {file: data.xlsx, max_rows: 3, required_headers: [name, spend]}
+  - id: sheet-05
+    format: spreadsheet
+    prompt: Create an expense tracker.
+    input: {mode: table, schema: [{name: Category}, {name: Amount, type: number}], rows: [{Category: Hosting, Amount: 300}, {Category: Models, Amount: 450}], charts: [{type: bar, x: Category, y: Amount}]}
+    expected: {file: data.xlsx, required_headers: [Category, Amount]}
+  - id: sheet-06
+    format: spreadsheet
+    prompt: Create a hiring pipeline sheet.
+    input: {mode: table, schema: [{name: Role}, {name: Candidates, type: number}], rows: [{Role: Engineer, Candidates: 8}, {Role: Designer, Candidates: 3}]}
+    expected: {file: data.xlsx, required_headers: [Role, Candidates]}
+  - id: sheet-07
+    format: spreadsheet
+    prompt: Create a vendor scoring workbook.
+    input: {mode: comparison_matrix, criteria: [Cost, Support, Compliance], items: [{name: Vendor X, scores: {Cost: 4, Support: 3, Compliance: 5}}, {name: Vendor Y, scores: {Cost: 3, Support: 5, Compliance: 4}}]}
+    expected: {file: data.xlsx, required_headers: [Option, Cost, Support, Compliance, Total Score]}
+  - id: sheet-08
+    format: spreadsheet
+    prompt: Create a product metrics workbook.
+    input: {mode: table, schema: [{name: Metric}, {name: Value, type: number}], rows: [{Metric: DAU, Value: 1200}, {Metric: Retention, Value: 42}]}
+    expected: {file: data.xlsx, required_headers: [Metric, Value]}
+  - id: sheet-09
+    format: spreadsheet
+    prompt: Create a lightweight budget workbook.
+    input: {mode: table, schema: [{name: Month}, {name: Budget, type: number}], rows: [{Month: Jan, Budget: 1000}, {Month: Feb, Budget: 1200}], charts: [{type: line, x: Month, y: Budget}]}
+    expected: {file: data.xlsx, min_sheets: 2, required_headers: [Month, Budget]}
+  - id: sheet-10
+    format: spreadsheet
+    prompt: Filter rows with a query plan.
+    input: {mode: table, schema: [{name: Team}, {name: Status}], rows: [{Team: Ops, Status: Green}, {Team: Sales, Status: Yellow}], query_plan: {select: [Team, Status], where_equals: {Status: Green}}}
+    expected: {file: data.xlsx, required_headers: [Team, Status]}
+  - id: doc-01
+    format: document
+    prompt: Create a business memo.
+    input: {style: business, formats: [docx, pdf], outline: {title: Business Memo, sections: [{heading: Summary, paragraphs: [Approve the plan.]}, {heading: Recommendation, paragraphs: [Proceed with phased rollout.]}]}}
+    expected: {files: [document.docx, document.pdf], sections: [Summary, Recommendation]}
+  - id: doc-02
+    format: document
+    prompt: Create an academic mini report.
+    input: {style: academic, formats: [docx], outline: {title: Study Report, sections: [{heading: Abstract, paragraphs: [This report summarizes findings.]}, {heading: Method, paragraphs: [We reviewed evidence.]}, {heading: Results, paragraphs: [The treatment improved outcomes.]}]}}
+    expected: {files: [document.docx], sections: [Abstract, Method, Results]}
+  - id: doc-03
+    format: document
+    prompt: Create a proposal PDF.
+    input: {style: business, formats: [pdf], outline: {title: Proposal, sections: [{heading: Scope, paragraphs: [Deliver a pilot.]}, {heading: Timeline, paragraphs: [Four weeks.]}, {heading: Budget, tables: [{headers: [Item, Cost], rows: [[Implementation, 10000]]}]}]}}
+    expected: {files: [document.pdf], sections: [Scope, Timeline, Budget]}
+  - id: doc-04
+    format: document
+    prompt: Create a long document with a TOC.
+    input: {style: minimal, formats: [docx], outline: {title: Operating Guide, sections: [{heading: One, paragraphs: [A]}, {heading: Two, paragraphs: [B]}, {heading: Three, paragraphs: [C]}, {heading: Four, paragraphs: [D]}, {heading: Five, paragraphs: [E]}, {heading: Six, paragraphs: [F]}]}}
+    expected: {files: [document.docx], toc: true, sections: [One, Two, Three, Four, Five, Six]}
+  - id: doc-05
+    format: document
+    prompt: Create a launch checklist document.
+    input: {style: minimal, formats: [docx, pdf], outline: {title: Launch Checklist, sections: [{heading: Prelaunch, paragraphs: [Complete QA.]}, {heading: Launch Day, paragraphs: [Monitor metrics.]}, {heading: Postlaunch, paragraphs: [Collect feedback.]}]}}
+    expected: {files: [document.docx, document.pdf], sections: [Prelaunch, Launch Day, Postlaunch]}
+  - id: doc-06
+    format: document
+    prompt: Create a meeting recap document.
+    input: {style: business, formats: [docx], outline: {title: Meeting Recap, sections: [{heading: Decisions, paragraphs: [Ship W7.]}, {heading: Actions, tables: [{headers: [Owner, Task], rows: [[Ada, Review], [Lin, Test]]}]}]}}
+    expected: {files: [document.docx], sections: [Decisions, Actions]}
+  - id: doc-07
+    format: document
+    prompt: Create an incident report.
+    input: {style: business, formats: [pdf], outline: {title: Incident Report, sections: [{heading: Impact, paragraphs: [Minor outage.]}, {heading: Root Cause, paragraphs: [Configuration drift.]}, {heading: Mitigation, paragraphs: [Add checks.]}]}}
+    expected: {files: [document.pdf], sections: [Impact, Root Cause, Mitigation]}
+  - id: doc-08
+    format: document
+    prompt: Create a research brief.
+    input: {style: academic, formats: [docx, pdf], outline: {title: Research Brief, sections: [{heading: Question, paragraphs: ["What drives adoption?"]}, {heading: Evidence, paragraphs: [Speed and trust.]}, {heading: Conclusion, paragraphs: [Invest in controls.]}]}}
+    expected: {files: [document.docx, document.pdf], sections: [Question, Evidence, Conclusion]}
+  - id: doc-09
+    format: document
+    prompt: Create a simple SOP.
+    input: {style: minimal, formats: [docx], outline: {title: SOP, sections: [{heading: Purpose, paragraphs: [Standardize work.]}, {heading: Procedure, paragraphs: [Plan, act, verify.]}, {heading: Records, paragraphs: [Store artifacts.]}]}}
+    expected: {files: [document.docx], sections: [Purpose, Procedure, Records]}
+  - id: doc-10
+    format: document
+    prompt: Create an executive summary document.
+    input: {style: business, formats: [pdf], outline: {title: Executive Summary, sections: [{heading: Context, paragraphs: [Market is changing.]}, {heading: Plan, paragraphs: [Launch productivity skills.]}, {heading: Outcomes, paragraphs: [Higher completion rates.]}]}}
+    expected: {files: [document.pdf], sections: [Context, Plan, Outcomes]}

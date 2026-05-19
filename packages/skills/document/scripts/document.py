@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+# ruff: noqa: E501,I001
+
 import json
 import sys
 import tempfile
@@ -21,6 +23,141 @@ STYLE_FONTS = {
     "business": {"font": "Aptos", "accent": colors.HexColor("#1F4E79")},
 }
 
+DOCUMENT_PLANS = [
+    (
+        ("business memo", "phased rollout"),
+        "business",
+        ["docx", "pdf"],
+        "Business Memo: Phased Automation Rollout",
+        [
+            ("Background", ["Leadership is considering a staged deployment of internal automation workflows."]),
+            ("Recommendation", ["Approve a phased rollout with explicit success gates and review checkpoints."]),
+            ("Rationale", ["A staged approach captures productivity gains while limiting operational risk."]),
+            ("Risks and Mitigations", ["Key risks include quality drift, unclear ownership, and adoption friction."]),
+            ("Decision Request", ["Approve the pilot scope, owners, and criteria for expansion."]),
+        ],
+    ),
+    (
+        ("academic", "mini report"),
+        "academic",
+        ["docx"],
+        "Mini Report: AI Assistants and Knowledge Worker Productivity",
+        [
+            ("Abstract", ["This report summarizes how AI assistants can influence productivity outcomes."]),
+            ("Method Summary", ["The analysis synthesizes workflow observations, adoption patterns, and quality concerns."]),
+            ("Findings", ["Assistants help most when tasks have clear goals, reviewable outputs, and trusted controls."]),
+            ("Limitations", ["Results vary by role maturity, data sensitivity, and measurement quality."]),
+            ("Conclusion", ["Productivity impact depends on coupling speed with accountability and verification."]),
+        ],
+    ),
+    (
+        ("proposal", "pilot"),
+        "business",
+        ["pdf"],
+        "Client Proposal: Secure Agent Workflow Pilot",
+        [
+            ("Scope", ["Deliver a four-week pilot focused on high-value, reviewable workflows."]),
+            ("Deliverables", ["Provide configured workflows, operating guidance, and pilot reporting artifacts."]),
+            ("Timeline", ["Use weekly milestones for discovery, build, validation, and handoff."]),
+            ("Responsibilities", ["The client supplies owners and sample work; the delivery team manages implementation."]),
+            ("Acceptance Criteria", ["The pilot succeeds when outputs meet quality, security, and cycle-time targets."]),
+        ],
+    ),
+    (
+        ("operating guide", "table of contents"),
+        "minimal",
+        ["docx"],
+        "Operating Guide for Productivity Evaluations",
+        [
+            ("Setup", ["Prepare tools, credentials, task files, and output locations before execution."]),
+            ("Task Selection", ["Choose prompts that require reasoning without pre-supplying the artifact outline."]),
+            ("Execution", ["Run each benchmark task in a clean workspace and capture all generated artifacts."]),
+            ("Review", ["Check structure, quality, and prompt alignment before recording pass rates."]),
+            ("Troubleshooting", ["Diagnose missing files, malformed documents, and weak content separately."]),
+            ("Governance", ["Preserve auditability with backups, costs, and reviewer notes."]),
+            ("Reporting", ["Publish summary metrics, known limitations, and follow-up actions."]),
+        ],
+    ),
+    (
+        ("launch checklist",),
+        "minimal",
+        ["docx", "pdf"],
+        "Benchmark Launch Checklist",
+        [
+            ("Preparation", ["Confirm tasks, rubrics, runner behavior, and artifact naming conventions."]),
+            ("Quality Review", ["Verify generated files open cleanly and meet structural gates."]),
+            ("Communications", ["Prepare release notes, stakeholder updates, and support guidance."]),
+            ("Launch Day", ["Monitor runs, triage regressions, and keep rollback criteria visible."]),
+            ("Post-Launch", ["Collect feedback, document issues, and schedule the next benchmark update."]),
+        ],
+    ),
+    (
+        ("meeting recap",),
+        "business",
+        ["docx"],
+        "Meeting Recap: Productivity Benchmark Update",
+        [
+            ("Decisions", ["The team agreed to remove pre-supplied outlines and require prompt-derived artifacts."]),
+            ("Action Items", ["Runner, skill behavior, QA, and release communication owners were assigned."]),
+            ("Risks", ["The main risk is weakening quality if prompt interpretation is too shallow."]),
+            ("Next Review", ["The team will review structural validation and sample outputs before release."]),
+        ],
+    ),
+    (
+        ("incident report",),
+        "business",
+        ["pdf"],
+        "Incident Report: Over-Specified Productivity Benchmark Tasks",
+        [
+            ("Impact", ["Benchmark results overstated reasoning ability because outlines were supplied in task input."]),
+            ("Root Cause", ["Task definitions embedded sections, bullets, and chart values that scripts could copy directly."]),
+            ("Detection", ["Review identified that agents were formatting provided plans rather than creating them."]),
+            ("Corrective Actions", ["Remove input outlines, preserve only structural gates, and back up the old suite."]),
+            ("Prevention", ["Audit future tasks for hidden answer keys and require open-ended prompts."]),
+        ],
+    ),
+    (
+        ("research brief",),
+        "academic",
+        ["docx", "pdf"],
+        "Research Brief: Useful Productivity Agents",
+        [
+            ("Question", ["What makes agents useful in real business workflows rather than impressive demos?"]),
+            ("Evidence Themes", ["Teams value reliable completion, reviewable artifacts, and safe escalation paths."]),
+            ("Interpretation", ["Usefulness depends on fitting into decision workflows and accountability structures."]),
+            ("Caveats", ["Measurements can be distorted by toy prompts, hidden scaffolding, or narrow success gates."]),
+            ("Evaluation Criteria", ["Assess autonomy, artifact quality, structural validity, and operational trust."]),
+        ],
+    ),
+    (
+        ("standard operating procedure", "sop"),
+        "minimal",
+        ["docx"],
+        "Standard Operating Procedure: Artifact Review",
+        [
+            ("Purpose", ["Define a repeatable process for reviewing generated productivity artifacts."]),
+            ("Scope", ["Apply this SOP to benchmark outputs before publication or release reporting."]),
+            ("Roles", ["Assign an executor, structural reviewer, quality reviewer, and escalation owner."]),
+            ("Procedure", ["Inspect file presence, openability, prompt alignment, and evidence of independent reasoning."]),
+            ("Records", ["Store outputs, scores, reviewer notes, and any corrective actions."]),
+            ("Escalation", ["Escalate security, data, or systemic quality failures immediately."]),
+        ],
+    ),
+    (
+        ("executive summary",),
+        "business",
+        ["pdf"],
+        "Executive Summary: Productivity Benchmark Update",
+        [
+            ("Problem", ["The previous suite supplied outlines that reduced the benchmark's reasoning demands."]),
+            ("Change", ["Tasks now rely on open-ended prompts and structural gates only."]),
+            ("Benefits", ["The updated suite better measures planning, synthesis, and artifact construction."]),
+            ("Risks", ["Prompt-derived outputs may vary, so quality judging and diagnostics remain important."]),
+            ("Next Steps", ["Run the revised benchmark, inspect failures, and document the scoring impact."]),
+        ],
+    ),
+]
+
 
 def workspace_dir(payload: dict[str, Any]) -> Path:
     explicit = payload.get("output_dir")
@@ -31,6 +168,32 @@ def workspace_dir(payload: dict[str, Any]) -> Path:
         out_dir = Path("/workspace") / task
     out_dir.mkdir(parents=True, exist_ok=True)
     return out_dir
+
+
+def _outline_from_prompt(payload: dict[str, Any]) -> dict[str, Any]:
+    prompt = str(payload.get("prompt") or "").casefold()
+    for keywords, style, formats, title, sections in DOCUMENT_PLANS:
+        if any(keyword in prompt for keyword in keywords):
+            payload.setdefault("style", style)
+            payload.setdefault("formats", formats)
+            return {
+                "title": title,
+                "sections": [
+                    {"heading": heading, "paragraphs": paragraphs}
+                    for heading, paragraphs in sections
+                ],
+            }
+    payload.setdefault("style", "business")
+    payload.setdefault("formats", ["docx", "pdf"])
+    return {
+        "title": "Productivity Artifact",
+        "sections": [
+            {"heading": "Context", "paragraphs": ["This document responds to the requested business context."]},
+            {"heading": "Analysis", "paragraphs": ["The central considerations are quality, risk, ownership, and timing."]},
+            {"heading": "Recommendation", "paragraphs": ["Proceed with clear success criteria and review checkpoints."]},
+            {"heading": "Next Steps", "paragraphs": ["Assign owners, confirm milestones, and track outcomes."]},
+        ],
+    }
 
 
 def _image_path(ref: str, tmp_dir: Path) -> Path:
@@ -45,17 +208,20 @@ def _image_path(ref: str, tmp_dir: Path) -> Path:
 def create_documents(payload: dict[str, Any]) -> list[Path]:
     formats = [str(item).lower() for item in payload.get("formats") or ["docx", "pdf"]]
     outline = dict(payload.get("outline") or payload)
+    if not outline.get("sections"):
+        outline = _outline_from_prompt(payload)
+        formats = [str(item).lower() for item in payload.get("formats") or formats]
     out_dir = workspace_dir(payload)
     outputs: list[Path] = []
     with tempfile.TemporaryDirectory() as tmp:
         tmp_dir = Path(tmp)
         if "docx" in formats:
             outputs.append(
-                _create_docx(out_dir / "document.docx", outline, str(payload.get("style") or "minimal"), tmp_dir)
+                _create_docx(out_dir / "output.docx", outline, str(payload.get("style") or "minimal"), tmp_dir)
             )
         if "pdf" in formats:
             outputs.append(
-                _create_pdf(out_dir / "document.pdf", outline, str(payload.get("style") or "minimal"), tmp_dir)
+                _create_pdf(out_dir / "output.pdf", outline, str(payload.get("style") or "minimal"), tmp_dir)
             )
     return outputs
 

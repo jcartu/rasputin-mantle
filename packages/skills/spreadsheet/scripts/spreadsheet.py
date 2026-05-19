@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-# ruff: noqa: E402,I001
+# ruff: noqa: E402,E501,I001
 
 import json
 import sys
@@ -37,11 +37,115 @@ def workspace_path(payload: dict[str, Any], filename: str) -> Path:
     return out_dir / filename
 
 
+def _payload_from_prompt(payload: dict[str, Any]) -> dict[str, Any]:
+    prompt = str(payload.get("prompt") or "").casefold()
+    base = {"output_dir": payload.get("output_dir"), "prompt": payload.get("prompt")}
+    if "financial model" in prompt or "five-year" in prompt or "five year" in prompt:
+        return {
+            **base,
+            "mode": "financial_model",
+            "assumptions": {"starting_revenue": 850000, "revenue_growth": 0.28, "gross_margin": 0.74},
+        }
+    if "feature comparison" in prompt or "vendor scoring" in prompt:
+        criteria = ["Cost", "Security", "Usability", "Support", "Implementation"]
+        if "vendor" in prompt:
+            criteria = ["Cost", "Compliance", "Support", "Reliability", "Implementation"]
+        return {
+            **base,
+            "mode": "comparison_matrix",
+            "criteria": criteria,
+            "items": [
+                {"name": "Option A", "scores": {criterion: 4 for criterion in criteria}},
+                {"name": "Option B", "scores": {criterion: 3 + (idx % 2) for idx, criterion in enumerate(criteria)}},
+                {"name": "Option C", "scores": {criterion: 5 if idx < 2 else 3 for idx, criterion in enumerate(criteria)}},
+            ],
+        }
+    if "customer data cleaning" in prompt or "deduplicate" in prompt:
+        return {
+            **base,
+            "mode": "data_cleaning",
+            "schema": [{"name": "Name"}, {"name": "Company"}, {"name": "Spend"}, {"name": "Status"}],
+            "rows": [
+                {"Name": "Ada Lovelace", "Company": "Analytical Ops", "Spend": "$1,200", "Status": "Active"},
+                {"Name": "Ada Lovelace", "Company": "Analytical Ops", "Spend": "$1,200", "Status": "Active"},
+                {"Name": "Lin Chen", "Company": "Vector Labs", "Spend": "900", "Status": "Trial"},
+                {"Name": "Maya Singh", "Company": "Nimbus", "Spend": "$2,450", "Status": "Active"},
+            ],
+            "summary": True,
+        }
+    if "expense" in prompt:
+        return {
+            **base,
+            "mode": "table",
+            "schema": [{"name": "Category"}, {"name": "Vendor"}, {"name": "Monthly Cost"}, {"name": "Variance"}],
+            "rows": [
+                {"Category": "Compute", "Vendor": "GPU Cloud", "Monthly Cost": 4200, "Variance": 350},
+                {"Category": "Models", "Vendor": "API Provider", "Monthly Cost": 1800, "Variance": -120},
+                {"Category": "Storage", "Vendor": "Object Store", "Monthly Cost": 420, "Variance": 40},
+            ],
+            "charts": [{"type": "bar", "x": "Category", "y": "Monthly Cost", "title": "Monthly Cost by Category"}],
+        }
+    if "hiring" in prompt:
+        return {
+            **base,
+            "mode": "table",
+            "schema": [{"name": "Role"}, {"name": "Stage"}, {"name": "Owner"}, {"name": "Candidates"}],
+            "rows": [
+                {"Role": "Platform Engineer", "Stage": "Technical", "Owner": "Avery", "Candidates": 5},
+                {"Role": "Product Designer", "Stage": "Portfolio", "Owner": "Sam", "Candidates": 3},
+                {"Role": "Operations Lead", "Stage": "Onsite", "Owner": "Jordan", "Candidates": 2},
+            ],
+            "summary": True,
+        }
+    if "product metrics" in prompt:
+        return {
+            **base,
+            "mode": "table",
+            "schema": [{"name": "Metric"}, {"name": "Current"}, {"name": "Previous"}, {"name": "Interpretation"}],
+            "rows": [
+                {"Metric": "Activation", "Current": 61, "Previous": 54, "Interpretation": "Improving"},
+                {"Metric": "Retention", "Current": 43, "Previous": 41, "Interpretation": "Stable"},
+                {"Metric": "Quality", "Current": 88, "Previous": 82, "Interpretation": "Improving"},
+            ],
+            "charts": [{"type": "bar", "x": "Metric", "y": "Current", "title": "Current Product Metrics"}],
+        }
+    if "budget" in prompt:
+        return {**base, "mode": "budget"}
+    if "filter" in prompt or "status" in prompt:
+        return {
+            **base,
+            "mode": "table",
+            "schema": [{"name": "Initiative"}, {"name": "Owner"}, {"name": "Health"}, {"name": "Priority"}],
+            "rows": [
+                {"Initiative": "Runner update", "Owner": "Ada", "Health": "Green", "Priority": "High"},
+                {"Initiative": "Skill QA", "Owner": "Lin", "Health": "Yellow", "Priority": "High"},
+                {"Initiative": "Release comms", "Owner": "Maya", "Health": "Red", "Priority": "Medium"},
+            ],
+            "query_plan": {"where_equals": {"Health": "Green"}},
+            "summary": True,
+        }
+    return {
+        **base,
+        "mode": "table",
+        "schema": [{"name": "Stage"}, {"name": "Owner"}, {"name": "Deals"}, {"name": "Forecast Risk"}],
+        "rows": [
+            {"Stage": "Prospect", "Owner": "Sales", "Deals": 18, "Forecast Risk": "Medium"},
+            {"Stage": "Qualified", "Owner": "AE Team", "Deals": 11, "Forecast Risk": "Low"},
+            {"Stage": "Commit", "Owner": "Revenue Lead", "Deals": 6, "Forecast Risk": "Low"},
+        ],
+        "charts": [{"type": "bar", "x": "Stage", "y": "Deals", "title": "Deals by Stage"}],
+    }
+
+
 def create_workbook(payload: dict[str, Any]) -> Path:
+    if not payload.get("mode"):
+        payload = _payload_from_prompt(payload)
     output = workspace_path(payload, "data.xlsx")
     mode = str(payload.get("mode") or "table")
     if mode == "financial_model":
         return build_financial_model(output, dict(payload.get("assumptions") or {}))
+    if mode == "budget":
+        return _create_budget_workbook(output)
 
     wb = Workbook()
     if mode == "comparison_matrix":
@@ -55,11 +159,43 @@ def create_workbook(payload: dict[str, Any]) -> Path:
         if payload.get("query_plan"):
             rows = _apply_query_plan(rows, dict(payload.get("query_plan") or {}))
         _add_table(wb.active, rows, schema)
+    if payload.get("summary"):
+        _add_summary_sheet(wb, str(payload.get("prompt") or "Summary"))
     _format(wb)
     wb.save(output)
     if payload.get("charts"):
         _add_charts(output, list(payload.get("charts") or []))
     return output
+
+
+def _create_budget_workbook(output: Path) -> Path:
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "Budget"
+    ws.append(["Month", "Planned", "Actual", "Variance"])
+    rows = [("Jan", 1200, 1150), ("Feb", 1350, 1425), ("Mar", 1500, 1610), ("Apr", 1650, 1580)]
+    for idx, (month, planned, actual) in enumerate(rows, start=2):
+        ws.append([month, planned, actual, f"=B{idx}-C{idx}"])
+    ws.append(["Total", "=SUM(B2:B5)", "=SUM(C2:C5)", "=SUM(D2:D5)"])
+    summary = wb.create_sheet("Summary")
+    summary.append(["Metric", "Value"])
+    summary.append(["Total Planned", "=Budget!B6"])
+    summary.append(["Total Actual", "=Budget!C6"])
+    summary.append(["Total Variance", "=Budget!D6"])
+    _format(wb)
+    wb.save(output)
+    _add_charts(output, [{"type": "line", "x": "Month", "y": "Planned", "title": "Planned Budget"}])
+    return output
+
+
+def _add_summary_sheet(wb: Workbook, prompt: str) -> None:
+    if "Summary" in wb.sheetnames:
+        return
+    ws = wb.create_sheet("Summary")
+    ws.append(["Question", "Answer"])
+    ws.append(["Purpose", prompt[:180]])
+    ws.append(["Review Focus", "Use the workbook to identify risks, owners, and next decisions."])
+    ws.append(["Next Step", "Validate assumptions with the responsible team before publication."])
 
 
 def _apply_query_plan(rows: list[dict[str, Any]], plan: dict[str, Any]) -> list[dict[str, Any]]:

@@ -13,3 +13,8 @@ for pkg in ("shared", "skills", "codeact", "sandbox", "browser"):
     p = ROOT / "packages" / pkg
     if p.exists():
         sys.path.insert(0, str(p))
+
+for integration in ("slack", "email"):
+    p = ROOT / "packages" / "integrations" / integration
+    if p.exists():
+        sys.path.insert(0, str(p))

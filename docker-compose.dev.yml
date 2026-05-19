@@ -1,0 +1,122 @@
+# docker-compose.dev.yml
+# Rasputin Mantle local dev stack — one-command start
+# Prerequisite: vLLM running on host (separate process)
+
+name: mantle-dev
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: mantle
+      POSTGRES_PASSWORD: mantle-dev
+      POSTGRES_DB: mantle
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mantle"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - mantle
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - mantle
+
+  gateway:
+    build:
+      context: ./apps/gateway
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    env_file: .env
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - workspace:/workspace
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - mantle
+
+  web:
+    build:
+      context: ./apps/web
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_GATEWAY_URL: http://localhost:8000
+    depends_on:
+      - gateway
+    networks:
+      - mantle
+
+  sandbox:
+    image: m1k1o/neko:firefox
+    restart: unless-stopped
+    shm_size: "2gb"
+    cap_add:
+      - SYS_ADMIN
+    environment:
+      NEKO_SCREEN: "1280x720@30"
+      NEKO_PASSWORD: mantle-dev
+      NEKO_PASSWORD_ADMIN: mantle-admin
+      NEKO_EPR: "52000-52100"
+      NEKO_ICELITE: "1"
+    ports:
+      - "8080:8080"
+      - "52000-52100:52000-52100/udp"
+    volumes:
+      - workspace:/workspace
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:8080/"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+    networks:
+      - mantle
+
+  mailhog:
+    image: mailhog/mailhog:latest
+    restart: unless-stopped
+    ports:
+      - "8025:8025"
+      - "1025:1025"
+    networks:
+      - mantle
+
+volumes:
+  postgres-data:
+  redis-data:
+  workspace:
+
+networks:
+  mantle:
+    driver: bridge

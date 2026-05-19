@@ -17,6 +17,12 @@ from pptx import Presentation
 from pptx.dml.color import RGBColor
 from pptx.util import Inches, Pt
 
+SKILLS_ROOT = Path(__file__).resolve().parents[2]
+if str(SKILLS_ROOT) not in sys.path:
+    sys.path.insert(0, str(SKILLS_ROOT))
+
+from shared.self_review import self_review  # noqa: E402
+
 TEMPLATES = {
     "minimal": {"accent": RGBColor(46, 52, 64), "bg": RGBColor(255, 255, 255), "fg": RGBColor(35, 35, 35)},
     "corporate": {"accent": RGBColor(31, 78, 121), "bg": RGBColor(245, 248, 252), "fg": RGBColor(20, 32, 48)},
@@ -322,15 +328,24 @@ def create_presentation(payload: dict[str, Any]) -> Path:
         return output
 
 
+def _review_plan(payload: dict[str, Any]) -> dict[str, Any]:
+    outline = payload.get("outline") or payload
+    if isinstance(outline, dict) and outline.get("sections"):
+        return dict(outline)
+    return _outline_from_prompt(dict(payload))
+
+
 def main() -> None:
     payload = json.loads(sys.stdin.read() or "{}")
     output = create_presentation(payload)
+    review = self_review(output, _review_plan(payload), "slides", max_iterations=2)
     print(
         json.dumps(
             {
                 "path": str(output),
                 "template": payload.get("template", "minimal"),
                 "slide_count": len(Presentation(output).slides),
+                "self_review": {"artifact_id": output.name, **review},
             }
         )
     )

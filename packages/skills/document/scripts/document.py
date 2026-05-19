@@ -17,6 +17,12 @@ from reportlab.lib.pagesizes import LETTER
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.platypus import Image, PageBreak, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
 
+SKILLS_ROOT = Path(__file__).resolve().parents[2]
+if str(SKILLS_ROOT) not in sys.path:
+    sys.path.insert(0, str(SKILLS_ROOT))
+
+from shared.self_review import self_review  # noqa: E402
+
 STYLE_FONTS = {
     "minimal": {"font": "Arial", "accent": colors.HexColor("#2E3440")},
     "academic": {"font": "Times New Roman", "accent": colors.HexColor("#4B5563")},
@@ -226,6 +232,13 @@ def create_documents(payload: dict[str, Any]) -> list[Path]:
     return outputs
 
 
+def _review_plan(payload: dict[str, Any]) -> dict[str, Any]:
+    outline = payload.get("outline") or payload
+    if isinstance(outline, dict) and outline.get("sections"):
+        return dict(outline)
+    return _outline_from_prompt(dict(payload))
+
+
 def _create_docx(path: Path, outline: dict[str, Any], style_name: str, tmp_dir: Path) -> Path:
     doc = Document()
     _apply_docx_style(doc, style_name)
@@ -327,9 +340,19 @@ def _pdf_table(spec: dict[str, Any], accent: Any) -> Table:
 def main() -> None:
     payload = json.loads(sys.stdin.read() or "{}")
     outputs = create_documents(payload)
+    review_plan = _review_plan(payload)
+    reviews = [
+        {"artifact_id": path.name, **self_review(path, review_plan, "document", max_iterations=2)}
+        for path in outputs
+        if path.suffix == ".docx"
+    ]
     print(
         json.dumps(
-            {"paths": [str(path) for path in outputs], "formats": [path.suffix.lstrip(".") for path in outputs]}
+            {
+                "paths": [str(path) for path in outputs],
+                "formats": [path.suffix.lstrip(".") for path in outputs],
+                "self_review": reviews[0] if len(reviews) == 1 else reviews,
+            }
         )
     )
 

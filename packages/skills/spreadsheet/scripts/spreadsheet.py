@@ -11,6 +11,9 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
+SKILLS_ROOT = Path(__file__).resolve().parents[2]
+if str(SKILLS_ROOT) not in sys.path:
+    sys.path.insert(0, str(SKILLS_ROOT))
 
 import matplotlib
 
@@ -24,6 +27,7 @@ from openpyxl.styles import Font, PatternFill
 from subskills.comparison_matrix import add_comparison_matrix  # noqa: E402
 from subskills.data_cleaning import clean_rows  # noqa: E402
 from subskills.financial_model import build_financial_model  # noqa: E402
+from shared.self_review import self_review  # noqa: E402
 
 
 def workspace_path(payload: dict[str, Any], filename: str) -> Path:
@@ -168,6 +172,12 @@ def create_workbook(payload: dict[str, Any]) -> Path:
     return output
 
 
+def _review_plan(payload: dict[str, Any]) -> dict[str, Any]:
+    if payload.get("mode"):
+        return dict(payload)
+    return _payload_from_prompt(dict(payload))
+
+
 def _create_budget_workbook(output: Path) -> Path:
     wb = Workbook()
     ws = wb.active
@@ -265,8 +275,19 @@ def _chart_image(df: pd.DataFrame, chart: dict[str, Any], target: Path) -> Path:
 def main() -> None:
     payload = json.loads(sys.stdin.read() or "{}")
     output = create_workbook(payload)
+    review_plan = _review_plan(payload)
+    review = self_review(output, review_plan, "spreadsheet", max_iterations=2)
     workbook = load_workbook(output, data_only=False)
-    print(json.dumps({"path": str(output), "sheets": workbook.sheetnames, "mode": payload.get("mode", "table")}))
+    print(
+        json.dumps(
+            {
+                "path": str(output),
+                "sheets": workbook.sheetnames,
+                "mode": review_plan.get("mode", "table"),
+                "self_review": {"artifact_id": output.name, **review},
+            }
+        )
+    )
 
 
 if __name__ == "__main__":

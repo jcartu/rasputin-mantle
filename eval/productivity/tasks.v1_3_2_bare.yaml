@@ -1,0 +1,188 @@
+tasks:
+  - id: slides-01
+    format: slides
+    prompt: Create a project kickoff presentation for a new product launch. Address strategic goals, team alignment, timeline, dependencies, and risk assessment for executive and cross-functional stakeholders.
+    expected: {file: slides.pptx, min_slides: 5}
+  - id: slides-02
+    format: slides
+    prompt: Create a quarterly business review presentation for senior stakeholders. Summarize performance, market context, operational learnings, customer signals, and priorities for the next quarter.
+    expected: {file: slides.pptx, min_slides: 5}
+  - id: slides-03
+    format: slides
+    prompt: |
+      Create an investor pitch deck for an early-stage AI productivity company
+      raising a seed round from venture investors. Include at least 7 slides:
+      title, problem, product, market opportunity, differentiation, traction,
+      business model, fundraising ask, and use of funds. Include one market or
+      competitive-positioning visual. Audience is seed-stage investors; tone
+      should be confident, specific, and concise.
+    expected: {file: slides.pptx, min_slides: 6}
+  - id: slides-04
+    format: slides
+    prompt: Create a research findings presentation about enterprise teams adopting autonomous agents. Explain the research approach, major insights, supporting evidence, implications, and recommended next steps.
+    expected: {file: slides.pptx, min_slides: 5}
+  - id: slides-05
+    format: slides
+    prompt: Create a board update presentation for a rapidly scaling software company. Cover business health, execution progress, financial posture, open decisions, and risks requiring board attention.
+    expected: {file: slides.pptx, min_slides: 5}
+  - id: slides-06
+    format: slides
+    prompt: |
+      Create an onboarding training presentation for new operations hires at a
+      technology company who will use an internal automation platform. Include
+      at least 6 slides: learning objectives, platform operating model, core
+      workflow walkthrough, review and quality standards, escalation paths,
+      hands-on practice activity, and knowledge check. Audience is first-week
+      operations employees; tone should be practical, clear, and supportive.
+    expected: {file: slides.pptx, min_slides: 5}
+  - id: slides-07
+    format: slides
+    prompt: |
+      Create a sales enablement presentation for account executives selling a
+      technical automation product to enterprise operations leaders. Include at
+      least 6 slides: target buyer profile, business pain framing, product
+      positioning, priority use cases, discovery questions, proof-point plan,
+      objection-handling guide, and recommended sales motion. Audience is an
+      internal enterprise sales team; tone should be direct, field-ready, and
+      commercially credible.
+    expected: {file: slides.pptx, min_slides: 5}
+  - id: slides-08
+    format: slides
+    prompt: |
+      Create a technical architecture review presentation for a secure agent
+      execution platform used by enterprise customers. Include at least 6
+      slides: system overview, major runtime components, data flow and trust
+      boundaries, authentication and permission model, sandbox and control-plane
+      isolation, observability and operational controls, and scaling roadmap.
+      Include one architecture diagram. Audience is engineering leadership and
+      security stakeholders; tone should be precise and review-oriented.
+    expected: {file: slides.pptx, min_slides: 5}
+  - id: slides-09
+    format: slides
+    prompt: Create a go-to-market launch plan presentation for a productivity benchmark release. Cover target audiences, messaging, channel strategy, launch milestones, success metrics, and contingency planning.
+    expected: {file: slides.pptx, min_slides: 6}
+  - id: slides-10
+    format: slides
+    prompt: |
+      Create an executive strategy presentation for the next fiscal year of an
+      autonomous work platform company. Include at least 7 slides: market
+      context, strategic objectives, product bets, operating principles,
+      investment tradeoffs, measurement framework, key risks, and leadership
+      decisions required. Include one decision matrix or risk heatmap. Audience
+      is the CEO staff and functional executives; tone should be strategic,
+      decisive, and board-ready.
+    expected: {file: slides.pptx, min_slides: 6}
+  - id: sheet-01
+    format: spreadsheet
+    prompt: Build a sales pipeline workbook that helps a revenue team understand funnel health, stage conversion, deal ownership, next actions, and forecast risk.
+    expected: {file: data.xlsx, min_sheets: 2}
+  - id: sheet-02
+    format: spreadsheet
+    prompt: Build a five-year financial model workbook for a growing SaaS business. Include assumptions and connected financial statements that can be reviewed by finance leadership.
+    expected: {file: data.xlsx, min_sheets: 4, formulas: true}
+  - id: sheet-03
+    format: spreadsheet
+    prompt: Build a feature comparison workbook to evaluate competing productivity platforms for an enterprise buyer. Make it useful for comparing tradeoffs across product, security, usability, and cost dimensions.
+    expected: {file: data.xlsx, min_sheets: 1}
+  - id: sheet-04
+    format: spreadsheet
+    prompt: Build a customer data cleaning workbook from a messy customer export. Deduplicate repeated records, normalize spend values, preserve useful fields, and summarize the cleaned dataset.
+    expected: {file: data.xlsx, min_sheets: 2}
+  - id: sheet-05
+    format: spreadsheet
+    prompt: Build an expense tracker workbook for a small AI infrastructure team. Track categories, vendors, recurring costs, monthly totals, variance, and a visual summary for budget review.
+    expected: {file: data.xlsx, min_sheets: 2}
+  - id: sheet-06
+    format: spreadsheet
+    prompt: |
+      Build a hiring pipeline workbook for a 50-person software company scaling
+      engineering, design, and operations roles over the next two quarters.
+      Include at least 3 sheets: candidate pipeline, funnel summary, and
+      bottlenecks/priorities. Track role, function, recruiter, hiring manager,
+      stage, status, source, days in stage, target start window, and next action.
+      Add formulas or summaries for stage counts, aging, conversion, and owner
+      workload, plus one chart suitable for a recruiting leadership review.
+    expected: {file: data.xlsx, min_sheets: 2}
+  - id: sheet-07
+    format: spreadsheet
+    prompt: Build a vendor scoring workbook for selecting a secure infrastructure provider. Compare options across cost, compliance, support, reliability, implementation effort, and total weighted score.
+    expected: {file: data.xlsx, min_sheets: 1}
+  - id: sheet-08
+    format: spreadsheet
+    prompt: |
+      Build a product metrics workbook for a monthly executive product review of
+      a B2B SaaS workflow product. Include at least 3 sheets: raw metrics,
+      trend/cohort summary, and executive dashboard. Track activation,
+      retention, engagement, reliability or quality, customer outcome metrics,
+      period-over-period movement, owners, and interpretation notes. Add
+      formulas for rates and changes over time, conditional formatting for
+      metric health, and one chart that summarizes the most important trend.
+    expected: {file: data.xlsx, min_sheets: 2}
+  - id: sheet-09
+    format: spreadsheet
+    prompt: Build a lightweight annual budget workbook for an autonomous-agent evaluation program. Include monthly planning, actuals, variance analysis, and a chart-friendly summary.
+    expected: {file: data.xlsx, min_sheets: 2, formulas: true}
+  - id: sheet-10
+    format: spreadsheet
+    prompt: Build an operational status workbook that can filter a cross-functional initiative list by health, owner, priority, and next review date while preserving an executive summary of at-risk work.
+    expected: {file: data.xlsx, min_sheets: 2}
+  - id: doc-01
+    format: document
+    prompt: Write a business memo recommending whether leadership should approve a phased rollout of an internal automation platform. Address background, rationale, risks, mitigations, and a clear decision request.
+    expected: {files: [output.docx, output.pdf]}
+  - id: doc-02
+    format: document
+    prompt: Write an academic-style mini report about the effects of AI assistants on knowledge worker productivity. Include a concise abstract, method summary, findings, limitations, and conclusion.
+    expected: {file: output.docx}
+  - id: doc-03
+    format: document
+    prompt: Write a client proposal as a polished PDF for a four-week pilot implementing secure agent workflows. Explain scope, deliverables, timeline, responsibilities, pricing approach, and acceptance criteria.
+    expected: {file: output.pdf}
+  - id: doc-04
+    format: document
+    prompt: Write a comprehensive operating guide with a table of contents for teams running autonomous productivity evaluations. Cover setup, task selection, execution, review, troubleshooting, governance, and reporting.
+    expected: {file: output.docx}
+  - id: doc-05
+    format: document
+    prompt: Write a launch checklist document for releasing a new benchmark suite. Organize the work from preparation through launch day and post-launch follow-up, including quality, communications, monitoring, and rollback considerations.
+    expected: {files: [output.docx, output.pdf]}
+  - id: doc-06
+    format: document
+    prompt: "Write a meeting recap document from these notes: the team agreed to ship the next productivity benchmark iteration this week, remove pre-supplied outlines, verify generated artifacts structurally, and assign owners for runner updates, skill behavior, QA, and release communication."
+    expected: {file: output.docx}
+  - id: doc-07
+    format: document
+    prompt: |
+      Write an incident report for a productivity benchmark run where generated
+      artifacts passed structural checks but failed human quality review because
+      task prompts supplied too much outline content. Include sections for
+      summary, timeline, customer or research impact, detection method, root
+      cause analysis, corrective actions, prevention plan, and owners. Audience
+      is engineering, evaluation, and product leadership; tone should be factual,
+      accountable, and blameless.
+    expected: {file: output.pdf}
+  - id: doc-08
+    format: document
+    prompt: |
+      Write a research brief on what makes AI productivity agents useful in real
+      business workflows, focused on enterprise knowledge-work teams. Include
+      sections for central research question, scope, evidence themes, practical
+      interpretation, caveats, evaluation criteria, and recommended next
+      research steps. Audience is product strategy and evaluation leaders; tone
+      should be analytical, balanced, and decision-oriented.
+    expected: {files: [output.docx, output.pdf]}
+  - id: doc-09
+    format: document
+    prompt: Write a standard operating procedure for reviewing generated productivity artifacts before publication. Include purpose, scope, roles, procedure, acceptance checks, records, and escalation rules.
+    expected: {file: output.docx}
+  - id: doc-10
+    format: document
+    prompt: |
+      Write an executive summary PDF explaining a productivity benchmark update
+      that requires agents to generate their own artifact outlines rather than
+      copying outline content from prompts. Include sections for context,
+      problem statement, policy change, expected evaluation benefits, rollout
+      risks, mitigation plan, success measures, and next steps. Audience is
+      executive leadership and benchmark stakeholders; tone should be concise,
+      persuasive, and implementation-aware.
+    expected: {file: output.pdf}

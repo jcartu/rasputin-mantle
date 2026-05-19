@@ -1,188 +1,749 @@
 tasks:
   - id: slides-01
     format: slides
-    prompt: Create a project kickoff presentation for a new product launch. Address strategic goals, team alignment, timeline, dependencies, and risk assessment for executive and cross-functional stakeholders.
-    expected: {file: slides.pptx, min_slides: 5}
+    template: minimal
+    prompt: |
+      Create a project kickoff presentation for executive and cross-functional stakeholders
+      supporting a new product launch named Atlas Launch.
+
+      Use these facts:
+        - Strategic goals: align launch scope, confirm accountable owners, start delivery without rework
+        - Timeline: discovery in June, build in July and August, launch readiness review in September
+        - Core workstreams: product, engineering, design, marketing, customer success
+        - Key dependencies: design signoff, sandbox capacity, legal review, launch messaging
+        - Budget constraint: keep launch preparation under $420K
+        - Primary risks: dependency slippage, budget overrun, low customer adoption
+        - Risk controls: weekly dependency review, budget owner approval for changes over $25K, beta-customer enablement
+
+      Use the minimal template. Keep the tone concise, practical, and executive-ready.
+    expected_schema:
+      min_slides: 5
+      required_slide_types: [title_slide, content_slide, timeline_slide, risk_slide, chart_slide]
+      expected_sections: 4
+      must_address: [strategic_goals, delivery_timeline, ownership_model, launch_risks]
+      must_include_chart: true
+
   - id: slides-02
     format: slides
-    prompt: Create a quarterly business review presentation for senior stakeholders. Summarize performance, market context, operational learnings, customer signals, and priorities for the next quarter.
-    expected: {file: slides.pptx, min_slides: 5}
+    template: corporate
+    prompt: |
+      Create a quarterly business review deck for the executive team of a B2B SaaS company.
+      Reporting period: Q3 2025.
+
+      Use these facts:
+        - ARR: $14.2M, grew 28% YoY
+        - Net retention: 117%; gross retention: 94%
+        - Qualified pipeline: $8.4M; 60% enterprise and 40% mid-market
+        - Partner channel: 22% of new logos, up from 14% last quarter
+        - Market context: enterprise buyers increased automation budgets but lengthened security review cycles
+        - Operational learning: fastest implementations used pre-approved workflow templates
+        - Customer signal: operations leaders asked for stronger audit reporting and admin controls
+        - Q4 priorities: hire 4 account executives, launch a self-serve tier, expand EMEA coverage
+
+      Use the corporate template. Professional tone for a board and senior-stakeholder audience.
+    expected_schema:
+      min_slides: 5
+      required_slide_types: [title_slide, content_slide, chart_slide]
+      expected_sections: 3
+      must_address: [retention_metrics, pipeline_breakdown, market_context, q4_priorities]
+      must_include_chart: true
+
   - id: slides-03
     format: slides
+    template: pitch
     prompt: |
-      Create an investor pitch deck for an early-stage AI productivity company
-      raising a seed round from venture investors. Include at least 7 slides:
-      title, problem, product, market opportunity, differentiation, traction,
-      business model, fundraising ask, and use of funds. Include one market or
-      competitive-positioning visual. Audience is seed-stage investors; tone
-      should be confident, specific, and concise.
-    expected: {file: slides.pptx, min_slides: 6}
+      Create an investor pitch deck for an early-stage AI productivity company named FlowOps
+      raising a seed round from venture investors.
+
+      Use these facts:
+        - Target customer: enterprise operations teams with 200-2,000 knowledge workers
+        - Problem: teams lose 9-12 hours per employee each month to manual workflow handoffs and fragmented data
+        - Product: AI operator that executes approved workflows in a secure sandbox with human review gates
+        - Differentiation: policy-controlled execution, full audit trail, reusable skill library, private deployment option
+        - Traction: 6 paid pilots, $420K pilot ARR, 41% average cycle-time reduction across pilots
+        - Market signal: automation software budgets in target accounts average $1.8M annually
+        - Business model: annual platform fee plus usage-based execution credits
+        - Fundraising ask: $3.5M seed round
+        - Use of funds: 45% engineering, 30% go-to-market, 15% security/compliance, 10% operations
+
+      Use the pitch template. Tone should be confident, specific, and concise for seed-stage investors.
+    expected_schema:
+      min_slides: 7
+      required_slide_types: [title_slide, content_slide, chart_slide, closing_slide]
+      expected_sections: 5
+      must_address: [customer_pain, product_value, differentiation, traction, fundraising_plan]
+      must_include_chart: true
+
   - id: slides-04
     format: slides
-    prompt: Create a research findings presentation about enterprise teams adopting autonomous agents. Explain the research approach, major insights, supporting evidence, implications, and recommended next steps.
-    expected: {file: slides.pptx, min_slides: 5}
+    template: research
+    prompt: |
+      Create a research findings presentation about enterprise teams adopting autonomous agents.
+      Audience: product, research, and operations leaders deciding where to invest next.
+
+      Use these facts:
+        - Research sample: survey of 240 knowledge workers and interviews with 18 operations leaders
+        - Adoption preference: 70% preferred agents that complete bounded tasks; 30% preferred chat-only assistants
+        - Primary barrier: 58% cited lack of trust in unattended execution
+        - Secondary barrier: 44% cited unclear escalation paths when agents get stuck
+        - Positive signal: teams with reviewer workflows reported 23% faster task completion
+        - Negative signal: teams without audit logs rejected agent outputs 2.1x more often
+        - Recommendation: prioritize review controls, transparent execution logs, and workflow templates
+
+      Use the research template. Tone should be analytical, balanced, and evidence-led.
+    expected_schema:
+      min_slides: 5
+      required_slide_types: [title_slide, content_slide, evidence_slide, chart_slide, recommendation_slide]
+      expected_sections: 3
+      must_address: [research_method, adoption_signals, trust_barriers, practical_implications]
+      must_include_chart: true
+
   - id: slides-05
     format: slides
-    prompt: Create a board update presentation for a rapidly scaling software company. Cover business health, execution progress, financial posture, open decisions, and risks requiring board attention.
-    expected: {file: slides.pptx, min_slides: 5}
+    template: corporate
+    prompt: |
+      Create a board update presentation for a rapidly scaling software company.
+      Audience: board members and executive staff.
+
+      Use these facts:
+        - Launch status: enterprise workflow product launched on schedule in Q3
+        - Usage: weekly active teams increased from 82 to 137
+        - Gross margin: improved from 68% to 73% after infrastructure optimization
+        - Cash position: $9.6M cash, 18-month runway at current burn
+        - Execution progress: SOC 2 Type II audit completed; EMEA beta started with 4 design partners
+        - Open decision: approve $1.2M expansion plan for enterprise security and EMEA sales support
+        - Key risks: hiring plan slipping by 6 weeks, cloud cost volatility, slower procurement in regulated accounts
+        - Requested board input: approve expansion plan and advise on regulated-market partnerships
+
+      Use the corporate template. Tone should be direct, factual, and board-ready.
+    expected_schema:
+      min_slides: 5
+      required_slide_types: [title_slide, content_slide, metrics_slide, decision_slide, chart_slide]
+      expected_sections: 4
+      must_address: [business_health, execution_progress, financial_posture, board_decisions, key_risks]
+      must_include_chart: true
+
   - id: slides-06
     format: slides
+    template: minimal
     prompt: |
-      Create an onboarding training presentation for new operations hires at a
-      technology company who will use an internal automation platform. Include
-      at least 6 slides: learning objectives, platform operating model, core
-      workflow walkthrough, review and quality standards, escalation paths,
-      hands-on practice activity, and knowledge check. Audience is first-week
-      operations employees; tone should be practical, clear, and supportive.
-    expected: {file: slides.pptx, min_slides: 5}
+      Create an onboarding training presentation for first-week operations hires who will use
+      an internal automation platform.
+
+      Use these facts:
+        - Learners: 14 new operations coordinators joining customer implementation teams
+        - Platform purpose: turn approved customer workflows into repeatable agent-assisted runs
+        - Operating roles: request owner defines the work; reviewer validates outputs; escalation lead handles blocked runs
+        - Core workflow states: plan, execute, verify, publish
+        - Review standard: every customer-facing artifact needs source traceability and a second-person check
+        - Escalation rule: pause and escalate when customer data is missing, permissions fail, or confidence is below 80%
+        - Practice activity: review a simulated customer onboarding run and identify two quality issues
+        - Knowledge check: learners must explain owner/reviewer responsibilities and the pause criteria
+
+      Use the minimal template. Tone should be practical, clear, and supportive.
+    expected_schema:
+      min_slides: 6
+      required_slide_types: [title_slide, learning_slide, workflow_slide, scenario_slide, quiz_slide]
+      expected_sections: 4
+      must_address: [operating_roles, workflow_states, review_standards, escalation_paths, knowledge_check]
+      must_include_chart: false
+
   - id: slides-07
     format: slides
+    template: pitch
     prompt: |
-      Create a sales enablement presentation for account executives selling a
-      technical automation product to enterprise operations leaders. Include at
-      least 6 slides: target buyer profile, business pain framing, product
-      positioning, priority use cases, discovery questions, proof-point plan,
-      objection-handling guide, and recommended sales motion. Audience is an
-      internal enterprise sales team; tone should be direct, field-ready, and
-      commercially credible.
-    expected: {file: slides.pptx, min_slides: 5}
+      Create a sales enablement presentation for account executives selling a technical
+      automation product to enterprise operations leaders.
+
+      Use these facts:
+        - Target buyers: VP Operations, Head of Business Systems, and shared-services leaders
+        - Best-fit accounts: 1,000+ employees, high-volume recurring workflows, existing security-review process
+        - Buyer pains: manual handoffs, inconsistent outputs, slow cycle times, audit gaps
+        - Product positioning: secure AI execution layer for approved operational workflows
+        - Priority use cases: customer onboarding, renewal prep, vendor intake, data cleanup, compliance evidence gathering
+        - Proof points: pilot teams cut cycle time 41%, reduced rework 28%, and passed security review in 19 days
+        - Discovery guidance: ask about workflow volume, review bottlenecks, risk tolerance, audit needs, and budget owner
+        - Common objections: security, change management, cost justification
+        - Recommended sales motion: lead with one bounded workflow pilot and define success metrics before procurement
+
+      Use the pitch template. Tone should be field-ready, direct, and commercially credible.
+    expected_schema:
+      min_slides: 6
+      required_slide_types: [title_slide, content_slide, proof_slide, chart_slide, guidance_slide]
+      expected_sections: 4
+      must_address: [buyer_context, value_positioning, proof_points, discovery_guidance, objection_handling]
+      must_include_chart: true
+
   - id: slides-08
     format: slides
+    template: research
     prompt: |
-      Create a technical architecture review presentation for a secure agent
-      execution platform used by enterprise customers. Include at least 6
-      slides: system overview, major runtime components, data flow and trust
-      boundaries, authentication and permission model, sandbox and control-plane
-      isolation, observability and operational controls, and scaling roadmap.
-      Include one architecture diagram. Audience is engineering leadership and
-      security stakeholders; tone should be precise and review-oriented.
-    expected: {file: slides.pptx, min_slides: 5}
+      Create a technical architecture review presentation for a secure agent execution platform
+      used by enterprise customers. Audience: engineering leadership and security stakeholders.
+
+      Use these facts:
+        - Major components: gateway API, policy engine, skill loader, execution sandbox, artifact store, event log
+        - Data movement: requests enter gateway, policy checks run before execution, sandbox emits events and artifacts
+        - Trust boundaries: browser UI, control plane, sandbox runtime, customer artifact storage
+        - Authentication: SSO with role-based access for admins, reviewers, and operators
+        - Permission model: tools require scoped grants; destructive actions require explicit confirmation
+        - Isolation: each task runs in a fresh sandbox; customer artifacts are stored outside the control plane database
+        - Observability: structured event log, cost counters, reviewer decisions, and failure reasons
+        - Operational controls: per-run budget cap, audit export, kill switch, retention policy
+        - Scaling concern: parallel sandbox scheduling must handle 500 concurrent runs by year end
+
+      Use the research template. Tone should be precise, review-oriented, and security-conscious.
+    expected_schema:
+      min_slides: 6
+      required_slide_types: [title_slide, architecture_slide, content_slide, control_slide, roadmap_slide]
+      expected_sections: 4
+      must_address: [system_components, data_movement, trust_boundaries, permission_controls, scaling_concerns]
+      must_include_chart: true
+
   - id: slides-09
     format: slides
-    prompt: Create a go-to-market launch plan presentation for a productivity benchmark release. Cover target audiences, messaging, channel strategy, launch milestones, success metrics, and contingency planning.
-    expected: {file: slides.pptx, min_slides: 6}
+    template: corporate
+    prompt: |
+      Create a go-to-market launch plan presentation for a productivity benchmark release.
+      Audience: product marketing, sales, customer success, and executive sponsors.
+
+      Use these facts:
+        - Release: Productivity Benchmark v1.3.2 ships on October 15, 2025
+        - Target audiences: platform admins, operations leaders, benchmark evaluators, AI engineering teams
+        - Primary message: agents should generate structure from user facts rather than copy supplied outlines
+        - Channels: customer email, technical blog, launch webinar, sales enablement, community forum
+        - Milestones: beta preview October 1, docs freeze October 8, webinar October 16, GA follow-up October 22
+        - Success metrics: 500 benchmark downloads, 120 webinar registrations, 20 qualified customer conversations
+        - Contingency: if artifact quality falls below 65%, delay public claims and publish methodology notes only
+        - Owners: product marketing owns messaging; eval team owns methodology; sales enablement owns field assets
+
+      Use the corporate template. Tone should be clear, action-oriented, and launch-ready.
+    expected_schema:
+      min_slides: 6
+      required_slide_types: [title_slide, content_slide, milestone_slide, metrics_slide, chart_slide]
+      expected_sections: 4
+      must_address: [target_audiences, messaging_strategy, channel_plan, launch_milestones, success_metrics]
+      must_include_chart: true
+
   - id: slides-10
     format: slides
+    template: minimal
     prompt: |
-      Create an executive strategy presentation for the next fiscal year of an
-      autonomous work platform company. Include at least 7 slides: market
-      context, strategic objectives, product bets, operating principles,
-      investment tradeoffs, measurement framework, key risks, and leadership
-      decisions required. Include one decision matrix or risk heatmap. Audience
-      is the CEO staff and functional executives; tone should be strategic,
-      decisive, and board-ready.
-    expected: {file: slides.pptx, min_slides: 6}
+      Create an executive strategy presentation for the next fiscal year of an autonomous work
+      platform company. Audience: CEO staff and functional executives.
+
+      Use these facts:
+        - Market shift: enterprise buyers moved from experimentation budgets to governed deployment budgets
+        - Strategic objective: become the trusted execution layer for high-value knowledge workflows
+        - Product bets: automation templates, trust controls, human review orchestration, evaluation analytics
+        - Operating principle: every autonomous run must be observable, reversible, and cost bounded
+        - Investment tradeoff: $3.2M available; security/compliance and workflow library cannot both be fully staffed
+        - Measurement approach: track task completion rate, reviewer acceptance, cost per completed workflow, retention
+        - Key risks: commoditized chat assistants, enterprise security delays, insufficient workflow depth
+        - Leadership decisions needed: approve investment split, choose two priority verticals, define retention target
+
+      Use the minimal template. Tone should be strategic, decisive, and board-ready.
+    expected_schema:
+      min_slides: 7
+      required_slide_types: [title_slide, content_slide, decision_slide, risk_slide, chart_slide]
+      expected_sections: 5
+      must_address: [market_shift, strategic_bets, operating_principles, investment_tradeoffs, measurement_approach]
+      must_include_chart: true
+
   - id: sheet-01
     format: spreadsheet
-    prompt: Build a sales pipeline workbook that helps a revenue team understand funnel health, stage conversion, deal ownership, next actions, and forecast risk.
-    expected: {file: data.xlsx, min_sheets: 2}
+    prompt: |
+      Build a sales pipeline workbook for a revenue team reviewing funnel health and forecast risk.
+
+      Use these facts:
+        - Stages and deal counts: Prospect 12, Qualified 7, Proposal 4, Negotiation 2
+        - Stage conversion targets: Prospect-to-Qualified 50%, Qualified-to-Proposal 60%, Proposal-to-Negotiation 50%
+        - Pipeline value: Prospect $1.8M, Qualified $2.4M, Proposal $1.6M, Negotiation $900K
+        - Owners: Ada owns enterprise west; Lin owns enterprise east; Nia owns mid-market
+        - Forecast risk rule: deals over 30 days in stage or with no next action are at risk
+        - Example next actions: security review, budget confirmation, legal redlines, executive sponsor call
+
+      Create a workbook suitable for weekly revenue inspection, with formulas and a chart.
+    expected_schema:
+      min_sheets: 3
+      required_elements: [source_data_sheet, funnel_summary_sheet, risk_review_sheet, chart]
+      required_formula_types: [stage_totals, conversion_rates, weighted_pipeline, risk_flags]
+      required_named_ranges: [pipeline_data, stage_targets]
+      must_address: [funnel_health, stage_conversion, deal_ownership, next_actions, forecast_risk]
+      must_include_chart: true
+
   - id: sheet-02
     format: spreadsheet
-    prompt: Build a five-year financial model workbook for a growing SaaS business. Include assumptions and connected financial statements that can be reviewed by finance leadership.
-    expected: {file: data.xlsx, min_sheets: 4, formulas: true}
+    prompt: |
+      Build a five-year financial model workbook for a growing SaaS business reviewed by finance leadership.
+
+      Use these facts:
+        - Starting ARR: $500,000
+        - Revenue growth assumptions by year: 25%, 32%, 35%, 28%, 22%
+        - Gross margin assumptions by year: 72%, 74%, 76%, 77%, 78%
+        - Sales and marketing: 38% of revenue in Year 1, declining to 30% by Year 5
+        - R&D: 42% of revenue in Year 1, declining to 28% by Year 5
+        - G&A: 18% of revenue in Year 1, declining to 12% by Year 5
+        - Opening cash: $1.2M
+        - Capex: 4% of revenue
+        - Working capital reserve: 8% of revenue
+
+      Create connected statements with clear assumptions, formulas, and a summary that finance leaders can review.
+    expected_schema:
+      min_sheets: 4
+      required_elements: [assumptions_sheet, income_statement_sheet, balance_sheet_sheet, cash_flow_sheet, summary_sheet]
+      required_formula_types: [revenue_projection, gross_profit, operating_expenses, cash_balance, statement_links]
+      required_named_ranges: [model_assumptions, forecast_years]
+      must_address: [assumption_drivers, connected_statements, cash_position, profitability_path]
+      must_include_chart: true
+
   - id: sheet-03
     format: spreadsheet
-    prompt: Build a feature comparison workbook to evaluate competing productivity platforms for an enterprise buyer. Make it useful for comparing tradeoffs across product, security, usability, and cost dimensions.
-    expected: {file: data.xlsx, min_sheets: 1}
+    prompt: |
+      Build a feature comparison workbook for an enterprise buyer evaluating productivity platforms.
+
+      Use these facts:
+        - Options: Platform A, Platform B, Platform C
+        - Criteria weights: price 20%, security 30%, usability 20%, workflow coverage 20%, support 10%
+        - Scores for Platform A: price 3, security 5, usability 4, workflow coverage 4, support 3
+        - Scores for Platform B: price 5, security 3, usability 4, workflow coverage 3, support 4
+        - Scores for Platform C: price 4, security 4, usability 5, workflow coverage 5, support 4
+        - Buyer constraint: security score below 4 requires executive exception
+        - Decision need: identify top overall option and visible tradeoffs
+
+      Create a workbook that calculates weighted scores and highlights decision risks.
+    expected_schema:
+      min_sheets: 2
+      required_elements: [comparison_matrix_sheet, criteria_weights_sheet, recommendation_summary]
+      required_formula_types: [weighted_scores, total_scores, ranking, exception_flags]
+      required_named_ranges: [criteria_weights, option_scores]
+      must_address: [product_comparison, security_tradeoffs, usability_tradeoffs, cost_tradeoffs]
+      must_include_chart: true
+
   - id: sheet-04
     format: spreadsheet
-    prompt: Build a customer data cleaning workbook from a messy customer export. Deduplicate repeated records, normalize spend values, preserve useful fields, and summarize the cleaned dataset.
-    expected: {file: data.xlsx, min_sheets: 2}
+    prompt: |
+      Build a customer data cleaning workbook from a messy customer export.
+
+      Use these facts:
+        - Raw rows: Ada / ADA@example.com / "$1,200" / Active
+        - Raw rows: Ada / ada@example.com / "$1,200" / Active
+        - Raw rows: Lin / lin@example.com / "900" / Trial
+        - Raw rows: Mo / mo@example.com / "$2,450" / Active
+        - Duplicate rule: records with the same normalized email are duplicates
+        - Spend normalization: remove currency symbols and commas, then store as numeric currency
+        - Preserve useful fields: name, email, normalized spend, status, duplicate flag, keep/exclude decision
+        - Summary needs: raw row count, duplicate count, cleaned customer count, total cleaned spend
+
+      Create a workbook that makes the cleaning logic visible and summarizes the cleaned dataset.
+    expected_schema:
+      min_sheets: 3
+      required_elements: [raw_export_sheet, cleaned_data_sheet, cleaning_summary_sheet]
+      required_formula_types: [normalization_formulas, duplicate_detection, cleaned_totals, status_counts]
+      required_named_ranges: [raw_customers, cleaned_customers]
+      must_address: [deduplication, spend_normalization, field_preservation, cleaning_summary]
+      must_include_chart: false
+
   - id: sheet-05
     format: spreadsheet
-    prompt: Build an expense tracker workbook for a small AI infrastructure team. Track categories, vendors, recurring costs, monthly totals, variance, and a visual summary for budget review.
-    expected: {file: data.xlsx, min_sheets: 2}
+    prompt: |
+      Build an expense tracker workbook for a small AI infrastructure team preparing for budget review.
+
+      Use these facts:
+        - Monthly budget: $9,500
+        - Hosting: Cloud GPU vendor, $3,000 recurring monthly
+        - Model APIs: Anthropic evaluation judges, $1,200 variable monthly
+        - Storage: Artifact archive, $450 recurring monthly
+        - Monitoring: Observability tooling, $650 recurring monthly
+        - Contractor QA: $2,400 one-time in May
+        - Expected variance alert: flag categories more than 10% above budget allocation
+        - Budget allocations: hosting 40%, model APIs 20%, storage 8%, monitoring 12%, QA 20%
+
+      Create a workbook with monthly totals, variance formulas, recurring-cost visibility, and a visual summary.
+    expected_schema:
+      min_sheets: 3
+      required_elements: [expense_detail_sheet, monthly_summary_sheet, budget_review_sheet, chart]
+      required_formula_types: [monthly_totals, category_totals, budget_variance, recurring_costs]
+      required_named_ranges: [expense_data, budget_allocations]
+      must_address: [categories, vendors, recurring_costs, monthly_totals, variance_analysis]
+      must_include_chart: true
+
   - id: sheet-06
     format: spreadsheet
     prompt: |
-      Build a hiring pipeline workbook for a 50-person software company scaling
-      engineering, design, and operations roles over the next two quarters.
-      Include at least 3 sheets: candidate pipeline, funnel summary, and
-      bottlenecks/priorities. Track role, function, recruiter, hiring manager,
-      stage, status, source, days in stage, target start window, and next action.
-      Add formulas or summaries for stage counts, aging, conversion, and owner
-      workload, plus one chart suitable for a recruiting leadership review.
-    expected: {file: data.xlsx, min_sheets: 2}
+      Build a hiring pipeline workbook for a 50-person software company scaling engineering,
+      design, and operations roles over the next two quarters.
+
+      Use these facts:
+        - Hiring targets: 8 engineers, 3 designers, 4 operations hires
+        - Current candidates: engineering 8 active, design 3 active, operations 5 active
+        - Funnel stages: sourced, recruiter screen, hiring manager screen, onsite, offer, hired
+        - Owners: Ada recruits engineering, Lin recruits design, Mo recruits operations
+        - Bottleneck rule: flag candidates over 10 days in a stage
+        - Conversion assumptions: sourced-to-screen 45%, screen-to-onsite 50%, onsite-to-offer 40%, offer-to-hired 80%
+        - Priority: engineering backend roles must start before August 15
+        - Required tracking fields: function, role, stage, status, owner, days in stage, target start window, next action
+
+      Create formulas, summaries, and a chart suitable for a recruiting leadership review.
+    expected_schema:
+      min_sheets: 3
+      required_elements: [candidate_pipeline_sheet, funnel_summary_sheet, bottleneck_review_sheet, chart]
+      required_formula_types: [stage_counts, aging_flags, conversion_rates, owner_workload]
+      required_named_ranges: [candidate_pipeline, hiring_targets]
+      must_address: [funnel_stages, candidate_ownership, bottlenecks, recruiting_priorities]
+      must_include_chart: true
+
   - id: sheet-07
     format: spreadsheet
-    prompt: Build a vendor scoring workbook for selecting a secure infrastructure provider. Compare options across cost, compliance, support, reliability, implementation effort, and total weighted score.
-    expected: {file: data.xlsx, min_sheets: 1}
+    prompt: |
+      Build a vendor scoring workbook for selecting a secure infrastructure provider.
+
+      Use these facts:
+        - Vendors: Vendor X, Vendor Y, Vendor Z
+        - Criteria weights: cost 20%, compliance 30%, support 15%, reliability 25%, implementation effort 10%
+        - Vendor X scores: cost 4, compliance 5, support 3, reliability 4, implementation effort 3
+        - Vendor Y scores: cost 3, compliance 4, support 5, reliability 4, implementation effort 4
+        - Vendor Z scores: cost 5, compliance 3, support 4, reliability 3, implementation effort 5
+        - Constraint: compliance below 4 creates a procurement risk
+        - Decision need: total weighted score, rank, and procurement-risk flag
+
+      Create a workbook that supports a sourcing decision and shows tradeoffs clearly.
+    expected_schema:
+      min_sheets: 2
+      required_elements: [vendor_scores_sheet, weighting_sheet, decision_summary, chart]
+      required_formula_types: [weighted_scores, total_scores, ranking, risk_flags]
+      required_named_ranges: [vendor_scores, vendor_weights]
+      must_address: [cost_comparison, compliance_risk, support_quality, reliability, implementation_effort]
+      must_include_chart: true
+
   - id: sheet-08
     format: spreadsheet
     prompt: |
-      Build a product metrics workbook for a monthly executive product review of
-      a B2B SaaS workflow product. Include at least 3 sheets: raw metrics,
-      trend/cohort summary, and executive dashboard. Track activation,
-      retention, engagement, reliability or quality, customer outcome metrics,
-      period-over-period movement, owners, and interpretation notes. Add
-      formulas for rates and changes over time, conditional formatting for
-      metric health, and one chart that summarizes the most important trend.
-    expected: {file: data.xlsx, min_sheets: 2}
+      Build a product metrics workbook for a monthly executive product review of a B2B SaaS workflow product.
+
+      Use these facts:
+        - Activation rate: 54% in July, 61% in August, 66% in September
+        - 30-day retention: 42% in July, 47% in August, 51% in September
+        - Weekly active teams: 88 in July, 112 in August, 137 in September
+        - Workflow success rate: 91% in July, 93% in August, 94% in September
+        - Customer outcome metric: average cycle-time reduction improved from 31% to 41%
+        - Metric owners: activation is Product, retention is Customer Success, reliability is Engineering
+        - Health thresholds: green at or above target, yellow within 10% below target, red more than 10% below target
+        - Executive need: trends, period-over-period movement, and interpretation notes
+
+      Create formulas for rates and changes over time, conditional health indicators, and one important trend chart.
+    expected_schema:
+      min_sheets: 3
+      required_elements: [raw_metrics_sheet, trend_summary_sheet, executive_dashboard_sheet, chart]
+      required_formula_types: [period_changes, target_comparison, health_status, trend_summary]
+      required_named_ranges: [product_metrics, metric_targets]
+      must_address: [activation, retention, engagement, quality, customer_outcomes]
+      must_include_chart: true
+
   - id: sheet-09
     format: spreadsheet
-    prompt: Build a lightweight annual budget workbook for an autonomous-agent evaluation program. Include monthly planning, actuals, variance analysis, and a chart-friendly summary.
-    expected: {file: data.xlsx, min_sheets: 2, formulas: true}
+    prompt: |
+      Build a lightweight annual budget workbook for an autonomous-agent evaluation program.
+
+      Use these facts:
+        - Monthly planned budget: Jan $1,000; Feb $1,200; Mar $1,400; Apr $1,650; May $1,800; Jun $2,000
+        - Actuals through June: Jan $950; Feb $1,260; Mar $1,380; Apr $1,720; May $1,940; Jun $2,050
+        - Budget categories: local GPU, model judging, artifact storage, QA review, release communications
+        - Annual cap: $24,000
+        - Variance rule: flag any month more than 8% over plan
+        - Summary need: monthly plan vs actual, cumulative variance, remaining annual budget, chart-friendly trend
+
+      Create a workbook with formulas and a visual summary for program review.
+    expected_schema:
+      min_sheets: 3
+      required_elements: [monthly_budget_sheet, actuals_sheet, variance_summary_sheet, chart]
+      required_formula_types: [monthly_variance, cumulative_totals, remaining_budget, annual_projection]
+      required_named_ranges: [monthly_plan, monthly_actuals]
+      must_address: [monthly_planning, actuals_tracking, variance_analysis, annual_cap]
+      must_include_chart: true
+
   - id: sheet-10
     format: spreadsheet
-    prompt: Build an operational status workbook that can filter a cross-functional initiative list by health, owner, priority, and next review date while preserving an executive summary of at-risk work.
-    expected: {file: data.xlsx, min_sheets: 2}
+    prompt: |
+      Build an operational status workbook that lets executives review cross-functional initiatives.
+
+      Use these facts:
+        - Initiatives: Ops automation rollout / Ops / Green / Ada / High / next review May 9
+        - Initiatives: Sales workflow migration / Sales / Yellow / Lin / Medium / next review May 12
+        - Initiatives: Security evidence export / Engineering / Red / Mo / High / next review May 6
+        - Initiatives: Customer enablement refresh / Success / Yellow / Nia / Medium / next review May 14
+        - Filter needs: health, owner, priority, and next review date
+        - Executive summary need: count green/yellow/red initiatives and list high-priority at-risk work
+        - At-risk rule: health red or yellow with high priority
+        - Review cadence: high-priority at-risk work requires weekly review
+
+      Create a workbook with filtering-ready data, formulas, conditional flags, and an executive at-risk summary.
+    expected_schema:
+      min_sheets: 2
+      required_elements: [initiative_list_sheet, executive_summary_sheet, filter_ready_table]
+      required_formula_types: [status_counts, at_risk_flags, priority_counts, review_due_logic]
+      required_named_ranges: [initiatives, status_summary]
+      must_address: [health_filtering, owner_filtering, priority_filtering, review_dates, at_risk_summary]
+      must_include_chart: true
+
   - id: doc-01
     format: document
-    prompt: Write a business memo recommending whether leadership should approve a phased rollout of an internal automation platform. Address background, rationale, risks, mitigations, and a clear decision request.
-    expected: {files: [output.docx, output.pdf]}
+    template: business
+    prompt: |
+      Write a business memo recommending whether leadership should approve a phased rollout of
+      an internal automation platform. Audience: executive leadership.
+
+      Use these facts:
+        - Decision requested: approve a phased rollout rather than a company-wide launch
+        - Pilot scope: operations and customer success teams first, then sales support after review
+        - Expected benefit: reduce manual workflow cycle time by 30% within two quarters
+        - Cost: $420K implementation budget and two platform administrators
+        - Timeline: 6-week pilot, 4-week review, 8-week expansion if success criteria are met
+        - Main risks: incorrect outputs, adoption resistance, unclear accountability, customer-data handling
+        - Mitigations: reviewer approval gates, training sessions, owner mapping, access controls, audit logs
+        - Success criteria: 80% reviewer acceptance, no critical security incidents, 20% cycle-time reduction in pilot
+
+      Produce both DOCX and PDF. Tone should be concise, evidence-based, and decision-oriented.
+    expected_schema:
+      files: [output.docx, output.pdf]
+      min_sections: 5
+      required_elements: [memo_header, recommendation, risk_table, decision_request]
+      expected_sections: 5
+      must_address: [background_context, rollout_rationale, risk_mitigation, success_criteria, decision_request]
+      requires_references: false
+
   - id: doc-02
     format: document
-    prompt: Write an academic-style mini report about the effects of AI assistants on knowledge worker productivity. Include a concise abstract, method summary, findings, limitations, and conclusion.
-    expected: {file: output.docx}
+    template: academic
+    prompt: |
+      Write an academic-style mini report about the effects of AI assistants on knowledge worker productivity.
+      Audience: evaluation and product research leaders.
+
+      Use these facts:
+        - Evidence base: internal review of 12 team pilots and 240 worker survey responses
+        - Treatment: workers used AI assistants for drafting, summarization, data lookup, and routine workflow execution
+        - Average time saved: 4.8 hours per worker per week for bounded repetitive tasks
+        - Quality effect: reviewer acceptance improved from 72% to 84% when assistants used structured prompts
+        - Adoption difference: high-trust teams used assistants 2.3x more often than low-trust teams
+        - Limitation: self-reported time savings may overstate measured productivity
+        - Limitation: pilots focused on operations-heavy teams, not all knowledge-work roles
+        - Interpretation: productivity gains depend on workflow fit, review design, and trust controls
+
+      Produce a DOCX report. Tone should be measured, academic, and concise.
+    expected_schema:
+      files: [output.docx]
+      min_sections: 5
+      required_elements: [abstract, method_summary, findings, limitations, conclusion]
+      expected_sections: 5
+      must_address: [evidence_base, productivity_effects, quality_effects, limitations, conclusion]
+      requires_references: true
+
   - id: doc-03
     format: document
-    prompt: Write a client proposal as a polished PDF for a four-week pilot implementing secure agent workflows. Explain scope, deliverables, timeline, responsibilities, pricing approach, and acceptance criteria.
-    expected: {file: output.pdf}
+    template: business
+    prompt: |
+      Write a polished client proposal PDF for a four-week pilot implementing secure agent workflows.
+      Audience: a prospective enterprise client sponsor.
+
+      Use these facts:
+        - Pilot goal: prove secure agent workflows can reduce manual operations work without weakening review controls
+        - Duration: 4 weeks
+        - Scope: map 3 workflows, configure sandbox execution, train reviewers, measure results
+        - Deliverables: workflow inventory, configured pilot workspace, reviewer checklist, results readout
+        - Client responsibilities: provide workflow owners, sample inputs, security reviewer, weekly feedback
+        - Provider responsibilities: configure platform, facilitate workshops, monitor runs, produce final report
+        - Pricing approach: $10,000 implementation fee plus usage billed at cost during pilot
+        - Acceptance criteria: 3 workflows running, audit logs exportable, reviewer acceptance above 75%, no critical security findings
+
+      Produce PDF only. Tone should be polished, specific, and commercially credible.
+    expected_schema:
+      files: [output.pdf]
+      min_sections: 6
+      required_elements: [proposal_summary, deliverables_table, timeline, pricing, acceptance_criteria]
+      expected_sections: 6
+      must_address: [pilot_scope, responsibilities, timeline, pricing_approach, acceptance_criteria]
+      requires_references: false
+
   - id: doc-04
     format: document
-    prompt: Write a comprehensive operating guide with a table of contents for teams running autonomous productivity evaluations. Cover setup, task selection, execution, review, troubleshooting, governance, and reporting.
-    expected: {file: output.docx}
+    template: minimal
+    prompt: |
+      Write a comprehensive operating guide with a table of contents for teams running
+      autonomous productivity evaluations.
+
+      Use these facts:
+        - Users: evaluation operators, QA reviewers, and release managers
+        - Setup requirement: confirm model access, sandbox availability, output directory, and cost ceiling
+        - Task selection rule: include slides, spreadsheets, and documents with realistic user facts
+        - Execution rule: run each task once, preserve artifacts, capture exit code and cost
+        - Review rule: verify generated files open cleanly and match structural requirements before quality review
+        - Troubleshooting examples: missing file, malformed workbook, low-quality placeholder artifact, exceeded cost budget
+        - Governance rule: no rubric or threshold changes during a benchmark run
+        - Reporting requirement: aggregate pass rate, per-format rates, average quality score, and cost summary
+
+      Produce a DOCX guide with a table of contents. Tone should be procedural, clear, and durable.
+    expected_schema:
+      files: [output.docx]
+      min_sections: 7
+      required_elements: [table_of_contents, procedures, troubleshooting, governance_notes, reporting_requirements]
+      expected_sections: 7
+      must_address: [setup, task_selection, execution, review, troubleshooting, governance, reporting]
+      requires_references: false
+
   - id: doc-05
     format: document
-    prompt: Write a launch checklist document for releasing a new benchmark suite. Organize the work from preparation through launch day and post-launch follow-up, including quality, communications, monitoring, and rollback considerations.
-    expected: {files: [output.docx, output.pdf]}
+    template: minimal
+    prompt: |
+      Write a launch checklist document for releasing a new benchmark suite.
+      Audience: release owner, QA, communications, and engineering leads.
+
+      Use these facts:
+        - Release target: Benchmark Suite v1.4 on November 6, 2025
+        - Preparation: freeze tasks, validate YAML, run smoke test, confirm cost cap, draft release notes
+        - Quality checks: sample artifacts open cleanly, schema checks pass, judge calls succeed, outputs archived
+        - Communications: customer email, internal enablement note, changelog entry, launch-day support channel
+        - Launch day: run final benchmark, verify summary metrics, publish docs, notify stakeholders
+        - Monitoring: watch pass rate, judge failures, spend, and artifact-generation errors for 48 hours
+        - Rollback trigger: aggregate pass rate below 60%, missing output artifacts, or cost ceiling breach
+        - Follow-up: collect feedback, file defects, publish methodology notes, schedule retrospective
+
+      Produce both DOCX and PDF. Tone should be checklist-oriented, practical, and release-safe.
+    expected_schema:
+      files: [output.docx, output.pdf]
+      min_sections: 5
+      required_elements: [checklist_items, owners, rollback_criteria, monitoring_plan]
+      expected_sections: 5
+      must_address: [preparation, quality_checks, communications, launch_day, monitoring, rollback, follow_up]
+      requires_references: false
+
   - id: doc-06
     format: document
-    prompt: "Write a meeting recap document from these notes: the team agreed to ship the next productivity benchmark iteration this week, remove pre-supplied outlines, verify generated artifacts structurally, and assign owners for runner updates, skill behavior, QA, and release communication."
-    expected: {file: output.docx}
+    template: business
+    prompt: |
+      Write a meeting recap document from a benchmark planning meeting.
+      Audience: the implementation team and leadership sponsor.
+
+      Use these facts:
+        - Decision: ship the next productivity benchmark iteration this week
+        - Methodology change: remove pre-supplied outlines from prompts
+        - Methodology change: provide user facts and structural schema instead
+        - Verification decision: generated artifacts must be checked structurally before quality review
+        - Owner assignments: Ada owns runner updates; Lin owns skill behavior; Mo owns QA; Nia owns release communication
+        - Due dates: runner updates by Wednesday; QA by Thursday; release communication by Friday morning
+        - Open risk: prompts may become too bare if facts are not concrete enough
+        - Next review: Friday at 10:00 AM
+
+      Produce a DOCX recap. Tone should be clear, accountable, and easy to follow up on.
+    expected_schema:
+      files: [output.docx]
+      min_sections: 4
+      required_elements: [decision_summary, action_items_table, risks, next_review]
+      expected_sections: 4
+      must_address: [decisions, methodology_changes, owner_assignments, due_dates, risks]
+      requires_references: false
+
   - id: doc-07
     format: document
+    template: business
     prompt: |
-      Write an incident report for a productivity benchmark run where generated
-      artifacts passed structural checks but failed human quality review because
-      task prompts supplied too much outline content. Include sections for
-      summary, timeline, customer or research impact, detection method, root
-      cause analysis, corrective actions, prevention plan, and owners. Audience
-      is engineering, evaluation, and product leadership; tone should be factual,
-      accountable, and blameless.
-    expected: {file: output.pdf}
+      Write an incident report for a benchmark run that passed structural checks but failed
+      quality review because tasks contained too much pre-supplied content.
+
+      Use these facts:
+        - Incident date: September 18, 2025
+        - Impact: benchmark score overstated real agent capability by rewarding copied outlines
+        - Affected area: productivity tasks for slides, spreadsheets, and documents
+        - Detection: human review noticed artifacts mirrored prompts instead of reasoning from facts
+        - Root cause: task prompts included section names, bullet text, and expected content values
+        - Contributing factor: structural checks verified presence of headings but not originality or synthesis
+        - Corrective action: rewrite prompts with concrete facts and structural-only schema
+        - Prevention: add review checklist item banning content outlines in expected schema
+        - Owners: evaluation lead owns task rewrite; QA lead owns checklist update; release manager owns communication
+
+      Produce PDF only. Tone should be factual, accountable, and blameless.
+    expected_schema:
+      files: [output.pdf]
+      min_sections: 6
+      required_elements: [incident_summary, impact, root_cause, corrective_actions, prevention_plan, owners]
+      expected_sections: 6
+      must_address: [impact, detection, root_cause, corrective_actions, prevention, ownership]
+      requires_references: false
+
   - id: doc-08
     format: document
+    template: academic
     prompt: |
-      Write a research brief on what makes AI productivity agents useful in real
-      business workflows, focused on enterprise knowledge-work teams. Include
-      sections for central research question, scope, evidence themes, practical
-      interpretation, caveats, evaluation criteria, and recommended next
-      research steps. Audience is product strategy and evaluation leaders; tone
-      should be analytical, balanced, and decision-oriented.
-    expected: {files: [output.docx, output.pdf]}
+      Write a research brief about what makes productivity agents useful in real business workflows.
+      Audience: product strategy and evaluation leaders.
+
+      Use these facts:
+        - Central question: what conditions make agents useful beyond chat assistance?
+        - Evidence source: 15 workflow pilots, 22 stakeholder interviews, and artifact-quality reviews
+        - Evidence theme: usefulness rises when agents operate on bounded tasks with clear success criteria
+        - Evidence theme: trust improves when users can inspect steps, approvals, and source artifacts
+        - Evidence theme: integration with existing workflows matters more than model novelty
+        - Practical interpretation: agents should be evaluated on completed work, not only response quality
+        - Caveat: results come from operations-heavy teams and may not generalize to creative strategy work
+        - Recommended criteria: task completion, reviewer acceptance, time saved, error rate, auditability, user adoption
+
+      Produce both DOCX and PDF. Tone should be analytical, balanced, and decision-oriented.
+    expected_schema:
+      files: [output.docx, output.pdf]
+      min_sections: 5
+      required_elements: [research_question, evidence_discussion, caveats, evaluation_criteria]
+      expected_sections: 5
+      must_address: [central_question, evidence_themes, practical_interpretation, caveats, evaluation_criteria]
+      requires_references: true
+
   - id: doc-09
     format: document
-    prompt: Write a standard operating procedure for reviewing generated productivity artifacts before publication. Include purpose, scope, roles, procedure, acceptance checks, records, and escalation rules.
-    expected: {file: output.docx}
+    template: minimal
+    prompt: |
+      Write a standard operating procedure for reviewing generated productivity artifacts before publication.
+      Audience: QA reviewers and release managers.
+
+      Use these facts:
+        - Purpose: standardize review of generated slides, spreadsheets, and documents before publication
+        - Scope: productivity benchmark artifacts and release examples
+        - Roles: reviewer checks artifacts; release owner approves publication; escalation lead resolves disputes
+        - Procedure facts: confirm file exists, open file, inspect structure, check formulas/charts when applicable, assess quality
+        - Acceptance checks: correct file type, opens cleanly, meets structural schema, contains substantive content, no placeholder text
+        - Records: save artifact path, reviewer name, pass/fail decision, quality notes, and timestamp
+        - Escalation rule: escalate if security-sensitive data appears, quality is disputed, or structural checks fail twice
+        - Review SLA: complete review within one business day of benchmark run completion
+
+      Produce a DOCX SOP. Tone should be precise, procedural, and easy to audit.
+    expected_schema:
+      files: [output.docx]
+      min_sections: 6
+      required_elements: [purpose_statement, scope, roles, procedure_steps, acceptance_checks, records, escalation_rules]
+      expected_sections: 6
+      must_address: [purpose, scope, roles, procedure, acceptance_checks, records, escalation]
+      requires_references: false
+
   - id: doc-10
     format: document
+    template: business
     prompt: |
-      Write an executive summary PDF explaining a productivity benchmark update
-      that requires agents to generate their own artifact outlines rather than
-      copying outline content from prompts. Include sections for context,
-      problem statement, policy change, expected evaluation benefits, rollout
-      risks, mitigation plan, success measures, and next steps. Audience is
-      executive leadership and benchmark stakeholders; tone should be concise,
-      persuasive, and implementation-aware.
-    expected: {file: output.pdf}
+      Write an executive summary PDF explaining why the productivity benchmark is being updated
+      to require agents to generate their own outlines.
+
+      Use these facts:
+        - Problem: previous tasks gave agents section names and bullet text, which made copying look like competence
+        - Evidence: v1.3.1 aggregate pass rate was 66.7% but quality averaged only about 4.4 out of 10
+        - Evidence: v1.3.2 bare prompts dropped to 6.67% aggregate with quality around 1.7 out of 10
+        - Policy change: prompts will provide intent, audience, facts, deliverable type, template, and tone
+        - Policy change: expected schema will contain only structural constraints and domains to address
+        - Expected benefit: benchmark measures reasoning, synthesis, and artifact construction rather than outline copying
+        - Risk: prompts with too few facts may understate agent ability
+        - Mitigation: require concrete user-supplied facts while banning pre-written sections and bullet content
+        - Next steps: rewrite tasks, rerun productivity benchmark, compare pass rate and quality to baselines
+
+      Produce PDF only. Tone should be concise, persuasive, and implementation-aware.
+    expected_schema:
+      files: [output.pdf]
+      min_sections: 5
+      required_elements: [executive_summary, evidence_points, policy_change, risks, next_steps]
+      expected_sections: 5
+      must_address: [problem, methodology_change, expected_benefits, risks, next_steps]
+      requires_references: false

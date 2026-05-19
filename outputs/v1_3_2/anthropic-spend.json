@@ -1,0 +1,280 @@
+{
+  "suite": "productivity-bench",
+  "model": "claude-sonnet-4-6",
+  "call_count": 30,
+  "total_cost_usd": 0.363025,
+  "total_input_tokens": 46337,
+  "total_output_tokens": 8756,
+  "calls": [
+    {
+      "task_id": "slides-01",
+      "format": "slides",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 1480,
+      "output_tokens": 241,
+      "cost_usd": 0.011015,
+      "latency_ms": 7110
+    },
+    {
+      "task_id": "slides-02",
+      "format": "slides",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 1442,
+      "output_tokens": 325,
+      "cost_usd": 0.012084999999999999,
+      "latency_ms": 8417
+    },
+    {
+      "task_id": "slides-03",
+      "format": "slides",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 1628,
+      "output_tokens": 351,
+      "cost_usd": 0.013405000000000002,
+      "latency_ms": 8660
+    },
+    {
+      "task_id": "slides-04",
+      "format": "slides",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 1463,
+      "output_tokens": 254,
+      "cost_usd": 0.011125,
+      "latency_ms": 7068
+    },
+    {
+      "task_id": "slides-05",
+      "format": "slides",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 1426,
+      "output_tokens": 320,
+      "cost_usd": 0.01193,
+      "latency_ms": 9074
+    },
+    {
+      "task_id": "slides-06",
+      "format": "slides",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 1615,
+      "output_tokens": 351,
+      "cost_usd": 0.01334,
+      "latency_ms": 12534
+    },
+    {
+      "task_id": "slides-07",
+      "format": "slides",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 1831,
+      "output_tokens": 360,
+      "cost_usd": 0.014555,
+      "latency_ms": 9702
+    },
+    {
+      "task_id": "slides-08",
+      "format": "slides",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 1737,
+      "output_tokens": 306,
+      "cost_usd": 0.013275,
+      "latency_ms": 8450
+    },
+    {
+      "task_id": "slides-09",
+      "format": "slides",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 1722,
+      "output_tokens": 300,
+      "cost_usd": 0.01311,
+      "latency_ms": 7344
+    },
+    {
+      "task_id": "slides-10",
+      "format": "slides",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 1771,
+      "output_tokens": 321,
+      "cost_usd": 0.01367,
+      "latency_ms": 8163
+    },
+    {
+      "task_id": "sheet-01",
+      "format": "spreadsheet",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 1254,
+      "output_tokens": 342,
+      "cost_usd": 0.0114,
+      "latency_ms": 8655
+    },
+    {
+      "task_id": "sheet-02",
+      "format": "spreadsheet",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 1119,
+      "output_tokens": 189,
+      "cost_usd": 0.00843,
+      "latency_ms": 5065
+    },
+    {
+      "task_id": "sheet-03",
+      "format": "spreadsheet",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 1041,
+      "output_tokens": 259,
+      "cost_usd": 0.00909,
+      "latency_ms": 7364
+    },
+    {
+      "task_id": "sheet-04",
+      "format": "spreadsheet",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 1062,
+      "output_tokens": 216,
+      "cost_usd": 0.00855,
+      "latency_ms": 7864
+    },
+    {
+      "task_id": "sheet-05",
+      "format": "spreadsheet",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 1313,
+      "output_tokens": 309,
+      "cost_usd": 0.011199999999999998,
+      "latency_ms": 7842
+    },
+    {
+      "task_id": "sheet-06",
+      "format": "spreadsheet",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 1548,
+      "output_tokens": 345,
+      "cost_usd": 0.012915,
+      "latency_ms": 9088
+    },
+    {
+      "task_id": "sheet-07",
+      "format": "spreadsheet",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 1063,
+      "output_tokens": 282,
+      "cost_usd": 0.009545,
+      "latency_ms": 7091
+    },
+    {
+      "task_id": "sheet-08",
+      "format": "spreadsheet",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 1419,
+      "output_tokens": 370,
+      "cost_usd": 0.012645,
+      "latency_ms": 10486
+    },
+    {
+      "task_id": "sheet-09",
+      "format": "spreadsheet",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 1496,
+      "output_tokens": 297,
+      "cost_usd": 0.011935,
+      "latency_ms": 7922
+    },
+    {
+      "task_id": "sheet-10",
+      "format": "spreadsheet",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 988,
+      "output_tokens": 327,
+      "cost_usd": 0.009845,
+      "latency_ms": 8736
+    },
+    {
+      "task_id": "doc-01",
+      "format": "document",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 2203,
+      "output_tokens": 311,
+      "cost_usd": 0.01568,
+      "latency_ms": 7573
+    },
+    {
+      "task_id": "doc-02",
+      "format": "document",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 1694,
+      "output_tokens": 236,
+      "cost_usd": 0.01201,
+      "latency_ms": 8738
+    },
+    {
+      "task_id": "doc-03",
+      "format": "document",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 1442,
+      "output_tokens": 239,
+      "cost_usd": 0.010794999999999999,
+      "latency_ms": 6786
+    },
+    {
+      "task_id": "doc-04",
+      "format": "document",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 2771,
+      "output_tokens": 354,
+      "cost_usd": 0.019164999999999998,
+      "latency_ms": 11013
+    },
+    {
+      "task_id": "doc-05",
+      "format": "document",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 2123,
+      "output_tokens": 328,
+      "cost_usd": 0.015535,
+      "latency_ms": 8834
+    },
+    {
+      "task_id": "doc-06",
+      "format": "document",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 1190,
+      "output_tokens": 304,
+      "cost_usd": 0.01051,
+      "latency_ms": 8507
+    },
+    {
+      "task_id": "doc-07",
+      "format": "document",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 1156,
+      "output_tokens": 168,
+      "cost_usd": 0.008299999999999998,
+      "latency_ms": 4815
+    },
+    {
+      "task_id": "doc-08",
+      "format": "document",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 2311,
+      "output_tokens": 230,
+      "cost_usd": 0.015005000000000001,
+      "latency_ms": 6961
+    },
+    {
+      "task_id": "doc-09",
+      "format": "document",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 1714,
+      "output_tokens": 274,
+      "cost_usd": 0.01268,
+      "latency_ms": 7457
+    },
+    {
+      "task_id": "doc-10",
+      "format": "document",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 1315,
+      "output_tokens": 247,
+      "cost_usd": 0.010280000000000001,
+      "latency_ms": 7146
+    }
+  ]
+}

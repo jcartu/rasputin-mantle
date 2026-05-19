@@ -22,6 +22,7 @@ if str(SKILLS_ROOT) not in sys.path:
     sys.path.insert(0, str(SKILLS_ROOT))
 
 from shared.self_review import self_review  # noqa: E402
+from shared.llm_content import generate_content  # noqa: E402
 
 TEMPLATES = {
     "minimal": {"accent": RGBColor(46, 52, 64), "bg": RGBColor(255, 255, 255), "fg": RGBColor(35, 35, 35)},
@@ -323,7 +324,7 @@ def _add_notes(slide: Any, notes: str) -> None:
     box.text_frame.paragraphs[0].font.size = Pt(7)
 
 
-def _outline_from_prompt(payload: dict[str, Any]) -> dict[str, Any]:
+def _fallback_outline_from_prompt(payload: dict[str, Any]) -> dict[str, Any]:
     prompt = str(payload.get("prompt") or "").casefold()
     for keywords, template, title, sections in DECK_PLANS:
         if any(keyword in prompt for keyword in keywords):
@@ -347,6 +348,63 @@ def _outline_from_prompt(payload: dict[str, Any]) -> dict[str, Any]:
             {"title": "Next Steps", "bullets": ["Assign owners", "Set review cadence"]},
         ],
     }
+
+
+def _outline_from_prompt(payload: dict[str, Any]) -> dict[str, Any]:
+    generated = generate_content(
+        str(payload.get("prompt") or ""),
+        "slides",
+        dict(payload.get("expected_schema") or payload.get("schema") or {}),
+    )
+    outline = _normalize_generated_outline(generated, payload)
+    return outline or _fallback_outline_from_prompt(payload)
+
+
+def _normalize_generated_outline(generated: dict[str, Any], payload: dict[str, Any]) -> dict[str, Any] | None:
+    raw_sections = generated.get("sections") or generated.get("slides") or []
+    if not isinstance(raw_sections, list) or not raw_sections:
+        return None
+    template = str(generated.get("template") or payload.get("template") or "minimal").lower()
+    if template in TEMPLATES:
+        payload.setdefault("template", template)
+    sections: list[dict[str, Any]] = []
+    for index, section in enumerate(raw_sections, start=1):
+        if not isinstance(section, dict):
+            continue
+        nested_sections = section.get("sections")
+        if isinstance(nested_sections, list) and nested_sections:
+            for nested in nested_sections:
+                if isinstance(nested, dict):
+                    _append_normalized_section(sections, nested, len(sections) + 1)
+            continue
+        _append_normalized_section(sections, section, index)
+    if not sections:
+        return None
+    return {
+        "title": str(generated.get("title") or payload.get("title") or "Presentation"),
+        "subtitle": str(generated.get("subtitle") or "Generated from the productivity benchmark prompt"),
+        "sections": sections,
+        "notes": str(generated.get("notes") or "Introduce the deck purpose and agenda."),
+    }
+
+
+def _append_normalized_section(sections: list[dict[str, Any]], section: dict[str, Any], index: int) -> None:
+        title = str(section.get("title") or section.get("heading") or section.get("name") or f"Section {index}")
+        bullets = section.get("bullets") or section.get("items") or section.get("points") or []
+        if isinstance(bullets, str):
+            bullets = [bullets]
+        normalized = {
+            "title": title,
+            "bullets": [str(item) for item in list(bullets)[:6] if str(item).strip()],
+            "notes": str(section.get("notes") or f"Discuss {title.lower()} in context."),
+        }
+        chart = section.get("chart")
+        if isinstance(chart, dict) and chart.get("labels") and chart.get("values"):
+            normalized["chart"] = chart
+        images = section.get("images")
+        if isinstance(images, list):
+            normalized["images"] = images
+        sections.append(normalized)
 
 
 def create_presentation(payload: dict[str, Any]) -> Path:

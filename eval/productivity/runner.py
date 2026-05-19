@@ -35,7 +35,9 @@ def run_task(task: dict[str, Any], root: Path) -> dict[str, Any]:
         output_dir = Path(tmp)
         args: dict[str, Any] = {}
         args["prompt"] = str(task.get("prompt") or "")
+        args["expected_schema"] = dict(task.get("expected_schema") or task.get("expected") or {})
         args["output_dir"] = str(output_dir)
+        args["timeout_seconds"] = 90
         result = invoke_skill(skill, args)
         produced = sorted(path for path in output_dir.iterdir() if path.is_file())
         metadata = _inspect_outputs(produced)
@@ -95,9 +97,7 @@ def summarize(results: list[dict[str, Any]]) -> dict[str, Any]:
     return {
         "aggregate_pass_rate": aggregate,
         "format_pass_rates": format_rates,
-        "total_estimated_cost_usd": round(
-            sum(float(result["estimated_cost_usd"]) for result in results), 4
-        ),
+        "total_estimated_cost_usd": round(sum(float(result["estimated_cost_usd"]) for result in results), 4),
         "anthropic_judge_cost_usd": round(
             sum(float(result.get("anthropic_judge_cost_usd") or 0.0) for result in results), 6
         ),

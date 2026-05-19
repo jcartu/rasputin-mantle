@@ -1,0 +1,1162 @@
+{
+  "suite": "productivity-bench",
+  "task_count": 30,
+  "summary": {
+    "aggregate_pass_rate": 0.9333333333333333,
+    "format_pass_rates": {
+      "document": 1.0,
+      "slides": 1.0,
+      "spreadsheet": 0.8
+    },
+    "total_estimated_cost_usd": 1.0937,
+    "anthropic_judge_cost_usd": 0.363025,
+    "minimum_aggregate_pass_rate": 0.8,
+    "minimum_per_format_pass_rate": 0.8,
+    "per_task_pass_threshold": 0.7
+  },
+  "results": [
+    {
+      "id": "slides-01",
+      "format": "slides",
+      "exit_code": 0,
+      "files": [
+        "slides.pptx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 6.0,
+        "quality_score": 0.3,
+        "score": 0.8,
+        "passed_threshold": 0.7,
+        "rubric": "slides",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 1480,
+          "output_tokens": 241,
+          "cost_usd": 0.011015,
+          "latency_ms": 7110,
+          "raw_response": "```json\n{\n  \"quality_score\": 6,\n  \"reason\": \"The deck covers all requested content areas \u2014 strategic objectives, workstreams, timeline, budget, risks, and controls \u2014 and the bullets are substantive rather than placeholder text. Slides 6\u201313 are clean and usable. However, the artifact has meaningful structural problems: Slides 1\u20135 contain template boilerplate (hero image placeholder, 'Generated from the productivity benchmark prompt', a generic chart placeholder with no Atlas Launch content, and a premature closing/thank-you slide at Slide 5 before the content even begins). This creates a confusing, non-linear flow that would require cleanup before executive use. The deck also lacks a dedicated dependencies slide despite key dependencies being a named input, and there is no clear ask or next-steps slide at the end. The cost distribution chart (Slide 11) has no visible data labels or breakdown, limiting its value. Overall: structurally present and mostly aligned, but template debris and missing dependencies coverage keep it from the 7\u20138 range.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 2952
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.02,
+      "anthropic_judge_cost_usd": 0.011015,
+      "stderr": ""
+    },
+    {
+      "id": "slides-02",
+      "format": "slides",
+      "exit_code": 0,
+      "files": [
+        "slides.pptx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 4.0,
+        "quality_score": 0.2,
+        "score": 0.7,
+        "passed_threshold": 0.7,
+        "rubric": "slides",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 1442,
+          "output_tokens": 325,
+          "cost_usd": 0.012084999999999999,
+          "latency_ms": 8417,
+          "raw_response": "```json\n{\n  \"quality_score\": 4,\n  \"reason\": \"The deck contains all the required facts from the prompt and covers the key sections (financial highlights, pipeline, market dynamics, operational learning, Q4 priorities). However, it is significantly undermined by several issues: Slides 1\u20135 appear to be raw template scaffolding with placeholder text ('Hero image placeholder', 'Title slide \u00b7 image + subtitle layout', 'Summarize the signal in one sentence', 'contact@example.com \u00b7 company.com', 'Chart / graph placeholder') that was never replaced with actual content, making roughly half the slides unusable as-is. The closing slide (Slide 5) appears at position 5 before the substantive content slides (6\u201311), creating an incoherent flow. The slide numbering labels ('Minimal \u2022 6', 'Minimal \u2022 7', etc.) are visible as text artifacts. There is no story arc or narrative thread connecting the slides\u2014each is a standalone bullet list without transitions, so-what statements, or executive framing. The chart on Slide 8 is noted as present but its content is unknown. Slide titles are functional but generic. The substantive slides (6\u201311) are thin but complete, which is why this scores above the 0\u20133 range, but the template debris and broken ordering prevent it from reaching the 5\u20136 'thin but complete' threshold cleanly.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 2668
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.02,
+      "anthropic_judge_cost_usd": 0.012084999999999999,
+      "stderr": ""
+    },
+    {
+      "id": "slides-03",
+      "format": "slides",
+      "exit_code": 0,
+      "files": [
+        "slides.pptx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 4.0,
+        "quality_score": 0.2,
+        "score": 0.7,
+        "passed_threshold": 0.7,
+        "rubric": "slides",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 1628,
+          "output_tokens": 351,
+          "cost_usd": 0.013405000000000002,
+          "latency_ms": 8660,
+          "raw_response": "```json\n{\n  \"quality_score\": 4,\n  \"reason\": \"The deck contains all the required facts from the brief and covers the core sections (pain, product, differentiation, traction, business model, ask), so it is not unusable. However, it has significant craft and structural problems that limit its usefulness for a seed investor audience: (1) Slides 1\u20136 are largely boilerplate or template scaffolding ('Hero image placeholder', 'Title slide \u00b7 image + subtitle layout', 'Summarize the signal in one sentence', 'contact@example.com \u00b7 company.com', 'Minimal \u2022 5') that were never replaced with real content, making roughly half the deck non-functional filler. (2) The story arc is broken \u2014 a closing/thank-you slide appears at Slide 5, before the product and traction slides, which destroys narrative flow. (3) There is no dedicated 'Problem' or 'Market Size' slide with a clear framing of the opportunity; the $1.8M average automation budget is buried in the traction slide rather than used to size the market. (4) Slide titles like 'Key Discussion Areas' and 'Evidence Snapshot' are generic and the chart placeholder on Slide 4 was never populated. (5) The 'Minimal \u2022 N' labels on slides 6\u201312 are template artifacts that should have been removed. The second half of the deck (Slides 7\u201312) is thin but substantively correct and readable, which prevents a lower score.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 3290
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.02,
+      "anthropic_judge_cost_usd": 0.013405000000000002,
+      "stderr": ""
+    },
+    {
+      "id": "slides-04",
+      "format": "slides",
+      "exit_code": 0,
+      "files": [
+        "slides.pptx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 5.0,
+        "quality_score": 0.25,
+        "score": 0.75,
+        "passed_threshold": 0.7,
+        "rubric": "slides",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 1463,
+          "output_tokens": 254,
+          "cost_usd": 0.011125,
+          "latency_ms": 7068,
+          "raw_response": "```json\n{\n  \"quality_score\": 5,\n  \"reason\": \"The deck contains all the required facts and covers the requested sections (overview, research method, adoption signals, trust barriers, practical implications), and the later slides (6\u201310) have substantive, evidence-led bullets that would be usable by the target audience. However, the artifact has significant structural problems that hold it back: slides 1\u20135 are largely boilerplate or placeholder content (hero image placeholder, 'Generated from the productivity benchmark prompt', a chart placeholder with no data, and a premature closing/thank-you slide at slide 5), meaning roughly half the deck is unusable filler. The story arc is broken because the closing slide appears before the substantive content. There is no clear narrative thread connecting findings to recommendations, and the 'Evidence Snapshot' slide (slide 4) never fills in its chart or key takeaway. The tone in the populated slides is appropriately analytical and evidence-led, and the recommendations on slide 10 are well-constructed, but the overall deck would require significant cleanup before being presented to product, research, or operations leaders.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 3226
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.02,
+      "anthropic_judge_cost_usd": 0.011125,
+      "stderr": ""
+    },
+    {
+      "id": "slides-05",
+      "format": "slides",
+      "exit_code": 0,
+      "files": [
+        "slides.pptx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 4.0,
+        "quality_score": 0.2,
+        "score": 0.7,
+        "passed_threshold": 0.7,
+        "rubric": "slides",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 1426,
+          "output_tokens": 320,
+          "cost_usd": 0.01193,
+          "latency_ms": 9074,
+          "raw_response": "```json\n{\n  \"quality_score\": 4,\n  \"reason\": \"The deck covers all the required factual content \u2014 launch status, adoption metrics, financials, compliance, risks, and the board decision \u2014 so nothing critical is missing. However, the artifact has significant structural and craft problems that limit its board-readiness. Slides 1\u20135 are largely template boilerplate (hero image placeholder, 'Generated from the productivity benchmark prompt', a generic 'Thank you' slide appearing at slide 5 of 12, a chart placeholder with no real content). The real substance is crammed into slides 6\u201312 as thin 'Minimal' bullets with no narrative arc or logical flow \u2014 the closing slide appears before the content slides, and the agenda slide (slide 2) lists sections that don't map cleanly to the actual slide order. Slide titles are generic section labels rather than insight-driven headlines (e.g., 'Key Financial Indicators' instead of '$9.6M Cash / 18-Month Runway \u2014 Positioned for Expansion'). The expansion plan decision ($1.2M) and board ask are present but buried in a generic 'Action Items' slide without framing the ask or providing supporting rationale. The chart on slide 10 is unspecified and adds no verifiable value. For a board audience, the deck would require significant rework before use, but the factual inputs are all represented.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 2665
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.02,
+      "anthropic_judge_cost_usd": 0.01193,
+      "stderr": ""
+    },
+    {
+      "id": "slides-06",
+      "format": "slides",
+      "exit_code": 0,
+      "files": [
+        "slides.pptx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 5.0,
+        "quality_score": 0.25,
+        "score": 0.75,
+        "passed_threshold": 0.7,
+        "rubric": "slides",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 1615,
+          "output_tokens": 351,
+          "cost_usd": 0.01334,
+          "latency_ms": 12534,
+          "raw_response": "```json\n{\n  \"quality_score\": 5,\n  \"reason\": \"The deck covers all required content areas \u2014 roles, workflow states, review standards, escalation rules, practice activity, and knowledge check \u2014 so nothing is outright missing. However, several significant craft problems hold it back. Slides 4 and 5 are pure template boilerplate (chart placeholder, 'Thank you / contact@example.com', closing visual placeholder) that have no business being in a first-week training deck and add noise without value. The title slide (Slide 1) is entirely placeholder text with no actual title. The agenda slide (Slide 2) is incomplete, omitting escalation rules, the practice activity, and the knowledge check. Slides 6\u201314 largely duplicate content already stated in Slides 3, 8\u201311, making the deck feel padded and repetitive rather than purposefully sequenced. The practice activity (Slide 12) gives away the answers on the very next slide (Slide 13), which undermines the learning exercise. Slide 13 also presents the 'identified issues' as pre-written facts rather than framing them as a debrief, removing any discovery value. The knowledge check (Slide 14) is functional but thin \u2014 three questions with no framing, instructions, or facilitation notes. Tone is adequately practical and clear in the content slides. Overall: structurally present and usable in a pinch, but marred by boilerplate slides, redundancy, a broken practice-activity flow, and an incomplete agenda.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 3759
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.02,
+      "anthropic_judge_cost_usd": 0.01334,
+      "stderr": ""
+    },
+    {
+      "id": "slides-07",
+      "format": "slides",
+      "exit_code": 0,
+      "files": [
+        "slides.pptx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 4.0,
+        "quality_score": 0.2,
+        "score": 0.7,
+        "passed_threshold": 0.7,
+        "rubric": "slides",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 1831,
+          "output_tokens": 360,
+          "cost_usd": 0.014555,
+          "latency_ms": 9702,
+          "raw_response": "```json\n{\n  \"quality_score\": 4,\n  \"reason\": \"The deck covers all the required content areas from the prompt (buyer profile, pain points, positioning, use cases, proof points, discovery questions, objections, sales motion), so it is structurally complete. However, it earns only a 4 because the execution is thin and field-unusable in several ways: (1) Slides 1\u20135 are template scaffolding artifacts ('Hero image placeholder,' 'Chart placeholder slide,' 'Closing / thanks slide,' 'Generated from the productivity benchmark prompt') that add no value and would embarrass an AE in front of a buyer; (2) the proof points and objection handlers exist but are presented as raw bullet lists with no narrative framing, visual hierarchy, or commercial credibility\u2014they read like a data dump rather than a persuasive pitch; (3) Slide 12 ('Visualizing the Impact') is a placeholder with no actual comparison or data visualization, just instructions to the designer; (4) slide titles are generic labels ('Minimal \u2022 8', 'Minimal \u2022 9', etc.) rather than assertion-driven headlines that carry the story; (5) there is no clear story arc connecting the slides\u2014the deck jumps from an agenda to a closing slide on Slide 5, then restarts the content from Slide 6, creating a confusing duplicate structure; (6) the tone is descriptive rather than field-ready and commercially credible as requested. The raw content ingredients are present, but the assembly is not usable by an AE without significant rework.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 4131
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.02,
+      "anthropic_judge_cost_usd": 0.014555,
+      "stderr": ""
+    },
+    {
+      "id": "slides-08",
+      "format": "slides",
+      "exit_code": 0,
+      "files": [
+        "slides.pptx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 4.0,
+        "quality_score": 0.2,
+        "score": 0.7,
+        "passed_threshold": 0.7,
+        "rubric": "slides",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 1737,
+          "output_tokens": 306,
+          "cost_usd": 0.013275,
+          "latency_ms": 8450,
+          "raw_response": "```json\n{\n  \"quality_score\": 4,\n  \"reason\": \"The deck covers all the required topic areas (components, data movement, trust boundaries, permissions, observability, operational controls, scaling) and the factual content from the prompt is present and correctly distributed across slides. However, the artifact has significant craft and usability problems that limit its score. Slides 1\u20135 are largely boilerplate or placeholder content (hero image placeholder, 'Generated from the productivity benchmark prompt', a generic 'Evidence Snapshot' chart placeholder with no real data, and a premature closing/thank-you slide at slide 5 before the substantive content even begins). The slide numbering labels ('Minimal \u2022 6', 'Minimal \u2022 7', etc.) are template artifacts that were never removed. There is no coherent story arc or narrative thread connecting the slides \u2014 each is a flat bullet list with no synthesis, prioritization, or security-conscious framing appropriate for engineering leadership. Trust boundary relationships are listed but not explained in terms of risk or attack surface. The permission model slide mixes authentication, authorization, and isolation without distinguishing their security significance. The scaling slide mentions 'bottleneck analysis' but provides no actual analysis. Next Steps are generic and not tied to findings or risks surfaced in the review. The deck reads as a populated template rather than a crafted architecture review presentation.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 3867
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.02,
+      "anthropic_judge_cost_usd": 0.013275,
+      "stderr": ""
+    },
+    {
+      "id": "slides-09",
+      "format": "slides",
+      "exit_code": 0,
+      "files": [
+        "slides.pptx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 5.0,
+        "quality_score": 0.25,
+        "score": 0.75,
+        "passed_threshold": 0.7,
+        "rubric": "slides",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 1722,
+          "output_tokens": 300,
+          "cost_usd": 0.01311,
+          "latency_ms": 7344,
+          "raw_response": "```json\n{\n  \"quality_score\": 5,\n  \"reason\": \"The deck covers all the required content areas \u2014 release overview, audience segments, messaging, channels, timeline, KPIs, ownership, and contingency \u2014 so nothing critical is missing. However, craft and usability fall short of a launch-ready executive presentation. Slide 1 is a literal placeholder ('Hero image placeholder', 'Title slide \u00b7 image + subtitle layout') with no actual title. Slide 4 is an unfilled chart template with boilerplate text ('Summarize the signal in one sentence'). Slide 5 is a premature closing slide appearing at position 5 of 14, breaking the narrative flow entirely. Slides 6\u201314 carry 'Minimal \u2022 N' labels that are template artifacts, not slide titles, making them unpresentable to an executive audience. The content within the substantive slides (6\u201314) is accurate and action-oriented but reads as a flat bullet dump rather than a story arc \u2014 there is no opening hook, no 'why now' framing, and no clear call-to-action close. Visual hierarchy is absent beyond the bullet lists. The deck is structurally complete and usable as a working draft, but requires significant cleanup before it could be presented to product marketing, sales, or executive sponsors without embarrassment.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 3773
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.02,
+      "anthropic_judge_cost_usd": 0.01311,
+      "stderr": ""
+    },
+    {
+      "id": "slides-10",
+      "format": "slides",
+      "exit_code": 0,
+      "files": [
+        "slides.pptx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 5.0,
+        "quality_score": 0.25,
+        "score": 0.75,
+        "passed_threshold": 0.7,
+        "rubric": "slides",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 1771,
+          "output_tokens": 321,
+          "cost_usd": 0.01367,
+          "latency_ms": 8163,
+          "raw_response": "```json\n{\n  \"quality_score\": 5,\n  \"reason\": \"The deck covers all required content areas \u2014 market shift, strategy, product bets, budget dilemma, KPIs, risks, and leadership decisions \u2014 and the later slides (8\u201313) are substantive and board-readable with concise, specific bullets drawn directly from the prompt. However, the artifact has significant structural problems that drag the score down: slides 1\u20137 are largely duplicated or placeholder-laden (Slide 1 is a generic title with no company framing, Slide 4 is an unfilled chart placeholder with boilerplate text, Slide 5 is a premature 'Thank you' closing slide appearing at position 5 of 13, and Slides 3 and 6\u20137 repeat the same landscape content). The story arc is broken by the misplaced closing slide and the duplicate content. The budget recommendation (lean toward Security/Compliance) is a reasonable directional signal but is stated as a recommendation rather than framed as a decision for the room, which slightly undercuts the 'decisions needed' posture. No actual investment split numbers or vertical options are proposed, leaving the 'approve investment split' and 'choose two priority verticals' decisions without any analytical scaffolding. Visual hierarchy is flat throughout. The deck is usable as a starting draft but would require meaningful cleanup before being presented to a CEO staff audience.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 4274
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.02,
+      "anthropic_judge_cost_usd": 0.01367,
+      "stderr": ""
+    },
+    {
+      "id": "sheet-01",
+      "format": "spreadsheet",
+      "exit_code": 0,
+      "files": [
+        "data.xlsx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 4.0,
+        "quality_score": 0.2,
+        "score": 0.7,
+        "passed_threshold": 0.7,
+        "rubric": "spreadsheet",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 1254,
+          "output_tokens": 342,
+          "cost_usd": 0.0114,
+          "latency_ms": 8655,
+          "raw_response": "```json\n{\n  \"quality_score\": 4,\n  \"reason\": \"The workbook has reasonable intent and covers the right topics (pipeline data, funnel summary, risk review, charts), but execution has significant problems. First, the sheet structure is redundant and confusing: Data/Data1/Data2 duplicate Pipeline Data/Funnel Summary/Risk Review, and three of the named sheets (Pipeline Data, Funnel Summary, Risk Review) contain only placeholder text rather than actual data \u2014 making them unusable. Second, formulas are not evident: the Risk Flag column appears rule-based but there is no formula shown (e.g., =IF(OR(days>30, next_action=''),'Yes','No')); Weighted Value and Variance look hard-coded rather than formula-driven. Third, the conversion percentages (Actual Conversion %) are not derived from the deal count data with visible formulas \u2014 e.g., Qualified/Prospect = 7/12 \u2248 0.58 is correct but should be a cell formula. Fourth, the Charts sheet reports '0 chart object(s)' with only image artifacts, which is weak chart treatment for a workbook meant for weekly revenue inspection. Fifth, the Data sheet duplicates stage rows per owner rather than modeling owners as a dimension, creating misleading repeated deal counts (e.g., Prospect shows 12 twice). The artifact is partially usable for reference but would require significant rework before a revenue team could rely on it for weekly inspection.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 1698
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.03,
+      "anthropic_judge_cost_usd": 0.0114,
+      "stderr": ""
+    },
+    {
+      "id": "sheet-02",
+      "format": "spreadsheet",
+      "exit_code": 0,
+      "files": [
+        "data.xlsx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 1.0,
+        "quality_score": 0.05,
+        "score": 0.55,
+        "passed_threshold": 0.7,
+        "rubric": "spreadsheet",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 1119,
+          "output_tokens": 189,
+          "cost_usd": 0.00843,
+          "latency_ms": 5065,
+          "raw_response": "```json\n{\n  \"quality_score\": 1,\n  \"reason\": \"The workbook is essentially empty. While it has the correct sheet names (Assumptions, Income Statement, Cash Flow, Summary, Charts, etc.), every named sheet contains only a 'Self-review placeholder' note with no actual data, formulas, or content. The Data sheets (Data, Data1, Data2, Data3) have only header rows with no values populated. No ARR calculations, revenue projections, gross margin figures, opex line items, cash flow statements, or summary metrics are present. There are zero chart objects. None of the provided facts (starting ARR, growth rates, margin assumptions, capex, working capital) have been modeled. The workbook cannot be used by finance leadership in any capacity \u2014 it is a skeleton with placeholder labels only.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 1035
+      },
+      "passed": false,
+      "estimated_cost_usd": 0.03,
+      "anthropic_judge_cost_usd": 0.00843,
+      "stderr": ""
+    },
+    {
+      "id": "sheet-03",
+      "format": "spreadsheet",
+      "exit_code": 0,
+      "files": [
+        "data.xlsx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 4.0,
+        "quality_score": 0.2,
+        "score": 0.7,
+        "passed_threshold": 0.7,
+        "rubric": "spreadsheet",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 1041,
+          "output_tokens": 259,
+          "cost_usd": 0.00909,
+          "latency_ms": 7364,
+          "raw_response": "```json\n{\n  \"quality_score\": 4,\n  \"reason\": \"The workbook captures the right data and produces correct weighted scores (A=4.0, B=3.7, C=4.4) and correctly flags Platform B for the security exception. However, it has significant structural and formula problems: (1) The weighted scores appear hard-coded rather than driven by formulas referencing the weights in the Data sheet \u2014 a core rubric requirement. (2) Three of the seven sheets (Criteria Weights, Comparison Matrix, Recommendation Summary) are placeholder stubs with no real content, making them unusable. (3) The Charts sheet has zero actual chart objects; only a placeholder image artifact is noted, so no readable visualization exists. (4) The workbook is fragmented across Data/Data1/Data2 rather than organized into a coherent assumptions-inputs-outputs flow. (5) No formula transparency is evident \u2014 a business user cannot audit or update the model. The artifact is partially correct and usable in a limited way, but the hard-coded calculations, stub sheets, and absent charts keep it in the 3-4 range.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 1244
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0292,
+      "anthropic_judge_cost_usd": 0.00909,
+      "stderr": ""
+    },
+    {
+      "id": "sheet-04",
+      "format": "spreadsheet",
+      "exit_code": 0,
+      "files": [
+        "data.xlsx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 1.0,
+        "quality_score": 0.05,
+        "score": 0.55,
+        "passed_threshold": 0.7,
+        "rubric": "spreadsheet",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 1062,
+          "output_tokens": 216,
+          "cost_usd": 0.00855,
+          "latency_ms": 7864,
+          "raw_response": "```json\n{\n  \"quality_score\": 1,\n  \"reason\": \"The artifact is not a usable customer data cleaning workbook. The Data sheet treats the raw rows as generic 'Topic/Detail' entries rather than building an actual cleaning table with columns for name, email, normalized spend, status, duplicate flag, and keep/exclude decision. The raw customer records are never parsed into proper fields. There are no formulas implementing the duplicate detection logic (normalized email comparison), no spend normalization formulas (just hard-coded numeric values in a generic 'Numeric Value' column), no duplicate flags, and no keep/exclude decisions. The Summary sheet contains boilerplate placeholder text and only one formula (COUNTA), missing the required metrics: raw row count, duplicate count, cleaned customer count, and total cleaned spend as formula-driven outputs. The Charts sheet has zero chart objects. The workbook cannot be used by a business user to understand or act on the cleaning logic.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 1337
+      },
+      "passed": false,
+      "estimated_cost_usd": 0.029,
+      "anthropic_judge_cost_usd": 0.00855,
+      "stderr": ""
+    },
+    {
+      "id": "sheet-05",
+      "format": "spreadsheet",
+      "exit_code": 0,
+      "files": [
+        "data.xlsx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 4.0,
+        "quality_score": 0.2,
+        "score": 0.7,
+        "passed_threshold": 0.7,
+        "rubric": "spreadsheet",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 1313,
+          "output_tokens": 309,
+          "cost_usd": 0.011199999999999998,
+          "latency_ms": 7842,
+          "raw_response": "```json\n{\n  \"quality_score\": 4,\n  \"reason\": \"The workbook contains the right categories and data, and Data2 correctly identifies the Contractor QA overage (>10% flag). However, several significant issues drag the score down: (1) Three named sheets\u2014Expense Detail, Monthly Summary, and Budget Review\u2014are empty placeholders with only a self-review note, meaning the intended organized sheet structure is not actually delivered. (2) The Charts sheet reports 0 chart objects; only 2 image/chart artifacts are noted, which is not a durable embedded chart a business user can interact with or update. (3) All values in Data1 and Data2 appear to be hard-coded results rather than formulas (e.g., variance %, totals, allocated amounts), violating the core rubric requirement for formula-driven calculations. (4) The variance logic in Data1 shows overall spend ($7,700) as under budget, which is correct, but the per-category variance signs in Data2 are inconsistent (positive = under, negative = over), which is confusing. (5) The workbook is fragmented across redundant sheets (Data, Data1, Data2) rather than a clean assumptions/outputs separation. The data is present and partially correct, but the artifact is not usable directly by a business user in its current state.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 1961
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.03,
+      "anthropic_judge_cost_usd": 0.011199999999999998,
+      "stderr": ""
+    },
+    {
+      "id": "sheet-06",
+      "format": "spreadsheet",
+      "exit_code": 0,
+      "files": [
+        "data.xlsx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 4.0,
+        "quality_score": 0.2,
+        "score": 0.7,
+        "passed_threshold": 0.7,
+        "rubric": "spreadsheet",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 1548,
+          "output_tokens": 345,
+          "cost_usd": 0.012915,
+          "latency_ms": 9088,
+          "raw_response": "```json\n{\n  \"quality_score\": 4,\n  \"reason\": \"The workbook has the right structural intent \u2014 candidate pipeline, funnel summary, and bottleneck review are all represented \u2014 and the required tracking fields are present. Conversion rates are included in the funnel sheet. However, several significant issues drag the score down: (1) Formulas are absent; all values (conversion rates, bottleneck flags, stage counts) appear to be hard-coded static values rather than live calculations (e.g., Bottleneck Flag should be =IF(F2>10,TRUE,FALSE), funnel stage counts should reference the pipeline sheet, projected hires should use conversion assumptions). (2) The candidate_pipeline_sheet and funnel_summary_sheet are placeholder shells with no actual data, making them non-functional duplicates of Data/Data1/Data2 rather than the primary working sheets. (3) The Charts sheet reports 0 chart objects and only 1 image artifact \u2014 a chart was requested for recruiting leadership review but is not reliably present as a native chart. (4) The workbook has redundant sheet naming (Data, Data1, Data2 alongside named sheets) suggesting an incomplete reorganization. (5) The pipeline only shows 7 sample rows against 16 total hires needed, with no formula-driven gap analysis showing how many additional candidates must be sourced to hit targets given the conversion assumptions. The artifact is usable as a template skeleton but requires substantial formula work and data population before it could serve a recruiting leadership review.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 2499
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.03,
+      "anthropic_judge_cost_usd": 0.012915,
+      "stderr": ""
+    },
+    {
+      "id": "sheet-07",
+      "format": "spreadsheet",
+      "exit_code": 0,
+      "files": [
+        "data.xlsx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 4.0,
+        "quality_score": 0.2,
+        "score": 0.7,
+        "passed_threshold": 0.7,
+        "rubric": "spreadsheet",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 1063,
+          "output_tokens": 282,
+          "cost_usd": 0.009545,
+          "latency_ms": 7091,
+          "raw_response": "```json\n{\n  \"quality_score\": 4,\n  \"reason\": \"The workbook contains the right data and correct calculated values (weighted scores: X=4.05, Y=4.00, Z=3.75; procurement risk flag on Vendor Z; rank and summary in Data2), and the compliance-risk constraint is applied correctly. However, several significant issues hold it back: (1) The weighted scores in Data1 appear hard-coded rather than driven by formulas referencing the weights in Data. (2) Three sheets (weighting_sheet, vendor_scores_sheet, decision_summary) are placeholder stubs with no real content, suggesting an incomplete build. (3) The Charts sheet has only an image artifact rather than a proper chart object, limiting reusability. (4) The workbook is fragmented across redundant sheets (Data vs. weighting_sheet, Data1 vs. vendor_scores_sheet, Data2 vs. decision_summary) without a clean assumptions-inputs-outputs separation. (5) No rank column is explicitly shown in the vendor table. The core data and decision output are present and correct, but the formula model is weak and the sheet structure is disorganized, placing this in the 3\u20134 range.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 1176
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0284,
+      "anthropic_judge_cost_usd": 0.009545,
+      "stderr": ""
+    },
+    {
+      "id": "sheet-08",
+      "format": "spreadsheet",
+      "exit_code": 0,
+      "files": [
+        "data.xlsx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 5.0,
+        "quality_score": 0.25,
+        "score": 0.75,
+        "passed_threshold": 0.7,
+        "rubric": "spreadsheet",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 1419,
+          "output_tokens": 370,
+          "cost_usd": 0.012645,
+          "latency_ms": 10486,
+          "raw_response": "```json\n{\n  \"quality_score\": 5,\n  \"reason\": \"The workbook has meaningful structure across multiple sheets and uses real formulas for period-over-period changes and conditional health indicators (IF logic referencing target cells), which is the core modeling requirement. The Data sheet correctly maps all five metrics with owners, targets, and formula-driven health statuses. The Data1 sheet provides readable executive interpretation notes. However, several issues limit the score: (1) The period-change formulas in the Data sheet reference wrong columns \u2014 they appear to use positional offsets (B2-A2, C2-B2) rather than the named July/August/September value columns, suggesting the column references are misaligned with the actual layout described; (2) the 'Raw Metrics & Targets' and 'Executive Summary' sheets are self-described placeholders with no real content, wasting two of five sheets; (3) the Charts sheet reports zero actual chart objects and only one image artifact, meaning the requested trend chart is not a proper spreadsheet chart object; (4) the August value for Avg Cycle-Time Reduction (36%) is inferred/invented since the prompt only gave July (31%) and September (41%) endpoints, which is a minor fabrication; (5) the health threshold logic uses a flat 10% multiplier (D2*0.9) which is correct for percentage-point metrics but the prompt implies percentage-below-target logic \u2014 this is acceptable but borderline. Overall the artifact is functional and partially formula-driven but has placeholder sheets, a missing real chart, and formula reference concerns that prevent it from being directly usable without correction.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 2035
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.03,
+      "anthropic_judge_cost_usd": 0.012645,
+      "stderr": ""
+    },
+    {
+      "id": "sheet-09",
+      "format": "spreadsheet",
+      "exit_code": 0,
+      "files": [
+        "data.xlsx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 4.0,
+        "quality_score": 0.2,
+        "score": 0.7,
+        "passed_threshold": 0.7,
+        "rubric": "spreadsheet",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 1496,
+          "output_tokens": 297,
+          "cost_usd": 0.011935,
+          "latency_ms": 7922,
+          "raw_response": "```json\n{\n  \"quality_score\": 4,\n  \"reason\": \"The workbook has a reasonable multi-sheet structure and uses formulas in the Data sheet for variance, cumulative totals, and the 8% flag rule. However, there are significant problems that reduce usability: (1) The 'Monthly Budget & Actuals' and 'Category Breakdown' sheets\u2014which appear to be the intended primary sheets\u2014contain only placeholder text rather than actual data or formulas, making them unusable. (2) The Data2 (Annual Summary) sheet has a broken formula: 'Remaining Annual Budget' references only the June actual cell rather than subtracting total actuals from the annual cap, producing an incorrect result. (3) The variance flag logic is inverted\u2014the formula flags when variance (plan minus actual) is >8%, but overspend produces a negative variance, so the flag would never trigger correctly for over-budget months. (4) The Charts sheet reports 0 chart objects, meaning no actual chart was produced despite being explicitly requested. (5) The Category Breakdown sheet has no allocation data tied to the monthly figures. The Data sheet core is a reasonable skeleton, but the broken primary sheets, incorrect flag logic, missing chart, and placeholder-filled summary sheets leave the workbook not directly usable for program review.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 2078
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.03,
+      "anthropic_judge_cost_usd": 0.011935,
+      "stderr": ""
+    },
+    {
+      "id": "sheet-10",
+      "format": "spreadsheet",
+      "exit_code": 0,
+      "files": [
+        "data.xlsx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 5.0,
+        "quality_score": 0.25,
+        "score": 0.75,
+        "passed_threshold": 0.7,
+        "rubric": "spreadsheet",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 988,
+          "output_tokens": 327,
+          "cost_usd": 0.009845,
+          "latency_ms": 8736,
+          "raw_response": "```json\n{\n  \"quality_score\": 5,\n  \"reason\": \"The workbook covers the required data and applies the at-risk rule correctly (Red+High = True, others False), includes review frequency logic, and produces a health count summary. However, several issues limit the score: (1) At-risk flag for 'Ops automation rollout' is False/Standard, which is correct, but 'Sales workflow migration' and 'Customer enablement refresh' are Yellow/Medium so correctly excluded \u2014 that logic is right. (2) The 'Initiative List' and 'Executive Summary' sheets are placeholder stubs with no real content, wasting two of five sheets. (3) The Charts sheet has only an image artifact rather than a proper chart object built from the data, which is weak. (4) There is no evidence of actual spreadsheet formulas (e.g., COUNTIF for green/yellow/red, IF for at-risk flag, filter-ready named ranges or table formatting) \u2014 values appear hard-coded rather than formula-driven, which the rubric explicitly penalizes. (5) No filter setup (AutoFilter, Table, or slicer) is demonstrated for health, owner, priority, or next review date as requested. The artifact is thin but not incoherent; it captures all four initiatives with correct data and the at-risk rule is applied, but the formula-driven, filtering-ready, and chart requirements are largely unmet.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 1221
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.03,
+      "anthropic_judge_cost_usd": 0.009845,
+      "stderr": ""
+    },
+    {
+      "id": "doc-01",
+      "format": "document",
+      "exit_code": 0,
+      "files": [
+        "output.docx",
+        "output.pdf"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 7.0,
+        "quality_score": 0.35,
+        "score": 0.85,
+        "passed_threshold": 0.7,
+        "rubric": "document",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 2203,
+          "output_tokens": 311,
+          "cost_usd": 0.01568,
+          "latency_ms": 7573,
+          "raw_response": "```json\n{\n  \"quality_score\": 7,\n  \"reason\": \"Both DOCX and PDF outputs cover all requested sections with substantive prose: executive summary with a clear recommendation, rollout rationale, phased timeline (6-week pilot, 4-week review, 8-week expansion), a well-structured risk/mitigation table with all four risks and their mitigations, and explicit success criteria with a decision request. The $420K budget, two administrators, 30% cycle-time target, and 80%/20% success thresholds are all present. The tone is concise and decision-oriented as requested. Deductions: the DOCX file contains leftover boilerplate template paragraphs (e.g., 'Minimal Document Template,' 'Add charts, observations...') that would be unprofessional if seen by executive leadership; the timeline section lists phases as plain numbered paragraphs rather than a table or visual that would aid executive readability; the background rationale is somewhat generic rather than evidence-based; and there is no cost-benefit framing (e.g., ROI or payback context for the $420K) that would strengthen the decision-oriented ask. The PDF is cleaner and more polished than the DOCX. Overall a solid, usable memo that covers the brief well but has presentation and polish gaps that prevent a higher score.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 7094
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.06,
+      "anthropic_judge_cost_usd": 0.01568,
+      "stderr": ""
+    },
+    {
+      "id": "doc-02",
+      "format": "document",
+      "exit_code": 0,
+      "files": [
+        "output.docx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 7.0,
+        "quality_score": 0.35,
+        "score": 0.85,
+        "passed_threshold": 0.7,
+        "rubric": "document",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 1694,
+          "output_tokens": 236,
+          "cost_usd": 0.01201,
+          "latency_ms": 8738,
+          "raw_response": "```json\n{\n  \"quality_score\": 7,\n  \"reason\": \"The document covers all requested content areas\u2014abstract, method summary, findings, limitations, conclusion, and a summary table\u2014with substantive prose that accurately incorporates every supplied fact. The tone is measured and academic, appropriate for the stated audience. The table is a useful addition. Deductions: the document structure is somewhat disjointed (a generic template skeleton appears before the actual report content, suggesting incomplete cleanup of boilerplate headings like 'Evidence Detail' and 'Implementation Note' that add noise without substance). The table of contents heading is present but no actual TOC entries are populated. Sections lack numbered hierarchy alignment (the real report headings don't follow the 1/2/3 structure established at the top). There are no recommendations or prioritized next steps, which the rubric template called for and which would be expected in a deliverable for product research leaders. Despite these gaps, the core analytical content is solid, well-organized, and would be genuinely useful to the intended audience.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 5002
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.06,
+      "anthropic_judge_cost_usd": 0.01201,
+      "stderr": ""
+    },
+    {
+      "id": "doc-03",
+      "format": "document",
+      "exit_code": 0,
+      "files": [
+        "output.pdf"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 7.0,
+        "quality_score": 0.35,
+        "score": 0.85,
+        "passed_threshold": 0.7,
+        "rubric": "document",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 1442,
+          "output_tokens": 239,
+          "cost_usd": 0.010794999999999999,
+          "latency_ms": 6786,
+          "raw_response": "```json\n{\n  \"quality_score\": 7,\n  \"reason\": \"The document covers all requested sections with substantive prose and uses tables effectively for deliverables, roles, and acceptance criteria. The table of contents is present and the tone is polished and commercially credible. Pricing terms are clearly stated, including the $10,000 fee and usage-at-cost model. All four acceptance criteria are captured in a well-structured table. Minor gaps that prevent a higher score: the timeline section lacks a week-by-week breakdown (e.g., Week 1: discovery/mapping, Week 2: configuration, Week 3: training/runs, Week 4: measurement/readout), which would be expected in a pilot proposal for an enterprise sponsor; the executive summary is somewhat generic and could reference the client's context more specifically; and the scope section could more explicitly call out the sandbox execution configuration as a distinct phase. Overall it reads as a credible, near-ready deliverable but would benefit from a phased timeline table and slightly more specificity in the narrative sections.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 3903
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.06,
+      "anthropic_judge_cost_usd": 0.010794999999999999,
+      "stderr": ""
+    },
+    {
+      "id": "doc-04",
+      "format": "document",
+      "exit_code": 0,
+      "files": [
+        "output.docx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 6.0,
+        "quality_score": 0.3,
+        "score": 0.8,
+        "passed_threshold": 0.7,
+        "rubric": "document",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 2771,
+          "output_tokens": 354,
+          "cost_usd": 0.019164999999999998,
+          "latency_ms": 11013,
+          "raw_response": "```json\n{\n  \"quality_score\": 6,\n  \"reason\": \"The document covers all seven required sections with substantive prose that would genuinely help the intended audience complete the work. Every fact from the prompt is represented: the three user roles, all four setup prerequisites, the three task formats with realistic-user-facts requirement, the single-run/preserve/capture execution rules, the two-step structural-then-quality review rule, all four troubleshooting scenarios with actionable resolutions, the no-rubric-changes governance rule, and all four reporting metrics. The procedural tone is appropriate and consistent. However, the score is held to 6 rather than 7-8 for several reasons: (1) the file contains significant structural noise\u2014a generic 'Minimal Document Template' section with placeholder headings (Executive Summary, Evidence Detail, Analysis, Recommendations) that are completely irrelevant to an operating guide and would confuse readers; (2) the Table of Contents appears three times in the raw content, and the last two sections of the document repeat the governance and reporting content verbatim twice, indicating a malformed or duplicated output; (3) the TOC is rendered as plain numbered paragraphs rather than a properly linked or formatted TOC field, reducing polish; (4) prose depth is adequate but not rich\u2014steps lack example values, the troubleshooting section could benefit from a table, and the reporting section has no example report structure. The core guide content is usable and complete, but the extraneous template scaffolding and repeated content lower the deliverable quality noticeably.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 8830
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.06,
+      "anthropic_judge_cost_usd": 0.019164999999999998,
+      "stderr": ""
+    },
+    {
+      "id": "doc-05",
+      "format": "document",
+      "exit_code": 0,
+      "files": [
+        "output.docx",
+        "output.pdf"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 6.0,
+        "quality_score": 0.3,
+        "score": 0.8,
+        "passed_threshold": 0.7,
+        "rubric": "document",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 2123,
+          "output_tokens": 328,
+          "cost_usd": 0.015535,
+          "latency_ms": 8834,
+          "raw_response": "```json\n{\n  \"quality_score\": 6,\n  \"reason\": \"The artifact covers all requested sections (Preparation, Quality Checks, Communications, Launch Day, Monitoring/Rollback/Follow-up) and correctly uses tables with Owner and Status columns throughout both DOCX and PDF outputs. The specific facts provided (v1.4, November 6 2025, 60% pass-rate rollback trigger, 48-hour monitoring window, all checklist items) are accurately incorporated. However, several issues limit the score: (1) The DOCX file contains a generic template preamble ('Minimal Document Template', 'Executive Summary', 'Analysis', 'Recommendations' with placeholder prose) that is irrelevant to a launch checklist and would confuse the intended audience; (2) Section 5 collapses Monitoring, Rollback, and Follow-up into a single summary table rather than giving each its own actionable checklist rows with owners and statuses, making it less operationally useful than the other sections; (3) Prose introductions for each section are thin and generic rather than release-specific guidance; (4) No document-level header identifying audience roles or a brief usage note is present. The PDF is cleaner and more usable than the DOCX. Overall the document is structurally present and would help a release team track tasks, but the template noise in the DOCX and the compressed final section reduce practical polish.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 5307
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.06,
+      "anthropic_judge_cost_usd": 0.015535,
+      "stderr": ""
+    },
+    {
+      "id": "doc-06",
+      "format": "document",
+      "exit_code": 0,
+      "files": [
+        "output.docx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 6.0,
+        "quality_score": 0.3,
+        "score": 0.8,
+        "passed_threshold": 0.7,
+        "rubric": "document",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 1190,
+          "output_tokens": 304,
+          "cost_usd": 0.01051,
+          "latency_ms": 8507,
+          "raw_response": "```json\n{\n  \"quality_score\": 6,\n  \"reason\": \"The document covers all required facts: the ship decision, both methodology changes, all four owner assignments with correct due dates, the open risk, and the Friday 10 AM review. The action-items table is well-formed and accurate. However, the artifact has notable weaknesses that keep it out of the 7-8 range: (1) A large block of generic template boilerplate (Executive Summary, Evidence Detail, Analysis, Recommendations with placeholder prose) was left in the output ahead of the actual recap content, which would confuse the intended audience and require cleanup before sending. (2) Lin's due date in the table is listed as Wednesday rather than the unspecified-but-implied deadline tied to skill behavior (the prompt does not give Lin an explicit date, but the table entry is inconsistent with the runner-updates Wednesday date being Ada's, not Lin's\u2014this is a minor factual conflation). (3) The verification decision ('structural check before quality review') is only mentioned parenthetically in the table rather than called out as a standalone process decision in the methodology or a dedicated section. (4) Prose sections are thin\u2014one or two sentences each\u2014with no transitional language suited to a leadership sponsor audience. The document is usable as a starting point but not ready to send as-is.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 2577
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.0571,
+      "anthropic_judge_cost_usd": 0.01051,
+      "stderr": ""
+    },
+    {
+      "id": "doc-07",
+      "format": "document",
+      "exit_code": 0,
+      "files": [
+        "output.pdf"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 7.0,
+        "quality_score": 0.35,
+        "score": 0.85,
+        "passed_threshold": 0.7,
+        "rubric": "document",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 1156,
+          "output_tokens": 168,
+          "cost_usd": 0.008299999999999998,
+          "latency_ms": 4815,
+          "raw_response": "```json\n{\n  \"quality_score\": 7,\n  \"reason\": \"The document covers all requested facts and sections with coherent, factual, and blameless prose. It includes a table of contents, logical flow from summary through ownership, and correctly attributes each corrective action to the right owner. The formatting is clean and appropriate for an incident report. Minor gaps keep it from a higher score: the sections are somewhat brief and could benefit from a concise timeline or status column (e.g., a small table mapping owner, action, and target date), and some phrasing is slightly generic ('integrity of the evaluation metrics was compromised'). Still, it reads as a usable, professional incident report that would serve its intended audience without significant revision.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 2452
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.06,
+      "anthropic_judge_cost_usd": 0.008299999999999998,
+      "stderr": ""
+    },
+    {
+      "id": "doc-08",
+      "format": "document",
+      "exit_code": 0,
+      "files": [
+        "output.docx",
+        "output.pdf"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 7.0,
+        "quality_score": 0.35,
+        "score": 0.85,
+        "passed_threshold": 0.7,
+        "rubric": "document",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 2311,
+          "output_tokens": 230,
+          "cost_usd": 0.015005000000000001,
+          "latency_ms": 6961,
+          "raw_response": "```json\n{\n  \"quality_score\": 7,\n  \"reason\": \"Both DOCX and PDF outputs contain substantive prose that covers all requested content: the central research question, methodology (15 pilots, 22 interviews, artifact reviews), all three evidence themes, the practical interpretation, the generalizability caveat, and all six recommended evaluation criteria rendered in a well-structured table. The tone is analytical and decision-oriented, appropriate for the stated audience. The PDF reads cleanly as a deliverable. Deductions: the DOCX file begins with a visible template scaffold ('Minimal Document Template / Cover page \u00b7 table of contents...') that was never removed, which would be unprofessional if delivered to a client. The document lacks a true table of contents with page references (only a heading placeholder exists). Sections are somewhat short and could benefit from slightly more synthesis or cross-theme analysis, but the content is not thin to the point of being unhelpful. Overall it is a solid, usable brief with minor polish gaps.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 7910
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.06,
+      "anthropic_judge_cost_usd": 0.015005000000000001,
+      "stderr": ""
+    },
+    {
+      "id": "doc-09",
+      "format": "document",
+      "exit_code": 0,
+      "files": [
+        "output.docx"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 6.0,
+        "quality_score": 0.3,
+        "score": 0.8,
+        "passed_threshold": 0.7,
+        "rubric": "document",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 1714,
+          "output_tokens": 274,
+          "cost_usd": 0.01268,
+          "latency_ms": 7457,
+          "raw_response": "```json\n{\n  \"quality_score\": 6,\n  \"reason\": \"The SOP covers all six required sections with substantive prose that would genuinely help a QA reviewer or release manager complete the work: purpose, scope, roles, numbered procedure steps, acceptance checks, and records/escalation rules. All facts from the prompt are present and accurately rendered. However, the document loses points for several reasons: (1) the file contains a large block of irrelevant boilerplate ('Minimal Document Template', 'Executive Summary', 'Evidence Detail', 'Analysis', 'Recommendations') that precedes the actual SOP content, making the artifact look unpolished and potentially confusing to an auditor; (2) the Table of Contents is rendered as plain paragraphs rather than a proper linked or formatted TOC; (3) roles are listed as bullet paragraphs rather than a table, which would be more audit-friendly and is standard for SOPs of this type; (4) the records section would benefit from a table layout (field name, description, example) rather than a flat bullet list. The core SOP content is complete and usable, but the formatting noise and missed opportunities for tables keep it in the mid-range.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 4354
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.06,
+      "anthropic_judge_cost_usd": 0.01268,
+      "stderr": ""
+    },
+    {
+      "id": "doc-10",
+      "format": "document",
+      "exit_code": 0,
+      "files": [
+        "output.pdf"
+      ],
+      "file_produced": true,
+      "opens_cleanly": true,
+      "quality": {
+        "judge_model": "claude-sonnet-4-6",
+        "file_match": true,
+        "structural_match": true,
+        "structural_score": 0.5,
+        "quality_score_10": 7.0,
+        "quality_score": 0.35,
+        "score": 0.85,
+        "passed_threshold": 0.7,
+        "rubric": "document",
+        "anthropic": {
+          "model": "claude-sonnet-4-6",
+          "input_tokens": 1315,
+          "output_tokens": 247,
+          "cost_usd": 0.010280000000000001,
+          "latency_ms": 7146,
+          "raw_response": "```json\n{\n  \"quality_score\": 7,\n  \"reason\": \"The document covers all requested content areas\u2014evidence, policy change, risks, mitigation, and next steps\u2014with substantive prose that goes beyond mere headings. The tone is concise and implementation-aware as requested. All supplied facts and figures are accurately incorporated. The structure is logical and readable. It falls short of the 8-9 range because: (1) it lacks any visual formatting polish expected of a PDF executive summary (no horizontal rules, no callout boxes, no bolded key metrics inline), (2) the 'Executive Summary' section and the title are redundant, creating a slightly awkward opening, (3) there is no brief table or side-by-side comparison of v1.3.1 vs v1.3.2 metrics, which would significantly aid a decision-maker skimming the document, and (4) the prose, while accurate, is somewhat generic in places rather than sharply persuasive. Overall it is a usable, complete document that would serve its intended audience with only minor gaps.\"\n}\n```"
+        },
+        "structural_checks": {
+          "file_exists": true,
+          "opens_cleanly": true
+        },
+        "extracted_content_chars": 3137
+      },
+      "passed": true,
+      "estimated_cost_usd": 0.06,
+      "anthropic_judge_cost_usd": 0.010280000000000001,
+      "stderr": ""
+    }
+  ]
+}

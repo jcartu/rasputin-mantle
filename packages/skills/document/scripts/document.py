@@ -22,6 +22,7 @@ if str(SKILLS_ROOT) not in sys.path:
     sys.path.insert(0, str(SKILLS_ROOT))
 
 from shared.self_review import self_review  # noqa: E402
+from shared.llm_content import generate_content  # noqa: E402
 
 STYLE_FONTS = {
     "minimal": {"font": "Arial", "accent": colors.HexColor("#2E3440")},
@@ -177,7 +178,7 @@ def workspace_dir(payload: dict[str, Any]) -> Path:
     return out_dir
 
 
-def _outline_from_prompt(payload: dict[str, Any]) -> dict[str, Any]:
+def _fallback_outline_from_prompt(payload: dict[str, Any]) -> dict[str, Any]:
     prompt = str(payload.get("prompt") or "").casefold()
     for keywords, style, formats, title, sections in DOCUMENT_PLANS:
         if any(keyword in prompt for keyword in keywords):
@@ -200,6 +201,54 @@ def _outline_from_prompt(payload: dict[str, Any]) -> dict[str, Any]:
             {"heading": "Recommendation", "paragraphs": ["Proceed with clear success criteria and review checkpoints."]},
             {"heading": "Next Steps", "paragraphs": ["Assign owners, confirm milestones, and track outcomes."]},
         ],
+    }
+
+
+def _outline_from_prompt(payload: dict[str, Any]) -> dict[str, Any]:
+    generated = generate_content(
+        str(payload.get("prompt") or ""),
+        "document",
+        dict(payload.get("expected_schema") or payload.get("schema") or {}),
+    )
+    outline = _normalize_generated_outline(generated, payload)
+    return outline or _fallback_outline_from_prompt(payload)
+
+
+def _normalize_generated_outline(generated: dict[str, Any], payload: dict[str, Any]) -> dict[str, Any] | None:
+    raw_sections = generated.get("sections") or []
+    if not isinstance(raw_sections, list) or not raw_sections:
+        return None
+    style = str(generated.get("style") or payload.get("style") or "business").lower()
+    if style in STYLE_FONTS:
+        payload.setdefault("style", style)
+    formats = [str(item).lower() for item in generated.get("formats") or []]
+    valid_formats = [item for item in formats if item in {"docx", "pdf"}]
+    if valid_formats:
+        payload.setdefault("formats", valid_formats)
+    sections: list[dict[str, Any]] = []
+    for index, section in enumerate(raw_sections, start=1):
+        if not isinstance(section, dict):
+            continue
+        heading = str(section.get("heading") or section.get("title") or section.get("name") or f"Section {index}")
+        paragraphs = section.get("paragraphs") or section.get("body") or section.get("content") or []
+        if isinstance(paragraphs, str):
+            paragraphs = [paragraphs]
+        normalized: dict[str, Any] = {
+            "heading": heading,
+            "paragraphs": [str(item) for item in list(paragraphs) if str(item).strip()],
+        }
+        tables = section.get("tables")
+        if isinstance(tables, list):
+            normalized["tables"] = [table for table in tables if isinstance(table, dict)]
+        images = section.get("images")
+        if isinstance(images, list):
+            normalized["images"] = images
+        sections.append(normalized)
+    if not sections:
+        return None
+    return {
+        "title": str(generated.get("title") or payload.get("title") or "Document"),
+        "sections": sections,
     }
 
 

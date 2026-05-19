@@ -21,6 +21,7 @@ except ModuleNotFoundError:  # pragma: no cover - codeact can run without gatewa
     def is_eval_mode() -> bool:
         return os.environ.get("MANTLE_EVAL_MODE", "").lower() in ("1", "true", "yes")
 
+
 NAME_PATTERN = re.compile(r"^[a-z0-9][a-z0-9-]{0,63}$")
 MAX_SKILL_MD_CHARS = 100_000
 MAX_DESCRIPTION_CHARS = 1024
@@ -125,6 +126,7 @@ def skill_detail(name: str, session_id: str | None = None) -> dict[str, Any]:
 def invoke_skill(name: str, args: dict[str, Any] | None = None, session_id: str | None = None) -> SkillInvocationResult:
     payload = dict(args or {})
     requested_script = payload.pop("script", None)
+    timeout_seconds = int(payload.pop("timeout_seconds", 30))
     skill = get_skill(name, session_id)
     skill_dir = Path(skill.path).parent
     script_path = _select_script(skill_dir, requested_script)
@@ -139,7 +141,7 @@ def invoke_skill(name: str, args: dict[str, Any] | None = None, session_id: str 
         input=json.dumps(payload),
         text=True,
         capture_output=True,
-        timeout=30,
+        timeout=timeout_seconds,
         cwd=str(skill_dir),
         check=False,
     )

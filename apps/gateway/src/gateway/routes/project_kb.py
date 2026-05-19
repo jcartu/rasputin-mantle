@@ -51,10 +51,16 @@ def _kb_file(row: Any) -> KBFileSchema:
 
 
 def _safe_filename(filename: str) -> str:
-    name = PurePosixPath(filename).name.strip()
+    raw_name = filename.strip()
+    if "/" in raw_name or "\\" in raw_name:
+        raise HTTPException(status_code=400, detail={"error": "invalid_filename", "message": "File name is invalid"})
+    name = PurePosixPath(raw_name).name.strip()
     if not name or name in {".", ".."}:
         raise HTTPException(status_code=400, detail={"error": "invalid_filename", "message": "File name is invalid"})
-    return re.sub(r"[^A-Za-z0-9._ -]", "_", name)[:180]
+    safe_name = re.sub(r"[^A-Za-z0-9._ -]", "_", name)[:180]
+    if not safe_name or safe_name in {".", ".."}:
+        raise HTTPException(status_code=400, detail={"error": "invalid_filename", "message": "File name is invalid"})
+    return safe_name
 
 
 def _safe_project_kb_dir(project_id: str) -> Path:

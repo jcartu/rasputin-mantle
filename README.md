@@ -38,7 +38,36 @@
 
 ---
 
-## Quick start
+## Quick start (local dev)
+
+```bash
+git clone https://github.com/jcartu/rasputin-mantle.git
+cd rasputin-mantle
+cp .env.example .env
+# fill in at minimum: ANTHROPIC_API_KEY, VLLM_BASE_URL, VLLM_MODEL
+
+# Start vLLM separately on the host (e.g., port 8001 with qwen3.6-27b)
+
+# Start the stack:
+docker compose -f docker-compose.dev.yml up -d
+docker compose -f docker-compose.dev.yml logs -f gateway web  # tail until ready
+```
+
+Open `http://localhost:3000`.
+
+**Ports:**
+- 3000 — web UI
+- 8000 — gateway API
+- 8025 — MailHog UI
+- 8080 — sandbox / Neko
+- 5432 — postgres (container-only)
+- 6379 — redis (container-only)
+
+**Requirements:** Docker, vLLM running on host (separate process), Anthropic API key for full feature parity.
+
+---
+
+## Quick start (installer)
 
 ```bash
 curl -sSL https://mantle.dev/install | sh

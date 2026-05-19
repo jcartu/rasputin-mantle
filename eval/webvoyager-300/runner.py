@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+import glob
 import json
 import os
 import re
@@ -527,6 +528,53 @@ async def _run_task_inner(
 # ---------------------------------------------------------------------------
 
 
+def batch_output_path(output: str, batch_offset: int, batch_count: int) -> Path:
+    output_path = Path(output)
+    batch_end = batch_offset + max(batch_count - 1, 0)
+    suffix = output_path.suffix or ".json"
+    return output_path.with_name(
+        f"{output_path.stem}.batch-{batch_offset:03d}-{batch_end:03d}{suffix}"
+    )
+
+
+def aggregate_batch_outputs(output: str, planner_name: str) -> dict[str, Any] | None:
+    output_path = Path(output)
+    suffix = output_path.suffix or ".json"
+    pattern = str(output_path.with_name(f"{output_path.stem}.batch-*{suffix}"))
+    batch_files = sorted(glob.glob(pattern))
+    if not batch_files:
+        return None
+
+    results: list[dict[str, Any]] = []
+    for batch_file in batch_files:
+        try:
+            data = json.loads(Path(batch_file).read_text())
+        except (OSError, json.JSONDecodeError) as e:
+            print(f"WARN: skipping unreadable batch result {batch_file}: {e}")
+            continue
+        for result in data.get("results", []):
+            if isinstance(result, dict):
+                results.append(result)
+
+    results.sort(key=lambda r: str(r.get("id", "")))
+    passed = sum(1 for r in results if r.get("passed"))
+    total = len(results)
+    aggregate = {
+        "benchmark": "webvoyager-300",
+        "planner": planner_name,
+        "total": total,
+        "passed": passed,
+        "failed": total - passed,
+        "pass_rate": passed / total if total else 0,
+        "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "batch_files": batch_files,
+        "results": results,
+    }
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(json.dumps(aggregate, indent=2))
+    return aggregate
+
+
 async def main():
     ap = argparse.ArgumentParser()
     ap.add_argument(
@@ -548,12 +596,34 @@ async def main():
     ap.add_argument("--concurrency", type=int, default=3)
     ap.add_argument("--traces", action="store_true")
     ap.add_argument("--traces-dir", default=None)
+    ap.add_argument("--batch-size", type=int, default=None, help="Run only N tasks")
+    ap.add_argument("--batch-offset", type=int, default=0, help="Skip first M tasks")
+    ap.add_argument(
+        "--batch-cooldown",
+        type=float,
+        default=30,
+        help="Seconds to wait after a batch completes",
+    )
     args = ap.parse_args()
+
+    if args.batch_size is not None and args.batch_size <= 0:
+        ap.error("--batch-size must be positive")
+    if args.batch_offset < 0:
+        ap.error("--batch-offset must be non-negative")
+    if args.batch_cooldown < 0:
+        ap.error("--batch-cooldown must be non-negative")
 
     # Load tasks
     with open(args.tasks) as f:
         config = yaml.safe_load(f)
     tasks = config["tasks"]
+    original_total = len(tasks)
+
+    batch_mode = args.batch_size is not None or args.batch_offset > 0
+    if batch_mode:
+        start = args.batch_offset
+        stop = original_total if args.batch_size is None else start + args.batch_size
+        tasks = tasks[start:stop]
 
     planner_name = args.planner
     planner_cfg = PLANNER_MAP[planner_name]
@@ -574,6 +644,9 @@ async def main():
         traces_dir.mkdir(parents=True, exist_ok=True)
 
     output = args.output or f"outputs/v1_1/webvoyager-300-{planner_name}.json"
+    batch_output = (
+        batch_output_path(output, args.batch_offset, len(tasks)) if batch_mode else Path(output)
+    )
 
     sem = asyncio.Semaphore(args.concurrency)
 
@@ -585,7 +658,13 @@ async def main():
             )
             return result
 
-    print(f"Running WebVoyager-300 with {planner_name} ({len(tasks)} tasks)...")
+    if batch_mode:
+        print(
+            f"Running WebVoyager-300 with {planner_name} "
+            f"(batch offset {args.batch_offset}, {len(tasks)}/{original_total} tasks)..."
+        )
+    else:
+        print(f"Running WebVoyager-300 with {planner_name} ({len(tasks)} tasks)...")
     results = await asyncio.gather(*[run_with_sem(t) for t in tasks])
 
     passed = sum(1 for r in results if r["passed"])
@@ -601,10 +680,22 @@ async def main():
         "results": results,
     }
 
-    Path(output).parent.mkdir(parents=True, exist_ok=True)
-    Path(output).write_text(json.dumps(out, indent=2))
+    batch_output.parent.mkdir(parents=True, exist_ok=True)
+    batch_output.write_text(json.dumps(out, indent=2))
     print(f"\nWebVoyager-300 ({planner_name}): {passed}/{total} = {out['pass_rate']:.2%}")
-    print(f"Output: {output}")
+    print(f"Output: {batch_output}")
+
+    if batch_mode:
+        aggregate = aggregate_batch_outputs(output, planner_name)
+        if aggregate:
+            print(
+                f"Aggregate: {aggregate['passed']}/{aggregate['total']} = "
+                f"{aggregate['pass_rate']:.2%}"
+            )
+            print(f"Aggregate output: {output}")
+        if args.batch_cooldown:
+            print(f"Cooling down for {args.batch_cooldown:.0f}s...")
+            await asyncio.sleep(args.batch_cooldown)
 
 
 if __name__ == "__main__":

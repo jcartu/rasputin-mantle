@@ -14,6 +14,13 @@ from typing import Any
 
 import yaml
 
+try:
+    from gateway.eval_mode import is_eval_mode
+except ModuleNotFoundError:  # pragma: no cover - codeact can run without gateway on sys.path
+
+    def is_eval_mode() -> bool:
+        return os.environ.get("MANTLE_EVAL_MODE", "").lower() in ("1", "true", "yes")
+
 NAME_PATTERN = re.compile(r"^[a-z0-9][a-z0-9-]{0,63}$")
 MAX_SKILL_MD_CHARS = 100_000
 MAX_DESCRIPTION_CHARS = 1024
@@ -81,8 +88,11 @@ def default_search_paths(session_id: str | None = None) -> list[Path]:
 def discover_skills(session_id: str | None = None, search_paths: list[Path] | None = None) -> list[DiscoveredSkill]:
     paths = search_paths or default_search_paths(session_id)
     cache_key = session_id or "__global__"
-    signature = _signature(paths, session_id)
     cached = _CACHE.get(cache_key)
+    if is_eval_mode() and cached:
+        return sorted(cached.skills.values(), key=lambda skill: skill.name)
+
+    signature = _signature(paths, session_id)
     if cached and cached.signature == signature:
         return sorted(cached.skills.values(), key=lambda skill: skill.name)
 

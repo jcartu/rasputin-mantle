@@ -15,6 +15,7 @@ from shared.schemas import ExecRequestSchema, ExecResultSchema, SessionInfoSchem
 from shared.types import ExecResult, SessionInfo, SessionStatus
 
 from gateway.config import settings
+from gateway.eval_mode import is_eval_mode
 from gateway.sessions import SessionStore, broker
 
 router = APIRouter()
@@ -84,30 +85,35 @@ async def create_session(request: SessionCreateRequest | None = None) -> Session
                 raise HTTPException(
                     status_code=404, detail={"error": "project_not_found", "message": "Project not found"}
                 )
-            kb_rows = await conn.fetch(
-                """
-                SELECT filename, storage_path
-                FROM project_kb_files
-                WHERE project_id = $1::uuid
-                ORDER BY uploaded_at ASC
-                """,
-                request.project_id,
-            )
+            if not is_eval_mode():
+                kb_rows = await conn.fetch(
+                    """
+                    SELECT filename, storage_path
+                    FROM project_kb_files
+                    WHERE project_id = $1::uuid
+                    ORDER BY uploaded_at ASC
+                    """,
+                    request.project_id,
+                )
         default_planner = project_row["default_planner"]
         allowed_tools = _list_value(project_row["allowed_tools"])
-        kb_index = [row["filename"] for row in kb_rows]
-        kb_instruction = (
-            f"You have access to project knowledge at /workspace/{session_id}/_kb/. "
-            "Reference these files when relevant. KB index: " + (", ".join(kb_index) if kb_index else "(empty)") + "."
-        )
         raw_addendum = project_row["system_prompt_addendum"]
-        system_prompt_addendum = f"{raw_addendum}\n\n{kb_instruction}" if raw_addendum else kb_instruction
+        system_prompt_addendum = raw_addendum
 
-        for row in kb_rows:
-            source = Path(settings.kb_root).resolve() / request.project_id / "kb" / row["storage_path"]
-            if source.exists():
-                target = f"/workspace/{session_id}/_kb/{row['filename']}"
-                backend.write_bytes(sandbox_id, target, source.read_bytes(), read_only=True)
+        if not is_eval_mode():
+            kb_index = [row["filename"] for row in kb_rows]
+            kb_index_text = ", ".join(kb_index) if kb_index else "(empty)"
+            kb_instruction = (
+                f"You have access to project knowledge at /workspace/{session_id}/_kb/. "
+                f"Reference these files when relevant. KB index: {kb_index_text}."
+            )
+            system_prompt_addendum = f"{raw_addendum}\n\n{kb_instruction}" if raw_addendum else kb_instruction
+
+            for row in kb_rows:
+                source = Path(settings.kb_root).resolve() / request.project_id / "kb" / row["storage_path"]
+                if source.exists():
+                    target = f"/workspace/{session_id}/_kb/{row['filename']}"
+                    backend.write_bytes(sandbox_id, target, source.read_bytes(), read_only=True)
 
     info = SessionInfo(
         session_id=session_id,

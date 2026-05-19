@@ -12,6 +12,7 @@ load_dotenv(os.path.join(os.path.dirname(__file__), "..", "..", "..", "..", ".en
 load_dotenv(os.path.join(os.path.expanduser("~"), ".dev", "rasputin-mantle", ".env"))
 
 from gateway.config import settings
+from gateway.eval_mode import is_eval_mode
 from gateway.middleware import cost_ceiling_middleware
 from gateway.cost_wall import default_cost_wall
 from gateway.session_persistence import SessionEventWriter
@@ -48,6 +49,18 @@ _event_writer = SessionEventWriter(settings.database_url)
 _scheduler = None
 
 
+def _start_scheduler_if_enabled(redis_url: str):
+    if is_eval_mode():
+        return None
+    try:
+        scheduler = init_scheduler(redis_url)
+        scheduler.resume()
+        return scheduler
+    except Exception as exc:
+        logger.warning("APScheduler unavailable: %s", exc)
+        return None
+
+
 @app.on_event("startup")
 async def startup_event_writer() -> None:
     global _scheduler
@@ -59,12 +72,7 @@ async def startup_event_writer() -> None:
     set_project_kb_writer(_event_writer)
     set_slack_writer(_event_writer)
     set_scheduled_writer(_event_writer)
-    try:
-        _scheduler = init_scheduler(settings.redis_url)
-        _scheduler.resume()
-    except Exception as exc:
-        logger.warning("APScheduler unavailable: %s", exc)
-        _scheduler = None
+    _scheduler = _start_scheduler_if_enabled(settings.redis_url)
     set_scheduled_scheduler(_scheduler)
 
 

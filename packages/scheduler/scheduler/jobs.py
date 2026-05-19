@@ -7,6 +7,13 @@ from urllib.parse import parse_qs, urlparse
 from apscheduler.jobstores.redis import RedisJobStore
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
+try:
+    from gateway.eval_mode import is_eval_mode
+except ModuleNotFoundError:  # pragma: no cover - scheduler can run without gateway on sys.path
+
+    def is_eval_mode() -> bool:
+        return os.environ.get("MANTLE_EVAL_MODE", "").lower() in ("1", "true", "yes")
+
 
 async def noop_job() -> None:
     """Serializable no-op job target for persistence tests and smoke checks."""
@@ -32,12 +39,13 @@ def _redis_jobstore(redis_url: str) -> RedisJobStore:
 
 def init_scheduler(redis_url: str = "redis://127.0.0.1:6379/0") -> AsyncIOScheduler:
     scheduler = AsyncIOScheduler(jobstores={"default": _redis_jobstore(redis_url)})
-    scheduler.start(paused=True)
+    if not is_eval_mode():
+        scheduler.start(paused=True)
     return scheduler
 
 
 async def add_job(scheduler: AsyncIOScheduler, func_path: str, trigger: str, **kwargs: Any):
-    if not scheduler.running:
+    if not scheduler.running and not is_eval_mode():
         scheduler.start(paused=True)
     job_id = kwargs.pop("id", None)
     replace_existing = kwargs.pop("replace_existing", True)

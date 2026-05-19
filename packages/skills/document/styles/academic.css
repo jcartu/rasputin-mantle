@@ -1,0 +1,6 @@
+body { font-family: "Times New Roman", serif; color: #111827; line-height: 1.8; }
+h1, h2, h3 { color: #374151; margin-top: 1.6em; }
+p { text-align: justify; }
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid #6b7280; padding: 6px 8px; }
+th { background: #e5e7eb; }

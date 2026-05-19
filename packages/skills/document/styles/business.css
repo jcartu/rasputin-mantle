@@ -1,0 +1,6 @@
+body { font-family: Aptos, Arial, sans-serif; color: #172033; line-height: 1.55; }
+h1, h2, h3 { color: #1f4e79; margin-top: 1.2em; }
+blockquote { border-left: 4px solid #1f4e79; padding-left: 12px; color: #4b5563; }
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid #cbd5e1; padding: 7px 10px; }
+th { background: #1f4e79; color: white; }
